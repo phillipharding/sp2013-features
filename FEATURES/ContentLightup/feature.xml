@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="0F121A23-C6BC-400F-87E4-E6BBDDF6916D"
+          Title="$Resources:core,contentlightupFeatureTitle;"
+          Description="$Resources:core,contentlightupFeatureDesc;"
+          Version="12.0.0.0"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          Scope="Farm"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="controls\searcharea.xml" />
+    </ElementManifests>
+</Feature>

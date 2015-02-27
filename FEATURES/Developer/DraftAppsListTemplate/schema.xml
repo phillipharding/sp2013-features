@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" FolderCreation="FALSE" Direction="$Resources:Direction;" BaseType="0">
+  <MetaData>
+    <ContentTypes>
+    </ContentTypes>
+    <Fields>
+      <Field Type="Guid" Name="ProductId" ID="{d08e789c-0b0a-4779-ab1c-32ab4ca6b2c3}" DisplayName="$Resources:AppDevelopmentCore, DraftAppsList_fldProductIdName;" ReadOnly="TRUE" Indexed="TRUE"/>
+      <Field Type="Text" Name="AppVersion" ID="{9834a3a3-9752-47e7-b186-9273e8f92624}" DisplayName="$Resources:AppDevelopmentCore, DraftAppsList_fldVersionName;" ReadOnly="TRUE" />
+      <Field Type="Text" Name="AppName" ID="{91a39fdb-3417-41e1-81aa-bf989bff000e}" DisplayName="$Resources:AppDevelopmentCore, DraftAppsList_fldAppTitle;" />
+      <Field Type="Guid" Name="AppInstanceId" ID="{16691B5C-6607-11E0-8D88-268CDFD72085}" DisplayName="$Resources:AppDevelopmentCore, DraftAppsList_fldAppInstanceId;" Hidden="TRUE"/>
+      <Field Type="Guid" Name="AppParentWebId" ID="{27ED35A2-6607-11E0-825D-2E8CDFD72085}" DisplayName="$Resources:AppDevelopmentCore, DraftAppsList_fldAppInstallWebId;" Hidden="TRUE"/>
+      <Field Type="Text" Name="AppLaunchUrl" ID="{E7BCB2BA-BC13-11E0-8882-62344924019B}" DisplayName="$Resources:AppDevelopmentCore, DraftAppsList_fldAppLaunchUrl;" Hidden="TRUE"/>
+      <Field Type="Text" Name="AppStatus" ID="{F44D6164-BC13-11E0-9430-69344924019B}" DisplayName="$Resources:AppDevelopmentCore, DraftAppsList_fldAppStatus;" Hidden="TRUE"/>
+    </Fields>
+    <Views>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" ReadOnly = "TRUE" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" TabularView="TRUE" DefaultView="TRUE" MobileView="FALSE" MobileDefaultView="FALSE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/generic.png" Url="AllItems.aspx">
+        <XslLink>main.xsl</XslLink>
+        <JSLink>AppDeveloperDash.js</JSLink>
+        <Toolbar Type="Standard" />
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef ID="{91a39fdb-3417-41e1-81aa-bf989bff000e}" Name="AppName"/>
+          <FieldRef ID="{9834a3a3-9752-47e7-b186-9273e8f92624}" Name="AppVersion"/>
+          <FieldRef Name="Created"/>
+          <FieldRef Name="Modified"/>
+          <FieldRef Name="Editor" Explicit="TRUE"/>
+          <FieldRef Name="Author" Explicit="TRUE"/>
+          <FieldRef ID="{d08e789c-0b0a-4779-ab1c-32ab4ca6b2c3}" Name="ProductId" Explicit="TRUE" />
+          <FieldRef ID="{16691B5C-6607-11E0-8D88-268CDFD72085}" Name="AppInstanceId" Explicit="TRUE" />
+          <FieldRef ID="{27ED35A2-6607-11E0-825D-2E8CDFD72085}" Name="AppParentWebId" Explicit="TRUE" />
+          <FieldRef ID="{E7BCB2BA-BC13-11E0-8882-62344924019B}" Name="AppLaunchUrl" Explicit="TRUE" />
+          <FieldRef ID="{F44D6164-BC13-11E0-9430-69344924019B}" Name="AppStatus" Explicit="TRUE" />
+        </ViewFields>
+        <Query>
+        </Query>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

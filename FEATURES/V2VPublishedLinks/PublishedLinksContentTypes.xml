@@ -1,0 +1,13 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <!-- PublishedLinks Content Type -->
+    <ContentType ID= "0x01004613D6562E4C41A7B9DADDAC1689E00D" Name="$Resources:cmscore,contenttype_publishedlink_name;" Description="$Resources:cmscore,contenttype_publishedlink_description;" Group="_Hidden" Sealed="TRUE" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" DisplayName="$Resources:cmscore,column_publishedlinksdisplayname_displayname;" Required="TRUE" />
+            <FieldRef ID="{70B38565-A310-4546-84A7-709CFDC140CF}" Name="PublishedLinksUrl" Required="TRUE" />
+            <FieldRef ID="{92BBA27E-EEF6-41aa-B728-6DD9CAF2BDE2}" Name="PublishedLinksDescription" Required="FALSE" />
+        </FieldRefs>
+    </ContentType>
+    <!-- END PublishedLinks Content Type -->
+</Elements>

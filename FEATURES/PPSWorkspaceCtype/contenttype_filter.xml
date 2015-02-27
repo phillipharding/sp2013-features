@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ContentType ID="0x01002DDC53CB1D5F4520BE0568558051291F05"
+	 Name="$Resources:ppsma,ContentType_Filter_Name"
+	 Group="$Resources:ppsma,ContentType_Group"
+	 Description="$Resources:ppsma,ContentType_Filter_Description"
+	 Version="0">
+		<FieldRefs/>
+		<XmlDocuments>
+			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+				<FormUrls xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+					<New>_layouts/15/ppswebparts/DesignerRedirect.aspx</New>
+				</FormUrls>
+			</XmlDocument>
+		</XmlDocuments>
+	</ContentType>
+	<CustomAction
+	  Id="PPSEdit.ECB"
+	  RegistrationType="ContentType"
+	  RegistrationId="0x01002DDC53CB1D5F4520BE0568558051291F05"
+	  Location="EditControlBlock"
+	  Sequence="230"
+	  Title="$Resources:ppsma,ContentTypeAction_Base_Edit_Title"
+	  ImageUrl="/_layouts/15/images/PPSSiteTemplateRun.png?rev=23"
+	  Description="$Resources:ppsma,ContentTypeAction_Base_Edit_Description">
+    <UrlAction Url="{SiteUrl}/_layouts/15/ppswebparts/DesignerRedirect.aspx?Operation=OpenItem&amp;ItemLocation={ItemUrl}&amp;ItemType=Filter"/>
+	</CustomAction>
+</Elements>

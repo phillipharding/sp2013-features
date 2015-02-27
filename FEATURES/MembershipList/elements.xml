@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction   Id="Ribbon.ManageMembersTab"
+                  Location="CommandUI.Ribbon"
+                  RegistrationType="List"
+                  RegistrationId="880">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.ListContextualGroup._children">
+          <Tab Id="Ribbon.ManageMembersTab"
+               Title="$Resources:spscore,ModerationTabTitle;"
+               Description=""
+               Sequence="501">
+            <Scaling Id="Ribbon.ManageMembersTab.Scaling">
+              <MaxSize Id="Ribbon.ManageMembersTab.Manage.MaxSize"
+                       GroupId="Ribbon.ManageMembersTab.Manage"
+                       Size="LargeLarge"/>
+              <Scale Id="Ribbon.ManageMembersTab.Manage.Scaling.Medium"
+                     GroupId="Ribbon.ManageMembersTab.Manage"
+                     Size="MediumMedium" />
+            </Scaling>
+            <Groups Id="Ribbon.ManageMembersTab.Groups">
+              <Group  Id="Ribbon.ManageMembersTab.Manage"
+                      Description=""
+                      Title="$Resources:spscore,ManageMembersGroupTitle;"
+                      Sequence="52"
+                      Template="Ribbon.Templates.ManageMembersGroupTemplate">
+                <Controls Id="Ribbon.ManageMembersTab.Manage.Controls">
+                  <Button Id="Ribbon.ListItem.Manage.EditProperties"
+                          Sequence="10"
+                          Command="EditProperties"
+                          LabelText="$Resources:spscore,Members_AssignBadge;"
+                          Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-217" Image16by16Left="-217"
+                          Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-103" Image32by32Left="-511"
+                          ToolTipTitle="$Resources:spscore,Members_AssignBadge_TooltipTitle;"
+                          ToolTipDescription="$Resources:spscore,Members_AssignBadge_TooltipDesc;"
+                          Description=""
+                          TemplateAlias="o1"/>
+                </Controls>
+              </Group>
+            </Groups>
+          </Tab>
+        </CommandUIDefinition>
+        <CommandUIDefinition Location="Ribbon.Templates._children">
+          <GroupTemplate Id="Ribbon.Templates.ManageMembersGroupTemplate">
+            <Layout Title="LargeLarge">
+              <OverflowSection Type="OneRow" TemplateAlias="o1" DisplayMode="Large"/>
+              <OverflowSection Type="OneRow" TemplateAlias="o2" DisplayMode="Large"/>
+            </Layout>
+            <Layout Title="MediumMedium">
+              <OverflowSection Type="ThreeRow" TemplateAlias="o1" DisplayMode="Medium"/>
+              <OverflowSection Type="ThreeRow" TemplateAlias="o2" DisplayMode="Medium"/>
+            </Layout>
+          </GroupTemplate>
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+</Elements>

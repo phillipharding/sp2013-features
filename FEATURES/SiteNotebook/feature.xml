@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="F151BB39-7C3B-414F-BB36-6BF18872052F"
+    Title="$Resources:core,SiteNotebook;"
+    Description="$Resources:core,SiteNotebook_Desc;"
+    Version="1.0.0.0"
+    Scope="Web"
+    Hidden="FALSE"
+    ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.SPSiteNotebookFeatureReceiver"
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ActivationDependencies> 
+        <ActivationDependency FeatureId="00BFEA71-E717-4E80-AA17-D0C71B360101" /><!-- Document Library -->
+    </ActivationDependencies>
+</Feature>

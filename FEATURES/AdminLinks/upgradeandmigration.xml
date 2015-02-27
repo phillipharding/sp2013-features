@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomActionGroup
+        Id="Patch"
+        Location="Microsoft.SharePoint.Administration.UpgradeAndMigration"
+        Title="$Resources:Upgrade_PatchManagement_Group;"
+        Sequence="10"
+        ImageUrl="/_layouts/15/images/CentralAdmin_UpgradeAndMigration_UpgradeAndPatchManagement_32x32.png?rev=23" />
+    <CustomAction
+        Id="PatchStatus"
+        GroupId="Patch"
+        Location="Microsoft.SharePoint.Administration.UpgradeAndMigration"
+        Sequence="10"
+        Title="$Resources:Operations_PatchStatus_Title;"
+        Description="$Resources:Operations_PatchStatus_Description;">
+        <UrlAction
+            Url="/_admin/PatchStatus.aspx" />
+    </CustomAction>    
+    <CustomAction
+        Id="DatabaseStatus"
+        GroupId="Patch"
+        Location="Microsoft.SharePoint.Administration.UpgradeAndMigration"
+        Sequence="20"
+        Title="$Resources:Operations_DatabaseStatus_Title;"
+        Description="$Resources:Operations_DatabaseStatus_Description;">
+        <UrlAction
+            Url="/_admin/DatabaseStatus.aspx" />
+    </CustomAction>    
+    <CustomAction
+        Id="UpgradeStatus"
+        GroupId="Patch"
+        Location="Microsoft.SharePoint.Administration.UpgradeAndMigration"
+        Sequence="30"
+        Title="$Resources:Operations_UpgradeStatus_Title;"
+        Description="$Resources:Operations_UpgradeStatus_Description;">
+        <UrlAction
+            Url="/_admin/UpgradeStatus.aspx" />
+    </CustomAction>    
+</Elements>

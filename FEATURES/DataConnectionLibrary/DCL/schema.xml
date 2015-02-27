@@ -1,0 +1,779 @@
+<List xmlns:ows="Microsoft SharePoint" Title="Data Connections" Direction="0" Url="Data Connections" BaseType="1"
+    ModeratedList="FALSE" DraftVersionVisibility="2" VersioningEnabled="TRUE" EnableContentTypes="TRUE" DisableAttachments="TRUE" ForceCheckout="FALSE" >
+    <MetaData>
+        <ContentTypes>
+            <ContentTypeRef ID="0x010100629D00608F814dd6AC8A86903AEE72AA"> 
+               <Folder TargetName="Forms/Data Connection"/>
+            </ContentTypeRef>
+            <ContentTypeRef ID="0x010100B4CBD48E029A4ad8B62CB0E41868F2B0">
+               <Folder TargetName="Forms/Data Connection"/>
+            </ContentTypeRef>
+            <ContentTypeRef ID="0x0120"/>
+        </ContentTypes>
+        <Fields>
+            <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" Type="Text" DisplayName="$Resources:core,Title;" Required="FALSE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3/fields" Node="/udc:DataSource/udc:Name">
+            </Field>
+            <Field ID="{94f89715-e097-4e8b-ba79-ea02aa8b7adb}" Name="FileRef" Type="Lookup" DisplayName="$Resources:core,Name;" Required="FALSE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3/fields"> </Field>
+            <Field ID="{9da97a8a-1da5-4a77-98d3-4bc10456e700}" Name="Comments" Type="Text" DisplayName="$Resources:core,Description;" Required="FALSE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3/fields" Node="/udc:DataSource/udc:Description">
+            </Field>
+            <Field ID="{1d22ea11-1e32-424e-89ab-9fedbadb6ce1}" Name="ID" Type="Counter" DisplayName="$Resources:core,ID;" Required="FALSE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3/fields"> </Field>
+            <Field ID="{b66e9b50-a28e-469b-b1a0-af0e45486874}" Name="Keywords" Type="Text" DisplayName="$Resources:core,Keywords;" Required="FALSE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3/fields"> </Field>
+            <Field ID="{081c6e4c-5c14-4f20-b23e-1a71ceb6a67c}" Name="DocIcon" Type="Computed" DisplayName="$Resources:core,Type;" Required="FALSE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3/fields"> </Field>
+            <Field ID="{939dfb93-3107-44c6-a98f-dd88dca3f8cf}" Name="ConnectionType" Type="Choice" FillInChoice="TRUE" DisplayName="$Resources:core,ConnectionType;" Required="FALSE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3/fields" Node="/udc:DataSource/udc:Type/@Type">
+                <CHOICES>
+                    <CHOICE><!-- _locID_text="150" _locComment="{StringCategory=HTX}" -->$Resources:core,SharePointList;</CHOICE>
+                    <CHOICE><!-- _locID_text="151" _locComment="{StringCategory=HTX}" -->$Resources:core,SharePointLibrary;</CHOICE>
+                    <CHOICE><!-- _locID_text="152" _locComment="{StringCategory=HTX}" -->$Resources:core,Database;</CHOICE>
+                    <CHOICE><!-- _locID_text="153" _locComment="{StringCategory=HTX}" -->$Resources:core,XmlQuery;</CHOICE>
+                    <CHOICE><!-- _locID_text="154" _locComment="{StringCategory=HTX}" -->$Resources:core,XmlSubmit;</CHOICE>
+                    <CHOICE><!-- _locID_text="155" _locComment="{StringCategory=HTX}" -->$Resources:core,WebService;</CHOICE>
+                </CHOICES>
+            </Field>
+            <Field ID="{8ee23f39-e2d1-4b46-8945-42386b24829d}" Name="Purpose" Type="Choice" DisplayName="$Resources:Purpose" Required="FALSE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3/fields" Node="/udc:DataSource/udc:ConnectionInfo/@Purpose">
+                <CHOICES>
+                    <CHOICE><!-- _locID_text="160" _locComment="{StringCategory=HTX}" -->ReadOnly</CHOICE>
+                    <CHOICE><!-- _locID_text="161" _locComment="{StringCategory=HTX}" -->WriteOnly</CHOICE>
+                    <CHOICE><!-- _locID_text="162" _locComment="{StringCategory=HTX}" -->ReadWrite</CHOICE>
+                </CHOICES>
+            </Field>
+            <Field ID="{4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb}" Name="Created_x0020_By" Type="Text" DisplayName="$Resources:Created_By;" Required="FALSE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3/fields"> </Field>   
+            <Field ID="{d31655d1-1d5b-4511-95a1-7a09e9b75bf2}"
+		Name="Editor"
+		SourceID="http://schemas.microsoft.com/sharepoint/v3"
+		StaticName="Editor"
+		ColName="tp_Editor"
+		RowOrdinal="0"
+		ReadOnly="TRUE"
+		Type="User"
+		Required="FALSE"
+		DisplayName="$Resources:core,Modified_By;">
+	    </Field>
+            <Field ID="{28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f}" Name="Modified" Type="DateTime" DisplayName="$Resources:Modified;" Required="FALSE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3/fields"> </Field>
+        </Fields>
+        <Views>
+            <View BaseViewID="0" Type="HTML">
+<XslLink Default="TRUE">main.xsl</XslLink>
+<RowLimit Paged="TRUE">30</RowLimit>
+<Toolbar Position="After" Type="Freeform"> <IfHasRights> <RightsChoices><RightsGroup PermAddListItems="required" /></RightsChoices> <Then> <HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idAddNewDoc" href="]]></HTML><HttpVDir/><HTML><![CDATA[/_layouts/15/Upload.aspx?List=]]></HTML><ListProperty Select="Name" /><HTML><![CDATA[&RootFolder=]]></HTML><GetVar Name="RootFolder" URLEncode="TRUE"/><HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML><ScriptQuote NotAddingQuote="TRUE"><HttpVDir/></ScriptQuote><HTML><![CDATA[/_layouts/15/Upload.aspx?List=]]></HTML><ListProperty Select="Name" /><HTML><![CDATA[&RootFolder=]]></HTML><GetVar Name="RootFolder" URLEncode="TRUE"/><HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML> <HTML><!-- _locID_text="onetid6" _locComment="{StringCategory=HTX}" -->$Resources:core,Add_New_Document;</HTML><HTML><![CDATA[</a></div>]]></HTML> </Then> </IfHasRights> </Toolbar>
+                <RowLimit>20</RowLimit>
+                <ViewFields>
+                    <FieldRef Name="DocIcon"></FieldRef>
+                    <FieldRef Name="LinkFilename"></FieldRef>
+                    <FieldRef Name="Created_x0020_By"></FieldRef>
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="Last_x0020_Modified" Ascending="FALSE"></FieldRef>
+                    </OrderBy>
+                </Query>
+            </View>
+            <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,dcl_schema_view_allitems;" DefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/dclicon.png?rev=23" Url="Forms/AllItems.aspx">
+<XslLink Default="TRUE">main.xsl</XslLink>
+<JSLink>clienttemplates.js</JSLink>
+<RowLimit Paged="TRUE">30</RowLimit>
+<Toolbar Type="Standard">
+</Toolbar>
+                <ViewFields>
+                    <FieldRef Name="DocIcon"/>
+                    <FieldRef Name="Title"/>
+                    <FieldRef Name="LinkFilename"/>
+                    <FieldRef Name="Comments"/>
+                    <FieldRef Name="Last_x0020_Modified"/>
+                    <FieldRef Name="Modified_x0020_By"/>
+                    <FieldRef Name="Keywords"/>
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="Title"/>
+                    </OrderBy>
+                </Query>
+            </View>
+<View BaseViewID="2" Type="HTML" FileDialog="TRUE" TabularView="FALSE" DisplayName="$Resources:core,File_Dialog_View;" Hidden="TRUE" Path="filedlg.htm" ModerationType="Moderator"><!-- _locID@DisplayName="camlidDc2" _locComment=" " -->
+    <ViewHeader>
+        <SetVar Name="FileDialog">1</SetVar>
+        <HTML><![CDATA[
+            <table id="FileDialogViewTable" width="100%" style="cursor: default;" border="0" rules="rows" cellspacing="0" cellpadding="2">
+                <tr>
+        ]]></HTML>
+        <Fields>
+            <HTML><![CDATA[<th class="ms-vh2-nofilter">]]></HTML>
+            <Field/>
+            <HTML><![CDATA[</th>]]></HTML>
+        </Fields>
+        <HTML><![CDATA[</tr>]]></HTML>
+    </ViewHeader>
+    <ViewBody>
+       <SetVar Name="FileDialog">1</SetVar>
+       <IfEqual>
+          <Expr1>
+             <GetVar Name="AlternateStyle" />
+          </Expr1>
+             <Expr2>ms-alternating</Expr2>
+          <Then>
+             <SetVar Scope="Request" Name="AlternateStyle">
+             </SetVar>
+          </Then>
+          <Else>
+              <SetVar Scope="Request" Name="AlternateStyle">ms-alternating</SetVar>
+          </Else>
+        </IfEqual>
+        <Switch>
+            <Expr><LookupColumn Name="FSObjType"/></Expr>
+            <Case Value="1">
+                <HTML>&lt;TR fileattribute=folder ID="</HTML>
+            </Case>
+            <Default>
+                <HTML>&lt;TR fileattribute=file ID="</HTML>
+            </Default>
+        </Switch>
+        <Field Name="EncodedAbsUrl"/>
+        <HTML><![CDATA[" class="]]></HTML><GetVar Name="AlternateStyle" /><HTML><![CDATA[" onmousedown="selectrow()" onclick="selectrow()">]]></HTML>
+        <Fields>
+            <HTML><![CDATA[<td class="ms-vb" style="padding-left: 4px">]]></HTML>
+             <FieldSwitch>
+              <Expr><Property Select="Type"/></Expr>
+              <Case Value="User"><LookupColumn HTMLEncode="TRUE"/></Case>
+              <Default>
+               <FieldSwitch>
+                <Expr><Property Select="Name"/></Expr>
+                <Case Value="CheckoutUser"><Field HTMLEncode="TRUE"/></Case>
+                <Default><Field/></Default>
+               </FieldSwitch>
+              </Default>
+             </FieldSwitch>
+            <HTML><![CDATA[</td>]]></HTML>
+        </Fields>
+        <HTML><![CDATA[</tr>]]></HTML>
+    </ViewBody>
+    <ViewFooter>
+        <HTML><![CDATA[</table>]]></HTML>
+    </ViewFooter>
+    <ViewEmpty>
+        <SetVar Name="FileDialog">1</SetVar>
+        <HTML><![CDATA[
+            <table id="FileDialogViewTable" width="100%" style="cursor: default;" border="0" rules="rows" cellspacing="0" cellpadding="2">
+                <tr>
+        ]]></HTML>
+        <Fields>
+            <Switch>
+                <Expr><Property Select="Name"/></Expr>
+                <Case Value="FileLeafRef"></Case>
+                <Default>
+                    <HTML><![CDATA[<th class="ms-vh2-nofilter">]]></HTML>
+                    <Field/>
+                    <HTML><![CDATA[</th>]]></HTML>
+                </Default>
+            </Switch>
+        </Fields>
+        <HTML><![CDATA[</tr></table>]]></HTML>
+        <HTML><![CDATA[<table width="100%" border="0" rules="rows"><tr>]]></HTML>
+        <HTML><![CDATA[<td class="ms-vb">]]></HTML>
+        <HTML>$Resources:core,noDocOfSpecType;</HTML>
+        <HTML><![CDATA[</td></tr></table>]]></HTML>
+    </ViewEmpty>
+    <ViewFields>
+        <FieldRef Name="DocIcon"/>
+        <FieldRef Name="Title"/>
+        <FieldRef Name="FileLeafRef"/>
+        <FieldRef Name="Comments"/>
+        <FieldRef Name="Last_x0020_Modified"/>
+        <FieldRef Name="Modified_x0020_By"/>
+        <FieldRef Name="Keywords"/>
+    </ViewFields>
+    <Query>
+        <OrderBy>
+            <FieldRef Name="FSObjType" Key="Primary"/>
+            <FieldRef Name="FileLeafRef"/>
+        </OrderBy>
+    </Query>
+</View>
+            <View BaseViewID="6" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,dcl_schema_view_byauthor;" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/dclicon.png?rev=23" Url="Forms/ByAuthor.aspx">
+<XslLink Default="TRUE">main.xsl</XslLink>
+<JSLink>clienttemplates.js</JSLink>
+<RowLimit Paged="TRUE">30</RowLimit>
+<Toolbar Type="Standard">
+</Toolbar>
+                <ViewFields>
+                    <FieldRef Name="DocIcon"/>
+                    <FieldRef Name="Title"/>
+                    <FieldRef Name="LinkFilename"/>
+                    <FieldRef Name="Comments"/>
+                    <FieldRef Name="Last_x0020_Modified"/>
+                    <FieldRef Name="Modified_x0020_By"/>
+                    <FieldRef Name="Created_x0020_By"/>
+                    <FieldRef Name="Keywords"/>
+                </ViewFields>
+                <Query>
+                    <GroupBy Collapse="FALSE">
+                        <FieldRef Name="Created_x0020_By"/>
+                    </GroupBy>
+                </Query>
+            </View>
+            <View BaseViewID="3" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,dcl_schema_view_allinfo;" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/dclicon.png?rev=23" Url="Forms/AllInfo.aspx" ModerationType="Moderator">
+<XslLink Default="TRUE">main.xsl</XslLink>
+<JSLink>clienttemplates.js</JSLink>
+<RowLimit Paged="TRUE">30</RowLimit>
+<Toolbar Type="Standard">
+</Toolbar>
+                <ViewFields>
+                    <FieldRef Name="DocIcon"/> <FieldRef Name="Title"/> <FieldRef Name="LinkFilename"/> <FieldRef Name="Comments"/> <FieldRef Name="Modified"/> <FieldRef Name="Last_x0020_Modified"/> <FieldRef Name="Created_x0020_By"/> <FieldRef Name="ID"/> <FieldRef Name="Keywords"/> <FieldRef Name="Purpose"/> <FieldRef Name="ConnectionType"/>
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="Title"/>
+                    </OrderBy>
+                </Query>
+            </View>
+            <View BaseViewID="4" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,dcl_schema_view_mysubmissions;" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/dclicon.png?rev=23" Url="Forms/MySubmissions.aspx" ModerationType="Contributor">
+<XslLink Default="TRUE">main.xsl</XslLink>
+<JSLink>clienttemplates.js</JSLink>
+<RowLimit Paged="TRUE">30</RowLimit>
+<Toolbar Type="Standard">
+</Toolbar>
+                <ViewFields>
+                    <FieldRef Name="DocIcon"/> <FieldRef Name="Title"/> <FieldRef Name="LinkFilename"/> <FieldRef Name="Comments"/> <FieldRef Name="Modified"/> <FieldRef Name="Last_x0020_Modified"/> <FieldRef Name="Created_x0020_By"/> <FieldRef Name="ID"/> <FieldRef Name="Keywords"/> <FieldRef Name="Purpose"/> <FieldRef Name="ConnectionType"/> <FieldRef Name="_ModerationStatus"/> <FieldRef Name="_ModerationComments"/>
+                </ViewFields>
+                <Query>
+                    <Where>
+                        <Eq>
+                            <FieldRef Name="Author"></FieldRef>
+                            <Value Type="Integer">
+                                <UserID/>
+                            </Value>
+                        </Eq>
+                    </Where>
+                    <OrderBy>
+                        <FieldRef Name="Title"/>
+                    </OrderBy>
+                </Query>
+            </View>
+            <View BaseViewID="5" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,dcl_schema_view_approvereject;" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/dclicon.png?rev=23" Url="Forms/ApproveReject.aspx" ModerationType="Moderator">
+<XslLink Default="TRUE">main.xsl</XslLink>
+<JSLink>clienttemplates.js</JSLink>
+<RowLimit Paged="TRUE">30</RowLimit>
+<Toolbar Type="Standard">
+</Toolbar>
+                <ViewFields>
+                    <FieldRef Name="DocIcon"/> <FieldRef Name="Title"/> <FieldRef Name="LinkFilename"/> <FieldRef Name="Comments"/> <FieldRef Name="Modified"/> <FieldRef Name="Last_x0020_Modified"/> <FieldRef Name="Created_x0020_By"/> <FieldRef Name="ID"/> <FieldRef Name="Keywords"/> <FieldRef Name="Purpose"/> <FieldRef Name="ConnectionType"/> <FieldRef Name="_ModerationStatus"/> <FieldRef Name="_ModerationComments"/>
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="Title"/>
+                    </OrderBy>
+                </Query>
+            </View>
+        </Views>
+        <Forms>
+            <Form Type="DisplayForm" Url="Forms/DispForm.aspx" SetupPath="pages\form.aspx" Template="DocumentLibraryForm" WebPartZoneID="Main">
+            </Form>
+            <Form Type="EditForm" Url="Forms/EditForm.aspx" SetupPath="pages\form.aspx" Template="DocumentLibraryForm" WebPartZoneID="Main">
+            </Form>
+            <Form Type="NewForm" Url="Forms/Upload.aspx" Template="DocumentLibraryForm" WebPartZoneID="Main">
+<ListFormOpening><HTML><![CDATA[
+<script type="text/javascript">
+var frm = new OWSForm(]]></HTML><ScriptQuote><Switch><Expr><GetVar Name="HTMLFormName"/></Expr><Case Value=""><HTML><![CDATA[OWSForm]]></HTML></Case><Default><GetVar Name="HTMLFormName"/></Default></Switch></ScriptQuote><HTML><![CDATA[, true, ]]></HTML><ScriptQuote><HttpVDir/><HTML>/_layouts/</HTML></ScriptQuote><HTML><![CDATA[);
+</script>
+]]></HTML>
+<HTML><![CDATA[
+<script type="text/javascript">]]></HTML>
+<HTML><![CDATA[ frm.dopt.chDateSep = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="29"/></ScriptQuote><HTML><![CDATA[; frm.dopt.chTimeSep = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="30"/></ScriptQuote><HTML><![CDATA[; frm.dopt.SetTimeFormat(]]></HTML><ProjectProperty Select="Time24"/><HTML><![CDATA[); frm.dopt.SetDateOrder(]]></HTML><LocaleInfo LCTYPE="33"/><HTML><![CDATA[); frm.dopt.SetDOW(]]></HTML><LocaleInfo LCTYPE="4108"/> <HTML><![CDATA[); frm.dopt.stAM = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="40"/></ScriptQuote><HTML><![CDATA[; frm.dopt.stPM = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="41"/></ScriptQuote><HTML><![CDATA[; frm.dopt.TimeMarkPosn = ]]></HTML><LocaleInfo LCTYPE="4101"/><HTML><![CDATA[; frm.dopt.webTZOffsetMin = ]]></HTML><ProjectProperty Select="TimeZoneBias"/><HTML><![CDATA[; ]]></HTML>
+<HTML><![CDATA[ frm.nopt.chDigSep = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="15"/></ScriptQuote><HTML><![CDATA[; frm.nopt.chDecimal = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="14"/></ScriptQuote><HTML><![CDATA[; frm.nopt.chMinus = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="81"/></ScriptQuote><HTML><![CDATA[; frm.nopt.iNegNumber = ]]></HTML><LocaleInfo LCTYPE="4112"/><HTML><![CDATA[; frm.nopt.SetGrouping(]]></HTML><ScriptQuote><LocaleInfo LCTYPE="16"/></ScriptQuote><HTML><![CDATA[); ]]></HTML>
+<HTML><![CDATA[
+frm.stFieldPrefix = ]]></HTML><ScriptQuote><FieldPrefix/></ScriptQuote><HTML><![CDATA[;
+frm.stImagesPath = ]]></HTML><ScriptQuote>/_layouts/15/images/</ScriptQuote><HTML><![CDATA[;
+frm.wBaseType = ]]></HTML><ListProperty Select="BaseType"/><HTML><![CDATA[;
+</script>]]></HTML>
+<Switch><Expr><GetVar Name="HTMLFormName"/></Expr><Case Value=""><HTML><![CDATA[<form name="OWSForm" id="OWSForm" EncType="multipart/form-data" Action="]]></HTML><HttpPath/><HTML><![CDATA[" Method=POST onSubmit="return false;">]]></HTML></Case></Switch>
+<HTML><![CDATA[
+<input type="Hidden" name="_charset_" value="utf-8">
+<input id="onetidCmd" type="Hidden" name="Cmd" value="Save">
+<input id="onetidIsFormValid" type="hidden" name="IsFormValid">
+<input id="onetidFormWasPosted" type="hidden" name="FormWasPosted">
+<input id="MustUpdateForm" type="hidden" name="MustUpdateForm" value="true">
+<input type="hidden" name="NextID" id="NextID" value="-1">
+<input type="hidden" name="NextUsing" id="NextUsing" value="]]></HTML><GetVar Name="Source" HTMLEncode="TRUE"/><HTML><![CDATA[">
+]]></HTML>
+<HTML><![CDATA[<span id='part1'>]]></HTML>
+<Identity/>
+</ListFormOpening>
+<ListFormBody>
+<HTML><![CDATA[<table border="0" cellpadding="2" width="100%" id="formTbl">
+<script type="text/javascript">var _g_tp_fNewForm = true;</script>
+]]></HTML>
+      <Switch>
+       <Expr><GetVar Name="Type"/></Expr>
+       <Case Value="1">
+        <HTML><![CDATA[
+         <input type="hidden" name="Type" value="1">
+         <input type="hidden" name="RootFolder" value="]]></HTML><GetVar Name="RootFolder" HTMLEncode="TRUE"/><HTML>"&gt;
+        </HTML>
+       </Case>
+       <Default>
+        <HTML><![CDATA[
+        <tr id="OverwriteField">
+        <th class="ms-formlabel" id="newformtb1"><nobr>]]></HTML><HTML><!-- _locID_text="newformtb1" _locComment="{StringCategory=HTX}"-->Overwrite existing file(s)?</HTML><HTML><![CDATA[</nobr>
+        <input type="hidden" name="putopts" id="putopts" value="true">
+        <script type="text/javascript">
+        function setputopts()
+        {
+            var formElement = document.forms[]]></HTML><ScriptQuote><Switch><Expr><GetVar Name="HTMLFormName"/></Expr><Case Value=""><HTML>OWSForm</HTML></Case><Default><GetVar Name="HTMLFormName"/></Default></Switch></ScriptQuote><HTML><![CDATA[];
+            formElement.putopts.value = formElement.overwrite.checked ? "true" : "false";
+        }
+        </script>
+        </th>
+        <td class="ms-formbody" width="100%">
+        <input type="checkbox" name="overwrite" id="overwrite"  value="true" checked="checked" onclick="setputopts()" tabindex=1 title="]]><!-- _locID_CDATA="idOverwrite,TXT" --><![CDATA[Overwrite]]><![CDATA[">
+        <input type="hidden" name="destination" id="destination" value="]]></HTML>
+        <Switch>
+          <Expr><GetVar Name="RootFolder"/></Expr>
+          <Case Value=""><ListUrlDir ForInstance="TRUE" HTMLEncode="TRUE"/></Case>
+          <Default>
+          <GetVar Name="RootFolder" HTMLEncode="TRUE"/>
+          </Default>
+        </Switch>
+        <HTML><![CDATA[">
+        <input type="hidden" name="Confirmation-URL" id="Confirmation-URL" value="]]></HTML>
+        <Switch>
+          <Expr><GetVar Name="Source"/></Expr>
+          <Case Value=""><ListProperty Select="DefaultViewUrl" HTMLEncode="TRUE"/></Case>
+          <Default><GetVar Name="Source" HTMLEncode="TRUE"/></Default>
+        </Switch>
+        <HTML><![CDATA["></td></tr>]]></HTML>
+       </Default>
+      </Switch>
+      <Fields>
+       <Switch>
+        <Expr><GetVar Name="Type"/><Property Select="Hidden"/></Expr>
+        <Case Value="1">
+         <Switch><Expr><Property Select="Name"/></Expr>
+          <Case Value="FileLeafRef">
+           <SetVar Name="ShowField" Scope="Request">1</SetVar>
+          </Case>
+          <Default>
+           <SetVar Name="ShowField" Scope="Request">0</SetVar>
+          </Default>
+         </Switch>
+        </Case>
+       </Switch>
+       <Switch>
+        <Expr><GetVar Name="ShowField"/></Expr>
+        <Case Value="0"/>
+        <Default>
+    <HTML><![CDATA[<tr style="display:none"><th nowrap="nowrap" valign="top" class="ms-formlabel"><nobr>]]></HTML>
+    <Property Select="DisplayName" HTMLEncode="TRUE" AutoNewLine="TRUE"/>
+    <Switch>
+      <Expr><Property Select="Required"/></Expr>
+      <Case Value="TRUE">
+        <HTML><![CDATA[<font color=red> *</font>]]></HTML>
+        <SetVar Scope="Request" Name="HasRequired">TRUE</SetVar>
+      </Case>
+      <Default>
+        <HTML><![CDATA[<font color=red></font>]]></HTML>
+      </Default>
+    </Switch>
+    <HTML><![CDATA[</nobr></th><td class="ms-formbody" style="padding-left:5px">]]></HTML>
+    <Field/>
+    <Switch>
+      <Expr><Property Select="RichText"/></Expr>
+      <Case Value="TRUE"/>
+      <Default>
+        <Switch>
+          <Expr><Property Select="Type"/></Expr>
+          <Case Value="Choice"/>
+          <Case Value="MultiChoice"/>
+          <Default>
+            <HTML><![CDATA[&#160;]]></HTML>
+            <Switch>
+              <Expr><Property Select="NoEditFormBreak"/></Expr>
+              <Case Value="TRUE"/>
+              <Default>
+                <HTML><![CDATA[<br>]]></HTML>
+              </Default>
+            </Switch>
+          </Default>
+        </Switch>
+      </Default>
+    </Switch>
+    <HTML><![CDATA[<span class="ms-formdescription">]]></HTML>
+    <Property Select="Description" HTMLEncode="TRUE" AutoHyperLink="TRUE" AutoNewLine="TRUE"/>
+    <HTML><![CDATA[</span></td></tr>]]></HTML>
+        </Default>
+       </Switch>
+      </Fields>
+<HTML><![CDATA[</table>]]></HTML>
+      <Switch>
+        <Expr><GetVar Name="HasRequired"/></Expr>
+        <Case Value="TRUE"><HTML><![CDATA[
+          <table border="0" cellpadding="2">
+          <tr>
+            <td id="reqdFldTxt" class="ms-descriptiontext" colspan="2" height="150px" valign="top"><br><font color=red>*</font> 
+             &#160;]]></HTML><HTML HTMLEncode="TRUE">$Resources:core,webview_editdlg_required_field;</HTML><HTML><![CDATA[
+            </td>
+          </tr>
+          </table>
+          ]]></HTML>
+        </Case>
+      </Switch>
+<ContentTypes>
+    <HTML><![CDATA[
+    <script type = "text/javascript">
+        frmCurrent.MapCtName(]]></HTML>
+    <ScriptQuote>
+      <Property Select="Name" />
+    </ScriptQuote>
+    <HTML><![CDATA[ ,]]></HTML>
+    <ScriptQuote>
+      <Property Select="ID" />
+    </ScriptQuote>
+    <HTML><![CDATA[);
+    </script>]]></HTML>
+    <IfSubString>
+        <Expr1>0x0120</Expr1>
+        <Expr2><Property Select="ID"/></Expr2>
+        <Then>
+            <HTML><![CDATA[
+            <script type="text/javascript">
+            _tp_rgctfld = new Array;
+            _g_tp_rgcts.push(_tp_rgctfld);
+            var fldct = frmCurrent.FindField("ContentType");
+            if (fldct != null)
+            	fldct.AddChoice(]]></HTML>
+            <ScriptQuote><Property Select="Name"/></ScriptQuote>
+            <HTML><![CDATA[);
+            </script>
+            ]]></HTML>
+        </Then>
+        <Else>
+            <HTML><![CDATA[
+            <script type="text/javascript">
+            var fldct = frmCurrent.FindField("ContentType");
+            if (fldct != null)
+            	fldct.AddChoice(]]></HTML>
+            <ScriptQuote><Property Select="Name"/></ScriptQuote>
+            <HTML><![CDATA[);
+            _tp_rgctfld = new Array;            
+            ]]></HTML>
+            <ForEach Select="FieldRefs/FieldRef">
+                <HTML>
+                _tp_ctfld = new Object(null);
+                _tp_ctfld.stName=</HTML>
+                <ScriptQuote><Property Select="Name"/></ScriptQuote>
+                <HTML>;
+                _tp_ctfld.fRequired = BoolFromString(</HTML>
+                <ScriptQuote><Property Select="Required"/></ScriptQuote>
+                <HTML>);
+                _tp_ctfld.fHidden = BoolFromString(</HTML>
+                <ScriptQuote><Property Select="Hidden"/></ScriptQuote>
+                <HTML>);
+                _tp_ctfld.fShowInNewForm = BoolFromString2(</HTML>
+                <ScriptQuote><Property Select="ShowInNewForm"/></ScriptQuote>
+                <HTML>, true);
+                _tp_ctfld.fShowInEditForm = BoolFromString2(</HTML>
+                <ScriptQuote><Property Select="ShowInEditForm"/></ScriptQuote>
+                <HTML>, true);
+                _tp_ctfld.fShowInFileDlg = BoolFromString2(</HTML>
+                <ScriptQuote><Property Select="ShowInFileDlg"/></ScriptQuote>
+                <HTML>, true);                
+                _tp_ctfld.fReadOnly = BoolFromString(</HTML>
+                <ScriptQuote><Property Select="ReadOnly"/></ScriptQuote>
+                <HTML>);
+                _tp_ctfld.stDisplay =</HTML>
+                <ScriptQuote><Property Select="DisplayName"/></ScriptQuote>
+                <HTML>;</HTML>
+                <ForEach Select="Default">
+                    <HTML>
+                    _tp_ctfld.stDefault=</HTML>
+                    <ScriptQuote><Property Select="."/></ScriptQuote>
+                    <HTML>;</HTML>            
+                </ForEach>
+                <HTML>
+                    _tp_rgctfld.push(_tp_ctfld);
+                </HTML>
+            </ForEach>
+            <HTML><![CDATA[
+            _g_tp_rgcts.push(_tp_rgctfld);
+            </script>
+            ]]></HTML>
+        </Else>
+    </IfSubString>
+</ContentTypes>
+<HTML><![CDATA[
+<script type="text/javascript">
+var fldct = frmCurrent.FindField("ContentType");
+if (fldct != null)
+	fldct.BuildUI();
+</script>
+]]></HTML>
+</ListFormBody>
+<ListFormClosing>
+<HTML><![CDATA[
+</span>]]></HTML>
+<Switch><Expr><GetVar Name="HTMLFormName"/></Expr>
+<Case Value=""><HTML><![CDATA[</form>]]></HTML></Case>
+</Switch>
+<HTML><![CDATA[
+<script type="text/javascript">
+var formName= ]]></HTML><ScriptQuote><GetVar Name="HTMLFormName"/></ScriptQuote><HTML><![CDATA[;
+function OnLoadWrapper()
+{
+    if (null != document.all.onetidIOFile)
+    {
+        try
+        {
+            frm.InitFormFields();
+            var tr = GetTr(document.all.onetidIOFile);
+            if (tr != null)
+                tr.style.display = "";
+            document.all.onetidIOFile.focus();
+            if (typeof(_spBodyOnLoad) == "function")
+            {
+                _spBodyOnLoad();
+            }            
+        }
+        catch(e)
+        {
+        }
+    }
+}
+if (browseris.ie4up && !browseris.mac)
+{
+    document.body.onload = OnLoadWrapper;
+}
+else
+{
+    var iof = document.getElementById("onetidIOFile");
+    if (iof != null)
+    {
+        var tr = GetTr(iof);
+        if (tr != null)
+            tr.style.display = "";
+    }
+    frm.SetFirstFocus();
+}
+]]></HTML>
+  <Switch>
+    <Expr><GetVar Name="Type"/></Expr>
+    <Case Value="1"/> 
+    <Default>
+      <HTML><![CDATA[
+        RemoveMultipleUploadItems();
+      ]]></HTML>
+    </Default>
+  </Switch>
+<HTML><![CDATA[
+</script>
+]]></HTML>
+</ListFormClosing>
+            </Form>
+            <Form Type="NewFormDialog" Path="EditDlg.htm">
+<ListFormOpening><HTML><![CDATA[
+<script type="text/javascript">
+var frm = new OWSForm(]]></HTML><ScriptQuote><Switch><Expr><GetVar Name="HTMLFormName"/></Expr><Case Value=""><HTML><![CDATA[OWSForm]]></HTML></Case><Default><GetVar Name="HTMLFormName"/></Default></Switch></ScriptQuote><HTML><![CDATA[, false, ]]></HTML><ScriptQuote><HttpVDir/><HTML>/_layouts/</HTML></ScriptQuote><HTML><![CDATA[);
+</script>
+]]></HTML>
+<HTML><![CDATA[
+<script type="text/javascript">]]></HTML>
+<HTML><![CDATA[ frm.dopt.chDateSep = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="29"/></ScriptQuote><HTML><![CDATA[; frm.dopt.chTimeSep = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="30"/></ScriptQuote><HTML><![CDATA[; frm.dopt.SetTimeFormat(]]></HTML><ProjectProperty Select="Time24"/><HTML><![CDATA[); frm.dopt.SetDateOrder(]]></HTML><LocaleInfo LCTYPE="33"/><HTML><![CDATA[); frm.dopt.SetDOW(]]></HTML><LocaleInfo LCTYPE="4108"/> <HTML><![CDATA[); frm.dopt.stAM = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="40"/></ScriptQuote><HTML><![CDATA[; frm.dopt.stPM = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="41"/></ScriptQuote><HTML><![CDATA[; frm.dopt.TimeMarkPosn = ]]></HTML><LocaleInfo LCTYPE="4101"/><HTML><![CDATA[; frm.dopt.webTZOffsetMin = ]]></HTML><ProjectProperty Select="TimeZoneBias"/><HTML><![CDATA[; ]]></HTML>
+<HTML><![CDATA[ frm.nopt.chDigSep = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="15"/></ScriptQuote><HTML><![CDATA[; frm.nopt.chDecimal = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="14"/></ScriptQuote><HTML><![CDATA[; frm.nopt.chMinus = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="81"/></ScriptQuote><HTML><![CDATA[; frm.nopt.iNegNumber = ]]></HTML><LocaleInfo LCTYPE="4112"/><HTML><![CDATA[; frm.nopt.SetGrouping(]]></HTML><ScriptQuote><LocaleInfo LCTYPE="16"/></ScriptQuote><HTML><![CDATA[); ]]></HTML>
+<HTML><![CDATA[
+frm.stFieldPrefix = ]]></HTML><ScriptQuote><FieldPrefix/></ScriptQuote><HTML><![CDATA[;
+frm.stImagesPath = ]]></HTML><ScriptQuote>/_layouts/15/images/</ScriptQuote><HTML><![CDATA[;
+frm.wBaseType = ]]></HTML><ListProperty Select="BaseType"/><HTML><![CDATA[;
+</script>]]></HTML>
+<Switch><Expr><GetVar Name="HTMLFormName"/></Expr><Case Value=""><HTML><![CDATA[<form name="OWSForm" id="OWSForm" EncType="multipart/form-data" Action="]]></HTML><HttpPath/><HTML><![CDATA[" Method=POST onSubmit="return false;">]]></HTML></Case></Switch>
+<HTML><![CDATA[
+<input type="Hidden" name="_charset_" value="utf-8">
+<input id="onetidCmd" type="Hidden" name="Cmd" value="Save">
+<input id="onetidIsFormValid" type="hidden" name="IsFormValid">
+<input id="onetidFormWasPosted" type="hidden" name="FormWasPosted">
+<input id="MustUpdateForm" type="hidden" name="MustUpdateForm" value="true">
+<input type="hidden" name="NextID" id="NextID" value="-1">
+<input type="hidden" name="NextUsing" id="NextUsing" value="]]></HTML><GetVar Name="Source" HTMLEncode="TRUE"/><HTML><![CDATA[">
+]]></HTML>
+<HTML><![CDATA[<span id='part1'>]]></HTML>
+<Identity/>
+</ListFormOpening>
+<ListFormBody>
+<HTML><![CDATA[<table border="0" cellpadding="2">
+<script type="text/javascript">var _g_tp_fNewForm = true;</script>
+]]></HTML>
+      <Fields>
+         <Switch><Expr><Property Select="Name"/></Expr>
+          <Case Value="FileLeafRef">
+           <SetVar Name="ShowField" Scope="Request">0</SetVar>
+          </Case>
+          <Default>
+           <SetVar Name="ShowField" Scope="Request">1</SetVar>
+    <HTML><![CDATA[<tr style="display:none"><th nowrap="nowrap" valign="top" class="ms-formlabel"><nobr>]]></HTML>
+    <Property Select="DisplayName" HTMLEncode="TRUE" AutoNewLine="TRUE"/>
+    <Switch>
+      <Expr><Property Select="Required"/></Expr>
+      <Case Value="TRUE">
+        <HTML><![CDATA[<font color=red> *</font>]]></HTML>
+        <SetVar Scope="Request" Name="HasRequired">TRUE</SetVar>
+      </Case>
+      <Default>
+        <HTML><![CDATA[<font color=red></font>]]></HTML>
+      </Default>
+    </Switch>
+    <HTML><![CDATA[</nobr></th><td class="ms-formbody">]]></HTML>
+    <Switch>
+      <Expr><Property Select="Type"/></Expr>
+      <Case Value="File">
+          <Switch>
+              <Expr><GetVar Name="Type"/></Expr>
+              <Case Value="1"><Field/></Case>
+              <Default></Default>
+          </Switch>
+       </Case>
+      <Default>
+    <Field/>
+      </Default>
+    </Switch>
+    <Switch>
+      <Expr><Property Select="RichText"/></Expr>
+      <Case Value="TRUE"/>
+      <Default>
+        <Switch>
+          <Expr><Property Select="Type"/></Expr>
+          <Case Value="Choice"/>
+          <Case Value="MultiChoice"/>
+          <Default>
+            <HTML><![CDATA[&#160;]]></HTML>
+            <Switch>
+              <Expr><Property Select="NoEditFormBreak"/></Expr>
+              <Case Value="TRUE"/>
+              <Default>
+                <HTML><![CDATA[<br>]]></HTML>
+              </Default>
+            </Switch>
+          </Default>
+        </Switch>
+      </Default>
+    </Switch>
+    <HTML><![CDATA[<span class="ms-formdescription">]]></HTML>
+    <Property Select="Description" HTMLEncode="TRUE" AutoHyperLink="TRUE" AutoNewLine="TRUE"/>
+    <HTML><![CDATA[</span></td></tr>]]></HTML>
+        </Default>
+       </Switch>
+      </Fields>
+<HTML><![CDATA[</table>]]></HTML>
+      <Switch>
+        <Expr><GetVar Name="HasRequired"/></Expr>
+        <Case Value="TRUE"><HTML><![CDATA[
+          <table border="0" cellpadding="2">
+          <tr>
+            <td id="reqdFldTxt" class="ms-descriptiontext" colspan="2" height="150px" valign="top"><br><font color=red>*</font> 
+             &#160;]]></HTML><HTML HTMLEncode="TRUE">$Resources:core,webview_editdlg_required_field;</HTML><HTML><![CDATA[
+            </td>
+          </tr>
+          </table>
+          ]]></HTML>
+        </Case>
+      </Switch>
+<ContentTypes>
+    <HTML><![CDATA[
+    <script type = "text/javascript">
+        frmCurrent.MapCtName(]]></HTML>
+    <ScriptQuote>
+      <Property Select="Name" />
+    </ScriptQuote>
+    <HTML><![CDATA[ ,]]></HTML>
+    <ScriptQuote>
+      <Property Select="ID" />
+    </ScriptQuote>
+    <HTML><![CDATA[);
+    </script>]]></HTML>
+    <IfSubString>
+        <Expr1>0x0120</Expr1>
+        <Expr2><Property Select="ID"/></Expr2>
+        <Then>
+            <HTML><![CDATA[
+            <script type="text/javascript">
+            _tp_rgctfld = new Array;
+            _g_tp_rgcts.push(_tp_rgctfld);
+            var fldct = frmCurrent.FindField("ContentType");
+            if (fldct != null)
+            	fldct.AddChoice(]]></HTML>
+            <ScriptQuote><Property Select="Name"/></ScriptQuote>
+            <HTML><![CDATA[);
+            </script>
+            ]]></HTML>
+        </Then>
+        <Else>
+            <HTML><![CDATA[
+            <script type="text/javascript">
+            var fldct = frmCurrent.FindField("ContentType");
+            if (fldct != null)
+            	fldct.AddChoice(]]></HTML>
+            <ScriptQuote><Property Select="Name"/></ScriptQuote>
+            <HTML><![CDATA[);
+            _tp_rgctfld = new Array;            
+            ]]></HTML>
+            <ForEach Select="FieldRefs/FieldRef">
+                <HTML>
+                _tp_ctfld = new Object(null);
+                _tp_ctfld.stName=</HTML>
+                <ScriptQuote><Property Select="Name"/></ScriptQuote>
+                <HTML>;
+                _tp_ctfld.fRequired = BoolFromString(</HTML>
+                <ScriptQuote><Property Select="Required"/></ScriptQuote>
+                <HTML>);
+                _tp_ctfld.fHidden = BoolFromString(</HTML>
+                <ScriptQuote><Property Select="Hidden"/></ScriptQuote>
+                <HTML>);
+                _tp_ctfld.fShowInNewForm = BoolFromString2(</HTML>
+                <ScriptQuote><Property Select="ShowInNewForm"/></ScriptQuote>
+                <HTML>, true);
+                _tp_ctfld.fShowInEditForm = BoolFromString2(</HTML>
+                <ScriptQuote><Property Select="ShowInEditForm"/></ScriptQuote>
+                <HTML>, true);
+                _tp_ctfld.fShowInFileDlg = BoolFromString2(</HTML>
+                <ScriptQuote><Property Select="ShowInFileDlg"/></ScriptQuote>
+                <HTML>, true);                
+                _tp_ctfld.fReadOnly = BoolFromString(</HTML>
+                <ScriptQuote><Property Select="ReadOnly"/></ScriptQuote>
+                <HTML>);
+                _tp_ctfld.stDisplay =</HTML>
+                <ScriptQuote><Property Select="DisplayName"/></ScriptQuote>
+                <HTML>;</HTML>
+                <ForEach Select="Default">
+                    <HTML>
+                    _tp_ctfld.stDefault=</HTML>
+                    <ScriptQuote><Property Select="."/></ScriptQuote>
+                    <HTML>;</HTML>            
+                </ForEach>
+                <HTML>
+                    _tp_rgctfld.push(_tp_ctfld);
+                </HTML>
+            </ForEach>
+            <HTML><![CDATA[
+            _g_tp_rgcts.push(_tp_rgctfld);
+            </script>
+            ]]></HTML>
+        </Else>
+    </IfSubString>
+</ContentTypes>
+<HTML><![CDATA[
+<script type="text/javascript">
+var fldct = frmCurrent.FindField("ContentType");
+if (fldct != null)
+	fldct.BuildUI();
+</script>
+]]></HTML>
+</ListFormBody>
+<ListFormClosing>
+<HTML><![CDATA[
+</span>]]></HTML>
+<Switch><Expr><GetVar Name="HTMLFormName"/></Expr>
+<Case Value=""><HTML><![CDATA[</form>]]></HTML></Case>
+</Switch>
+<HTML><![CDATA[
+<script type="text/javascript">
+</script>
+]]></HTML>
+</ListFormClosing>
+            </Form>
+        </Forms>
+    </MetaData>
+</List>

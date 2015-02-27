@@ -1,0 +1,68 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="PageLayoutTemplate" List="116" Url="_catalogs/masterpage" Path="" RootWebOnly="TRUE">
+        <File Url="PageLayoutTemplate.aspx" Type="GhostableInLibrary" >
+            <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" /> 
+            <Property Name="PublishingHidden" Value="true" />
+        </File>
+    </Module>
+    <Module 
+		Name="DefaultMasterPage" 
+		Path="_cts/$Resources:cmscore,contenttype_masterpage_name;"
+		SetupPath="Features\PublishingResources"
+		Url="_cts/$Resources:cmscore,contenttype_masterpage_name;"
+		>
+            <File Url="PublishingMasterTemplate.master" Type="Ghostable"/>
+    </Module>
+    <Module Name="PageLayouts" Url="_catalogs/masterpage" Path="" RootWebOnly="TRUE">
+        <File Url="WelcomeLinks.aspx" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="$Resources:cmscore,PageLayout_WelcomeLinks_Title;" /> 
+            <Property Name="MasterPageDescription" Value="$Resources:cmscore,PageLayout_WelcomeLinks_Description;" />
+            <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" /> 
+            <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/WelcomeLinks.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/WelcomeLinks.png" /> 
+            <Property Name="PublishingAssociatedContentType" Value=";#$Resources:cmscore,contenttype_welcomepage_name;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF390064DEA0F50FC8C147B0B6EA0636C4A7D4;#" /> 
+        </File>
+        <File Url="VariationRootPageLayout.aspx" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="$Resources:cmscore,PageLayout_VariationRootLayout_Title;" />
+            <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+            <Property Name="PublishingAssociatedContentType" Value=";#$Resources:cmscore,contenttype_redirectpage_name;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF3900FD0E870BA06948879DBD5F9813CD8799;#"/>
+            <Property Name="PublishingHidden" Value="true" />
+        </File>        
+    </Module>
+    <Module Name="PublishingResourcesPreviewImages" Url="_catalogs/masterpage" IncludeFolders="??*-??*" Path="" RootWebOnly="TRUE">
+        <File Url="WelcomeLinks.png" Name="Preview Images/WelcomeLinks.png" Type="GhostableInLibrary">
+        </File>
+        <File Url="DefaultPageLayout.png" Name="Preview Images/DefaultPageLayout.png" Type="GhostableInLibrary">
+        </File>
+        <File Url="DefaultMasterPage.png" Name="Preview Images/DefaultMasterPage.png" Type="GhostableInLibrary">
+        </File>
+    </Module>
+    <Module Name="XSLStyleSheets" Url="Style Library/XSL Style Sheets" Path="" RootWebOnly="TRUE">
+        <File Url="ContentQueryMain.xsl" Type="GhostableInLibrary" />
+        <File Url="SummaryLinkMain.xsl" Type="GhostableInLibrary" />
+        <File Url="Header.xsl" Type="GhostableInLibrary" />
+        <File Url="ItemStyle.xsl" Type="GhostableInLibrary" />
+        <File Url="TableOfContentsMain.xsl" Type="GhostableInLibrary" />
+        <File Url="LevelStyle.xsl" Type="GhostableInLibrary" />
+        <File Url="Rss.xsl" Type="GhostableInLibrary" />
+    </Module>
+    <Module Name="CSSStyleSheets" Url="Style Library" IncludeFolders="??*-??*" Path="" RootWebOnly="TRUE">
+        <File Url="rca.css" Name="Core Styles/rca.css" Type="GhostableInLibrary" />
+    </Module>
+    <Module Name="CMSWebParts" List="113" Url="_catalogs/wp" Path="dwp" RootWebOnly="TRUE">
+        <File Url="ContentQuery.webpart" Type="GhostableInLibrary">
+            <Property Name="ContentTypeName" Value="$Resources:cmscore,contenttype_articlepage_name;"></Property>
+            <Property Name="Group" Value="$Resources:core,ContentRollupWebPartGroup;"></Property>
+            <Property Name="QuickAddGroups" Value=";#Default;#" />
+        </File>
+        <File Url="SummaryLink.webpart" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:core,ContentRollupWebPartGroup;"></Property>
+            <Property Name="QuickAddGroups" Value=";#Default;#" />
+        </File>
+        <File Url="TableOfContents.webpart" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:core,ContentRollupWebPartGroup;"></Property>
+            <Property Name="QuickAddGroups" Value=";#Default;#" />
+        </File>
+    </Module>
+</Elements>

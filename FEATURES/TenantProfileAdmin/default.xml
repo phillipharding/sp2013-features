@@ -1,0 +1,12 @@
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Id="TenantAdmin_Sites_ManageUserProfileApplications"
+        GroupId="TenantAdmin_Settings"
+        Location="Microsoft.SharePoint.TenantAdministration"
+        Sequence="50"
+        Title="$Resources:spscore,tenantadmin_userprofileapplication_manage;">
+        <UrlAction
+            Url="_layouts/tenantprofileadmin/manageuserprofileserviceapplication.aspx" />
+    </CustomAction>
+</Elements>

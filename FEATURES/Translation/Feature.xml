@@ -1,0 +1,22 @@
+<Feature  Id="4E7276BC-E7AB-4951-9C4B-A74D44205C32"
+          Title="Translation"
+          Description="Enables translation for Publishing Pages."
+          Version="15.0.2.0"
+          Scope="Site"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          ReceiverAssembly="Microsoft.SharePoint.Translation, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Translation.TranslationFeatureHandler" 
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="TranslationResources.xml" />
+    </ElementManifests>
+    <UpgradeActions>
+        <VersionRange EndVersion="15.0.1.0">
+            <CustomUpgradeAction Name="TranslationStateListRenaming" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.2.0">
+            <CustomUpgradeAction Name="TranslationGroupRoleAdding" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

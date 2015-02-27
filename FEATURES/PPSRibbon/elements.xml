@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction
+    Id="PerformancePointRibbon.ListView"
+        Location="CommandUI.Ribbon"
+    RegistrationType="ContentType"
+    RegistrationId="0x01002DDC53CB1D5F4520BE0568558051291F">
+    <CommandUIExtension>
+
+      <CommandUIDefinitions>
+        <CommandUIDefinition
+          Location="Ribbon.Tabs._children">
+            <Tab
+              Id="Ribbon.PerformancePointTab"
+              Title="$Resources:ppsma,PPS_RibbonTabTile"
+              Description="$Resources:ppsma,PPS_RibbonTabDescription"
+              Sequence="904">
+              <Scaling
+                Id="Ribbon.PerformancePointTab.Scaling">
+                <MaxSize
+                  Id="Ribbon.PerformancePointTab.MaxSize"
+                  GroupId="Ribbon.PerformancePointTab.CreateEditGroup"
+                  Size="OneLargeTwoMedium"/>
+                <MaxSize
+                  Id="Ribbon.PerformancePointTab.MaxSize"
+                  GroupId="Ribbon.PerformancePointTab.ExportGroup"
+                  Size="OneLargeTwoMedium"/>
+                <Scale
+                  Id="Ribbon.PerformancePointTab.Scaling.CustomTabScaling"
+                  GroupId="Ribbon.PerformancePointTab.CreateEditGroup"
+                  Size="OneLargeTwoMedium" />
+                <Scale
+                  Id="Ribbon.PerformancePointTab.Scaling.CustomTabScaling"
+                  GroupId="Ribbon.PerformancePointTab.ExportGroup"
+                  Size="OneLargeTwoMedium" />
+              </Scaling>
+              <Groups Id="Ribbon.PerformancePointTab.Groups">
+                <Group
+                  Id="Ribbon.PerformancePointTab.CreateEditGroup"
+                  Description="$Resources:ppsma,PPS_RibbonDashboardDesignerGroupDescription"
+                  Title="$Resources:ppsma,PPS_RibbonDashboardDesignerGroupTitle"
+                  Sequence="51"
+                  Template="Ribbon.Templates.PerformancePointTemplate">
+                  <Controls Id="Ribbon.PerformancePointTab.CreateEditGroup.Controls">
+                    <Button
+                      Id="Ribbon.PerformancePointTab.CreateEditGroup.DashboardDesigner"
+                      Command="PerformancePointTab.ShowDDDialog"
+                      Image32by32="/_layouts/15/images/PPSDashboardDesigner32.png?rev=23"
+                      Image16by16="/_layouts/15/images/PPSDashboardDesigner16.png?rev=23"
+                      Sequence="14"
+                      Description="Launch Dashboard Designer"
+                      ToolTipTitle="$Resources:ppsma,PPS_RibbonDashboardDesignerButtonTooltipText"
+		      ToolTipDescription="$Resources:ppsma,PPS_RibbonDashboardDesignerButtonTooltipDescription"
+                      LabelText="$Resources:ppsma,PPS_RibbonDashboardDesignerRibbonText"
+                      TemplateAlias="dashboarddesignerButton"/>
+                  </Controls>
+                </Group>
+                <Group
+                  Id="Ribbon.PerformancePointTab.ExportGroup"
+                  Description="Export Import PerformancePoint Content"
+                  Title="$Resources:ppsma,PPS_RibbonImportGroupTile"
+                  Sequence="52"
+                  Template="Ribbon.Templates.PerformancePointTemplate">
+                  <Controls Id="Ribbon.PerformancePointTab.ExportGroup.Controls">
+                    <Button
+                      Id="Ribbon.PerformancePointTab.ExportGroup.Export"
+                      Command="PerformancePointTab.ShowExportDialog"
+                      Image32by32="/_layouts/15/images/PPSExport32.png?rev=23"
+                      Image16by16="/_layouts/15/images/PPSExport16.png?rev=23"
+                      Sequence="15"
+                      Description="Export PerformancePoint Content"
+                      ToolTipTitle="$Resources:ppsma,PPS_RibbonExportButtonTooltipText"
+		      ToolTipDescription="$Resources:ppsma,PPS_RibbonExportButtonTooltipDescription"
+                      LabelText="$Resources:ppsma,PPS_RibbonExportButtonText"
+                      TemplateAlias="exportButton"/>
+                    <Button
+                      Id="Ribbon.PerformancePointTab.ExportGroup.Import"
+                      Command="PerformancePointTab.ShowImportDialog"
+                      Sequence="19"
+                      Image32by32="/_layouts/15/images/PPSImport32.png?rev=23"
+                      Image16by16="/_layouts/15/images/PPSImport16.png?rev=23"
+                      Description="Import PerformancePoint Content"
+                      ToolTipTitle="$Resources:ppsma,PPS_RibbonImportButtonTooltipText"
+		      ToolTipDescription="$Resources:ppsma,PPS_RibbonImportButtonTooltipDescription"
+                      LabelText="$Resources:ppsma,PPS_RibbonImportButtonText"
+                      TemplateAlias="importButton"/>
+                  </Controls>
+                </Group>
+              </Groups>
+            </Tab>
+        </CommandUIDefinition>
+        <CommandUIDefinition Location="Ribbon.Templates._children">
+          <GroupTemplate Id="Ribbon.Templates.PerformancePointTemplate">
+            <Layout
+              Title="OneLargeTwoMedium"
+              LayoutTitle="OneLargeTwoMedium">
+              <Section Alignment="Top" Type="OneRow">
+                <Row>
+                  <ControlRef DisplayMode="Large" TemplateAlias="dashboarddesignerButton" />
+                  <ControlRef DisplayMode="Large" TemplateAlias="exportButton" />
+                  <ControlRef DisplayMode="Large" TemplateAlias="importButton" />
+                </Row>
+              </Section>
+            </Layout>
+          </GroupTemplate>
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler
+		Command="PerformancePointTab.ShowDDDialog"
+		CommandAction="javascript:			
+			function OpenDDforSelectedItem() {
+				var _clientContext = SP.ClientContext.get_current();
+				var _web = _clientContext.get_web();
+				var itemUrl = '{ItemUrl}';
+
+				if(0 != itemUrl.indexOf('{'+'ItemUrl'+'}'))
+				{
+					var _list = _web.get_lists().getById('{ListId}');
+					this.listItem = _list.getItemById('{ItemId}');  
+					_clientContext.load(this.listItem, 'ContentType');
+				}
+				else
+				{
+					var _selectedListId = SP.ListOperation.Selection.getSelectedList();
+					if(null != _selectedListId)
+					{
+						var _list = _web.get_lists().getById(_selectedListId);
+						var selectedItems = SP.ListOperation.Selection.getSelectedItems();
+						if (CountDictionary(selectedItems) == 1) {
+							this.listItem = _list.getItemById(selectedItems[0]['id']);
+							_clientContext.load(this.listItem, 'ows_EncodedAbsUrl', 'ContentType');
+						}
+					}
+				}
+				_clientContext.executeQueryAsync(Function.createDelegate(this, onQuerySucceeded), Function.createDelegate(this, onQueryFailed));
+			}
+
+			function onQuerySucceeded(sender, args) {
+				var ddUrl;
+				var designerRedirectUrl = '/_layouts/15/ppswebparts/DesignerRedirect.aspx';
+				var itemUrl = '{ItemUrl}';
+				var selectedItems = SP.ListOperation.Selection.getSelectedItems();				
+				var siteCollection = _spPageContextInfo.siteServerRelativeUrl;
+				var sitePrefix = window.location.protocol + '//' + window.location.host;
+				var siteLocation = _spPageContextInfo.webServerRelativeUrl;
+
+				if(siteLocation === '/')
+				{
+					siteLocation='';
+				}
+
+				if(0 != itemUrl.indexOf('{'+'ItemUrl'+'}'))
+				{
+					var encodedItemUrl = encodeURIComponent(decodeURIComponent(siteLocation + '/' + itemUrl)).replace(/_/g, '%5F').replace(/\./g,'%2E');
+					ddUrl = siteLocation + designerRedirectUrl + '?Operation=OpenItem&amp;ItemLocation=' + encodedItemUrl + '&amp;ContentTypeId='+ this.listItem.get_contentType().get_id().toString();
+				}
+				else if (CountDictionary(selectedItems) == 1) {
+					var encodedAbsItemUrl = this.listItem.get_item('ows_EncodedAbsUrl');
+					encodedAbsItemUrl = encodedAbsItemUrl.replace(sitePrefix, '');
+					var encodedItemUrl = encodeURIComponent(decodeURIComponent(encodedAbsItemUrl)).replace(/_/g, '%5F').replace(/\./g,'%2E');
+					ddUrl = siteLocation + designerRedirectUrl + '?Operation=OpenItem&amp;ItemLocation=' + encodedItemUrl + '&amp;ContentTypeId='+ this.listItem.get_contentType().get_id().toString();
+				} else {
+					var siteCollectionUrl = sitePrefix + siteCollection;
+					var siteLocationUrl = siteLocation.replace(siteCollection,'');
+					ddUrl = siteLocation + designerRedirectUrl + '?SiteCollection=' + encodeURIComponent(siteCollectionUrl) + '&amp;SiteLocation=' + encodeURIComponent(siteLocationUrl);
+				}
+				window.location.href = ddUrl;
+			}
+
+			function onQueryFailed(sender, args) {
+				alert('Request Failed ' + args.get_message() + '\n' + args.get_stackTrace());
+			}
+			OpenDDforSelectedItem();
+          "
+		EnabledScript="javascript:      
+            function EnableDisableButton() {
+				var enabled = false; 
+				var selectedItems = SP.ListOperation.Selection.getSelectedItems();
+
+				if (CountDictionary(selectedItems) == 1) {
+					if (this.itemId != selectedItems[0]['id']) {
+						this.itemId = selectedItems[0]['id'];
+						GetItemStatus(this.itemId);
+					}  									
+					else if (this.StatusValue == false) {  
+						enabled = false;
+					}  
+					else if ((this.StatusValue == true) &amp;&amp; (this.itemId == selectedItems[0]['id'])) {
+						enabled = true;
+					}
+				}
+				else { 
+					enabled = true;
+				}
+
+				return enabled;
+			}
+
+			function GetItemStatus(itemId) {
+				var _clientContext = SP.ClientContext.get_current();
+				var _web = _clientContext.get_web();
+				var _currentList = _web.get_lists().getById(SP.ListOperation.Selection.getSelectedList());              
+				this.singleItem = _currentList.getItemById(itemId);
+				_clientContext.load(this.singleItem, 'ContentType');
+
+				_clientContext.executeQueryAsync(Function.createDelegate(this, onQuerySucceeded), Function.createDelegate(this, onQueryFailed));
+            }
+
+            function onQuerySucceeded(sender, args) {
+				var singleItemCTId = this.singleItem.get_contentType().get_id().toString();
+				this.StatusValue = (0 == singleItemCTId.indexOf('0x01002DDC53CB1D5F4520BE0568558051291F')) || (0 == singleItemCTId.indexOf('0x0101004C06BE72B56941358D9BD0B31603EC4D')); 
+				RefreshCommandUI();				
+			}
+
+			function onQueryFailed(sender, args) {
+				alert('Request Failed ' + args.get_message() + '\n' + args.get_stackTrace());
+			}
+
+            EnableDisableButton();
+            "
+		/>
+        <CommandUIHandler
+          Command="PerformancePointTab.ShowExportDialog"
+          CommandAction="javascript:
+
+function NotifyCallBack(dialogResult, returnValue) {
+}
+
+          var ctx = SP.ClientContext.get_current();
+          var items = SP.ListOperation.Selection.getSelectedItems(ctx); 
+                    var myItems = '';
+          var k;
+
+          for (k in items)
+          {
+            myItems += '|' + items[k].id;
+          }
+
+          var exportFormUrl =  '{SiteUrl}/_layouts/15/ppswebparts/ExportDashboard.aspx?'
+                              + 'ExportUrls=' + myItems
+                              + '&amp;source={ListId}';
+
+          var options = {
+            url:  encodeURI(exportFormUrl),
+            allowMaximize: false,
+            showClose: true,
+            resizeable: true,
+            width: 800,
+            dialogReturnValueCallback: NotifyCallBack
+          };
+
+          SP.UI.ModalDialog.showModalDialog(options);
+"
+
+        />
+      <CommandUIHandler
+  Command="PerformancePointTab.ShowImportDialog"
+  CommandAction="javascript:
+
+        function NotifyImportCallBack(dialogResult, returnValue) {
+        if (dialogResult === SP.UI.DialogResult.OK) {
+            SP.UI.ModalDialog.RefreshPage(SP.UI.DialogResult.OK);
+            }
+        }
+
+          var ctx = SP.ClientContext.get_current();
+          var items = SP.ListOperation.Selection.getSelectedItems(ctx);
+          var myItems = '';
+          var k;
+
+          for (k in items)
+          {
+            myItems += '|' + items[k].id;
+          }
+
+          var rootFolder  = '{SiteUrl}';
+          var importFormUrl =  rootFolder + '/_layouts/15/ppswebparts/ImportDashboard.aspx?'
+                              + 'ExportUrls=' + myItems
+                              + '&amp;source=' + SP.ListOperation.Selection.getSelectedList();
+
+          var ImportOptions = {
+          url: importFormUrl,
+          allowMaximize: false,
+          showClose: true,
+          width: 800,
+          height: 600,
+          dialogReturnValueCallback: NotifyImportCallBack
+          };
+
+          SP.UI.ModalDialog.showModalDialog(ImportOptions);"
+
+        />
+      </CommandUIHandlers>
+
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction
+  Id="PerformancePointRibbon"
+      Location="CommandUI.Ribbon.ListView"
+      RegistrationType="ContentType"
+      RegistrationId="0x01010901">
+    <CommandUIExtension>
+
+      <CommandUIDefinitions>
+        <CommandUIDefinition
+          Location="Ribbon.Tabs._children">
+            <Tab
+              Id="Ribbon.PerformancePointTab"
+              Title="$Resources:ppsma,PPS_RibbonTabTile"
+              Description="$Resources:ppsma,PPS_RibbonTabDescription"
+              Sequence="904">
+              <Scaling
+                Id="Ribbon.PerformancePointTab.Scaling">
+                <MaxSize
+                  Id="Ribbon.PerformancePointTab.MaxSize"
+                  GroupId="Ribbon.PerformancePointTab.CreateEditGroup"
+                  Size="OneLargeTwoMedium"/>
+                <MaxSize
+                  Id="Ribbon.PerformancePointTab.MaxSize"
+                  GroupId="Ribbon.PerformancePointTab.ExportGroup"
+                  Size="OneLargeTwoMedium"/>
+                <Scale
+                  Id="Ribbon.PerformancePointTab.Scaling.CustomTabScaling"
+                  GroupId="Ribbon.PerformancePointTab.CreateEditGroup"
+                  Size="OneLargeTwoMedium" />
+                <Scale
+                  Id="Ribbon.PerformancePointTab.Scaling.CustomTabScaling"
+                  GroupId="Ribbon.PerformancePointTab.ExportGroup"
+                  Size="OneLargeTwoMedium" />
+              </Scaling>
+              <Groups Id="Ribbon.PerformancePointTab.Groups">
+                <Group
+                  Id="Ribbon.PerformancePointTab.CreateEditGroup"
+                  Description="$Resources:ppsma,PPS_RibbonDashboardDesignerGroupDescription"
+                  Title="$Resources:ppsma,PPS_RibbonDashboardDesignerGroupTitle"
+                  Sequence="51"
+                  Template="Ribbon.Templates.PerformancePointTemplate">
+                  <Controls Id="Ribbon.PerformancePointTab.CreateEditGroup.Controls">
+                    <Button
+                      Id="Ribbon.PerformancePointTab.CreateEditGroup.DashboardDesigner"
+                      Command="PerformancePointTab.ShowDDDialog"
+                      Image32by32="/_layouts/15/images/PPSDashboardDesigner32.png?rev=23"
+                      Image16by16="/_layouts/15/images/PPSDashboardDesigner16.png?rev=23"
+                      Sequence="14"
+                      Description="Launch Dashboard Designer"
+                      ToolTipTitle="$Resources:ppsma,PPS_RibbonDashboardDesignerButtonTooltipText"
+		      ToolTipDescription="$Resources:ppsma,PPS_RibbonDashboardDesignerButtonTooltipDescription"
+                      LabelText="$Resources:ppsma,PPS_RibbonDashboardDesignerRibbonText"
+                      TemplateAlias="dashboarddesignerButton"/>
+                  </Controls>
+                </Group>
+                <Group
+                  Id="Ribbon.PerformancePointTab.ExportGroup"
+                  Description="Export Import PerformancePoint Content"
+                  Title="$Resources:ppsma,PPS_RibbonImportGroupTile"
+                  Sequence="52"
+                  Template="Ribbon.Templates.PerformancePointTemplate">
+                  <Controls Id="Ribbon.PerformancePointTab.ExportGroup.Controls">
+                    <Button
+                      Id="Ribbon.PerformancePointTab.ExportGroup.Export"
+                      Command="PerformancePointTab.ShowExportDialog"
+                      Image32by32="/_layouts/15/images/PPSExport32.png?rev=23"
+                      Image16by16="/_layouts/15/images/PPSExport16.png?rev=23"
+                      Sequence="15"
+                      Description="Export PerformancePoint Content"
+                      ToolTipTitle="$Resources:ppsma,PPS_RibbonExportButtonTooltipText"
+		      ToolTipDescription="$Resources:ppsma,PPS_RibbonExportButtonTooltipDescription"
+                      LabelText="$Resources:ppsma,PPS_RibbonExportButtonText"
+                      TemplateAlias="exportButton"/>
+                    <Button
+                      Id="Ribbon.PerformancePointTab.ExportGroup.Import"
+                      Command="PerformancePointTab.ShowImportDialog"
+                      Sequence="19"
+                      Image32by32="/_layouts/15/images/PPSImport32.png?rev=23"
+                      Image16by16="/_layouts/15/images/PPSImport16.png?rev=23"
+                      Description="Import PerformancePoint Content"
+                      ToolTipTitle="$Resources:ppsma,PPS_RibbonImportButtonTooltipText"
+		      ToolTipDescription="$Resources:ppsma,PPS_RibbonImportButtonTooltipDescription"
+                      LabelText="$Resources:ppsma,PPS_RibbonImportButtonText"
+                      TemplateAlias="importButton"/>
+                  </Controls>
+                </Group>
+              </Groups>
+            </Tab>
+        </CommandUIDefinition>
+        <CommandUIDefinition Location="Ribbon.Templates._children">
+          <GroupTemplate Id="Ribbon.Templates.PerformancePointTemplate">
+            <Layout
+              Title="OneLargeTwoMedium"
+              LayoutTitle="OneLargeTwoMedium">
+              <Section Alignment="Top" Type="OneRow">
+                <Row>
+                  <ControlRef DisplayMode="Large" TemplateAlias="dashboarddesignerButton" />
+                  <ControlRef DisplayMode="Large" TemplateAlias="exportButton" />
+                  <ControlRef DisplayMode="Large" TemplateAlias="importButton" />
+                </Row>
+              </Section>
+            </Layout>
+          </GroupTemplate>
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler
+		Command="PerformancePointTab.ShowDDDialog"
+		CommandAction="javascript:			
+			function OpenDDforSelectedItem() {
+				var _clientContext = SP.ClientContext.get_current();
+				var _web = _clientContext.get_web();
+				var itemUrl = '{ItemUrl}';
+
+				if(0 != itemUrl.indexOf('{'+'ItemUrl'+'}'))
+				{
+					var _list = _web.get_lists().getById('{ListId}');
+					this.listItem = _list.getItemById('{ItemId}');  
+					_clientContext.load(this.listItem, 'ContentType');
+				}
+				else
+				{
+					var _selectedListId = SP.ListOperation.Selection.getSelectedList();
+					if(null != _selectedListId)
+					{
+						var _list = _web.get_lists().getById(_selectedListId);
+						var selectedItems = SP.ListOperation.Selection.getSelectedItems();
+						if (CountDictionary(selectedItems) == 1) {
+							this.listItem = _list.getItemById(selectedItems[0]['id']);
+							_clientContext.load(this.listItem, 'ows_EncodedAbsUrl', 'ContentType');
+						}
+					}
+				}
+				_clientContext.executeQueryAsync(Function.createDelegate(this, onQuerySucceeded), Function.createDelegate(this, onQueryFailed));
+			}
+
+			function onQuerySucceeded(sender, args) {
+				var ddUrl;
+				var designerRedirectUrl = '/_layouts/15/ppswebparts/DesignerRedirect.aspx';
+				var itemUrl = '{ItemUrl}';
+				var selectedItems = SP.ListOperation.Selection.getSelectedItems();				
+				var siteCollection = _spPageContextInfo.siteServerRelativeUrl;
+				var sitePrefix = window.location.protocol + '//' + window.location.host;
+				var siteLocation = _spPageContextInfo.webServerRelativeUrl;
+
+				if(siteLocation === '/')
+				{
+					siteLocation='';
+				}
+
+				if(0 != itemUrl.indexOf('{'+'ItemUrl'+'}'))
+				{
+					var encodedItemUrl = encodeURIComponent(decodeURIComponent(siteLocation + '/' + itemUrl)).replace(/_/g, '%5F').replace(/\./g,'%2E');
+					ddUrl = siteLocation + designerRedirectUrl + '?Operation=OpenItem&amp;ItemLocation=' + encodedItemUrl + '&amp;ContentTypeId='+ this.listItem.get_contentType().get_id().toString();
+				}
+				else if (CountDictionary(selectedItems) == 1) {
+					var encodedAbsItemUrl = this.listItem.get_item('ows_EncodedAbsUrl');
+					encodedAbsItemUrl = encodedAbsItemUrl.replace(sitePrefix, '');
+					var encodedItemUrl = encodeURIComponent(decodeURIComponent(encodedAbsItemUrl)).replace(/_/g, '%5F').replace(/\./g,'%2E');
+					ddUrl = siteLocation + designerRedirectUrl + '?Operation=OpenItem&amp;ItemLocation=' + encodedItemUrl + '&amp;ContentTypeId='+ this.listItem.get_contentType().get_id().toString();
+				} else {
+					var siteCollectionUrl = sitePrefix + siteCollection;
+					var siteLocationUrl = siteLocation.replace(siteCollection,'');
+					ddUrl = siteLocation + designerRedirectUrl + '?SiteCollection=' + encodeURIComponent(siteCollectionUrl) + '&amp;SiteLocation=' + encodeURIComponent(siteLocationUrl);
+				}
+				window.location.href = ddUrl;
+			}
+
+			function onQueryFailed(sender, args) {
+				alert('Request Failed ' + args.get_message() + '\n' + args.get_stackTrace());
+			}
+			OpenDDforSelectedItem();
+          "
+		EnabledScript="javascript:      
+            function EnableDisableButton() {
+				var enabled = false; 
+				var selectedItems = SP.ListOperation.Selection.getSelectedItems();
+
+				if (CountDictionary(selectedItems) == 1) {
+					if (this.itemId != selectedItems[0]['id']) {
+						this.itemId = selectedItems[0]['id'];
+						GetItemStatus(this.itemId);
+					}  									
+					else if (this.StatusValue == false) {  
+						enabled = false;
+					}  
+					else if ((this.StatusValue == true) &amp;&amp; (this.itemId == selectedItems[0]['id'])) {
+						enabled = true;
+					}
+				}
+				else { 
+					enabled = true;
+				}
+
+				return enabled;
+			}
+
+			function GetItemStatus(itemId) {
+				var _clientContext = SP.ClientContext.get_current();
+				var _web = _clientContext.get_web();
+				var _currentList = _web.get_lists().getById(SP.ListOperation.Selection.getSelectedList());              
+				this.singleItem = _currentList.getItemById(itemId);
+				_clientContext.load(this.singleItem, 'ContentType');
+
+				_clientContext.executeQueryAsync(Function.createDelegate(this, onQuerySucceeded), Function.createDelegate(this, onQueryFailed));
+            }
+
+            function onQuerySucceeded(sender, args) {
+				var singleItemCTId = this.singleItem.get_contentType().get_id().toString();
+				this.StatusValue = (0 == singleItemCTId.indexOf('0x01002DDC53CB1D5F4520BE0568558051291F')) || (0 == singleItemCTId.indexOf('0x0101004C06BE72B56941358D9BD0B31603EC4D')); 
+				RefreshCommandUI();				
+			}
+
+			function onQueryFailed(sender, args) {
+				alert('Request Failed ' + args.get_message() + '\n' + args.get_stackTrace());
+			}
+
+            EnableDisableButton();
+            "
+		/>
+        <CommandUIHandler
+          Command="PerformancePointTab.ShowExportDialog"
+          CommandAction="javascript:
+
+function NotifyCallBack(dialogResult, returnValue) {
+}
+
+          var ctx = SP.ClientContext.get_current();
+          var items = SP.ListOperation.Selection.getSelectedItems(ctx); 
+                    var myItems = '';
+          var k;
+
+          for (k in items)
+          {
+            myItems += '|' + items[k].id;
+          }
+
+          var exportFormUrl =  '{SiteUrl}/_layouts/15/ppswebparts/ExportDashboard.aspx?'
+                              + 'ExportUrls=' + myItems
+                              + '&amp;source={ListId}';
+
+          var options = {
+            url:  encodeURI(exportFormUrl),
+            allowMaximize: false,
+            showClose: true,
+            resizeable: true,
+            width: 800,
+            dialogReturnValueCallback: NotifyCallBack
+          };
+
+          SP.UI.ModalDialog.showModalDialog(options);
+"
+
+        />
+      <CommandUIHandler
+  Command="PerformancePointTab.ShowImportDialog"
+  CommandAction="javascript:
+
+        function NotifyImportCallBack(dialogResult, returnValue) {
+        if (dialogResult === SP.UI.DialogResult.OK) {
+            SP.UI.ModalDialog.RefreshPage(SP.UI.DialogResult.OK);
+            }
+        }
+
+          var ctx = SP.ClientContext.get_current();
+          var items = SP.ListOperation.Selection.getSelectedItems(ctx);
+          var myItems = '';
+          var k;
+
+          for (k in items)
+          {
+            myItems += '|' + items[k].id;
+          }
+
+          var rootFolder  = '{SiteUrl}';
+          var importFormUrl =  rootFolder + '/_layouts/15/ppswebparts/ImportDashboard.aspx?'
+                              + 'ExportUrls=' + myItems
+                              + '&amp;source=' + SP.ListOperation.Selection.getSelectedList();
+
+          var ImportOptions = {
+          url: importFormUrl,
+          allowMaximize: false,
+          showClose: true,
+          width: 800,
+          height: 600,
+          dialogReturnValueCallback: NotifyImportCallBack
+          };
+
+          SP.UI.ModalDialog.showModalDialog(ImportOptions);"
+
+        />
+      </CommandUIHandlers>
+
+    </CommandUIExtension>
+  </CustomAction>
+    <CustomAction
+  Id="PerformancePointRibbon"
+      Location="CommandUI.Ribbon.ListView"
+      RegistrationType="ContentType"
+      RegistrationId="0x0101004C06BE72B56941358D9BD0B31603EC4D01">
+    <CommandUIExtension>
+
+      <CommandUIDefinitions>
+        <CommandUIDefinition
+          Location="Ribbon.Tabs._children">
+            <Tab
+              Id="Ribbon.PerformancePointTab"
+              Title="$Resources:ppsma,PPS_RibbonTabTile"
+              Description="$Resources:ppsma,PPS_RibbonTabDescription"
+              Sequence="904">
+              <Scaling
+                Id="Ribbon.PerformancePointTab.Scaling">
+                <MaxSize
+                  Id="Ribbon.PerformancePointTab.MaxSize"
+                  GroupId="Ribbon.PerformancePointTab.CreateEditGroup"
+                  Size="OneLargeTwoMedium"/>
+                <MaxSize
+                  Id="Ribbon.PerformancePointTab.MaxSize"
+                  GroupId="Ribbon.PerformancePointTab.ExportGroup"
+                  Size="OneLargeTwoMedium"/>
+                <Scale
+                  Id="Ribbon.PerformancePointTab.Scaling.CustomTabScaling"
+                  GroupId="Ribbon.PerformancePointTab.CreateEditGroup"
+                  Size="OneLargeTwoMedium" />
+                <Scale
+                  Id="Ribbon.PerformancePointTab.Scaling.CustomTabScaling"
+                  GroupId="Ribbon.PerformancePointTab.ExportGroup"
+                  Size="OneLargeTwoMedium" />
+              </Scaling>
+              <Groups Id="Ribbon.PerformancePointTab.Groups">
+                <Group
+                  Id="Ribbon.PerformancePointTab.CreateEditGroup"
+                  Description="$Resources:ppsma,PPS_RibbonDashboardDesignerGroupDescription"
+                  Title="$Resources:ppsma,PPS_RibbonDashboardDesignerGroupTitle"
+                  Sequence="51"
+                  Template="Ribbon.Templates.PerformancePointTemplate">
+                  <Controls Id="Ribbon.PerformancePointTab.CreateEditGroup.Controls">
+                    <Button
+                      Id="Ribbon.PerformancePointTab.CreateEditGroup.DashboardDesigner"
+                      Command="PerformancePointTab.ShowDDDialog"
+                      Image32by32="/_layouts/15/images/PPSDashboardDesigner32.png?rev=23"
+                      Image16by16="/_layouts/15/images/PPSDashboardDesigner16.png?rev=23"
+                      Sequence="14"
+                      Description="Launch Dashboard Designer"
+                      ToolTipTitle="$Resources:ppsma,PPS_RibbonDashboardDesignerButtonTooltipText"
+		      ToolTipDescription="$Resources:ppsma,PPS_RibbonDashboardDesignerButtonTooltipDescription"
+                      LabelText="$Resources:ppsma,PPS_RibbonDashboardDesignerRibbonText"
+                      TemplateAlias="dashboarddesignerButton"/>
+                  </Controls>
+                </Group>
+                <Group
+                  Id="Ribbon.PerformancePointTab.ExportGroup"
+                  Description="Export Import PerformancePoint Content"
+                  Title="$Resources:ppsma,PPS_RibbonImportGroupTile"
+                  Sequence="52"
+                  Template="Ribbon.Templates.PerformancePointTemplate">
+                  <Controls Id="Ribbon.PerformancePointTab.ExportGroup.Controls">
+                    <Button
+                      Id="Ribbon.PerformancePointTab.ExportGroup.Export"
+                      Command="PerformancePointTab.ShowExportDialog"
+                      Image32by32="/_layouts/15/images/PPSExport32.png?rev=23"
+                      Image16by16="/_layouts/15/images/PPSExport16.png?rev=23"
+                      Sequence="15"
+                      Description="Export PerformancePoint Content"
+                      ToolTipTitle="$Resources:ppsma,PPS_RibbonExportButtonTooltipText"
+		      ToolTipDescription="$Resources:ppsma,PPS_RibbonExportButtonTooltipDescription"
+                      LabelText="$Resources:ppsma,PPS_RibbonExportButtonText"
+                      TemplateAlias="exportButton"/>
+                    <Button
+                      Id="Ribbon.PerformancePointTab.ExportGroup.Import"
+                      Command="PerformancePointTab.ShowImportDialog"
+                      Sequence="19"
+                      Image32by32="/_layouts/15/images/PPSImport32.png?rev=23"
+                      Image16by16="/_layouts/15/images/PPSImport16.png?rev=23"
+                      Description="Import PerformancePoint Content"
+                      ToolTipTitle="$Resources:ppsma,PPS_RibbonImportButtonTooltipText"
+		      ToolTipDescription="$Resources:ppsma,PPS_RibbonImportButtonTooltipDescription"
+                      LabelText="$Resources:ppsma,PPS_RibbonImportButtonText"
+                      TemplateAlias="importButton"/>
+                  </Controls>
+                </Group>
+              </Groups>
+            </Tab>
+        </CommandUIDefinition>
+        <CommandUIDefinition Location="Ribbon.Templates._children">
+          <GroupTemplate Id="Ribbon.Templates.PerformancePointTemplate">
+            <Layout
+              Title="OneLargeTwoMedium"
+              LayoutTitle="OneLargeTwoMedium">
+              <Section Alignment="Top" Type="OneRow">
+                <Row>
+                  <ControlRef DisplayMode="Large" TemplateAlias="dashboarddesignerButton" />
+                  <ControlRef DisplayMode="Large" TemplateAlias="exportButton" />
+                  <ControlRef DisplayMode="Large" TemplateAlias="importButton" />
+                </Row>
+              </Section>
+            </Layout>
+          </GroupTemplate>
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler
+		Command="PerformancePointTab.ShowDDDialog"
+		CommandAction="javascript:			
+			function OpenDDforSelectedItem() {
+				var _clientContext = SP.ClientContext.get_current();
+				var _web = _clientContext.get_web();
+				var itemUrl = '{ItemUrl}';
+
+				if(0 != itemUrl.indexOf('{'+'ItemUrl'+'}'))
+				{
+					var _list = _web.get_lists().getById('{ListId}');
+					this.listItem = _list.getItemById('{ItemId}');  
+					_clientContext.load(this.listItem, 'ContentType');
+				}
+				else
+				{
+					var _selectedListId = SP.ListOperation.Selection.getSelectedList();
+					if(null != _selectedListId)
+					{
+						var _list = _web.get_lists().getById(_selectedListId);
+						var selectedItems = SP.ListOperation.Selection.getSelectedItems();
+						if (CountDictionary(selectedItems) == 1) {
+							this.listItem = _list.getItemById(selectedItems[0]['id']);
+							_clientContext.load(this.listItem, 'ows_EncodedAbsUrl', 'ContentType');
+						}
+					}
+				}
+				_clientContext.executeQueryAsync(Function.createDelegate(this, onQuerySucceeded), Function.createDelegate(this, onQueryFailed));
+			}
+
+			function onQuerySucceeded(sender, args) {
+				var ddUrl;
+				var designerRedirectUrl = '/_layouts/15/ppswebparts/DesignerRedirect.aspx';
+				var itemUrl = '{ItemUrl}';
+				var selectedItems = SP.ListOperation.Selection.getSelectedItems();				
+				var siteCollection = _spPageContextInfo.siteServerRelativeUrl;
+				var sitePrefix = window.location.protocol + '//' + window.location.host;
+				var siteLocation = _spPageContextInfo.webServerRelativeUrl;
+
+				if(siteLocation === '/')
+				{
+					siteLocation='';
+				}
+
+				if(0 != itemUrl.indexOf('{'+'ItemUrl'+'}'))
+				{
+					var encodedItemUrl = encodeURIComponent(decodeURIComponent(siteLocation + '/' + itemUrl)).replace(/_/g, '%5F').replace(/\./g,'%2E');
+					ddUrl = siteLocation + designerRedirectUrl + '?Operation=OpenItem&amp;ItemLocation=' + encodedItemUrl + '&amp;ContentTypeId='+ this.listItem.get_contentType().get_id().toString();
+				}
+				else if (CountDictionary(selectedItems) == 1) {
+					var encodedAbsItemUrl = this.listItem.get_item('ows_EncodedAbsUrl');
+					encodedAbsItemUrl = encodedAbsItemUrl.replace(sitePrefix, '');
+					var encodedItemUrl = encodeURIComponent(decodeURIComponent(encodedAbsItemUrl)).replace(/_/g, '%5F').replace(/\./g,'%2E');
+					ddUrl = siteLocation + designerRedirectUrl + '?Operation=OpenItem&amp;ItemLocation=' + encodedItemUrl + '&amp;ContentTypeId='+ this.listItem.get_contentType().get_id().toString();
+				} else {
+					var siteCollectionUrl = sitePrefix + siteCollection;
+					var siteLocationUrl = siteLocation.replace(siteCollection,'');
+					ddUrl = siteLocation + designerRedirectUrl + '?SiteCollection=' + encodeURIComponent(siteCollectionUrl) + '&amp;SiteLocation=' + encodeURIComponent(siteLocationUrl);
+				}
+				window.location.href = ddUrl;
+			}
+
+			function onQueryFailed(sender, args) {
+				alert('Request Failed ' + args.get_message() + '\n' + args.get_stackTrace());
+			}
+			OpenDDforSelectedItem();
+          "
+		EnabledScript="javascript:      
+            function EnableDisableButton() {
+				var enabled = false; 
+				var selectedItems = SP.ListOperation.Selection.getSelectedItems();
+
+				if (CountDictionary(selectedItems) == 1) {
+					if (this.itemId != selectedItems[0]['id']) {
+						this.itemId = selectedItems[0]['id'];
+						GetItemStatus(this.itemId);
+					}  									
+					else if (this.StatusValue == false) {  
+						enabled = false;
+					}  
+					else if ((this.StatusValue == true) &amp;&amp; (this.itemId == selectedItems[0]['id'])) {
+						enabled = true;
+					}
+				}
+				else { 
+					enabled = true;
+				}
+
+				return enabled;
+			}
+
+			function GetItemStatus(itemId) {
+				var _clientContext = SP.ClientContext.get_current();
+				var _web = _clientContext.get_web();
+				var _currentList = _web.get_lists().getById(SP.ListOperation.Selection.getSelectedList());              
+				this.singleItem = _currentList.getItemById(itemId);
+				_clientContext.load(this.singleItem, 'ContentType');
+
+				_clientContext.executeQueryAsync(Function.createDelegate(this, onQuerySucceeded), Function.createDelegate(this, onQueryFailed));
+            }
+
+            function onQuerySucceeded(sender, args) {
+				var singleItemCTId = this.singleItem.get_contentType().get_id().toString();
+				this.StatusValue = (0 == singleItemCTId.indexOf('0x01002DDC53CB1D5F4520BE0568558051291F')) || (0 == singleItemCTId.indexOf('0x0101004C06BE72B56941358D9BD0B31603EC4D')); 
+				RefreshCommandUI();				
+			}
+
+			function onQueryFailed(sender, args) {
+				alert('Request Failed ' + args.get_message() + '\n' + args.get_stackTrace());
+			}
+
+            EnableDisableButton();
+            "
+		/>
+        <CommandUIHandler
+          Command="PerformancePointTab.ShowExportDialog"
+          CommandAction="javascript:
+
+function NotifyCallBack(dialogResult, returnValue) {
+}
+
+          var ctx = SP.ClientContext.get_current();
+          var items = SP.ListOperation.Selection.getSelectedItems(ctx); 
+                    var myItems = '';
+          var k;
+
+          for (k in items)
+          {
+            myItems += '|' + items[k].id;
+          }
+
+          var exportFormUrl =  '{SiteUrl}/_layouts/15/ppswebparts/ExportDashboard.aspx?'
+                              + 'ExportUrls=' + myItems
+                              + '&amp;source={ListId}';
+
+          var options = {
+            url:  encodeURI(exportFormUrl),
+            allowMaximize: false,
+            showClose: true,
+            resizeable: true,
+            width: 800,
+            dialogReturnValueCallback: NotifyCallBack
+          };
+
+          SP.UI.ModalDialog.showModalDialog(options);
+"
+
+        />
+      <CommandUIHandler
+  Command="PerformancePointTab.ShowImportDialog"
+  CommandAction="javascript:
+
+        function NotifyImportCallBack(dialogResult, returnValue) {
+        if (dialogResult === SP.UI.DialogResult.OK) {
+            SP.UI.ModalDialog.RefreshPage(SP.UI.DialogResult.OK);
+            }
+        }
+
+          var ctx = SP.ClientContext.get_current();
+          var items = SP.ListOperation.Selection.getSelectedItems(ctx);
+          var myItems = '';
+          var k;
+
+          for (k in items)
+          {
+            myItems += '|' + items[k].id;
+          }
+
+          var rootFolder  = '{SiteUrl}';
+          var importFormUrl =  rootFolder + '/_layouts/15/ppswebparts/ImportDashboard.aspx?'
+                              + 'ExportUrls=' + myItems
+                              + '&amp;source=' + SP.ListOperation.Selection.getSelectedList();
+
+          var ImportOptions = {
+          url: importFormUrl,
+          allowMaximize: false,
+          showClose: true,
+          width: 800,
+          height: 600,
+          dialogReturnValueCallback: NotifyImportCallBack
+          };
+
+          SP.UI.ModalDialog.showModalDialog(ImportOptions);"
+
+        />
+      </CommandUIHandlers>
+
+    </CommandUIExtension>
+  </CustomAction>
+</Elements>
+

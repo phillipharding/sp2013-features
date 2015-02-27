@@ -1,0 +1,12 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ListInstance
+            Title="$Resources:spscore,PeopleFeatures_MySiteHostPictureLibrary_Title;"
+            Description="$Resources:spscore,PeopleFeatures_MySiteHostPictureLibrary_Desc;"
+            FeatureId="00BFEA71-52D4-45B3-B544-B1C71B620109"
+            Id="OrganizationLogos"
+            OnQuickLaunch ="FALSE"
+            TemplateType="109"
+            Url="Organization Logos">
+	</ListInstance>
+</Elements>
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="23330BDB-B83E-4e09-8770-8155AA5E87FD"
+          Version="1.0.1.0"
+          Scope="Web"
+          Hidden="TRUE"
+          DefaultResourceFile="Core"         
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="applockdown.xml" />
+    </ElementManifests>     
+</Feature>

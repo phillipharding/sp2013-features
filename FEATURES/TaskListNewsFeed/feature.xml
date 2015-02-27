@@ -1,0 +1,12 @@
+<Feature 
+    xmlns="http://schemas.microsoft.com/sharepoint/"
+    Id="FF13819A-A9AC-46FB-8163-9D53357EF98D"
+    Title="TaskListNewsFeed"
+    Description="TaskListNewsFeed"
+    Version="15.0.1.0"
+    Hidden="TRUE"
+    Scope="Web">
+    <ElementManifests>
+        <ElementManifest Location="elements.xml"/>
+    </ElementManifests>
+</Feature>

@@ -1,0 +1,14 @@
+<Feature Id="6E53DD27-98F2-4AE5-85A0-E9A8EF4AA6DF"
+    Title="$Resources:core,documentlibraryFeatureTitle;"
+    Description="$Resources:core,documentlibraryFeatureDesc;"
+    Version="1.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"    
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\DocumentLibrary.xml" />
+    </ElementManifests>
+
+</Feature>

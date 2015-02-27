@@ -1,0 +1,92 @@
+<!-- _lcid="1033" _version="15.0.4571" _dal="1" -->
+<!-- _LocalBinding -->
+<html dir="ltr">
+<HEAD>
+    <meta name="GENERATOR" content="Microsoft SharePoint"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Expires" content="0"/>
+    
+    <title id="onetidTitle">File Properties</title>
+<link rel="stylesheet" type="text/css" href="/_layouts/15/<%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%>/styles/corev4.css">
+    <meta name="Microsoft Theme" content="default"/>
+    <meta name="Microsoft Border" content="none"/>
+<script type="text/javascript" src="/_layouts/15/<%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%>/strings.js"></script>
+<script type="text/javascript" src="/_layouts/15/init.js"></script>
+<script type="text/javascript" src="/_layouts/15/core.js"></script>
+<ows:Switch> 
+    <Expr><ProjectProperty Select="CustomJSUrl"/></Expr>
+    <Case Value=""></Case>
+    <Default>
+        <HTML><![CDATA[<script language='javascript' src="]]></HTML>
+        <ProjectProperty Select="CustomJSUrl" URLEncodeAsURL="TRUE"/>
+        <HTML><![CDATA["></script>]]></HTML>
+    </Default>
+</ows:Switch>
+<ows:Switch><Expr><ProjectProperty Select="ThemeCSSURL"/></Expr>
+<Case Value=""/>
+<Default><HTML><![CDATA[<Link REL="stylesheet" Type="text/css" HREF="]]></HTML><ProjectProperty Select="ThemeCSSURL"/><HTML><![CDATA[">]]></HTML></Default>
+</ows:Switch>
+</HEAD>
+<script language="JavaScript">
+L_tooltipfile_Text = "Double-click to open this document";
+L_tooltipfolder_Text = "";
+selectedElement = null
+inChangeSelection = false
+slElem = null;
+oldSelection = "";
+bIsFileDialogView = true;
+function selectrow()
+{
+    if (slElem) {
+	    slElem.className=oldSelection;
+	    slElem.title="";
+	    }
+    selectedElement = window.event.srcElement;
+    while (selectedElement.tagName!="TR") {
+    	   selectedElement=selectedElement.parentElement;
+           }
+    slElem = selectedElement;
+    oldSelection=slElem.className;		
+    slElem.className="ms-selected";
+    if (slElem.getAttribute("fileattribute") == "file")
+        slElem.title=L_tooltipfile_Text;
+    else
+        slElem.title=L_tooltipfolder_Text;
+    document.selection.empty();
+}
+function checkScroll()
+{
+    if (document.body.scrollHeight > document.body.offsetHeight ||
+		document.body.scrollWidth > document.body.offsetWidth)
+       document.body.scroll="yes";
+}
+</script>
+<BODY topmargin=5 leftmargin=5 scroll=no serverType=OWS
+        onload="checkScroll()" onresize="checkScroll()">
+<!-- Banner -->
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0 WIDTH="100%">
+	 <TR>
+	     <TD valign=top class='ms-pagetitleareaframe' style="height: 0" nowrap>
+			<table cellpadding=0 cellspacing=0 width=100% border="0">
+				<tr>
+				<td class="ms-titlearea" style="padding-left: 4px;" height=100% valign=middle>
+						<ows:ProjectProperty Select="Title" HTMLEncode="TRUE"/>
+				</td>
+				</tr>
+				<tr>
+				<td class="ms-pagetitle" style="padding-left: 4px;" height=100% valign=middle>
+						 <ows:ListProperty Select="Title" HTMLEncode="TRUE"/>
+				 </td>
+				 </tr>
+			</table>
+	  </TD>
+	 </TR>
+    <TR>
+     <TD>
+      <!-- View table -->
+          <ows:View Name="FileDialog"/>
+     </TD>
+    </TR>
+</TABLE>
+</BODY>
+</HTML>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="15.0.4420" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="AccSrvShell.SiteActions.Open"
+    GroupId="SiteActions"
+    Location="Microsoft.SharePoint.StandardMenu"
+    Sequence="2000"
+    ImageUrl="/_layouts/15/images/OpenInAccess.png?rev=23"
+    Description = "$Resources:AccsvcWss,OpenInAccessDescription;"
+    Title="$Resources:AccsvcWss,OpenInAccess;">
+    <UrlAction Url="~site/_layouts/15/accsvc/OpenInAccess.aspx"/>
+  </CustomAction>
+  <CustomAction Id="AccSrvShell.SiteActions.Sharing"
+    GroupId="SiteActions"
+    Location="Microsoft.SharePoint.StandardMenu"
+    Sequence="2100"
+    ImageUrl="/_layouts/15/images/PeoplePermissions.png?rev=23"
+    Description = "$Resources:AccsvcWss,SharingPermissionsDescription;"
+    Title="$Resources:AccsvcWss,SharingPermissions;">
+    <UrlAction Url="~site/_layouts/15/user.aspx"/>
+  </CustomAction>
+  <CustomAction Id="AccSrvShell.SiteActions.NavigateUp"
+    GroupId="SiteActions"
+    Location="Microsoft.SharePoint.StandardMenu"
+    Sequence="2300"
+    ImageUrl="/_layouts/15/images/NavigateUp.png?rev=23"
+    Description = "$Resources:AccsvcWss,NavigateUpDescription;"
+    Title="$Resources:AccsvcWss,NavigateUp;">
+    <UrlAction Url="~site/../"/>
+  </CustomAction>
+</Elements>

@@ -1,0 +1,96 @@
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomActionGroup
+        Id="PPE"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationHoster"
+        Title="$Resources:spscore,ManageProfileService_People_Title;"
+        Sequence="10"
+        ImageUrl="/_layouts/images/peopletitle.png" />
+    <CustomAction
+        Id="PPE_MUP"
+        GroupId="PPE"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationHoster"
+        Sequence="10"
+        Title="$Resources:spscore,ManageProfileService_People_UserProperties_Title;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('/_layouts/MgrProperty.aspx?ProfileType=User&amp;')" />
+    </CustomAction>
+    <CustomAction
+        Id="PPE_SAC"
+        GroupId="PPE"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationHoster"
+        Sequence="50"
+        Title="$Resources:spscore,ManageProfileService_People_ScheduleAudience_Comp_Title;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('/_layouts/Audience_Sched.aspx?')" />
+    </CustomAction>
+    <CustomAction
+        Id="PPE_CA"
+        GroupId="PPE"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationHoster"
+        Sequence="60"
+        Title="$Resources:spscore,ManageProfileService_People_CompileAudience_Title;">
+        <UrlAction
+            Url="javascript:PostWithAction('Audience_Sched.aspx?','START');" />
+    </CustomAction>
+
+    <CustomActionGroup
+        Id="PSY"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationHoster"
+        Title="$Resources:spscore,ManageProfileService_Synchronization_Title;"
+        Sequence="20"
+        ImageUrl="/_layouts/images/synchronizationtitle.png" />
+    <CustomAction
+        Id="PSY_CC"
+        GroupId="PSY"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationHoster"
+        Sequence="10"
+        Title="$Resources:spscore,ManageProfileService_Synchronization_ConfigConnection_Title;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('/_layouts/mgrdsserver.aspx?')" />
+    </CustomAction>
+    <CustomAction
+        Id="PSY_CS"
+        GroupId="PSY"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationHoster"
+        Sequence="20"
+        Title="$Resources:spscore,ManageProfileService_Synchronization_ConfigSchedule_Title;">
+        <UrlAction
+            Url="javascript:AppendJobIdAndNavigateToJobScheduler('/_admin/jobedit.aspx?')" />
+    </CustomAction>
+    <CustomAction
+        Id="PSY_SE"
+        GroupId="PSY"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationHoster"
+        Sequence="30"
+        Title="$Resources:spscore,ManageProfileService_Synchronization_ConfigSettings_Title;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('/_layouts/synchronizationsetting.aspx?')" />
+    </CustomAction>
+    <CustomAction
+        Id="PSY_SN"
+        GroupId="PSY"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationHoster"
+        Sequence="40"
+        Title="$Resources:spscore,ManageProfileService_Synchronization_SyncNow_Title;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('/_layouts/syncnow.aspx?')" />
+    </CustomAction>
+
+    <CustomActionGroup
+        Id="POR"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationHoster"
+        Title="$Resources:spscore,ManageProfileService__Organization_Title;"
+        Sequence="30"
+        ImageUrl="/_layouts/images/organizationtitle.png" />
+    <CustomAction
+        Id="POR_MP"
+        GroupId="POR"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationHoster"
+        Sequence="10"
+        Title="$Resources:spscore,ManageProfileService_Organization_Properties;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('/_layouts/MgrProperty.aspx?ProfileType=Organization&amp;')" />
+    </CustomAction>
+
+</Elements>

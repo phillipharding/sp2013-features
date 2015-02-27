@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="EduPageModule" Path="Pages" Url="SitePages/Edu">
+    <File Path="Assignments.aspx" Url="Assignments.aspx" IgnoreIfAlreadyExists="TRUE" NavBarHome="False" Type="GhostableInLibrary">
+      <AllUsersWebPart WebPartZoneID="Body" WebPartOrder="1">
+        <![CDATA[
+          <webParts>
+            <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+              <metaData>
+                <type name="Microsoft.Office.Education.WebUI.AssignmentsWebPart" />
+                <importErrorMessage>$Resources:eduserver,IDS_WebPartLoadError;</importErrorMessage>
+              </metaData>
+              <data>
+                <properties>
+                  <property name="Title" type="string">$Resources:eduserver,IDS_AssignmentsWebPartTitle;</property>
+                  <property name="Description" type="string">$Resources:eduserver,IDS_AssignmentsWebPartDescription;</property>
+                  <property name="ChromeType" type="chrometype">None</property>
+                  <property name="IsSummaryState" type="bool">False</property>
+                </properties>
+              </data>
+            </webPart>
+          </webParts>
+        ]]>
+      </AllUsersWebPart>
+    </File>
+    <File Path="Calendar.aspx" Url="Calendar.aspx" IgnoreIfAlreadyExists="TRUE" NavBarHome="False" Type="GhostableInLibrary">
+      <AllUsersWebPart WebPartZoneID="Body" WebPartOrder="1">
+        <![CDATA[
+          <webParts>
+            <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+              <metaData>
+                <type name="Microsoft.Office.Education.WebUI.CalendarWebPart" />
+                <importErrorMessage>$Resources:eduserver,IDS_WebPartLoadError;</importErrorMessage>
+              </metaData>
+              <data>
+                <properties>
+                  <property name="Title" type="string">$Resources:eduserver,IDS_CalendarWebPartTitle;</property>
+                  <property name="Description" type="string">$Resources:eduserver,IDS_CalendarWebPartDescription;</property>
+                  <property name="ChromeType" type="chrometype">None</property>
+                  <property name="IsSummaryState" type="bool">False</property>
+                  <property name="DisplayNewMeetingsLink" type="bool">True</property>
+                </properties>
+              </data>
+            </webPart>
+          </webParts>
+        ]]>
+      </AllUsersWebPart>
+    </File>
+    <File Path="CourseGrades.aspx" Url="CourseGrades.aspx" IgnoreIfAlreadyExists="TRUE" NavBarHome="False" Type="GhostableInLibrary">
+      <AllUsersWebPart WebPartZoneID="Body" WebPartOrder="1">
+        <![CDATA[
+          <webParts>
+            <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+              <metaData>
+                <type name="Microsoft.Office.Education.WebUI.CourseGradesWebPart" />
+                <importErrorMessage>$Resources:eduserver,IDS_WebPartLoadError;</importErrorMessage>
+              </metaData>
+              <data>
+                <properties>
+                  <property name="Title" type="string">$Resources:eduserver,IDS_CourseGradesWebPartTitle;</property>
+                  <property name="Description" type="string">$Resources:eduserver,IDS_CourseGradesWebPartDescription;</property>
+                  <property name="ChromeType" type="chrometype">None</property>
+                  <property name="IsSummaryState" type="bool">False</property>
+                </properties>
+              </data>
+            </webPart>
+          </webParts>
+        ]]>
+      </AllUsersWebPart>
+    </File>
+    <File Path="Planner.aspx" Url="Planner.aspx" IgnoreIfAlreadyExists="TRUE" NavBarHome="False" Type="GhostableInLibrary">
+      <AllUsersWebPart WebPartZoneID="Body" WebPartOrder="1">
+        <![CDATA[
+          <webParts>
+            <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+              <metaData>
+                <type name="Microsoft.Office.Education.WebUI.CoursePlanningWebPart" />
+                <importErrorMessage>$Resources:eduserver,IDS_WebPartLoadError;</importErrorMessage>
+              </metaData>
+              <data>
+                <properties>
+                  <property name="Title" type="string">$Resources:eduserver,IDS_CoursePlanningWebPartTitle;</property>
+                  <property name="Description" type="string">$Resources:eduserver,IDS_CoursePlanningWebPartDescription;</property>
+                  <property name="ChromeType" type="chrometype">None</property>
+                  <property name="IsSummaryState" type="bool">False</property>
+                </properties>
+              </data>
+            </webPart>
+          </webParts>
+        ]]>
+      </AllUsersWebPart>
+    </File>    
+    <File Path="QuizView.aspx" Url="QuizView.aspx" IgnoreIfAlreadyExists="TRUE" NavBarHome="False" Type="GhostableInLibrary">
+     <AllUsersWebPart WebPartZoneID="Body" WebPartOrder="1">
+        <![CDATA[
+          <webParts>
+            <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+              <metaData>
+                <type name="Microsoft.Office.Education.WebUI.QuizViewWebPart" />
+                <importErrorMessage>$Resources:eduserver,IDS_WebPartLoadError;</importErrorMessage>
+              </metaData>
+              <data>
+                <properties>
+                  <property name="Title" type="string">$Resources:eduserver,IDS_QuizViewWebPartTitle;</property>
+                  <property name="Description" type="string">$Resources:eduserver,IDS_QuizViewWebPartDescription;</property>
+                  <property name="ChromeType" type="chrometype">None</property>
+                  <property name="IsSummaryState" type="bool">False</property>
+                </properties>
+              </data>
+            </webPart>
+          </webParts>
+        ]]>
+      </AllUsersWebPart>
+    </File>
+    <File Path="View.aspx" Url="View.aspx" IgnoreIfAlreadyExists="TRUE" NavBarHome="False" Type="GhostableInLibrary">
+        <AllUsersWebPart WebPartZoneID="Body" WebPartOrder="1">
+            <![CDATA[
+                <webParts>
+                    <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                        <metaData>
+                            <type name="Microsoft.Office.Education.WebUI.ViewWebPart" />
+                            <importErrorMessage>$Resources:eduserver,IDS_WebPartLoadError;</importErrorMessage>
+                        </metaData>
+                        <data>
+                            <properties>
+                                <property name="Title" type="string">$Resources:eduserver,IDS_ViewWebPartTitle;</property>
+                                <property name="Description" type="string">$Resources:eduserver,IDS_ViewWebPartDescription;</property>
+                                <property name="ChromeType" type="chrometype">None</property>
+                                <property name="IsSummaryState" type="bool">False</property>
+                            </properties>
+                        </data>
+                    </webPart>
+                </webParts>
+            ]]>
+        </AllUsersWebPart>
+    </File>
+  </Module>
+
+  <CustomAction
+    Id="CustomizeCourse"
+    GroupId="SiteActions"
+    Location="Microsoft.SharePoint.StandardMenu"
+    Sequence="900"
+    Title="$Resources:eduserver,IDS_EduSiteCustomizeTitle;"
+    Description="$Resources:eduserver,IDS_EduSiteCustomizDescription;">
+    <UrlAction Url="{SiteUrl}/_layouts/15/Edu/Pages/CommunityManagement.aspx?ComType=1"/>
+  </CustomAction>
+  <CustomAction
+    Id="ChangeCourseState"
+    GroupId="SiteActions"
+    Location="Microsoft.SharePoint.StandardMenu"
+    Sequence="905"
+    Title="$Resources:eduserver,IDS_EduSiteChangeStateTitle;"
+    Description="$Resources:eduserver,IDS_EduSiteChangeStateDescription;">
+    <UrlAction Url="{SiteUrl}/_layouts/15/Edu/Pages/EduSiteState.aspx"/>
+  </CustomAction>
+</Elements>

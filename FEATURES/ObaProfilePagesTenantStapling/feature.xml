@@ -1,0 +1,11 @@
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+  Id="90C6C1E5-3719-4c52-9F36-34A97DF596F7"
+  Title="$Resources:obacore,ProfilePagesTenantStaplingFeatureTitle;"
+  Description="$Resources:obacore,ProfilePagesTenantStaplingFeatureDescription;"
+  Version="14.0.0.0"
+  Hidden="TRUE"
+  Scope="Farm">
+  <ElementManifests>
+    <ElementManifest Location="featurestapling.xml"/>
+  </ElementManifests>
+</Feature>

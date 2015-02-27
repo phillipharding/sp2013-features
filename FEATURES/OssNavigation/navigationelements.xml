@@ -1,0 +1,9 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Control Id="QuickLaunchDataSource" Sequence="25"
+        ControlClass="Microsoft.Office.Server.WebControls.SiteMapDataSource" 
+        ControlAssembly="Microsoft.Office.Server.UI, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+        <Property Name="SiteMapProvider">SharedServicesQuickLaunchProvider</Property>
+        <Property Name="ShowStartingNode">false</Property>
+        <Property Name="ID">QuickLaunchSiteMap</Property>
+    </Control>
+</Elements>

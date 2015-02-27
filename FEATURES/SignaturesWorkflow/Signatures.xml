@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Workflow
+        Name="$Resources:Signatures_Title;"
+        Description="$Resources:Signatures_Description;"
+        Id="2F213931-3B93-4f81-B021-3022434A3114"
+        CodeBesideClass="Microsoft.Office.Workflow.CollectSignatures"
+        CodeBesideAssembly="Microsoft.Office.Workflow.Routing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        TaskListContentTypeId="0x01080100C9C9515DE4E24001905074F980F93160"
+        ModificationUrl="~layouts/ModWrkflIP.aspx">
+        <Categories/>
+        <MetaData>
+            <InitiationCategories>SigClientRequired</InitiationCategories>
+            <AssociationCategories>None</AssociationCategories>
+            <InitiationType>Manual</InitiationType>
+            <Instantiation_FormURN>urn:schemas-microsoft-com:office:infopath:workflow:CollectSignatures-Init:$Subst:LCID;</Instantiation_FormURN>
+            <Task0_FormURN>urn:schemas-microsoft-com:office:infopath:workflow:CollectSignatures-Sign:$Subst:LCID;</Task0_FormURN>
+            <Modification_8ed87eeb-8e95-417f-937d-45b6a78ac73b_Name>$Resources:Signatures_WrapItUp;</Modification_8ed87eeb-8e95-417f-937d-45b6a78ac73b_Name>
+            <Modification_8ed87eeb-8e95-417f-937d-45b6a78ac73b_FormURN>urn:schemas-microsoft-com:office:infopath:workflow:OOB-WrapItUp:$Subst:LCID;</Modification_8ed87eeb-8e95-417f-937d-45b6a78ac73b_FormURN>
+            <Modification_Format><my:myFields xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD">{0}</my:myFields></Modification_Format>
+            <SigClientRequired>true</SigClientRequired>
+            <ExtendedStatusColumnValues>
+                <StatusColumnValue>$Resources:Signatures_CanceledStatus</StatusColumnValue>
+            </ExtendedStatusColumnValues>  
+        </MetaData>
+     </Workflow>
+</Elements>

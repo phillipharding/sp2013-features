@@ -1,0 +1,14 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListTemplate
+	  Name="BIDataConnectionsLib" 
+	  DisplayName="$Resources:ppsma,ContentLib_BIDataConnections_DisplayName" 
+	  Description="$Resources:ppsma,ContentLib_BIDataConnections_Description" 
+	  BaseType="1" 
+	  Type="470" 
+	  OnQuickLaunch="TRUE"
+	  VersioningEnabled="TRUE"
+	  FolderCreation="FALSE"
+	  SecurityBits="11" 
+	  Image="/_layouts/15/images/iBICenterDataConnectionsLib.png?rev=23"
+	  DocumentTemplate="100"/>
+</Elements>

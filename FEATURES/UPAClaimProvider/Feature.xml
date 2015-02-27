@@ -1,0 +1,13 @@
+<Feature
+  Id="5709886F-13CC-4FFC-BFDC-EC8AB7F77191"
+  Title="$Resources:osrvcore,SPServertoServerAuthenticationTitle;" 
+  Description="$Resources:osrvcore,SPServertoServerAuthenticationDescription;"
+  Version="1.0.0.0"
+  Scope="Farm"
+  Hidden="FALSE"
+  ActivateOnDefault="true"
+  ReceiverAssembly="Microsoft.Office.Server.UserProfiles, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+  ReceiverClass="Microsoft.Office.Server.Security.ProfileStoreClaimProviderFeatureReceiver"
+
+  xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

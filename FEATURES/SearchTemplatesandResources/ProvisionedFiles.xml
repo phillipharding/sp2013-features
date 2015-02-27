@@ -1,0 +1,287 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="CBSDisplayTemplates" Url="_catalogs/masterpage/Display Templates/Content Web Parts" Path="DisplayTemplates" RootWebOnly="TRUE">
+        <File Url="Item_Picture3Lines.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_CBSDefaultItem" />
+            <Property Name="MasterPageDescription" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateDescription_CBSDefaultItem" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="0" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+            <Property Name="ManagedPropertyMapping" Value="'Picture URL'{$Resources:Microsoft.Office.Server.Search,SlotName_ImageURL;}:'PublishingImage;PictureURL;PictureThumbnailURL','Link URL'{$Resources:Microsoft.Office.Server.Search,SlotName_URL;}:'Path','Line 1'{$Resources:Microsoft.Office.Server.Search,SlotName_Line1;}:'Title','Line 2'{$Resources:Microsoft.Office.Server.Search,SlotName_Line2;}:'Description','Line 3'{$Resources:Microsoft.Office.Server.Search,SlotName_Line3;}:'','SecondaryFileExtension','ContentTypeId'" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" /> 
+        </File>
+        <File Url="Item_RecommendationsClickLogging.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_Recommendations" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="0" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+            <Property Name="ManagedPropertyMapping" Value="'Picture URL'{$Resources:Microsoft.Office.Server.Search,SlotName_ImageURL;}:'PublishingImage;PictureURL;PictureThumbnailURL','Link URL'{$Resources:Microsoft.Office.Server.Search,SlotName_URL;}:'Path','Original Path'{$Resources:Microsoft.Office.Server.Search,SlotName_OriginalPath;}:'OriginalPath','SiteID'{$Resources:Microsoft.Office.Server.Search,SlotName_SiteID;}:'SiteID','Line 1'{$Resources:Microsoft.Office.Server.Search,SlotName_Line1;}:'Title','Line 2'{$Resources:Microsoft.Office.Server.Search,SlotName_Line2;}:'Description','Line 3'{$Resources:Microsoft.Office.Server.Search,SlotName_Line3;}:'','SecondaryFileExtension','ContentTypeId'" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Item_LargePicture.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_Item_LargePicture" />
+            <Property Name="MasterPageDescription" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateDescription_Item_LargePicture" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="0" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+            <Property Name="ManagedPropertyMapping" Value="'Picture URL'{$Resources:Microsoft.Office.Server.Search,SlotName_ImageURL;}:'PublishingImage;PictureURL;PictureThumbnailURL','Link URL'{$Resources:Microsoft.Office.Server.Search,SlotName_URL;}:'Path','Line 1'{$Resources:Microsoft.Office.Server.Search,SlotName_Line1;}:'Title','Line 2'{$Resources:Microsoft.Office.Server.Search,SlotName_Line2;}:'Description','SecondaryFileExtension','ContentTypeId'" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Item_TwoLines.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_Item_TwoLines" />
+            <Property Name="MasterPageDescription" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateDescription_Item_TwoLines" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="0" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+            <Property Name="ManagedPropertyMapping" Value="'Link URL'{$Resources:Microsoft.Office.Server.Search,SlotName_URL;}:'Path','Line 1'{$Resources:Microsoft.Office.Server.Search,SlotName_Line1;}:'Title','Line 2'{$Resources:Microsoft.Office.Server.Search,SlotName_Line2;}:'','FileExtension','SecondaryFileExtension'" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Control_Slideshow.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_Control_Slideshow" />
+            <Property Name="MasterPageDescription" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateDescription_Control_Slideshow" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Control" />
+            <Property Name="TemplateHidden" Value="0" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Control_List.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_DefaultCBSResult" />
+            <Property Name="MasterPageDescription" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateDescription_DefaultCBSResult" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Control" />
+            <Property Name="TemplateHidden" Value="0" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Control_ListWithPaging.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_Control_ListWithPaging" />
+            <Property Name="MasterPageDescription" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateDescription_Control_ListWithPaging" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Control" />
+            <Property Name="TemplateHidden" Value="0" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Item_PictureOnTop.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_Item_PictureOnTop" />
+            <Property Name="MasterPageDescription" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateDescription_Item_PictureOnTop" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="0" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+            <Property Name="ManagedPropertyMapping" Value="'Picture URL'{$Resources:Microsoft.Office.Server.Search,SlotName_ImageURL;}:'PublishingImage;PictureURL;PictureThumbnailURL','Link URL'{$Resources:Microsoft.Office.Server.Search,SlotName_URL;}:'Path','Line 1'{$Resources:Microsoft.Office.Server.Search,SlotName_Line1;}:'Title','Line 2'{$Resources:Microsoft.Office.Server.Search,SlotName_Line2;}:'Description','Line 3'{$Resources:Microsoft.Office.Server.Search,SlotName_Line3;}:'','SecondaryFileExtension','ContentTypeId'" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" /> 
+        </File>
+        <File Url="Item_Diagnostic.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_Item_Diagnostic" />
+            <Property Name="MasterPageDescription" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateDescription_Item_Diagnostic" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="0" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+            <Property Name="ManagedPropertyMapping" Value="'Picture URL'{$Resources:Microsoft.Office.Server.Search,SlotName_ImageURL;}:'PublishingImage;PictureURL;PictureThumbnailURL','Path','SecondaryFileExtension','ContentTypeId','Line 1'{$Resources:Microsoft.Office.Server.Search,SlotName_Line1;}:'Title','Line 2'{$Resources:Microsoft.Office.Server.Search,SlotName_Line2;}:'Description','Line 3'{$Resources:Microsoft.Office.Server.Search,SlotName_Line3;}:'','Line 4'{$Resources:Microsoft.Office.Server.Search,SlotName_Line4;}:'','Line 5'{$Resources:Microsoft.Office.Server.Search,SlotName_Line5;}:'','Line 6'{$Resources:Microsoft.Office.Server.Search,SlotName_Line6;}:'','Line 7'{$Resources:Microsoft.Office.Server.Search,SlotName_Line7;}:'','Line 8'{$Resources:Microsoft.Office.Server.Search,SlotName_Line8;}:'','Line 9'{$Resources:Microsoft.Office.Server.Search,SlotName_Line9;}:'','Line 10'{$Resources:Microsoft.Office.Server.Search,SlotName_Line10;}:''" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" /> 
+        </File>
+    </Module>
+
+    <Module Name="CatalogDisplayTemplates" Url="_catalogs/masterpage/Display Templates/System" Path="DisplayTemplates" RootWebOnly="TRUE">
+        <File Url="Control_CatalogDefault.js" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_DefaultCatalogResult" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Control" />
+            <Property Name="TemplateHidden" Value="1" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Item_CatalogDateTime.js" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_CatalogDateTimeItem" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="1" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+            <Property Name="ManagedPropertyMapping" Value="'Date'{$Resources:Microsoft.Office.Server.Search,SlotName_Date;}:'Write'" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Item_CatalogRich.js" Type="GhostableInLibrary">
+           <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_CatalogRichItem" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="1" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+            <Property Name="ManagedPropertyMapping" Value="'Rich Data'{$Resources:Microsoft.Office.Server.Search,SlotName_RichData;}:'owsrNTEHTMLPublishingPageContent'" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Item_CatalogDefault.js" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_CatalogDefaultItem" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="1" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+            <Property Name="ManagedPropertyMapping" Value="'Text'{$Resources:Microsoft.Office.Server.Search,SlotName_Text;}:'Title'" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Item_CatalogTitle.js" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_CatalogTitleItem" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="1" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+            <Property Name="ManagedPropertyMapping" Value="'Page Title'{$Resources:Microsoft.Office.Server.Search,SlotName_PageTitle;}:'Title'" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Item_CatalogItemPicker.js" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_CatalogItemPickerDefault" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="HtmlDesignAssociated" Value="1" />
+            <Property Name="TemplateHidden" Value="1" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Item_CatalogItemPicker_HoverPanel.js" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_CatalogItemPickerHoverPanel" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="HtmlDesignAssociated" Value="1" />
+            <Property Name="TemplateHidden" Value="1" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+    </Module>
+    <Module Name="SystemDisplayTemplates" Url="_catalogs/masterpage/Display Templates/System" Path="DisplayTemplates" RootWebOnly="TRUE">
+        <File Url="Control_eDiscoveryExchangeResult.js" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_DiscoveryResultSP" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Control" />
+            <Property Name="TemplateHidden" Value="1" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Control_eDiscoverySharePointResult.js" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_DiscoveryResultSP" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Control" />
+            <Property Name="TemplateHidden" Value="1" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Control_TopReport.js" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_TopReportControl" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Control" />
+            <Property Name="TemplateHidden" Value="1" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Item_eDiscoveryExchangeResult.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_DiscoveryResultItemExchange" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="1" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" /> 
+            <Property Name="ManagedPropertyMapping" Value="'Subject':'Subject','To':'ToRecipients','Sender':'Sender','Sent Time':'SentTime','BccRecipients':'BccRecipients','CcRecipients':'CcRecipients','CreatedTime':'CreatedTime','HasAttachment':'HasAttachment','Importance':'Importance','Preview':'Preview','OwaLink':'OwaLink','Size':'Size','ExchangeType':'Kind'"/>
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Item_eDiscoveryExchange_HoverPanel.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_DiscoveryExchangeHoverPanel" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="1" />
+            <Property Name="TargetControlType" Value=";#SearchResults;#" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+            <Property Name="ManagedPropertyMapping" Value="'Subject':'Subject','To':'ToRecipients','Sender':'Sender','Sent Time':'SentTime','BccRecipients':'BccRecipients','CcRecipients':'CcRecipients','CreatedTime':'CreatedTime','HasAttachment':'HasAttachment','Importance':'Importance','Preview':'Preview','OwaLink':'OwaLink','Size':'Size','ExchangeType':'Kind'"/>
+        </File>
+        <File Url="Item_eDiscoverySharePointResult.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_DiscoveryResultItemSP" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="1" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+            <Property Name="ManagedPropertyMapping" Value="'Title':'Title','Path':'Path','Created By':'MetadataAuthor','Created On':'Write','Author':'DisplayAuthor','Size':'Size','LastModifiedTime':'LastModifiedTime','CollapsingStatus':'CollapsingStatus','DocId':'DocId','HitHighlightedSummary':'HitHighlightedSummary','ContentClass':'ContentClass','ContentType':'ContentType','FileExtension':'FileExtension','ViewsLifeTime':'ViewsLifeTime','ParentLink':'ParentLink'"/>
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Item_eDiscoverySharePoint_HoverPanel.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_DiscoverySharePointHoverPanel" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="1" />
+            <Property Name="TargetControlType" Value=";#SearchResults;#" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+            <Property Name="ManagedPropertyMapping" Value="'Title':'Title','Path':'Path','Created By':'MetadataAuthor','Created On':'Write','Author':'DisplayAuthor','Size':'Size','LastModifiedTime':'LastModifiedTime','CollapsingStatus':'CollapsingStatus','DocId':'DocId','HitHighlightedSummary':'HitHighlightedSummary','ContentClass':'ContentClass','ContentType':'ContentType','FileExtension':'FileExtension','ViewsLifeTime':'ViewsLifeTime','ParentLink':'ParentLink'"/>
+        </File>
+        <File Url="Item_TopReport.js" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_TopReportItem" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="1" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+            <Property Name="ManagedPropertyMapping" Value="'Image Url':'PictureThumbnailURL;ServerRedirectedPreviewURL;PictureURL','Line 1':'Title','Line 1 Link Url':'Path','Line 2':'Description','Line 3':'','FileExtension','ListItemID','ListID','WebId'" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Item_VideoVertical.js" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_VideoVerticalPageItem" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="1" />
+            <Property Name="TargetControlType" Value=";#SearchResults;#" /> 
+            <Property Name="ManagedPropertyMapping" Value="'Image Url':'PictureThumbnailURL;PictureURL;','Line 1':'Title','Line 1 Link Url':'Path','FileExtension':'SecondaryFileExtension','MediaDuration','ViewCount':'ViewsLifeTime','ContentTypeId','Created','PeopleInMedia','VideoFileURL'{$Resources:Microsoft.Office.Server.Search,SlotName_VideoFileURL;}:'UserEncodingURL;ExternalMediaURL;DefaultEncodingURL;'"/>
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+    </Module>
+    <Module Name="FilterDisplayTemplates" Url="_catalogs/masterpage/Display Templates/Filters" Path="DisplayTemplates" RootWebOnly="TRUE">
+        <File Url="Filter_eDiscoveryExchangeRefinement.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_UserSpecifiedRefinementEX" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Filter" />
+            <Property Name="TemplateHidden" Value="1" />
+            <Property Name="TargetControlType" Value=";#Refinement;#" />
+            <Property Name="CompatibleSearchDataTypes" Value="" />
+            <Property Name="CompatibleManagedProperties" Value="" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Filter_eDiscoveryExchangeTypeRefinement.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_ExchangeMailType" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Filter" />
+            <Property Name="TemplateHidden" Value="1" />
+            <Property Name="TargetControlType" Value=";#Refinement;#" />
+            <Property Name="CompatibleSearchDataTypes" Value="" />
+            <Property Name="CompatibleManagedProperties" Value="" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Filter_eDiscoverySharePointRefinement.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_UserSpecifiedRefinementSP" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Filter" />
+            <Property Name="TemplateHidden" Value="1" />
+            <Property Name="TargetControlType" Value=";#Refinement;#" />
+            <Property Name="CompatibleSearchDataTypes" Value="" />
+            <Property Name="CompatibleManagedProperties" Value="" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+    </Module>
+</Elements>

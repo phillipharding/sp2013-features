@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListInstance Title="$Resources:core,ExternalSubscriptionListTitle;" 
+                  Hidden="TRUE"
+                  TemplateType="2001"
+                  Url="$Resources:core,ExternalSubscriptionListFolderName;"
+                  Description="$Resources:core,ExternalSubscriptionListDescription;">
+    </ListInstance>
+</Elements>

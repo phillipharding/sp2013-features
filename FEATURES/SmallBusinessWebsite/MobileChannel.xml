@@ -1,0 +1,23 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListInstance
+        FeatureId="00BFEA71-DE22-43B2-A848-C05709900100"
+        Title="$Resources:cmscore,devicechannels_listname;"
+        Url="/DeviceChannels"
+        Description="$Resources:cmscore,devicechannels_listdescription;"
+        TemplateType="100">
+        <Data>
+            <Rows>
+                <Row>
+                    <Field Name="Title">$Resources:cmscore,devicechannel_fallbackmobileuseragents_name;</Field>
+                    <Field Name="ChannelAlias">FallbackMobile</Field>
+                    <Field Name="ChannelDescription">$Resources:cmscore,devicechannel_fallbackmobileuseragents_description;</Field>
+                    <Field Name="UserAgentSubstrings">$FallbackMobileUserAgents;</Field>
+                    <Field Name="ChannelIsActive">TRUE</Field>
+                    <Field Name="ChannelPriority">0</Field>
+                </Row>
+            </Rows>
+        </Data>
+    </ListInstance>
+</Elements>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	 <CustomAction 
+            Id="MetadataPropertiesSiteColl"
+            GroupId="SiteCollectionAdmin"
+            Location="Microsoft.SharePoint.SiteSettings"            
+            Sequence="14" 
+            RequireSiteAdministrator="TRUE"
+            Title="$Resources:Microsoft.Office.Server.Search,SiteSettings_MetadataProperties_Title;"
+            Description="$Resources:Microsoft.Office.Server.Search,SiteSettings_MetadataProperties_Tooltip;" >
+               <UrlAction Url="_layouts/15/listmanagedproperties.aspx?level=sitecol"/>
+     </CustomAction>
+     <CustomAction 
+            Id="ManageQueryRules"
+            GroupId="SiteCollectionAdmin"
+            Location="Microsoft.SharePoint.SiteSettings"            
+            Sequence="4" 
+            RequireSiteAdministrator="TRUE"
+            Title="$Resources:Microsoft.Office.Server.Search,SiteSettings_ManageQueryRules_Title;"
+            Description="$Resources:Microsoft.Office.Server.Search,SiteSettings_ManageQueryRules_Title;" >
+               <UrlAction Url="_layouts/15/listqueryrules.aspx?Mode=SiteCollection"/>
+     </CustomAction>
+     <CustomAction 
+            Id="ManageResultSourcesSiteColl"
+            GroupId="SiteCollectionAdmin"
+            Location="Microsoft.SharePoint.SiteSettings"            
+            Sequence="11" 
+            RequireSiteAdministrator="TRUE"
+            Title="$Resources:Microsoft.Office.Server.Search,SiteSettings_ManageResultSources_Title;"
+            Description="$Resources:Microsoft.Office.Server.Search,SiteSettings_ManageResultSources_Tooltip;" >
+                <UrlAction Url="~layouts/manageresultsources.aspx?level=sitecol"/>
+     </CustomAction>
+     <CustomAction 
+            Id="ManageQueryRulesSite"
+            GroupId="SiteAdministration"
+            Location="Microsoft.SharePoint.SiteSettings"            
+            Sequence="3" 
+            RequireSiteAdministrator="FALSE"
+            Rights="ManageWeb"
+            Title="$Resources:Microsoft.Office.Server.Search,SiteSettings_SearchAdmin_ManageQueryRules_Title;"
+            Description="$Resources:Microsoft.Office.Server.Search,SiteSettings_ManageQueryRules_Title;" >
+               <UrlAction Url="_layouts/15/listqueryrules.aspx?Mode=Site"/>
+     </CustomAction>
+     <CustomAction
+        Id="EnableSearchConfigExport"
+        GroupId="SiteTasks"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb"
+        Sequence="21"
+        Title="$Resources:Microsoft.Office.Server.Search,SiteSettings_EnableSearchConfigExport_Title;"
+        Description="$Resources:Microsoft.Office.Server.Search,SiteSettings_EnableSearchConfigExport_Tooltip;">
+        <UrlAction
+            Url="_layouts/15/Enablesearchconfigsettings.aspx" />
+    </CustomAction>
+    <CustomAction
+            Id="MetadataPropertiesSite"
+            GroupId="SearchAdministration"
+            Location="Microsoft.SharePoint.SiteSettings"
+            Sequence="4"
+            RequireSiteAdministrator="FALSE"
+            Rights="ManageWeb"
+            Title="$Resources:Microsoft.Office.Server.Search,SiteSettings_SearchAdmin_MetadataProperties_Title;"
+            Description="$Resources:Microsoft.Office.Server.Search,SiteSettings_MetadataProperties_Tooltip;" >
+            <UrlAction Url="~layouts/listmanagedproperties.aspx?level=site"/>
+	 </CustomAction>
+     <CustomAction 
+            Id="ManageResultSourcesSite"
+            GroupId="SearchAdministration"
+            Location="Microsoft.SharePoint.SiteSettings"            
+            Sequence="1" 
+            RequireSiteAdministrator="FALSE"
+            Rights="CancelCheckout"
+            Title="$Resources:Microsoft.Office.Server.Search,SiteSettings_SearchAdmin_ManageResultSources_Title;"
+            Description="$Resources:Microsoft.Office.Server.Search,SiteSettings_ManageResultSources_Tooltip;" >
+                <UrlAction Url="~layouts/manageresultsources.aspx?level=site"/>
+     </CustomAction>
+     <CustomAction 
+            Id="SearchConfigurationImportSPWeb"
+            GroupId="SearchAdministration"
+            Location="Microsoft.SharePoint.SiteSettings"            
+            Sequence="68" 
+            RequireSiteAdministrator="FALSE"
+            Rights="ManageWeb"
+            Title="$Resources:Microsoft.Office.Server.Search,SiteSettings_ImportSearchConfiguration_Label;"
+            Description="$Resources:Microsoft.Office.Server.Search,SiteSettings_ImportSearchConfiguration_Description;" >
+                <UrlAction Url="_layouts/15/importsearchconfiguration.aspx?level=site"/>
+     </CustomAction>
+     <CustomAction 
+            Id="SearchConfigurationExportSPWeb"
+            GroupId="SearchAdministration"
+            Location="Microsoft.SharePoint.SiteSettings"            
+            Sequence="69" 
+            RequireSiteAdministrator="FALSE"
+            Rights="ManageWeb"
+            Title="$Resources:Microsoft.Office.Server.Search,SiteSettings_ExportSearchConfiguration_Label;"
+            Description="$Resources:Microsoft.Office.Server.Search,SiteSettings_ExportSearchConfiguration_Description;" >
+                <UrlAction Url="_layouts/15/exportsearchconfiguration.aspx?level=site"/>
+     </CustomAction>
+     <CustomAction 
+            Id="SearchConfigurationImportSPSite"
+            GroupId="SiteCollectionAdmin"
+            Location="Microsoft.SharePoint.SiteSettings"            
+            Sequence="16" 
+            RequireSiteAdministrator="TRUE"
+            Title="$Resources:Microsoft.Office.Server.Search,SiteCollectionSettings_ImportSearchConfiguration_Label;"
+            Description="$Resources:Microsoft.Office.Server.Search,SiteSettings_ImportSearchConfiguration_Description;" >
+                <UrlAction Url="_layouts/15/importsearchconfiguration.aspx?level=sitecol"/>
+     </CustomAction>
+     <CustomAction 
+            Id="SearchConfigurationExportSPSite"
+            GroupId="SiteCollectionAdmin"
+            Location="Microsoft.SharePoint.SiteSettings"            
+            Sequence="17" 
+            RequireSiteAdministrator="TRUE"
+            Title="$Resources:Microsoft.Office.Server.Search,SiteCollectionSettings_ExportSearchConfiguration_Label;"
+            Description="$Resources:Microsoft.Office.Server.Search,SiteSettings_ExportSearchConfiguration_Description;" >
+                <UrlAction Url="_layouts/15/exportsearchconfiguration.aspx?level=sitecol"/>
+     </CustomAction>
+</Elements>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="41BFB21C-0447-4C97-BC62-0B07BEC262A1"
+         Title="$Resources:eduserver,IDS_EduInstitutionAdminFeatureTitle"
+         Description="$Resources:eduserver,IDS_EduInstitutionAdminFeatureDescription"
+         SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+         Hidden="TRUE"
+         Version="15.0.10.0"
+         Scope="Site"
+         AlwaysForceInstall="FALSE"
+         ReceiverAssembly="Microsoft.Office.Education.Institution, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+         ReceiverClass="Microsoft.Office.Education.Institution.EduInstitutionAdminFeatureReceiver"
+         DefaultResourceFile="eduserver"
+         xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <ElementManifests>
+        <ElementManifest Location="elements.xml" />
+        <ElementFile Location="schema.xml"/>
+    </ElementManifests>
+
+    <UpgradeActions>
+        <VersionRange EndVersion="15.0.1.0">
+            <MapFile FromPath="Features\EduInstitutionAdmin\Pages\DataImport.aspx" ToPath="Features\EduAdminPages\Pages\DataImport.aspx"/>
+            <MapFile FromPath="Features\EduInstitutionAdmin\Pages\ManageCourses.aspx" ToPath="Features\EduAdminPages\Pages\ManageCourses.aspx"/>
+            <MapFile FromPath="Features\EduInstitutionAdmin\Pages\ResultsAndReports.aspx" ToPath="Features\EduAdminPages\Pages\ResultsAndReports.aspx"/>
+            <MapFile FromPath="Features\EduInstitutionAdmin\Pages\StateChange.aspx" ToPath="Features\EduAdminPages\Pages\StateChange.aspx"/>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.2.0">
+            <CustomUpgradeAction Name = "15.0.2.0">
+            </CustomUpgradeAction>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.3.0">
+            <CustomUpgradeAction Name = "15.0.3.0">
+            </CustomUpgradeAction>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.4.0">
+			<CustomUpgradeAction Name = "15.0.4.0">
+			</CustomUpgradeAction>
+		</VersionRange>
+        <VersionRange EndVersion="15.0.5.0">
+            <CustomUpgradeAction Name = "15.0.5.0">
+            </CustomUpgradeAction>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.6.0">
+            <CustomUpgradeAction Name = "15.0.6.0">
+            </CustomUpgradeAction>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.7.0">
+            <CustomUpgradeAction Name = "15.0.7.0">
+            </CustomUpgradeAction>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.8.0">
+            <CustomUpgradeAction Name = "15.0.8.0">
+            </CustomUpgradeAction>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.9.0">
+            <CustomUpgradeAction Name = "15.0.9.0">
+            </CustomUpgradeAction>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.10.0">
+            <CustomUpgradeAction Name = "15.0.10.0">
+            </CustomUpgradeAction>
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

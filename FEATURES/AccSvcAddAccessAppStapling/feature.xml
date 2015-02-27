@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="15.0.4420" _dal="1" -->
+<!-- _LocalBinding -->
+<Feature Id="3D7415E4-61BA-4669-8D78-213D374D9825"
+	Title="$Resources:AccsvcWss,AddAccessAppStaplerFeatureTitle;"
+	Description="$Resources:AccsvcWss,AddAccessAppStaplerFeatureDescription;"
+	Version="1.0.0.0"
+	Scope="Farm"
+	Hidden="False"
+	SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+	xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+	<ElementManifest Location="elements.xml" />
+  </ElementManifests>
+</Feature>

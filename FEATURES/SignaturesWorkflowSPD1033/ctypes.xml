@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="15.0.4420" _dal="1" -->
+<!-- _LocalBinding -->
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <!-- Signatures -->
+    <ContentType ID="0x01080100C9C9515DE4E24001905074F980F93160002E9DB43AC527439AB853AE4FC8360409"
+        Name="Collect Signatures Workflow Task (en-US)"
+        Description="A work item created by an workflow that you or your team needs to complete."
+        Group="_Hidden"
+        Hidden="TRUE"
+        Version="0">
+        <FieldRefs />
+        <XmlDocuments>
+            <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+                <FormUrls xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+                    <Display>~layouts/WrkTaskIP.aspx</Display>
+                    <Edit>~layouts/WrkTaskIP.aspx</Edit>
+                </FormUrls>
+            </XmlDocument>
+            <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v4/workflow/forms">
+                <WorkflowForm xmlns="http://schemas.microsoft.com/sharepoint/v4/workflow/forms">~sitecollection/_catalogs/wfpub/Collect Signatures - SharePoint 2010/Signatures_Task_1033.xsn</WorkflowForm>
+            </XmlDocument>
+        </XmlDocuments>
+    </ContentType>
+</Elements>

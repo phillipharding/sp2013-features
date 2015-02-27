@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+	<!--
+	This are templates for IPFS lists on the root Web.
+	-->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<ListTemplate 
+		BaseType ="1" 
+		Catalog ="TRUE"
+		Default ="TRUE" 
+		Description ="$Resources:ipfscore,SupportFeatureConvertedListDescription;"
+		DisplayName ="$Resources:ipfscore,SupportFeatureConvertedListTitle;"
+		DontSaveInTemplate ="TRUE"
+		Hidden="TRUE"
+		HiddenList="TRUE"
+		Image="/_layouts/15/images/ICXDDOC.GIF?rev=23"
+		MustSaveRootFiles="FALSE"
+		Name="IWConvertedForms"
+		OnQuickLaunch="FALSE"
+		Path="IWConvertedForms"
+		RootWebOnly="TRUE"
+		SecurityBits="11"
+		Type="10102"
+		Unique ="TRUE"
+	></ListTemplate>
+
+</Elements>

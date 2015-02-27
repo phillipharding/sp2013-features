@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ContentType ID="0x01080100C9C9515DE4E24001905074F980F9316001"
+        Name="Signatures Workflow Task Deprecated"
+        Description="Deprecated"
+        Group="_Hidden"
+        Hidden="TRUE"
+        Version="0">
+        <FieldRefs>
+        </FieldRefs>
+        <XmlDocuments>
+            <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+                <FormUrls xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+                    <Display>~layouts/WrkTaskIP.aspx</Display>
+                    <Edit>~layouts/WrkTaskIP.aspx</Edit>
+                </FormUrls>
+            </XmlDocument>
+        </XmlDocuments>
+    </ContentType>
+</Elements>

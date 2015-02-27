@@ -1,0 +1,25 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="ContentFollowingList"
+        Type="530"
+        DisplayName="$Resources:spscore,ContentFollowingOnet_ListTitle;"
+        Description="$Resources:spscore,ContentFollowingOnet_ListDescription;"
+        BaseType="0"
+        DisableAttachments="TRUE"
+        DontSaveInTemplate="TRUE"
+        OnQuickLaunch="TRUE"
+        AllowDeletion="FALSE"
+        FolderCreation="FALSE"
+        SecurityBits="22"
+        CacheSchema="TRUE"
+        NoCrawl="TRUE"
+        Hidden="TRUE"
+        Unique="TRUE">
+    </ListTemplate>
+    <Module Name="FDASPX" Url="" Path="" SetupPath="FEATURES\ContentFollowingList\ContentFollowingList" RootWebOnly="TRUE">
+        <File Url="FollowedContent.aspx" Type="Ghostable" />
+    </Module>
+    <Module Name="FSASPX" Url="" Path="" SetupPath="FEATURES\ContentFollowingList\ContentFollowingList" RootWebOnly="TRUE">
+        <File Url="FollowedSites.aspx" Type="Ghostable" />
+    </Module>
+</Elements>

@@ -1,0 +1,86 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="SearchResultsDisplayTemplates" Url="_catalogs/masterpage/Display Templates/Search" Path="DisplayTemplates" RootWebOnly="TRUE">
+        <File Url="Item_Default.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_CommonItem_Body.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_Excel.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_Site.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_Word.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_BestBet.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_OfficeDocument.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_MicroBlog.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_Person_CompactHorizontal.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_Person.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_OneNote.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_PDF.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_PersonalFavorite.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_Picture.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_PowerPoint.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Group_Default.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Control_SearchResults.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Control_SearchBox.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Control_SearchBox_Compact.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Control_Blank.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_Video.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_Default_HoverPanel.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_Excel_HoverPanel.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_Word_HoverPanel.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_PowerPoint_HoverPanel.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_OfficeDocument_HoverPanel.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_MicroBlog_HoverPanel.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_OneNote_HoverPanel.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_PDF_HoverPanel.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_Picture_HoverPanel.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_Site_HoverPanel.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_Video_HoverPanel.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_Person_HoverPanel.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_CommonHoverPanel_Body.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_CommonHoverPanel_Actions.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_CommonHoverPanel_Header.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_Video_CompactHorizontal.html" Type="GhostableInLibrary">
+        </File>
+    </Module>
+    <Module Name="FilterDisplayTemplates" Url="_catalogs/masterpage/Display Templates/Filters" Path="DisplayTemplates" RootWebOnly="TRUE">
+        <File Url="Control_Refinement.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Filter_Default.html" Type="GhostableInLibrary" >
+        </File>
+    </Module>
+</Elements>

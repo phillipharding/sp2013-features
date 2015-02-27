@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="PNSubscribers"
+        Type="2000"
+        BaseType="0"
+        OnQuickLaunch="FALSE"
+        SecurityBits="22"
+        Hidden="TRUE"
+        DisplayName="$Resources:core,PhonePNSubscriberListTemplateDisplayName;"
+        Image="/_layouts/15/images/itgen.png?rev=23" />
+</Elements>

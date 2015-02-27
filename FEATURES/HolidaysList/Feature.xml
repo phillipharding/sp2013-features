@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="9ad4c2d4-443b-4a94-8534-49a23f20ba3c"
+    Title="$Resources:core,GbwFeatureHolidaysTitle;"
+    Description="$Resources:core,GbwFeatureHolidaysDescription;"
+    Version="3.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\holidayslist.xml" />
+        <ElementFile Location="holidays\schema.xml" />
+    </ElementManifests>
+    <UpgradeActions
+        ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        ReceiverClass="Microsoft.SharePoint.SPHolidaysListUpgradeFeatureReceiver">
+        <VersionRange EndVersion="1.0.0.0">
+            <CustomUpgradeAction Name="V2VUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="3.0.0.0">
+            <CustomUpgradeAction Name="SetDateOnlyFormat" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

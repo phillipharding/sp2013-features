@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EmailContent>
+  <Subject>
+    $ResourcesNoEncode:core,UpgradeSucceededSubject;
+  </Subject>
+  <Body>
+    <HTML>
+      <![CDATA[<html>
+    <body>
+    <h3>$Resources:core,UpgradeSucceededH3;</h3>
+    <p>]]>
+    </HTML>
+    $ResourcesNoEncode:core,UpgradeSucceededP1;
+    <HTML>
+      <![CDATA[</p>
+      <h3>$Resources:core,EvalSitesImportantTasks;</h3>
+      <p>$Resources:core,UpgradeSucceededP2;</p>
+      <ul>
+      <li>$Resources:core,UpgradeSucceededLi1Part1;]]>
+    </HTML>
+    $ResourcesNoEncode:core,UpgradeSucceededLi1Part2;
+    <HTML>
+      <![CDATA[</li>
+      <li>$Resources:core,UpgradeSucceededLi2;</li>
+      </ul>
+      <h3>$Resources:core,UpgradeWhatsNew;</h3>
+      <p>]]>
+    </HTML>
+    $ResourcesNoEncode:core,UpgradeSucceededP3;
+    <HTML>
+      <![CDATA[</p>
+    </body>
+    </html>]]>
+    </HTML>
+  </Body>
+</EmailContent>

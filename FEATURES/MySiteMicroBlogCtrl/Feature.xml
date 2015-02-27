@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature Id="DFA42479-9531-4BAF-8873-FC65B22C9BD4"
+    Title="MySite MicroBlogging"
+    Description="Enables MySite MicroBlogging services."
+    Version="15.0.0.0"
+    Scope="Site"
+    Hidden="TRUE"
+    DefaultResourceFile="core"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.MicroBlogCtrlFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>
+

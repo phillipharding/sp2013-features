@@ -1,0 +1,43 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <ContentType
+        ID="0x0101002039C03B61C64EC4A04F5361F3851066"
+        Name="$Resources:Microsoft.Office.Server.Search,TemplateContentType_Display_Name"
+        Description="$Resources:Microsoft.Office.Server.Search,TemplateContentType_Display_Desc"
+        Group="_Hidden"
+        Sealed="FALSE"
+        Inherits="TRUE" 
+        Version="0">
+        <FieldRefs>
+            <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+            <FieldRef ID="{9da97a8a-1da5-4a77-98d3-4bc10456e700}" Name="Description" />
+            <FieldRef ID="{0A9EC8F0-0340-4E24-9B35-CA86A6DED5AB}" Name="TemplateHidden" />
+            <FieldRef ID="{CAB85295-B195-4AC2-8323-87C602E6AC9D}" Name="TargetControlType" />      
+            <FieldRef ID="{3C318A40-0D51-408D-BA71-16FA845B9FE5}" Name="CrawlerXSLFile" />
+        </FieldRefs>
+      </ContentType>
+
+    <ContentType
+        ID="0x0101002039C03B61C64EC4A04F5361F385106605"
+        Name="$Resources:Microsoft.Office.Server.Search,TemplateContentType_Code_Name"
+        Description="$Resources:Microsoft.Office.Server.Search,TemplateContentType_Code_Desc"
+        Group="_Hidden"
+        Sealed="FALSE"
+        Inherits="TRUE" 
+        Version="0">
+        <FieldRefs>
+            <FieldRef ID="{FA181E85-8465-42fd-BD81-4AFEA427D3FE}" Name="DisplayTemplateLevel" />
+            <FieldRef ID="{A0DD6C22-0988-453E-B3E2-77479DC9F014}" Name="ManagedPropertyMapping" />
+            <FieldRef ID="{DCB8E2A9-42D1-495F-9FDA-4BF9C706BC46}" Name="CompatibleSearchDataTypes" />
+            <FieldRef ID="{BAB0A619-D1EC-40D7-847B-3E4408080C17}" Name="CompatibleManagedProperties" />
+        </FieldRefs>
+      </ContentType>
+
+    <ContentType ID="0x010100C5033D6CFB8447359FB795C8A73A2B19" Name="$Resources:Microsoft.Office.Server.Search,contenttype_designfile_name;" Description="$Resources:Microsoft.Office.Server.Search,contenttype_designfile_description;" Group="_Hidden" Sealed="TRUE" Inherits="TRUE" Version="0">
+        <FieldRefs>
+        </FieldRefs>
+    </ContentType>
+
+    <ContentTypeBinding ContentTypeId="0x0101002039C03B61C64EC4A04F5361F385106605" ListUrl="_catalogs/masterpage" />
+    <ContentTypeBinding ContentTypeId="0x010100C5033D6CFB8447359FB795C8A73A2B19" ListUrl="_catalogs/masterpage" />
+</Elements>

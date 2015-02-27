@@ -1,0 +1,9 @@
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Id="TenantAdmin_Sites_ManageSiteCollections"
+        GroupId="TenantAdmin_Settings"
+        Location="Microsoft.SharePoint.TenantAdministration"
+        Sequence="50">
+    </CustomAction>
+</Elements>

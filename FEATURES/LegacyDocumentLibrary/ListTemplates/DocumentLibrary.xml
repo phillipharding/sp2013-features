@@ -1,0 +1,24 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Hidden="TRUE"
+        Name="doclib"
+        Type="101"
+        BaseType="1"
+        OnQuickLaunch="TRUE"
+        SecurityBits="11"
+        DisplayName="$Resources:core,doclibList;"
+        Description="$Resources:core,doclibList_Desc;"
+        Image="/_layouts/images/itdl.png"
+        DocumentTemplate="101"/>
+    <ListTemplate
+        Hidden="TRUE"
+        Name="doclib"
+        Type="200"
+        BaseType="1"
+        OnQuickLaunch="TRUE"
+        SecurityBits="11"
+        DisplayName="$Resources:spscore,FeatureLegacyV2AreaDocLibTitle;"
+        Description="$Resources:spscore,FeatureLegacyV2AreaDocLibDescription;"
+        Image="/_layouts/images/itdl.png"
+        DocumentTemplate="106"/>
+</Elements>

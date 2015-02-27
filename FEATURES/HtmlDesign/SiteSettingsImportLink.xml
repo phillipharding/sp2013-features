@@ -1,0 +1,15 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<CustomAction
+		Id="DesignImport"
+        GroupId="Customization"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ApplyThemeAndBorder ApplyStyleSheets AddAndCustomizePages Open ViewPages OpenItems ViewListItems ViewFormPages"
+        Sequence="52"
+        Title="$Resources:cmscore,designpackageinstall_pagetitle;"
+        Description="$Resources:cmscore,designpackageinstall_tooltip;">
+        <UrlAction
+            Url="~layouts/DesignPackageInstall.aspx" />
+    </CustomAction>
+</Elements>

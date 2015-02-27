@@ -1,0 +1,125 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_DiscoveryResultExchange</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">1</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106601</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="Control_eDiscoveryExchangeResult">
+
+<!--#_
+var totalRows = !$isNull(ctx.ListData) && !$isEmptyArray(ctx.ListData.ResultTables) && !$isNull(ctx.ListData.ResultTables[0].Properties.Discovery_TotalItemCount) ? 
+    ctx.ListData.ResultTables[0].Properties.Discovery_TotalItemCount : 0;
+var itemsPerPage = ctx.DataProvider.get_resultsPerPage();
+var showPaging = totalRows > itemsPerPage;
+if(ctx.ClientControl.get_showResultCount() && totalRows > 0) {
+_#-->
+        <span class="ms-srch-resultscount" id="ResultCount">
+            _#= String.format($htmlEncode($resource("rs_ApproximateResultCount")), $htmlEncode(totalRows.localeFormat("N0"))) =#_
+        </span>
+<!--#_ 
+}
+ctx.ListDataJSONGroupsKey = "ResultTables";
+_#-->
+         <table id='DiscoveryResultsEX' class='edisc-SearchResultsTable'>
+             <tr>
+                <th class='Subject'>_#= $htmlEncode($resource("control_EDisc_Subject")) =#_</th>
+                <th class='People'>_#= $htmlEncode($resource("control_EDisc_Recipients")) =#_</th>
+                <th class='People'>_#= $htmlEncode($resource("control_EDisc_Sender")) =#_</th>
+                <th class='Date' title="_#= $htmlEncode($resource('control_EDisc_DateSentTooltip')) =#_">_#= $htmlEncode($resource("control_EDisc_DateSent")) =#_</th>
+            </tr>
+            _#= ctx.RenderGroups(ctx) =#_
+        </table>
+<!--#_ 
+if(ctx.ClientControl.get_shouldShowNoResultMessage())
+{ 
+_#-->
+        <div id="NoResult" class="ms-srch-result-noResults">
+            <div class="ms-textLarge ms-srch-result-noResultsTitle">_#= $htmlEncode($resource("rs_NoResultsTitle")) =#_</div>
+            <div>_#= $htmlEncode($resource("rs_NoResultsSuggestions")) =#_</div>
+            <ul>
+                <li>_#= $htmlEncode($resource("rs_NoResultsSpelling")) =#_</li>
+                <li>_#= $htmlEncode($resource("rs_NoResultsDifferentTerms")) =#_</li>
+                <li>_#= $htmlEncode($resource("rs_NoResultsGeneralTerms")) =#_</li>
+                <li>_#= $htmlEncode($resource("rs_NoResultsFewerTerms")) =#_</li>
+<!--#_ 
+    if(ctx.DataProvider.get_currentQueryState().r)
+    { 
+_#-->
+                <li><a href="javascript:{}" onclick="Discovery.Refiners.clearAllRefiners($getClientControl(this));">_#= $htmlEncode($resource("rs_NoResultsRefiners")) =#_</a></li>
+<!--#_ 
+    } 
+_#-->
+            </ul>
+        </div>
+<!--#_ 
+}
+if(showPaging)
+{ 
+_#-->
+        <div class="discovery-paging-container">
+<!--#_
+
+    var currentStartIndex = Math.max(ctx.DataProvider.get_currentQueryState().s, 1);
+
+    var hasPreviousPage = (currentStartIndex - itemsPerPage) > 0;
+    var firstPage = !hasPreviousPage ? null :
+    {
+        title: $resource("rs_MoveToPrevPage"),
+        startItem: currentStartIndex - itemsPerPage
+    };
+    var prevPageIconClass = Srch.U.isRTL() ? "ms-srch-pagingNext" : "ms-srch-pagingPrev";
+
+    var hasNextPage = (currentStartIndex + itemsPerPage) <= totalRows;
+    var lastPage = !hasNextPage ? null :
+    {
+        title: $resource("rs_MoveToNextPage"),
+        startItem: (currentStartIndex + itemsPerPage)
+    }
+    var imagesUrl = GetThemedImageUrl("searchresultui.png");
+    var nextPageIconClass = Srch.U.isRTL() ? "ms-srch-pagingPrev" : "ms-srch-pagingNext";
+
+    var currentPageNumber = Math.floor(ctx.DataProvider.get_currentQueryState().s / itemsPerPage) + 1;
+    var totalPages = Math.ceil(totalRows / itemsPerPage);
+    var pagingInfoDisplay = String.format($resource("edisc_ControlPagingFormat"), currentPageNumber, totalPages);
+
+    if (hasPreviousPage)
+    { 
+_#-->
+                <a id="PageLinkPrev" href="#" class="ms-commandLink ms-promlink-button ms-promlink-button-enabled ms-verticalAlignMiddle" title="_#= $htmlEncode(firstPage.title) =#_" onclick="$getClientControl(this).page(_#= $htmlEncode(firstPage.startItem) =#_);return Srch.U.cancelEvent(event);">
+                    <span class="ms-promlink-button-image">
+                        <img src="_#= $urlHtmlEncode(imagesUrl) =#_" class="_#= $htmlEncode(prevPageIconClass) =#_" alt="_#= $htmlEncode(firstPage.title) =#_" />
+                    </span>
+                </a>
+<!--#_
+    }
+_#-->
+                _#= $htmlEncode(pagingInfoDisplay) =#_
+<!--#_
+    if (hasNextPage)
+    {
+_#-->
+                <a id="PageLinkNext" href="#" class="ms-commandLink ms-promlink-button ms-promlink-button-enabled ms-verticalAlignMiddle" title="_#= $htmlEncode(lastPage.title) =#_" onclick="$getClientControl(this).page(_#= $htmlEncode(lastPage.startItem) =#_);return Srch.U.cancelEvent(event);">
+                    <span class="ms-promlink-button-image">
+                        <img src="_#= $urlHtmlEncode(imagesUrl) =#_" class="_#= $htmlEncode(nextPageIconClass) =#_" alt="_#= $htmlEncode(lastPage.title) =#_" />
+                    </span>
+                </a>
+<!--#_
+    }
+_#-->
+            </div>
+<!--#_ 
+} 
+_#-->
+
+    </div>
+</body>
+</html>

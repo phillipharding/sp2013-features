@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+	Id="4C42AB64-55AF-4c7c-986A-AC216A6E0C0E"
+	Title="$Resources:xlsrv,FeatureWebPart-title;"
+	Description="$Resources:xlsrv,FeatureWebPart-description;"
+	SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+	Version="14.0.0.0"
+	Hidden="TRUE"
+	ReceiverAssembly="Microsoft.Office.Excel.Server.MossHost, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+	ReceiverClass="Microsoft.Office.Excel.Server.MossHost.ExcelServerFeatureHandler"
+	Scope="Site">
+
+	<ElementManifests>
+		<ElementManifest Location="WebParts.xml" />
+	</ElementManifests>
+
+</Feature>

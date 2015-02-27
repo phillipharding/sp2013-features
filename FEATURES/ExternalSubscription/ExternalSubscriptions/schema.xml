@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="$Resources:core,ExternalSubscriptionListSchemaTitle;" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="$Resources:core,ExternalSubscriptionListFolderName;" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+    </ContentTypes>
+    <Fields>
+      <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" DisplayName="$Resources:core,ExternalSubscription_IdFieldTitle;" Type="Text" Required="TRUE" Sealed="TRUE" />
+      <Field ID="{DC68A14F-1F78-4742-93A3-E4C7B27CFEAB}" Name="LobSubscriptionId" DisplayName="$Resources:core,ExternalSubscription_LobSubscriptionIdFieldTitle;" ReadOnly="FALSE" Hidden="FALSE" Type="Note" MaxLength="2048" Sortable="FALSE" StaticName="LobSubscriptionId" Sealed="TRUE" />
+      <Field ID="{7AD324C7-322B-47F6-BE0B-BB9687937505}" Name="EntityName" DisplayName="$Resources:core,ExternalSubscription_EntityNameFieldTitle;" ReadOnly="FALSE" Hidden="FALSE" Type="Text" Sortable="FALSE" StaticName="EntityName" Sealed="TRUE" />
+      <Field ID="{F6B370E4-EAD4-4D1C-B3E9-ABE63C5F414C}" Name="EntityNamespace" DisplayName="$Resources:core,ExternalSubscriptionId_EntityNSFieldTitle;" ReadOnly="FALSE" Hidden="FALSE" Type="Text" Sortable="FALSE" StaticName="EntityNamespace" Sealed="TRUE" />
+      <Field ID="{C32E4F71-C333-429D-84BF-581464ADE99C}" Name="LsiName" DisplayName="$Resources:core,ExternalSubscription_LsiNameFieldTitle;" ReadOnly="FALSE" Hidden="FALSE" Type="Text" Sortable="FALSE" StaticName="LsiName" Sealed="TRUE" />
+      <Field ID="{452C4164-9630-473F-AE86-8E767EA717C5}" Name="ForwarderType" DisplayName="$Resources:core,ExternalSubscription_ForwarderTypeFieldTitle;" ReadOnly="FALSE" Hidden="FALSE" Type="Text" Sortable="FALSE" StaticName="ForwarderType" Sealed="TRUE" />
+      <Field ID="{0FC9F8A2-AD02-40A1-A916-80FDC83D26AB}" Name="CallbackUrl" DisplayName="$Resources:core,ExternalSubscription_CallbackUrlFieldTitle;" ReadOnly="FALSE" Hidden="FALSE" Type="Note" MaxLength="2048" Sortable="FALSE" StaticName="CallbackUrl" Sealed="TRUE" />
+      <Field ID="{F2125F34-633B-4050-AE04-2506E0D6716B}" Name="NotificationContext" DisplayName="$Resources:core,ExternalSubscription_NotificationContextFieldTitle;" ReadOnly="FALSE" Hidden="FALSE" Type="Text" Sortable="FALSE" StaticName="NotificationContext" Sealed="TRUE" />
+      <Field ID="{70133BDE-5671-47C0-853D-C1630DCC6E47}" Name="EntityEventType" DisplayName="$Resources:core,ExternalSubscription_EventTypeFieldTitle;" ReadOnly="FALSE" Hidden="FALSE" Type="Integer" Sortable="FALSE" StaticName="EntityEventType" Sealed="TRUE" />
+    </Fields>
+    <Views>
+    </Views>
+    <Forms>
+    </Forms>
+  </MetaData>
+</List>

@@ -1,0 +1,112 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_DefaultGroup</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string">$Resources:Microsoft.Office.Server.Search,DisplayTemplateDescription_DefaultGroup</mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106602</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#SearchResults;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="Group_Default">          
+<!--#_
+    if(!$isNull(ctx.ClientControl) 
+       && ctx.ClientControl.shouldShowTable(ctx.CurrentGroup) 
+       && !Srch.U.isTableTypeof(ctx.CurrentGroup, Microsoft.SharePoint.Client.Search.Query.KnownTableTypes.personalFavoriteResults))
+    {
+        var queryRuleId = ctx.CurrentGroup["QueryRuleId"];
+        var markerCSS = ""; 
+        if (!Srch.U.isSubstrateTable(ctx.CurrentGroup) && !Srch.U.isTableTypeof(ctx.CurrentGroup, Microsoft.SharePoint.Client.Search.Query.KnownTableTypes.specialTermResults)) 
+        { 
+            markerCSS = "ms-srch-group-border";            
+        }
+        var id = ctx.ClientControl.get_nextUniqueId();
+        var groupId = id + Srch.U.Ids.group;
+        $setResultObject(groupId, ctx.CurrentGroup);
+
+        if (Srch.U.isPageInEditMode()){
+            var queryRulesHtml = "<a href='" + $urlHtmlEncode(ctx.ScriptApplicationManager.get_queryRulesUrl()) + "' target='_blank'>" + $htmlEncode(Srch.Res.rs_Edit_QueryRules) + "</a>";
+            if(Srch.U.isFirstPromotedBlock(ctx.CurrentGroup)){
+_#-->                 
+                <div class="ms-trcnoti-base ms-srch-msg ms-srch-msg-border">
+                    <div class="ms-srch-msg-section">
+                        <h2 class="ms-accentText">_#= $htmlEncode(Srch.Res.rs_Edit_PromotedTitle) =#_</h2>
+                        <div>_#= String.format($htmlEncode(Srch.Res.rs_Edit_PromotedDescription), queryRulesHtml) =#_</div>
+                    </div>
+                </div>
+<!--#_            
+            } else if (Srch.U.isFirstRankedBlock(ctx.CurrentGroup)){
+_#-->                 
+                <div id="EditMode-CustomizingResults" class="ms-trcnoti-base ms-srch-msg ms-srch-msg-border">
+                    <div class="ms-srch-msg-section">
+                        <h2 class="ms-accentText">_#= $htmlEncode(Srch.Res.rs_Edit_RankedTitle) =#_</h2>
+                        <div>_#= String.format($htmlEncode(Srch.Res.rs_Edit_RankedDescription), queryRulesHtml) =#_</div>
+                    </div>
+                </div>
+<!--#_ 
+            }
+        }
+_#-->      
+        <div id="_#= $htmlEncode(groupId) =#_" name="Group" class="ms-srch-group _#= markerCSS =#_" data-queryruleid="_#= $htmlEncode(queryRuleId) =#_"> 
+            <div id="GroupBorderTop"></div>
+<!--#_
+            var groupTitle = ctx.CurrentGroup["ResultTitle"];
+            var groupUrl = (Srch.U.isDefaultSiteSearchPage()) ? null : Srch.U.replaceUrlTokens(ctx.CurrentGroup["ResultTitleUrl"]);
+            var totalRows = ctx.CurrentGroup[Srch.U.PropNames.totalRows]; 
+            var rowCount = ctx.CurrentGroup[Srch.U.PropNames.rowCount]; 
+            var showMore = true;
+            var countDisplayString = Srch.Res.rs_ApproximateResultCount;        
+
+            if ((!Srch.U.n(totalRows)) && (!Srch.U.n(rowCount)) && (rowCount >= totalRows)) showMore = false;        
+            if (!$isEmptyString(groupTitle))
+            { 
+_#-->
+                <div id="_#= $htmlEncode(id + Srch.U.Ids.groupTitle) =#_" class="ms-srch-group-title ms-textLarge">
+<!--#_
+                if (!$isEmptyString(groupUrl))
+                {
+_#-->                
+                    <a clicktype="More" href="_#= $urlHtmlEncode(groupUrl) =#_" >_#= $htmlEncode(groupTitle) =#_</a>
+<!--#_
+                }
+                else
+                {
+_#-->
+                _#= $htmlEncode(groupTitle) =#_
+<!--#_
+                }
+_#-->
+                </div>
+<!--#_
+            }
+
+            ctx.ListDataJSONItemsKey = "ResultRows";
+_#-->     
+            <div id="_#= $htmlEncode(id + Srch.U.Ids.groupContent) =#_" class="ms-srch-group-content">_#= ctx.RenderItems(ctx) =#_<div class="ms-srch-group-clear"></div></div>                                        
+
+<!--#_
+            if (!$isEmptyString(groupUrl) && showMore)
+            {
+_#-->
+                <div class="ms-srch-group-link ms-commandLink ms-uppercase">
+                    <a id="_#= $htmlEncode(id + Srch.U.Ids.groupLink) =#_" clicktype="More" href="_#= $urlHtmlEncode(groupUrl) =#_" title="_#= $htmlEncode(Srch.Res.rf_ShowMoreResults_Tooltip) =#_">
+                        _#= $htmlEncode(Srch.Res.rf_RefinementLabel_More) =#_
+                    </a>
+                </div>
+       		    <div class="ms-srch-group-count ms-metadata">_#= String.format($htmlEncode(countDisplayString), $htmlEncode(totalRows.localeFormat("N0"))) =#_</div>
+<!--#_
+            }
+_#-->
+            <div id="GroupBorderBottom"></div>
+        </div>
+<!--#_
+    }
+_#-->
+    </div>
+</body>
+</html>

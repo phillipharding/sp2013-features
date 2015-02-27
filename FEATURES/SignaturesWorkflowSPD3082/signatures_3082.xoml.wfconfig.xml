@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="3082" _version="15.0.4442" _dal="1" -->
+<!-- _LocalBinding -->
+<WorkflowConfig Version="15.0.0.411">
+	<Template BaseID="{77C71F43-F403-484B-BCB2-303710E00C0A}" DocLibURL="_catalogs/wfpub" XomlHref="_catalogs/wfpub/Recopilar firmas - SharePoint 2010/Signatures_3082.xoml" XomlVersion="V1.0" AssociationURL="~layouts/CstWrkflIP.aspx" TaskContentType="0x01080100C9C9515DE4E24001905074F980F93160002E9DB43AC527439AB853AE4FC8360C0A" StartManually="true" Visibility="RootPublic" Category="List;Language:3082;#ContentType;Language:3082;#SigClientRequired" RestrictLanguage="3082" RulesHref="_catalogs/wfpub/Recopilar firmas - SharePoint 2010/Signatures_3082.xoml.rules" RulesVersion="V1.0" Description="Recopila las firmas necesarias para completar un documento de Microsoft Office." PreviewHref="/_catalogs/wfpub/Recopilar firmas - SharePoint 2010/Signatures_3082.vdw" ShowPreview="true" PreviewVersion="V1.0"/>
+	<ContentTypes>
+		<ContentType Name="Collect Signatures Workflow Task (es-ES)" ContentTypeID="0x01080100C9C9515DE4E24001905074F980F93160002E9DB43AC527439AB853AE4FC8360C0A" WorkflowForm="/_catalogs/wfpub/Recopilar firmas - SharePoint 2010/Signatures_Task_3082.xsn" WorkflowFormVersion="V1.0" Description="Un elemento de trabajo creado por un flujo de trabajo que el usuario o su equipo necesita completar.">
+			<Fields/>
+			<WorkflowFormData>
+				<dfs:myFields xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:dms="http://schemas.microsoft.com/office/2009/documentManagement/types" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:q="http://schemas.microsoft.com/office/infopath/2009/WSSList/queryFields" xmlns:d="http://schemas.microsoft.com/office/infopath/2009/WSSList/dataFields" xmlns:ma="http://schemas.microsoft.com/office/2009/metadata/properties/metaAttributes" xmlns:pc="http://schemas.microsoft.com/office/infopath/2007/PartnerControls" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<dfs:queryFields>
+					</dfs:queryFields>
+					<dfs:dataFields>
+						<d:SharePointListItem_RW>
+							<d:Status/>
+							<d:Author/>
+							<d:FieldName_ConsolidatedComments/>
+							<d:DueDate xsi:nil="true"/>
+							<d:FieldName_Comments/>
+							<d:SignatureID/>
+							<d:SignatureOrder/>
+							<d:RequiresSignature xsi:nil="true"/>
+							<d:FieldName_DelegateTo/>
+							<d:FieldName_NewDescription/>
+							<d:FieldName_NewSerialTaskDuration xsi:nil="true"/>
+							<d:FieldName_NewDurationUnits>Day</d:FieldName_NewDurationUnits>
+							<d:FieldName_RequestTo/>
+							<d:Body/>
+							<d:Title/>
+							<d:Priority>(2) Normal</d:Priority>
+							<d:PercentComplete xsi:nil="true"/>
+							<d:AssignedTo/>
+							<d:StartDate/>
+							<d:WorkflowLink Description=""/>
+							<d:OffsiteParticipant/>
+							<d:OffsiteParticipantReason/>
+							<d:WorkflowOutcome/>
+							<d:WorkflowName/>
+							<d:FormURN/>
+							<d:FormData/>
+							<d:EmailBody/>
+							<d:HasCustomEmailBody xsi:nil="true"/>
+							<d:SendEmailNotification xsi:nil="true"/>
+							<d:PendingModTime xsi:nil="true"/>
+							<d:Completed>false</d:Completed>
+							<d:ExtendedProperties/>
+							<d:ID xsi:nil="true"/>
+							<d:Modified xsi:nil="true"/>
+							<d:Created xsi:nil="true"/>
+							<d:Editor/>
+						</d:SharePointListItem_RW>
+					</dfs:dataFields>
+				</dfs:myFields>
+			</WorkflowFormData>
+		</ContentType>
+	</ContentTypes>
+	<Initiation URL="~layouts/IniWrkflIP.aspx">
+		<Fields>
+			<Field Name="Signers" GroupName="Assignment" FormType="Both" DisplayName="Firmantes" Type="HybridUser" Description="Escriba los nombres de las personas a las que el flujo de trabajo asignará tareas y elija el orden en que se asignarán dichas tareas. Sepárelos por punto y coma. También puede agregar fases para asignar tareas a más personas en distintos órdenes." Direction="None"  InsertButtonText="Agregar una nueva fase">
+				<Default/>
+				<Field Name="Assignee" DisplayName="Asignar a" List="UserInfo" Description="" Width="305" Type="UserMulti" ShowField="ImnName" UserSelectionMode="PeopleAndGroups" UserSelectionScope="0" Direction="None"/>
+				<Field Name="Stage" DisplayName="Fase" Description="" Width="1" Type="Number" Direction="None" Hidden="TRUE">
+					<Default></Default>
+				</Field>
+				<Field Name="AssignmentType" Format="Dropdown" BaseType="Text" DisplayName="Orden" Description="" Width="150" Type="Choice" Direction="None">
+					<Default>Serial</Default>
+					<CHOICES>
+						<CHOICE DisplayName="De uno en uno (en serie)">Serial</CHOICE>
+						<CHOICE DisplayName="Todos a la vez (en paralelo)">Parallel</CHOICE>
+					</CHOICES>
+				</Field>
+				<Field Name="RequiresSignature" DisplayName="Se requiere firma" Description="" Width="1" Type="Boolean" Hidden="TRUE" HiddenWritable="TRUE" Direction="None">
+					<Default>1</Default>
+				</Field>
+				<Field Name="SignatureID" DisplayName="Identificador de firma" Description="" Width="1" Type="Text" Hidden="TRUE" HiddenWritable="TRUE" Direction="None"/>
+				<Field Name="SignatureOrder" DisplayName="Orden de firmas" Description="" Width="1" Type="Text"  Hidden="TRUE" HiddenWritable="TRUE" Direction="None"/>
+			</Field>
+			<Field Name="CC" FormType="Both" List="UserInfo" ShowField="ImnName" UserSelectionMode="PeopleAndGroups" UserSelectionScope="0" DisplayName="CC" Description="Notifique a estas personas cuando inicie y finalice el flujo de trabajo, sin asignarles tareas." Direction="None" Type="UserMulti" Mult="TRUE" />
+		</Fields>
+		<Parameters>
+			<Parameter Name="Signers" Type="System.String"/>
+			<Parameter Name="CC" Type="System.String"/>
+		</Parameters>
+		<DefaultData>
+			<dfs:myFields xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:dms="http://schemas.microsoft.com/office/2009/documentManagement/types" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:q="http://schemas.microsoft.com/office/infopath/2009/WSSList/queryFields" xmlns:d="http://schemas.microsoft.com/office/infopath/2009/WSSList/dataFields" xmlns:ma="http://schemas.microsoft.com/office/2009/metadata/properties/metaAttributes" xmlns:pc="http://schemas.microsoft.com/office/infopath/2007/PartnerControls" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+				<dfs:queryFields>
+				</dfs:queryFields>
+				<dfs:dataFields>
+					<d:SharePointListItem_RW>
+						<d:Signers>
+							<d:Assignment>
+								<d:Assignee/>
+								<d:Stage xsi:nil="true"/>
+								<d:AssignmentType>Serial</d:AssignmentType>
+								<d:RequiresSignature>true</d:RequiresSignature>
+								<d:SignatureID/>
+								<d:SignatureOrder/>
+							</d:Assignment>
+						</d:Signers>
+						<d:CC/>
+					</d:SharePointListItem_RW>
+				</dfs:dataFields>
+			</dfs:myFields>
+		</DefaultData>
+	</Initiation>
+	<Extended>
+		<Fields/>
+	</Extended>
+	<MetaData>
+		<TaskForms/>
+		<Modifications ModificationUrl="~layouts/ModWrkflIP.aspx">
+			<Modification TypeId="a938eabe-8db1-45b9-87cb-b930728afe10" NameFormat="Cancelar todas las tareas {0}" FormURN="urn:schemas-microsoft-com:office:infopath:workflow:OOB-WrapItUp:3082"/>
+		</Modifications>
+		<Instantiation_FormURI Version="V1.0">/_catalogs/wfpub/Recopilar firmas - SharePoint 2010/Signatures_3082.xsn</Instantiation_FormURI>
+		<Association_FormURN Version="V1.0">/_catalogs/wfpub/Recopilar firmas - SharePoint 2010/Signatures_3082.xsn</Association_FormURN>
+		<SigClientSettings>DigitalSignaturesEnabled;#UseAssociationDataToSuggestedSigners</SigClientSettings>
+		<ExtendedStatusColumnValues>
+			<StatusColumnValue>Cancelado</StatusColumnValue>
+			<StatusColumnValue>Aprobado</StatusColumnValue>
+			<StatusColumnValue>Rechazado</StatusColumnValue>
+		</ExtendedStatusColumnValues>
+	</MetaData>
+</WorkflowConfig>

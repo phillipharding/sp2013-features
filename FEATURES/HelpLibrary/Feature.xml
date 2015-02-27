@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="071DE60D-4B02-4076-B001-B456E93146FE"
+  Title="$Resources:Core,HelpFeatureTitle"
+  Description="$Resources:Core,HelpFeatureDescription"
+  Version="1.0.0.0"
+  Scope="Site"
+  Hidden="TRUE"
+  DefaultResourceFile="Core"
+  xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="HelpSiteColumns.xml"/>
+    <ElementManifest Location="HelpContentTypes.xml" />
+    <ElementManifest Location="ListTemplates\HelpLibrary.xml" />
+  </ElementManifests>  
+</Feature>

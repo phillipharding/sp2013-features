@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Name="WorkflowProcess" Title="Custom Workflow Process" Direction="$Resources:Direction;" Url="_catalogs/WorkflowProcess" BaseType="0" Default="UNIQUE"><!-- Direction="$Resources:Direction;" _locComment="For RTL language the direction need to be set to 2 {L=!1025,1037}{ValidStrings=0,2}" -->
+  <MetaData>
+    <ContentTypes>
+      <ContentTypeRef ID="0x01">
+        <Folder TargetName="Item" />
+      </ContentTypeRef>
+    </ContentTypes>
+    <Fields>
+    </Fields>
+    <Forms>
+    </Forms>
+    <Views>
+    </Views>
+  </MetaData>
+</List>

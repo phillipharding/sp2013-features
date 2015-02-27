@@ -1,0 +1,8 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="WebPartPopulation" Url="_catalogs/wp" Path="dwp" RootWebOnly="TRUE">
+        <File Url="SiteFeed.dwp" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:core,PeopleWebPartGroup;" />
+            <Property Name="QuickAddGroups" Value="STS#0" />
+        </File>
+    </Module>
+</Elements>

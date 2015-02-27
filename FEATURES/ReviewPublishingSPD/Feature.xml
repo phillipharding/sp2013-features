@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature  Id="A44D2AA3-AFFC-4d58-8DB4-F4A3AF053188"
+          Title="$Resources:Feature_Title;"
+          Description="$Resources:Feature_Description;"
+          ImageUrl="WorkflowSolutionFeature.gif"
+          Version="15.0.0.0"
+          Scope="Site"
+          AlwaysForceInstall="TRUE"
+          ReceiverAssembly="Microsoft.Office.Workflow.Feature, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.Office.Workflow.Feature.WorkflowFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/"
+          DefaultResourceFile="_Res">
+  <ActivationDependencies> 
+    <ActivationDependency FeatureId="C9C9515D-E4E2-4001-9050-74F980F93160" />
+  </ActivationDependencies> 
+  <Properties>
+    <Property Key="DeclarativeWorkflowFeatures" Value="19F5F68E-1B92-4a02-B04D-61810EAD" />
+  </Properties>
+</Feature>

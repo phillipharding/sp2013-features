@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction 
+    Id="AddMember"
+    GroupId="SiteActions"
+    Location="Microsoft.SharePoint.StandardMenu"
+    Sequence="2000"
+    Title="$Resources:eduserver,IDS_EduAddMemberMenuTitle;"
+    Description="$Resources:eduserver,IDS_EduAddMemberMenuDescription;" >
+     <UrlAction Url="javascript:SP.UI.ModalDialog.showModalDialog({url:'{SiteUrl}/_layouts/15/edu/dialogpages/addmembers.aspx',height:250});void(0);"/>
+  </CustomAction>
+</Elements>

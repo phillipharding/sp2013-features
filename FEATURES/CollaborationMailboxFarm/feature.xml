@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="3A11D8EF-641E-4C79-B4D9-BE3B17F9607C"
+          Title="$Resources:spscore,CollaborationMailboxFarm_Feature_Title;"
+          Description="$Resources:spscore,CollaborationMailboxFarm_Feature_Description;"
+          Version="15.0.0.0"
+          Scope="Farm"
+          ActivateOnDefault="False"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

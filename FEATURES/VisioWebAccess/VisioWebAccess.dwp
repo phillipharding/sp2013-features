@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+
+<WebPart xmlns="http://schemas.microsoft.com/WebPart/v2" >
+	<Assembly>"Microsoft.Office.Visio.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"</Assembly>
+	<TypeName>Microsoft.Office.Visio.Server.WebControls.VisioWebAccess</TypeName>
+	<Title>$Resources:vsrv,Feature_VisioWebAccess_Title;</Title>
+	<Description>$Resources:vsrv,Feature_VisioWebAccess_WebPart_Description;</Description>
+	<FrameType>Standard</FrameType>
+	<PartImageSmall>/_layouts/15/images/vwasmall.png</PartImageSmall>
+	<PartImageLarge>/_layouts/15/images/vwasmall.png</PartImageLarge>
+</WebPart>

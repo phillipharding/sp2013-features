@@ -1,0 +1,25 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction 
+        Id="Ribbon.ManageVideoRenditions" 
+        RegistrationType="ContentType" 
+        RegistrationId="0x0120D520A808" 
+        Location="CommandUI.Ribbon"
+        Sequence="300">
+        <CommandUIExtension>
+            <CommandUIDefinitions>
+                <CommandUIDefinition Location="Ribbon.ManageDocumentSet.MDS.Manage.Controls._children">
+                    <Button
+                        Id="Ribbon.ManageDocumentSet.MDS.Manage.ManageVideoRenditions"
+                        Sequence="60"
+                        Command="DocSet.ManageVideoRenditions"
+                        Image16by16="/_layouts/15/images/managevideorenditions_16x16.png?rev=23"
+                        Image32by32="/_layouts/15/images/managevideorenditions_32x32.png?rev=23"
+                        LabelText="$Resources:dlccore,Ribbon_ManageDocumentSet_ManageVideoRenditionsButtonText;"
+                        ToolTipTitle="$Resources:dlccore,Ribbon_ManageDocumentSet_ManageVideoRenditionsButtonText;"
+                        ToolTipDescription="$Resources:dlccore,Ribbon_TTDesc_ManageDocumentSet_ManageVideoRenditionsButtonText;"
+                        TemplateAlias="o1"/>
+                </CommandUIDefinition>
+            </CommandUIDefinitions>
+        </CommandUIExtension>
+    </CustomAction>
+</Elements>

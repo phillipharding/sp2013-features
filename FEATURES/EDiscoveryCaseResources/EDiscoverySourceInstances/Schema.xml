@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="15.0.4420" _dal="1" -->
+<!-- _LocalBinding -->
+<List xmlns:ows="Microsoft SharePoint" Title="$Resources:dlccore,EDiscoverySourceInstancesListTitle;" FolderCreation="FALSE" Direction="$Resources:core,Direction;" Url="$Resources:core,lists_Folder;/$Resources:dlccore,SourceInstancesListUrl;" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE" DisableAttachments="TRUE" DisableGridEditing="TRUE">
+  <MetaData>
+    <ContentTypes>
+    </ContentTypes>
+    <Fields>
+        <Field ID="{8C141558-3E46-4A80-99C2-FFC9343D3997}"             Name="DiscoveryActionId"                StaticName="DiscoveryActionId"              SourceID="http://schemas.microsoft.com/sharepoint/v3"   Group="_Hidden"  DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryActionId;"            Type="Guid"         Required="TRUE"     CanToggleHidden="TRUE"  Sealed="TRUE" Hidden="TRUE"></Field>
+        <Field ID="{9B90EDFF-80D2-4A38-87E8-14FFF7383B17}"           Name="DiscoveryActionType"              StaticName="DiscoveryActionType"            SourceID="http://schemas.microsoft.com/sharepoint/v3"   Group="_Hidden"  DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryActionType;"          Type="Integer"      Required="TRUE"     CanToggleHidden="TRUE"  Sealed="TRUE" Hidden="TRUE"></Field>
+        <Field ID="{26A86748-E2BA-40E4-AF4A-1CB304A972AA}"               Name="DiscoveryHoldId"                  StaticName="DiscoveryHoldId"                SourceID="http://schemas.microsoft.com/sharepoint/v3"   Group="_Hidden"  DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryHoldId;"              Type="Guid"         Required="TRUE"     CanToggleHidden="TRUE"  Sealed="TRUE" Hidden="TRUE"></Field>
+        <Field ID="{07479C2F-4E3E-4431-8AE4-E9591DD769A8}"             Name="DiscoverySourceId"                StaticName="DiscoverySourceId"              SourceID="http://schemas.microsoft.com/sharepoint/v3"   Group="_Hidden"  DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoverySourceId;"            Type="Integer"      Required="TRUE"     CanToggleHidden="TRUE"  Sealed="TRUE" Indexed = "TRUE"></Field>
+        <Field ID="{1B42307B-43A7-4040-A581-4CDBDD11227D}"   Name="DiscoveryPreservationStatus"      StaticName="DiscoveryPreservationStatus"    SourceID="http://schemas.microsoft.com/sharepoint/v3"   Group="_Hidden"  DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryPreservationStatus;"  Type="Text"         Required="FALSE"    CanToggleHidden="TRUE"  Sealed="TRUE"></Field>
+        <Field ID="{AB3162CA-2D9A-49A8-9E78-FEEFEE329BE4}" Name="DiscoveryPreservationFiltered"    StaticName="DiscoveryPreservationFiltered"  SourceID="http://schemas.microsoft.com/sharepoint/v3"   Group="_Hidden"  DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryPreservationFiltered;" Type="Boolean"     Required="FALSE"    CanToggleHidden="TRUE"  Sealed="TRUE"></Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu"> 
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="Attachments">
+          </FieldRef>
+          <FieldRef Name="LinkTitle">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomActionGroup
+        Id="FarmBackup"
+        Location="Microsoft.SharePoint.Administration.Backups"
+        Title="$Resources:backupactions_title;"
+        Sequence="10"
+        ImageUrl="/_layouts/15/images/CentralAdmin_BackupAndRestore_FarmBackupAndRestore_32x32.png?rev=23" />
+    <CustomAction
+        Id="BA_PAB"
+        GroupId="FarmBackup"
+        Location="Microsoft.SharePoint.Administration.Backups"
+        Sequence="10"
+        RequiredAdmin="Machine"
+        Title="$Resources:performabackup_title;"
+        Description="$Resources:performabackup_description;">
+        <UrlAction
+            Url="/_admin/Backup.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="BA_RFAB"
+        GroupId="FarmBackup"
+        Location="Microsoft.SharePoint.Administration.Backups"
+        Sequence="20"
+        RequiredAdmin="Machine"
+        Title="$Resources:restorefromabackup_title;"
+        Description="$Resources:restorefromabackup_description;">
+        <UrlAction
+            Url="/_admin/BackupHistory.aspx?restore=1&amp;filter=1" />
+    </CustomAction>
+    <CustomAction
+        Id="BA_BS"
+        GroupId="FarmBackup"
+        Location="Microsoft.SharePoint.Administration.Backups"
+        Sequence="30"
+        RequiredAdmin="Machine"
+        Title="$Resources:backupsettings_title;"
+        Description="$Resources:backupsettings_description;">
+        <UrlAction
+            Url="/_admin/BackupSettings.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="BA_VBRH"
+        GroupId="FarmBackup"
+        Location="Microsoft.SharePoint.Administration.Backups"
+        Sequence="40"
+        Title="$Resources:viewbackupandrestorehistory_title;"
+        Description="$Resources:viewbackupandrestorehistory_description;">
+        <UrlAction
+            Url="/_admin/BackupHistory.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="BA_CBRJS"
+        GroupId="FarmBackup"
+        Location="Microsoft.SharePoint.Administration.Backups"
+        Sequence="50"
+        Title="$Resources:checkbackupandrestorejobstatus_title;"
+        Description="$Resources:checkbackupandrestorejobstatus_description;">
+        <UrlAction
+            Url="/_admin/BackupStatus.aspx" />
+    </CustomAction>
+    <CustomActionGroup
+        Id="GranularBackup"
+        Location="Microsoft.SharePoint.Administration.Backups"
+        Title="$Resources:granularbackup_title;"
+        Sequence="40"
+        ImageUrl="/_layouts/15/images/CentralAdmin_BackupAndRestore_GranularBackup_32x32.png?rev=23" />
+    <CustomAction
+        Id="GB_UCDB"
+        GroupId="GranularBackup"
+        Location="Microsoft.SharePoint.Administration.Backups"
+        Sequence="35"
+        Title="$Resources:Operations_UnattachedContentDb_Title;"
+        Description="$Resources:Operations_UnattachedContentDb_Description;">
+        <UrlAction
+            Url="/_admin/UnattachedDbSelect.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="GB_BSC"
+        GroupId="GranularBackup"
+        Location="Microsoft.SharePoint.Administration.Backups"
+        Sequence="20"
+        Title="$Resources:ApplicationManagement_BackupSiteCollection_Title;"
+        Description="$Resources:ApplicationManagement_BackupSiteCollection_Description;">
+        <UrlAction
+            Url="/_admin/SiteCollectionBackup.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="GB_BSLE"
+        GroupId="GranularBackup"
+        Location="Microsoft.SharePoint.Administration.Backups"
+        Sequence="30"
+        Title="$Resources:ApplicationManagement_SiteAndListExport_Title;"
+        Description="$Resources:ApplicationManagement_SiteAndListExport_Description;">
+        <UrlAction
+            Url="/_admin/SiteAndListExport.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="GB_BEST"
+        GroupId="GranularBackup"
+        Location="Microsoft.SharePoint.Administration.Backups"
+        Sequence="40"
+        Title="$Resources:ApplicationManagement_BackupExportSiteCollectionStatus_Title;"
+        Description="$Resources:ApplicationManagement_BackupExportSiteCollectionStatus_Description;">
+        <UrlAction
+            Url="/_admin/SiteBackupOrExportStatus.aspx" />
+    </CustomAction>
+</Elements>

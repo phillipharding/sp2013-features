@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+	Id="5FE8E789-D1B7-44B3-B634-419C531CFDCA"
+	Title="$Resources:vsrv,Feature_VisioServer_Title;"
+	Description="$Resources:vsrv,Feature_VisioServer_Description;"
+	SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+	Version="15.0.0.0"
+	Scope="Farm">
+
+	<ElementManifests>
+		<ElementManifest Location="featurestapling.xml"/>
+	</ElementManifests>
+</Feature>

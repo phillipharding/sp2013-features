@@ -1,0 +1,41 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="OSGPageLayouts2" Url="_catalogs/masterpage" Path="PageLayouts" RootWebOnly="TRUE">
+        <File Url="CatalogArticle.aspx" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:cmscore,PageLayout_CatalogArticle_Title;" />
+            <Property Name="MasterPageDescription" Value="$Resources:cmscore,PageLayout_CatalogArticle_Description;"  />
+            <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+            <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/ArticleLeft.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/ArticleLeft.png" />
+            <Property Name="PublishingAssociatedContentType" Value=";#$Resources:cmscore,contenttype_catalogreuse_name;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF3900B46186789C3140cc85BE610336E86BBB;#" />
+        </File>
+        <File Url="CatalogWelcome.aspx" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:cmscore,PageLayout_CatalogWelcome_Title;" />
+            <Property Name="MasterPageDescription" Value="$Resources:cmscore,PageLayout_CatalogWelcome_Description;" />
+            <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+            <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/WelcomeTOC.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/WelcomeTOC.png" /> 
+            <Property Name="PublishingAssociatedContentType" Value=";#$Resources:cmscore,contenttype_catalogreuse_name;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF3900B46186789C3140cc85BE610336E86BBB;#" />
+            <AllUsersWebPart WebPartZoneID="TopColumnZone" WebPartOrder="1"><![CDATA[
+                <webParts>
+                    <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                        <metaData>
+                            <type name="Microsoft.SharePoint.Publishing.WebControls.TableOfContentsWebPart,Microsoft.SharePoint.Publishing,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                            <importErrorMessage>$Resources:cmscore,WebPartImportError;</importErrorMessage>
+                        </metaData>
+                        <data>
+                            <properties>
+                                <property name="Title" type="string">$Resources:cmscore,PublishingLayouts_TOCWebPart_Title;</property>
+                                <property name="Description" type="string">$Resources:cmscore,PublishingLayouts_TOCWebPart_Description;</property>
+                                <property name="ShowPages" type="bool">True</property>
+                                <property name="IncludeContentFromStartingLocation" type="bool">False</property>
+                                <property name="ChromeType" type="chrometype">None</property>
+                                <property name="ChromeState" type="chromestate">Normal</property>
+                                <property name="HelpUrl" type="string">/_layouts/help.aspx</property>
+                            </properties>
+                        </data>
+                    </webPart>
+                </webParts>]]>
+            </AllUsersWebPart>
+        </File>
+    </Module>
+</Elements>

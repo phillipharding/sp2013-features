@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Name="schedule" Title="$Resources:core,ScheduleListTitle;" Direction="0" Url="Lists/Schedule and Reservations" EnableContentTypes="TRUE" MultipleTypes="TRUE" FolderCreation="FALSE" BaseType="0">
+  <MetaData>
+    <ContentTypes>
+      <ContentTypeRef ID="0x0102007dbdc1392eaf4ebbbf99e41d8922b264" />
+      <ContentTypeRef ID="0x0102004f51efdea49c49668ef9c6744c8cf87d" />
+    </ContentTypes>
+    <Fields>
+      <Field ID="{8137f7ad-9170-4c1d-a17b-4ca7f557bc88}" Name="ParticipantsPicker" DisplayName="$Resources:core,GBW_SR_Participants_Field;" Type="UserMulti" List="UserInfo" Mult="TRUE" Required="FALSE" ShowField="ImnName" UserSelectionMode="PeopleAndGroups" UserSelectionScope="0" Sortable="FALSE" Sealed="FALSE" AllowDeletion="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="ParticipantsPicker">
+      </Field>
+      <Field ID="{453c2d71-c41e-46bc-97c1-a5a9535053a3}" Name="Participants" DisplayName="HiddenParticipants" Type="Note" Sortable="FALSE" Sealed="TRUE" StaticName="Participants" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3">
+      </Field>
+      <Field ID="{a4e7b3e1-1b0a-4ffa-8426-c94d4cb8cc57}" Name="Facilities" DisplayName="$Resources:core,GBW_SR_Facilities_Field;" Type="LookupMulti" Mult="TRUE" ShowField="Title" Sortable="FALSE" CanToggleHidden="TRUE" Sealed="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Facilities">
+      </Field>
+      <Field ID="{c804c259-5f2c-4915-958a-c2e648bb0e6d}" Name="Reservations" DisplayName="Facilities" Type="Note" Hidden="TRUE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Reservations">
+      </Field>
+      <Field ID="{393003f9-6ccb-4ea9-9623-704aa4748dec}" Name="FreeBusy" DisplayName="$Resources:core,GBW_SR_FreeBusyCalendar_Field;" Type="Text" Sortable="FALSE" CanToggleHidden="TRUE" ShowInDisplayForm="FALSE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="FreeBusy">
+      </Field>
+      <Field ID="{d8cd5bcf-3768-4d6c-a8aa-fefa3c793d8d}" Name="Overbook" DisplayName="$Resources:core,GBW_SR_Overbook_Field;" Type="Text" Sortable="FALSE" CanToggleHidden="TRUE" ShowInEditForm="TRUE" ShowInNewForm="TRUE" ShowInDisplayForm="FALSE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Overbook">
+      </Field>
+      <Field ID="{afaa4198-9797-4e45-9825-8f7e7b0f5dd5}" Type="Text" Name="Location" DisplayName="$Resources:core,GBW_SR_Location_Field;" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Location">
+      </Field>
+      <Field ID="{7fc04acf-6b4f-418c-8dc5-ecfb0085bb51}" Name="Category" DisplayName="$Resources:core,GBW_SR_Category_Field;" Type="Choice" Format="Dropdown" FillInChoice="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Category">
+        <CHOICES><CHOICE>$Resources:core,GBW_SR_Category_Meeting;</CHOICE><CHOICE>$Resources:core,GBW_SR_Category_WorkHours;</CHOICE><CHOICE>$Resources:core,GBW_SR_Category_Business;</CHOICE><CHOICE>$Resources:core,GBW_SR_Category_Holiday;</CHOICE><CHOICE>$Resources:core,GBW_SR_Category_GetTogether;</CHOICE><CHOICE>$Resources:core,GBW_SR_Category_Gifts;</CHOICE><CHOICE>$Resources:core,GBW_SR_Category_Birthday;</CHOICE><CHOICE>$Resources:core,GBW_SR_Category_Anniversary;</CHOICE>
+        </CHOICES>
+      </Field>
+      <Field Type="DateTime" ID="{64cd368d-2f95-4bfc-a1f9-8d4324ecb007}" Name="EventDate" DisplayName="$Resources:core,GBW_SR_EventDate_Field;" Format="DateTime" Sealed="TRUE" Required="TRUE" FromBaseType="TRUE" Filterable="FALSE" FilterableNoRecurrence="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="EventDate">
+        <Default>[today]</Default>
+        <FieldRefs>
+          <FieldRef Name="fAllDayEvent" RefType="AllDayEvent" />
+        </FieldRefs>
+      </Field>
+      <Field Type="DateTime" ID="{2684f9f2-54be-429f-ba06-76754fc056bf}" Name="EndDate" DisplayName="$Resources:core,GBW_SR_EndDate_Field;" Format="DateTime" Sealed="TRUE" Required="TRUE" Filterable="FALSE" FilterableNoRecurrence="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="EndDate">
+        <Default>[today]</Default>
+        <FieldRefs>
+          <FieldRef Name="fAllDayEvent" RefType="AllDayEvent" />
+        </FieldRefs>
+      </Field>
+      <Field ID="{9da97a8a-1da5-4a77-98d3-4bc10456e700}" Type="Note" Name="Description" RichText="TRUE" DisplayName="$Resources:core,GBW_SR_Description_Field;" Sortable="FALSE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Description">
+      </Field>
+      <Field ID="{7d95d1f4-f5fd-4a70-90cd-b35abc9b5bc8}" Type="AllDayEvent" Name="fAllDayEvent" DisplayName="$Resources:core,GBW_SR_fAllDayEvent_Field;" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="fAllDayEvent">
+        <FieldRefs>
+          <FieldRef Name="EventDate" RefType="StartDate" />
+          <FieldRef Name="EndDate" RefType="EndDate" />
+          <FieldRef Name="TimeZone" RefType="TimeZone" />
+          <FieldRef Name="XMLTZone" RefType="XMLTZone" />
+        </FieldRefs>
+      </Field>
+      <Field ID="{f2e63656-135e-4f1c-8fc2-ccbe74071901}" Type="Recurrence" Name="fRecurrence" DisplayName="$Resources:core,GBW_SR_fRecurrence_Field;" DisplayImage="recur.gif" ExceptionImage="recurEx.gif" HeaderImage="recur.gif" ClassInfo="Icon" Title="$Resources:core,GBW_SR_fRecurrence_Field;" Sealed="TRUE" NoEditFormBreak="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="fRecurrence">
+        <Default>FALSE</Default>
+        <FieldRefs>
+          <FieldRef Name="RecurrenceData" RefType="RecurData" />
+          <FieldRef Name="EventType" RefType="EventType" />
+          <FieldRef Name="UID" RefType="UID" />
+          <FieldRef Name="RecurrenceID" RefType="RecurrenceId" />
+          <FieldRef Name="EventCanceled" RefType="EventCancel" />
+          <FieldRef Name="EventDate" RefType="StartDate" />
+          <FieldRef Name="EndDate" RefType="EndDate" />
+          <FieldRef Name="Duration" RefType="Duration" />
+          <FieldRef Name="TimeZone" RefType="TimeZone" />
+          <FieldRef Name="XMLTZone" RefType="XMLTZone" />
+          <FieldRef Name="MasterSeriesItemID" RefType="MasterSeriesItemID" />
+          <FieldRef Name="WorkspaceLink" RefType="CPLink" />
+          <FieldRef Name="Workspace" RefType="LinkURL" />
+        </FieldRefs>
+      </Field>
+      <Field ID="{08fc65f9-48eb-4e99-bd61-5946c439e691}" Type="CrossProjectLink" Name="WorkspaceLink" Format="EventList" DisplayName="$Resources:core,GBW_SR_WorkspaceLink_FieldDisplayName;" DisplayImage="mtgicon.gif" HeaderImage="mtgicnhd.gif" ClassInfo="Icon" Title="$Resources:core,GBW_SR_WorkspaceLink_FieldTitle;" Filterable="TRUE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="WorkspaceLink">
+        <FieldRefs>
+          <FieldRef Name="Workspace" RefType="LinkURL" CreateURL="newMWS.aspx">$Resources:core,ScheduleMWSDescription;</FieldRef>
+          <FieldRef Name="RecurrenceID" RefType="RecurrenceId" DisplayName="InstanceID" />
+          <FieldRef Name="EventType" RefType="EventType" />
+          <FieldRef Name="UID" RefType="UID" />
+        </FieldRefs>
+      </Field>
+      <Field ID="{5d1d4e76-091a-4e03-ae83-6a59847731c0}" Type="Integer" Name="EventType" DisplayName="$Resources:core,GBW_SR_EventType_Field;" Sealed="TRUE" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="EventType">
+      </Field>
+      <Field ID="{63055d04-01b5-48f3-9e1e-e564e7c6b23b}" Type="Guid" Name="UID" DisplayName="$Resources:core,GBW_SR_UID_Field;" Sealed="TRUE" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="UID">
+      </Field>
+      <Field ID="{dfcc8fff-7c4c-45d6-94ed-14ce0719efef}" Type="DateTime" Name="RecurrenceID" DisplayName="$Resources:core,GBW_SR_RecurrenceID_Field;" CalType="1" Format="ISO8601Gregorian" Sealed="TRUE" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RecurrenceID">
+      </Field>
+      <Field ID="{b8bbe503-bb22-4237-8d9e-0587756a2176}" Type="Boolean" Name="EventCanceled" DisplayName="$Resources:core,idEventCanceledDisp;" Sealed="TRUE" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="EventCanceled">
+      </Field>
+      <Field ID="{4d54445d-1c84-4a6d-b8db-a51ded4e1acc}" Type="Integer" Name="Duration" DisplayName="$Resources:core,GBW_SR_Duration_Field;" Hidden="TRUE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Duration">
+      </Field>
+      <Field ID="{d12572d0-0a1e-4438-89b5-4d0430be7603}" Type="Note" Name="RecurrenceData" DisplayName="$Resources:core,GBW_SR_RecurrenceData_Field;" Hidden="TRUE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RecurrenceData">
+      </Field>
+      <Field ID="{6cc1c612-748a-48d8-88f2-944f477f301b}" Type="Integer" Name="TimeZone" DisplayName="$Resources:core,GBW_SR_TimeZone_Field;" Sealed="TRUE" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="TimeZone">
+      </Field>
+      <Field ID="{c4b72ed6-45aa-4422-bff1-2b6750d30819}" Type="Note" Name="XMLTZone" DisplayName="$Resources:core,GBW_SR_XMLTZone_Field;" Hidden="TRUE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="XMLTZone">
+      </Field>
+      <Field ID="{9b2bed84-7769-40e3-9b1d-7954a4053834}" Type="Integer" Name="MasterSeriesItemID" DisplayName="$Resources:core,GBW_SR_MasterSeriesItemID_Field;" Sealed="TRUE" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="MasterSeriesItemID">
+      </Field>
+      <Field ID="{881eac4a-55a5-48b6-a28e-8329d7486120}" Type="URL" Name="Workspace" DisplayName="$Resources:core,GBW_SR_Workspace_Field;" Hidden="TRUE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Workspace">
+      </Field>
+      <Field ID="{cf68a174-123b-413e-9ec1-b43e3a3175d7}" Name="WhatsNew" DisplayName="$Resources:core,GBW_SR_WhatsNew_Field;" Type="Boolean" Description="$Resources:core,GBW_SR_WhatsNew_Field_Description;" Sortable="FALSE" CanToggleHidden="TRUE" ShowInEditForm="TRUE" ShowInNewForm="TRUE" ShowInDisplayForm="FALSE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="WhatsNew">
+        <Default>1</Default>
+      </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="CALENDAR" WebPartZoneID="Main" RecurrenceRowset="TRUE">
+        <Toolbar Type="Freeform" />
+        <ViewHeader>
+        </ViewHeader>
+        <ViewBody>
+        </ViewBody>
+        <ViewFooter>
+        </ViewFooter>
+        <ViewEmpty>
+        </ViewEmpty>
+        <ViewFields>
+          <FieldRef Name="EventDate">
+          </FieldRef>
+          <FieldRef Name="EndDate">
+          </FieldRef>
+          <FieldRef Name="fRecurrence" />
+          <FieldRef Name="EventType" />
+          <FieldRef Name="WorkspaceLink" />
+          <FieldRef Name="Title">
+          </FieldRef>
+          <FieldRef Name="Location">
+          </FieldRef>
+          <FieldRef Name="Description" />
+          <FieldRef Name="Workspace">
+          </FieldRef>
+          <FieldRef Name="MasterSeriesItemID">
+          </FieldRef>
+          <FieldRef Name="fAllDayEvent">
+          </FieldRef>
+        </ViewFields>
+        <ViewData>
+          <FieldRef Name="Title" Type="CalendarMonthTitle">
+          </FieldRef>
+          <FieldRef Name="Title" Type="CalendarWeekTitle">
+          </FieldRef>
+          <FieldRef Name="Location" Type="CalendarWeekLocation">
+          </FieldRef>
+          <FieldRef Name="Title" Type="CalendarDayTitle">
+          </FieldRef>
+          <FieldRef Name="Location" Type="CalendarDayLocation">
+          </FieldRef>
+        </ViewData>
+        <CalendarViewStyles>&lt;CalendarViewStyle Title='Week' Type='week' Template='CalendarViewweekChrome' Sequence='1' Default='TRUE' /&gt;&lt;CalendarViewStyle Title='Day' Type='day' Template='CalendarViewdayChrome' Sequence='2' Default='FALSE' /&gt;&lt;CalendarViewStyle Title='Month' Type='month' Template='CalendarViewmonthChrome' Sequence='3' Default='FALSE' /&gt;</CalendarViewStyles>
+        <Query>
+          <Where>
+            <DateRangesOverlap>
+              <FieldRef Name="EventDate">
+              </FieldRef>
+              <FieldRef Name="EndDate">
+              </FieldRef>
+              <FieldRef Name="RecurrenceID">
+              </FieldRef>
+              <Value Type="DateTime">
+                <Month>
+                </Month>
+              </Value>
+            </DateRangesOverlap>
+          </Where>
+        </Query>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="All Schedules" ReadOnly="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/gbshcd.png?rev=23" Url="AllItems.aspx" Hidden="TRUE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="LinkTitle">
+          </FieldRef>
+        </ViewFields>
+      </View>
+      <View BaseViewID="2" Type="HTML" WebPartZoneID="Main" DisplayName="Calendar" ReadOnly="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/gbshcd.png?rev=23" Url="Weekly.aspx" Hidden="TRUE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="LinkTitle">
+          </FieldRef>
+        </ViewFields>
+      </View>
+      <View BaseViewID="3" Type="HTML" WebPartZoneID="Main" DisplayName="Calendar" ReadOnly="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/gbshcd.png?rev=23" Url="Daily.aspx" Hidden="TRUE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="LinkTitle">
+          </FieldRef>
+        </ViewFields>
+      </View>
+      <View BaseViewID="4" Type="HTML" WebPartZoneID="Main" DisplayName="Calendar" ReadOnly="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/gbshcd.png?rev=23" Url="Monthly.aspx" Hidden="TRUE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="LinkTitle">
+          </FieldRef>
+        </ViewFields>
+      </View>
+      <View BaseViewID="5" Type="HTML" WebPartZoneID="Main" DisplayName="Calendar" ReadOnly="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/gbshcd.png?rev=23" Url="DailyGrp.aspx" Hidden="TRUE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="LinkTitle">
+          </FieldRef>
+        </ViewFields>
+      </View>
+      <View BaseViewID="6" Type="CALENDAR" WebPartZoneID="Main" DisplayName="$Resources:core,camlidE13;" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/gbshcd.png?rev=23" Url="calendar.aspx" RecurrenceRowset="TRUE" DefaultView="TRUE">
+        <Toolbar Type="Standard" />
+        <ViewHeader>
+        </ViewHeader>
+        <ViewBody>
+        </ViewBody>
+        <ViewFooter>
+        </ViewFooter>
+        <ViewEmpty>
+        </ViewEmpty>
+        <ViewFields>
+          <FieldRef Name="EventDate">
+          </FieldRef>
+          <FieldRef Name="EndDate">
+          </FieldRef>
+          <FieldRef Name="fRecurrence" />
+          <FieldRef Name="EventType" />
+          <FieldRef Name="WorkspaceLink" />
+          <FieldRef Name="Title">
+          </FieldRef>
+          <FieldRef Name="Location">
+          </FieldRef>
+          <FieldRef Name="Description" />
+          <FieldRef Name="Workspace">
+          </FieldRef>
+          <FieldRef Name="MasterSeriesItemID">
+          </FieldRef>
+          <FieldRef Name="fAllDayEvent">
+          </FieldRef>
+        </ViewFields>
+        <ViewData>
+          <FieldRef Name="Title" Type="CalendarMonthTitle">
+          </FieldRef>
+          <FieldRef Name="Title" Type="CalendarWeekTitle">
+          </FieldRef>
+          <FieldRef Name="Location" Type="CalendarWeekLocation">
+          </FieldRef>
+          <FieldRef Name="Title" Type="CalendarDayTitle">
+          </FieldRef>
+          <FieldRef Name="Location" Type="CalendarDayLocation">
+          </FieldRef>
+        </ViewData>
+        <CalendarViewStyles>&lt;CalendarViewStyle Title='Week' Type='week' Template='CalendarViewweekChrome' Sequence='1' Default='TRUE' /&gt;&lt;CalendarViewStyle Title='Day' Type='day' Template='CalendarViewdayChrome' Sequence='2' Default='FALSE' /&gt;&lt;CalendarViewStyle Title='Month' Type='month' Template='CalendarViewmonthChrome' Sequence='3' Default='FALSE' /&gt;</CalendarViewStyles>
+        <Query>
+          <Where>
+            <DateRangesOverlap>
+              <FieldRef Name="EventDate">
+              </FieldRef>
+              <FieldRef Name="EndDate">
+              </FieldRef>
+              <FieldRef Name="RecurrenceID">
+              </FieldRef>
+              <Value Type="DateTime">
+                <Month>
+                </Month>
+              </Value>
+            </DateRangesOverlap>
+          </Where>
+        </Query>
+      </View>
+      <View BaseViewID="7" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,camlidE7;" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/gbshcd.png?rev=23" Url="CurrentEvents.aspx" ReqAuth="TRUE" RecurrenceRowset="TRUE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="fRecurrence">
+          </FieldRef>
+          <FieldRef Name="WorkspaceLink" />
+          <FieldRef Name="LinkTitle">
+          </FieldRef>
+          <FieldRef Name="ParticipantsPicker">
+          </FieldRef>
+          <FieldRef Name="Facilities">
+          </FieldRef>
+          <FieldRef Name="Location">
+          </FieldRef>
+          <FieldRef Name="EventDate">
+          </FieldRef>
+          <FieldRef Name="EndDate">
+          </FieldRef>
+          <FieldRef Name="fAllDayEvent">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <Where>
+            <DateRangesOverlap>
+              <FieldRef Name="EventDate" />
+              <FieldRef Name="EndDate" />
+              <FieldRef Name="RecurrenceID" />
+              <Value Type="DateTime">
+                <Now>
+                </Now>
+              </Value>
+            </DateRangesOverlap>
+          </Where>
+          <OrderBy>
+            <FieldRef Name="EventDate">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <RowLimit Paged="TRUE">
+                    100
+                </RowLimit>
+      </View>
+      <View BaseViewID="8" Type="CALENDAR" WebPartZoneID="Main" DisplayName="$Resources:core,camlidE13;" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/gbshcd.png?rev=23" Url="calendar2.aspx" RecurrenceRowset="TRUE" Hidden="TRUE">
+        <Toolbar Type="Freeform" />
+        <ViewHeader>
+        </ViewHeader>
+        <ViewBody>
+        </ViewBody>
+        <ViewFooter>
+        </ViewFooter>
+        <ViewEmpty>
+        </ViewEmpty>
+        <ViewFields>
+          <FieldRef Name="EventDate">
+          </FieldRef>
+          <FieldRef Name="EndDate">
+          </FieldRef>
+          <FieldRef Name="fRecurrence" />
+          <FieldRef Name="EventType" />
+          <FieldRef Name="WorkspaceLink" />
+          <FieldRef Name="Title">
+          </FieldRef>
+          <FieldRef Name="Location">
+          </FieldRef>
+          <FieldRef Name="Description" />
+          <FieldRef Name="Workspace">
+          </FieldRef>
+          <FieldRef Name="MasterSeriesItemID">
+          </FieldRef>
+          <FieldRef Name="fAllDayEvent">
+          </FieldRef>
+        </ViewFields>
+        <ViewData>
+          <FieldRef Name="Title" Type="CalendarMonthTitle">
+          </FieldRef>
+          <FieldRef Name="Title" Type="CalendarWeekTitle">
+          </FieldRef>
+          <FieldRef Name="Location" Type="CalendarWeekLocation">
+          </FieldRef>
+          <FieldRef Name="Title" Type="CalendarDayTitle">
+          </FieldRef>
+          <FieldRef Name="Location" Type="CalendarDayLocation">
+          </FieldRef>
+        </ViewData>
+        <CalendarViewStyles>&lt;CalendarViewStyle Title='Week' Type='week' Template='CalendarViewweekChrome' Sequence='2' Default='FALSE' /&gt;&lt;CalendarViewStyle Title='Day' Type='day' Template='CalendarViewdayChrome' Sequence='3' Default='FALSE' /&gt;&lt;CalendarViewStyle Title='Month' Type='month' Template='CalendarViewmonthChrome' Sequence='1' Default='TRUE' /&gt;</CalendarViewStyles>
+        <Query>
+          <Where>
+            <DateRangesOverlap>
+              <FieldRef Name="EventDate">
+              </FieldRef>
+              <FieldRef Name="EndDate">
+              </FieldRef>
+              <FieldRef Name="RecurrenceID">
+              </FieldRef>
+              <Value Type="DateTime">
+                <Month>
+                </Month>
+              </Value>
+            </DateRangesOverlap>
+          </Where>
+        </Query>
+      </View>
+      <View BaseViewID="9" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,camlidE5;" SetupPath="pages\viewpage.aspx" DefaultBaseView="TRUE" ImageUrl="/_layouts/15/images/gbshcd.png?rev=23" Url="AllItems2.aspx">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="fRecurrence" />
+          <FieldRef Name="WorkspaceLink" />
+          <FieldRef Name="LinkTitle" />
+          <FieldRef Name="ParticipantsPicker" />
+          <FieldRef Name="Facilities" />
+          <FieldRef Name="Location" />
+          <FieldRef Name="EventDate" />
+          <FieldRef Name="EndDate" />
+          <FieldRef Name="fAllDayEvent">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="EventDate">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+    <DefaultDescription>$Resources:core,GBW_SR_DefaultDescription;</DefaultDescription>
+  </MetaData>
+</List>

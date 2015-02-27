@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="FDE5D850-671E-4143-950A-87B473922DC7"
+          Title="$Resources:Feature_Title;"
+          Description="$Resources:IssueTracking_Description;"
+          Version="12.0.0.0"
+          Scope="Site"
+          xmlns="http://schemas.microsoft.com/sharepoint/"
+          DefaultResourceFile="_Res">
+  <ElementManifests>
+    <ElementManifest Location="IssueTracking.xml" />
+  </ElementManifests>
+</Feature>

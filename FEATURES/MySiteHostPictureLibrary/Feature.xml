@@ -1,0 +1,21 @@
+<Feature Id="5EDE0A86-C772-4f1d-A120-72E734B3400C"
+    Title="$Resources:spscore,PeopleFeatures_MySiteHostPictureLibrary_Text;"
+    Description="$Resources:spscore,PeopleFeatures_MySiteHostPictureLibrary_Desc;"
+    Version="15.0.0.1"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.UserProfiles.MySiteHostPictureLibraryFeatureReceiver"
+    Scope="Web"
+    Hidden="TRUE"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="elements.xml"/>
+        <ElementManifest Location="elements2.xml"/>
+    </ElementManifests>
+   <UpgradeActions
+        ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        ReceiverClass="Microsoft.SharePoint.Portal.UserProfiles.MySiteHostPictureLibraryFeatureReceiver">
+        <VersionRange BeginVersion="15.0.0.0" EndVersion="15.0.0.1">
+          <CustomUpgradeAction Name="RemoveAllowEveryoneViewItemsFromPictureLib" />
+        </VersionRange>        
+    </UpgradeActions>
+</Feature>

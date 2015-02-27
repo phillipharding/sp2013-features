@@ -1,0 +1,5 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+    <Field ID="{50631C24-1371-4ECF-A5AE-ED41b03F4499}" Name="PublishingIsFurlPage" StaticName="PublishingIsFurlPage" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="$Resources:cmscore,group_publishingcolumns;"  DisplayName="$Resources:cmscore,PageContentType_PublishingIsFurlPage_DisplayName;" Description="$Resources:cmscore,PageContentType_PublishingIsFurlPage_Description;" Type="Boolean" Required="FALSE" Sealed="TRUE"></Field>
+</Elements>

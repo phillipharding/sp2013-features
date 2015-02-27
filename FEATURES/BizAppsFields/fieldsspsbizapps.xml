@@ -1,0 +1,533 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <Field ID="{249A1C1A-5A3E-4173-ABAD-779B01892510}" Name="KpiDescription" StaticName="KpiDescription" Description="$Resources:spscore,BizAppsFields_KpiDescription_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Note" DisplayName="$Resources:spscore,BizAppsFields_KpiDescription_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{0121CB2B-4515-44f2-9D5A-0DCB3BF556AA}" Name="KpiComments" StaticName="KpiComments" Description="$Resources:spscore,BizAppsFields_KpiComments_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Note" DisplayName="$Resources:spscore,BizAppsFields_KpiComments_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{F0816223-FD98-41f9-AA57-B7F7DB462FAA}" Name="Value" StaticName="Value" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Number" DisplayName="$Resources:spscore,BizAppsFields_KpiValue_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{6E4B3AAD-350D-42fa-BD61-D1DE715B45DB}" Name="Goal" StaticName="Goal" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Number" DisplayName="$Resources:spscore,BizAppsFields_KpiGoal_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{E84A049E-230D-4751-8D5C-8F615E968DF2}" Name="Warning" StaticName="Warning" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Number" DisplayName="$Resources:spscore,BizAppsFields_KpiWarning_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{3366AAE9-30A9-43f5-A2CB-1A6EE44E2CE4}" Name="FormattedValue" StaticName="FormattedValue" Description="$Resources:spscore,BizAppsFields_KpiFormattedValue_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiFormattedValue_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{E9DF93F4-7951-474b-8CC4-E240C2F5E600}" Name="FormattedGoal" StaticName="FormattedGoal" Description="$Resources:spscore,BizAppsFields_KpiFormattedGoal_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiFormattedGoal_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{F53D350D-854E-4962-9318-89D56D30773A}" Name="FormattedWarning" StaticName="FormattedWarning" Description="$Resources:spscore,BizAppsFields_KpiFormattedWarning_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiFormattedWarning_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{9730102C-9470-4515-960E-6DFB2D89A68B}" Name="DetailLink" StaticName="DetailLink" Description="$Resources:spscore,BizAppsFields_KpiDetailLink_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="URL" DisplayName="$Resources:spscore,BizAppsFields_KpiDetailLink_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{56747800-D36E-4625-ABE3-B1BC74A7D5F8}" Name="LowerValuesAreBetter" StaticName="LowerValuesAreBetter" Description="$Resources:spscore,BizAppsFields_KpiLowerValuesAreBetter_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Boolean" DisplayName="$Resources:spscore,BizAppsFields_KpiLowerValuesAreBetter_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{96226EED-EC6F-4f0e-ADD5-9CFE66A441A0}" Name="AutoUpdate" StaticName="AutoUpdate" Description="$Resources:spscore,BizAppsFields_KpiAutoUpdate_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Boolean" DisplayName="$Resources:spscore,BizAppsFields_KpiAutoUpdate_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{E247CBB0-ABB3-4759-B9F4-0128E37DD34A}" Name="UpdateError" StaticName="UpdateError" Description="$Resources:spscore,BizAppsFields_KpiUpdateError_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Note" DisplayName="$Resources:spscore,BizAppsFields_KpiUpdateError_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{A9EA6E2D-BC5C-4ccc-BAD8-8DDFE519710F}" Name="DataSource" StaticName="DataSource" Description="$Resources:spscore,BizAppsFields_KpiDataSource_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="URL" DisplayName="$Resources:spscore,BizAppsFields_KpiDataSource_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{FD3E3A59-BF10-4c99-B678-5DD7FCC6CB28}" Name="LastUpdated" StaticName="LastUpdated" Description="$Resources:spscore,BizAppsFields_KpiLastUpdated_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="DateTime" DisplayName="$Resources:spscore,BizAppsFields_KpiLastUpdated_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+
+    <Field ID="{2C7DB8AF-02B0-4177-B77F-15C942C08427}" Name="ViewGuid" StaticName="ViewGuid"  Description="$Resources:spscore,BizAppsFields_KpiViewGuid_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiViewGuid_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{93DF9772-1E34-40c5-8C54-4BF3CDD56B34}" Name="ValueExpression" StaticName="ValueExpression" Description="$Resources:spscore,BizAppsFields_KpiValueExpression_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Note" DisplayName="$Resources:spscore,BizAppsFields_KpiValueExpression_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{D43E8A19-F4F3-4e6a-B8C1-02E972C3ED6F}" Name="PercentExpression" StaticName="PercentExpression" Description="$Resources:spscore,BizAppsFields_KpiPercentExpression_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Boolean" DisplayName="$Resources:spscore,BizAppsFields_KpiPercentExpression_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+
+    <Field ID="{D096D5F3-B399-462b-9A32-83F82D9237D4}" Name="ValueSheet" StaticName="ValueSheet" Description="$Resources:spscore,BizAppsFields_KpiValueSheet_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiValueSheet_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{3B32F47B-F1A1-45ff-B5AD-7B28B84C720A}" Name="ValueCell" StaticName="ValueCell" Description="$Resources:spscore,BizAppsFields_KpiValueCell_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiValueCell_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{69AC2B6E-F626-49b4-B0CC-C2B9580E8719}" Name="GoalSheet" StaticName="GoalSheet" Description="$Resources:spscore,BizAppsFields_KpiGoalSheet_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiGoalSheet_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{4181B96A-3125-4f75-B823-3A4D675C6B19}" Name="GoalCell" StaticName="GoalCell" Description="$Resources:spscore,BizAppsFields_KpiGoalCell_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiGoalCell_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{3E223474-75FF-466b-B53F-9B641CE74B6C}" Name="WarningSheet" StaticName="WarningSheet" Description="$Resources:spscore,BizAppsFields_KpiWarningSheet_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiWarningSheet_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{EEAABF1D-F6AE-4dc6-873F-7397A17C36F0}" Name="WarningCell" StaticName="WarningCell" Description="$Resources:spscore,BizAppsFields_KpiWarningCell_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiWarningCell_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{20906227-D1C8-430c-989A-30A62E3E40B2}" Name="GoalFromWorkBook" StaticName="GoalFromWorkBook" Description="$Resources:spscore,BizAppsFields_KpiGoalFromWorkbook_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Boolean" DisplayName="$Resources:spscore,BizAppsFields_KpiGoalFromWorkbook_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{3C6188A0-2761-4e0a-9FC0-EE32D47E4D49}" Name="WarningFromWorkBook" StaticName="WarningFromWorkBook" Description="$Resources:spscore,BizAppsFields_KpiWarningFromWorkbook_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Boolean" DisplayName="$Resources:spscore,BizAppsFields_KpiWarningFromWorkbook_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+
+    <Field ID="{11A86235-9D18-4134-B58C-FA7243F4CBBA}" Name="Trend" StaticName="Trend" Description="$Resources:spscore,BizAppsFields_KpiTrend_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Number" DisplayName="$Resources:spscore,BizAppsFields_KpiTrend_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{3C497036-038F-41db-AEC7-C9849649B135}" Name="KpiStatus" StaticName="KpiStatus" Description="$Resources:spscore,BizAppsFields_KpiStatus_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Number" DisplayName="$Resources:spscore,BizAppsFields_KpiStatus_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{DD83A5ED-83C5-47b7-823A-415C6EA1B8A3}" Name="DisplayFolder" StaticName="DisplayFolder" Description="$Resources:spscore,BizAppsFields_KpiDisplayFolder_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiDisplayFolder_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{291AACDA-4CFB-4d59-968B-5E2EA0C9EAB7}" Name="KPI" StaticName="KPI" Description="$Resources:spscore,BizAppsFields_KpiASName_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiASName_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    <Field ID="{F6DF49EC-807B-4d40-A7DA-A17684121F92}" Name="IncludeHierarchy" StaticName="IncludeHierarchy" Description="$Resources:spscore,BizAppsFields_KpiIncludeHierarchy_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Boolean" DisplayName="$Resources:spscore,BizAppsFields_KpiIncludeHierarchy_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+
+    <Field ID="{2A16B911-B094-46e6-A7CD-227EEA3EFFDB}" Name="ReportDescription" StaticName="ReportDescription" Description="$Resources:spscore,BizAppsFields_ReportDescription_Description;" DisplayName="$Resources:spscore,BizAppsFields_ReportDescription_Name;" Group="$Resources:spscore,BizAppsFields_ReportGroup;" Type="Note" SourceID="http://schemas.microsoft.com/sharepoint/v3"></Field>
+    <Field ID="{90884F35-D2A5-48dc-A39F-7BCBC9781CF6}" Name="SaveToReportHistory" StaticName="SaveToReportHistory" Description="$Resources:spscore,BizAppsFields_ReportSaveToReportHistory_Description;" DisplayName="$Resources:spscore,BizAppsFields_ReportSaveToReportHistory_Name;" Group="$Resources:spscore,BizAppsFields_ReportGroup;" Type="Boolean" SourceID="http://schemas.microsoft.com/sharepoint/v3">
+        <Default>0</Default>
+    </Field>
+    <Field ID="{1BE428C8-2C2D-4e02-970B-6663EB1D7080}" Name="ParentId" StaticName="ParentId" Description="$Resources:spscore,BizAppsFields_ReportParentID_Description;" DisplayName="$Resources:spscore,BizAppsFields_ReportParentID_Name;" Group="_Hidden" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInFileDlg="FALSE" Type="Number" SourceID="http://schemas.microsoft.com/sharepoint/v3"></Field>
+    <Field ID="{2E8881DA-0332-4ad9-A565-45B5B8B2702F}" Name="ReportOwner" StaticName="ReportOwner" Description="$Resources:spscore,BizAppsFields_ReportOwner_Description;" List="UserInfo" DisplayName="$Resources:spscore,BizAppsFields_ReportOwner_Name;" Group="$Resources:spscore,BizAppsFields_ReportGroup;" Type="User" SourceID="http://schemas.microsoft.com/sharepoint/v3"></Field>
+    <Field ID="{D8921DA7-C09B-4a06-B644-DFFEBF73C736}" Name="ReportCategory" StaticName="ReportCategory" Description="$Resources:spscore,BizAppsFields_ReportCategory_Description;" DisplayName="$Resources:spscore,BizAppsFields_ReportCategory_Name;" Group="$Resources:spscore,BizAppsFields_ReportGroup;" Type="Choice"  SourceID="http://schemas.microsoft.com/sharepoint/v3">
+        <CHOICES>
+            <CHOICE>$Resources:spscore,BizAppsFields_ReportCategory_Choice1;</CHOICE>
+            <CHOICE>$Resources:spscore,BizAppsFields_ReportCategory_Choice2;</CHOICE>
+            <CHOICE>$Resources:spscore,BizAppsFields_ReportCategory_Choice3;</CHOICE>
+        </CHOICES>
+    </Field>
+    <Field ID="{BF80DF9C-32DC-4257-BCF9-08C2EE6CA1B1}" Name="ReportStatus" StaticName="ReportStatus" Description="$Resources:spscore,BizAppsFields_ReportStatus_Description;" DisplayName="$Resources:spscore,BizAppsFields_ReportStatus_Name;" Group="$Resources:spscore,BizAppsFields_ReportGroup;" Type="Choice" SourceID="http://schemas.microsoft.com/sharepoint/v3">
+        <CHOICES>
+            <CHOICE>$Resources:spscore,BizAppsFields_ReportStatus_Final;</CHOICE>
+            <CHOICE>$Resources:spscore,BizAppsFields_ReportStatus_Preliminary;</CHOICE>
+            <CHOICE>$Resources:spscore,BizAppsFields_ReportStatus_PeriodToDate;</CHOICE>
+        </CHOICES>
+    </Field>
+    <Field ID="{27C603F5-4DBE-4522-894A-AE77715DC532}" Name="ReportHistoryLink" StaticName="ReportHistoryLink" Group="_Hidden" ReadOnly="TRUE" Type="Computed" DisplayName="$Resources:spscore,BizAppsFields_ReportHistory_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3">
+        <FieldRefs>
+            <FieldRef Name="ContentType"/>
+            <FieldRef Name="ID"/>
+        </FieldRefs>
+        <DisplayPattern>
+            <IfEqual>
+                <Expr1><Column Name="ContentType"/></Expr1>
+                <Expr2>$Resources:spscore,BizAppsContentTypes_Report;</Expr2>
+                <Then>
+                    <HTML><![CDATA[<a href="]]></HTML><ListUrlDir/><HTML><![CDATA[/Forms/rpthist.aspx?FilterField1=ParentId&FilterValue1=]]></HTML><Field Name="ID"/><HTML><![CDATA[&ListId=]]></HTML><List/><HTML><![CDATA[&ID=]]></HTML><ID /><HTML><![CDATA[">]]></HTML>
+                    <HTML>$Resources:spscore,BizAppsFields_ReportHistory_ViewHistory;</HTML>
+                    <HTML><![CDATA[</a>]]></HTML>
+                </Then>
+                <Else />
+            </IfEqual>
+        </DisplayPattern>
+    </Field>
+
+    <Field 
+        ID="{28081524-7C2F-4f08-9319-9C737B495BC1}" 
+        Name="ParentName" 
+        StaticName="ParentName" 
+        Group="_Hidden" 
+        ShowInNewForm="FALSE" 
+        ShowInEditForm="FALSE" 
+        ShowInFileDlg="FALSE"
+        Type="Text" 
+        DisplayName="$Resources:spscore,BizAppsFields_ParentName_Name;" 
+        AuthoringInfo="$Resources:spscore,BizAppsFields_ParentName_AuthoringInfo;" 
+        Filterable="FALSE" 
+        Sortable="TRUE" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+
+    <Field 
+        ID="{DB364CB0-8C0C-46e7-A996-684E1F2CAEB2}" 
+        Name="ReportName" 
+        StaticName="ReportName" 
+        Group="_Hidden" 
+        ReadOnly="TRUE" 
+        Type="Computed" 
+        DisplayName="$Resources:spscore,BizAppsFields_ReportName_Name;"
+        AuthoringInfo="$Resources:spscore,BizAppsFields_ParentName_AuthoringInfo;"
+        Filterable="FALSE" 
+        Sortable="TRUE" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v3">
+        <FieldRefs>
+            <FieldRef Name="ParentId" />
+            <FieldRef Name="ParentName" />
+            <FieldRef Name="FileLeafRef" />
+        </FieldRefs>
+        <DisplayPattern>
+            <IfEqual>
+                <Expr1><Column Name="ParentId" /></Expr1>
+                <Expr2 />
+                <Then>
+                    <UrlBaseName HTMLEncode="TRUE"><LookupColumn Name="FileLeafRef"/></UrlBaseName>
+                </Then>
+                <Else>
+                    <Field Name="ParentName" />
+                </Else>
+            </IfEqual>
+        </DisplayPattern>
+    </Field>
+
+    <Field 
+        ID="{851C7906-3C95-46bc-A81E-30588602D910}"
+        Name="ReportLink"
+        StaticName="ReportLink"
+        Group="_Hidden" 
+        ReadOnly="TRUE" 
+        Type="Computed" 
+        DisplayName="$Resources:spscore,BizAppsFields_ReportLink_Name;" 
+        Filterable="FALSE" 
+        Sortable="TRUE" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v3">
+        <FieldRefs>
+            <FieldRef Name="ReportName" />
+            <FieldRef Name="File_x0020_Type"/>
+            <FieldRef Name="FileLeafRef"/>
+            <FieldRef Name="_EditMenuTableStart"/>
+            <FieldRef Name="_EditMenuTableEnd"/>
+            <FieldRef Name="FSObjType" />
+        </FieldRefs>
+        <DisplayPattern>
+            <IfEqual>
+                <Expr1><Column Name="File_x0020_Type"/></Expr1>
+                <Expr2>xlsx</Expr2>
+                <Then>
+                    <HTML><![CDATA[<a ONCLICK="window.location=']]></HTML><HttpVDir /><HTML><![CDATA[/_layouts/ExcelProfilePage.aspx?ListId=]]></HTML><List/><HTML><![CDATA[&ID=]]></HTML><ID /><HTML><![CDATA[';return false;" href="]]></HTML><Field Name="EncodedAbsUrl"/><HTML><![CDATA[">]]></HTML>
+                    <Field Name="ReportName" />
+                    <HTML><![CDATA[</a>]]></HTML>
+                    <IfNew Name="Created_x0020_Date">
+                        <HTML><![CDATA[<IMG SRC="/_layouts/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/new.gif" alt="]]></HTML>
+                        <HTML>$Resources:spscore,BizAppsFields_ReportName_New_AltText;</HTML><HTML><![CDATA[">]]></HTML>
+                    </IfNew>
+                </Then>
+                <Else>
+                    <IfEqual>
+                        <Expr1><Column Name="File_x0020_Type"/></Expr1>
+                        <Expr2>xlsb</Expr2>
+                        <Then>
+                            <HTML><![CDATA[<a ONCLICK="window.location=']]></HTML><HttpVDir /><HTML><![CDATA[/_layouts/ExcelProfilePage.aspx?ListId=]]></HTML><List/><HTML><![CDATA[&ID=]]></HTML><ID></ID><HTML><![CDATA[';return false;" href="]]></HTML><Field Name="EncodedAbsUrl"/><HTML><![CDATA[">]]></HTML>
+                            <Field Name="ReportName" />
+                            <HTML><![CDATA[</a>]]></HTML>
+                            <IfNew Name="Created_x0020_Date">
+                                <HTML><![CDATA[<IMG SRC="/_layouts/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/new.gif" alt="]]></HTML>
+                                <HTML>$Resources:spscore,BizAppsFields_ReportName_New_AltText;</HTML><HTML><![CDATA[">]]></HTML>
+                            </IfNew>
+                        </Then>
+                        <Else>
+
+                            <IfEqual>
+                                <Expr1><LookupColumn Name="FSObjType"/></Expr1>
+                                <Expr2>1</Expr2>
+                                <Then>
+                                    <FieldSwitch><Expr><GetVar Name="RecursiveView"/></Expr>
+                                    <Case Value="1">
+                                        <LookupColumn Name="FileLeafRef" HTMLEncode="TRUE"/>
+                                    </Case>
+                                    <Default>
+                                        <SetVar Name="UnencodedFilterLink">
+                                            <SetVar Name="RootFolder"><HTML>/</HTML><LookupColumn Name="FileRef"/></SetVar>
+                                            <SetVar Name="FolderCTID">
+                                                <FieldSwitch><Expr><ListProperty Select="EnableContentTypes"/></Expr>
+                                                    <Case Value="1"><Column Name="ContentTypeId"/></Case>
+                                                </FieldSwitch>
+                                            </SetVar>
+                                            <FilterLink Default="" Paged="FALSE"/>
+                                        </SetVar>
+                                        <HTML><![CDATA[<A onfocus="OnLink(this)"  HREF="]]></HTML>
+                                        <GetVar Name="UnencodedFilterLink" HTMLEncode="TRUE"/>
+                                        <HTML><![CDATA[" onclick="javascript:EnterFolder(']]></HTML>
+                                        <ScriptQuote NotAddingQuote="TRUE"><GetVar Name="UnencodedFilterLink"/></ScriptQuote>
+                                        <HTML><![CDATA[');javascript:return false;">]]></HTML>
+                                        <LookupColumn Name="FileLeafRef" HTMLEncode="TRUE"/>
+                                        <HTML><![CDATA[</A>]]></HTML>
+                                    </Default>
+                                    </FieldSwitch>
+                                </Then>
+                                <Else>
+                                    <HTML><![CDATA[<A onfocus="OnLink(this)" HREF="]]></HTML>
+                                    <Field Name="EncodedAbsUrl"/>
+                                    <HTML><![CDATA[" onclick="DispDocItemEx(this,']]></HTML>
+                                    <ServerProperty Select="HtmlTransform"/>
+                                    <HTML><![CDATA[',']]></HTML>
+                                    <ServerProperty Select="HtmlTrAcceptType"><Column Name="File_x0020_Type"/></ServerProperty>
+                                    <HTML><![CDATA[',']]></HTML>
+                                    <ServerProperty Select="HtmlTrHandleUrl"><Column Name="File_x0020_Type"/></ServerProperty>
+                                    <HTML><![CDATA[',']]></HTML>
+                                    <ServerProperty Select="HtmlTrProgId"><Column Name="File_x0020_Type"/></ServerProperty>
+                                    <HTML><![CDATA[')">]]></HTML>
+                                        <Field Name="ReportName" />
+                                        <HTML><![CDATA[</A>]]></HTML>
+                                    <IfNew Name="Created_x0020_Date">
+                                        <HTML><![CDATA[<IMG SRC="/_layouts/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/new.gif" alt="]]></HTML>
+                                        <HTML>$Resources:spscore,BizAppsFields_ReportName_New_AltText;</HTML><HTML><![CDATA[">]]></HTML>
+                                    </IfNew>
+                                </Else>
+                            </IfEqual>
+
+                        </Else>
+                    </IfEqual>
+                </Else>
+            </IfEqual>
+        </DisplayPattern>
+    </Field>
+
+    <Field ID="{B0BD6F6D-ED80-4ff8-8BE0-EF9238A16835}"
+        Name="ReportLinkFilename"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        StaticName="ReportLinkFilename"
+        Group="_Hidden"
+        ReadOnly="TRUE"
+        Type="Computed"
+        DisplayName="$Resources:spscore,BizAppsFields_ReportName_Name;"
+        Filterable="FALSE"
+        ClassInfo="Menu"
+        AuthoringInfo="$Resources:spscore,BizAppsFields_ReportLink_AuthoringInfo;">
+        <FieldRefs>
+            <FieldRef ID="{687c7f94-686a-42d3-9b67-2782eac4b4f8}" Name="FileLeafRef"/>
+            <FieldRef ID="{3c6303be-e21f-4366-80d7-d6d0a3b22c7a}" Name="_EditMenuTableStart"/>
+            <FieldRef ID="{2ea78cef-1bf9-4019-960a-02c41636cb47}" Name="_EditMenuTableEnd"/>
+            <FieldRef Name="ReportLink"/>
+        </FieldRefs>
+        <DisplayPattern>
+            <FieldSwitch> 
+                <Expr><GetVar Name="FreeForm"/></Expr>
+                <Case Value="TRUE"><Field Name="ReportLink"/></Case>
+                <Default>
+                    <Field Name="_EditMenuTableStart"/>
+                    <Field Name="ReportLink"/>
+                    <Field Name="_EditMenuTableEnd"/>
+                </Default>
+            </FieldSwitch>
+        </DisplayPattern>
+    </Field>
+
+    <Field 
+        ID="{FC6862C4-6AAC-4f08-B60E-3A8454F26040}" 
+        Name="ReportModifiedLink" 
+        StaticName="ReportModifiedLink" 
+        Group="_Hidden" 
+        ReadOnly="TRUE" 
+        Type="Computed"
+        Filterable="FALSE" 
+        Sortable="FALSE" 
+        DisplayName="$Resources:spscore,BizAppsFields_ReportModifiedLink_Name;" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v3">
+        <FieldRefs>
+            <FieldRef Name="Last_x0020_Modified"/>
+            <FieldRef Name="File_x0020_Type"/>
+            <FieldRef Name="FileRef"/>
+            <FieldRef Name="_EditMenuTableStart"/>
+            <FieldRef Name="_EditMenuTableEnd"/>
+            <FieldRef Name="ReportName"/>
+            <FieldRef Name="FSObjType"/>
+            <FieldRef Name="Created_x0020_Date"/>
+        </FieldRefs>
+        <DisplayPattern>
+            <IfEqual>
+                <Expr1><Column Name="File_x0020_Type"/></Expr1>
+                <Expr2>xlsx</Expr2>
+                <Then>
+                    <Field Name="_EditMenuTableStart"/>
+                    <HTML><![CDATA[<a ONCLICK="window.location=']]></HTML><HttpVDir /><HTML><![CDATA[/_layouts/ExcelProfilePage.aspx?ListId=]]></HTML><List/><HTML><![CDATA[&ID=]]></HTML><ID></ID><HTML><![CDATA[';return false;" href="]]></HTML><Field Name="EncodedAbsUrl"/><HTML><![CDATA[">]]></HTML>
+                    <Field Name="Last_x0020_Modified"/>
+                    <HTML><![CDATA[</a>]]></HTML>
+                    <Field Name="_EditMenuTableEnd"/>
+                </Then>
+                <Else>
+                    <IfEqual>
+                        <Expr1><Column Name="File_x0020_Type"/></Expr1>
+                        <Expr2>xlsb</Expr2>
+                        <Then>
+                            <Field Name="_EditMenuTableStart"/>
+                            <HTML><![CDATA[<a ONCLICK="window.location=']]></HTML><HttpVDir /><HTML><![CDATA[/_layouts/ExcelProfilePage.aspx?ListId=]]></HTML><List/><HTML><![CDATA[&ID=]]></HTML><ID></ID><HTML><![CDATA[';return false;" href="]]></HTML><Field Name="EncodedAbsUrl"/><HTML><![CDATA[">]]></HTML>
+                            <Field Name="Last_x0020_Modified"/>
+                            <HTML><![CDATA[</a>]]></HTML>
+                            <Field Name="_EditMenuTableEnd"/>
+                        </Then>
+                        <Else>
+                            <Field Name="_EditMenuTableStart"/>
+                            <!-- From LinkFileNoMenu, changed the filename to modified date-->
+                            <IfEqual>
+                                <Expr1><LookupColumn Name="FSObjType"/></Expr1>
+                                <Expr2>1</Expr2>
+                                <Then>
+                                    <Switch><Expr><GetVar Name="RecursiveView"/></Expr>
+                                        <Case Value="1">
+                                            <LookupColumn Name="Last_x0020_Modified" HTMLEncode="TRUE"/>
+                                        </Case>
+                                        <Default>
+                                            <HTML><![CDATA[<A onfocus="OnLink(this)"  HREF="javascript:SubmitFormPost()" onclick='javascript:ClearSearchTerm("]]></HTML><GetVar Name="View"/><HTML><![CDATA[");javascript:SubmitFormPost("]]></HTML>
+                                            <SetVar Name="RootFolder"><HTML>/</HTML><LookupColumn Name="FileRef"/></SetVar>
+                                            <ScriptQuote NotAddingQuote="TRUE"><FilterLink Default="" Paged="FALSE"/></ScriptQuote>
+                                            <HTML><![CDATA[");javascript:return false;'>]]></HTML>
+                                            <Field Name="Last_x0020_Modified"/>
+                                            <HTML><![CDATA[</A>]]></HTML>
+                                        </Default>
+                                    </Switch>
+                                </Then>
+                                <Else>
+                                    <HTML><![CDATA[<A onfocus="OnLink(this)" HREF="]]></HTML>
+                                    <Field Name="EncodedAbsUrl"/>
+                                    <HTML><![CDATA[" onclick="DispDocItemEx(this,']]></HTML>
+                                    <ServerProperty Select="HtmlTransform"/>
+                                    <HTML><![CDATA[',']]></HTML>
+                                    <ServerProperty Select="HtmlTrAcceptType"><Column Name="File_x0020_Type"/></ServerProperty>
+                                    <HTML><![CDATA[',']]></HTML>
+                                    <ServerProperty Select="HtmlTrHandleUrl"><Column Name="File_x0020_Type"/></ServerProperty>
+                                    <HTML><![CDATA[',']]></HTML>
+                                    <ServerProperty Select="HtmlTrProgId"><Column Name="File_x0020_Type"/></ServerProperty>
+                                    <HTML><![CDATA[')">]]></HTML>
+                                    <Field Name="Last_x0020_Modified"/>
+                                    <HTML><![CDATA[</A>]]></HTML>
+                                </Else>
+                            </IfEqual>
+                            <Field Name="_EditMenuTableEnd"/>
+                        </Else>
+                    </IfEqual>
+                </Else>
+            </IfEqual>
+        </DisplayPattern>
+    </Field>
+
+    <Field 
+        ID="{FEF4B2E1-4B89-4929-981B-C1967E0B3178}" 
+        Name="ReportCreated" 
+        StaticName="ReportCreated" 
+        Group="_Hidden" 
+        ShowInNewForm="FALSE" 
+        ShowInEditForm="FALSE" 
+        ShowInFileDlg="FALSE"
+        Type="DateTime" 
+        Filterable="FALSE" 
+        Sortable="TRUE" 
+        DisplayName="$Resources:spscore,BizAppsFields_ReportCreated_Name;" 
+        AuthoringInfo="$Resources:spscore,BizAppsFields_SnapshottedValue_AuthoringInfo;"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+
+    <Field 
+        ID="{EFCA5F2B-DE72-42a8-AEFD-1257AF8698A8}" 
+        Name="ReportCreatedBy" 
+        StaticName="ReportCreatedBy" 
+        Group="_Hidden"
+        ShowInNewForm="FALSE" 
+        ShowInEditForm="FALSE"
+        ShowInFileDlg="FALSE" 
+        Type="User" 
+        List="UserInfo" 
+        Filterable="TRUE" 
+        Sortable="TRUE" 
+        DisplayName="$Resources:spscore,BizAppsFields_ReportCreatedBy_Name;" 
+        AuthoringInfo="$Resources:spscore,BizAppsFields_SnapshottedValue_AuthoringInfo;"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+
+    <Field 
+        ID="{CC33F143-E697-42db-9C83-8DB4E6928E9D}" 
+        Name="ReportModified" 
+        StaticName="ReportModified" 
+        Group="_Hidden" 
+        ShowInNewForm="FALSE" 
+        ShowInEditForm="FALSE"
+        ShowInFileDlg="FALSE" 
+        Type="DateTime" 
+        Filterable="FALSE" 
+        Sortable="TRUE" 
+        DisplayName="$Resources:spscore,BizAppsFields_ReportModified_Name;" 
+        AuthoringInfo="$Resources:spscore,BizAppsFields_SnapshottedValue_AuthoringInfo;"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+
+    <Field 
+        ID="{F70965C3-6AC6-4e9e-914C-3C1B4E219B6F}" 
+        Name="ReportModifiedBy" 
+        StaticName="ReportModifiedBy" 
+        Group="_Hidden" 
+        ShowInNewForm="FALSE" 
+        ShowInEditForm="FALSE" 
+        ShowInFileDlg="FALSE"
+        Type="User" 
+        List="UserInfo" 
+        Filterable="TRUE" 
+        Sortable="TRUE" 
+        DisplayName="$Resources:spscore,BizAppsFields_ReportModifiedBy_Name;" 
+        AuthoringInfo="$Resources:spscore,BizAppsFields_SnapshottedValue_AuthoringInfo;"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+
+    <Field 
+        ID="{A533D496-5AEB-4027-9542-EE6BA9A8C9E3}" 
+        Name="ReportCreatedDisplay" 
+        StaticName="ReportCreatedDisplay" 
+        Group="_Hidden" 
+        ReadOnly="TRUE" 
+        Type="Computed" 
+        Filterable="FALSE" 
+        Sortable="TRUE" 
+        DisplayName="$Resources:spscore,BizAppsFields_ReportCreated_Name;" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v3">
+        <FieldRefs>
+            <FieldRef Name="ParentId" />
+            <FieldRef Name="Created_x0020_Date" />
+            <FieldRef Name="ReportCreatedBy" />
+        </FieldRefs>
+        <DisplayPattern>
+            <IfEqual>
+                <Expr1><Column Name="ParentId" /></Expr1>
+                <Expr2 />
+                <Then>
+                    <Field Name="Created_x0020_Date" />
+                </Then>
+                <Else>
+                    <Field Name="ReportCreated" />
+                </Else>
+            </IfEqual>
+        </DisplayPattern>
+    </Field>
+
+    <Field 
+        ID="{8CAF7FFE-9D2C-406c-9743-7A252B5C8AE5}" 
+        Name="ReportCreatedByDisplay" 
+        StaticName="ReportCreatedByDisplay" 
+        Group="_Hidden" 
+        ShowInNewForm="FALSE" 
+        ShowInEditForm="FALSE" 
+        ShowInFileDlg="FALSE"
+        ReadOnly="TRUE" 
+        Type="Computed" 
+        Filterable="TRUE" 
+        Sortable="TRUE" 
+        DisplayName="$Resources:spscore,BizAppsFields_ReportCreatedBy_Name;" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v3">
+        <FieldRefs>
+            <FieldRef Name="ParentId" />
+            <FieldRef Name="Created_x0020_By" />
+            <FieldRef Name="ReportCreatedBy" />
+        </FieldRefs>
+        <DisplayPattern>
+            <IfEqual>
+                <Expr1><Column Name="ParentId" /></Expr1>
+                <Expr2 />
+                <Then>
+                    <Field Name="Created_x0020_By" />
+                </Then>
+                <Else>
+                    <Field Name="ReportCreatedBy" />
+                </Else>
+            </IfEqual>
+        </DisplayPattern>
+    </Field>
+
+    <Field 
+        ID="{3892917D-92F2-4263-AE0C-22670474069D}" 
+        Name="ReportModifiedDisplay"
+        StaticName="ReportModifiedDisplay" 
+        Group="_Hidden" 
+        ShowInNewForm="FALSE" 
+        ShowInEditForm="FALSE"
+        ShowInFileDlg="FALSE"
+        ReadOnly="TRUE" 
+        Type="Computed" 
+        Filterable="FALSE" 
+        Sortable="FALSE" 
+        DisplayName="$Resources:spscore,BizAppsFields_ReportModified_Name;" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v3">
+        <FieldRefs>
+            <FieldRef Name="ParentId" />
+            <FieldRef Name="Last_x0020_Modified" />
+            <FieldRef Name="ReportModified" />
+        </FieldRefs>
+        <DisplayPattern>
+            <IfEqual>
+                <Expr1><Column Name="ParentId" /></Expr1>
+                <Expr2 />
+                <Then>
+                    <Field Name="Last_x0020_Modified" />
+                </Then>
+                <Else>
+                    <Field Name="ReportModified" />
+                </Else>
+            </IfEqual>
+        </DisplayPattern>
+    </Field>
+
+    <Field 
+        ID="{64016533-26CA-4ae6-8E1F-7CC34687E416}" 
+        Name="ReportModifiedByDisplay" 
+        StaticName="ReportModifiedByDisplay" 
+        Group="_Hidden" 
+        ShowInNewForm="FALSE" 
+        ShowInEditForm="FALSE" 
+        ShowInFileDlg="FALSE"
+        ReadOnly="TRUE" 
+        Type="Computed" 
+        Filterable="TRUE" 
+        Sortable="TRUE" 
+        DisplayName="$Resources:spscore,BizAppsFields_ReportModifiedBy_Name;" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v3">
+        <FieldRefs>
+            <FieldRef Name="ParentId" />
+            <FieldRef Name="Modified_x0020_By" />
+            <FieldRef Name="ReportModifiedBy" />
+        </FieldRefs>
+        <DisplayPattern>
+            <IfEqual>
+                <Expr1><Column Name="ParentId" /></Expr1>
+                <Expr2 />
+                <Then>
+                    <Field Name="Modified_x0020_By" />
+                </Then>
+                <Else>
+                    <Field Name="ReportModifiedBy" />
+                </Else>
+            </IfEqual>
+        </DisplayPattern>
+    </Field>
+</Elements>

@@ -1,0 +1,79 @@
+/* _lcid="1033" _version="15.0.4420"
+_LocalBinding */
+.welcomeImage
+{
+margin-top:-5px;
+}
+.editModePanel
+{
+width:60%;
+background-color:#EEEEEE;
+border:1px #CCCCCC solid;
+color:#666666;
+clear:both;
+padding-left:2px;
+padding-top:2px;
+}
+.editModePanel span
+{
+font-size:8pt;
+font-family:Tahoma,verdana;
+}
+input.ms-long
+{
+width:250px;
+}
+A.ms-asset-internalBookmark
+{
+width:20px;
+height:20px;
+display:inline-block;
+background-color:transparent;
+background-image:url('/_layouts/images/rte2anchor.gif');
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-position:bottom right;
+}
+.caption p{
+}
+.header{
+}
+.dateLine{
+}
+.pageContent,.pageContent td{
+}
+.ms-formfieldlabelwrapper span input
+{
+width:200px;
+}
+.image img{
+}
+.welcomeSplashContainer
+{
+}
+.summaryLinks1
+{
+}
+.summaryLinks2
+{
+}
+.topZoneSplash
+{
+}
+.bottomContainerSplash
+{
+}
+.imageSplash{
+}
+.bottomLeftZone
+{
+}
+.bottomRightZone
+{
+}
+.floatingRelatedLinks
+{
+}
+.center
+{
+}

@@ -1,0 +1,28 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="OSGMasterPages" Url="_catalogs/masterpage" Path="MasterPages" RootWebOnly="TRUE" SetupPath="Features\PublishingLayouts\MasterPages"> 
+        <File Url="Band.master" Type="GhostableInLibrary">
+            <Property Name="ContentType" Value="$Resources:cmscore,contenttype_masterpage_name;" /> 
+        </File> 
+        <File Url="GlassBand.master" Type="GhostableInLibrary">
+            <Property Name="ContentType" Value="$Resources:cmscore,contenttype_masterpage_name;" /> 
+        </File>
+        <File Url="Vertical.master" Type="GhostableInLibrary">
+            <Property Name="ContentType" Value="$Resources:cmscore,contenttype_masterpage_name;" />
+        </File>
+        <File Url="Tabs.master" Type="GhostableInLibrary">
+            <Property Name="ContentType" Value="$Resources:cmscore,contenttype_masterpage_name;" />
+        </File>
+        <File Url="SingleLevel.master" Type="GhostableInLibrary">
+            <Property Name="ContentType" Value="$Resources:cmscore,contenttype_masterpage_name;" />
+        </File>
+    </Module>
+    <Module Name="OSGCoreStyles" Url="Style Library" IncludeFolders="??*-??*" Path="" RootWebOnly="TRUE" SetupPath="Features\PublishingLayouts"> 
+        <File Url="band-21.css" Name="Themable/Core Styles/band-21.css" Type="GhostableInLibrary" />
+        <File Url="single-level-21.css" Name="Core Styles/single-level-21.css" Type="GhostableInLibrary" />
+        <File Url="page-layouts-21.css" Name="Core Styles/page-layouts-21.css" Type="GhostableInLibrary" />
+        <File Url="edit-mode-21.css" Name="Core Styles/edit-mode-21.css" Type="GhostableInLibrary" />
+        <File Url="htmleditorstyles.css" Name="Themable/Core Styles/htmleditorstyles.css" Type="GhostableInLibrary" />
+    </Module>
+</Elements>

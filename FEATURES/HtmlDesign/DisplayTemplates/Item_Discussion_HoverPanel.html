@@ -1,0 +1,222 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_DiscussionHoverPanel</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#SearchHoverPanel;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:ManagedPropertyMapping msdt:dt="string">'Title':'Title','AuthorOWSUSER':'AuthorOWSUSER','Path':'Path','SiteLogo':'SiteLogo','SiteDescription':'SiteDescription','CollapsingStatus':'CollapsingStatus','DocId':'DocId','HitHighlightedProperties':'HitHighlightedProperties','FileExtension':'FileExtension','ViewsLifeTime':'ViewsLifeTime','deeplinks':'deeplinks','importance':'importance','FileType':'FileType','ReplyCount':'ReplyCount','LikesCount':'LikesCount','BestAnswerId':'BestAnswerId','DiscussionCategory':'DiscussionCategory','DiscussionPost':'DiscussionPost','Created':'Created','DiscussionLikesCount':'DiscussionLikesCount'</mso:ManagedPropertyMapping>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+
+</head>
+<body>
+    <div id="Item_Discussion_HoverPanel">
+<!--#_
+        var maxRepliesToShow = 2;
+        var postMaxLengthInChars = 200;
+        var bestReplyMaxLengthInChars = 200;
+        var recentReplyMaxLengthInChars = 120;
+
+        var i = 0;
+        var id = ctx.CurrentItem.id;
+        if(!$isEmptyString(ctx.CurrentItem.DiscussionCategory))
+        {
+            ctx.CurrentItem.csr_FileType = String.format(Srch.Res.hp_DiscussionCategory, ctx.CurrentItem.DiscussionCategory);
+        }
+        else
+        {
+            ctx.CurrentItem.csr_FileType = Srch.Res.hp_Discussion;
+        }
+
+        var userPersonaId = id + "_peopleUserPersona";
+        var authorUsername = Srch.U.getUsernameFromAuthorField(ctx.CurrentItem.AuthorOWSUSER);
+        AddPostRenderCallback(ctx, function()
+        {
+            Srch.SSU.renderPersona(authorUsername, userPersonaId);
+        });
+
+_#-->
+        <div class="ms-srch-hover-innerContainer ms-srch-hover-standardSize" id="_#= $htmlEncode(id + HP.ids.inner) =#_">
+            <div class="ms-srch-hover-arrowBorder" id="_#= $htmlEncode(id + HP.ids.arrowBorder) =#_"></div>
+            <div class="ms-srch-hover-arrow" id="_#= $htmlEncode(id + HP.ids.arrow) =#_"></div>
+            <div class="ms-srch-hover-content" id="_#= $htmlEncode(id + HP.ids.content) =#_" data-displaytemplate="DiscussionHoverPanel">
+                <div id="_#= $htmlEncode(id + HP.ids.header) =#_" class="ms-srch-hover-header">
+                    _#= ctx.RenderHeader(ctx) =#_
+                </div>
+
+                <div id="_#= $htmlEncode(id + HP.ids.body) =#_" class="ms-srch-hover-body ms-srch-discussionHover-body">
+                    <div class="ms-srch-hover-post">
+                        <div id="_#= $htmlEncode(userPersonaId) =#_" class="ms-srch-hover-postPersona"></div>
+                        <div>
+                            <h3>
+<!--#_
+                                var author = "";
+                                if (!$isEmptyString(ctx.CurrentItem.AuthorOWSUSER))
+                                {
+                                    author = Srch.U.getDisplayNameFromAuthorField(ctx.CurrentItem.AuthorOWSUSER);
+                                }
+_#-->
+                                _#= $htmlEncode(author) =#_
+                            </h3>
+
+                            <div class="ms-srch-hover-text ms-srch-hover-postText">
+                                _#= $htmlEncode(Srch.U.truncateEnd(ctx.CurrentItem.DiscussionPost, postMaxLengthInChars)) =#_
+                            </div>
+                            <div class="ms-metadata">
+
+<!--#_
+                            if(!$isNull(ctx.CurrentItem.Created))
+                            {
+                                var timeSincePostId = id + "_timeSincePost";
+                                AddPostRenderCallback(ctx, function()
+                                {
+                                    Srch.U.renderFriendlyTimeIntervalString(ctx.CurrentItem.Created, timeSincePostId);
+                                });
+_#-->
+                                <span class="ms-srch-hover-dateMetadata" id="_#= $htmlEncode(timeSincePostId) =#_"></span>
+<!--#_
+                            }
+_#-->
+                                <span class="ms-srch-hover-popularityMetadata">
+<!--#_ 
+                                    var replyCount = 0;
+                                    if (!$isNull(ctx.CurrentItem.ReplyCount))
+                                    {
+                                        replyCount = ctx.CurrentItem.ReplyCount;
+                                    }
+
+                                    var likesCount = 0;
+                                    if (!$isNull(ctx.CurrentItem.DiscussionLikesCount))
+                                    {
+                                        likesCount = ctx.CurrentItem.DiscussionLikesCount;
+                                    }
+                                    else if (!$isNull(ctx.CurrentItem.LikesCount))
+                                    {
+                                        likesCount = ctx.CurrentItem.LikesCount;
+                                    }
+
+                                    var encodedPopularityMetadata = Srch.SSU.getEncodedSocialMetadataString(
+                                        replyCount,
+                                        likesCount);
+_#-->
+                                    _#= encodedPopularityMetadata =#_
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+<!--#_
+                if( !$isNull(ctx.CurrentItem.DiscussionBestAnswerID) &&
+                    ctx.CurrentItem.DiscussionBestAnswerID >= 0 &&
+                    !$isEmptyString(ctx.CurrentItem.ParentLink))
+                {
+                    var headerElementID = id + "_headerElement";
+                    var bestReplyPersonaElementID = id + "_personaElement";
+                    var bestReplyTextContainerID = id + "_textContainer";
+_#-->
+                    <div id="_#= $htmlEncode(headerElementID) =#_" class="ms-srch-hover-additionalRepliesHeader ms-srch-display-none">
+                        <span class="ms-srch-item-bestResponseIcon-span">
+                            <img class="ms-comm-bestResponseIcon" src="_#= $urlHtmlEncode(GetThemedImageUrl('spcommon.png')) =#_" />
+                        </span>
+                        <span class="ms-metadata">
+                            _#= $htmlEncode(Srch.Res.item_BestReply) =#_
+                        </span>
+                    </div>
+                    <div class="ms-srch-hover-post">
+                        <div id="_#= $htmlEncode(bestReplyPersonaElementID) =#_" class="ms-srch-hover-postPersona"></div>
+                        <div id="_#= $htmlEncode(bestReplyTextContainerID) =#_"></div>
+                    </div>
+<!--#_
+                    AddPostRenderCallback(ctx, function()
+                    {
+                        var queryText = 'path:\"' + ctx.CurrentItem.ParentLink.replace('AllItems.aspx', 'DispForm.aspx?ID=') + ctx.CurrentItem.DiscussionBestAnswerID + '\"';
+
+                        Srch.SSU.populatePostsByQuery(
+                            ctx.ClientControl,
+                            queryText,
+                            headerElementID,
+                            null,
+                            [bestReplyPersonaElementID],
+                            [bestReplyTextContainerID],
+                            Srch.SSU.TextElementType.postElement,
+                            bestReplyMaxLengthInChars);
+                    });
+                }
+                else if(!$isNull(ctx.CurrentItem.ReplyCount) &&
+                        ctx.CurrentItem.ReplyCount > 0 &&
+                        !$isEmptyString(ctx.CurrentItem.Path))
+                {
+                    var headerElementID = id + "_headerElement";
+_#-->
+                    <div id="_#= $htmlEncode(headerElementID) =#_" class="ms-srch-hover-additionalRepliesHeader ms-srch-display-none">
+                        <span class="ms-metadata">
+                            _#= $htmlEncode(Srch.Res.hp_RecentReplies) =#_
+                        </span>
+                    </div>
+
+<!--#_
+                    var personaElementIDs = new Array();
+                    var textContainerIDs = new Array();
+
+                    for(j = 0; j < maxRepliesToShow && j < ctx.CurrentItem.ReplyCount; ++j)
+                    {
+                        var nextPersonaElementID = id + "_personaElement_" + j;
+                        personaElementIDs.push(nextPersonaElementID);
+
+                        var nextTextContainerID = id + "_textContainer_" + j;
+                        textContainerIDs.push(nextTextContainerID);
+_#-->
+                    <div class="ms-srch-hover-post">
+                        <div id="_#= $htmlEncode(nextPersonaElementID) =#_" class="ms-srch-hover-postPersona"></div>
+                        <div id="_#= $htmlEncode(nextTextContainerID) =#_"></div>
+                    </div>
+<!--#_
+                    }
+
+                    AddPostRenderCallback(ctx, function()
+                    {
+                        var queryText = 'ParentLink:\"' + ctx.CurrentItem.Path + '\"';
+
+                        var sort = new Srch.ResultSort(
+                            "LastModifiedTime",
+                            Microsoft.SharePoint.Client.Search.Query.SortDirection.descending);
+
+                        Srch.SSU.populatePostsByQuery(
+                            ctx.ClientControl,
+                            queryText,
+                            headerElementID,
+                            [sort],
+                            personaElementIDs,
+                            textContainerIDs,
+                            Srch.SSU.TextElementType.postElement,
+                            recentReplyMaxLengthInChars);
+
+                    });
+                }
+_#-->
+
+                </div>
+                <div id="_#= $htmlEncode(id + HP.ids.actions) =#_" class="ms-srch-hover-actions">
+<!--#_
+                if (!Srch.U.e(ctx.CurrentItem.Path))
+                {
+_#-->
+                    <div class="ms-srch-hover-action">
+                        <a clicktype="ActionEdit" id="_#= $htmlEncode(id + HP.ids.openClient) =#_" class="ms-calloutLink ms-uppercase" href="_#= $urlHtmlEncode(ctx.CurrentItem.Path) =#_">
+                            _#= $htmlEncode(Srch.Res.hp_ViewDiscussion) =#_
+                        </a>
+                    </div>
+<!--#_ 
+                }
+_#-->
+                </div>
+            </div> 
+        </div>
+    </div>
+</body>
+</html>

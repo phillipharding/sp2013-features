@@ -1,0 +1,16 @@
+<Feature Id="2B03956C-9271-4d1c-868A-07DF2971ED30"
+    Title="$Resources:spscore,CommunityPortalFeature_Text;"
+    Description="$Resources:spscore,CommunityPortalFeature_Desc;"
+    Version="15.0.0.0"
+    Scope="Site"
+    Hidden="TRUE"
+    DefaultResourceFile="spscore"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.CommunityPortalFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ActivationDependencies>
+    </ActivationDependencies>
+    <ElementManifests>
+        <ElementManifest Location="elements.xml"/>
+    </ElementManifests>
+</Feature>

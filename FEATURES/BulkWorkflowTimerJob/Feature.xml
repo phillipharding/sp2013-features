@@ -1,0 +1,10 @@
+<Feature  Id="d992aeca-3802-483a-ab40-6c9376300b61"
+          Title="Bulk Workflow Timer Job"
+          Description="The timer job that processes workflow tasks in bulk"
+          Version="15.0.0.0"
+          DefaultResourceFile="dlccore"
+          Scope="WebApplication"
+          ReceiverAssembly="Microsoft.Office.Policy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.Office.Workflow.BulkWorkflowFeatureReceiver"
+          Hidden="true"
+          xmlns="http://schemas.microsoft.com/sharepoint/" />

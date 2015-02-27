@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Name="Categories" OrderedList="TRUE" DisableAttachments="TRUE" DisableGridEditing="TRUE" Title="$Resources:core,categories_schema_blg_title;" Url="$Resources:core,lists_Folder;/$Resources:core,blogcatagories_Folder;" BaseType="0">
+  <MetaData>
+    <Fields>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" OrderedView="TRUE" FreeForm="TRUE" ReadOnly="TRUE" TabularView="FALSE">
+        <XslLink>blog.xsl</XslLink>
+        <JSLink>sp.ui.blogs.js</JSLink>
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Title" Ascending="TRUE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ViewFields>
+          <FieldRef Name="Title">
+          </FieldRef>
+        </ViewFields>
+      </View>
+      <View BaseViewID="1" Type="HTML" OrderedView="FALSE" WebPartZoneID="Main" DisplayName="$Resources:core,categories_schema_blgview_allitems;" DefaultView="TRUE" ImageUrl="/_layouts/15/images/categories.png?rev=23" Url="AllCategories.aspx" MobileView="True">
+        <XslLink>main.xsl</XslLink>
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="LinkTitle">
+          </FieldRef>
+          <FieldRef Name="Edit">
+          </FieldRef>
+        </ViewFields>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <PagedRowset><HTML><![CDATA[<table width="100%" border="0" cellpadding="0" cellspacing="0" class="ms-bottompaging">
+<tr><td class="ms-bottompagingline1"><img src="/_layouts/15/images/blank.gif?rev=23" width='1' height='1' alt="" /></td></tr>
+<tr><td class="ms-bottompagingline2"><img src="/_layouts/15/images/blank.gif?rev=23" width='1' height='1' alt="" /></td></tr>
+<tr><td align="center" class="ms-vb" id="bottomPagingCell]]></HTML>
+          <GetVar Name="WPQ" /><HTML><![CDATA["><table>]]></HTML>
+          <Switch>
+            <Expr>
+              <GetVar Name="PrevPageData" />
+            </Expr>
+            <Case Value="" />
+            <Default><HTML><![CDATA[<td><a href="javascript:" onclick='javascript:RefreshPageTo(event, "]]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <PageUrl /><HTML>?</HTML>
+                <GetVar Name="PrevPageData" />
+              </ScriptQuote><HTML><![CDATA[");javascript:return false;'>]]></HTML><HTML><![CDATA[<img src="/_layouts/15/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/prev.gif" border="0" alt="]]><![CDATA[$Resources:core,idPrevious;]]><![CDATA["/></a></td>]]></HTML>
+            </Default>
+          </Switch><HTML><![CDATA[<td nowrap="nowrap" class="ms-paging">]]></HTML>
+          <IfEqual>
+            <Expr1>
+              <GetVar Name="IsViewEmpty" />
+            </Expr1>
+            <Expr2>1</Expr2>
+            <Then><HTML><![CDATA[<a href="javascript:" onclick='javascript:RefreshPageTo(event, "]]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <PageUrl />
+              </ScriptQuote><HTML><![CDATA[");javascript:return false;'><img src="/_layouts/15/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/prev.gif" border="0" alt="$Resources:core,idRewind;"/><img src="/_layouts/15/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/prev.gif" border="0" alt="$Resources:core,idRewind;"/></a>]]></HTML>
+            </Then>
+            <Else>
+              <GetVar Name="PageFirstRow" HTMLEncode="TRUE" /><HTML><![CDATA[&#160;]]></HTML><HTML>-</HTML><HTML><![CDATA[&#160;]]></HTML>
+              <GetVar Name="PageLastRow" HTMLEncode="TRUE" />
+            </Else>
+          </IfEqual><HTML><![CDATA[</td>]]></HTML>
+          <Switch>
+            <Expr>
+              <GetVar Name="NextPageData" />
+            </Expr>
+            <Case Value="" />
+            <Default><HTML><![CDATA[<td><a href="javascript:" onclick='javascript:RefreshPageTo(event, "]]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <PageUrl /><HTML>?</HTML>
+                <GetVar Name="NextPageData" />
+              </ScriptQuote><HTML><![CDATA[");javascript:return false;'>]]></HTML><HTML><![CDATA[<img src="/_layouts/15/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/next.gif" border="0" alt="]]><![CDATA[$Resources:core,idNext;]]><![CDATA["></a></td>]]></HTML>
+            </Default>
+          </Switch><HTML><![CDATA[</tr></table></td></tr>
+<tr><td class="ms-bottompagingline3"><img src="/_layouts/15/images/blank.gif?rev=23" width='1' height='1' alt="" /></td></tr>
+</table>]]></HTML><HTML><![CDATA[
+<script type="text/javascript">
+  var topPagingCell = document.getElementById("topPagingCell]]></HTML>
+          <GetVar Name="WPQ" /><HTML><![CDATA[");
+  var bottomPagingCell = document.getElementById("bottomPagingCell]]></HTML>
+          <GetVar Name="WPQ" /><HTML><![CDATA[");
+  if (topPagingCell != null && bottomPagingCell != null)
+  {
+    topPagingCell.innerHTML = bottomPagingCell.innerHTML;
+  }
+</script>
+]]></HTML>
+        </PagedRowset>
+        <PagedClientCallbackRowset><HTML><![CDATA[<tr><td></td><td align="left" class="ms-vb">]]></HTML>
+          <Switch>
+            <Expr>
+              <GetVar Name="NextPageData" />
+            </Expr>
+            <Case Value="" />
+            <Default><HTML><![CDATA[&#160;<a href="]]></HTML>
+              <PageUrl HTMLEncode="TRUE" /><HTML>?</HTML>
+              <GetVar Name="NextPageData" HTMLEncode="TRUE" /><HTML><![CDATA[" onclick='javascript:RefreshPageTo(event, "]]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <PageUrl /><HTML>?</HTML>
+                <GetVar Name="NextPageData" />
+              </ScriptQuote><HTML><![CDATA[");javascript:return false;'>]]></HTML><HTML><![CDATA[$Resources:core,groupMore;]]></HTML><HTML><![CDATA[</a>&#160;]]></HTML>
+            </Default>
+          </Switch><HTML><![CDATA[</td></tr>]]></HTML>
+        </PagedClientCallbackRowset>
+        <PagedRecurrenceRowset><HTML><![CDATA[<table width="100%" border="0"><tr><td  nowrap="nowrap" class="ms-vb">]]></HTML>
+          <Switch>
+            <Expr>
+              <GetVar Name="PrevPageData" />
+            </Expr>
+            <Case Value="" />
+            <Default><HTML><![CDATA[&#160;<a id="onetidPrev" href=
+                "javascript:" onclick='javascript:RefreshPageTo(event, "]]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <PageUrl /><HTML>?</HTML>
+                <GetVar Name="PrevPageData" />
+              </ScriptQuote><HTML><![CDATA[");javascript:return false;'
+                ><img src="/_layouts/15/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/prev.gif" border="0" alt="]] /><![CDATA[$Resources:core,idPrevious;]]><![CDATA["></a>
+                <a href=
+                "javascript:" onclick='javascript:RefreshPageTo(event, "]]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <PageUrl /><HTML>?</HTML>
+                <GetVar Name="PrevPageData" />
+              </ScriptQuote><HTML><![CDATA[");javascript:return false;'
+                >]]></HTML><HTML>$Resources:core,idPrevious;</HTML><HTML><![CDATA[</a>]]></HTML>
+            </Default>
+          </Switch><HTML><![CDATA[</td><td align="$Resources:core,align-right;" nowrap="nowrap" class="ms-vb">]]></HTML><HTML></HTML>
+          <Switch>
+            <Expr>
+              <GetVar Name="NextPageData" />
+            </Expr>
+            <Case Value="" />
+            <Default><HTML><![CDATA[<a href=
+                "javascript:" onclick='javascript:RefreshPageTo(event, "]]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <PageUrl /><HTML>?</HTML>
+                <GetVar Name="NextPageData" />
+              </ScriptQuote><HTML><![CDATA[");javascript:return false;'
+            >]]></HTML><HTML>$Resources:core,idNext;</HTML><HTML><![CDATA[</a>
+            <a id="onetidNext" href=
+                "javascript:" onclick='javascript:RefreshPageTo(event, "]]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <PageUrl /><HTML>?</HTML>
+                <GetVar Name="NextPageData" />
+              </ScriptQuote><HTML><![CDATA[");javascript:return false;'
+                ><img src="/_layouts/15/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/next.gif" border="0" alt="]] /><![CDATA[$Resources:core,idNext;]]><![CDATA["></a>&#160;]]></HTML>
+            </Default>
+          </Switch><HTML><![CDATA[</td></tr></table>]]></HTML>
+        </PagedRecurrenceRowset>
+        <RowLimit Paged="TRUE">30</RowLimit>
+      </View>
+      <View BaseViewID="2" Type="HTML" OrderedView="FALSE" WebPartZoneID="Main" DisplayName="$Resources:core,categories_schema_blgview_myitems;" ImageUrl="/_layouts/15/images/categories.png?rev=23" Url="MyCategories.aspx" ReqAuth="TRUE">
+        <XslLink>main.xsl</XslLink>
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="LinkTitle">
+          </FieldRef>
+          <FieldRef Name="Edit">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <Where>
+            <Eq>
+              <FieldRef Name="Author">
+              </FieldRef>
+              <Value Type="">
+                <UserID />
+              </Value>
+            </Eq>
+          </Where>
+        </Query>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <PagedRowset><HTML><![CDATA[<table width="100%" border="0" cellpadding="0" cellspacing="0" class="ms-bottompaging">
+<tr><td class="ms-bottompagingline1"><img src="/_layouts/15/images/blank.gif?rev=23" width='1' height='1' alt="" /></td></tr>
+<tr><td class="ms-bottompagingline2"><img src="/_layouts/15/images/blank.gif?rev=23" width='1' height='1' alt="" /></td></tr>
+<tr><td align="center" class="ms-vb" id="bottomPagingCell]]></HTML>
+          <GetVar Name="WPQ" /><HTML><![CDATA["><table>]]></HTML>
+          <Switch>
+            <Expr>
+              <GetVar Name="PrevPageData" />
+            </Expr>
+            <Case Value="" />
+            <Default><HTML><![CDATA[<td><a href="javascript:" onclick='javascript:RefreshPageTo(event, "]]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <PageUrl /><HTML>?</HTML>
+                <GetVar Name="PrevPageData" />
+              </ScriptQuote><HTML><![CDATA[");javascript:return false;'>]]></HTML><HTML><![CDATA[<img src="/_layouts/15/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/prev.gif" border="0" alt="]]><![CDATA[$Resources:core,idPrevious;]]><![CDATA["/></a></td>]]></HTML>
+            </Default>
+          </Switch><HTML><![CDATA[<td nowrap="nowrap" class="ms-paging">]]></HTML>
+          <IfEqual>
+            <Expr1>
+              <GetVar Name="IsViewEmpty" />
+            </Expr1>
+            <Expr2>1</Expr2>
+            <Then><HTML><![CDATA[<a href="javascript:" onclick='javascript:RefreshPageTo(event, "]]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <PageUrl />
+              </ScriptQuote><HTML><![CDATA[");javascript:return false;'><img src="/_layouts/15/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/prev.gif" border="0" alt="$Resources:core,idRewind;"/><img src="/_layouts/15/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/prev.gif" border="0" alt="$Resources:core,idRewind;"/></a>]]></HTML>
+            </Then>
+            <Else>
+              <GetVar Name="PageFirstRow" HTMLEncode="TRUE" /><HTML><![CDATA[&#160;]]></HTML><HTML>-</HTML><HTML><![CDATA[&#160;]]></HTML>
+              <GetVar Name="PageLastRow" HTMLEncode="TRUE" />
+            </Else>
+          </IfEqual><HTML><![CDATA[</td>]]></HTML>
+          <Switch>
+            <Expr>
+              <GetVar Name="NextPageData" />
+            </Expr>
+            <Case Value="" />
+            <Default><HTML><![CDATA[<td><a href="javascript:" onclick='javascript:RefreshPageTo(event, "]]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <PageUrl /><HTML>?</HTML>
+                <GetVar Name="NextPageData" />
+              </ScriptQuote><HTML><![CDATA[");javascript:return false;'>]]></HTML><HTML><![CDATA[<img src="/_layouts/15/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/next.gif" border="0" alt="]]><![CDATA[$Resources:core,idNext;]]><![CDATA["></a></td>]]></HTML>
+            </Default>
+          </Switch><HTML><![CDATA[</tr></table></td></tr>
+<tr><td class="ms-bottompagingline3"><img src="/_layouts/15/images/blank.gif?rev=23" width='1' height='1' alt="" /></td></tr>
+</table>]]></HTML><HTML><![CDATA[
+<script type="text/javascript">
+  var topPagingCell = document.getElementById("topPagingCell]]></HTML>
+          <GetVar Name="WPQ" /><HTML><![CDATA[");
+  var bottomPagingCell = document.getElementById("bottomPagingCell]]></HTML>
+          <GetVar Name="WPQ" /><HTML><![CDATA[");
+  if (topPagingCell != null && bottomPagingCell != null)
+  {
+    topPagingCell.innerHTML = bottomPagingCell.innerHTML;
+  }
+</script>
+]]></HTML>
+        </PagedRowset>
+        <PagedClientCallbackRowset><HTML><![CDATA[<tr><td></td><td align="left" class="ms-vb">]]></HTML>
+          <Switch>
+            <Expr>
+              <GetVar Name="NextPageData" />
+            </Expr>
+            <Case Value="" />
+            <Default><HTML><![CDATA[&#160;<a href="]]></HTML>
+              <PageUrl HTMLEncode="TRUE" /><HTML>?</HTML>
+              <GetVar Name="NextPageData" HTMLEncode="TRUE" /><HTML><![CDATA[" onclick='javascript:RefreshPageTo(event, "]]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <PageUrl /><HTML>?</HTML>
+                <GetVar Name="NextPageData" />
+              </ScriptQuote><HTML><![CDATA[");javascript:return false;'>]]></HTML><HTML><![CDATA[$Resources:core,groupMore;]]></HTML><HTML><![CDATA[</a>&#160;]]></HTML>
+            </Default>
+          </Switch><HTML><![CDATA[</td></tr>]]></HTML>
+        </PagedClientCallbackRowset>
+        <PagedRecurrenceRowset><HTML><![CDATA[<table width="100%" border="0"><tr><td  nowrap="nowrap" class="ms-vb">]]></HTML>
+          <Switch>
+            <Expr>
+              <GetVar Name="PrevPageData" />
+            </Expr>
+            <Case Value="" />
+            <Default><HTML><![CDATA[&#160;<a id="onetidPrev" href=
+                "javascript:" onclick='javascript:RefreshPageTo(event, "]]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <PageUrl /><HTML>?</HTML>
+                <GetVar Name="PrevPageData" />
+              </ScriptQuote><HTML><![CDATA[");javascript:return false;'
+                ><img src="/_layouts/15/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/prev.gif" border="0" alt="]] /><![CDATA[$Resources:core,idPrevious;]]><![CDATA["></a>
+                <a href=
+                "javascript:" onclick='javascript:RefreshPageTo(event, "]]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <PageUrl /><HTML>?</HTML>
+                <GetVar Name="PrevPageData" />
+              </ScriptQuote><HTML><![CDATA[");javascript:return false;'
+                >]]></HTML><HTML>$Resources:core,idPrevious;</HTML><HTML><![CDATA[</a>]]></HTML>
+            </Default>
+          </Switch><HTML><![CDATA[</td><td align="$Resources:core,align-right;" nowrap="nowrap" class="ms-vb">]]></HTML><HTML></HTML>
+          <Switch>
+            <Expr>
+              <GetVar Name="NextPageData" />
+            </Expr>
+            <Case Value="" />
+            <Default><HTML><![CDATA[<a href=
+                "javascript:" onclick='javascript:RefreshPageTo(event, "]]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <PageUrl /><HTML>?</HTML>
+                <GetVar Name="NextPageData" />
+              </ScriptQuote><HTML><![CDATA[");javascript:return false;'
+            >]]></HTML><HTML>$Resources:core,idNext;</HTML><HTML><![CDATA[</a>
+            <a id="onetidNext" href=
+                "javascript:" onclick='javascript:RefreshPageTo(event, "]]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <PageUrl /><HTML>?</HTML>
+                <GetVar Name="NextPageData" />
+              </ScriptQuote><HTML><![CDATA[");javascript:return false;'
+                ><img src="/_layouts/15/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/next.gif" border="0" alt="]] /><![CDATA[$Resources:core,idNext;]]><![CDATA["></a>&#160;]]></HTML>
+            </Default>
+          </Switch><HTML><![CDATA[</td></tr></table>]]></HTML>
+        </PagedRecurrenceRowset>
+        <RowLimit Paged="TRUE">30</RowLimit>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="ViewCategory.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditCategory.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewCategory.aspx" WebPartZoneID="Main" />
+    </Forms>
+    <DefaultDescription>
+            $Resources:core,categories_schema_blg_description;
+        </DefaultDescription>
+  </MetaData>
+  <Data>
+    <Rows>
+      <Row>
+        <Field Name="Title">$Resources:core,categories_schema_blg_default_category1;</Field>
+      </Row>
+      <Row>
+        <Field Name="Title">$Resources:core,categories_schema_blg_default_category2;</Field>
+      </Row>
+      <Row>
+        <Field Name="Title">$Resources:core,categories_schema_blg_default_category3;</Field>
+      </Row>
+    </Rows>
+  </Data>
+</List>

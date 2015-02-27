@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="C43A587E-195B-4d29-ABA8-EBB22B48EB1A"
+          Title="$Resources:spscore,PeopleFeatures_ProfileAdmin_Text;"
+          Description="$Resources:spscore,PeopleFeatures_ProfileAdmin_Desc;"
+          Version="14.0.0.0"
+          Scope="Farm"
+          Hidden="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <ElementManifests>
+        <ElementManifest Location="profileadminlinks.xml"/>
+    </ElementManifests>
+
+</Feature>
+

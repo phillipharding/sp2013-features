@@ -1,0 +1,6 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Control Id="MobileSiteNavigationLink2" Sequence="100"
+		ControlClass="Microsoft.Office.Server.Search.MobileControls.MobileSearchPageNavigation"
+		ControlAssembly="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+	</Control>
+</Elements>

@@ -1,0 +1,12 @@
+<Feature  Id="7D12C4C3-2321-42e8-8FB6-5295A849ED08"
+          Title="Taxonomy Tenant Administration"
+          Description="Enables taxonomy tenant administration."
+          Version="14.0.0.0"
+          Scope="Web"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="default.xml" />
+    </ElementManifests>
+</Feature>

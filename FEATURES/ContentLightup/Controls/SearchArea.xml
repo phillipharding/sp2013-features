@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Control 
+        Id="SmallSearchInputBox" 
+        Sequence="100"
+        ControlClass="Microsoft.SharePoint.WebControls.SearchArea"
+        ControlAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Property Name="ID">SmallSearchInputBox1</Property>
+    </Control>
+    <CustomAction 
+        Id="ExportEventToolbarButton"
+        Location="DisplayFormToolbar"
+        Title="$Resources:ContentLightup_EventToolbar_ExportEventButton;"
+        RegistrationType="List"
+        RegistrationId="106">
+        <UrlAction Url="~site/_vti_bin/owssvr.dll?CS=109&amp;Cmd=Display&amp;List={ListId}&amp;CacheControl=1&amp;ID={RecurrenceId}&amp;Using=event.ics"/>   
+    </CustomAction>
+    <CustomAction
+        Id="ExportContactToolbarButton"
+        Location="DisplayFormToolbar"
+        Title="$Resources:ContentLightup_EventToolbar_ExportContactButton;"
+        RegistrationType="List"
+        RegistrationId="105">
+        <UrlAction Url="~site/_vti_bin/owssvr.dll?CS=109&amp;Cmd=Display&amp;List={ListId}&amp;CacheControl=1&amp;ID={ItemId}&amp;Using=vcard.vcf"/>   
+    </CustomAction>
+</Elements>

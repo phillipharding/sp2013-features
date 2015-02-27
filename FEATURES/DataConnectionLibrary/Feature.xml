@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+    Id="00BFEA71-DBD7-4F72-B8CB-DA7AC0440130"
+    DefaultResourceFile="core"
+    Title="Data Connections Feature"
+    Hidden="TRUE"
+    SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+    Version="14.0.0.0"
+    Scope="Web">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\DataConnectionLibrary.xml" />
+    </ElementManifests>
+</Feature>

@@ -1,0 +1,18 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="MasterPages" Url="_catalogs/masterpage" Path="" RootWebOnly="FALSE">
+        <File Url="mysite.master" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:spscore,MySiteMaster_Title;" />
+            <Property Name="MasterPageDescription" Value="$Resources:spscore,MySiteMaster_Description;" />
+        </File>
+    </Module>
+    <HideCustomAction
+        Id="HideSaveAsTemplate"
+        HideActionId="SaveAsTemplate"
+        GroupId="SiteTasks"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideEnableSearchConfigExport"
+        HideActionId="EnableSearchConfigExport"
+        GroupId="SiteTasks"
+        Location="Microsoft.SharePoint.SiteSettings" />
+</Elements>

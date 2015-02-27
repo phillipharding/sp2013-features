@@ -1,0 +1,39 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+		<Field ID="{66B691CF-07A3-4CA6-AC6D-27FA969C8569}" DisplayName="$Resources:ipfscore,FieldDisplayNameFormName;" Type="Text" Required="FALSE" Name="FormName" RowOrdinal="0" Group="_Hidden"/>
+		<Field ID="{65572D4D-445A-43F1-9C77-3358222A2C93}" DisplayName="$Resources:ipfscore,FieldDisplayNameCategory;" Type="Text" Required="FALSE" Name="FormCategory" RowOrdinal="0" Group="_Hidden"/>
+		<Field ID="{94AD6F7C-09A1-42CA-974F-D24E080160C2}" DisplayName="$Resources:ipfscore,FieldDisplayNameVersion;" Type="Text" Required="FALSE" Name="FormVersion" RowOrdinal="0" ShowInEditForm="FALSE" Group="_Hidden"/>
+		<Field ID="{1A03FA74-8C63-40CC-BD06-73B580BD8744}" DisplayName="$Resources:ipfscore,FieldDisplayNameFormID;" Type="Text" Required="FALSE" Name="FormId" RowOrdinal="0" Group="_Hidden"/>
+		<Field ID="{96C27C9D-33F5-4f8e-893E-684014BC7090}" DisplayName="$Resources:ipfscore,FieldDisplayNameFormLocale;" Type="Text" Required="FALSE" Name="FormLocale" RowOrdinal="0" Group="_Hidden"/>
+		<Field ID="{1FFF255C-6C88-4a76-957B-AE24BF07B78C}" DisplayName="$Resources:ipfscore,FieldDisplayNameDescription;" Type="Text" Required="FALSE" Name="FormDescription" RowOrdinal="0" Group="_Hidden"/>
+		<Field ID="{58EB8694-8BD6-4f98-8097-374BD97FFEC4}" DisplayName="$Resources:ipfscore,FieldDisplayNameContentTypeID;" Type="Text" Required="FALSE" Name="CustomContentTypeId" Hidden="TRUE" RowOrdinal="0" Group="_Hidden"/>
+		<Field ID="{4EF69CA4-4179-4d27-9E6C-F9544D45DFDC}" DisplayName="$Resources:ipfscore,FieldDisplayNameShowInCatalog;" Type="Boolean" Required="FALSE" Name="ShowInCatalog" RowOrdinal="0" Group="_Hidden">
+			<Default>TRUE</Default>
+		</Field>
+
+		<Field ReadOnly="TRUE" Type="Computed" ID="{1A03FA74-8C63-40CC-BD06-73B580BD8743}" Name="LinkTemplateName" DisplayName="$Resources:ipfscore,FieldDisplayNameLinkTemplateName;" 
+			Group="_Hidden"
+			DisplayNameSrcField="FormName" Filterable="FALSE" AuthoringInfo="$Resources:ipfscore,FieldAutoringInfoLinkTemplateName;">
+			<FieldRefs>
+				<FieldRef Name="FormName"/>
+				<FieldRef Name="EncodedAbsUrl"/>
+			</FieldRefs>
+			<DisplayPattern>
+				<HTML><![CDATA[<A HREF="]]></HTML><Field Name="EncodedAbsUrl"/><HTML><![CDATA[" ]]></HTML>
+				<HTML><![CDATA[ ONCLICK="if (!event.shiftKey) {window.location =']]></HTML><HttpVDir/>
+				<HTML><![CDATA[/_layouts/15/FormServer.aspx?XsnLocation=]]></HTML>
+				<Field Name="EncodedAbsUrl"/>
+				<IfEqual>
+					<Expr1><ListProperty Select="DefaultItemOpen" /></Expr1>
+					<Expr2>1</Expr2>
+					<Then><HTML><![CDATA[&OpenIn=Browser]]></HTML></Then>
+				</IfEqual>
+				<HTML><![CDATA[';return false;}">]]></HTML>
+				<LookupColumn Name="FormName" HTMLEncode="TRUE"/>
+				<HTML><![CDATA[</A>]]></HTML>
+			</DisplayPattern>
+		</Field>
+
+		<Field ID="{467E811F-0C12-4A93-BB04-42FF0C1C597B}" DisplayName="$Resources:ipfscore,FieldDisplayNameTemplateId;" Type="Text" ShowInEditForm="FALSE" Required="TRUE" Name="TemplateId" RowOrdinal="0" Group="_Hidden"/>
+		<Field ID="{467E811F-0C12-4A93-BB04-42FF0C1C597C}" DisplayName="$Resources:ipfscore,FieldDisplayNameFormRelativeUrl;" Type="Text" ShowInEditForm="FALSE" Required="TRUE" Name="FormRelativeUrl" RowOrdinal="0" Group="_Hidden"/>
+
+</Elements>

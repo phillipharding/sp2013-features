@@ -1,0 +1,61 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="EDUDisplayTemplates" Url="_catalogs/masterpage/Display Templates/Search" Path="DisplayTemplates" RootWebOnly="TRUE">
+        <File Url="Item_EducationAssignment.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="EduAssignmentItem" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:Microsoft.Office.Server.Search,TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="0" />
+            <Property Name="TargetControlType" Value=";#SearchResults;#" />
+            <Property Name="ManagedPropertyMapping" Value="" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Item_EducationBook.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="EduDetailsItem" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:Microsoft.Office.Server.Search,TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="0" />
+            <Property Name="TargetControlType" Value=";#SearchResults;#" />
+            <Property Name="ManagedPropertyMapping" Value="" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Item_EducationLesson.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="EduLessonItem" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:Microsoft.Office.Server.Search,TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="0" />
+            <Property Name="TargetControlType" Value=";#SearchResults;#" />
+            <Property Name="ManagedPropertyMapping" Value="" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Item_EducationAssignment_HoverPanel.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="EduAssignmentHoverpanel" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:Microsoft.Office.Server.Search,TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="0" />
+            <Property Name="TargetControlType" Value=";#SearchResults;#" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Item_EducationBook_HoverPanel.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="EduDetailsHoverpanel" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:Microsoft.Office.Server.Search,TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="0" />
+            <Property Name="TargetControlType" Value=";#SearchResults;#" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Item_EducationLesson_HoverPanel.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="EduLessonHoverpanel" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:Microsoft.Office.Server.Search,TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="0" />
+            <Property Name="TargetControlType" Value=";#SearchResults;#" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+</Module>
+</Elements>

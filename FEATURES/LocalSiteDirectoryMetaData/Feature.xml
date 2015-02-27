@@ -1,0 +1,10 @@
+<Feature  Id="8F15B342-80B1-4508-8641-0751E2B55CA6"
+          Title="Local Site Directory MetaData Capture Feature"
+          Description="Feature that sets location to local site directory for site metadata capture"
+          Version="14.0.0.0"
+          Scope="Web"
+          Hidden="TRUE"
+          ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Portal.LocalSiteDirCaptureFeatureHandler"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

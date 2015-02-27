@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EmailContent>
+  <Subject>$ResourcesNoEncode:core,EvalSiteRequestedMailSubject;</Subject>
+  <Body>
+    <HTML>
+      <![CDATA[<html>
+      <body>
+      <h3>$Resources:core,UpgradeEvaluationH3;</h3>
+      <p>$Resources:core,EvalSiteRequestedPara;</p>
+      </body></html>]]>
+    </HTML>
+  </Body>
+</EmailContent>

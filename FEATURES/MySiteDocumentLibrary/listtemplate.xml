@@ -1,0 +1,15 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        FeatureId="E9C0FF81-D821-4771-8B4C-246AA7E5E9EB"
+        Name="MySiteDocumentLibrary"
+        Type="700"
+        BaseType="1"
+        OnQuickLaunch="TRUE"
+        FolderCreation="TRUE"
+        Hidden="TRUE"
+        SecurityBits="11"
+        AllowDeletion="FALSE"
+        DisplayName="$Resources:spscore,PeopleFeatures_MyDocuments_Text;"
+        Image="/_layouts/15/images/itdl.png?rev=23"
+        DocumentTemplate="121"/>
+</Elements>

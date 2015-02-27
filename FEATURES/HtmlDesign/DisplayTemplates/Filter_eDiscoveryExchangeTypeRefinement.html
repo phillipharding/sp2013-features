@@ -1,0 +1,128 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_ExchangeType</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:CompatibleManagedProperties msdt:dt="string"></mso:CompatibleManagedProperties>
+<mso:TemplateHidden msdt:dt="string">1</mso:TemplateHidden>
+<mso:CompatibleSearchDataTypes msdt:dt="string"></mso:CompatibleSearchDataTypes>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106604</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#Refinement;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+</mso:CustomDocumentProperties></xml><![endif]-->
+</head>
+<body>
+    <script>
+        $includeScript("", "~sitecollection/_catalogs/masterpage/Display Templates/Filters/Filter_MultiValue_Body.js");
+    </script>
+    <div id="Filter_eDiscoveryExchangeTypeRefinement">
+<!--#_
+var hasControl = !$isNull(ctx.RefinementControl) && !$isNull(ctx.ClientControl);
+if(hasControl)
+{
+    var queryGroup = ctx.ScriptApplicationManager.queryGroups[ctx.DataProvider.get_queryGroupName()];
+    if(!$isNull(queryGroup) && !$isEmptyArray(queryGroup.displays))
+    {
+        var resultTablesCollection = queryGroup.displays[0].get_currentResultTableCollection();
+        if(!$isNull(resultTablesCollection) && !$isEmptyArray(resultTablesCollection.ResultTables))
+        {
+            var totalRows = !$isNull(resultTablesCollection.ResultTables[0].Properties.Discovery_TotalItemCount) ? 
+                resultTablesCollection.ResultTables[0].Properties.Discovery_TotalItemCount : resultTablesCollection.ResultTables[0].TotalRows;
+            hasControl = totalRows > 0;
+            ctx.ClientControl.set_renderedResult(hasControl);
+        }
+    }
+}
+
+function GetselectedTypeTokens() {
+    var selectedTokens = null;
+    if(!$isNull(ctx.DataProvider) && !$isNull(ctx.DataProvider.get_currentQueryState()) && !$isEmptyArray(ctx.DataProvider.get_currentQueryState().r)) {
+        for(var j = 0; j < ctx.DataProvider.get_currentQueryState().r.length; j++) {
+            var refiner = ctx.DataProvider.get_currentQueryState().r[j];
+            if(!$isNull(refiner) && refiner.n.toLowerCase() == "kind") {
+                selectedTokens = [];
+                if(!$isEmptyArray(refiner.t)) {
+                    for(var l=0; l< refiner.t.length; l++) {
+                        if(!$isEmptyString(refiner.t[l])) {
+                            selectedTokens.push(refiner.t[l].toLowerCase());
+                        }
+                    }
+                }
+                break;
+            }
+        }
+    }
+    return selectedTokens;
+}
+
+function StringArrayContains(list, token) {
+    var contains = false;
+    if(!$isEmptyArray(list) && !$isNull(token)) {
+        if(!$isNull(list.IndexOf)) {
+            contains = list.IndexOf(token) != -1;
+        }
+        else {
+            for(var k = 0; k < list.length; k++) {
+                contains = list[k] == token;
+                if(contains) break;
+            }
+        }
+    }
+    return contains;
+}
+
+if(hasControl) {
+    propertyName = ctx.RefinementControl.propertyName;
+    displayTitle = Srch.Refinement.getRefinementTitle(ctx.RefinementControl);
+    isExpanded = true;
+
+    var exchangeTypeRefiners = 
+    [
+        [$resource("rf_EDiscExTypeRefinerValue_Email"),     "email"],
+        [$resource("rf_EDiscExTypeRefinerValue_Contacts"),  "contacts"],
+        [$resource("rf_EDiscExTypeRefinerValue_Meetings"),  "meetings"],
+        [$resource("rf_EDiscExTypeRefinerValue_Tasks"),     "tasks"],
+        [$resource("rf_EDiscExTypeRefinerValue_Notes"),     "notes"],
+        [$resource("rf_EDiscExTypeRefinerValue_Documents"), "docs"],
+        [$resource("rf_EDiscExTypeRefinerValue_Journal"),   "journals"],
+        [$resource("rf_EDiscExTypeRefinerValue_IM"),        "im"]
+    ];
+
+    var selectedTypeTokens = GetselectedTypeTokens();
+    var refiners = [];
+    var allRefiners = [];
+    var isCurrentSelected = false;
+    for (var i = 0; i < exchangeTypeRefiners.length; i++) {
+        isCurrentSelected = !$isEmptyArray(selectedTypeTokens) && StringArrayContains(selectedTypeTokens, exchangeTypeRefiners[i][1]);
+        var refinerConfig = 
+        {   
+            RefinementName: exchangeTypeRefiners[i][0],
+            RefinementToken: exchangeTypeRefiners[i][1],
+            IsSelected: isCurrentSelected
+        };
+        allRefiners.push(refinerConfig);
+        if(isCurrentSelected) {
+            refiners.push(refinerConfig);
+        }
+    }
+    if($isEmptyArray(refiners)) {
+        refiners = allRefiners;
+    }
+    ctx["DisplayTemplateData"]["BodyTemplateId"] = "~sitecollection/_catalogs/masterpage/Display Templates/Filters/Filter_MultiValue_Body.js";
+    ctx.RefinementControl["csr_propertyName"] = propertyName;
+    ctx.RefinementControl["csr_displayTitle"] = displayTitle;
+    ctx.RefinementControl["csr_filters"] = refiners;
+    ctx.RefinementControl["csr_isExpanded"] = isExpanded;
+    ctx.RefinementControl["csr_renderEmptyContainer"] = !hasControl;
+    ctx.RefinementControl["csr_useContains"] = true;
+    ctx.RefinementControl["csr_useKQL"] = true;
+_#-->
+    _#= ctx.RenderBody(ctx) =#_
+<!--#_
+}
+_#-->
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="F6924D36-2FA8-4f0b-B16D-06B7250180FA"
+          Title="$Resources:osrvcore,PublishingUberSiteFeatureTitle;"
+          Description="$Resources:osrvcore,PublishingUberSiteFeatureDescription;"
+          Version="15.0.4.0"
+          Scope="Site"
+          ReceiverAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Publishing.PublishingSiteFeatureHandler"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ActivationDependencies>
+        <ActivationDependency FeatureId="A392DA98-270B-4e85-9769-04C0FDE267AA" />
+        <ActivationDependency FeatureId="AEBC918D-B20F-4a11-A1DB-9ED84D79C87E" />
+        <ActivationDependency FeatureId="89E0306D-453B-4ec5-8D68-42067CDBF98E" />
+        <ActivationDependency FeatureId="D3F51BE2-38A8-4e44-BA84-940D35BE1566" />
+        <ActivationDependency FeatureId="EAF6A128-0482-4F71-9A2F-B1C650680E77" />
+        <ActivationDependency FeatureId="8B2C6BCB-C47F-4F17-8127-F8EAE47A44DD" />
+        <ActivationDependency FeatureId="A4C654E4-A8DA-4db3-897C-A386048F7157" />
+        <ActivationDependency FeatureId="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" />
+        <ActivationDependency FeatureId="068BC832-4951-11DC-8314-0800200C9A66" />
+        <ActivationDependency FeatureId="A942A218-FA43-4d11-9D85-C01E3E3A37CB"/>
+        <ActivationDependency FeatureId="57CC6207-AEBF-426E-9ECE-45946EA82E4A"/>
+        <ActivationDependency FeatureId="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" /> 
+        <ActivationDependency FeatureId="0C8A9A47-22A9-4798-82F1-00E62A96006E" />
+        <ActivationDependency FeatureId="5BCCB9A4-B903-4fd1-8620-B795FA33C9BA" />
+        <ActivationDependency FeatureId="5B79B49A-2DA6-4161-95BD-7375C1995EF9"/>
+        <ActivationDependency FeatureId="4E7276BC-E7AB-4951-9C4B-A74D44205C32" />
+    </ActivationDependencies>
+</Feature>

@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="XML Forms Template" Url="xmlform" BaseType="1">
+  <MetaData>
+    <ContentTypes>
+      <ContentTypeRef ID="0x010101">
+        <Folder TargetName="Forms/Form" />
+      </ContentTypeRef>
+      <ContentTypeRef ID="0x0120" />
+    </ContentTypes>
+    <Fields>
+      <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" ShowInNewForm="FALSE" ShowInFileDlg="FALSE" DisplayName="$Resources:core,Title;" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title">
+      </Field>
+      <Field ID="{4b1bf6c6-4f39-45ac-acd5-16fe7a214e5e}" Type="Text" Name="TemplateUrl" DisplayName="$Resources:core,Template_Link;" XName="TemplateUrl" Filterable="TRUE" Sortable="TRUE" Hidden="TRUE" FromBaseType="TRUE" PITarget="mso-infoPathSolution" PIAttribute="href" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="TemplateUrl">
+      </Field>
+      <Field ID="{cd1ecb9f-dd4e-4f29-ab9e-e9ff40048d64}" Type="Text" Name="xd_ProgID" DisplaceOnUpgrade="TRUE" DisplayName="$Resources:core,Html_File_Link;" XName="ProgID" Filterable="TRUE" Sortable="TRUE" Hidden="TRUE" FromBaseType="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="xd_ProgID">
+      </Field>
+      <Field ID="{fbf29b2d-cae5-49aa-8e0a-29955b540122}" Type="Boolean" Group="_Hidden" Name="xd_Signature" DisplaceOnUpgrade="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="xd_Signature" DisplayName="$Resources:core,Xml_signed;" XName="{FBF29B2D-CAE5-49aa-8E0A-29955B540122}" Filterable="TRUE" Sortable="TRUE" Sealed="TRUE" Hidden="TRUE" FromBaseType="TRUE" ReadOnly="TRUE">
+      </Field>
+      <Field ID="{e52012a0-51eb-4c0c-8dfb-9b8a0ebedcb6}" ReadOnly="TRUE" Type="Computed" Name="Combine" DisplayName="$Resources:core,Merge;" Filterable="FALSE" Sortable="FALSE" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Combine">
+        <FieldRefs>
+          <FieldRef Name="FSObjType" Key="Primary" />
+          <FieldRef Name="EncodedAbsUrl" />
+          <FieldRef Name="TemplateUrl" />
+        </FieldRefs>
+        <DisplayPattern>
+          <IfEqual>
+            <Expr1>
+              <Field Name="FSObjType" />
+            </Expr1>
+            <Expr2>0</Expr2>
+            <Then><HTML><![CDATA[<input id="chkCombine" type="CHECKBOX" title="$Resources:core,Merge;" href="]]></HTML>
+              <Field Name="EncodedAbsUrl" /><HTML><![CDATA[">]]></HTML><HTML><![CDATA[<input id="chkUrl" type="HIDDEN" href="]]></HTML>
+              <Column Name="TemplateUrl" HTMLEncode="true" /><HTML><![CDATA[">]]></HTML><HTML><![CDATA[<input id="chkProgID" type="HIDDEN" href="]]></HTML>
+              <MapToControl><HTML>|</HTML>
+                <GetFileExtension>
+                  <Column Name="TemplateUrl" HTMLEncode="true" />
+                </GetFileExtension>
+              </MapToControl><HTML><![CDATA[">]]></HTML>
+            </Then>
+          </IfEqual>
+        </DisplayPattern>
+      </Field>
+      <Field ID="{5d36727b-bcb2-47d2-a231-1f0bc63b7439}" ReadOnly="TRUE" Type="Computed" Name="RepairDocument" DisplayName="$Resources:core,Relink;" Filterable="FALSE" Sortable="FALSE" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RepairDocument">
+        <FieldRefs>
+          <FieldRef Name="FSObjType" Key="Primary" />
+          <FieldRef Name="ID" />
+        </FieldRefs>
+        <DisplayPattern>
+          <IfEqual>
+            <Expr1>
+              <Field Name="FSObjType" />
+            </Expr1>
+            <Expr2>0</Expr2>
+            <Then><HTML><![CDATA[<input id="chkRepair" type="CHECKBOX" title="$Resources:core,Relink;" docID="]]></HTML>
+              <Field Name="ID" /><HTML><![CDATA[">]]></HTML>
+            </Then>
+          </IfEqual>
+        </DisplayPattern>
+      </Field>
+      <Field ID="{11851948-B05E-41be-9D9F-BC3BF55D1DE3}" Name="ShowRepairView" DisplaceOnUpgrade="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="ShowRepairView" Type="Text" Group="_Hidden" DisplayName="$Resources:ShowRepairView" Filterable="TRUE" Sortable="TRUE" Hidden="TRUE" FromBaseType="TRUE" />
+      <Field ID="{086F2B30-460C-4251-B75A-DA88A5B205C1}" Name="ShowCombineView" DisplaceOnUpgrade="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="ShowCombineView" Type="Text" Group="_Hidden" DisplayName="$Resources:ShowCombineView" Filterable="TRUE" Sortable="TRUE" Hidden="TRUE" FromBaseType="TRUE" />
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Position="After" Type="Freeform">
+          <IfHasRights>
+            <RightsChoices>
+              <RightsGroup PermAddListItems="required" />
+            </RightsChoices>
+            <Then><HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idAddNewDoc" href="]]></HTML>
+              <HttpVDir /><HTML><![CDATA[/_layouts/15/Upload.aspx?List=]]></HTML>
+              <ListProperty Select="Name" /><HTML><![CDATA[&RootFolder=]]></HTML>
+              <GetVar Name="RootFolder" URLEncode="TRUE" /><HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <HttpVDir />
+              </ScriptQuote><HTML><![CDATA[/_layouts/15/Upload.aspx?List=]]></HTML>
+              <ListProperty Select="Name" /><HTML><![CDATA[&RootFolder=]]></HTML>
+              <GetVar Name="RootFolder" URLEncode="TRUE" /><HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML><HTML>$Resources:core,Add_New_Document;</HTML><HTML><![CDATA[</a></div>]]></HTML>
+            </Then>
+          </IfHasRights>
+        </Toolbar>
+        <RowLimit>20</RowLimit>
+        <ViewFields>
+          <FieldRef Name="DocIcon">
+          </FieldRef>
+          <FieldRef Name="LinkFilenameNoMenu">
+          </FieldRef>
+          <FieldRef Name="Editor">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noitemsinview_doclibrary)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noitemsinview_doclibrary_howto)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,All_Documents;" DefaultView="TRUE" MobileView="True" MobileDefaultView="True" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/dlicon.png?rev=23" Url="Forms/AllItems.aspx">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard">
+        </Toolbar>
+        <ViewFields>
+          <FieldRef Name="DocIcon">
+          </FieldRef>
+          <FieldRef Name="LinkFilename">
+          </FieldRef>
+          <FieldRef Name="Modified">
+          </FieldRef>
+          <FieldRef Name="Editor">
+          </FieldRef>
+          <FieldRef Name="CheckoutUser">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="FileLeafRef" />
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noitemsinview_doclibrary)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noitemsinview_doclibrary_howto2)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="2" Type="HTML" FileDialog="TRUE" TabularView="FALSE" DisplayName="$Resources:core,File_Dialog_View;" Hidden="TRUE" Path="filedlg.htm" ModerationType="Moderator">
+        <ViewHeader>
+          <SetVar Name="FileDialog">1</SetVar><HTML><![CDATA[
+            <table id="FileDialogViewTable" width="100%" style="cursor: default;" border="0" rules="rows" cellspacing="0" cellpadding="2">
+                <tr>
+        ]]></HTML>
+          <Fields><HTML><![CDATA[<th class="ms-vh2-nofilter">]]></HTML>
+            <Field /><HTML><![CDATA[</th>]]></HTML>
+          </Fields><HTML><![CDATA[</tr>]]></HTML>
+        </ViewHeader>
+        <ViewBody>
+          <SetVar Name="FileDialog">1</SetVar>
+          <IfEqual>
+            <Expr1>
+              <GetVar Name="AlternateStyle" />
+            </Expr1>
+            <Expr2>ms-alternating</Expr2>
+            <Then>
+              <SetVar Scope="Request" Name="AlternateStyle">
+              </SetVar>
+            </Then>
+            <Else>
+              <SetVar Scope="Request" Name="AlternateStyle">ms-alternating</SetVar>
+            </Else>
+          </IfEqual>
+          <Switch>
+            <Expr>
+              <LookupColumn Name="FSObjType" />
+            </Expr>
+            <Case Value="1"><HTML>&lt;TR fileattribute=folder ID="</HTML>
+            </Case>
+            <Default><HTML>&lt;TR fileattribute=file ID="</HTML>
+            </Default>
+          </Switch>
+          <Field Name="EncodedAbsUrl" /><HTML><![CDATA[" class="]]></HTML>
+          <GetVar Name="AlternateStyle" /><HTML><![CDATA[" onmousedown="selectrow()" onclick="selectrow()">]]></HTML>
+          <Fields><HTML><![CDATA[<td class="ms-vb" style="padding-left: 4px">]]></HTML>
+            <FieldSwitch>
+              <Expr>
+                <Property Select="Type" />
+              </Expr>
+              <Case Value="User">
+                <LookupColumn HTMLEncode="TRUE" />
+              </Case>
+              <Default>
+                <FieldSwitch>
+                  <Expr>
+                    <Property Select="Name" />
+                  </Expr>
+                  <Case Value="CheckoutUser">
+                    <Field HTMLEncode="TRUE" />
+                  </Case>
+                  <Default>
+                    <Field />
+                  </Default>
+                </FieldSwitch>
+              </Default>
+            </FieldSwitch><HTML><![CDATA[</td>]]></HTML>
+          </Fields><HTML><![CDATA[</tr>]]></HTML>
+        </ViewBody>
+        <ViewFooter><HTML><![CDATA[</table>]]></HTML>
+        </ViewFooter>
+        <ViewEmpty>
+          <SetVar Name="FileDialog">1</SetVar><HTML><![CDATA[
+            <table id="FileDialogViewTable" width="100%" style="cursor: default;" border="0" rules="rows" cellspacing="0" cellpadding="2">
+                <tr>
+        ]]></HTML>
+          <Fields>
+            <Switch>
+              <Expr>
+                <Property Select="Name" />
+              </Expr>
+              <Case Value="FileLeafRef">
+              </Case>
+              <Default><HTML><![CDATA[<th class="ms-vh2-nofilter">]]></HTML>
+                <Field /><HTML><![CDATA[</th>]]></HTML>
+              </Default>
+            </Switch>
+          </Fields><HTML><![CDATA[</tr></table>]]></HTML><HTML><![CDATA[<table width="100%" border="0" rules="rows"><tr>]]></HTML><HTML><![CDATA[<td class="ms-vb">]]></HTML><HTML>$Resources:core,noDocOfSpecType;</HTML><HTML><![CDATA[</td></tr></table>]]></HTML>
+        </ViewEmpty>
+        <ViewFields>
+          <FieldRef Name="DocIcon">
+          </FieldRef>
+          <FieldRef Name="BaseName">
+          </FieldRef>
+          <FieldRef Name="Editor" TextOnly="TRUE">
+          </FieldRef>
+          <FieldRef Name="Modified" TextOnly="TRUE">
+          </FieldRef>
+          <FieldRef Name="CheckoutUser" TextOnly="TRUE">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="FSObjType" Key="Primary" />
+            <FieldRef Name="FileLeafRef" />
+          </OrderBy>
+        </Query>
+      </View>
+      <View BaseViewID="3" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,Explorer_View;" Url="Forms/WebFldr.aspx" TabularView="FALSE" SetupPath="pages\webfldr.aspx" ImageUrl="/_layouts/15/images/dlicon.png?rev=23" RequiresClientIntegration="TRUE" ReadOnly="TRUE">
+        <Toolbar Type="Standard">
+        </Toolbar>
+        <XslLink>main.xsl</XslLink>
+        <ViewEmpty><HTML><![CDATA[
+        <iframe id="expFrame" width="100%" height="500px" name="expFrame" src="/_layouts/blank.htm"></iframe>
+        <script type="text/javascript">
+        function navtoframe()
+        {
+        }
+        function navtoframe2()
+        {
+            NavigateHttpFolderIfSupported(
+                ]]></HTML>
+          <ScriptQuote>
+            <Switch>
+              <Expr>
+                <GetVar Name="RootFolder" />
+              </Expr>
+              <Case Value="">
+                <ListUrlDir ForInstance="TRUE" />
+              </Case>
+              <Default>
+                <GetVar Name="RootFolder" />
+              </Default>
+            </Switch>
+          </ScriptQuote><HTML><![CDATA[, "expFrame");
+        }
+        var _spBodyOnLoadFunctionNames;
+        if (_spBodyOnLoadFunctionNames == null)
+        { 
+            _spBodyOnLoadFunctionNames = new Array();
+        }
+        _spBodyOnLoadFunctionNames.push("navtoframe2");
+        </script>]]></HTML>
+        </ViewEmpty>
+        <ViewFields />
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="6" Type="HTML" TabularView="FALSE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Position="After" Type="Freeform">
+          <IfHasRights>
+            <RightsChoices>
+              <RightsGroup PermAddListItems="required" />
+            </RightsChoices>
+            <Then><HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idAddNewDoc" href="]]></HTML>
+              <HttpVDir /><HTML><![CDATA[/_layouts/15/Upload.aspx?List=]]></HTML>
+              <ListProperty Select="Name" /><HTML><![CDATA[&RootFolder=]]></HTML>
+              <GetVar Name="RootFolder" URLEncode="TRUE" /><HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <HttpVDir />
+              </ScriptQuote><HTML><![CDATA[/_layouts/15/Upload.aspx?List=]]></HTML>
+              <ListProperty Select="Name" /><HTML><![CDATA[&RootFolder=]]></HTML>
+              <GetVar Name="RootFolder" URLEncode="TRUE" /><HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML><HTML>$Resources:core,Add_New_Document;</HTML><HTML><![CDATA[</a></div>]]></HTML>
+            </Then>
+          </IfHasRights>
+        </Toolbar>
+        <RowLimit>12</RowLimit>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noitemsinview_doclibrary)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noitemsinview_doclibrary_howto)" />
+        </ParameterBindings>
+        <ViewFields>
+          <FieldRef Name="DocIcon">
+          </FieldRef>
+          <FieldRef Name="LinkFilename">
+          </FieldRef>
+          <FieldRef Name="Editor">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+      <View BaseViewID="7" AggregateView="TRUE" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,Merge_Documents;" ToolbarTemplate="MergeToolBar" TabularView="FALSE" DefaultView="FALSE" Url="Forms/Combine.aspx" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/dlicon.png?rev=23" Hidden="TRUE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard">
+        </Toolbar>
+        <RowLimit Paged="TRUE">100</RowLimit>
+        <ViewFields>
+          <FieldRef Name="DocIcon">
+          </FieldRef>
+          <FieldRef Name="LinkFilename">
+          </FieldRef>
+          <FieldRef Name="Combine">
+          </FieldRef>
+          <FieldRef Name="Modified">
+          </FieldRef>
+          <FieldRef Name="Editor">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="FileLeafRef" />
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noitemsinview_doclibrary)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noitemsinview_doclibrary_howto2)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="8" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,My_Documents;" DefaultView="FALSE" Url="Forms/MyItems.aspx" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/dlicon.png?rev=23" ReqAuth="TRUE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard">
+        </Toolbar>
+        <ViewFields>
+          <FieldRef Name="DocIcon">
+          </FieldRef>
+          <FieldRef Name="LinkFilename">
+          </FieldRef>
+          <FieldRef Name="Modified">
+          </FieldRef>
+          <FieldRef Name="Editor">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <Where>
+            <Eq>
+              <FieldRef Name="Author">
+              </FieldRef>
+              <Value Type="">
+                <UserID />
+              </Value>
+            </Eq>
+          </Where>
+          <OrderBy>
+            <FieldRef Name="FileLeafRef" />
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noitemsinview_doclibrary)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noitemsinview_doclibrary_howto2)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="9" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,Relink_Documents;" ToolbarTemplate="RelinkToolBar" TabularView="FALSE" DefaultView="FALSE" Url="Forms/repair.aspx" Hidden="TRUE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard">
+        </Toolbar>
+        <RowLimit Paged="TRUE">100</RowLimit>
+        <ViewFields>
+          <FieldRef Name="DocIcon">
+          </FieldRef>
+          <FieldRef Name="LinkFilenameNoMenu">
+          </FieldRef>
+          <FieldRef Name="RepairDocument">
+          </FieldRef>
+          <FieldRef Name="Modified">
+          </FieldRef>
+          <FieldRef Name="Editor">
+          </FieldRef>
+          <FieldRef Name="ContentType">
+          </FieldRef>
+          <FieldRef Name="TemplateUrl">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="FileLeafRef" />
+          </OrderBy>
+          <Where>
+            <Neq>
+              <FieldRef Name="xd_Signature" />
+              <Value Type="Boolean">1</Value>
+            </Neq>
+          </Where>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noitemsinview_doclibrary)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noitemsinview_doclibrary_howto2)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="Forms/DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="Forms/EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="Forms/Upload.aspx" WebPartZoneID="Main" />
+    </Forms>
+    <DefaultDescription>
+        $Resources:core,camlidDc5;
+    </DefaultDescription>
+  </MetaData>
+</List>

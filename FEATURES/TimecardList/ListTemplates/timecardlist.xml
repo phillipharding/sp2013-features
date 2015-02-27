@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="timecard"
+        Type="420"
+        BaseType="0"
+        OnQuickLaunch="FALSE"
+        FolderCreation="FALSE"
+        Unique="TRUE"
+        Hidden="TRUE" 
+        SecurityBits="11"
+        DisplayName="$Resources:core,GbwListTemplateTimeCardDisplay;"
+        Description="$Resources:core,GbwListTemplateTimeCardDescription;"
+        Image="/_layouts/15/images/itgbtmcd.gif?rev=23"/>
+    <CustomAction
+      Id="Ribbon.TimecardTab"
+      Location="CommandUI.Ribbon"
+      Sequence="99"
+      UIVersion="4"
+      Title="$Resources:core,cui_TimecardTabCustomActionTitle;">
+      <CommandUIExtension>
+       <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.Tabs._children">
+         <Tab Id="Ribbon.Timecard" 
+          Command="TimecardTab" 
+          Description="" 
+          Title="$Resources:core,cui_TimecardTabTitle;">
+          <Scaling Id="Ribbon.Timecard.Scaling">
+            <MaxSize Id="Ribbon.Timecard.Scaling.Actions.MaxSize" Sequence="10" GroupId="Ribbon.Timecard.Actions" Size="Large" />
+            <MaxSize Id="Ribbon.Timecard.Scaling.Manage.MaxSize" Sequence="20" GroupId="Ribbon.Timecard.Manage" Size="LargeMedium" />
+            <MaxSize Id="Ribbon.Timecard.Scaling.Settings.MaxSize" Sequence="30" GroupId="Ribbon.Timecard.Settings" Size="Large" />
+          </Scaling>
+          <Groups Id="Ribbon.Timecard.Groups">
+            <Group 
+              Id="Ribbon.Timecard.Actions"
+              Sequence="10"
+              Command="TimecardActions"
+              Description=""
+              Title="$Resources:core,cui_TimecardActionsGroupTitle;"
+              Template="Ribbon.Templates.Flexible" 
+            >
+              <Controls Id="Ribbon.Timecard.Actions.Controls">
+                <Button
+                  Id="Ribbon.Timecard.Actions.Save"
+                  Sequence="10"
+                  LabelText="$Resources:core,cui_TimecardActionsSave;"
+                  Alt="$Resources:core,cui_TimecardActionsSaveAlt;"
+                  Command="TimecardActionsSave"
+                  Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-127" Image16by16Left="-91"
+                  Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-477" Image32by32Left="-307"
+                  TemplateAlias="o1"
+                  ToolTipTitle="$Resources:core,cui_stt_TimecardActionsSave;"
+                  ToolTipDescription="$Resources:core,cui_stt_TimecardActionsSaveDesc;"
+                />
+              </Controls>
+            </Group>
+            <Group 
+              Id="Ribbon.Timecard.Manage"
+              Sequence="20"
+              Command="TimecardManage"
+              Description=""
+              Title="$Resources:core,cui_TimecardManageGroupTitle;"
+              Template="Ribbon.Templates.Flexible2" 
+            >
+              <Controls Id="Ribbon.Timecard.Manage.Controls">
+                <Button
+                  Id="Ribbon.Timecard.Manage.Create"
+                  Sequence="10"
+                  LabelText="$Resources:core,cui_TimecardManageCreate;"
+                  Alt="$Resources:core,cui_TimecardManageCreateAlt;"
+                  Command="TimecardManageCreate"
+                  Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-109" Image16by16Left="-163"
+                  Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-273" Image32by32Left="-239"
+                  TemplateAlias="o1"
+                  ToolTipTitle="$Resources:core,cui_stt_TimecardManageCreate;"
+                  ToolTipDescription="$Resources:core,cui_stt_TimecardManageCreateDesc;"
+                />
+                <Button
+                  Id="Ribbon.Timecard.Manage.Delete"
+                  Sequence="20"
+                  LabelText="$Resources:core,cui_TimecardManageDelete;"
+                  Alt="$Resources:core,cui_TimecardManageDeleteAlt;"
+                  Command="TimecardManageDelete"
+                  Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-271" Image16by16Left="-271"
+                  Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-69" Image32by32Left="-511"
+                  TemplateAlias="o1"
+                  ToolTipTitle="$Resources:core,cui_stt_TimecardManageDelete;"
+                  ToolTipDescription="$Resources:core,cui_stt_TimecardManageDeleteDesc;"
+                />
+                <Button
+                  Id="Ribbon.Timecard.Manage.Export"
+                  Sequence="30"
+                  LabelText="$Resources:core,cui_TimecardManageExport;"
+                  Alt="$Resources:core,cui_TimecardManageExportAlt;"
+                  Command="TimecardManageExport"
+                  Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-181" Image16by16Left="-73"
+                  Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-239" Image32by32Left="-307"
+                  TemplateAlias="o1"
+                  ToolTipTitle="$Resources:core,cui_stt_TimecardManageExport;"
+                  ToolTipDescription="$Resources:core,cui_stt_TimecardManageExportDesc;"
+                />
+                <Label
+                  Id="Ribbon.Timecard.Manage.CurrentView"
+                  Sequence="40"
+                  Command="CurrentView"
+                  QueryCommand=""
+                  LabelText="$Resources:core,cui_ButCurrentView;"
+                  TemplateAlias="o2"
+                />
+                <DropDown
+                  Id="Ribbon.Timecard.Manage.DisplayView"
+                  Sequence="50"
+                  Command="DisplayView"
+                  PopulateDynamically="true"
+                  PopulateOnlyOnce="true"
+                  PopulateQueryCommand="PopulateViewDropDown"
+                  QueryCommand="QueryDisplayView"
+                  Width="75px"
+                  ToolTipTitle="$Resources:core,cui_ButViewSelector;"
+                  ToolTipDescription="$Resources:core,cui_STT_ButViewSelector;"
+                  TemplateAlias="o2">
+                </DropDown>
+              </Controls>
+            </Group>
+            <Group 
+              Id="Ribbon.Timecard.Settings"
+              Sequence="30"
+              Command="TimecardSettings"
+              Description=""
+              Title="$Resources:core,cui_TimecardSettingsGroupTitle;"
+              Template="Ribbon.Templates.Flexible" 
+            >
+              <Controls Id="Ribbon.Timecard.Settings.Controls">
+                <Button
+                  Id="Ribbon.Timecard.Settings.Settings"
+                  Sequence="30"
+                  LabelText="$Resources:core,cui_TimecardSettingsSettings;"
+                  Alt="$Resources:core,cui_TimecardSettingsSettingsAlt;"
+                  Command="TimecardSettingsSettings"
+                  Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-253" Image16by16Left="-91"
+                  Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-239" Image32by32Left="-443"
+                  TemplateAlias="o1"
+                  ToolTipTitle="$Resources:core,cui_stt_TimecardSettingsSettings;"
+                  ToolTipDescription="$Resources:core,cui_stt_TimecardSettingsSettingsDesc;"
+                />
+              </Controls>
+            </Group>
+          </Groups>
+         </Tab>
+        </CommandUIDefinition>
+       </CommandUIDefinitions>
+      </CommandUIExtension>
+    </CustomAction>
+</Elements>

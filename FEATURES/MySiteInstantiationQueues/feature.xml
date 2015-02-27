@@ -1,0 +1,12 @@
+<Feature  Id="65B53AAF-4754-46D7-BB5B-7ED4CF5564E1"
+          Title="$Resources:osrvcore,MySite_InstantiationQueues_TimerJobs_Feature_Title;"
+          Description="$Resources:osrvcore,MySite_InstantiationQueues_TimerJobs_Feature_Description;"
+          Version="15.0.0.0"
+          Scope="WebApplication"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          ReceiverAssembly="Microsoft.Office.Server.UserProfiles, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.Office.Server.UserProfiles.MySiteInstantiationQueuesFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/"
+	  ActivateOnDefault="TRUE">
+</Feature>

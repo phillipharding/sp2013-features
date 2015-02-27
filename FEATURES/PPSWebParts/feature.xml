@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+		 Id="EE9DBF20-1758-401e-A169-7DB0A6BBCCB2"
+		 Title="$Resources:ppsma,WebPart_ContentType_Title"
+		 Description="$Resources:ppsma,WebPart_ContentType_Description" 
+		 Scope="Site"
+		 SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+		 Hidden="TRUE"
+		 Version="14.0.1.0"
+>
+	<ElementManifests>
+		<ElementManifest Location="elementManifest.xml" />
+		<ElementFile Location="ReportViewWebPart.webpart" />
+		<ElementFile Location="FilterWebPart.webpart" />
+		<ElementFile Location="ScorecardWebPart.webpart" />
+		<ElementFile Location="StackWebPart.webpart" />
+	</ElementManifests>
+</Feature>

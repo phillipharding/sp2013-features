@@ -1,0 +1,6 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="Default" Url="" Path="">
+        <File Url="default.aspx" Type="Ghostable">
+        </File>
+    </Module>
+</Elements>

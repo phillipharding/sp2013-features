@@ -1,0 +1,25 @@
+<Feature Id="756D8A58-4E24-4288-B981-65DC93F9C4E5"
+    Title="$Resources:spscore,SocialRibbonControlFeature_Text;"
+    Description="$Resources:spscore,SocialRibbonControlFeature_Desc;"
+    Version="15.0.2.0"
+    Scope="Farm"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="SocialRibbonControl.xml" />
+        <ElementManifest Location="SocialDelegateControl.xml" />
+        <ElementManifest Location="SocialDelegateControl15.xml" />
+    </ElementManifests>
+    <UpgradeActions>
+        <VersionRange EndVersion="15.0.1.0">
+            <ApplyElementManifests>
+                <ElementManifest Location="SocialDelegateControl15.xml" />
+            </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.2.0">
+            <ApplyElementManifests>
+                <ElementManifest Location="SocialRibbonControl.xml" />
+                <ElementManifest Location="SocialDelegateControl15.xml" />
+            </ApplyElementManifests>
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

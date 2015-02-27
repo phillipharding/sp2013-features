@@ -1,0 +1,237 @@
+/* _lcid="3082" _version="15.0.4442"
+_LocalBinding */
+.ms-reusableTextView{
+background-color:#e0e0e0;
+opacity:.55;
+filter:alpha(opacity=55);
+-moz-opacity:0.55;
+border:1px solid #000000;
+display:inline-block;
+}
+.ms-rteLanguage-ar{
+-ms-name:Árabe;
+}
+.ms-rteLanguage-eu{
+-ms-name:Euskera;
+}
+.ms-rteLanguage-bg{
+-ms-name:Búlgaro;
+}
+.ms-rteLanguage-ca{
+-ms-name:Catalán;
+}
+.ms-rteLanguage-zh-HanS{
+-ms-name:Chino simplificado;
+}
+.ms-rteLanguage-zh-HanT{
+-ms-name:Chino tradicional;
+}
+.ms-rteLanguage-hr{
+-ms-name:Croata;
+}
+.ms-rteLanguage-cs{
+-ms-name:Checo;
+}
+.ms-rteLanguage-da{
+-ms-name:Danés;
+}
+.ms-rteLanguage-nl{
+-ms-name:Neerlandés;
+}
+.ms-rteLanguage-en{
+-ms-name:Inglés;
+}
+.ms-rteLanguage-et{
+-ms-name:Estonio;
+}
+.ms-rteLanguage-fi{
+-ms-name:Finés;
+}
+.ms-rteLanguage-fr{
+-ms-name:Francés;
+}
+.ms-rteLanguage-gl{
+-ms-name:Gallego;
+}
+.ms-rteLanguage-de{
+-ms-name:Alemán;
+}
+.ms-rteLanguage-el{
+-ms-name:Griego;
+}
+.ms-rteLanguage-he{
+-ms-name:Hebreo;
+}
+.ms-rteLanguage-hi{
+-ms-name:Hindi;
+}
+.ms-rteLanguage-hu{
+-ms-name:Húngaro;
+}
+.ms-rteLanguage-ga{
+-ms-name:Irlandés;
+}
+.ms-rteLanguage-it{
+-ms-name:Italiano;
+}
+.ms-rteLanguage-ja{
+-ms-name:Japonés;
+}
+.ms-rteLanguage-kk{
+-ms-name:Kazajo;
+}
+.ms-rteLanguage-ko{
+-ms-name:Coreano;
+}
+.ms-rteLanguage-lv{
+-ms-name:Letón;
+}
+.ms-rteLanguage-lt{
+-ms-name:Lituano;
+}
+.ms-rteLanguage-mk{
+-ms-name:ERY de Macedonia;
+}
+.ms-rteLanguage-ms{
+-ms-name:Malayo;
+}
+.ms-rteLanguage-no{
+-ms-name:Noruego Bokmål;
+}
+.ms-rteLanguage-pl{
+-ms-name:Polaco;
+}
+.ms-rteLanguage-pt-PT{
+-ms-name:Portugués Portugal;
+}
+.ms-rteLanguage-pt-BR{
+-ms-name:Portugués Brasil;
+}
+.ms-rteLanguage-ro{
+-ms-name:Rumano;
+}
+.ms-rteLanguage-ru{
+-ms-name:Ruso;
+}
+.ms-rteLanguage-sr-Latn{
+-ms-name:Serbio latino;
+}
+.ms-rteLanguage-sr-Cyrl{
+-ms-name:Serbio cirílico;
+}
+.ms-rteLanguage-sk{
+-ms-name:Eslovaco;
+}
+.ms-rteLanguage-sl{
+-ms-name:Esloveno;
+}
+.ms-rteLanguage-es{
+-ms-name:Español;
+}
+.ms-rteLanguage-sv{
+-ms-name:Sueco;
+}
+.ms-rteLanguage-th{
+-ms-name:Tailandés;
+}
+.ms-rteLanguage-tr{
+-ms-name:Turco;
+}
+.ms-rteLanguage-uk{
+-ms-name:Ucraniano;
+}
+.ms-rteLanguage-vi{
+-ms-name:Vietnamita;
+}
+.ms-rteLanguage-cy{
+-ms-name:Galés;
+}
+.edit-mode-panel
+{
+display:table;
+border:1px #cccccc solid;
+padding-top:2px;
+background-color:#eeeeee;
+color:#666666;
+margin-left:4px;
+}
+.edit-mode-panel.roll-up
+{
+margin:0 auto;
+}
+.edit-mode-border
+{
+border:#0072bc 1px solid;
+padding:8px;
+margin:1px;
+}
+.ewiki-margin
+{
+padding:0px 0px 10px 11px;
+}
+.article-content,
+.welcome-content
+{
+zoom:1;
+}
+.article .related-links,
+.article .captioned-image,
+.welcome .welcome-image{
+border:#cccccc 1px solid;
+background:#ffffff;
+margin:4px;
+}
+.article-header .by-line
+{
+float:left;
+}
+.article .related-links
+{
+min-width:190px;
+width:190px;
+}
+input.ms-long
+{
+width:250px;
+}
+.ms-formfieldlabelcontainer
+{
+margin:4px 4px 0px 4px;
+font-family:tahoma;
+font-size:8pt;
+font-weight:normal;
+text-align:left;
+color:#777777;
+}
+.ms-formfieldlabelcontainer .ms-formfieldlabel
+{
+padding:1px 4px 1px 4px;
+border-top:1px solid #cccccc;
+border-left:1px solid #cccccc;
+border-right:1px solid #cccccc;
+background-image:url("/_layouts/15/images/globgrad.gif?rev=23");
+background-repeat:repeat-x;
+background-color:#efebef;
+height:18px;
+}
+.ms-formfieldvaluecontainer
+{
+border:1px solid #cccccc;
+margin-left:4px;
+margin-right:4px;
+margin-bottom:4px;
+padding:5px;
+}
+div.ms-rte-border
+{
+border-width:2px;
+padding:4px
+}
+.splash-image img
+{
+max-width:750px;
+}
+* html .article .captioned-image
+{
+width:200px;
+}

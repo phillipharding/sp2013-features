@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="{8B82E40F-2001-4f0e-9CE3-0B27D1866DFF}" 
+    Title="workflow service stapler"
+    Description="workflow service stapler"
+    Scope="Farm"
+    Hidden="TRUE" 
+    Version="1.0.0.0"
+    xmlns="http://schemas.microsoft.com/sharepoint/"
+    ActivateOnDefault="true">
+    <ElementManifests>
+        <ElementManifest Location="elements.xml" />
+    </ElementManifests>
+</Feature>

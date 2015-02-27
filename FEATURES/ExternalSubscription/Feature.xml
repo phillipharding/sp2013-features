@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="5B10D113-2D0D-43BD-A2FD-F8BC879F5ABD"
+    Title="$Resources:core,ExternalSubscriptionFeatureTitle;"
+    Description="$Resources:core,ExternalSubscriptionFeatureDesc;"
+    Scope="Web"
+    Version="15.0.1.0"
+    Hidden="FALSE"
+    DefaultResourceFile="core"
+    ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.BusinessData.Infrastructure.ExternalSubscriptionReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\extsubs.xml" />
+        <ElementFile Location="ExternalSubscriptions\schema.xml" />
+        <ElementManifest Location="ListInstance.xml" />
+    </ElementManifests>
+    <UpgradeActions
+       ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+       ReceiverClass="Microsoft.SharePoint.SPExternalSubscriptionListUpgradeFeatureReceiver">
+        <VersionRange EndVersion="15.0.1.0">
+            <CustomUpgradeAction Name="RemoveView"/>
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

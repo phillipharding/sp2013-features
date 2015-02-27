@@ -1,0 +1,13 @@
+<Feature  Id="F9CB1A2A-D285-465A-A160-7E3E95AF1FDD"
+		Title="$Resources:SimpleSolutionFeatureTitle;"
+		Description="$Resources:SimpleSolutionFeatureDescription;"
+		Version="14.0.0.0"
+		DefaultResourceFile="obacore"
+		Scope="Farm"
+		xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<ElementManifests>
+		<ElementManifest Location="FeatureElements.xml"/>
+	</ElementManifests>
+
+</Feature>

@@ -1,0 +1,10 @@
+<Feature Id="319D8F70-EB3A-4b44-9C79-2087A87799D6"
+    Title="$Resources:spscore,PeopleFeatures_GlobalWP_Text;"
+    Description="$Resources:spscore,PeopleFeatures_GlobalWP_Desc;"
+    Version="14.0.0.0"
+    Scope="Farm"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="featureelements.xml"/>
+    </ElementManifests>
+</Feature>

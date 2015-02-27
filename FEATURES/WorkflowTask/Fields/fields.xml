@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field ID="{55B29417-1042-47F0-9DFF-CE8156667F96}" DisplayName="$Resources:TaskOutcomeField_DisplayName;" Name="TaskOutcome" Type="OutcomeChoice" Sealed="FALSE">
+    <CHOICES>
+      <CHOICE>$Resources:TaskOutcomeField_Approved;</CHOICE>
+      <CHOICE>$Resources:TaskOutcomeField_Rejected;</CHOICE>
+    </CHOICES>
+  </Field>
+  <Field ID="{1F30D200-0D4E-4C8A-A7EB-2E49815BF2BE}" DisplayName="$Resources:WF4InstanceField_DisplayName;" Name="WF4InstanceId" Type="Text" Group="_Hidden" Hidden="TRUE" Sealed="TRUE" Indexed="TRUE"></Field>
+</Elements>

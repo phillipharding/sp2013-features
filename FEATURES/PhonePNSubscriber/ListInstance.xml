@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListInstance Title="$Resources:core,PhonePNSubscriberListTitle;" 
+                  Hidden="TRUE"
+                  TemplateType="2000"
+                  Url="_private/$Resources:core,PhonePNSubscriberListFolderName;"
+                  Description="$Resources:core,PhonePNSubscriberListDescription;">
+    </ListInstance>
+</Elements>

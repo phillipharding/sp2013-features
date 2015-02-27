@@ -1,0 +1,12 @@
+<Feature  Id="6928B0E5-5707-46a1-AE16-D6E52522D52B"
+          Title="$Resources:spscore,MySiteLayouts_Feature_Title;"
+          Description="$Resources:spscore,MySiteLayouts_Feature_Description;"
+          Version="14.0.0.0"
+          Scope="Site"
+          Hidden="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="LayoutFiles.xml"/>
+        <ElementManifest Location="webPartDWPFiles.xml"/>
+    </ElementManifests>
+</Feature>

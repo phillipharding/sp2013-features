@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+
+<Feature  Id="55312854-855B-4088-B09D-C5EFE0FBF9D2"
+          Title="Administrative Reporting Core Pushdown Feature"
+          Description="This feature activates the Administrative Reporting Infrastructure feature in all site templates."
+          Version="14.0.0.0"
+          Hidden="TRUE" 
+          Scope="Farm"
+          ReceiverAssembly="Microsoft.Office.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.Office.Server.Monitoring.AdminReportCorePushdownFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>
+

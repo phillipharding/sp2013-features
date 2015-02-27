@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="C1B78FE6-9110-42E8-87CB-5BD1C8AB278A"
+         Title="$Resources:eduserver,IDS_EduAdminPagesFeatureTitle"
+         Description="$Resources:eduserver,IDS_EduAdminPagesFeatureDescription"
+         SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+         Hidden="TRUE"
+         Version="15.0.2.0"
+         Scope="Site"
+         AlwaysForceInstall="FALSE"
+         DefaultResourceFile="eduserver"
+         ReceiverAssembly="Microsoft.Office.Education.Institution, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+         ReceiverClass="Microsoft.Office.Education.Institution.EduAdminPagesFeatureReceiver"
+         xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<ElementManifests>
+		<ElementManifest Location="elements.xml" />
+		<ElementFile Location="Pages\EduAdmin.aspx" />
+		<ElementFile Location="Pages\DataImport.aspx" />
+		<ElementFile Location="Pages\ManageCourses.aspx" />
+		<ElementFile Location="Pages\ManageOfficeGroupLink.aspx" />
+		<ElementFile Location="Pages\StateChange.aspx" />
+		<ElementFile Location="Pages\ResultsAndReports.aspx" />
+	</ElementManifests>
+
+	<UpgradeActions>
+		<VersionRange EndVersion="15.0.1.0">
+			<ApplyElementManifests>
+				<ElementFile Location="EduAdmin.aspx"/>
+			</ApplyElementManifests>
+		</VersionRange>
+		<VersionRange EndVersion="15.0.2.0">
+			<CustomUpgradeAction Name = "15.0.2.0">
+			</CustomUpgradeAction>
+		</VersionRange>
+	</UpgradeActions>
+</Feature>

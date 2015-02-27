@@ -1,0 +1,66 @@
+<Feature Id="961D6A9C-4388-4cf2-9733-38EE8C89AFD4"
+    Title="$Resources:spscore,CommunitySiteFeature_Text;"
+    Description="$Resources:spscore,CommunitySiteFeature_Desc;"
+    Version="15.0.9.0"
+    Scope="Web"
+    Hidden="FALSE"
+    DefaultResourceFile="spscore"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.CommunitySiteFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ActivationDependencies> 
+        <!-- DiscussionsList Feature -->
+        <ActivationDependency FeatureId="00BFEA71-6A49-43FA-B535-D15C05500108" />
+        <!-- SocialSite Feature -->
+        <ActivationDependency FeatureId="4326E7FC-F35A-4b0f-927C-36264B0A4CF0" />
+        <!-- Ratings Feature -->
+        <ActivationDependency FeatureId="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" />
+
+        <!-- CategoriesList Feature -->
+        <ActivationDependency FeatureId="D32700C7-9EC5-45e6-9C89-EA703EFCA1DF" />
+
+        <!-- MembershipList Feature -->
+        <ActivationDependency FeatureId="947AFD14-0EA1-46c6-BE97-DEA1BF6F5BAE" />
+
+        <!-- AbuseReportsList Feature -->
+        <ActivationDependency FeatureId="C6A92DBF-6441-4b8b-882F-8D97CB12C83A" />
+
+        <!-- WebPageLibrary Feature -->
+        <ActivationDependency FeatureId="00BFEA71-C796-4402-9F2F-0EB9A6E71B18"/>
+    </ActivationDependencies>
+    <ElementManifests>
+        <ElementManifest Location="communitySiteListInstances.xml"/>
+        <ElementManifest Location="elements.xml"/>
+    </ElementManifests>
+   <UpgradeActions
+       ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+       ReceiverClass="Microsoft.SharePoint.Portal.CommunitySiteFeatureReceiver">
+        <VersionRange EndVersion="15.0.0.2">
+            <CustomUpgradeAction Name="AddStatusIntField" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.1.0">
+            <CustomUpgradeAction Name="FixupQLHomePageUrl" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.1.1">
+            <CustomUpgradeAction Name="AddMembersListPreEventReceiver" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.2.0">
+            <CustomUpgradeAction Name="RemoveDiscussionListEventReceivers" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.3.0">
+            <CustomUpgradeAction Name="RemoveTileViewDependency" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.4.0">
+            <CustomUpgradeAction Name="AddTopicPageUrlField" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.5.0">
+            <CustomUpgradeAction Name="EnsureWebIndexedProperties" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.8.0">
+            <CustomUpgradeAction Name="UpdateFeedIntegrationFields" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.9.0">
+            <CustomUpgradeAction Name="UpdateMembersList" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

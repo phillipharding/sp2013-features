@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="345FF4F9-F706-41e1-92BC-3F0EC2D9F6EA"
+        Title="$Resources:core,MonitoredApps_FeatureName;" 
+        Description="$Resources:core,MonitoredApps_FeatureDesc;" 
+        Scope="Site" 
+        Hidden="True"
+        DefaultResourceFile="core"
+        xmlns="http://schemas.microsoft.com/sharepoint/">		
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\MonitoredApps.xml" />
+    </ElementManifests>
+</Feature>

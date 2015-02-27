@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Microsoft.SharePoint.Portal.WebControls.CategoryResultsWebPart,Microsoft.SharePoint.Portal,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+      <importErrorMessage>$Resources:spscore,WPImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+          <property name="DataSourcesString" type="string"><![CDATA[<%@ Register TagPrefix="WebControls" 
+Namespace="Microsoft.SharePoint.Portal.WebControls" Assembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %><WebControls:ObjectCacheDataSource runat="server" ListName="$Resources:spscore,SitesOnet_SitesList_Title;" WebUrl="/SiteDirectory" ></WebControls:ObjectCacheDataSource>]]></property>	
+	<property name="Xsl" type="string"><![CDATA[
+   <xsl:stylesheet xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:d="http://schemas.microsoft.com/sharepoint/dsp" version="1.0" exclude-result-prefixes="xsl ddwrt msxsl" xmlns:ddwrt="http://schemas.microsoft.com/WebParts/v2/DataView/runtime" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:crwp="urn:schemas-microsoft-com:CategoryResultsWebPart">
+     <xsl:output method="html" indent="no"/>
+     <xsl:param name="dvt_adhocmode">sort</xsl:param>
+     <xsl:param name="dvt_adhocfiltermode">xsl</xsl:param>
+     <xsl:param name="dvt_fieldsort">1</xsl:param>
+     <xsl:param name="dvt_sortfield"></xsl:param>
+     <xsl:param name="dvt_groupfield"></xsl:param>
+     <xsl:param name="dvt_groupdisplay"></xsl:param>
+     <xsl:param name="dvt_sortdir"></xsl:param>
+     <xsl:param name="dvt_groupdir"></xsl:param>
+     <xsl:param name="dvt_grouptype"></xsl:param>
+     <xsl:param name="dvt_sorttype">text</xsl:param>
+     <xsl:param name="dvt_groupsorttype">text</xsl:param>
+     <xsl:param name="dvt_filterfield"></xsl:param>
+     <xsl:param name="dvt_filterval"></xsl:param>
+     <xsl:param name="dvt_filtertype"></xsl:param>
+     <xsl:param name="dvt_firstrow">1</xsl:param>
+     <xsl:param name="dvt_nextpagedata"></xsl:param>
+     <xsl:param name="dvt_apos">'</xsl:param>
+     <xsl:param name="filterParam"></xsl:param>
+     <xsl:param name="sdwp_filterfield"></xsl:param>
+     <xsl:param name="sdwp_filtervalue"></xsl:param>
+     <xsl:param name="sdwp_FilterByColumnName"></xsl:param>
+     <xsl:param name="sdwp_FilterByValue"></xsl:param>
+
+     <xsl:template match="/" xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:d="http://schemas.microsoft.com/sharepoint/dsp">
+       <xsl:call-template name="dvt_1"/>
+     </xsl:template>
+
+     <xsl:template name="dvt_1">
+       <xsl:variable name="StyleName">Table</xsl:variable>
+       <xsl:variable name="Rows" select="/dsQueryResponse/NewDataSet/Row"/>
+       <xsl:variable name="RowCount" select="count($Rows)"/>
+       <xsl:variable name="RowLimit" select="50"/>
+       <xsl:variable name="FirstRow" select="$dvt_firstrow"/>
+       <xsl:variable name="LastRow">
+	     <xsl:choose>
+	       <xsl:when test="($FirstRow + $RowLimit - 1) &gt; $RowCount">
+		     <xsl:value-of select="$RowCount"/>
+		   </xsl:when>
+		   <xsl:otherwise>
+		     <xsl:value-of select="$FirstRow + $RowLimit - 1"/>
+		   </xsl:otherwise>
+	     </xsl:choose>
+	</xsl:variable>
+       <xsl:variable name="IsEmpty" select="$RowCount = 0 or $RowLimit = 0"/>
+
+       <xsl:choose>
+         <xsl:when test="$IsEmpty">
+           <xsl:call-template name="dvt_1.empty"/>
+         </xsl:when>
+         <xsl:otherwise>
+           <table border="0" width="100%" cellpadding="0" cellspacing="0" class="ms-sitedirresultssort">
+             <xsl:call-template name="dvt_1.sortrow" />
+           </table>
+           <table border="0" width="100%" cellpadding="0" cellspacing="0" class="ms-sitedirresultspaging">
+             <tr>
+               <td>
+		 <xsl:choose>
+	           <xsl:when test="not($sdwp_FilterByColumnName)">
+		     <xsl:value-of select="$sdwp_FilterByValue" />
+		   </xsl:when>
+		   <xsl:otherwise>
+		     <xsl:value-of select="$sdwp_FilterByColumnName" /> : <xsl:value-of select="$sdwp_FilterByValue" />
+		   </xsl:otherwise>
+	          </xsl:choose>                 
+               </td>
+               <xsl:if test="$FirstRow &gt; 1 or $LastRow &lt; $RowCount">
+                 <xsl:call-template name="dvt_1.paging">
+                   <xsl:with-param name="FirstRow" select="$FirstRow"/>
+                   <xsl:with-param name="LastRow" select="$LastRow"/>
+                   <xsl:with-param name="RowLimit" select="$RowLimit"/>
+                   <xsl:with-param name="RowCount" select="$RowCount"/>
+                   <xsl:with-param name="RealLastRow" select="number(ddwrt:NameChanged('', -100))"/>
+                 </xsl:call-template>
+               </xsl:if>
+             </tr>
+           </table>
+           <table border="0" width="100%" cellpadding="0" cellspacing="0" id="table2" class="ms-sitedirresultsbody">
+             <xsl:call-template name="dvt_1.body">
+               <xsl:with-param name="Rows" select="$Rows[position() &gt;= $FirstRow and position() &lt;= $LastRow]"/>
+               <xsl:with-param name="FirstRow" select="1"/>
+               <xsl:with-param name="LastRow" select="$LastRow - $FirstRow + 1"/>
+             </xsl:call-template>
+           </table>
+
+           <xsl:if test="$FirstRow &gt; 1 or $LastRow &lt; $RowCount">
+             <table border="0" width="100%" cellpadding="0" cellspacing="0" id="table2" class="ms-sitedirresultspaging">
+               <tr>
+                 <td width="100%">
+                 </td>
+                 <xsl:call-template name="dvt_1.paging">
+                   <xsl:with-param name="FirstRow" select="$FirstRow"/>
+                   <xsl:with-param name="LastRow" select="$LastRow"/>
+                   <xsl:with-param name="RowLimit" select="$RowLimit"/>
+                   <xsl:with-param name="RowCount" select="$RowCount"/>
+                   <xsl:with-param name="RealLastRow" select="number(ddwrt:NameChanged('', -100))"/>
+                 </xsl:call-template>
+               </tr>
+             </table>
+           </xsl:if>
+         </xsl:otherwise>
+       </xsl:choose>
+     </xsl:template>
+     <xsl:template name="dvt_1.sortrow">
+       <tr>
+         <td width="100%" />
+         <td noWrap="true">
+           <a>
+              <xsl:attribute name="href">
+                javascript: <xsl:value-of xmlns:xsl="http://www.w3.org/1999/XSL/Transform" select="ddwrt:GenFireServerEvent('dvt_sortfield={Title};dvt_sortdir={asc}')"/>;
+              </xsl:attribute>
+              $Resources:spscore,SitesOnet_CategoryResultsWP_SortByTitle;
+           </a>
+           <span>
+           |
+           </span>
+           <a>
+              <xsl:attribute name="href">
+                javascript: <xsl:value-of xmlns:xsl="http://www.w3.org/1999/XSL/Transform" select="ddwrt:GenFireServerEvent('dvt_sortfield={URL};dvt_sortdir={asc}')"/>;
+              </xsl:attribute>
+              $Resources:spscore,SitesOnet_CategoryResultsWP_SortByUrl;
+           </a>
+         </td>
+       </tr>
+     </xsl:template>
+     <xsl:template name="dvt_1.paging">
+       <xsl:param name="FirstRow"/>
+       <xsl:param name="LastRow"/>
+       <xsl:param name="RowLimit"/>
+       <xsl:param name="RowCount"/>
+       <xsl:param name="RealLastRow"/>
+
+       <xsl:variable name="PrevRow">
+	<xsl:choose>
+	 <xsl:when test="$FirstRow - $RowLimit &lt; 1">1</xsl:when>
+	 <xsl:otherwise>
+	   <xsl:value-of select="$FirstRow - $RowLimit"/>
+	 </xsl:otherwise>
+	</xsl:choose>
+       </xsl:variable>
+       <xsl:variable name="LastRowValue">
+	<xsl:choose>
+	 <xsl:when test="$LastRow &gt; $RealLastRow">
+	   <xsl:value-of select="$LastRow"></xsl:value-of>
+	 </xsl:when>
+	 <xsl:otherwise>
+	  <xsl:value-of select="$RealLastRow"></xsl:value-of>
+	 </xsl:otherwise>
+	</xsl:choose>
+       </xsl:variable>
+       <xsl:variable name="NextRow">
+         <xsl:value-of select="$LastRowValue + 1" />
+       </xsl:variable>
+
+               <td noWrap="true" style="text-align: right;">
+                 <xsl:if test="$dvt_firstrow &gt; 1" ddwrt:cf_ignore="1">
+                  <a>
+                   <xsl:attribute name="href">
+                    javascript: <xsl:value-of select="ddwrt:GenFireServerEvent(concat('dvt_firstrow={',$PrevRow,'}'))"/>;
+                   </xsl:attribute>
+                   <img src="/_layouts/images/prev.gif" border="0" alt="Previous" />
+                  </a>
+                 </xsl:if>
+                 <span>
+                 <xsl:value-of select="$FirstRow"/>
+		 -
+                 <xsl:value-of select="$LastRowValue"/>
+                 </span>
+                 <xsl:if test="$LastRowValue &lt; $RowCount or string-length($dvt_nextpagedata)!=0" ddwrt:cf_ignore="1">
+                  <a>
+                   <xsl:attribute name="href">
+                    javascript: <xsl:value-of select="ddwrt:GenFireServerEvent(concat('dvt_firstrow={',$NextRow,'}'))"/>;
+                   </xsl:attribute>
+                   <img src="/_layouts/images/next.gif" border="0" alt="Next" />
+                  </a>
+                 </xsl:if>
+               </td>
+     </xsl:template>
+     <xsl:template name="dvt_1.body">
+       <xsl:param name="Rows"/>
+       <xsl:param name="FirstRow"/>
+       <xsl:param name="LastRow"/>
+       <xsl:for-each select="$Rows">
+         <xsl:if test="position() &gt;= $FirstRow and position() &lt;= $LastRow">
+
+             <tr>
+               <td valign="top">
+                  <img src="/_layouts/images/lstbulet.gif" alt=""/>
+               </td>
+               <td width="100%" class="ms-sitedirresultstitle">
+		 <a href="{ddwrt:EnsureAllowedProtocol(substring-before(@URL, ', '))}">
+		   <xsl:value-of select="@Title"/>
+		 </a>
+	       </td>
+             </tr>
+             <xsl:if test="@Description[. != '']">
+               <tr>
+                 <td></td>
+                 <td width="100%" class="ms-sitedirresultsdescription"><span><xsl:value-of select="@Description"/></span></td>
+               </tr>
+             </xsl:if>
+             <tr>
+               <td></td>
+               <td width="100%" class="ms-sitedirresultsurl">
+                  <a  href="{ddwrt:EnsureAllowedProtocol(substring-before(@URL, ', '))}" dir="ltr">
+		   <xsl:value-of select="substring-before(@URL, ', ')"/>
+		 </a>
+	       </td>
+             </tr>
+         </xsl:if>
+       </xsl:for-each>
+     </xsl:template>
+     <xsl:template name="dvt_1.empty">
+       <table border="0" width="100%">
+         <tr>
+           <td class="ms-vb">
+	     $Resources:spscore,EmptyViewText;
+	   </td>
+          </tr>
+        </table>
+      </xsl:template>
+
+     </xsl:stylesheet>
+]]>
+	</property>
+
+<property name="ParameterBindings" type="string"><![CDATA[
+  <ParameterBinding Name="dvt_adhocmode" Location="Postback;Connection"/>
+  <ParameterBinding Name="dvt_adhocfiltermode" Location="Postback;Connection"/>
+  <ParameterBinding Name="dvt_fieldsort" Location="Postback;Connection"/>
+  <ParameterBinding Name="dvt_sortfield" Location="Postback;Connection"/>
+  <ParameterBinding Name="dvt_groupfield" Location="Postback;Connection"/>
+  <ParameterBinding Name="dvt_groupdisplay" Location="Postback;Connection"/>
+  <ParameterBinding Name="dvt_sortdir" Location="Postback;Connection"/>
+  <ParameterBinding Name="dvt_groupdir" Location="Postback;Connection"/>
+  <ParameterBinding Name="dvt_grouptype" Location="Postback;Connection"/>
+  <ParameterBinding Name="dvt_sorttype" Location="Postback;Connection"/>
+  <ParameterBinding Name="dvt_groupsorttype" Location="Postback;Connection"/>
+  <ParameterBinding Name="dvt_filterfield" Location="Postback;Connection"/>
+  <ParameterBinding Name="dvt_filterval" Location="Postback;Connection"/>
+  <ParameterBinding Name="dvt_filtertype" Location="Postback;Connection"/>
+  <ParameterBinding Name="dvt_firstrow" Location="Postback;Connection"/>
+  <ParameterBinding Name="dvt_nextpagedata" Location="Postback;Connection"/>
+  <ParameterBinding Name="dvt_apos" Location="Postback;Connection"/>
+  <ParameterBinding Name="filterParam" Location="Postback;Connection"/>
+  <ParameterBinding Name="UserID" Location="CAMLVariable" DefaultValue="CurrentUserName"/>
+  <ParameterBinding Name="Today" Location="CAMLVariable" DefaultValue="CurrentDate"/>
+  <ParameterBinding Name="sdwp_filterfield" Location="QueryString[Column]"/>
+  <ParameterBinding Name="sdwp_filtervalue" Location="QueryString[Value]"/>
+  <ParameterBinding Name="sdwp_FilterByColumnName" Location="Postback;Connection"/>
+  <ParameterBinding Name="sdwp_FilterByValue" Location="Postback;Connection"/>
+]]>
+</property>
+	<property name="Title" type="string">$Resources:spscore,SitesOnet_CategoryResultsWP_Title;</property>
+	<property name="Description" type="string">$Resources:spscore,SitesOnet_CategoryResultsWP_Description;</property>
+	<property name="ChromeType">None</property>
+	<property name="ChromeState">Normal</property>
+	<property name="HelpUrl" type="string">/_layouts/help.aspx</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>
+

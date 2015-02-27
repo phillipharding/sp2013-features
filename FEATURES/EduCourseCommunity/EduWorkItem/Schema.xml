@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="Basic List" FolderCreation="FALSE" Direction="$Resources:core,Direction;" Url="Lists/Basic List" BaseType="0" EnableContentTypes="TRUE">
+    <MetaData>
+        <ContentTypes>
+            <!-- Work Item -->
+            <ContentTypeRef ID="0x010063C2F478ACC511DFB869B5BFDFD720851201" />
+
+            <!-- Copy Work Item -->
+        	<ContentTypeRef ID="0x010063C2F478ACC511DFB869B5BFDFD72085120101" />
+
+            <!-- EduLock -->
+                <ContentTypeRef ID="0x010063C2F478ACC511DFB869B5BFDFD720851257" />
+        </ContentTypes>
+        <Fields>
+            <!-- Work Item ID -->
+            <Field ID="{FE29016D-C747-40BC-B001-C1ABBBA6EE04}"
+                   Name="EduEntityId"
+                   DisplayName="Work Item ID"
+                   Group="Education"
+                   Type="Text"
+                   Indexed="TRUE"
+                   Required="TRUE"
+                   EnforceUniqueValues="TRUE" />
+
+            <!-- Lock Entity Id -->
+            <Field ID="{0B631C7F-8734-42D4-8FB5-7B95350E92E5}"
+                   Name="EduLockEntityId"
+                   DisplayName="$Resources:eduserver,IDS_EduLockEntityIdFieldTitle"
+                   Group="Education"
+                   Type="Text"
+                   Indexed="TRUE"
+                   EnforceUniqueValues="TRUE"/>
+
+            <!-- Lock Status -->
+            <Field ID="{F904F83F-463E-4537-A74A-788DA528F970}"
+                   Name="EduLockStatus"
+                   DisplayName="$Resources:eduserver,IDS_EduLockStatusFieldTitle"
+                   Group="Education"
+                   Type="Boolean"
+                   ShowInDisplayForm="FALSE"
+                   ShowInNewForm="FALSE"
+                   ShowInEditForm="FALSE" />
+
+            <!-- Description -->
+            <Field ID="{3f155110-a6a2-4d70-926c-94648101f0e8}"
+                   Name="Description"
+                   DisplayName="Description"
+                   Type="Note"
+                   Group="_Hidden" />
+
+            <!-- Any -->
+            <Field ID="{4AF405B2-ABF9-11DF-8CBE-D8ADDFD72085}"
+                   Name="EduAny"
+                   DisplayName="Any"
+                   Group="Education"
+                   Type="Note" />
+
+            <!-- Work Item Type -->
+            <Field ID="{CDF9200C-D35C-427E-B308-E0D275DCF99E}"
+		        Name="EduWorkItemType"
+		        DisplayName="Type"
+		        Group="Education"
+                Required="TRUE"
+		        Type="Integer">
+	        </Field>
+
+            <!-- Work Item Status -->
+            <Field ID="{8FCE57DE-580A-4519-8BB8-6F2BA6795105}"
+                   Name="EduWorkItemStatus"
+                   DisplayName="Status"
+                   Group="Education"
+                   Type="Integer" />
+
+            <!-- Work Item Start Date -->
+            <Field ID="{64cd368d-2f95-4bfc-a1f9-8d4324ecb007}"
+                   Name="StartDate"
+                   DisplayName="Start Date"
+                   Type="DateTime"
+                   Group="$Resources:core,Base_Columns;"
+                   Format="DateTime">
+            </Field>
+
+            <!-- Work Item End Date-->
+            <Field ID="{2684f9f2-54be-429f-ba06-76754fc056bf}"
+                   Name="EndDate"
+                   DisplayName="End Date"
+                   Type="DateTime"
+                   Group="_Hidden"
+                   Format="DateTime" />
+
+            <!-- Work Item Error Code -->
+            <Field ID="{F0347070-E8BD-45B8-A33F-6EF1402F5F3A}"
+                   Name="EduWorkItemReturnCode"
+                   DisplayName="Return Code"
+                   Group="Education"
+                   Type="Integer" />
+
+            <!-- Work Item Internal Status Message -->
+            <Field ID="{3DFA2DFD-76D2-4D2C-AAD3-31500BAC6D39}"
+                   Name="EduWorkItemInternalStatusMessage"
+                   DisplayName="Internal Status Message"
+                   Group="Education"
+                   Type="Text" />
+
+            <!-- Work Item Progress -->
+            <Field ID="{5E92B178-BB5F-4A5C-B924-DBB9F62C862E}"
+                   Name="EduWorkItemProgress"
+                   DisplayName="Progress"
+                   Group="Education"
+                   Type="Text" />
+
+            <!-- Copy Source Community -->
+            <Field ID="{5EC05B33-22E8-4725-94E0-DB9A3E79E727}"
+                   Name="EduCopySourceCommunityID"
+                   DisplayName="Copy Source Community ID"
+                   Group="Education"
+                   Type="Text" />
+
+            <!-- Copy Source Entity ID -->
+            <Field ID="{6C6955D6-8B0F-4CBE-8AA6-C37E2652C2E1}"
+                   Name="EduCopySourceEntityID"
+                   DisplayName="Copy Source Entity ID"
+                   Group="Education"
+                   Type="Text" />
+
+            <!-- Copy Source Entity Type -->
+            <Field ID="{5CEC0AC3-6159-4F9E-863D-23C66C0B2AFF}"
+                   Name="EduCopySourceEntityType"
+                   DisplayName="Copy Source Entity Type"
+                   Group="Education"
+                   Type="Text"/>
+
+            <!-- Copy Destination Community -->
+            <Field ID="{CA8D438E-1E58-48FB-B13E-703E8E92A578}"
+                   Name="EduCopyDestinationCommunityID"
+                   DisplayName="Copy Destination Community ID"
+                   Group="Education"
+                   Type="Text" />
+
+            <!-- Copy Destination Entity ID -->
+            <Field ID="{BC09CFFA-505E-4412-87F2-738EFB1F28FB}"
+                   Name="EduCopyDestinationEntityID"
+                   DisplayName="Copy Destination Entity ID"
+                   Group="Education"
+                   Type="Text" />
+
+            <!-- Copy Destination Entity Type -->
+            <Field ID="{CC940CA1-83DC-41CB-98D8-7FA514D78FD2}"
+                    Name="EduCopyDestinationEntityType"
+                    DisplayName="Copy Destination Entity Type"
+                    Group="Education"
+                    Type="Text"/>
+
+            <!-- Copy New Parent Entity ID -->
+            <Field ID="{1B31FCC0-A3B5-4E3B-BDE9-56A68AC72281}"
+                   Name="EduCopyNewParentEntityID"
+                   DisplayName="Copy New Parent Entity ID"
+                   Group="Education"
+                   Type="Text" />
+        </Fields>
+        <Views>
+            <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+                <XslLink Default="TRUE">main.xsl</XslLink>
+                <RowLimit Paged="TRUE">30</RowLimit>
+                <Toolbar Position="After" Type="Freeform">
+                    <IfHasRights>
+                        <RightsChoices>
+                            <RightsGroup PermAddListItems="required" />
+                        </RightsChoices>
+                        <Then>
+                            <HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idAddNewItem" href="]]></HTML>
+                            <URL Cmd="New" />
+                            <HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML>
+                            <ScriptQuote NotAddingQuote="TRUE">
+                                <URL Cmd="New" />
+                            </ScriptQuote>
+                            <HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML>
+                            <HTML>$Resources:core,addnewitem;</HTML>
+                            <HTML><![CDATA[</a></div>]]></HTML>
+                        </Then>
+                    </IfHasRights>
+                </Toolbar>
+                <RowLimit>20</RowLimit>
+                <ViewFields>
+                    <FieldRef Name="LinkTitleNoMenu">
+                    </FieldRef>
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="Modified" Ascending="FALSE">
+                        </FieldRef>
+                    </OrderBy>
+                </Query>
+                <ParameterBindings>
+                    <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+                    <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+                    <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+                </ParameterBindings>
+            </View>
+            <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+                <XslLink Default="TRUE">main.xsl</XslLink>
+                <RowLimit Paged="TRUE">30</RowLimit>
+                <Toolbar Type="Standard" />
+                <ViewFields>
+                    <FieldRef Name="Attachments" />
+                    <FieldRef Name="LinkTitle" />
+
+                    <!-- Adding for debugging purposes -->
+                    <FieldRef Name="EduEntityId" />
+                    <FieldRef Name="Author" />
+                    <FieldRef Name="EduWorkItemType" />
+                    <FieldRef Name="EduWorkItemStatus" />
+                    <FieldRef Name="StartDate" />
+                    <FieldRef Name="EndDate" />
+                    <FieldRef Name="EduWorkItemReturnCode" />
+                    <FieldRef Name="EduCopySourceCommunityID" />
+                    <FieldRef Name="EduCopySourceEntityID" />
+                    <FieldRef Name="EduCopySourceEntityType" />
+                    <FieldRef Name="EduCopyDestinationCommunityID" />
+                    <FieldRef Name="EduCopyDestinationEntityID" />
+                    <FieldRef Name="EduCopyDestinationEntityType" />
+                    <FieldRef Name="EduCopyNewParentEntityID" />
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="ID">
+                        </FieldRef>
+                    </OrderBy>
+                </Query>
+                <ParameterBindings>
+                    <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+                    <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+                </ParameterBindings>
+            </View>
+        </Views>
+        <Forms>
+            <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+            <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+            <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+        </Forms>
+    </MetaData>
+</List>

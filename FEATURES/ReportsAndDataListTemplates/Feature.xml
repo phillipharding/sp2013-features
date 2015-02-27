@@ -1,0 +1,19 @@
+<Feature  Id="B435069A-E096-46E0-AE30-899DACA4B304"
+          Title="$Resources:spscore,ReportsAndDataListTemplate_Feature_Title;"
+          Description="$Resources:spscore,ReportsAndDataListTemplate_Feature_Description;"
+          Hidden="FALSE"
+          DefaultResourceFile="spscore"
+          Version="15.0.0.0"
+          Scope="Site"
+          SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\ReportDocumentLibrary.xml"/>
+    </ElementManifests>
+    <ActivationDependencies>
+	<!-- Reports and Data Fields -->
+        <ActivationDependency FeatureId="365356EE-6C88-4CF1-92B8-FA94A8B8C118" />
+	<!-- Reports and Data Content Type -->
+        <ActivationDependency FeatureId="E0A9F213-54F5-4A5A-81D5-F5F3DBE48977" />
+    </ActivationDependencies>
+</Feature>

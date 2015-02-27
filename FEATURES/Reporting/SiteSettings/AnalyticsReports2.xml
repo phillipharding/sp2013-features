@@ -1,0 +1,18 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Id="Ribbon.Library.Share.Analytics" 
+        Location="CommandUI.Ribbon">
+        <CommandUIExtension>
+            <CommandUIDefinitions>
+			    <CommandUIDefinition Location="Ribbon.Library.Share.Controls._children"> <Button Id="Ribbon.Library.Share.ViewTopReport" Sequence="40" Command="viewTopReport" Image16by16="/_layouts/15/images/topreport16x16.png?rev=23" Image32by32="/_layouts/15/images/topreport32x32.png?rev=23" LabelText="$Resources:dlccore,Reporting_TopReportFeatureTitle;" ToolTipTitle="$Resources:dlccore,Reporting_TopReportFeatureTitle;" ToolTipDescription="$Resources:dlccore,SiteSettings_AnalyticsReports_Tooltip;" TemplateAlias="o1"/> </CommandUIDefinition>
+            </CommandUIDefinitions>
+            <CommandUIHandlers>
+                <CommandUIHandler Command="viewTopReport" CommandAction="javascript: function invokeViewTopReport() { STSNavigate('{SiteUrl}' + '/_layouts/15/topreport.aspx' + '?List=' + encodeURIComponent(ctx.listName)); } invokeViewTopReport();" EnabledScript="javascript: function enableViewTopReport() {     return true; } enableViewTopReport();" />
+            </CommandUIHandlers>
+        </CommandUIExtension>
+    </CustomAction>
+    <Control 
+      Id="CalloutUsage"
+      ControlClass="Microsoft.Office.Server.WebControls.CalloutUsageControl" 
+      ControlAssembly="Microsoft.Office.DocumentManagement, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+</Elements>

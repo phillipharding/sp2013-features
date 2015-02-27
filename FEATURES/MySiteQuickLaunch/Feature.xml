@@ -1,0 +1,13 @@
+<Feature Id="034947CC-C424-47cd-A8D1-6014F0E36925"
+    Title="$Resources:spscore,PeopleFeatures_MySiteQuickLaunch_Text;"
+    Description="$Resources:spscore,PeopleFeatures_MySiteQuickLaunch_Desc;"
+    Version="14.0.0.0"
+    Hidden="TRUE"
+    Scope="Web"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.UserProfiles.MySiteQuickLaunchFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="mysitequicklaunchfeatureelements.xml"/>
+    </ElementManifests>
+</Feature>

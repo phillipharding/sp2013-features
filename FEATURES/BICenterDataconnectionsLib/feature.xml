@@ -1,0 +1,13 @@
+<Feature Id="26676156-91A0-49F7-87AA-37B1D5F0C4D0" 
+    Title="$Resources:ppsma,BIDataConnections_ContentLib_Title"
+    Description="$Resources:ppsma,BIDataConnections_ContentLib_Description"
+    Version="15.0.0.0"
+    Scope="Web"
+    SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+    Hidden="TRUE"
+    DefaultResourceFile="core"    
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\BICenterDataconnectionsLib.xml" />
+    </ElementManifests>
+</Feature>

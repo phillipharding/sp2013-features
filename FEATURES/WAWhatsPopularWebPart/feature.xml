@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+
+<Feature  Id="8E947BF0-FE40-4dff-BE3D-A8B88112ADE6"
+          Title="$Resources:wacore,WAWhatsPopularWebPartFeatureTitle"
+          Description="$Resources:wacore,WAWhatsPopularWebPartFeatureDesc"
+          Version="15.0.0.0"
+          Hidden="TRUE" 
+          Scope="Site"
+          SolutionId="5FEE007F-3729-4a78-86FB-688D8597713C"
+          ReceiverAssembly="Microsoft.Office.Server.WebAnalytics.UI, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.Office.Server.WebAnalytics.WhatsPopularWebPartFeature" 
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml" />
+  </ElementManifests>
+</Feature>
+

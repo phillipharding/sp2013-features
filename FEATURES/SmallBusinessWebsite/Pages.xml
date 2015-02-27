@@ -1,0 +1,185 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">        
+   <Module Name="SearchResults" Url="$Resources:osrvcore,List_Pages_UrlName;" Path="Files" RootWebOnly="TRUE">
+        <File Url="searchresults.aspx" IgnoreIfAlreadyExists="TRUE" Type="GhostableInLibrary" />
+   </Module>
+   <Module Name="BlogPages" Url="$Resources:osrvcore,List_Pages_UrlName;" Path="Files" RootWebOnly="TRUE">
+        <File Url="Blog.aspx" IgnoreIfAlreadyExists="TRUE" Type="GhostableInLibrary">
+            <AllUsersWebPart WebPartZoneID="Right" WebPartOrder="0">
+                <![CDATA[
+                <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2" xmlns:BGWP="http://schemas.microsoft.com/WebPart/v2/ContentEditor">
+                    <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                    <TypeName>Microsoft.SharePoint.WebPartPages.BlogAdminWebPart</TypeName>
+                    <Title>$Resources:core,adminlinks_schema_blg_title;</Title>
+                    <Description>$Resources:core,blog_admin_links;</Description>
+                    <FrameType>None</FrameType>
+                    <FrameState>Normal</FrameState>
+                    <IsVisible>true</IsVisible>
+                    <PartOrder>0</PartOrder>
+                    <BGWP:PostUrl>$Resources:cmscore,PublishingBlogBlogText;/$Resources:cmscore,PublishingBlogPostText;/{ID}/{Title}</BGWP:PostUrl>
+                    <BGWP:CategoryUrl>$Resources:cmscore,PublishingBlogBlogText;/$Resources:cmscore,PublishingBlogCategoryText;/{CategoryId}/{Name}</BGWP:CategoryUrl>
+                </WebPart>
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="Right" WebPartOrder="1">
+                <![CDATA[
+                <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2" xmlns:BGWP="http://schemas.microsoft.com/WebPart/v2/ContentEditor">
+                    <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                    <TypeName>Microsoft.SharePoint.WebPartPages.BlogMonthQuickLaunch</TypeName>
+                    <Title>$Resources:core,months_schema_blg_title;</Title>
+                    <Description>$Resources:core,blog_month_quick_launch;</Description>
+                    <FrameType>None</FrameType>
+                    <FrameState>Normal</FrameState>
+                    <IsVisible>true</IsVisible>
+                    <PartOrder>1</PartOrder>
+                    <BGWP:DateUrl>$Resources:cmscore,PublishingBlogBlogText;/$Resources:cmscore,PublishingBlogDateText;/{Year}/{Month}/{Day}</BGWP:DateUrl>
+                    <BGWP:ArchiveUrl>$Resources:cmscore,PublishingBlogBlogText;/$Resources:cmscore,PublishingBlogArchivesText;</BGWP:ArchiveUrl>
+                </WebPart>
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="Right" WebPartOrder="3">
+                <![CDATA[
+                    <webParts>
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                        <metaData>
+                            <type name="Microsoft.SharePoint.WebPartPages.BlogLinksWebPart, Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+                        </metaData>
+                        <data>
+                            <properties>
+                                <property name="Title" type="string">$Resources:core,BlogNotificationsWPTitle;</property>
+                                <property name="Description" type="string">$Resources:core,BlogNotificationsWPDescription;</property>
+                                <property name="ChromeType" type="chrometype">None</property>
+                                <property name="ListUrl" type="string">$Resources:core,lists_Folder;/$Resources:core,blogpost_Folder;</property>
+                            </properties>
+                        </data>
+                        </webPart>
+                    </webParts>
+                ]]>
+            </AllUsersWebPart>
+        </File>
+        <File Url="Post.aspx" IgnoreIfAlreadyExists="TRUE" Type="GhostableInLibrary">
+            <AllUsersWebPart WebPartZoneID="Right" WebPartOrder="0">
+                <![CDATA[
+                <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2" xmlns:BGWP="http://schemas.microsoft.com/WebPart/v2/ContentEditor">
+                    <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                    <TypeName>Microsoft.SharePoint.WebPartPages.BlogAdminWebPart</TypeName>
+                    <Title>$Resources:core,adminlinks_schema_blg_title;</Title>
+                    <Description>$Resources:core,blog_admin_links;</Description>
+                    <FrameType>None</FrameType>
+                    <FrameState>Normal</FrameState>
+                    <IsVisible>true</IsVisible>
+                    <PartOrder>0</PartOrder>
+                    <BGWP:PostUrl>$Resources:cmscore,PublishingBlogBlogText;/$Resources:cmscore,PublishingBlogPostText;/{ID}/{Title}</BGWP:PostUrl>
+                    <BGWP:CategoryUrl>$Resources:cmscore,PublishingBlogBlogText;/$Resources:cmscore,PublishingBlogCategoryText;/{CategoryId}/{Name}</BGWP:CategoryUrl>
+                </WebPart>
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="Right" WebPartOrder="1">
+                <![CDATA[
+                <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2" xmlns:BGWP="http://schemas.microsoft.com/WebPart/v2/ContentEditor">
+                    <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                    <TypeName>Microsoft.SharePoint.WebPartPages.BlogMonthQuickLaunch</TypeName>
+                    <Title>$Resources:core,months_schema_blg_title;</Title>
+                    <Description>$Resources:core,blog_month_quick_launch;</Description>
+                    <FrameType>None</FrameType>
+                    <FrameState>Normal</FrameState>
+                    <IsVisible>true</IsVisible>
+                    <PartOrder>1</PartOrder>
+                    <BGWP:DateUrl>$Resources:cmscore,PublishingBlogBlogText;/$Resources:cmscore,PublishingBlogDateText;/{Year}/{Month}/{Day}</BGWP:DateUrl>
+                    <BGWP:ArchiveUrl>$Resources:cmscore,PublishingBlogBlogText;/$Resources:cmscore,PublishingBlogArchivesText;</BGWP:ArchiveUrl>
+                </WebPart>
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="Right" WebPartOrder="3">
+                <![CDATA[
+                    <webParts>
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                        <metaData>
+                            <type name="Microsoft.SharePoint.WebPartPages.BlogLinksWebPart, Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+                        </metaData>
+                        <data>
+                            <properties>
+                                <property name="Title" type="string">$Resources:core,BlogNotificationsWPTitle;</property>
+                                <property name="Description" type="string">$Resources:core,BlogNotificationsWPDescription;</property>
+                                <property name="ChromeType" type="chrometype">None</property>
+                                <property name="ListUrl" type="string">$Resources:core,lists_Folder;/$Resources:core,blogpost_Folder;</property>
+                            </properties>
+                        </data>
+                        </webPart>
+                    </webParts>
+                ]]>
+            </AllUsersWebPart>
+        </File>
+        <File Url="Posts.aspx" IgnoreIfAlreadyExists="TRUE" Type="GhostableInLibrary">
+            <AllUsersWebPart WebPartZoneID="Right" WebPartOrder="0">
+                <![CDATA[
+                <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2" xmlns:BGWP="http://schemas.microsoft.com/WebPart/v2/ContentEditor">
+                    <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                    <TypeName>Microsoft.SharePoint.WebPartPages.BlogAdminWebPart</TypeName>
+                    <Title>$Resources:core,adminlinks_schema_blg_title;</Title>
+                    <Description>$Resources:core,blog_admin_links;</Description>
+                    <FrameType>None</FrameType>
+                    <FrameState>Normal</FrameState>
+                    <IsVisible>true</IsVisible>
+                    <PartOrder>0</PartOrder>
+                    <BGWP:PostUrl>$Resources:cmscore,PublishingBlogBlogText;/$Resources:cmscore,PublishingBlogPostText;/{ID}/{Title}</BGWP:PostUrl>
+                    <BGWP:CategoryUrl>$Resources:cmscore,PublishingBlogBlogText;/$Resources:cmscore,PublishingBlogCategoryText;/{CategoryId}/{Name}</BGWP:CategoryUrl>
+                </WebPart>
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="Right" WebPartOrder="1">
+                <![CDATA[
+                <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2" xmlns:BGWP="http://schemas.microsoft.com/WebPart/v2/ContentEditor">
+                    <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                    <TypeName>Microsoft.SharePoint.WebPartPages.BlogMonthQuickLaunch</TypeName>
+                    <Title>$Resources:core,months_schema_blg_title;</Title>
+                    <Description>$Resources:core,blog_month_quick_launch;</Description>
+                    <FrameType>None</FrameType>
+                    <FrameState>Normal</FrameState>
+                    <IsVisible>true</IsVisible>
+                    <PartOrder>1</PartOrder>
+                    <BGWP:DateUrl>$Resources:cmscore,PublishingBlogBlogText;/$Resources:cmscore,PublishingBlogDateText;/{Year}/{Month}/{Day}</BGWP:DateUrl>
+                    <BGWP:ArchiveUrl>$Resources:cmscore,PublishingBlogBlogText;/$Resources:cmscore,PublishingBlogArchivesText;</BGWP:ArchiveUrl>
+                </WebPart>
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="Right" WebPartOrder="3">
+                <![CDATA[
+                    <webParts>
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                        <metaData>
+                            <type name="Microsoft.SharePoint.WebPartPages.BlogLinksWebPart, Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+                        </metaData>
+                        <data>
+                            <properties>
+                                <property name="Title" type="string">$Resources:core,BlogNotificationsWPTitle;</property>
+                                <property name="Description" type="string">$Resources:core,BlogNotificationsWPDescription;</property>
+                                <property name="ChromeType" type="chrometype">None</property>
+                                <property name="ListUrl" type="string">$Resources:core,lists_Folder;/$Resources:core,blogpost_Folder;</property>
+                            </properties>
+                        </data>
+                        </webPart>
+                    </webParts>
+                ]]>
+            </AllUsersWebPart>
+        </File>
+        <File Url="Archives.aspx" IgnoreIfAlreadyExists="TRUE" Type="GhostableInLibrary">
+            <AllUsersWebPart WebPartZoneID="Left" WebPartOrder="0">
+                <![CDATA[
+                <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2" xmlns:BGWP="http://schemas.microsoft.com/WebPart/v2/ContentEditor">
+                    <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                    <TypeName>Microsoft.SharePoint.WebPartPages.BlogYearArchive</TypeName>
+                    <Title>$Resources:core,months_archive_blg_title;</Title>
+                    <Description>$Resources:core,blog_month_archive;</Description>
+                    <FrameType>None</FrameType>
+                    <FrameState>Normal</FrameState>
+                    <IsVisible>true</IsVisible>
+                    <BGWP:DateUrl>$Resources:cmscore,PublishingBlogBlogText;/$Resources:cmscore,PublishingBlogDateText;/{Year}/{Month}/{Day}</BGWP:DateUrl>
+                    <BGWP:ArchiveUrl>$Resources:cmscore,PublishingBlogBlogText;/$Resources:cmscore,PublishingBlogArchivesText;</BGWP:ArchiveUrl>
+                    </WebPart>
+                ]]>
+            </AllUsersWebPart>
+        </File>
+   </Module>
+</Elements>

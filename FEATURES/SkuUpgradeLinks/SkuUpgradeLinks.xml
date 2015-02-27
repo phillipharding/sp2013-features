@@ -1,0 +1,10 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+        <CustomAction 
+            Id="SkuUpgrade"
+            GroupId="Patch"
+            Location="Microsoft.SharePoint.Administration.UpgradeAndMigration"
+            Sequence="7" 
+            Title="$Resources:spscore,OfficeServerUpgradeLink;"> 
+                <UrlAction Url="/_admin/SkuUpgrade.aspx"/>
+        </CustomAction>
+</Elements>

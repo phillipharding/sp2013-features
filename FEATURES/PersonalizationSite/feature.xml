@@ -1,0 +1,11 @@
+<Feature  Id="ED5E77F7-C7B1-4961-A659-0DE93080FA36"
+          Title="Personalization Site"
+          Description="Personalization Site Description"
+          Version="14.0.0.0"
+          Scope="Web"
+          Hidden="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="LayoutFiles.xml"/>
+    </ElementManifests>
+</Feature>

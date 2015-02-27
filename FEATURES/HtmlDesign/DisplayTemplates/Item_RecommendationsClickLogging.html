@@ -1,0 +1,215 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+    <head>
+        <title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_Recommendations</title>
+        <!--[if gte mso 9]><xml>
+        <mso:CustomDocumentProperties>
+        <mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+        <mso:ManagedPropertyMapping msdt:dt="string">'Picture URL'{$Resources:Microsoft.Office.Server.Search,SlotName_ImageURL;}:'PublishingImage;PictureURL;PictureThumbnailURL','Link URL'{$Resources:Microsoft.Office.Server.Search,SlotName_URL;}:'Path','Original Path'{$Resources:Microsoft.Office.Server.Search,SlotName_OriginalPath;}:'OriginalPath','SiteID'{$Resources:Microsoft.Office.Server.Search,SlotName_SiteID;}:'SiteID','Line 1'{$Resources:Microsoft.Office.Server.Search,SlotName_Line1;}:'Title','Line 2'{$Resources:Microsoft.Office.Server.Search,SlotName_Line2;}:'Description','Line 3'{$Resources:Microsoft.Office.Server.Search,SlotName_Line3;}:'','SecondaryFileExtension','ContentTypeId'</mso:ManagedPropertyMapping>
+        <mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+        <mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+        <mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+        <mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+        </mso:CustomDocumentProperties>
+        </xml><![endif]-->
+    </head>
+
+<body>
+
+    <!--
+            Warning: Do not try to add HTML to this section. Only the contents of the first <div>
+            inside the <body> tag will be used while executing Display Template code. Any HTML that
+            you add to this section will NOT become part of your Display Template.
+    -->
+    <script>
+        $includeLanguageScript(this.url, "~sitecollection/_catalogs/masterpage/Display Templates/Language Files/{Locale}/CustomStrings.js");
+    </script>
+
+    <!--
+        Use the div below to author your Display Template. Here are some things to keep in mind:
+        * Surround any JavaScript logic as shown below using a "pound underscore" (#_ ... _#) token
+        inside a comment.
+
+        * Use the values assigned to your variables using an "underscore pound equals"
+        (_#= ... =#_) token.
+    -->
+
+    <div id="Item_RecommendationsClickLogging">
+
+<!--#_
+
+window.LogRecsViewToEventStore = function(url, site, fillIn)
+{
+    if(fillIn == false)
+    {
+        SP.SOD.executeFunc("sp.js", "SP.ClientContext", function()
+        {
+            var spClientContext = SP.ClientContext.get_current();
+            if(!$isNull(spClientContext))
+            {
+                if($isEmptyString(site))
+                {
+                    SP.Analytics.AnalyticsUsageEntry.logAnalyticsEvent(spClientContext, SP.Analytics.EventTypeId.recommendationView, url);
+                    spClientContext.executeQueryAsync(null, null)
+                }
+                else
+                {
+                    var spWeb = spClientContext.get_web();
+                    var spUser = spWeb.get_currentUser();
+                    var spScope = "{00000000-0000-0000-0000-000000000000}";
+                    SP.Analytics.AnalyticsUsageEntry.logAnalyticsEvent2(spClientContext, SP.Analytics.EventTypeId.recommendationView, url, spScope, site, spUser);
+                    spClientContext.executeQueryAsync(null, null)
+                }
+            }
+        });
+    }
+};
+
+window.LogRecsClickToEventStore = function(url, site, redirectURL, fillIn)
+{
+    if(fillIn == "false")
+    {
+        var spClientContext = SP.ClientContext.get_current();
+        if(!$isNull(spClientContext))
+        {
+            if($isEmptyString(site))
+            {
+                SP.Analytics.AnalyticsUsageEntry.logAnalyticsEvent(spClientContext, SP.Analytics.EventTypeId.recommendationClick, url);
+                spClientContext.executeQueryAsync(function() { window.location = redirectURL; }, function() { window.location = redirectURL; })
+            }
+            else
+            {
+                var spWeb = spClientContext.get_web();
+                var spUser = spWeb.get_currentUser();
+                var spScope = "{00000000-0000-0000-0000-000000000000}";
+                SP.Analytics.AnalyticsUsageEntry.logAnalyticsEvent2(spClientContext, SP.Analytics.EventTypeId.recommendationClick, url, spScope, site, spUser);
+                spClientContext.executeQueryAsync(function() { window.location = redirectURL; }, function() { window.location = redirectURL; })
+            }
+        }
+    }
+    else
+    {
+        window.location = redirectURL;
+    }
+};
+
+var isFillIn = function()
+{
+    if (!$isNull(ctx.CurrentGroup.Properties.QueryModification) && !$isNull(ctx.CurrentItem.QueryRuleId))
+    {
+        var queryModification = ctx.CurrentGroup.Properties.QueryModification;
+        var queryRuleId = ctx.CurrentItem.QueryRuleId;
+        if (queryModification.toLowerCase().indexOf("recommendedfor") == -1 && queryRuleId == "00000000-0000-0000-0000-000000000000")
+        {
+           return true;
+        }
+    }
+    return false;
+};
+
+var encodedId = $htmlEncode(ctx.ClientControl.get_nextUniqueId() + "_picture3Lines_");
+
+var linkURL = $getItemValue(ctx, "Link URL");
+linkURL.overrideValueRenderer($urlHtmlEncode);
+
+var line1 = $getItemValue(ctx, "Line 1");
+var line2 = $getItemValue(ctx, "Line 2");
+var line3 = $getItemValue(ctx, "Line 3");
+
+var pictureURL = $getItemValue(ctx, "Picture URL");
+var pictureId = encodedId + "picture";
+var pictureMarkup = Srch.ContentBySearch.getPictureMarkup(pictureURL, 100, 100, ctx.CurrentItem, "cbs-picture3LinesImg", line1, pictureId);
+
+line1.overrideValueRenderer($contentLineText);
+line2.overrideValueRenderer($contentLineText);
+line3.overrideValueRenderer($contentLineText);
+
+var containerId = encodedId + "container";
+var pictureLinkId = encodedId + "pictureLink";
+var pictureContainerId = encodedId + "pictureContainer";
+var dataContainerId = encodedId + "dataContainer";
+var line1LinkId = encodedId + "line1Link";
+var line1Id = encodedId + "line1";
+var line2Id = encodedId + "line2";
+var line3Id = encodedId + "line3";
+
+var clickLoggingId = ctx.ClientControl.get_nextUniqueId() + "_ItemRecommendationsClickLogging_";
+
+var originalPathId = clickLoggingId + "originalPath";
+var originalSiteId = clickLoggingId + "originalSite";
+var linkURLId = clickLoggingId + "linkURL";
+var fillInId = clickLoggingId + "fillIn";
+
+var originalPath = $getItemValue(ctx, "Original Path");
+var originalSite = $getItemValue(ctx, "SiteID");
+
+var fillIn = isFillIn();
+
+LogRecsViewToEventStore(originalPath.value, originalSite.value, fillIn);
+
+var dataDisplayTemplateTitle = "ItemRecommendationsClickLogging";
+
+ _#-->
+        <div class="cbs-picture3LinesContainer" id="_#= containerId =#_" data-displaytemplate="_#= $htmlEncode(dataDisplayTemplateTitle) =#_">
+            <div class="cbs-picture3LinesImageContainer" id="_#= pictureContainerId =#_">
+<!--#_
+if(!linkURL.isEmpty)
+{
+_#-->
+
+                <span id="_#= $htmlEncode(originalPathId) =#_" class="ms-hide">_#= originalPath =#_</span>
+                <span id="_#= $htmlEncode(originalSiteId) =#_" class="ms-hide">_#= originalSite =#_</span>
+                <span id="_#= $htmlEncode(linkURLId) =#_" class="ms-hide">_#= linkURL =#_</span>
+                <span id="_#= $htmlEncode(fillInId) =#_" class="ms-hide">_#= String(fillIn) =#_</span>
+
+                <a class="cbs-pictureImgLink" href="_#= linkURL =#_" title="_#= $htmlEncode(line1.defaultValueRenderer(line1)) =#_" id="_#= pictureLinkId =#_"
+
+                    onclick="var logPath = document.getElementById('_#= $scriptEncode(originalPathId) =#_').innerHTML; var logSite = document.getElementById('_#= $scriptEncode(originalSiteId) =#_').innerHTML; var logLinkURL = document.getElementById('_#= $scriptEncode(linkURLId) =#_').innerHTML; var logFillIn = document.getElementById('_#= $scriptEncode(fillInId) =#_').innerHTML; LogRecsClickToEventStore(logPath, logSite, logLinkURL, logFillIn); return false"
+
+                  >
+<!--#_
+}
+_#-->
+                    _#= pictureMarkup =#_
+<!--#_
+if(!linkURL.isEmpty)
+{
+_#-->
+                </a>
+<!--#_
+}
+_#-->
+            </div>
+            <div class="cbs-picture3LinesDataContainer" id="_#= dataContainerId =#_">
+
+                <span id="_#= $htmlEncode(originalPathId) =#_" class="ms-hide">_#= originalPath =#_</span>
+                <span id="_#= $htmlEncode(originalSiteId) =#_" class="ms-hide">_#= originalSite =#_</span>
+                <span id="_#= $htmlEncode(linkURLId) =#_" class="ms-hide">_#= linkURL =#_</span>
+                <span id="_#= $htmlEncode(fillInId) =#_" class="ms-hide">_#= String(fillIn) =#_</span>
+
+                <a class="cbs-picture3LinesLine1Link" href="_#= linkURL =#_" title="_#= $htmlEncode(line1.defaultValueRenderer(line1)) =#_" id="_#= line1LinkId =#_"
+
+                    onclick="var logPath = document.getElementById('_#= $scriptEncode(originalPathId) =#_').innerHTML; var logSite = document.getElementById('_#= $scriptEncode(originalSiteId) =#_').innerHTML; var logLinkURL = document.getElementById('_#= $scriptEncode(linkURLId) =#_').innerHTML; var logFillIn = document.getElementById('_#= $scriptEncode(fillInId) =#_').innerHTML; LogRecsClickToEventStore(logPath, logSite, logLinkURL, logFillIn); return false"
+
+                  >
+                    <h2 class="cbs-picture3LinesLine1 ms-accentText2 ms-noWrap" id="_#= line1Id =#_"> _#= line1 =#_</h2>
+                </a>
+<!--#_
+if(!line2.isEmpty)
+{
+_#-->
+                <div class="cbs-picture3LinesLine2 ms-noWrap" title="_#= $htmlEncode(line2.defaultValueRenderer(line2)) =#_" id="_#= line2Id =#_" > _#= line2 =#_</div>
+<!--#_
+}
+if(!line3.isEmpty)
+{
+_#-->
+                <div class="cbs-pictureLine3 ms-textSmall ms-noWrap" id="_#= line3Id =#_" title="_#= $htmlEncode(line3.defaultValueRenderer(line3)) =#_">_#= line3 =#_</div>
+<!--#_
+}
+_#-->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="00BFEA71-513D-4CA0-96C2-6A47775C0119" 
+    Title="$Resources:core,gantttaskslistFeatureTitle;" 
+    Description="$Resources:core,gantttaskslistFeatureDesc;" 
+    Scope="Web" 
+    Hidden="TRUE"
+    DefaultResourceFile="core"    
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\GanttTasksList.xml"/>
+    </ElementManifests>
+</Feature>

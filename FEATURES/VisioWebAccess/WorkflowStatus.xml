@@ -1,0 +1,3 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Control Id="WorkflowStatusVisualization" Sequence="90" ControlSrc="~/_controltemplates/15/workflowstatus.ascx" />
+</Elements>

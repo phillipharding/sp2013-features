@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+<CustomAction
+  Id="6a9c4822-504f-42fa-b356-817f821f623b"
+  Location="Microsoft.SharePoint.StandardMenu"
+  GroupId="ActionsMenu"
+  RegistrationType="List"
+  RegistrationId="107"
+  ControlAssembly="Microsoft.Office.Workflow.Feature, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+  ControlClass="Microsoft.Office.Workflow.Feature.ProcessAllTasksButton"
+  />
+</Elements>

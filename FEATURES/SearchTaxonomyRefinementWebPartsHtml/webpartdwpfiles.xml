@@ -1,0 +1,8 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="FilterDisplayTemplates" Url="_catalogs/masterpage/Display Templates/Filters" Path="DisplayTemplates" RootWebOnly="TRUE">
+        <File Url="Control_TaxonomyRefinement.html" Type="GhostableInLibrary" >
+         </File>
+        <File Url="Filter_TaxonomyRefinement.html" Type="GhostableInLibrary" >
+        </File>
+    </Module>
+</Elements>

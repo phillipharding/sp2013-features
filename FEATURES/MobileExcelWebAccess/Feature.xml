@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+	Id="E995E28B-9BA8-4668-9933-CF5C146D7A9F"
+	Title="$Resources:mewa,FeatureSiteMobileEwa-title;"
+	Description="$Resources:mewa,FeatureSiteMobileEwa-description;"
+	SolutionId="A992B0F0-7B6B-4315-B687-649DCAEEF726"
+	Version="15.0.0.0"
+	Hidden="TRUE"
+	Scope="Site">
+</Feature>

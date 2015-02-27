@@ -1,0 +1,13 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="Enterprise Wiki" Url="_catalogs/masterpage" Path="PageLayouts" RootWebOnly="TRUE">
+        <File Url="EnterpriseWiki.aspx" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:cmscore,EnterpriseWiki_DefaultLayout_Title;" />
+            <Property Name="MasterPageDescription" Value="$Resources:cmscore,EnterpriseWiki_DefaultLayout_Description;" />
+            <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+            <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/ArticleBodyOnly.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/ArticleBodyOnly.png" />			
+            <Property Name="PublishingAssociatedContentType" Value=";#$Resources:cmscore,contenttype_enterprisewiki_name;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39004C1F8B46085B4d22B1CDC3DE08CFFB9C;#"/>
+        </File>
+    </Module>
+</Elements>

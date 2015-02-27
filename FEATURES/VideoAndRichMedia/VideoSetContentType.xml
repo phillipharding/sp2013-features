@@ -1,0 +1,188 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Field ID="{2DE1DF7B-48E1-4c8e-BE0F-F00E504B9948}"
+           SourceID="http://schemas.microsoft.com/sharepoint/v3"
+           Name="VideoSetOwner"
+           DisplayName="$Resources:dlccore,VideoSet_Owner_DisplayName;"
+           Description="$Resources:dlccore,VideoSet_Owner_Description;"
+           StaticName="VideoSetOwner"
+           Group="_Hidden"
+           Type="User"
+           List="UserInfo"
+           ShowField="NameWithPictureAndDetails"
+           Hidden="FALSE"
+           ShowInEditForm="TRUE">
+    </Field>
+    <Field ID="{E4CD7CE1-9E29-497b-886E-619E5442ACAD}"
+           SourceID="http://schemas.microsoft.com/sharepoint/v3"
+           Name="VideoSetThumbnailTimeIndex"
+           DisplayName="$Resources:dlccore,VideoSet_ThumbnailTimeIndex_DisplayName;"
+           StaticName="VideoSetThumbnailTimeIndex"
+           Group="_Hidden"
+           Type="Number"
+           Hidden="TRUE"
+           ShowInEditForm="FALSE">
+    </Field>
+    <Field ID="{1F300F90-C9D2-41f5-8EBB-7F2829A4C977}"
+           SourceID="http://schemas.microsoft.com/sharepoint/v3"
+           Name="VideoSetDefaultEncoding"
+           DisplayName="$Resources:dlccore,VideoSet_DefaultEncoding_DisplayName;"
+           StaticName="VideoSetDefaultEncoding"
+           Group="_Hidden"
+           Type="URL"
+           Hidden="TRUE"
+           ShowInEditForm="FALSE">
+    </Field>
+    <Field ID="{28BB615A-BB92-43eb-9770-4F2926228DEE}"
+           SourceID="http://schemas.microsoft.com/sharepoint/v3"
+           Name="VideoSetUserOverrideEncoding"
+           DisplayName="$Resources:dlccore,VideoSet_UserOverrideEncoding_DisplayName;"
+           StaticName="VideoSetUserOverrideEncoding"
+           Group="_Hidden"
+           Type="URL"
+           Hidden="TRUE"
+           ShowInEditForm="FALSE">
+    </Field>
+    <Field ID="{F1393CE1-AC10-4696-987D-CFDCC40AD342}"
+           SourceID="http://schemas.microsoft.com/sharepoint/v3"
+           Name="VideoSetRenditionsInfo"
+           DisplayName="$Resources:dlccore,VideoSet_RenditionsInfo_DisplayName;"
+           StaticName="VideoSetRenditionsInfo"
+           Group="_Hidden"
+           Type="Note"
+           Hidden="TRUE"
+           ShowInEditForm="FALSE">
+    </Field>
+    <Field ID="{1C2CC9D2-3C9F-4a46-8088-17287D608270}"
+           SourceID="http://schemas.microsoft.com/sharepoint/v3"
+           Name="VideoSetExternalLink"
+           DisplayName="$Resources:dlccore,VideoSet_ExternalLink_DisplayName;"
+           StaticName="VideoSetExternalLink"
+           Group="_Hidden"
+           Type="URL"
+           Hidden="TRUE"
+           ShowInEditForm="TRUE">
+    </Field>
+    <Field ID="{AC836BB9-18E1-4f52-B614-E8885543C4C6}"
+           SourceID="http://schemas.microsoft.com/sharepoint/v3"
+           Name="VideoSetEmbedCode"
+           DisplayName="$Resources:dlccore,VideoSet_EmbedCode_DisplayName;"
+           StaticName="VideoSetEmbedCode"
+           Group="_Hidden"
+           Type="Note"
+           RichText="TRUE"
+           RichTextMode="FullHtml"
+           Hidden="TRUE"
+           ShowInEditForm="TRUE">
+    </Field>
+    <Field ID="{9CB4D391-367F-4342-8F17-AC808799784A}"
+           SourceID="http://schemas.microsoft.com/sharepoint/v3"
+           Name="VideoSetShowDownloadLink"
+           DisplayName="$Resources:dlccore,VideoSet_ShowDownloadLink_DisplayName;"
+           Description="$Resources:dlccore,VideoSet_ShowDownloadLink_Description;"
+           StaticName="VideoSetShowDownloadLink"
+           Group="_Hidden"
+           Type="Boolean"
+           Hidden="FALSE"
+           ShowInEditForm="TRUE">
+        <Default>1</Default>
+    </Field>
+    <Field ID="{6E4EE0C4-4D06-4c04-8D02-58D10FDF912D}"
+           SourceID="http://schemas.microsoft.com/sharepoint/v3"
+           Name="VideoSetShowEmbedLink"
+           DisplayName="$Resources:dlccore,VideoSet_ShowEmbedLink_DisplayName;"
+           Description="$Resources:dlccore,VideoSet_ShowEmbedLink_Description;"
+           StaticName="VideoSetShowEmbedLink"
+           Group="_Hidden"
+           Type="Boolean"
+           Hidden="FALSE"
+           ShowInEditForm="TRUE">
+        <Default>1</Default>
+    </Field>
+    <Field ID="{B76B58EC-0549-4f00-9575-2FD28BD55010}"
+           SourceID="http://schemas.microsoft.com/sharepoint/v3"
+           Name="VideoSetDescription"
+           DisplayName="$Resources:dlccore,VideoSet_Description_DisplayName;"
+           Description="$Resources:dlccore,VideoSet_Description_Description;"
+           StaticName="VideoSetDescription"
+           Group="_Hidden"
+           Type="Note"
+           NumLines="5"
+           UnlimitedLengthInDocumentLibrary="TRUE"
+           Hidden="FALSE"
+           ShowInEditForm="TRUE">
+    </Field>    
+  <ContentType 
+      ID="0x0120D520A8"
+      Name="$Resources:core,SystemMediaCollection"
+      Description="$Resources:core,SystemMediaCollectionCTDesc"
+      Group="_Hidden"
+      Sealed="TRUE"
+      ReadOnly="TRUE"
+      Version="0">
+  </ContentType>
+    <ContentType 
+        ID="0x0120D520A808"
+        Name="$Resources:dlccore,VideoSet_ContentType_Name;"
+        Description="$Resources:dlccore,VideoSet_ContentType_Description;"
+        ProgId="Sharepoint.VideoSet"
+        Group="$Resources:cmscore,group_digitalassetcontenttypes;"
+        Version="0">
+        <FieldRefs>
+          <FieldRef ID="{B76B58EC-0549-4f00-9575-2FD28BD55010}" Name="VideoSetDescription" />
+          <FieldRef ID="{2DE1DF7B-48E1-4c8e-BE0F-F00E504B9948}" Name="VideoSetOwner" />
+          <FieldRef ID="{E4CD7CE1-9E29-497b-886E-619E5442ACAD}" Name="VideoSetThumbnailTimeIndex" />
+          <FieldRef ID="{1F300F90-C9D2-41f5-8EBB-7F2829A4C977}" Name="VideoSetDefaultEncoding" />
+          <FieldRef ID="{28BB615A-BB92-43eb-9770-4F2926228DEE}" Name="VideoSetUserOverrideEncoding" />
+          <FieldRef ID="{1C2CC9D2-3C9F-4a46-8088-17287D608270}" Name="VideoSetExternalLink" />
+          <FieldRef ID="{AC836BB9-18E1-4f52-B614-E8885543C4C6}" Name="VideoSetEmbedCode" />
+          <FieldRef ID="{9CB4D391-367F-4342-8F17-AC808799784A}" Name="VideoSetShowDownloadLink" />
+          <FieldRef ID="{6E4EE0C4-4D06-4c04-8D02-58D10FDF912D}" Name="VideoSetShowEmbedLink" />
+          <FieldRef ID="{F1393CE1-AC10-4696-987D-CFDCC40AD342}" Name="VideoSetRenditionsInfo" />
+          <FieldRef ID="{f39d44af-d3f3-4ae6-b43f-ac7330b5e9bd}" Name="AlternateThumbnailUrl" ShowInEditForm="FALSE" />
+          <FieldRef ID="{59CD571E-E2D9-485d-BB5D-E70D12F8D0B7}" Name="VideoWidthInPixels" ShowInEditForm="FALSE"/>
+          <FieldRef ID="{84CD09BD-85A9-461f-86E3-4C3C1738AD6B}" Name="VideoHeightInPixels" ShowInEditForm="FALSE"/>
+          <FieldRef ID="{DE38F937-8578-435e-8CD3-50BE3EA59253}" Name="MediaLengthInSeconds" ShowInEditForm="FALSE" />
+          <FieldRef ID="{BCD999A7-9DCA-4824-A515-878BEE641ED3}" Name="PeopleInMedia" />
+          <FieldRef ID="{b0e12a3b-cf63-47d1-8418-4ef850d87a3c}" Name="NoCrawl" />
+        </FieldRefs>
+        <XmlDocuments>
+          <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+            <FormUrls xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+              <New>_layouts/15/NewVideoSet.aspx</New>
+              <Edit>_layouts/15/EditVideoSet.aspx</Edit>
+            </FormUrls>
+          </XmlDocument>
+          <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+            <FormTemplates  xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+              <Display>ListForm</Display>
+              <Edit>VideoSetEditForm</Edit>
+              <New>ListForm</New>
+            </FormTemplates>
+          </XmlDocument>
+          <XmlDocument NamespaceURI="http://schemas.microsoft.com/office/videosets/videosettemplate">
+            <VideoSetTemplate xmlns="http://schemas.microsoft.com/office/videosets/videosettemplate" LastModified="1/1/1 0:00:01 AM">
+            </VideoSetTemplate>
+          </XmlDocument>
+        </XmlDocuments>
+    </ContentType>
+    <CustomAction
+        Id="VideoSetContentTypeSettings"
+        GroupId="General"
+        RegistrationType="ContentType"
+        RegistrationId="0x0120D520A808"
+        Location="Microsoft.SharePoint.ContentTypeSettings"
+        Sequence="200"
+        Title="$Resources:dlccore,VideoSet_Link_Settings;">
+            <UrlAction Url="_layouts/15/videosetsettings.aspx"/>
+    </CustomAction>
+    <CustomAction
+        Id="VideoSetContentTypeTemplateSettings"
+        GroupId="General"
+        RegistrationType="ContentType"
+        RegistrationId="0x0120D520A808"
+        Location="Microsoft.SharePoint.ContentTypeTemplateSettings"
+        Sequence="200"
+        Title="$Resources:dlccore,VideoSet_Link_Settings;">
+            <UrlAction Url="_layouts/15/videosetsettings.aspx"/>
+    </CustomAction>
+</Elements>

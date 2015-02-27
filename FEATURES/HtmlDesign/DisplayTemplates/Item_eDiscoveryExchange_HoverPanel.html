@@ -1,0 +1,232 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_DiscoveryExchangeHoverPanel</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#SearchResults;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:ManagedPropertyMapping msdt:dt="string">'Subject':'Subject','To':'ToRecipients','Sender':'Sender','Sent Time':'SentTime','BccRecipients':'BccRecipients','CcRecipients':'CcRecipients','CreatedTime':'CreatedTime','HasAttachment':'HasAttachment','Importance':'Importance','Preview':'Preview','OwaLink':'OwaLink','Size':'Size','ExchangeType':'Kind'</mso:ManagedPropertyMapping>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+<div id="Item_eDiscoveryExchange_HoverPanel">
+<!--#_
+var id = ctx.CurrentItem.csr_id;
+
+var subject = $getItemValue(ctx,"Subject");
+var subjectRenderer = function(valueInfo)
+{
+    var subjectValue = $resource("edisc_NoSubject");
+    if(!valueInfo.isEmpty)
+    {
+        subjectValue = valueInfo.value;
+    }
+    return $htmlEncode(subjectValue);
+}
+subject.overrideValueRenderer(subjectRenderer);
+
+var path = $getItemValue(ctx, "OwaLink");
+path.overrideValueRenderer($urlHtmlEncode);
+
+var size = $getItemValue(ctx,"Size");
+size.isEmpty = $isNull(size.value) || !HP.IsNumeric(size.value);
+if(!size.isEmpty)
+{
+    var sizeInKB = Math.round(size.value / 1024);
+    size.isEmpty = sizeInKB <= 0;
+    var sizeRenderer = function(valueInfo)
+    {
+        var sizeInKB = Math.round(valueInfo.value / 1024);
+        return $htmlEncode(String.format($resource("hp_Size"), sizeInKB.localeFormat("N0")));
+    };
+    size.overrideValueRenderer(sizeRenderer);
+}
+
+var sender = $getItemValue(ctx,"Sender");
+
+var multiValueEncode = function(valueInfo)
+{
+    var returnValue = "";
+    if (!valueInfo.isNull && Srch.U.isArray(valueInfo.value) && !$isEmptyArray(valueInfo.value))
+    {
+        for (var i = 0; i < valueInfo.value.length; i++)
+        {
+            var currentItemValue = valueInfo.value[i].value;
+            if(i == 0)
+            {
+                returnValue += currentItemValue;
+            }
+            else
+            {
+                returnValue += String.format($resource("edisc_MultiValueFormat"), currentItemValue);
+            }
+        }
+    }
+    return $htmlEncode(returnValue);
+}
+
+var recipients = $getItemValue(ctx,"To");
+recipients.overrideValueRenderer(multiValueEncode);
+
+var cc = $getItemValue(ctx,"CcRecipients");
+cc.overrideValueRenderer(multiValueEncode);
+
+var bcc = $getItemValue(ctx,"BccRecipients");
+bcc.overrideValueRenderer(multiValueEncode);
+
+var preview = $getItemValue(ctx,"Preview");
+
+var hasAttachment = $getItemValue(ctx,"HasAttachment");
+
+var exchangeTypeLookup = 
+{
+    "email" :       $resource("rf_EDiscExTypeRefinerValue_Email"),
+    "contacts" :    $resource("rf_EDiscExTypeRefinerValue_Contacts"),
+    "meetings" :    $resource("rf_EDiscExTypeRefinerValue_Meetings"),
+    "tasks" :       $resource("rf_EDiscExTypeRefinerValue_Tasks"),
+    "notes" :       $resource("rf_EDiscExTypeRefinerValue_Notes"),
+    "docs" :        $resource("rf_EDiscExTypeRefinerValue_Documents"),
+    "journals" :    $resource("rf_EDiscExTypeRefinerValue_Journal"),
+    "im" :          $resource("rf_EDiscExTypeRefinerValue_IM")
+}
+
+var exchangeType = $getItemValue(ctx,"ExchangeType");
+if(!exchangeType.isEmpty)
+{
+    exchangeType.isEmpty = $isEmptyString(exchangeTypeLookup[exchangeType.value]);
+    var exchangeTypeRenderer = function(valueInfo)
+    {
+        return $htmlEncode(exchangeTypeLookup[exchangeType.value]);
+    };
+    exchangeType.overrideValueRenderer(exchangeTypeRenderer);
+}
+
+var innerContainerId = id + HP.ids.inner;
+if(!preview.isEmpty) {
+    $addRenderContextCallback(ctx, "OnPostRender", function(){
+        HP.SetWidth(id, innerContainerId, 500);
+    });
+}
+
+var dataShown = !sender.isEmpty || !recipients.isEpmty || !cc.isEmpty || !bcc.isEmpty || !preview.isEmpty;
+_#-->
+    <div class="ms-srch-hover-innerContainer ms-srch-hover-wacSize" id="_#= $htmlEncode(innerContainerId) =#_">
+        <div class="ms-srch-hover-arrowBorder" id="_#= $htmlEncode(id + HP.ids.arrowBorder) =#_"></div>
+        <div class="ms-srch-hover-arrow" id="_#= $htmlEncode(id + HP.ids.arrow) =#_"></div>
+        <div class="ms-srch-hover-content" id="_#= $htmlEncode(id + HP.ids.content) =#_" data-displaytemplate="DiscoveryExchangeHoverPanel">
+            <div id="_#= $htmlEncode(id + HP.ids.header) =#_" class="ms-srch-hover-header">
+                <div>
+                    <div class="ms-srch-hover-close">
+                        <a href="javascript:HP.Close()" id="_#= $htmlEncode(id + HP.ids.close) =#_" title="_#= $htmlEncode($resource('hp_Tooltip_Close')) =#_">
+                            <img src="_#= $urlHtmlEncode(SP.Utilities.VersionUtility.getImageUrl(Srch.SU.closeImage)) =#_" alt="_#= $htmlEncode($resource('hp_Tooltip_Close')) =#_" />
+                        </a>
+                    </div>
+<!--#_
+if (!path.isEmpty) 
+{
+_#-->
+                    <div class="ms-srch-hover-title">
+                        <a clicktype="Result" id="_#= $htmlEncode(id + HP.ids.title) =#_" title="_#= subject =#_" href="_#= path =#_">
+<!--#_
+    if(!hasAttachment.isEmpty && hasAttachment.value == true)
+    {
+_#-->
+                            <img class="ms-srch-item-icon ms-positionRelative" alt="_#= $htmlEncode($resource('hp_EDisc_AttachmentsTooltip')) =#_" id="_#= $htmlEncode(id + Srch.U.Ids.icon) =#_" onload="this.style.display='inline';this.style.bottom='-5px';" src="_#= $urlHtmlEncode(SP.Utilities.VersionUtility.getImageUrl('attach16.png')) =#_" onerror="this.style.display='none';" />
+<!--#_
+    }
+_#-->
+                            <h2 class="ms-accentText ms-srch-ellipsis">_#= subject =#_</h2>
+                        </a>
+                    </div>
+<!--#_
+}
+_#-->
+                </div>
+                <div class="ms-srch-hover-filedata ms-metadata">
+                    <div class="ms-srch-hover-filetype">
+<!--#_
+if (!exchangeType.isEmpty)
+{
+_#-->
+                        <span id="_#= $htmlEncode(id + HP.ids.fileType) =#_">
+                            _#= exchangeType =#_ &nbsp;
+                        </span>
+<!--#_
+}
+if (!size.isEmpty)
+{
+_#-->
+                        <span id="_#= $htmlEncode(id + HP.ids.size) =#_">
+                            _#= size =#_
+                        </span>
+<!--#_
+}
+_#-->
+                    </div>
+                </div>
+            </div>
+            <div id="_#= $htmlEncode(id + HP.ids.body) =#_" class="ms-srch-hover-body">
+<!--#_
+if(!sender.isEmpty)
+{
+_#-->
+                <div class="ms-srch-hover-subTitle"><h3 class="ms-soften">_#= $htmlEncode($resource('hp_EDisc_From')) =#_</h3></div>
+                <div class="ms-srch-hover-text ms-srch-ellipsis" id="_#= $htmlEncode(id + '_hp_sender') =#_" title="_#= sender =#_">
+                    _#= sender =#_
+                </div>
+<!--#_
+}
+if(!recipients.isEpmty)
+{
+_#-->
+                <div class="ms-srch-hover-subTitle"><h3 class="ms-soften">_#= $htmlEncode($resource('hp_EDisc_To')) =#_</h3></div>
+                <div class="ms-srch-hover-text ms-srch-ellipsis" id="_#= $htmlEncode(id + '_hp_recipients') =#_" title="_#= recipients =#_">
+                    _#= recipients =#_
+                </div>
+<!--#_
+}
+if(!cc.isEmpty)
+{
+_#-->
+                <div class="ms-srch-hover-subTitle"><h3 class="ms-soften">_#= $htmlEncode($resource('hp_EDisc_Cc')) =#_</h3></div>
+                <div class="ms-srch-hover-text ms-srch-ellipsis" id="_#= $htmlEncode(id + '_hp_cc') =#_" title="_#= cc =#_">
+                    _#= cc =#_
+                </div>
+<!--#_
+}
+if(!bcc.isEmpty)
+{
+_#-->
+                <div class="ms-srch-hover-subTitle"><h3 class="ms-soften">_#= $htmlEncode($resource('hp_EDisc_Bcc')) =#_</h3></div>
+                <div class="ms-srch-hover-text ms-srch-ellipsis" id="_#= $htmlEncode(id + '_hp_bcc') =#_" title="_#= bcc =#_">
+                    _#= bcc =#_
+                </div>
+<!--#_
+}
+if(!preview.isEmpty)
+{
+_#-->
+                <div class="ms-srch-hover-subTitle"><h3 class="ms-soften">_#= $htmlEncode($resource('hp_Summary')) =#_</h3></div>
+                <div class="ms-srch-hover-text" id="_#= $htmlEncode(id + HP.ids.summary) =#_" title="_#= preview =#_">
+                    _#= preview =#_
+                </div>
+<!--#_
+}
+if(!dataShown)
+{
+_#-->
+                <div class="ms-srch-hover-text" id="_#= $htmlEncode(id + HP.ids.noData) =#_">_#= $htmlEncode($resource('hp_NoData')) =#_</div>
+<!--#_
+}
+_#-->
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

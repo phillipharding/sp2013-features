@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="15.0.4420" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ListTemplate Name="usysapplog"
+		DisplayName="USysApplicationLog"
+		Type="398" BaseType="0"
+		OnQuickLaunch="FALSE"
+		FolderCreation="FALSE"
+		AllowDeletion="FALSE"
+		Unique="TRUE"
+		DisallowContentTypes="TRUE"
+		SecurityBits="11"
+		Description="Access Services User Application Log"
+		Image="/_layouts/15/images/itposts.gif?rev=23" />
+	<ListInstance
+		Title="USysApplicationLog"
+		Url="$Resources:core,lists_Folder;/usysapplog"
+		FeatureId="28101B19-B896-44f4-9264-DB028F307A62"
+		TemplateType="398">
+	</ListInstance>
+	<!-- Event receiver registration for add events. -->
+  	<Receivers ListTemplateId="398">
+      		<Receiver>
+        		<Name>ItemAddedEventReceiver</Name>
+        		<Type>ItemAdded</Type>
+        		<SequenceNumber>1000</SequenceNumber>
+        		<Assembly>Microsoft.Office.Access.Server.Application,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c</Assembly>
+         		<Class>Microsoft.Office.Access.Server.LoggingTableEventReceiver</Class>
+         		<Data></Data>
+         		<Filter></Filter>
+      		</Receiver>
+	</Receivers>
+</Elements>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+
+<WebPart xmlns="http://schemas.microsoft.com/WebPart/v2" >
+  <Title>$Resources:wacore,WAWhatsPopularTitle</Title>
+  <Description>$Resources:wacore,WAWhatsPopularDesc</Description>
+  <Assembly>Microsoft.Office.Server.WebAnalytics.UI, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+  <TypeName>Microsoft.Office.Server.WebAnalytics.Reporting.WhatsPopularWebPart</TypeName>
+  <!-- Specify initial values for any additional base class or custom properties here. -->
+</WebPart>

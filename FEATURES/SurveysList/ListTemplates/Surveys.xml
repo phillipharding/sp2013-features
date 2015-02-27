@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="survey"
+        Type="102"
+        BaseType="4"
+        OnQuickLaunch="TRUE"
+        FolderCreation="FALSE"
+        SecurityBits="12"
+        Sequence="510"
+        DisplayName="$Resources:core,surveyList;"
+        Description="$Resources:core,surveyList_Desc;"
+        Image="/_layouts/15/images/itsurvey.png?rev=23"/>
+</Elements>

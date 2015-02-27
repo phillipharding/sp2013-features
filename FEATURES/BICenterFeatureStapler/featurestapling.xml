@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <FeatureSiteTemplateAssociation Id="F9C216AD-35C7-4538-ABB8-8EC631A5DFF7" TemplateName="BICenterSite#0" /> <!-- BICenterPPSWorkspaceListInstance -->
+  <FeatureSiteTemplateAssociation Id="3D8210E9-1E89-4F12-98EF-643995339ED4" TemplateName="BICenterSite#0" /> <!-- BICenterDataConnections -->
+  <FeatureSiteTemplateAssociation Id="A354E6B3-6015-4744-BDC2-2FC1E4769E65" TemplateName="BICenterSite#0" /> <!-- BICenterPPSContentPages -->
+  <FeatureSiteTemplateAssociation Id="FAF31B50-880A-4E4F-A21B-597F6B4D6478" TemplateName="BICenterSite#0" /> <!-- BICenterPPSNavigationLink -->
+  <FeatureSiteTemplateAssociation Id="481333E1-A246-4d89-AFAB-D18C6FE344CE" TemplateName="BICenterSite#0" /> <!-- PPSWorkspaceList -->
+  <FeatureSiteTemplateAssociation Id="A1CB5B7F-E5E9-421B-915F-BF519B0760EF" TemplateName="BICenterSite#0" /> <!-- PPSiteCollectionMaster -->
+  <FeatureSiteTemplateAssociation Id="0B07A7F4-8BB8-4ec0-A31B-115732B9584D" TemplateName="BICenterSite#0" /> <!-- PPSSiteMaster  -->
+</Elements>

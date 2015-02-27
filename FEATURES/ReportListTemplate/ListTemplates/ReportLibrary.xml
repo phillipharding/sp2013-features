@@ -1,0 +1,12 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="ReportList"
+        Type="433"
+        DisplayName="$Resources:spscore,ReportCenterOnet_ReportListName;"
+        BaseType="1"
+        OnQuickLaunch="TRUE"
+        SecurityBits="11"
+        Description="$Resources:spscore,ReportCenterOnet_ReportListDescription;"
+        Image="/_layouts/15/images/iReportsLibrary.png?rev=23">
+    </ListTemplate>
+</Elements>

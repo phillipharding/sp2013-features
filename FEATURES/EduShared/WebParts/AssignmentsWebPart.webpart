@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Microsoft.Office.Education.WebUI.AssignmentsWebPart" />
+      <importErrorMessage>$Resources:eduserver,IDS_WebPartLoadError;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">$Resources:eduserver,IDS_AssignmentsWebPartTitle;</property>
+        <property name="Description" type="string">$Resources:eduserver,IDS_AssignmentsWebPartDescription;</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

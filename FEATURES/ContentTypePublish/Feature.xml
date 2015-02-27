@@ -1,0 +1,13 @@
+<Feature  Id="DD903064-C9D8-4718-B4E7-8AB9BD039FFF"
+          Title="Content type publishing"
+          Description="Content type publishing."
+          Version="14.0.0.0"
+          Scope="Web"
+          Hidden="TRUE"
+          DefaultResourceFile="osrvcore"
+          xmlns="http://schemas.microsoft.com/sharepoint/" 
+	  ActivateOnDefault="FALSE">
+    <ElementManifests>
+        <ElementManifest Location="actions.xml"/>
+    </ElementManifests>
+</Feature>

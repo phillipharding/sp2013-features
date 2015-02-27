@@ -1,0 +1,15 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">	   
+	    <!-- PROJECT PAGE Content Type START -->
+	    <ContentType ID="0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39004C1F8B46085B4d22B1CDC3DE08CFFB9C0055EF50AAFF2E4badA437E4BAE09A30F8" Name="$Resources:cmscore,contenttype_projectpage_name;" Description="$Resources:cmscore,contenttype_projectpage_description;" Group="$Resources:cmscore,group_pagelayoutcontenttypes;" Sealed="FALSE" Inherits="TRUE" Version="0">
+	        <FieldRefs>
+	            <FieldRef ID="{a71affd2-dcc7-4529-81bc-2fe593154a5f}" Name="WebPage" />
+	            <FieldRef ID="{aea1a4dd-0f19-417d-8721-95a1d28762ab}" Name="PublishingContact" />
+	            <FieldRef ID="{c15b34c3-ce7d-490a-b133-3f4de8801b76}" Name="TaskStatus" />
+	        </FieldRefs>
+	        <DocumentTemplate TargetName="/_layouts/15/CreatePage.aspx" />        
+	    </ContentType>
+	    <!-- PROJECT PAGE Content Type END -->
+	    <ContentTypeBinding ContentTypeId="0x01010007FF3E057FA8AB4AA42FCB67B453FFC100E214EEE741181F4E9F7ACC43278EE811" ListUrl="_catalogs/masterpage" />
+</Elements>

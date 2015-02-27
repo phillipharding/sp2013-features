@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34"
+    Title="$Resources:ReportingFeatureTitle"    
+    Description="$Resources:ReportingFeatureDescription"
+    DefaultResourceFile="dlccore"
+    Version="15.0.2.0"
+    Scope="Site"
+    ReceiverAssembly="Microsoft.Office.Policy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.Office.RecordsManagement.Internal.ReportingFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/"    
+    >
+    <ElementManifests>
+        <ElementManifest Location="SiteSettings\AnalyticsReports.xml"/>        
+        <ElementManifest Location="SiteSettings\AnalyticsReports2.xml"/>        
+        <ElementManifest Location="SiteSettings\SiteSettings.xml"/>        
+    </ElementManifests>
+    <UpgradeActions>
+        <VersionRange EndVersion="15.0.0.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="SiteSettings\AnalyticsReports.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.1.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="SiteSettings\AnalyticsReports2.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.2.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="SiteSettings\AnalyticsReports2.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

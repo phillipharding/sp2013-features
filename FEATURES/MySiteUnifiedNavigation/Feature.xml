@@ -1,0 +1,32 @@
+<Feature Id="41BAA678-AD62-41ef-87E6-62C8917FC0AD"
+    Title="$Resources:spscore,PeopleFeatures_MySiteUnifiedNavigation_Text;"
+    Description="$Resources:spscore,PeopleFeatures_MySiteUnifiedNavigation_Desc;"
+    Version="15.0.4.0"
+    Hidden="TRUE"
+    Scope="Web"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.UserProfiles.MySiteUnifiedNavigationFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="mysiteunifiednavigationfeatureelements.xml"/>
+        <ElementManifest Location="themeelements.xml"/>
+    </ElementManifests>
+    <UpgradeActions>
+        <VersionRange EndVersion="15.0.1.0">
+          <CustomUpgradeAction Name="MySite_RecentQuickLaunchUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.2.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="mysiteunifiednavigationfeatureelements.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.3.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="themeelements.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.4.0">
+          <CustomUpgradeAction Name="DeactivateO14Navigation" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

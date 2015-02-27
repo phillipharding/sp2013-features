@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Feature Id="A5AEDF1A-12E5-46B4-8348-544386D5312D"
+    Title="$Resources:spscore,CrossFarmSitePermissionsFeatureTitle;"
+    Description="$Resources:spscore,CrossFarmSitePermissionsFeatureDescription;"
+    Version="15.0.0.0"
+    Hidden="FALSE"
+    Scope="Site"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.CrossFarmSitePermissionsFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

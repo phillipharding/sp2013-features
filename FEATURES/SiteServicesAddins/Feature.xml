@@ -1,0 +1,30 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Feature
+    xmlns="http://schemas.microsoft.com/sharepoint/"
+    Id="B21C5A20-095F-4DE2-8935-5EFDE5110AB3"
+    Title="Site Services Addins"
+    Description="Add and configure site services addins."
+    Version="15.0.3.0"
+    Scope="Site"
+    Hidden="true"
+    DefaultResourceFile="core"
+    ReceiverAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Publishing.SiteServicesAddinsFeatureHandler" >
+    <ElementManifests>
+        <ElementManifest Location="ConsoleAction.xml"/>
+        <ElementManifest Location="Ribbon.xml"/>
+        <ElementManifest Location="SiteSettings.xml"/>
+    </ElementManifests>
+    <UpgradeActions>
+        <VersionRange EndVersion="15.0.1.0">
+          <CustomUpgradeAction Name="ChangeToPropertyBag" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.2.0">
+          <CustomUpgradeAction Name="UpgradeReusableContentForSocialPlugin" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.3.0">
+          <CustomUpgradeAction Name="CleanUpReusableContentForSocialPlugin" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

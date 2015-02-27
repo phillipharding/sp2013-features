@@ -1,0 +1,7 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="ECMControlsStyles14" Url="Style Library" IncludeFolders="??*-??*" Path="" RootWebOnly="TRUE"> 
+        <File Url="controls.css" Name="Themable/Core Styles/controls.css" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    </Module>
+</Elements>

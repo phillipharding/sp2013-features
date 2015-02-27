@@ -1,0 +1,10 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <Field ID="{CD2B20AB-85AB-4D19-89F3-36ED96B91B7B}" Name="IsReport" StaticName="IsReport" Description="$Resources:spscore,ReportsAndDataFields_IsReport_Description;" DisplayName="$Resources:spscore,ReportsAndDataFields_IsReport_Name;" Group="$Resources:spscore,ReportsAndDataFields_BusinessIntelligenceGroup;" Type="Boolean" SourceID="http://schemas.microsoft.com/sharepoint/v3">
+        <Default>1</Default>
+    </Field>
+    <Field ID="{45F741DF-CAF1-42C9-A496-99DB5156DACC}" Name="IsData" StaticName="IsData" Description="$Resources:spscore,ReportsAndDataFields_IsData_Description;" DisplayName="$Resources:spscore,ReportsAndDataFields_IsData_Name;" Group="$Resources:spscore,ReportsAndDataFields_BusinessIntelligenceGroup;" Type="Boolean" SourceID="http://schemas.microsoft.com/sharepoint/v3">
+        <Default>1</Default>
+    </Field>
+
+</Elements>

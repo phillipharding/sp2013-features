@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="97A2485F-EF4B-401f-9167-FA4FE177C6F6"
+          Title="Base Site Features Stapling"
+          Description="Staple Base features"
+          Version="14.0.0.0"
+          Scope="Farm"
+          Hidden="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <ElementManifests>
+        <ElementManifest Location="basesitestapling.xml"/>
+    </ElementManifests>
+
+</Feature>

@@ -1,0 +1,16 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+   <!-- Search Bound Page Fields -->
+       <Field ID="{75772BBF-0C25-4710-B52C-7B78344AD136}" Name="CatalogSource" StaticName="CatalogSource" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="$Resources:cmscore,group_pagelayoutcolumns;" DisplayName="$Resources:cmscore,publishingfield_catalogsource_name;" Type="PublishingCatalogSourceFieldType" Required="FALSE" CanToggleHidden="TRUE" Sealed="TRUE"></Field>
+    <!-- END Search Bound Page Fields -->
+    <!-- Search bound page content type -->
+     <ContentType ID="0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF3900B46186789C3140cc85BE610336E86BBB" Name="$Resources:cmscore,contenttype_catalogreuse_name;" Description="$Resources:cmscore,contenttype_catalogreuse_description;" Group="$Resources:cmscore,group_pagelayoutcontenttypes;" Sealed="FALSE" Inherits="TRUE" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{F55C4D88-1F2E-4ad9-AAA8-819AF4EE7EE8}" Name="PublishingPageContent"/>
+            <FieldRef ID="{75772BBF-0C25-4710-B52C-7B78344AD136}" Name="CatalogSource"/>
+        </FieldRefs>
+        <DocumentTemplate TargetName="/_layouts/15/CreatePage.aspx" />
+    </ContentType>
+	<!-- END Search Bound Page Content type -->
+</Elements>

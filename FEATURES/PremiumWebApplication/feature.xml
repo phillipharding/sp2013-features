@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="0EA1C3B6-6AC0-44aa-9F3F-05E8DBE6D70B"
+          Title="$Resources:osrvcore,PremiumWebApplicationFeatureTitle;"
+          Description="$Resources:osrvcore,PremiumFeatureDescription;"
+          Version="14.0.0.0"
+          SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+          Scope="WebApplication"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ActivationDependencies>
+
+        <ActivationDependency FeatureId="14173c38-5e2d-4887-8134-60f9df889bad" /> 
+        <ActivationDependency FeatureId="1dbf6063-d809-45ea-9203-d3ba4a64f86d" />
+        <ActivationDependency FeatureId="d992aeca-3802-483a-ab40-6c9376300b61" />
+        <ActivationDependency FeatureId="20477D83-8BDB-414e-964B-080637F7D99B" />
+        <ActivationDependency FeatureId="D085B8DC-9205-48A4-96EA-B40782ABBA02" />
+
+    </ActivationDependencies>
+</Feature>

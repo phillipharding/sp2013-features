@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="7CD95467-1777-4b6b-903E-89E253EDC1F7"
+    Title="$Resources:wmafeatures,ExchangeSyncSiteSubscriptionFeatureTitle;"
+    Description="$Resources:wmafeatures,ExchangeSyncSiteSubscriptionFeatureDescription;"
+    Version="15.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    ReceiverAssembly="Microsoft.Office.Server.WorkManagement, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.Office.Server.WorkManagement.ExchangeSyncSiteSubscriptionFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

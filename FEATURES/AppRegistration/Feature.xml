@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="FDC6383E-3F1D-4599-8B7C-C515E99CBF18"
+          Title="$Resources:Core,AppRegistrationFeatureTitle"
+          Description="$Resources:Core,AppRegistrationTitleFeatureDescription" 
+          Version="1.0.0.0"
+          Scope="Site"
+          Hidden="TRUE"
+          DefaultResourceFile="Core"         
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="appregistrationlinks.xml" />
+    </ElementManifests>     
+</Feature>

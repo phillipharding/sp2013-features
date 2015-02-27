@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<ListInstance Title="$Resources:eduserver,IDS_EduEntitiesListName"
+		Description="$Resources:eduserver,IDS_EduEntitiesListDescription"
+		FeatureId="00BFEA71-DE22-43B2-A848-C05709900100"
+		TemplateType="100"
+		Id="994A8A40-729D-11E0-B5CE-946A4824019B"
+		Url="$Resources:core,lists_Folder;/$Resources:eduserver,IDS_EduEntitiesListName"
+		OnQuickLaunch="TRUE"
+		RootWebOnly="FALSE" />
+
+	<ContentTypeBinding ContentTypeId="0x010063C2F478ACC511DFB869B5BFDFD7208511" 
+		ListUrl="$Resources:core,lists_Folder;/$Resources:eduserver,IDS_EduEntitiesListName"
+		RootWebOnly="FALSE" />
+
+	<ContentTypeBinding ContentTypeId="0x010063C2F478ACC511DFB869B5BFDFD720851101" 
+		ListUrl="$Resources:core,lists_Folder;/$Resources:eduserver,IDS_EduEntitiesListName"
+		RootWebOnly="FALSE" />
+
+	<ListInstance Title="$Resources:eduserver,IDS_EduCommunityMembershipsListName"
+		Description="$Resources:eduserver,IDS_EduCommunityMembershipsListDescription"
+		FeatureId="00BFEA71-DE22-43B2-A848-C05709900100"
+		TemplateType="100"
+		Id="7AD9A974-7374-11E0-9664-7FE54724019B"
+		Url="$Resources:core,lists_Folder;/$Resources:eduserver,IDS_EduCommunityMembershipsListName"
+		OnQuickLaunch="TRUE"
+		RootWebOnly="FALSE" />
+
+	<ContentTypeBinding ContentTypeId="0x01002DC5EE125BEC11E093DEDDF0DFD72086"
+		ListUrl="$Resources:core,lists_Folder;/$Resources:eduserver,IDS_EduCommunityMembershipsListName"
+		RootWebOnly="FALSE" />
+
+	<Receivers ListUrl="$Resources:core,lists_Folder;/$Resources:eduserver,IDS_EduCommunityMembershipsListName">
+		<Receiver>
+			<Name>CommunityMembershipsListItemAdded</Name>
+			<Type>ItemAdded</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.CommunityMembershipAsyncEventReceiver</Class>
+			<Synchronization>Asynchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>CommunityMembershipsListItemDeleting</Name>
+			<Type>ItemDeleting</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.CommunityMembershipAsyncEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+	</Receivers>
+
+</Elements>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="D95C97F3-E528-4DA2-AE9F-32B3535FBB59"
+          Title="$Resources:core,mbrowserredirectFeatureTitle;"
+          Description="$Resources:core,mbrowserredirectFeatureDesc;"
+          Version="15.0.0.0"
+          Scope="Web"
+          Hidden="FALSE"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

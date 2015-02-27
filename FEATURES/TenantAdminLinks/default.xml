@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomActionGroup
+        Id="TenantAdmin_Sites"
+        Location="Microsoft.SharePoint.TenantAdministration"
+        Title="$Resources:tenantadmin_sites_pagetitle;"
+        Sequence="10"
+        ImageUrl="/_layouts/15/images/SiteCollections_48.png?rev=23">
+        <UrlAction
+            Url="" />
+    </CustomActionGroup> 
+    <CustomActionGroup
+        Id="TenantAdmin_Settings"
+        Location="Microsoft.SharePoint.TenantAdministration"
+        Title="$Resources:tenantadmin_settings_grouptitle;"
+        Sequence="50"
+        ImageUrl="/_layouts/15/images/CentralAdmin_SystemSettings_48x48.png?rev=23">
+        <UrlAction
+            Url="" />
+    </CustomActionGroup>
+    <CustomActionGroup
+        Id="TenantAdmin_MarketplaceManagement"
+        Location="Microsoft.SharePoint.TenantAdministration"
+        Title="$Resources:tenantadmin_marketplace_grouptitle;"
+        Sequence="60"
+        ImageUrl="/_layouts/15/images/CentralAdmin_SystemSettings_48x48.png?rev=23">
+        <UrlAction
+            Url="" />
+    </CustomActionGroup>
+    <CustomAction
+        Id="TenantAdmin_Sites_ManageSiteCollections"
+        GroupId="TenantAdmin_Sites"
+        Location="Microsoft.SharePoint.TenantAdministration"
+        Sequence="10"
+        Title="$Resources:tenantadmin_sites_managesitecollections;"
+        Description="$Resources:tenantadmin_sites_managesitecollections_description;">
+        <UrlAction
+            Url="_layouts/15/TA_SiteCollections.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="TenantAdmin_Marketplace_CorporateCatalog"
+        GroupId="TenantAdmin_MarketplaceManagement"
+        Location="Microsoft.SharePoint.TenantAdministration"
+        Sequence="10"
+        Title="$Resources:tenantadmin_marketplace_corporatecatalog;">
+        <UrlAction
+            Url="_layouts/15/TA_ManageCorporateCatalog.aspx?Source={Source}" />
+    </CustomAction>
+    <CustomAction
+        Id="TenantAdmin_Marketplace_PurchaseApps"
+        GroupId="TenantAdmin_MarketplaceManagement"
+        Location="Microsoft.SharePoint.TenantAdministration"
+        Sequence="15"
+        Title="$Resources:tenantadmin_marketplace_purchaseapps;">
+        <UrlAction
+            Url="_layouts/15/Storefront.aspx?Source={Source}" />
+    </CustomAction>
+    <CustomAction
+        Id="TenantAdmin_Sites_AppLicenseManagement"
+        GroupId="TenantAdmin_MarketplaceManagement"
+        Location="Microsoft.SharePoint.TenantAdministration"
+        Sequence="20"
+        Title="$Resources:tenantadmin_marketplace_applicensemanagement;">
+        <UrlAction
+            Url="_layouts/15/TA_AllAppLicensesManagement.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="TenantAdmin_MarketplaceSettings"
+        GroupId="TenantAdmin_MarketplaceManagement"
+        Location="Microsoft.SharePoint.TenantAdministration"
+        Sequence="30"
+        Title="$Resources:Marketplace_SettingsPage_PageTitle;">
+        <UrlAction
+            Url="_layouts/15/TA_ManageMarketplaceSettings.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="TenantAdmin_AllAppPrincipals"
+        GroupId="TenantAdmin_MarketplaceManagement"
+        Location="Microsoft.SharePoint.TenantAdministration"
+        Sequence="40"
+        Title="$Resources:tenantadmin_marketplace_allappprincipals;">
+        <UrlAction
+            Url="_layouts/15/TA_AllAppPrincipals.aspx" />
+    </CustomAction>
+</Elements>

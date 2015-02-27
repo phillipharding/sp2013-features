@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="15.0.4420" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction
+    Id="Ribbon.Library.CustomViews.DisplayView"
+    Location="CommandUI.Ribbon"
+    Title="$Resources:dlccore,Ribbon_MdnCustomActionTitle;"
+    Sequence="30">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.Library.CustomViews.DisplayView">
+          <DropDown
+                Id="Ribbon.Library.CustomViews.DisplayView"
+                Sequence="60"
+                Command="DisplayView"
+                PopulateDynamically="true"
+                PopulateOnlyOnce="true"
+                PopulateQueryCommand="CustomPopulateViewDropDown"
+                QueryCommand="QueryDisplayView"
+                Width="75px"
+                ToolTipTitle="$Resources:core,cui_ButViewSelector;"
+                ToolTipDescription="$Resources:core,cui_STT_ButViewSelector;"
+                TemplateAlias="row2control" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction
+    Id="Ribbon.List.CustomViews.DisplayView"
+    Location="CommandUI.Ribbon"
+    Title="$Resources:dlccore,Ribbon_MdnCustomActionTitle;"
+    Sequence="30">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.List.CustomViews.DisplayView">
+          <DropDown
+                Id="Ribbon.List.CustomViews.DisplayView"
+                Sequence="60"
+                Command="DisplayView"
+                PopulateDynamically="true"
+                PopulateOnlyOnce="true"
+                PopulateQueryCommand="CustomPopulateViewDropDown"
+                QueryCommand="QueryDisplayView"
+                Width="75px"
+                ToolTipTitle="$Resources:core,cui_ButViewSelector;"
+                ToolTipDescription="$Resources:core,cui_STT_ButViewSelector;"
+                TemplateAlias="row2control" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+</Elements>

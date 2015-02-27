@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature 
+    Id="9C03E124-EEF7-4DC6-B5EB-86CCD207CB87" 
+    Title="$Resources:core,groupboardFeatureTitle;"
+    Description="$Resources:core,groupboardFeatureDesc;"
+    Hidden="TRUE"
+    ImageUrl="WssTeamCollaborationFeature.gif"
+    ImageUrlAltText=""
+    Scope="Web" 
+    DefaultResourceFile="core"
+    ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Applications.GroupBoard.GroupBoardFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListInstance.xml"/>
+    </ElementManifests>
+</Feature>

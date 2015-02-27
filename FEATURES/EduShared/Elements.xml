@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="EduWebPartsModule" Path="WebParts" List="113" Url="_catalogs/wp">
+    <File Path="AnnouncementsWebPart.webpart" Url="AnnouncementsWebPart.webpart" Type="GhostableInLibrary">
+      <Property Name="Group" Value="Custom" />
+    </File>
+    <File Path="AssignmentsWebPart.webpart" Url="AssignmentsWebPart.webpart" Type="GhostableInLibrary">
+      <Property Name="Group" Value="Custom" />
+    </File>
+    <File Path="CalendarWebPart.webpart" Url="CalendarWebPart.webpart" Type="GhostableInLibrary">
+      <Property Name="Group" Value="Custom" />
+    </File>
+    <File Path="CourseGradesWebPart.webpart" Url="CourseGradesWebPart.webpart" Type="GhostableInLibrary">
+      <Property Name="Group" Value="Custom" />
+    </File>
+    <File Path="CoursePlanningWebPart.webpart" Url="CoursePlanningWebPart.webpart" Type="GhostableInLibrary">
+      <Property Name="Group" Value="Custom" />
+    </File>
+    <File Path="DueListWebPart.webpart" Url="DueListWebPart.webpart" Type="GhostableInLibrary">
+      <Property Name="Group" Value="Custom" />
+    </File>
+    <File Path="MyClassesWebPart.webpart" Url="MyClassesWebPart.webpart" Type="GhostableInLibrary">
+      <Property Name="Group" Value="Custom" />
+    </File>
+    <File Path="NextUpWebPart.webpart" Url="NextUpWebPart.webpart" Type="GhostableInLibrary">
+      <Property Name="Group" Value="Custom" />
+    </File>
+    <File Path="QuizViewWebPart.webpart" Url="QuizViewWebPart.webpart" Type="GhostableInLibrary">
+      <Property Name="Group" Value="Custom" />
+    </File>
+    <File Path="RoleSelectorWebPart.webpart" Url="RoleSelectorWebPart.webpart" Type="GhostableInLibrary">
+      <Property Name="Group" Value="Custom" />
+    </File>
+    <File Path="ViewWebPart.webpart" Url="ViewWebPart.webpart" Type="GhostableInLibrary">
+      <Property Name="Group" Value="Custom" />
+    </File>
+    <File Path="StudentSubmissionWebPart.webpart" Url="StudentSubmissionWebPart.webpart" Type="GhostableInLibrary">
+      <Property Name="Group" Value="Custom" />
+    </File>
+  </Module>
+</Elements>

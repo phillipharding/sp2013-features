@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template>
+
+    <!--Field GUIDs-->
+    <!--Defined here-->
+    <Variable Name="$f_EduCreateDate">{4AA5152A-73A3-4D63-A298-778815A708CE}</Variable>
+    <Variable Name="$f_EduCompletionDate">{4D57CE20-14CC-4D18-A816-720482EB2AB3}</Variable>
+    <Variable Name="$f_EduStatus">{A3E92131-74E1-4498-89AA-50D2669E6065}</Variable>
+    <Variable Name="$f_EduFileType">{B8B5A488-642F-4CEF-8040-83CD605B8BCA}</Variable>
+    <Variable Name="$f_EduFlag">{DD601ECD-4715-40DC-87A0-FEC15556AAA8}</Variable>
+    <Variable Name="$f_EduRequestItemId">{6D8489D0-C991-493A-9A80-57CF4D5CC5F1}</Variable>
+    <Variable Name="$f_EduRequestSuccess">{32538783-D91C-4422-BF82-54B1368E3BF4}</Variable>
+    <Variable Name="$f_EduRequestFailure">{93F5C9BB-4DF7-4A5E-A6A7-A3682C124CCB}</Variable>
+    <Variable Name="$f_EduRequestOperation">{B9BDD057-6698-4C29-B9EB-381A3C59663F}</Variable>
+    <Variable Name="$f_EduRequestSubmitted">{E3A0039D-2F32-4C17-9B2D-B4EEFAC6915C}</Variable>
+    <Variable Name="$f_EduRequestProcessed">{4244E2DC-9557-4221-BCAF-B735CE3C6B23}</Variable>
+    <Variable Name="$f_EduUserChunkCount">{5F34C9E3-78E4-4398-B167-453D6087335D}</Variable>
+    <Variable Name="$f_EduCourseChunkCount">{D09C57BC-EADF-448A-BFE1-A9732C8B0B90}</Variable>
+    <Variable Name="$f_EduMembershipChunkCount">{16EC2DF7-B3E5-4990-813A-DA7E7F080711}</Variable>
+    <Variable Name="$f_EduSettingMaxPoolSize">{ABDCBC2C-5F1D-4e77-88F9-842262719E1D}</Variable>
+    <Variable Name="$f_EduSettingContinuedPoolSize">{AABC616A-3D0B-8E71-4992-764CC810A831}</Variable>
+    <Variable Name="$f_EduSiteCollectionAdministrator">{65A5297D-0C8F-4EF7-9272-BA8AAA0396F0}</Variable>
+    <Variable Name="$f_EduSiteCollectionAdministratorName">{A1BC6E9A-231E-49DC-8B84-748FF68EEBF3}</Variable>
+    <Variable Name="$f_EduSiteCollectionAdministratorEmail">{3552CDA7-8F4C-49D4-8E0E-BEB12391E15A}</Variable>
+    <Variable Name="$f_EduPoolSiteCollectionUrl">{AD68F8FA-798D-405e-8A2D-CF47A80B0ECA}</Variable>
+    <Variable Name="$f_EduSettingLyncS2SIntegrationEnabled">{CB130A9B-D410-48F3-B932-D67623653CDB}</Variable>
+    <Variable Name="$f_EduSettingExchangeS2SIntegrationEnabled">{E3C711E8-C1C8-4577-A9FB-595BCE4E2F0D}</Variable>
+    <Variable Name="$f_EduSettingStudentStudyGroupCreateEnabled">{00B77F62-AAA1-4201-BCF8-19BBB5E90E6B}</Variable>
+    <Variable Name="$f_EduSettingMaxUserCount">{CCE156D2-B43C-4602-9473-CF53E9CBAD05}</Variable>
+    <Variable Name="$f_EduUserProfileQuotaReached">{C007A239-7E59-4CCE-9ED7-54352C1DF9C1}</Variable>
+
+    <!--ContentType IDs-->
+    <Variable Name="$c_EduBulkRequest">0x010100A36AED0530944AAA93BDC300E534ECC8</Variable>
+    <Variable Name="$c_EduBulkProcess">0x01010046B68A93EE004753905B1D7697A8ABC9</Variable>
+    <Variable Name="$c_EduBulkResponse">0x010100CBBCBB96519E40209E396603524B31CF</Variable>
+    <Variable Name="$c_EduAdminSettings">0x0100662205564E384B2582A5D5B2928D2C55</Variable>
+    <Variable Name="$c_EduSitePool">0x0100A80C76456C534161922C67B762CB7A02</Variable>
+    <Variable Name="$EducationGroup">Education</Variable>
+
+    <Web Name="">
+        <Field Id="$f_EduCreateDate" Name="EduCreateDate">
+            <Type>DateTime</Type>
+            <Title>$Resources:eduserver,IDS_EduAdminCreateDateFieldName</Title>
+            <Group>$EducationGroup</Group>
+            <Required>true</Required>
+        </Field>
+        <Field Id="$f_EduCompletionDate" Name="EduCompletionDate">
+            <Type>DateTime</Type>
+            <Title>$Resources:eduserver,IDS_EduAdminCompletionDateFieldName</Title>
+            <Group>$EducationGroup</Group>
+            <Required>false</Required>
+        </Field>
+        <Field Id="$f_EduStatus" Name="EduStatus">
+            <Type>Text</Type>
+            <Title>$Resources:eduserver,IDS_EduAdminStatusFieldName</Title>
+            <Group>$EducationGroup</Group>
+            <Required>true</Required>
+        </Field>
+        <Field Id="$f_EduFlag" Name="EduFlag">
+            <Type>Text</Type>
+            <Title>$Resources:eduserver,IDS_EduAdminFlagFieldName</Title>
+            <Group>$EducationGroup</Group>
+            <Required>false</Required>
+        </Field>
+        <Field Id="$f_EduRequestItemId" Name="EduRequestItemId">
+            <Type>Integer</Type>
+            <Title>$Resources:eduserver,IDS_EduAdminRequestItemIdFieldName</Title>
+            <Group>$EducationGroup</Group>
+            <Required>false</Required>
+        </Field>
+        <Field Id="$f_EduRequestSuccess" Name="EduRequestSuccess">
+            <Type>Integer</Type>
+            <Title>$Resources:eduserver,IDS_EduAdminRequestSuccessFieldName</Title>
+            <Group>$EducationGroup</Group>
+            <Required>false</Required>
+        </Field>
+        <Field Id="$f_EduRequestFailure" Name="EduRequestFailure">
+            <Type>Integer</Type>
+            <Title>$Resources:eduserver,IDS_EduAdminRequestFailureFieldName</Title>
+            <Group>$EducationGroup</Group>
+            <Required>false</Required>
+        </Field>
+        <Field Id="$f_EduRequestOperation" Name="EduRequestOperation">
+            <Type>Text</Type>
+            <Title>$Resources:eduserver,IDS_EduAdminOperationFieldName</Title>
+            <Group>$EducationGroup</Group>
+            <Required>false</Required>
+        </Field>
+        <Field Id="$f_EduRequestSubmitted" Name="EduRequestSubmitted">
+            <Type>Integer</Type>
+            <Title>$Resources:eduserver,IDS_EduAdminSubmittedFieldName</Title>
+            <Group>$EducationGroup</Group>
+            <Required>false</Required>
+        </Field>
+        <Field Id="$f_EduRequestProcessed" Name="EduRequestProcessed">
+            <Type>Integer</Type>
+            <Title>$Resources:eduserver,IDS_EduAdminProcessedFieldName</Title>
+            <Group>$EducationGroup</Group>
+            <Required>false</Required>
+        </Field>
+        <Field Id="$f_EduUserChunkCount" Name="EduUserChunkCount">
+            <Type>Integer</Type>
+            <Title>$Resources:eduserver,IDS_EduUserChunkCountFieldName</Title>
+            <Group>$EducationGroup</Group>
+            <Required>false</Required>
+        </Field>
+        <Field Id="$f_EduCourseChunkCount" Name="EduCourseChunkCount">
+            <Type>Integer</Type>
+            <Title>$Resources:eduserver,IDS_EduCourseChunkCountFieldName</Title>
+            <Group>$EducationGroup</Group>
+            <Required>false</Required>
+        </Field>
+        <Field Id="$f_EduMembershipChunkCount" Name="EduMembershipChunkCount">
+            <Type>Integer</Type>
+            <Title>$Resources:eduserver,IDS_EduMembershipChunkCountFieldName</Title>
+            <Group>$EducationGroup</Group>
+            <Required>false</Required>
+        </Field>
+        <Field Id="$f_EduSettingMaxPoolSize" Name="EduSettingMaxPoolSize">
+            <Type>Integer</Type>
+            <Title>$Resources:eduserver,IDS_EduSettingMaxPoolSizeFieldName</Title>
+            <Group>$EducationGroup</Group>
+            <Required>false</Required>
+        </Field>
+        <Field Id="$f_EduSettingContinuedPoolSize" Name="EduSettingContinuedPoolSize">
+            <Type>Integer</Type>
+            <Title>$Resources:eduserver,IDS_EduSettingContinuedPoolSizeFieldName</Title>
+            <Group>$EducationGroup</Group>
+            <Required>false</Required>
+        </Field>
+        <Field Id="$f_EduSiteCollectionAdministrator" Name="EduSiteCollectionAdministrator">
+            <Type>Text</Type>
+            <Title>$Resources:eduserver,IDS_EduSiteCollectionAdministratorFieldName</Title>
+            <Group>$EducationGroup</Group>
+            <Required>false</Required>
+        </Field>
+        <Field Id="$f_EduSiteCollectionAdministratorName" Name="EduSiteCollectionAdministratorName">
+            <Type>Text</Type>
+            <Title>$Resources:eduserver,IDS_EduSiteCollectionAdministratorNameFieldName</Title>
+            <Group>$EducationGroup</Group>
+            <Required>false</Required>
+        </Field>
+        <Field Id="$f_EduSiteCollectionAdministratorEmail" Name="EduSiteCollectionAdministratorEmail">
+            <Type>Text</Type>
+            <Title>$Resources:eduserver,IDS_EduSiteCollectionAdministratorEmailFieldName</Title>
+            <Group>$EducationGroup</Group>
+            <Required>false</Required>
+        </Field>
+        <Field Id="$f_EduPoolSiteCollectionUrl" Name="EduPoolSiteCollectionUrl">
+            <Type>Text</Type>
+            <Title>$Resources:eduserver,IDS_EduPoolSiteUrl</Title>
+            <Group>$EducationGroup</Group>
+            <Required>true</Required>
+        </Field>
+		<Field Id="$f_EduSettingLyncS2SIntegrationEnabled" Name="EduSettingLyncS2SIntegrationEnabled">
+			<Type>Boolean</Type>
+			<Title>$Resources:eduserver,IDS_EduSettingLyncS2SIntegrationEnabledFieldName</Title>
+			<Group>$EducationGroup</Group>
+			<Required>false</Required>
+		</Field>
+		<Field Id="$f_EduSettingExchangeS2SIntegrationEnabled" Name="EduSettingExchangeS2SIntegrationEnabled">
+			<Type>Boolean</Type>
+			<Title>$Resources:eduserver,IDS_EduSettingExchangeS2SIntegrationEnabledFieldName</Title>
+			<Group>$EducationGroup</Group>
+			<Required>false</Required>
+		</Field>
+		<Field Id="$f_EduSettingStudentStudyGroupCreateEnabled" Name="EduSettingStudentStudyGroupCreateEnabled">
+			<Type>Boolean</Type>
+			<Title>$Resources:eduserver,IDS_EduSettingStudentStudyGroupCreateEnabled</Title>
+			<Group>$EducationGroup</Group>
+			<Required>false</Required>
+		</Field>
+        <Field Id="$f_EduSettingMaxUserCount" Name="EduSettingMaxUserCount">
+			<Type>Integer</Type>
+			<Title>$Resources:eduserver,IDS_EduSettingMaxUserCount</Title>
+			<Group>$EducationGroup</Group>
+			<Required>false</Required>
+		</Field>
+        <Field Id="$f_EduUserProfileQuotaReached" Name="EduUserProfileQuotaReached">
+			<Type>Boolean</Type>
+			<Title>$Resources:eduserver,IDS_EduUserProfileQuotaReached</Title>
+			<Group>$EducationGroup</Group>
+			<Required>false</Required>
+		</Field>
+
+        <ContentType Id="$c_EduBulkRequest">
+            <Name>$Resources:eduserver,IDS_EduAdminBulkRequestContentTypeName</Name>
+            <Group>$EducationGroup</Group>
+            <FieldLink Id="$f_EduCreateDate" />
+            <FieldLink Id="$f_EduCompletionDate" />
+            <FieldLink Id="$f_EduStatus" />
+            <FieldLink Id="$f_EduFlag" />
+        </ContentType>
+        <ContentType Id="$c_EduBulkResponse">
+            <Name>$Resources:eduserver,IDS_EduAdminBulkResponseContentTypeName</Name>
+            <Group>$EducationGroup</Group>
+            <FieldLink Id="$f_EduCreateDate" />
+            <FieldLink Id="$f_EduRequestItemId" />
+            <FieldLink Id="$f_EduRequestSuccess" />
+            <FieldLink Id="$f_EduRequestFailure" />
+            <FieldLink Id="$f_EduRequestOperation" />
+            <FieldLink Id="$f_EduRequestSubmitted" />
+            <FieldLink Id="$f_EduRequestProcessed" />
+        </ContentType>
+        <ContentType Id="$c_EduAdminSettings">
+            <Name>$Resources:eduserver,IDS_EduAdminSettingsContentTypeName</Name>
+            <Group>$EducationGroup</Group>
+            <FieldLink Id="$f_EduUserChunkCount" />
+            <FieldLink Id="$f_EduCourseChunkCount" />
+            <FieldLink Id="$f_EduMembershipChunkCount" />
+            <FieldLink Id="$f_EduSiteCollectionAdministrator" />
+            <FieldLink Id="$f_EduSiteCollectionAdministratorName" />
+            <FieldLink Id="$f_EduSiteCollectionAdministratorEmail" />
+            <FieldLink Id="$f_EduSettingMaxPoolSize" />
+            <FieldLink Id="$f_EduSettingLyncS2SIntegrationEnabled" />
+            <FieldLink Id="$f_EduSettingExchangeS2SIntegrationEnabled" />
+            <FieldLink Id="$f_EduSettingContinuedPoolSize" />
+            <FieldLink Id="$f_EduSettingStudentStudyGroupCreateEnabled" />
+            <FieldLink Id="$f_EduSettingMaxUserCount" />
+            <FieldLink Id="$f_EduUserProfileQuotaReached" />
+        </ContentType>
+        <ContentType Id="$c_EduSitePool">
+            <Name>$Resources:eduserver,IDS_EduSitePoolContentTypeName</Name>
+            <Group>$EducationGroup</Group>
+            <FieldLink Id="$f_EduPoolSiteCollectionUrl" />
+        </ContentType>
+        <List Name="$Resources:eduserver,IDS_EduAdminBulkRequestListName" TemplateType="DocumentLibrary" Url="Lists/BulkRequest">
+            <Description>$Resources:eduserver,IDS_EduAdminBulkRequestListDescription</Description>
+            <ContentTypesEnabled>true</ContentTypesEnabled>
+            <EnableFolderCreation>false</EnableFolderCreation>
+            <ContentType Id="$c_EduBulkRequest" />
+            <AllowDeletion>false</AllowDeletion>
+        </List>
+        <List Name="$Resources:eduserver,IDS_EduAdminBulkResponseListName" TemplateType="DocumentLibrary" Url="Lists/BulkResponse">
+            <Description>$Resources:eduserver,IDS_EduAdminBulkResponseListDescription</Description>
+            <ContentTypesEnabled>true</ContentTypesEnabled>
+            <EnableFolderCreation>false</EnableFolderCreation>
+            <ContentType Id="$c_EduBulkResponse" />
+            <AllowDeletion>false</AllowDeletion>
+        </List>
+        <List Name="$Resources:eduserver,IDS_EduAdminSettingsListName" TemplateType="GenericList" Url="Lists/AdminSettings">
+            <Description>$Resources:eduserver,IDS_EduAdminSettingsListDescription</Description>
+            <ContentTypesEnabled>true</ContentTypesEnabled>
+            <EnableFolderCreation>false</EnableFolderCreation>
+            <ContentType Id="$c_EduAdminSettings" />
+            <AllowDeletion>false</AllowDeletion>
+        </List>
+        <List Name="$Resources:eduserver,IDS_EduSitePoolListName" TemplateType="GenericList" Url="Lists/SitePool">
+            <Description>$Resources:eduserver,IDS_EduSitePoolListDescription</Description>
+            <ContentTypesEnabled>true</ContentTypesEnabled>
+            <EnableFolderCreation>false</EnableFolderCreation>
+            <ContentType Id="$c_EduSitePool" />
+            <AllowDeletion>false</AllowDeletion>
+        </List>
+    </Web>
+</Template>

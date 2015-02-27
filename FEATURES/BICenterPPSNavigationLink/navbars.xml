@@ -1,0 +1,6 @@
+<Project Revision="1" ListDir="$Resources:core,lists_Folder;" xmlns:ows="Microsoft SharePoint" UIVersion="15">
+    <NavBars>
+        <NavBar Name="$Resources:ppsma,Onet_BICenter_Title;" Url="Lists/PerformancePoint Content" ID="1008" />
+    </NavBars>
+</Project>
+

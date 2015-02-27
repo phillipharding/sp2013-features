@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+<Field ID="{D26B5F0C-27CF-46D0-984C-A0C2EA81CB10}"
+        Name="Status"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        StaticName="Status"
+        Group="$Resources:Microsoft.Office.Server.Search,SearchConfigField_GroupName"
+        Type="Text"
+        Hidden="FALSE"
+        DisplayName="$Resources:Microsoft.Office.Server.Search,SearchConfigField_Status" />
+ <Field ID="{DF38FC53-0740-4846-80B2-CD5C4CF6B5D7}"
+        Name="ConfigNotes"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        StaticName="ConfigNotes"
+        Group="$Resources:Microsoft.Office.Server.Search,SearchConfigField_GroupName"
+        Type="Note"
+        Hidden="FALSE"
+        DisplayName="$Resources:Microsoft.Office.Server.Search,SearchConfigField_Notes" />
+<Field ID="{F2630201-2B18-4F74-867B-18551759B437}"
+        Name="Scope"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        StaticName="Scope"
+        Group="$Resources:Microsoft.Office.Server.Search,SearchConfigField_GroupName"
+        Type="Choice"
+        Hidden="FALSE"
+        DisplayName="$Resources:Microsoft.Office.Server.Search,SearchConfigField_Scope" >
+		<CHOICES>
+			<CHOICE>$Resources:Microsoft.Office.Server.Search,SearchConfigScope_Tenant</CHOICE>
+			<CHOICE>$Resources:Microsoft.Office.Server.Search,SearchConfigScope_SPSite</CHOICE>
+			<CHOICE>$Resources:Microsoft.Office.Server.Search,SearchConfigScope_SPWeb</CHOICE>
+		</CHOICES>
+</Field>
+</Elements>
+

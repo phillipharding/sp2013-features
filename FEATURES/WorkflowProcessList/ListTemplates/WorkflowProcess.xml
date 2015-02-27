@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="workflowProcess"
+        Type="118"
+        BaseType="0"
+        Hidden="TRUE"
+        HiddenList="TRUE"
+        OnQuickLaunch="FALSE"
+        SecurityBits="11"
+        DisplayName="$Resources:core,workflowprocessList;"
+        Description="$Resources:core,workflowprocessList_Desc;"
+        Image="/_layouts/15/images/itgen.gif?rev=23"/>
+</Elements>

@@ -1,0 +1,10 @@
+<Feature Id="5153156A-63AF-4FAC-B557-91BD8C315432"
+    Title="$Resources:spscore,SiteFeedController_Feature_Title"
+    Description="$Resources:spscore,SiteFeedController_Feature_Description"
+    Version="15.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.SiteFeedControllerFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

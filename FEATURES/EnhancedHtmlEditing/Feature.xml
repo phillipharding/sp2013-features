@@ -1,0 +1,16 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Feature  Id="81EBC0D6-8FB2-4e3f-B2F8-062640037398"
+          Title="$Resources:cmscore,EnhancedHtmlEditing_Feature_Title;"
+          Description="$Resources:cmscore,EnhancedHtmlEditing_Feature_Desc;"
+          Version="14.0.0.0"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          Scope="Farm"
+          ReceiverAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Publishing.EnhancedHtmlEditing"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="EnhancedHtmlEditing.xml"/>
+    </ElementManifests>
+</Feature>

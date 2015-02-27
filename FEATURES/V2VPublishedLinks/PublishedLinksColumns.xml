@@ -1,0 +1,9 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <!-- Published Links List Fields -->
+    <Field ID="{C80F535B-A430-4273-8F4F-F3E95507B62A}" Name="PublishedLinksDisplayName" StaticName="PublishedLinksDisplayName" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" DisplayName="$Resources:cmscore,column_publishedlinksdisplayname_displayname;" Type="Text" Required="TRUE" MaxLength="255"></Field>
+    <Field ID="{70B38565-A310-4546-84A7-709CFDC140CF}" Name="PublishedLinksURL" StaticName="PublishedLinksURL" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" DisplayName="$Resources:cmscore,column_publishedlinksurl_displayname;" Type="URL" Required="TRUE" ></Field>
+    <Field ID="{92BBA27E-EEF6-41aa-B728-6DD9CAF2BDE2}" Name="PublishedLinksDescription" StaticName="PublishedLinksDescription" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" DisplayName="$Resources:cmscore,column_publishedlinksdescription_displayname;" Type="Note" Required="FALSE" Sealed="TRUE" RichText="FALSE"></Field>
+    <!-- END Published Links List Fields -->
+</Elements>

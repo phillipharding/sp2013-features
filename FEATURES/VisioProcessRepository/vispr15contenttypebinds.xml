@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ContentTypeBinding ContentTypeId="0x0101009DA5ABD378794CE39113F611AACA4E08" ListUrl="$Resources:vsrv,PR_processListUrl;" />
+    <ContentTypeBinding ContentTypeId="0x010100D7EBB8F02E244A078DEF146C98C98163" ListUrl="$Resources:vsrv,PR_processListUrl;" />
+    <ContentTypeBinding ContentTypeId="0x0101000BFB10333B1841C0B8F7503DDA55CC42" ListUrl="$Resources:vsrv,PR_processListUrl;" />
+
+</Elements>

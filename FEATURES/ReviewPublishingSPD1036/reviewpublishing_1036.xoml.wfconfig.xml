@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1036" _version="15.0.4442" _dal="1" -->
+<!-- _LocalBinding -->
+<WorkflowConfig Version="15.0.0.411">
+	<Template BaseID="{E43856D2-1BB4-40ef-B08B-016D89A0040C}" DocLibURL="_catalogs/wfpub" XomlHref="_catalogs/wfpub/Approbation de publication/ReviewPublishing_1036.xoml" XomlVersion="V1.0" AssociationURL="~layouts/CstWrkflIP.aspx" TaskContentType="0x01080100C9C9515DE4E24001905074F980F9316000A245BAB39C6543159300E33084BA040C" StartManually="true" Visibility="RootPublic" Category="List;Language:1036;#ContentType;Language:1036" RestrictLanguage="1036" RulesHref="_catalogs/wfpub/Approbation de publication/ReviewPublishing_1036.xoml.rules" RulesVersion="V1.0" Description="Envoie une page pour approbation. Les approbateurs peuvent approuver ou rejeter la page, réaffecter la tâche d’approbation ou demander des modifications à la page." PreviewHref="/_catalogs/wfpub/Approbation de publication/ReviewPublishing_1036.vdw" ShowPreview="true" PreviewVersion="V1.0" AllowStartOnMajorCheckin="true"/>
+	<ContentTypes>
+		<ContentType Name="Publishing Approval Workflow Task (fr-fr)" ContentTypeID="0x01080100C9C9515DE4E24001905074F980F9316000A245BAB39C6543159300E33084BA040C" WorkflowForm="/_catalogs/wfpub/Approbation de publication/ReviewPublishing_Task_1036.xsn" WorkflowFormVersion="V1.0" Description="Élément de travail créé par un flux de travail que vous ou votre équipe devez accomplir.">
+			<Fields/>
+			<WorkflowFormData>
+				<dfs:myFields xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:dms="http://schemas.microsoft.com/office/2009/documentManagement/types" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:q="http://schemas.microsoft.com/office/infopath/2009/WSSList/queryFields" xmlns:d="http://schemas.microsoft.com/office/infopath/2009/WSSList/dataFields" xmlns:ma="http://schemas.microsoft.com/office/2009/metadata/properties/metaAttributes" xmlns:pc="http://schemas.microsoft.com/office/infopath/2007/PartnerControls" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<dfs:queryFields>
+					</dfs:queryFields>
+					<dfs:dataFields>
+						<d:SharePointListItem_RW>
+							<d:Status/>
+							<d:Author/>
+							<d:FieldName_ConsolidatedComments/>
+							<d:DueDate xsi:nil="true"/>
+							<d:FieldName_Comments/>
+							<d:FieldName_DelegateTo/>
+							<d:FieldName_NewDescription/>
+							<d:FieldName_NewSerialTaskDuration xsi:nil="true"/>
+							<d:FieldName_NewDurationUnits>Day</d:FieldName_NewDurationUnits>
+							<d:FieldName_RequestTo/>
+							<d:Body/>
+							<d:Title/>
+							<d:Priority>(2) Normal</d:Priority>
+							<d:PercentComplete xsi:nil="true"/>
+							<d:AssignedTo/>
+							<d:StartDate/>
+							<d:WorkflowLink Description=""/>
+							<d:OffsiteParticipant/>
+							<d:OffsiteParticipantReason/>
+							<d:WorkflowOutcome/>
+							<d:WorkflowName/>
+							<d:FormURN/>
+							<d:FormData/>
+							<d:EmailBody/>
+							<d:HasCustomEmailBody xsi:nil="true"/>
+							<d:SendEmailNotification xsi:nil="true"/>
+							<d:PendingModTime xsi:nil="true"/>
+							<d:Completed>false</d:Completed>
+							<d:ExtendedProperties/>
+							<d:ID xsi:nil="true"/>
+							<d:Modified xsi:nil="true"/>
+							<d:Created xsi:nil="true"/>
+							<d:Editor/>
+						</d:SharePointListItem_RW>
+					</dfs:dataFields>
+				</dfs:myFields>
+			</WorkflowFormData>
+		</ContentType>
+	</ContentTypes>
+	<Initiation URL="~layouts/IniWrkflIP.aspx">
+		<Fields>
+			<Field Name="Approvers" GroupName="Assignment" FormType="Association" DisplayName="Approbateurs" Type="HybridUser" Description="Entrez les noms des personnes auxquelles le flux de travail affectera des tâches et sélectionnez l’ordre d’affectation de ces dernières. Séparez-les par des points-virgules. Vous pouvez également ajouter des étapes pour attribuer des tâches à d’autres personnes dans des ordres différents." Direction="None" InsertButtonText="Ajouter une nouvelle étape">
+				<Default/>
+				<Field Name="Assignee" DisplayName="Affecter à" List="UserInfo" Description="" Width="305" Type="UserMulti" ShowField="ImnName" UserSelectionMode="PeopleAndGroups" UserSelectionScope="0" Direction="None"/>
+				<Field Name="Stage" DisplayName="Étape" Description="" Width="1" Type="Number" Direction="None" Hidden="TRUE">
+					<Default></Default>
+				</Field>
+				<Field Name="AssignmentType" Format="Dropdown" BaseType="Text" DisplayName="Commande" Description="" Width="150" Type="Choice" Direction="None">
+					<Default>Serial</Default>
+					<CHOICES>
+						<CHOICE DisplayName="Un à la fois (en série)">Serial</CHOICE>
+						<CHOICE DisplayName="Simultanément (en parallèle)">Parallel</CHOICE>
+					</CHOICES>
+				</Field>
+			</Field>
+			<Field Name="ExpandGroups" FormType="Association" DisplayName="Développer les groupes" Description="Pour chaque groupe entré, affectez une tâche à chaque membre et à chaque groupe qu'il contient." Direction="None" Type="Boolean">
+				<Default>1</Default>
+			</Field>
+			<Field Name="NotificationMessage" FormType="Both" NumLines="5" Sortable="FALSE" RichTextMode="Compatible" DisplayName="Demande" Description="Ce message sera envoyé aux personnes auxquelles des tâches sont affectées." Direction="None" Type="Note">
+				<Default/>
+			</Field>
+			<Field Name="DueDateforAllTasks" FormType="Both" Format="DateOnly" DisplayName="Échéance pour toutes les tâches" Description="Échéance de toutes les tâches." Direction="None" Type="DateTime">
+				<CustomValidation>
+					<Condition>. != &quot;&quot; and msxsl:string-compare(., xdDate:Now()) &lt; 0</Condition>
+					<Message ScreenTip="Les valeurs de ce contrôle doivent être postérieures à la date et l’heure actuelles." ShowScreenTipOnly="TRUE">Les valeurs de ce contrôle doivent être postérieures à la date et l’heure actuelles.</Message>
+				</CustomValidation>
+			</Field>
+			<Field Name="DurationforSerialTasks" FormType="Both" Min="1" Max="999" DisplayName="Durée par tâche" Description="La durée jusqu'à l’échéance d’une tâche. Choisissez les unités dans le champ Unités de durée." Direction="None" Type="Number" />
+			<Field Name="DurationUnits" FormType="Both" Format="Dropdown" BaseType="Text" DisplayName="Unités de durée" Description="Définit les unités de temps utilisées par la durée par tâche." Direction="None" Type="Choice">
+				<CHOICES>
+					<CHOICE DisplayName="Jour(s)">Day</CHOICE>
+					<CHOICE DisplayName="Semaine(s)">Week</CHOICE>
+					<CHOICE DisplayName="Mois">Month</CHOICE>
+				</CHOICES>
+				<Default>Day</Default>
+			</Field>
+			<Field Name="CC" FormType="Both" List="UserInfo" ShowField="ImnName" UserSelectionMode="PeopleAndGroups" UserSelectionScope="0" DisplayName="CC" Description="Avertir ces personnes lorsque le flux de travail démarre et se termine, sans leur affecter de tâches." Direction="None" Type="UserMulti" Mult="TRUE" />
+			<Field Name="CancelonRejection" FormType="Association" DisplayName="Terminer dès le premier refus" Description="Refuse automatiquement le document s’il est rejeté par un participant." Direction="None" Type="Boolean">
+				<Default>0</Default>
+			</Field>
+			<Field Name="CancelonChange" FormType="Association" DisplayName="Terminer en cas de modification du document" Description="Refuse automatiquement le document s’il est modifié avant la fin du flux de travail." Direction="None" Type="Boolean">
+				<Default>0</Default>
+			</Field>
+			<Field Name="EnableContentApproval" FormType="Association" DisplayName="Activer l’approbation du contenu" Description="Met à jour le statut d’approbation une fois que le flux de travail est terminé (utilisez ce flux de travail pour contrôler l’approbation du contenu)." Direction="None" Type="Boolean">
+				<Default>0</Default>
+			</Field>
+		</Fields>
+		<Parameters>
+			<Parameter Name="Approvers" Type="System.String"/>
+			<Parameter Name="ExpandGroups" Type="System.Boolean"/>
+			<Parameter Name="NotificationMessage" Type="System.String"/>
+			<Parameter Name="DueDateforAllTasks" Type="System.DateTime"/>
+			<Parameter Name="DurationforSerialTasks" Type="System.Double"/>
+			<Parameter Name="DurationUnits" Type="System.String"/>
+			<Parameter Name="CC" Type="System.String"/>
+			<Parameter Name="CancelonRejection" Type="System.Boolean"/>
+			<Parameter Name="CancelonChange" Type="System.Boolean"/>
+			<Parameter Name="EnableContentApproval" Type="System.Boolean"/>
+		</Parameters>
+		<DefaultData>
+			<dfs:myFields xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:dms="http://schemas.microsoft.com/office/2009/documentManagement/types" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:q="http://schemas.microsoft.com/office/infopath/2009/WSSList/queryFields" xmlns:d="http://schemas.microsoft.com/office/infopath/2009/WSSList/dataFields" xmlns:ma="http://schemas.microsoft.com/office/2009/metadata/properties/metaAttributes" xmlns:pc="http://schemas.microsoft.com/office/infopath/2007/PartnerControls" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+				<dfs:queryFields>
+				</dfs:queryFields>
+				<dfs:dataFields>
+					<d:SharePointListItem_RW>
+						<d:Approvers>
+							<d:Assignment>
+								<d:Assignee/>
+								<d:Stage xsi:nil="true"/>
+								<d:AssignmentType>Serial</d:AssignmentType>
+							</d:Assignment>
+						</d:Approvers>
+						<d:ExpandGroups>true</d:ExpandGroups>
+						<d:NotificationMessage/>
+						<d:DueDateforAllTasks xsi:nil="true"/>
+						<d:DurationforSerialTasks xsi:nil="true"/>
+						<d:DurationUnits>Day</d:DurationUnits>
+						<d:CC/>
+						<d:CancelonRejection>false</d:CancelonRejection>
+						<d:CancelonChange>false</d:CancelonChange>
+						<d:EnableContentApproval>false</d:EnableContentApproval>
+					</d:SharePointListItem_RW>
+				</dfs:dataFields>
+			</dfs:myFields>
+		</DefaultData>
+	</Initiation>
+	<Extended>
+		<Fields/>
+	</Extended>
+	<MetaData>
+		<TaskForms/>
+		<Modifications ModificationUrl="~layouts/ModWrkflIP.aspx">
+			<Modification TypeId="a938eabe-8db1-45b9-87cb-b930728afe10" NameFormat="Annuler toutes les tâches de {0}" FormURN="urn:schemas-microsoft-com:office:infopath:workflow:OOB-WrapItUp:1036"/>
+		</Modifications>
+		<Instantiation_FormURI Version="V1.0">/_catalogs/wfpub/Approbation de publication/reviewpublishing_1036.xsn</Instantiation_FormURI>
+		<Association_FormURN Version="V1.0">/_catalogs/wfpub/Approbation de publication/reviewpublishing_1036.xsn</Association_FormURN>
+		<ExtendedStatusColumnValues>
+			<StatusColumnValue>Annulé</StatusColumnValue>
+			<StatusColumnValue>Approuvé</StatusColumnValue>
+			<StatusColumnValue>Refusé</StatusColumnValue>
+		</ExtendedStatusColumnValues>
+	</MetaData>
+</WorkflowConfig>

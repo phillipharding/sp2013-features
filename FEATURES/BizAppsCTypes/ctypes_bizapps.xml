@@ -1,0 +1,135 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <!-- Content Types for KPIs -->
+    <ContentType ID="0x00A7470EADF4194e2e9ED1031B61DA0884" Name="$Resources:spscore,BizAppsContentTypes_CommonIndicatorColumns;" Group="_Hidden" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{249A1C1A-5A3E-4173-ABAD-779B01892510}" Name="KpiDescription"/>
+            <FieldRef ID="{0121CB2B-4515-44f2-9D5A-0DCB3BF556AA}" Name="KpiComments"/>
+            <FieldRef ID="{F0816223-FD98-41f9-AA57-B7F7DB462FAA}" Name="Value"/>
+            <FieldRef ID="{6E4B3AAD-350D-42fa-BD61-D1DE715B45DB}" Name="Goal"/>
+            <FieldRef ID="{E84A049E-230D-4751-8D5C-8F615E968DF2}" Name="Warning"/>
+            <FieldRef ID="{3366AAE9-30A9-43f5-A2CB-1A6EE44E2CE4}" Name="FormattedValue" />
+            <FieldRef ID="{E9DF93F4-7951-474b-8CC4-E240C2F5E600}" Name="FormattedGoal" />
+            <FieldRef ID="{F53D350D-854E-4962-9318-89D56D30773A}" Name="FormattedWarning" />
+            <FieldRef ID="{9730102C-9470-4515-960E-6DFB2D89A68B}" Name="DetailLink"/>
+            <FieldRef ID="{56747800-D36E-4625-ABE3-B1BC74A7D5F8}" Name="LowerValuesAreBetter"/>
+            <FieldRef ID="{E247CBB0-ABB3-4759-B9F4-0128E37DD34A}" Name="UpdateError"/>
+            <FieldRef ID="{FD3E3A59-BF10-4c99-B678-5DD7FCC6CB28}" Name="LastUpdated" />
+        </FieldRefs>
+    </ContentType>
+    <ContentType ID="0x00A7470EADF4194e2e9ED1031B61DA088401" Name="$Resources:spscore,BizAppsContentTypes_StaticKPI;" Description="$Resources:spscore,BizAppsContentTypes_StaticKPI_Desc;" Group="$Resources:spscore,BizAppsContentTypes_BIGroup_Name;" Version="0">
+        <FieldRefs />
+        <XmlDocuments>
+            <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+                <FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+                    <Display>SimpleKpiDisplayForm</Display>
+                    <Edit>SimpleKpiEditForm</Edit>
+                    <New>SimpleKpiNewForm</New>
+                </FormTemplates>
+            </XmlDocument>
+        </XmlDocuments>
+    </ContentType>
+    <ContentType ID="0x00A7470EADF4194e2e9ED1031B61DA088402" Name="$Resources:spscore,BizAppsContentTypes_SharePointKPI;" Description="$Resources:spscore,BizAppsContentTypes_SharePointKPI_Desc;" Group="$Resources:spscore,BizAppsContentTypes_BIGroup_Name;" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{A9EA6E2D-BC5C-4ccc-BAD8-8DDFE519710F}" Name="DataSource"/>
+            <FieldRef ID="{2C7DB8AF-02B0-4177-B77F-15C942C08427}" Name="ViewGuid"/>
+            <FieldRef ID="{93DF9772-1E34-40c5-8C54-4BF3CDD56B34}" Name="ValueExpression"/>
+            <FieldRef ID="{D43E8A19-F4F3-4e6a-B8C1-02E972C3ED6F}" Name="PercentExpression"/>
+            <FieldRef ID="{96226EED-EC6F-4f0e-ADD5-9CFE66A441A0}" Name="AutoUpdate"/>
+        </FieldRefs>
+        <XmlDocuments>
+            <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+                <FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+                    <Display>SharePointKpiDisplayForm</Display>
+                    <Edit>SharePointKpiEditForm</Edit>
+                    <New>SharePointKpiNewForm</New>
+                </FormTemplates>
+            </XmlDocument>
+        </XmlDocuments>
+    </ContentType>
+    <ContentType ID="0x00A7470EADF4194e2e9ED1031B61DA088403" Name="$Resources:spscore,BizAppsContentTypes_ExcelKPI;" Description="$Resources:spscore,BizAppsContentTypes_ExcelKPI_Desc;" Group="$Resources:spscore,BizAppsContentTypes_BIGroup_Name;" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{A9EA6E2D-BC5C-4ccc-BAD8-8DDFE519710F}" Name="DataSource"/>
+            <FieldRef ID="{D096D5F3-B399-462b-9A32-83F82D9237D4}" Name="ValueSheet"/>
+            <FieldRef ID="{3B32F47B-F1A1-45ff-B5AD-7B28B84C720A}" Name="ValueCell"/>
+            <FieldRef ID="{69AC2B6E-F626-49b4-B0CC-C2B9580E8719}" Name="GoalSheet"/>
+            <FieldRef ID="{4181B96A-3125-4f75-B823-3A4D675C6B19}" Name="GoalCell"/>
+            <FieldRef ID="{3E223474-75FF-466b-B53F-9B641CE74B6C}" Name="WarningSheet"/>
+            <FieldRef ID="{EEAABF1D-F6AE-4dc6-873F-7397A17C36F0}" Name="WarningCell"/>
+            <FieldRef ID="{20906227-D1C8-430c-989A-30A62E3E40B2}" Name="GoalFromWorkBook"/>
+            <FieldRef ID="{3C6188A0-2761-4e0a-9FC0-EE32D47E4D49}" Name="WarningFromWorkBook"/>
+            <FieldRef ID="{96226EED-EC6F-4f0e-ADD5-9CFE66A441A0}" Name="AutoUpdate"/>
+        </FieldRefs>
+        <XmlDocuments>
+            <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+                <FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+                    <Display>ExcelKpiDisplayForm</Display>
+                    <Edit>ExcelKpiEditForm</Edit>
+                    <New>ExcelKpiNewForm</New>
+                </FormTemplates>
+            </XmlDocument>
+        </XmlDocuments>
+    </ContentType>
+    <ContentType ID="0x00A7470EADF4194e2e9ED1031B61DA088404" Name="$Resources:spscore,BizAppsContentTypes_ASKPI;" Description="$Resources:spscore,BizAppsContentTypes_ASKPI_Desc;" Group="$Resources:spscore,BizAppsContentTypes_BIGroup_Name;" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{A9EA6E2D-BC5C-4ccc-BAD8-8DDFE519710F}" Name="DataSource"/>
+            <FieldRef ID="{11A86235-9D18-4134-B58C-FA7243F4CBBA}" Name="Trend"/>
+            <FieldRef ID="{3C497036-038F-41db-AEC7-C9849649B135}" Name="KpiStatus"/>
+            <FieldRef ID="{DD83A5ED-83C5-47b7-823A-415C6EA1B8A3}" Name="DisplayFolder"/>
+            <FieldRef ID="{291AACDA-4CFB-4d59-968B-5E2EA0C9EAB7}" Name="KPI"/>
+            <FieldRef ID="{F6DF49EC-807B-4d40-A7DA-A17684121F92}" Name="IncludeHierarchy"/>
+            <FieldRef ID="{96226EED-EC6F-4f0e-ADD5-9CFE66A441A0}" Name="AutoUpdate"/>
+        </FieldRefs>
+        <XmlDocuments>
+            <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+                <FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+                    <Display>AnalysisServicesKpiDisplayForm</Display>
+                    <Edit>AnalysisServicesKpiEditForm</Edit>
+                    <New>AnalysisServicesKpiNewForm</New>
+                </FormTemplates>
+            </XmlDocument>
+        </XmlDocuments>
+    </ContentType>
+    <!-- Content Types for Report Center -->
+    <ContentType ID="0x01010058DDEB47312E4967BFC1576B96E8C3D4" Name="$Resources:spscore,BizAppsContentTypes_Report;" Group="$Resources:spscore,BizAppsContentTypes_BIGroup_Name;" Version="0">
+        <DocumentTemplate TargetName="/_layouts/CreateWorkbook.aspx" />
+        <FieldRefs>
+            <FieldRef ID="{2A16B911-B094-46e6-A7CD-227EEA3EFFDB}" Name="ReportDescription"/>
+            <!-- FieldRef ID="{90884F35-D2A5-48dc-A39F-7BCBC9781CF6}" Name="SaveToReportHistory" -->
+            <FieldRef ID="{1BE428C8-2C2D-4e02-970B-6663EB1D7080}" Name="ParentId"/>
+            <FieldRef ID="{2E8881DA-0332-4ad9-A565-45B5B8B2702F}" Name="ReportOwner"/>
+            <FieldRef ID="{D8921DA7-C09B-4a06-B644-DFFEBF73C736}" Name="ReportCategory"/>
+            <FieldRef ID="{BF80DF9C-32DC-4257-BCF9-08C2EE6CA1B1}" Name="ReportStatus"/>
+            <!-- FieldRef ID="{27C603F5-4DBE-4522-894A-AE77715DC532}" Name="ReportHistoryLink" -->
+            <!-- FieldRef ID="{28081524-7C2F-4f08-9319-9C737B495BC1}" Name="ReportName" -->
+            <!-- FieldRef ID="{FC6862C4-6AAC-4f08-B60E-3A8454F26040}" Name="ReportModifiedLink"-->
+            <!-- FieldRef ID="{FEF4B2E1-4B89-4929-981B-C1967E0B3178}" Name="ReportCreated" -->
+            <!-- FieldRef ID="{EFCA5F2B-DE72-42a8-AEFD-1257AF8698A8}" Name="ReportCreatedBy" -->
+            <!-- FieldRef ID="{CC33F143-E697-42db-9C83-8DB4E6928E9D}" Name="ReportModified"  -->
+            <!-- FieldRef ID="{F70965C3-6AC6-4e9e-914C-3C1B4E219B6F}" Name="ReportModifiedBy" -->
+        </FieldRefs>
+        <XmlDocuments>
+            <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+                <FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+                    <Display>RptLibraryForm</Display>
+                    <Edit>RptLibraryForm</Edit>
+                    <New>RptLibraryForm</New>
+                </FormTemplates>
+            </XmlDocument>
+        </XmlDocuments>
+    </ContentType>
+    <ContentType ID="0x010100A2E3C117A0C5482fAEE3D57C48CB042F" Name="$Resources:spscore,BizAppsContentTypes_Dashboard;" Group="$Resources:spscore,BizAppsContentTypes_BIGroup_Name;" Version="0" Description="$Resources:spscore,Dashboard_Description;">
+        <DocumentTemplate TargetName="/_layouts/spnewdashboard.aspx" />
+        <FieldRefs>
+            <FieldRef ID="{2A16B911-B094-46e6-A7CD-227EEA3EFFDB}" Name="ReportDescription" />
+        </FieldRefs>
+        <XmlDocuments>
+            <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+                <FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+                    <Display>RptLibraryForm</Display>
+                    <Edit>RptLibraryForm</Edit>
+                    <New>RptLibraryForm</New>
+                </FormTemplates>
+            </XmlDocument>
+        </XmlDocuments>
+    </ContentType>
+</Elements>

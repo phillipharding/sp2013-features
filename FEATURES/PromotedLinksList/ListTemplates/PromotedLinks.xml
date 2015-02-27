@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="promotedlinks"
+        Type="170"
+        BaseType="0"
+        OnQuickLaunch="TRUE"
+        FolderCreation="FALSE"
+        SecurityBits="11"
+        Sequence="350"
+        DisplayName="$Resources:core,promotedlinksList;"
+        Description="$Resources:core,promotedlinksList_Desc;"
+        Image="/_layouts/15/images/itgen.png?rev=23"/>
+</Elements>

@@ -1,0 +1,79 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Id="SiteManagement"
+        GroupId="SiteAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="BrowseDirectories"
+        Sequence="210"
+        Title="$Resources:cmscore,Settings_Publishing_Site;"
+        Description="$Resources:cmscore,SiteSettings_ContentAndStructure_Tooltip;">
+        <UrlAction
+            Url="_layouts/15/sitemanager.aspx?Source={WebUrl}_layouts/15/settings.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="NoCrawlSettingsPage"
+        GroupId="SearchAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb"
+        Sequence="6"
+        Title="$Resources:cmscore,Settings_Publishing_NoCrawl;"
+        Description="$Resources:cmscore,SiteSettings_SearchableColumns_Tooltip;">
+		<UrlAction
+            Url="_layouts/15/NoCrawlSettings.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="SiteManagerLogs"
+        GroupId="SiteAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"
+        RequireSiteAdministrator="true"
+        Sequence="250"
+        Title="$Resources:cmscore,Settings_Publishing_ContentStructureLogs;"
+        Description="$Resources:cmscore,Settings_Publishing_ContentStructureLogs_Tooltip;">
+		<UrlAction
+            Url="_layouts/15/SiteManager.aspx?lro=all" />
+    </CustomAction>
+    <CustomAction
+        Id="VariationSettings"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Sequence="210"
+        Title="$Resources:cmscore,Settings_Publishing_Variations;"
+        Description="$Resources:cmscore,SiteSettings_Variations_Tooltip;">
+        <UrlAction
+            Url="_layouts/15/VariationSettings.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="VariationLabels"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"        
+        Sequence="220"
+        Title="$Resources:cmscore,Settings_Publishing_VariationLabels;"
+        Description="$Resources:cmscore,SiteSettings_VariationLabels_Tooltip;">
+		<UrlAction
+            Url="_layouts/15/VariationLabels.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="VariationLogs"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"        
+        Sequence="230"
+        Title="$Resources:cmscore,Settings_Publishing_VariationLog;"
+        Description="$Resources:cmscore,SiteSettings_VariationLogs_Tooltip;">
+		<UrlAction
+            Url="_layouts/15/VariationLogs.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="PublishedLinks"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        RequireSiteAdministrator="true"
+        Sequence="240"
+        Title="$Resources:cmscore,Settings_PublishingResources_PublishedLinks;"
+        Description="$Resources:cmscore,Settings_PublishingResources_PublishedLinks_Tooltip;">
+        <UrlAction
+            Url="PublishedLinks/" />
+    </CustomAction>
+</Elements>

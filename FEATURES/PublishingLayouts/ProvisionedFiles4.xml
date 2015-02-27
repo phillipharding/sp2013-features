@@ -1,0 +1,9 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Control 
+        Id="PublishingConsole" 
+        Sequence="50"
+        ControlSrc="~/_controltemplates/15/publishingconsole.ascx">
+    </Control>
+</Elements>

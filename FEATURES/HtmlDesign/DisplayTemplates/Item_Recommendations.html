@@ -1,0 +1,222 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_RecommendationsItem</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">1</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#SearchResults;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>    
+    <div id="Item_Recommendations">
+<!--#_ 
+    if(!$isNull(ctx.CurrentItem) && !$isNull(ctx.ClientControl)) {
+
+        if(!window.RIPositioningAlgorithm)
+        {
+            window.RIPositioningAlgorithm = function(c) {
+                if (!c.isRTL)
+                {
+                    c.moveDownAndRight();
+                }
+                else
+                {
+                    c.moveDownAndLeft();
+                }
+                if (c.numberOfEdgesCollidingWithBoundingBox() > 0)
+                {
+                    var defaultCalloutOptions = new CalloutOptions();
+                    defaultCalloutOptions.positionAlgorithm.apply(this, arguments);
+                }
+            };
+        }
+
+        if(!window.RILogToEventStore)
+        {
+            window.RILogToEventStore = function(url, navigate)
+            {
+                SP.SOD.executeFunc("SP.js", "SP.Analytics.AnalyticsUsageEntry.logAnalyticsEvent", function()
+                {
+                        var clientContext = new SP.ClientContext.get_current();
+                        SP.Analytics.AnalyticsUsageEntry.logAnalyticsEvent(clientContext, SP.Analytics.EventTypeId.recommendationClick, url);
+                        clientContext.executeQueryAsync(
+                        function(){
+                            if(navigate)
+                            {
+                                window.location.href = url;
+                            }
+                        },
+                        function() {
+                            if(navigate)
+                            {
+                                window.location.href = url;
+                            }
+                        });
+                });          
+
+                if(navigate)
+                {
+                    return false;
+                }
+            };
+        }
+
+        if(!window.RIQueueLogToEventStore)
+        {
+            window.RIQueueLogToEventStore = function(url)
+            {
+                if(!window.RILogQueue)
+                {
+                    window.RILogQueue = [];
+                }
+                window.RILogQueue[window.RILogQueue.length] = url;
+            };
+        }
+
+        if(!window.RIExecuteQueueLogToEventStore)
+        {
+            window.RIExecuteQueueLogToEventStore = function()
+            {
+                var queue = window.RILogQueue;
+                window.RILogQueue = null;
+                if(queue)
+                {
+                    SP.SOD.executeFunc("SP.js", "SP.Analytics.AnalyticsUsageEntry.logAnalyticsEvent", function()
+                    { 
+                            var clientContext = new SP.ClientContext.get_current();
+                            for(var i = 0; i < queue.length; i++)
+                            {
+                                SP.Analytics.AnalyticsUsageEntry.logAnalyticsEvent(clientContext,  SP.Analytics.EventTypeId.recommendationView, queue[i]);
+                            }
+                            clientContext.executeQueryAsync(function(){}, function() {});
+                    });  
+                }
+            };
+        }
+
+        if(!window.RIOpenDetailsCallout)
+        {
+            window.RIOpenDetailsCallout = function(id, title, itemPath, listId, listItemId, calloutWidthDivId, lastEdited, reasonText) {
+                SP.SOD.executeFunc("SP.js", "SP.Analytics.AnalyticsUsageEntry.logAnalyticsEvent", function()
+                {
+                    var e = $get(id);
+                    var callout = CalloutManager.getFromLaunchPointIfExists(e);
+                    if (!callout) {
+                        var options = new CalloutOptions();
+                        options.launchPoint = e;
+                        options.ID = id + "_callout";
+
+                        options.boundingBox = document.getElementById("s4-workspace");
+                        options.positionAlgorithm = RIPositioningAlgorithm;
+
+                        var calloutWidth = Sys.UI.DomElement.getBounds($get(calloutWidthDivId)).width;
+
+                        options.contentWidth = calloutWidth;
+                        options.beakOrientation = "leftRight";
+
+                        var openOptions = new CalloutOpenOptions();
+                        openOptions.closeCalloutOnBlur = true;
+                        openOptions.event = "none";
+                        openOptions.showCloseButton = true;
+                        options.openOptions = openOptions;
+
+                        var itemUrlTruncated = Srch.U.truncateUrl(itemPath, Srch.U.pathTruncationLength)
+
+                        var calloutBody = Callout.GenerateDefaultSection($resource('recs_LastEditedBy'), $htmlEncode(lastEdited)) 
+                                        + Callout.GenerateDefaultSection(null, $htmlEncode(reasonText))
+                                        + Callout.GenerateDefaultSection($resource('recs_Location'), $htmlEncode(itemUrlTruncated));
+
+                        options.title = title;
+                        options.content = calloutBody;
+                        callout = CalloutManager.createNew(options);
+
+                        var openLinkOptions = new CalloutActionOptions()
+                        openLinkOptions.text = $resource('recs_Open');
+                        openLinkOptions.onClickCallback = (function (){
+                            RILogToEventStore(itemPath, true);
+                        });
+                        callout.addAction(new CalloutAction(openLinkOptions));
+
+                        if (!$isNull(SP) && !$isNull(SP.UI) && !$isNull(SP.UI.RelatedItems) && 
+                            !$isNull(SP.UI.RelatedItems.ScriptApplicationManager) && !$isNull(SP.UI.RelatedItems.ScriptApplicationManager.RelatedItemsControl))
+                        {
+                            var saveLinkOptions = new CalloutActionOptions()
+                            saveLinkOptions.text =  $resource('recs_SaveLink');
+                            saveLinkOptions.onClickCallback = (function (){
+                                SP.UI.RelatedItems.ScriptApplicationManager.RelatedItemsControl.AddRelatedItem(listId, listItemId);
+                            });
+                            callout.addAction(new CalloutAction(saveLinkOptions));
+                        }                    
+                    }
+                    callout.toggle();
+                });
+            };
+        }
+
+        var currentItem = ctx.CurrentItem;
+        var IsFillIn = SP.Guid.get_empty().equals(currentItem.QueryRuleId);
+        if (IsFillIn == undefined)
+        {
+            IsFillIn = false;
+        }
+
+        var id = ctx.ClientControl.get_nextUniqueId();
+        var parentDivId = id + "_ris_add_as_related";
+        var titleId = id + "_ris_title";
+        var addId = id + "_relateditems_add";
+        var addDivId = id + "_relateditems_add_div";
+        var calloutId = id + "_relateditems_callout_div";
+        var savelinkId = id + "_relateditems_save_link";
+        var calloutTextId = id + "_relateditems_callout_text";
+
+        var itemTitle = $getItemValue(ctx, 'Title');
+        var itemPath = $getItemValue(ctx, "Path"); 
+        var listId = $getItemValue(ctx, "ListID");
+        var listItemId = $getItemValue(ctx, "ListItemID");
+
+        var res_ShowDetails = $resource('recs_ShowDetails');
+        var res_Recommended = $resource('recs_Recommended');
+        var res_Fillin = $resource('recs_Fillin');
+        var res_AltIcon = $resource('recs_AltIcon');
+        var res_LastEditedBy = $getItemValue(ctx, "Author");
+        var calloutButton = GetThemedImageUrl("spcommon.png");
+
+        var calloutWidthDivId = id + "_relateditems_callout_width";      
+        var reasonText = res_Fillin;
+        if(!IsFillIn)
+        {
+            reasonText = res_Recommended;
+            window.RIQueueLogToEventStore(itemPath.toString());
+        }
+
+_#-->
+        <div id="_#= $htmlEncode(parentDivId) =#_" class="ms-recommendations-item">
+            <div class="ms-recommendations-icon">
+                    <img src="_#= $urlHtmlEncode(Srch.U.getIconUrlByFileExtension(currentItem)) =#_" alt="_#= $htmlEncode(res_AltIcon) =#_"/>
+            </div>
+            <div class="ms-recommendations-title ms-noWrap">    
+                <a href="_#= $urlHtmlEncode(itemPath) =#_" title="_#= itemTitle =#_" class="ms-listLink" onclick="RILogToEventStore('_#= $scriptEncode(itemPath) =#_', true);">
+                    _#= itemTitle =#_
+                </a>
+            </div>
+            <div class="ms-recommendations-calloutlink">
+                <a id="_#= $htmlEncode(calloutId) =#_"
+                        href="javascript:;" title="_#= $htmlEncode(res_ShowDetails) =#_"
+                        onclick="javascript:SP.SOD.executeFunc('Callout.js', 'CalloutManager',  function() { RIOpenDetailsCallout('_#= $scriptEncode(calloutId) =#_', '_#= $scriptEncode(itemTitle) =#_', '_#= $scriptEncode(itemPath) =#_', '_#= $scriptEncode(listId) =#_', '_#= $scriptEncode(listItemId) =#_', '_#= $scriptEncode(calloutWidthDivId) =#_', '_#= $scriptEncode(res_LastEditedBy) =#_', '_#= $scriptEncode(reasonText) =#_'); });" class="ms-calloutLink, ms-ellipsis-a">
+                        <img src="_#= $urlHtmlEncode(calloutButton) =#_" class="ms-ellipsis-icon" />
+                </a>
+            </div>
+            <div class="ms-recommendations-calloutwidth" id="_#= $htmlEncode(calloutWidthDivId) =#_">
+            </div>
+        </div>
+<!--#_ 
+    }
+_#-->
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Id="AdminReports"
+        GroupId="Reporting"
+        Location="Microsoft.SharePoint.Administration.Monitoring"
+        Sequence="25"
+        Title="$Resources:osrvcore,AdministrativeReportsLinkTitle;">
+        <UrlAction
+            Url="AdminReports" />
+    </CustomAction>
+</Elements>

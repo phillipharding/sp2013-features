@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="fcgroups"
+        Type="401"
+        BaseType="0"
+        Unique="TRUE"
+        OnQuickLaunch="FALSE"
+        FolderCreation="FALSE"
+        SecurityBits="11"
+        DisplayName="$Resources:core,GbwListTemplateFcGroupsDisplay;"
+        Description="$Resources:core,GbwListTemplateFcGroupsDescription;"
+        Image="/_layouts/15/images/itgbfagp.gif?rev=23"/>
+</Elements>

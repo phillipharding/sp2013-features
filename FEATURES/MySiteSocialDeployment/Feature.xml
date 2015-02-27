@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature Id="B2741073-A92B-4836-B1D8-D5E9D73679BB"
+    Title="MySite Social Deployment Scenario"
+    Description="Enables MySite social features."
+    Version="15.0.2.0"
+    Scope="Site"
+    Hidden="TRUE"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.SocialDeploymentFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <UpgradeActions
+		ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+		ReceiverClass="Microsoft.SharePoint.Portal.SocialDeploymentFeatureReceiver" >
+        <VersionRange EndVersion="15.0.1.0">
+          <CustomUpgradeAction Name="AddToPersonalSiteCapabilities" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.2.0">
+          <CustomUpgradeAction Name="UpgradeMicroBlogFeature" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

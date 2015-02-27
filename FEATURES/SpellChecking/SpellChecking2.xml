@@ -1,0 +1,54 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+   <CustomAction
+        Id="Ribbon.ListForm.Edit.Groups.PubSpellCheckGroup"
+        Location="CommandUI.Ribbon"
+        Sequence="40"
+        Title="Add Spellcheck to List Item Tab">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.ListForm.Edit.Groups._children">
+          <Group Id="Ribbon.ListForm.Edit.SpellCheck"
+                 Sequence="40"
+                 Command="SpellCheckGroup"
+                 Description=""
+                 Title="$Resources:sp.publishing.resources,GrpSpellCheck;"
+                 Template="Ribbon.Templates.Flexible2" >
+            <Controls Id="Ribbon.ListForm.Edit.SpellCheck.Controls">
+              <SplitButton
+                Id="Ribbon.ListForm.Edit.SpellCheck.SpellCheck"
+                Alt="$Resources:sp.publishing.resources,SpellcheckerSpellButton;"
+                Command="SpellcheckUsingDefault"
+                Image16by16="/_layouts/15/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/spellingHS.png"
+                Image32by32="/_layouts/15/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/spellingHH.png"
+                LabelText="$Resources:sp.publishing.Resources,SpellcheckerSpellButton;"
+                PopulateDynamically="true"
+                PopulateOnlyOnce="true"
+                PopulateQueryCommand="GetSpellCheckMenuXml"
+                Sequence="10"
+                TemplateAlias="o1">
+              </SplitButton>
+            </Controls>
+          </Group>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+   <CustomAction
+        Id="Ribbon.ListForm.Edit.Groups.PubSpellCheckGroup.Scaling"
+        Location="CommandUI.Ribbon"
+        Title="Add Spellchecking scaling to List Item Tab">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.ListForm.Edit.Scaling._children">
+          <MaxSize Id="Ribbon.EditingTools.CPEditTab.Scaling.SpellCheck.MaxSize" Sequence="35" GroupId="Ribbon.ListForm.Edit.SpellCheck" Size="LargeMedium"/>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <Control 
+	Id="AdditionalPageHead"
+	ControlClass="Microsoft.SharePoint.Publishing.WebControls.SpellCheckV4Action" 
+	ControlAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+</Elements>

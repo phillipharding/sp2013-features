@@ -1,0 +1,24 @@
+<Feature  Id="5F3B0127-2F1D-4cfd-8DD2-85AD1FB00BFC"
+          Title="$Resources:spscore,PortalLayouts_Feature_Title;"
+          Description="$Resources:spscore,PortalLayouts_Feature_Description;"
+          Version="15.0.1.0"
+          Scope="Site"
+          Hidden="TRUE"
+          ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Portal.PortalLayoutsFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="LayoutFiles.xml"/>
+        <ElementManifest Location="webPartDWPFiles.xml"/>
+    </ElementManifests>
+    <UpgradeActions>
+        <VersionRange EndVersion="15.0.0.0">
+            <CustomUpgradeAction Name="BackupAndRemoveSearchLayouts"/>            
+        </VersionRange>
+        <VersionRange EndVersion="15.0.1.0">
+            <ApplyElementManifests>
+               <ElementManifest Location="LayoutFiles.xml"/>
+            </ApplyElementManifests>
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

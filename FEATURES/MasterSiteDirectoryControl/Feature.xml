@@ -1,0 +1,12 @@
+<Feature  Id="8A663FE0-9D9C-45c7-8297-66365AD50427"
+          Title="$Resources:spscore,MastersiteDirectoryControl_Feature_Title;"
+          Description="$Resources:spscore,MastersiteDirectoryControl_Feature_Description;"
+          Version="14.0.0.0"
+          Scope="Farm"
+	  Hidden="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="SiteCollectionControlPanel.xml"/>
+        <ElementManifest Location="CentralAdminLinks.xml"/>
+    </ElementManifests>
+</Feature>

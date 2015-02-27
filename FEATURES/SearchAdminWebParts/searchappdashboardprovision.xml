@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+     <Module>
+        <File Url="SearchAdministration.aspx" >
+            <AllUsersWebPart WebPartZoneID="BottomZone" WebPartOrder="1">
+                <![CDATA[
+                <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                    <Assembly>Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                    <TypeName>Microsoft.Office.Server.Search.WebControls.SearchTopologyOverview</TypeName>
+                    <Title>$Resources:Microsoft.Office.Server.Search,TopologyWP_Title;</Title>
+                    <Description>$Resources:Microsoft.Office.Server.Search,TopologyWP_Desc;</Description>
+                    <FrameType>TitleBarOnly</FrameType> 
+                    <AllowMinimize>true</AllowMinimize> 
+                    <AllowRemove>true</AllowRemove> 
+                    <IsVisible>true</IsVisible>
+                </WebPart>
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="TopZone" WebPartOrder="1">
+                <![CDATA[
+                <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                    <Assembly>Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                    <TypeName>Microsoft.Office.Server.Search.WebControls.SearchApplicationSystemStatus</TypeName>
+                    <Title>$Resources:Microsoft.Office.Server.Search,SystemStatusWP_Title;</Title>
+                    <Description>$Resources:Microsoft.Office.Server.Search,SystemStatusWP_Desc;</Description>
+                    <FrameType>TitleBarOnly</FrameType> 
+                    <AllowMinimize>true</AllowMinimize> 
+                    <AllowRemove>true</AllowRemove> 
+                    <IsVisible>true</IsVisible>
+                </WebPart>
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="LinksZone" WebPartOrder="1">
+                <![CDATA[
+                <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                    <Assembly>Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                    <TypeName>Microsoft.Office.Server.Search.WebControls.SearchApplicationShortcutsList</TypeName>
+                    <Title>$Resources:Microsoft.Office.Server.Search, SearchApplicationShortcutsList_Title;</Title>
+                    <Description>$Resources:Microsoft.Office.Server.Search, SearchApplicationShortcutsList_Desc;</Description>
+                    <FrameType>TitleBarOnly</FrameType> 
+                    <AllowMinimize>true</AllowMinimize> 
+                    <AllowRemove>true</AllowRemove> 
+                    <IsVisible>true</IsVisible>
+                </WebPart>
+                ]]>
+            </AllUsersWebPart>
+
+        </File>   
+     </Module>   
+</Elements>

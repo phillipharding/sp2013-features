@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature  Id="E09CEFAE-2ADA-4A1D-AEE6-8A8398215905"
+          Title="$Resources:SearchServerWizard_Feature_Title;"
+          Description="$Resources:SearchServerWizard_Feature_Desc;"
+          DefaultResourceFile="Microsoft.Office.Server.Search"
+          Version="12.0.0.0"
+          Scope="Site"
+          Hidden="TRUE"
+          AutoActivateInCentralAdmin="TRUE"
+          ReceiverAssembly="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.Office.Server.Search.Administration.SearchServerWizardFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Microsoft.Office.Server.Search.WebControls.ContentBySearchWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>	
+      <properties>
+        <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,CBS_Tags_Title;</property>
+        <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,CBS_Tags_Description;</property>
+        <property name="ChromeType">None</property>
+        <property name="AllowMinimize" type="bool">true</property>
+        <property name="AllowClose" type="bool">true</property>			
+        <property name="Hidden" type="bool">false</property>
+        <property name="UseSimplifiedQueryBuilder" type="bool">true</property>
+        <property name="DataProviderJSON" type="string">{"Properties":{"TryCache":true,"Scope":"{Site.URL}","Tag":"{Term}"},"PropertiesJson":"{\"TryCache\":true,\"Scope\":\"{Site.URL}\",\"Tag\":\"{Term}\"}","SourceId":"E1327B9C-2B8C-4B23-99C9-3730CB29C3F7"}</property>
+     </properties>
+</data>
+</webPart>
+</webParts>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EmailContent>
+  <Subject>
+    $ResourcesNoEncode:core,EvalSiteDeletedMailSubject;
+  </Subject>
+  <Body>
+    <HTML>
+      <![CDATA[<html>
+      <body>
+      <h3>$Resources:core,EvalSiteExpiryNotif;</h3>
+      <p>]]>
+    </HTML>
+    $ResourcesNoEncode:core,EvalSiteDeletedMailBody;
+    <HTML>
+      <![CDATA[</p>
+      </body>
+      </html>]]>
+    </HTML>
+  </Body>
+</EmailContent>

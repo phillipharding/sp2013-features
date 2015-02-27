@@ -1,0 +1,14 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Id="ManageSiteServicesAddins"
+        GroupId="Galleries"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Sequence="50"
+        Title="$Resources:cmscore,Settings_SiteServicesAddins_Settings;"
+        Description="$Resources:cmscore,Settings_SiteServicesAddins_Settings_Tooltip;">
+        <UrlAction
+            Url="_layouts/15/ManageSiteServicesAddins.aspx" />
+    </CustomAction>
+</Elements>

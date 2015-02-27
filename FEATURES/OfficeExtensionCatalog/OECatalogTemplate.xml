@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="OfficeExtensionCatalog"
+        Type="332"
+        BaseType="1"
+        OnQuickLaunch="TRUE"
+        SecurityBits="11"
+        DisplayName="$Resources:core,Marketplace_OfficeExtensionCatalogTemplateDisplayName;"
+        Description="$Resources:core,Marketplace_OfficeExtensionCatalogTemplateDescription;"
+        Image="/_layouts/15/images/itappcatalog.png?rev=23"
+        Catalog="TRUE"
+        AllowDeletion="FALSE"
+        Hidden="TRUE"
+        Unique="TRUE"
+        RootWebOnly="FALSE"
+        VersioningEnabled="TRUE"
+        DocumentTemplate="100"/>
+</Elements>

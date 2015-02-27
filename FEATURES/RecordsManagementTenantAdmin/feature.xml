@@ -1,0 +1,12 @@
+<Feature  Id="B5EF96CB-D714-41da-B66C-CE3517034C21"
+          Title="$Resources:RMTenantAdminFeatureTitle;"
+          Description="$Resources:RMTenantAdminFeatureDesc;"
+          Version="15.0.0.0"
+          Scope="Web"
+          Hidden="TRUE"
+          DefaultResourceFile="dlccore"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="default.xml" />
+    </ElementManifests>
+</Feature>

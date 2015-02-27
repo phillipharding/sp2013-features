@@ -1,0 +1,15 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Control 
+        Sequence="50"
+        Id="GlobalSiteLink0"
+        ControlSrc="~/_controltemplates/15/VariationsLabelMenu.ascx">
+    </Control>
+    <Control 
+        Sequence="50"
+        Id="VariationsFlagControl"
+        ControlSrc="~/_controltemplates/15/VariationsLabelMenu.ascx">
+    </Control>
+</Elements>

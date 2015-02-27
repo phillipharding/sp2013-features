@@ -1,0 +1,153 @@
+.body{
+background-color:#0D0D0D;
+color:#ffffff;
+}
+.master{background-color:#0D0D0D;}
+.body .ms-SPZone,.body .ms-SPZoneSelected,.body .ms-SPZone table,.body .ms-SPZoneSelected table,
+.master .ms-SPZone,.master .ms-SPZoneSelected,.master .ms-SPZone table,.master .ms-SPZoneSelected table
+{
+background-color:transparent;
+}
+.body .loginAndSearch
+{
+border-color:#e6e6e6;
+}
+.loginAndSearch a,.loginAndSearch a:link,.loginAndSearch a:visited
+{
+color:#FFFFFF;
+}
+.loginAndSearch .ms-sbplain
+{
+border-color:#91baba;
+color:#999999;
+}
+.loginAndSearch .ms-sbcell
+{
+color:#FFFFFF;
+}
+h1{}
+.mainContainer h2,.pageTitle{color:#CEF2F2;}
+.mainContainer h3{color:#91BABA;}
+.mainContainer h4{color:#CEF2F2;}
+.mainContainer h5{color:#91BABA;}
+.mainContainer h6{color:#CEF2F2;}
+.mainContent p{color:#ffffff;}
+.mainContent a{color:#91BABA !important;}
+.mainContent a:visited{color:#91BABA !important;}
+.mainContent a:hover{color:#3A5959;}
+.mainContent li{color:#ffffff;}
+.mainContent span{color:#ffffff;}
+.mainContent div{color:#ffffff;}
+.breadcrumb,.breadcrumb a,.breadcrumb:active,.breadcrumb a:active{color:#ffffff;}
+.logo{border-color:#F2F2F2;}
+.logo span{color:#7ac9c9;}
+.logo span.logoLine2{color:#8f8f8f;}
+.topLinkBar,.topLinkBar a,.toplinkbar a:active{color:#;}
+.authoringRegion{
+background-color:#DDDDDD;
+color:#333333;
+}
+.headerline{
+border-bottom:14px solid #303233;
+background-color:#91BABA;
+}
+.topNavItem
+{
+color:#ffffff;
+border-bottom:5px solid #0D0D0D;
+}
+.topNavBarSelected{border-bottom:5px solid #ffffff;color:#91BABA;}
+.topNavBarSelected td{color:#91BABA;}
+.topNavBarSelected a:link,.topNavBarSelected a:visited,.topNavBarSelected a:hover,.topNavBarSelected a:active,{
+color:#91BABA;
+}
+.topNavBarSelected a{color:#91BABA;}
+.topNav a:hover{color:#91BABA;}
+.topNavHover{border-bottom:5px solid #ccc;}
+.topNavFlyOutsHover{}
+.leftNav1,.leftNav2,.leftNav3
+{color:#ffffff !important;}
+.leftNav1
+{
+border-bottom:1px solid #0D0D0D;
+color:#ffffff;
+background-color:#2F3233;
+}
+.leftNav2
+{
+background-color:#2F3233;
+color:#ffffff;
+border-bottom:1px solid #0d0d0d;
+}
+.leftNavHover
+{
+background-color:#3A5959;
+color:#ffffff;
+}
+.leftNavSelected
+{
+background-color:#3A5959;
+color:#ffffff;
+}
+.footerLeft{border-left:16px solid #273030;}
+.footerRight{border-left:16px solid #273030;}
+.pageContentem{background-color:#263333;color:#ffffff;font-weight:normal;}
+.pageContentem p{color:#ffffff;font-weight:normal;}
+.welcomeSplashContentSummaryLinks{
+background-color:#313234;
+}
+.welcomeSplashContent .small{color:#91baba;}
+}
+.description{color:#4c4c4c;}
+.groupheader.medium{color:#91baba;}
+table#group .medium{color:#91baba;}
+.groupheader.small{color:#91baba;}
+table#group .small{color:#91baba;}
+.band{
+background-color:#3A5959;
+color:#FFFFFF;
+}
+.separator{border:1px #b2bcd3 solid;}
+.level-band{background-color:#596e9e;}
+.level-description{color:#4c4c4c }
+.level-item,.level-item a,.level-item a:link{color:#002a80;}
+.level-item a:visited,.level-item a:active{color:#53648e;}
+.level-item a:hover{color:#3a4663;}
+.headertitle,.headertitle a,.headertitle a:link{color:#002a80;}
+.headertitle a:visited,.headertitle a:active{color:#53648e;}
+.headertitle a:hover{color:#3a4663;}
+.headertitle-large,.headertitle-large a,.headertitle-large a:link{color:#002a80;}
+.headertitle-large a:visited,.headertitle-large a:active{color:#53648e;}
+.headertitle-large a:hover{color:#3a4663;}
+.headertitle-small,.headertitle-small a,.headertitle-small a:link{color:#002a80;}
+.headertitle-small a:visited,.headertitle-small a:active{color:#53648e;}
+.headertitle-small a:hover{color:#3a4663;}
+.headertitle-band,.headertitle-band a,.headertitle-band a:link{color:#eceff3;}
+.headertitle-band a:visited,.headertitle-band a:active{color:#eceff3;}
+.headertitle-band a:hover{color:#eceff3;}
+.item{margin:6px 6px 0 0;}
+.link-item,link-item-large,.description,.level-description,.level-item{
+color:#ffffff;
+}
+.link-item a,.link-item a:link,.link-item.bullet a:link,.link-item-large a,.link-item-large a:link,.level-item a,.level-item a:link,.level-item a:visited,.level-item a:active{
+color:#ffffff;
+}
+.link-item a:hover{
+color:#3A5959;
+}
+.link-item a:visited,.link-item.bullet a:visited,.link-item a:active,.link-item-large a:visited,.link-item-large a:active{
+color:#ffffff;
+}
+.link-item a:hover,.link-item.bullet a:hover,.link-item-large a:hover,.level-item a:hover{
+color:#ffffff;
+}
+.bullet{background:transparent url("images/white_lstbulet.gif") no-repeat center left;}
+.bullet a,.bullet a:link,.bullet a:visited{
+color:#ffffff;
+}
+.pageContentem{background-color:#E6F1F7;}
+.SecondTitle{color:#CEF2F2;}
+.title-With-Background
+{
+background-color:#545454;
+}

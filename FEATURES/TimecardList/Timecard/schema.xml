@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Name="TimeCard" Title="$Resources:core,TimeCardListTitle;" Direction="0" Url="Lists/Time Card" FolderCreation="FALSE" BaseType="0">
+  <MetaData>
+    <ContentTypes>
+      <ContentTypeRef ID="0x0100c30dda8edb2e434ea22d793d9ee42058" />
+    </ContentTypes>
+    <Fields>
+      <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" DisplayName="DummyTitle" Sealed="TRUE" Required="FALSE" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title">
+      </Field>
+      <!-- TODO: 'UserName' field should be 'Person or Group' type, But now I assign 'Text' type to this field because WSS's 'Person or Group' field is buggy. -->
+      <Field ID="{211a8cfc-93b7-4173-9254-0bfe2d1643da}" Type="User" List="UserInfo" Name="UserName" DisplayName="$Resources:core,GBW_TC_UserName_Field;" StaticName="UserName" Sealed="TRUE" Required="TRUE" Hidden="FALSE" ShowInEditForm="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3">
+      </Field>
+      <Field ID="{2139e5cc-6c75-4a65-b84c-00fe93027db3}" Type="DateTime" Name="Date" DisplayName="$Resources:core,GBW_TC_Date_Field;" Format="DateOnly" Sealed="TRUE" Required="TRUE" Hidden="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Date">
+      </Field>
+      <Field ID="{61fc45dd-b33d-4679-8646-be9e6584fadd}" Type="Text" Name="DayOfWeek" DisplayName="$Resources:core,GBW_TC_DayOfWeek_Field;" Sealed="TRUE" Required="FALSE" Hidden="FALSE" ShowInEditForm="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="DayOfWeek">
+      </Field>
+      <Field ID="{05e6336c-d22e-478e-9414-366762883b3f}" Type="Text" Name="Start" DisplayName="$Resources:core,GBW_TC_Start_Field;" Sealed="TRUE" Required="FALSE" Hidden="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Start">
+      </Field>
+      <Field ID="{04b29608-b1e8-4ff9-90d5-5328096dd5ac}" Type="Text" Name="End" DisplayName="$Resources:core,GBW_TC_End_Field;" Sealed="TRUE" Required="FALSE" Hidden="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="End">
+      </Field>
+      <Field ID="{ee394fd4-4c11-4d8e-baff-83270c1921aa}" Type="Text" Name="In" DisplayName="$Resources:core,GBW_TC_In_Field;" Sealed="TRUE" Required="FALSE" Hidden="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="In">
+      </Field>
+      <Field ID="{fde05b9b-52bf-43dc-9b96-bb35fa7aa05d}" Type="Text" Name="Out" DisplayName="$Resources:core,GBW_TC_Out_Field;" Sealed="TRUE" Required="FALSE" Hidden="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Out">
+      </Field>
+      <Field ID="{9b12fb06-254e-43b3-bfc8-8eea422ebc9f}" Type="Text" Name="Break" DisplayName="$Resources:core,GBW_TC_Break_Field;" Sealed="TRUE" Required="FALSE" Hidden="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Break">
+      </Field>
+      <Field ID="{3bdf7bd3-f229-419e-8e12-3dfecb49ed38}" Type="Text" Name="ScheduledWork" DisplayName="$Resources:core,GBW_TC_ScheduledWork_Field;" ResultType="Number" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="ScheduledWork">
+      </Field>
+      <Field ID="{35d79e8b-3701-4659-9c27-c070ed3c2bfa}" Type="Text" Name="Overtime" DisplayName="$Resources:core,GBW_TC_Overtime_Field;" ResultType="Number" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Overtime">
+      </Field>
+      <Field ID="{aaa68c08-6276-4337-9bce-b9cd852c7328}" Type="Text" Name="NightWork" DisplayName="$Resources:core,GBW_TC_NightWork_Field;" ResultType="Number" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="NightWork">
+      </Field>
+      <Field ID="{b5a7350f-2716-46ca-9c42-66bb39d042ec}" Type="Text" Name="HolidayWork" DisplayName="$Resources:core,GBW_TC_HolidayWork_Field;" ResultType="Number" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="HolidayWork">
+      </Field>
+      <Field ID="{dc9100ec-251d-4e81-a6cb-d967a065ba24}" Type="Text" Name="HolidayNightWork" DisplayName="$Resources:core,GBW_TC_HolidayNightWork_Field;" ResultType="Number" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="HolidayNightWork">
+      </Field>
+      <Field ID="{df7f27a4-d87b-4a97-947b-13d1d4f7e6de}" Type="Text" Name="Late" DisplayName="$Resources:core,GBW_TC_Late_Field;" ResultType="Number" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Late">
+      </Field>
+      <Field ID="{a2a86efe-c28e-4dde-ab56-0afa31664bbc}" Type="Text" Name="LeaveEarly" DisplayName="$Resources:core,GBW_TC_LeaveEarly_Field;" ResultType="Number" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LeaveEarly">
+      </Field>
+      <Field ID="{63c1c608-df6f-4cfa-bcab-fdbf9c223e31}" Type="Text" Name="Oof" DisplayName="$Resources:core,GBW_TC_Oof_Field;" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Oof">
+      </Field>
+      <Field ID="{dfd58778-bf8e-4769-8265-09ac03159eed}" Type="Choice" Format="Dropdown" Name="Vacation" DisplayName="$Resources:core,GBW_TC_Vacation_Field;" Sealed="TRUE" Required="FALSE" Hidden="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Vacation">
+        <CHOICES><CHOICE>$Resources:core,GBW_TC_Vacation_Field_Choice_None;</CHOICE><CHOICE>$Resources:core,GBW_TC_Vacation_Field_Choice_PaidVacation;</CHOICE><CHOICE>$Resources:core,GBW_TC_Vacation_Field_Choice_CompensatoryDayOff;</CHOICE><CHOICE>$Resources:core,GBW_TC_Vacation_Field_Choice_Vacation;</CHOICE><CHOICE>$Resources:core,GBW_TC_Vacation_Field_Choice_VacationForCelebrationOrSorrow;</CHOICE><CHOICE>$Resources:core,GBW_TC_Vacation_Field_Choice_MaternityLeave;</CHOICE>
+        </CHOICES>
+        <Default>$Resources:core,GBW_TC_Vacation_Field_Choice_Default;</Default>
+      </Field>
+      <Field ID="{44e16d52-da1b-4e72-8bdb-89a3b77ec8b0}" Type="Choice" Format="Dropdown" Name="NumberOfVacation" DisplayName="$Resources:core,GBW_TC_NumberOfVacation_Field;" Sealed="TRUE" Required="FALSE" Hidden="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="NumberOfVacation">
+        <CHOICES><CHOICE>$Resources:core,GBW_TC_NumberOfVacation_Field_Choice_None;</CHOICE><CHOICE>$Resources:core,GBW_TC_NumberOfVacation_Field_Choice_AllDay;</CHOICE><CHOICE>$Resources:core,GBW_TC_NumberOfVacation_Field_Choice_AMOFF;</CHOICE><CHOICE>$Resources:core,GBW_TC_NumberOfVacation_Field_Choice_PMOFF;</CHOICE>
+        </CHOICES>
+        <Default>$Resources:core,GBW_TC_NumberOfVacation_Field_Choice_Default;</Default>
+      </Field>
+      <Field ID="{691b9a4b-512e-4341-b3f1-68914130d5b2}" Type="Text" Name="ShortComment" DisplayName="$Resources:core,GBW_TC_Comments_Field;" Sealed="TRUE" Required="FALSE" Hidden="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="ShortComment">
+      </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" SetupPath="pages\viewpage.aspx" ToolbarTemplate="GroupBoardTimeCardDataSheetToolBar">
+        <XslLink>groupboard.xsl</XslLink>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="ID">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <Where>
+            <Eq>
+              <FieldRef Name="ID">
+              </FieldRef>
+              <Value Type="Integer">-1</Value>
+            </Eq>
+          </Where>
+        </Query>
+      </View>
+      <View BaseViewID="1" Type="HTML" DisplayName="$Resources:core,GBW_TC_MyCardItems_View;" DefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/gbtmcd.png?rev=23" Url="MyTCard.aspx" ReadOnly="TRUE" WebPartZoneID="Main" CanHaveServerControl="TRUE" ToolbarTemplate="GroupBoardTimeCardToolBar">
+        <XslLink>groupboard.xsl</XslLink>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="ID">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <Where>
+            <Eq>
+              <FieldRef Name="ID">
+              </FieldRef>
+              <Value Type="Integer">-1</Value>
+            </Eq>
+          </Where>
+        </Query>
+      </View>
+    </Views>
+    <Forms>
+    </Forms>
+    <DefaultDescription>
+            $Resources:core,GBW_TC_DefaultDescription;</DefaultDescription>
+  </MetaData>
+</List>

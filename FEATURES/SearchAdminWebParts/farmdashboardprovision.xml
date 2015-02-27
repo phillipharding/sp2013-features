@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+     <Module>
+        <File Url="SearchFarmDashBoard.aspx" >
+            <AllUsersWebPart WebPartZoneID="BottomZone" WebPartOrder="1">
+                <![CDATA[
+                <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                    <Assembly>Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                    <TypeName>Microsoft.Office.Server.Search.WebControls.FarmSearchApplicationList</TypeName>
+                    <Title>$Resources:Microsoft.Office.Server.Search,FarmSearchApplicationsWP_Title;</Title>
+                    <Description>$Resources:Microsoft.Office.Server.Search,FarmSearchApplicationsWP_Desc;</Description>
+                    <FrameType>TitleBarOnly</FrameType> 
+                    <AllowMinimize>true</AllowMinimize> 
+                    <AllowRemove>true</AllowRemove> 
+                    <IsVisible>true</IsVisible>
+                </WebPart>
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="TopZone" WebPartOrder="1">
+                <![CDATA[
+                <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                    <Assembly>Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                    <TypeName>Microsoft.Office.Server.Search.WebControls.FarmSystemStatus</TypeName>
+                    <Title>$Resources:Microsoft.Office.Server.Search,FarmSystemStatusWP_Title;</Title>
+                    <Description>$Resources:Microsoft.Office.Server.Search,FarmSystemStatusWP_Desc;</Description>
+                    <FrameType>TitleBarOnly</FrameType> 
+                    <AllowMinimize>true</AllowMinimize> 
+                    <AllowRemove>true</AllowRemove> 
+                    <IsVisible>true</IsVisible>
+                </WebPart>
+                ]]>
+            </AllUsersWebPart>
+        </File>   
+     </Module>   
+</Elements>

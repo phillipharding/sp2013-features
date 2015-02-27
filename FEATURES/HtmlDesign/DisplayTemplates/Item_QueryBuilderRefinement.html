@@ -1,0 +1,56 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_QueryBuilderRefinementItem</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#Refinement;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:ManagedPropertyMapping msdt:dt="string"></mso:ManagedPropertyMapping>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="Item_QueryBuilderRefinement">
+        <div class="display-none"></div>
+<!--#_ 
+    var listData = ctx.ListData;
+    var hasControl = true;
+    if($isNull(ctx.RefinementControl) || $isNull(ctx.ClientControl)) hasControl = false;
+    var hasNoListData = ($isEmptyArray(listData));
+
+    if(hasControl){ 
+        var rc = ctx.RefinementControl;
+        var optgroup = document.getElementById(rc.containerId);    
+        if ($isNull(optgroup))
+        {
+            return;
+        }
+        if(hasNoListData){
+            optgroup.parentNode.removeChild(optgroup);
+        } else {
+            var selectedRefiners = document.getElementById('selectedRefiners');
+            for (var i = 0; i < listData.length; i++){
+                var option = document.createElement('OPTION');
+                option.value = listData[i].RefinementToken;
+                option.innerHTML = $htmlEncode(listData[i].RefinementName);
+                option.title = listData[i].RefinementToken;
+                option.setAttribute('data-refinername', optgroup.label);
+
+                if (ctx.ClientControl.hasRefinementFilter(listData[i].RefinerName, listData[i].RefinementToken)) {
+                    if (selectedRefiners) {
+                        selectedRefiners.appendChild(option);
+                    }
+                } else {
+                    optgroup.appendChild(option);
+                }
+            }
+        }
+    }
+_#-->
+    </div>
+</body>
+</html>

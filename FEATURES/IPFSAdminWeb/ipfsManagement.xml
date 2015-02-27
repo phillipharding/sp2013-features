@@ -1,0 +1,60 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<CustomActionGroup
+		Id="IFS"
+		Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"
+		Title="$Resources:AdminLinksInfoPathFormsServices;"
+		Sequence="20"
+		ImageUrl="/_layouts/15/images/InfoPath2010_32.png?rev=23" />
+
+	<CustomAction
+		Id="CA_IPFSApplicationConfigurationManage"
+		GroupId="CA_GeneralApplicationSettings"
+		Location="Microsoft.SharePoint.Administration.Default"
+		Sequence="20"
+		Title="$Resources:AdminLinksFeatureActionManageTitle;" >
+			<UrlAction Url="/_admin/ManageFormTemplates.aspx" />
+	</CustomAction>
+
+	<CustomAction 
+		Id="IPFSApplicationConfigurationManage"
+		GroupId="IFS"
+		Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"
+		Sequence="10" 
+		Title="$Resources:AdminLinksFeatureActionManageTitle;" >
+			<UrlAction Url="/_admin/ManageFormTemplates.aspx" />
+	</CustomAction>
+	<CustomAction 
+		Id="IPFSApplicationConfigurationConfig"
+		GroupId="IFS"
+		Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"
+		Sequence="20" 
+		Title="$Resources:AdminLinksFeatureActionConfigTitle;" >
+			<UrlAction Url="/_admin/ipfsConfig.aspx" />
+	</CustomAction>
+	<CustomAction 
+		Id="IPFSApplicationConfigurationUpload"
+		GroupId="IFS"
+		Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"
+		Sequence="30" 
+		Title="$Resources:AdminLinksFeatureActionUploadTitle;" >
+			<UrlAction Url="/_admin/UploadFormTemplate.aspx" />
+	</CustomAction>
+	<CustomAction 
+		Id="IPFSApplicationConfigurationManageDataConnectionFiles"
+		GroupId="IFS"
+		Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"
+		Sequence="40" 
+		Title="$Resources:AdminLinksFeatureActionManageDataConnectionFilesTitle;" >
+			<UrlAction Url="/_admin/ManageDataConnectionFiles.aspx" />
+	</CustomAction>
+	<CustomAction 
+		Id="IPFSApplicationConfigurationManageFormsServiceProxy"
+		GroupId="IFS"
+		Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"
+		Sequence="50" 
+		Title="$Resources:AdminLinksFeatureActionManageFormsServiceProxy;" >
+			<UrlAction Url="/_admin/ManageFormsServiceProxy.aspx" />
+	</CustomAction>
+
+</Elements>

@@ -1,0 +1,16 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Feature  Id="DD926489-FC66-47A6-BA00-CE0E959C9B41"
+          Title="$Resources:cmscore,IB_PC_ProductCatalog_ListTemplate_Feature_Title;"
+          Description="$Resources:cmscore,IB_PC_ProductCatalog_ListTemplate_Feature_Description;"
+          Version="15.0.0.0"
+          Scope="Site"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          ReceiverAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Publishing.ProductCatalogListTemplateFeatureHandler"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ProductCatalogListTemplate.xml" />
+    </ElementManifests>
+</Feature>

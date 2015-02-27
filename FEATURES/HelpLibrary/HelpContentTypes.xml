@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ContentType
+    ID="0x0101002BC33ABE0D8E4c16869C931114180652" 
+    Name="$Resources:Core,HelpTopicName"
+    Description="$Resources:Core,HelpTopicDescription"
+    Group="$Resources:Core,HelpContentTypeGroup"
+    Version="0"
+    >
+    <FieldRefs>
+      <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+      <FieldRef ID="{9da97a8a-1da5-4a77-98d3-4bc10456e700}" Name="Comments" />
+      <FieldRef ID="{B66E9B50-A28E-469b-B1A0-AF0E45486874}" Name="Keywords" />
+      <FieldRef ID="{354B40E5-6766-457d-842F-BD1523601C62}"  Name="HelpSeeAlso" />      
+      <FieldRef ID="{24289C6E-178F-4608-A2B8-2A50F7EACDF9}"  Name="HelpAssetId" />
+      <FieldRef ID="{AFF14AF7-3F54-423a-B0D1-15FC8103262C}" Name="HelpContextKey" />
+      <FieldRef ID="{DC1CC66C-3BF0-4f83-A8A2-49E27A895711}" Name="HelpItemOrder" />
+    </FieldRefs>
+    <DocumentTemplate TargetName="/_layouts/upload.aspx" />
+  </ContentType>
+  <ContentType
+    ID="0x01010200843A16AAA75E4183BE3B5C15E22CD5F3" 
+    Name="$Resources:Core,HelpMediaName"    
+    Description="$Resources:Core,HelpMediaDescription"
+    Group="$Resources:Core,HelpContentTypeGroup"
+    Version="0"
+    >
+    <FieldRefs>      
+      <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+      <FieldRef ID="{24289C6E-178F-4608-A2B8-2A50F7EACDF9}" Name="HelpAssetId" />
+      <FieldRef ID="{DC1CC66C-3BF0-4f83-A8A2-49E27A895711}" Name="HelpItemOrder" />
+    </FieldRefs>
+    <DocumentTemplate TargetName="/_layouts/upload.aspx" />
+  </ContentType>
+  <ContentType
+    ID="0x0120008DA1DFDB55E84aa7BE833756C834A9AD" 
+    Name="$Resources:Core,HelpCategoryName"    
+    Description="$Resources:Core,HelpCategoryDescription"
+    Group="$Resources:Core,HelpContentTypeGroup"
+    Version="0"
+    >
+    <FieldRefs>      
+      <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+      <FieldRef ID="{9da97a8a-1da5-4a77-98d3-4bc10456e700}" Name="Comments" />
+      <FieldRef ID="{B66E9B50-A28E-469b-B1A0-AF0E45486874}" Name="Keywords" />
+      <FieldRef ID="{24289C6E-178F-4608-A2B8-2A50F7EACDF9}" Name="HelpAssetId" />
+      <FieldRef ID="{AFF14AF7-3F54-423a-B0D1-15FC8103262C}" Name="HelpContextKey" />
+      <FieldRef ID="{DC1CC66C-3BF0-4f83-A8A2-49E27A895711}" Name="HelpItemOrder" />
+    </FieldRefs>
+  </ContentType>
+  <ContentType
+    ID="0x01200096501358E9504b1a98FE7E8AC436060F" 
+    Name="$Resources:Core,HelpCollectionName"
+    Description="$Resources:Core,HelpCollectionDescription"
+    Group="$Resources:Core,HelpContentTypeGroup"
+    Version="0"
+    >
+    <FieldRefs>      
+      <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />            
+      <FieldRef ID="{AFCC93AC-68F6-4855-BAD1-661CBA2A8359}" Name="HelpCollectionId" />
+      <FieldRef ID="{128E779B-972F-48d5-9EEF-6415A96DA34C}" Name="HelpLocaleId" />
+      <FieldRef ID="{D33A3D6C-3D6E-4e44-82C0-8DA4B645B47D}" Name="HelpCollectionProduct" />
+      <FieldRef ID="{DCC1FC54-298E-44E0-B497-3DC291E12B30}" Name="HelpCollectionVersion" />
+      <FieldRef ID="{D9F40073-B3A9-48aa-8D5B-82AD9C136E5A}" Name="HelpCollectionIsOnByDefault" />
+      <FieldRef ID="{E00333B1-3CEF-43c4-854B-7FEAAAC83F01}" Name="HelpCollectionIsOfficeOnlineHelp" />
+      <FieldRef ID="{8FB9426C-F545-41d8-93D0-2B75102C8598}" Name="HelpCollectionOnlineSearchUrl" />
+      <FieldRef ID="{061C420F-D08C-4c08-988C-AC62E51EE97D}" Name="HelpCollectionOnlineBrowseUrl" />
+      <FieldRef ID="{AF6680CE-9F7C-45b9-8F90-6CCA21DDF179}" Name="HelpBrandingImage" />
+      <FieldRef ID="{596AF790-66F6-449a-A513-6E346425BD1E}" Name="HelpResources" />
+      <FieldRef ID="{A3C9D50E-2DB2-4a4b-9558-04A7561BE01B}" Name="HelpCollectionsOverride" />
+      <FieldRef ID="{DC1CC66C-3BF0-4f83-A8A2-49E27A895711}" Name="HelpItemOrder" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

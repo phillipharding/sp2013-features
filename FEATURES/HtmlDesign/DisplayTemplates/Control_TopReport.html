@@ -1,0 +1,145 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_TopReportControl</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106601</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="Control_TopReport">
+<!--#_
+    if (!$isNull(ctx.ClientControl) &&
+        !$isNull(ctx.ClientControl.shouldRenderControl) &&
+        !ctx.ClientControl.shouldRenderControl())
+    {
+        return "";
+    }
+    ctx.ListDataJSONGroupsKey = "ResultTables";
+
+	window["TRChangeProperty"] = function (object){
+		var selected = object.options[object.selectedIndex];
+		trSelectedPropertyRecent = selected.getAttribute("trrecentvalue");
+		trSelectedPropertyLifetime = selected.getAttribute("trlifetimevalue");
+		var recent = document.getElementById("topreportrecent");
+		var lifetime = document.getElementById("topreportlifetime");
+		recent.setAttribute("trqueryname", trSelectedPropertyRecent);
+		lifetime.setAttribute("trqueryname", trSelectedPropertyLifetime);
+		if(document.getElementById("tprprt-sort").parentNode == recent.parentNode)
+		{
+			$getClientControl(document.getElementById("topreportrecent")).sort(trSelectedPropertyRecent);
+		}
+		else
+		{
+			$getClientControl(document.getElementById("topreportlifetime")).sort(trSelectedPropertyLifetime);
+		}
+	};
+
+	var trCurrentPropertyRecent = (typeof trSelectedPropertyRecent != "undefined") ? trSelectedPropertyRecent : "ViewsRecent";
+	var trCurrentPropertyLifetime = (typeof trSelectedPropertyLifetime != "undefined") ? trSelectedPropertyLifetime : "ViewsLifeTime";
+
+_#-->        <div class="ms-srch-result" id="CBSResult" name="Control">
+                <table class="tprprt-noborders"><thead><tr><th class="ms-headerCellStyleNormal ms-vh tprprt-descriptionHeader"></th>
+				<th class="ms-itmhover ms-headerCellStyleNormal ms-vh tprprt-number-header"><a id="topreportrecent" trqueryname="_#= trCurrentPropertyRecent =#_" onClick="$getClientControl(this).sort(this.getAttribute('trqueryname'));" href="javascript:;">_#= $htmlEncode(Srch.Res.tprprt_Recent) =#_</a>
+<!--#_
+	if(ctx.DataProvider.getSortName() == trCurrentPropertyRecent || $isEmptyString(ctx.DataProvider.getSortName())){
+_#-->
+					<img id="tprprt-sort" src="/_layouts/images/rsort.gif" border="0"/>
+<!--#_
+	} else {
+_#-->
+					<img id="tprprt-nosort" src="/_layouts/images/blank16.gif" border="0"/>
+<!--#_
+	}
+_#-->
+				</th><th class="ms-itmhover ms-headerCellStyleNormal ms-vh tprprt-number-header"><a id="topreportlifetime" trqueryname="_#= trCurrentPropertyLifetime =#_" onClick="$getClientControl(this).sort(this.getAttribute('trqueryname'));" href="javascript:;">_#= $htmlEncode(Srch.Res.tprprt_Lifetime) =#_</a>
+				<!--#_
+	if(ctx.DataProvider.getSortName() == trCurrentPropertyLifetime){
+_#-->
+					<img id="tprprt-sort" src="/_layouts/images/rsort.gif" border="0"/>
+<!--#_
+	} else {
+_#-->
+					<img id="tprprt-nosort" src="/_layouts/images/blank16.gif" border="0"/>
+<!--#_
+	}
+_#-->
+				</th></tr></thead><tbody>
+
+                _#= ctx.RenderGroups(ctx) =#_
+                </tbody></table>
+<!--#_ 
+    if (ctx.ClientControl.get_shouldShowNoResultMessage())
+    {
+        if (Srch.U.isPageInEditMode())
+        {
+_#-->
+            This query returned no results. Items must be in the search index to appear. New items might take several minutes to get into the 
+
+search index. You can change the query by editing this Web Part.
+<!--#_ 
+        }
+        else
+        {
+_#-->
+            _#= $htmlEncode(Srch.Res.control_NoResultsDisplayMode) =#_
+<!--#_
+        }
+    }
+                if(ctx.ClientControl.get_showPaging()){
+                    var pagingInfo = ctx.ClientControl.get_pagingInfo();
+                    if(!$isEmptyArray(pagingInfo)){ 
+_#-->
+                        <ul id="Paging" class="ms-srch-Paging">
+<!--#_ 
+                        for (var i = 0; i < pagingInfo.length; i++) {
+                            var pl = pagingInfo[i];
+                            if(!$isNull(pl)) {
+								var imagesUrl = GetThemedImageUrl('searchresultui.png');
+                                if(pl.startItem == -1) { 
+                                    var selfLinkId = "SelfLink_" + pl.pageNumber;
+_#-->
+                                    <li id="PagingSelf"><a id="_#= $htmlEncode(selfLinkId) =#_">_#= $htmlEncode(pl.pageNumber) =#_</a></li>
+<!--#_ 
+                                } else if(pl.pageNumber == -1) { 
+                                    var iconClass = Srch.U.isRTL() ? "ms-srch-pagingNext" : "ms-srch-pagingPrev";                                    
+_#-->
+                                    <li id="PagingImageLink"><a id="PageLinkPrev" href="#" class="ms-commandLink ms-promlink-button ms-promlink-button-enabled ms-verticalAlignMiddle" title="_#= $htmlEncode(pl.title) =#_" onclick="$getClientControl(this).page(_#= $htmlEncode(pl.startItem) =#_);return Srch.U.cancelEvent(event);">
+                                        <span class="ms-promlink-button-image">
+                                            <img src="_#= $urlHtmlEncode(imagesUrl) =#_" class="_#= $htmlEncode(iconClass) =#_" alt="_#= $htmlEncode(pl.title) =#_" />
+                                        </span>
+                                    </a></li>
+<!--#_ 
+                                } else if(pl.pageNumber == -2) { 
+                                    var iconClass = Srch.U.isRTL() ? "ms-srch-pagingPrev" : "ms-srch-pagingNext";
+_#-->
+                                    <li id="PagingImageLink"><a id="PageLinkNext" href="#" class="ms-commandLink ms-promlink-button ms-promlink-button-enabled ms-verticalAlignMiddle" title="_#= $htmlEncode(pl.title) =#_" onclick="$getClientControl(this).page(_#= $htmlEncode(pl.startItem) =#_);return Srch.U.cancelEvent(event);">
+                                        <span class="ms-promlink-button-image">
+                                            <img src="_#= $urlHtmlEncode(imagesUrl) =#_" class="_#= $htmlEncode(iconClass) =#_" alt="_#= $htmlEncode(pl.title) =#_" />
+                                        </span>
+                                    </a></li>
+<!--#_ 
+                                } else { 
+                                    var pageLinkId = "PageLink_" + pl.pageNumber;
+_#-->
+                                    <li id="PagingLink"><a id="_#= $htmlEncode(pageLinkId) =#_" href="#" title="_#= $htmlEncode(pl.title) =#_" onclick="$getClientControl(this).page(_#= $htmlEncode(pl.startItem) =#_);return Srch.U.cancelEvent(event);">_#= $htmlEncode(pl.pageNumber) =#_</a></li>
+<!--#_ 
+                                }
+                            }
+                        } 
+_#-->
+                        </ul>
+<!--#_ 
+                    }
+                } 
+_#-->
+        </div>
+    </div>
+</body>
+</html>

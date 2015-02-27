@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="636287a7-7f62-4a6e-9fcc-081f4672cbf8"
+    Title="$Resources:core,GbwFeatureScheduleTitle;"
+    Description="$Resources:core,GbwFeatureScheduleDescription;"
+    Version="1.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\schedulelist.xml" />
+        <ElementFile Location="schedule\schema.xml" />
+    </ElementManifests>
+</Feature>

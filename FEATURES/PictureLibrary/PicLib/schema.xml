@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="$Resources:core,piclibSharedPictures;" Direction="$Resources:Direction;" Url="$Resources:core,piclibSharedPicturesUrl;" BaseType="1" ThumbnailSize="160" WebImageWidth="640" WebImageHeight="480">
+  <MetaData>
+    <ContentTypes>
+      <ContentTypeRef ID="0x010102">
+        <Folder TargetName="Forms/Picture" />
+      </ContentTypeRef>
+      <ContentTypeRef ID="0x0120" />
+    </ContentTypes>
+    <Fields Revision="1">
+      <Field ID="{8c0d0aac-9b76-4951-927a-2490abe13c0b}" Type="Computed" Name="PreviewOnForm" DisplaceOnUpgrade="TRUE" ShowInNewForm="FALSE" ShowInFileDlg="FALSE" DisplayName="$Resources:core,Preview;" Sealed="TRUE" Sortable="FALSE" Filterable="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="PreviewOnForm">
+        <FieldRefs>
+          <FieldRef Name="ImageWidth" />
+          <FieldRef Name="ImageHeight" />
+          <FieldRef Name="FSObjType" />
+          <FieldRef Name="PreviewExists" />
+          <FieldRef Name="AlternateThumbnailUrl" />
+        </FieldRefs>
+        <DisplayPattern><HTML><![CDATA[<a href=']]></HTML>
+          <Field Name="EncodedAbsUrl" /><HTML><![CDATA['><img id="webImgShrinked" alt="]]></HTML>
+          <IfEqual>
+            <Expr1>
+              <Column Name="Description" />
+            </Expr1>
+            <Expr2>
+            </Expr2>
+            <Then><HTML><![CDATA[$Resources:core,Picture;]]></HTML>
+            </Then>
+            <Else>
+              <Column Name="Description" HTMLEncode="TRUE" />
+            </Else>
+          </IfEqual><HTML><![CDATA[" galleryimg="false" border="0" src=']]></HTML>
+          <Field Name="EncodedAbsWebImgUrl" /><HTML><![CDATA['></a>]]></HTML>
+        </DisplayPattern>
+      </Field>
+      <Field ID="{c53a03f3-f930-4ef2-b166-e0f2210c13c0}" Type="Computed" Name="FileType" DisplayName="$Resources:core,File_Type;" ShowInNewForm="FALSE" ShowInFileDlg="FALSE" ShowInEditForm="FALSE" Filterable="TRUE" Sortable="TRUE" AuthoringInfo="$Resources:core,piclibFileExt;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="FileType">
+        <FieldRefs>
+          <FieldRef Name="File_x0020_Type" />
+        </FieldRefs>
+        <DisplayPattern>
+          <Column Name="File_x0020_Type" HTMLEncode="TRUE" />
+        </DisplayPattern>
+      </Field>
+      <Field ID="{922551b8-c7e0-46a6-b7e3-3cf02917f68a}" Type="Computed" Name="ImageSize" DisplayName="$Resources:core,Picture_Size;" ShowInNewForm="FALSE" ShowInFileDlg="FALSE" ShowInEditForm="FALSE" Filterable="FALSE" Sortable="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="ImageSize">
+        <FieldRefs>
+          <FieldRef Name="ImageWidth" />
+          <FieldRef Name="ImageHeight" />
+          <FieldRef Name="FSObjType" />
+        </FieldRefs>
+        <DisplayPattern>
+          <IfEqual>
+            <Expr1>
+              <LookupColumn Name="FSObjType" />
+            </Expr1>
+            <Expr2>0</Expr2>
+            <Then>
+              <IfEqual>
+                <Expr1>
+                  <LookupColumn Name="ImageWidth" />
+                </Expr1>
+                <Expr2>
+                </Expr2>
+                <Then>
+                </Then>
+                <Else>
+                  <IfEqual>
+                    <Expr1>
+                      <LookupColumn Name="ImageWidth" />
+                    </Expr1>
+                    <Expr2>0</Expr2>
+                    <Then>
+                    </Then>
+                    <Else><HTML><![CDATA[<span dir="ltr">]]></HTML>
+                      <Column Name="ImageWidth" /><HTML><![CDATA[
+                                        x
+                                        ]]></HTML>
+                      <Column Name="ImageHeight" /><HTML><![CDATA[</span>]]></HTML>
+                    </Else>
+                  </IfEqual>
+                </Else>
+              </IfEqual>
+            </Then>
+          </IfEqual>
+        </DisplayPattern>
+      </Field>
+      <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" ShowInNewForm="FALSE" ShowInFileDlg="FALSE" DisplayName="$Resources:core,Title;" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title">
+      </Field>
+      <Field ID="{7e68a0f9-af76-404c-9613-6f82bc6dc28c}" ReadOnly="TRUE" Type="Integer" Name="ImageWidth" DisplayName="$Resources:core,Picture_Width;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="ImageWidth">
+      </Field>
+      <Field ID="{1944c034-d61b-42af-aa84-647f2e74ca70}" ReadOnly="TRUE" Type="Integer" Name="ImageHeight" DisplayName="$Resources:core,Picture_Height;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="ImageHeight">
+      </Field>
+      <Field ID="{a5d2f824-bc53-422e-87fd-765939d863a5}" Type="DateTime" ShowInNewForm="FALSE" ShowInFileDlg="FALSE" Name="ImageCreateDate" DisplayName="$Resources:core,Date_Picture_Taken;" Format="DateTime" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="ImageCreateDate">
+      </Field>
+      <Field Type="Note" Name="Description" ID="{9da97a8a-1da5-4a77-98d3-4bc10456e700}" ShowInNewForm="FALSE" ShowInFileDlg="FALSE" DisplayName="$Resources:core,Description;" Sealed="TRUE" Sortable="FALSE" Description="$Resources:core,piclibPicDesc;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Description">
+      </Field>
+      <Field ID="{1f43cd21-53c5-44c5-8675-b8bb86083244}" Name="ThumbnailExists" StaticName="ThumbnailExists" Group="_Hidden" ReadOnly="TRUE" Type="Boolean" DisplayName="$Resources:core,ThumbnailExists;" Hidden="TRUE" Required="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3">
+        <Default>FALSE</Default>
+      </Field>
+      <Field ID="{3ca8efcd-96e8-414f-ba90-4c8c4a8bfef8}" Name="PreviewExists" StaticName="PreviewExists" Group="_Hidden" ReadOnly="TRUE" Type="Boolean" DisplayName="$Resources:core,PreviewExists;" Hidden="TRUE" Required="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3">
+        <Default>FALSE</Default>
+      </Field>
+      <Field ID="{f39d44af-d3f3-4ae6-b43f-ac7330b5e9bd}" Name="AlternateThumbnailUrl" DisplayName="$Resources:core,AlternateThumbnailUrl;" Group="_Hidden" Type="URL" Format="Image" Hidden="TRUE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="AlternateThumbnailUrl">
+      </Field>
+      <Field ID="{b9e6f3ae-5632-4b13-b636-9d1a2bd67120}" ReadOnly="TRUE" Type="Computed" Name="EncodedAbsThumbnailUrl" DisplayName="$Resources:core,Thumbnail_URL;" DisplayNameSrcField="FileLeafRef" Filterable="FALSE" Sortable="FALSE" RenderXMLUsingPattern="TRUE" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="EncodedAbsThumbnailUrl">
+        <FieldRefs>
+          <FieldRef Name="ImageWidth" />
+          <FieldRef Name="EncodedAbsUrl" />
+          <FieldRef Name="FileRef" />
+          <FieldRef Name="File_x0020_Type" />
+          <FieldRef Name="HTML_x0020_File_x0020_Type" />
+          <FieldRef Name="ThumbnailExists" />
+          <FieldRef Name="AlternateThumbnailUrl" />
+        </FieldRefs>
+        <DisplayPattern>
+          <IfEqual>
+            <Expr1>
+              <LookupColumn Name="AlternateThumbnailUrl" />
+            </Expr1>
+            <Expr2 />
+            <Then>
+              <IfEqual>
+                <Expr1>
+                  <LookupColumn Name="ThumbnailExists" />
+                </Expr1>
+                <Expr2>1</Expr2>
+                <Then>
+                  <HttpHost />
+                  <UrlDirName><HTML>/</HTML>
+                    <LookupColumn URLEncodeAsURL="TRUE" IncludeVersions="TRUE" Name="FileRef" />
+                  </UrlDirName><HTML>/_t/</HTML>
+                  <UrlBaseName>
+                    <Field Name="EncodedAbsUrl" />
+                  </UrlBaseName><HTML>_</HTML>
+                  <GetFileExtension>
+                    <Field Name="EncodedAbsUrl" />
+                  </GetFileExtension><HTML>.jpg</HTML>
+                </Then>
+                <Else>
+                  <IfEqual>
+                    <Expr1>
+                      <LookupColumn Name="ThumbnailExists" />
+                    </Expr1>
+                    <Expr2>0</Expr2>
+                    <Then><HTML><![CDATA[/_layouts/images/]]></HTML>
+                      <MapToIcon>
+                        <Column Name="HTML_x0020_File_x0020_Type" /><HTML>|</HTML>
+                        <Column Name="File_x0020_Type" />
+                      </MapToIcon>
+                    </Then>
+                    <Else>
+                      <IfEqual>
+                        <Expr1>
+                          <LookupColumn Name="ImageWidth" />
+                        </Expr1>
+                        <Expr2 />
+                        <Then><HTML><![CDATA[/_layouts/images/]]></HTML>
+                          <MapToIcon>
+                            <Column Name="HTML_x0020_File_x0020_Type" /><HTML>|</HTML>
+                            <Column Name="File_x0020_Type" />
+                          </MapToIcon>
+                        </Then>
+                        <Else>
+                          <HttpHost />
+                          <UrlDirName><HTML>/</HTML>
+                            <LookupColumn URLEncodeAsURL="TRUE" IncludeVersions="TRUE" Name="FileRef" />
+                          </UrlDirName><HTML>/_t/</HTML>
+                          <UrlBaseName>
+                            <Field Name="EncodedAbsUrl" />
+                          </UrlBaseName><HTML>_</HTML>
+                          <GetFileExtension>
+                            <Field Name="EncodedAbsUrl" />
+                          </GetFileExtension><HTML>.jpg</HTML>
+                        </Else>
+                      </IfEqual>
+                    </Else>
+                  </IfEqual>
+                </Else>
+              </IfEqual>
+            </Then>
+            <Else>
+              <Column Name="AlternateThumbnailUrl" />
+            </Else>
+          </IfEqual>
+        </DisplayPattern>
+      </Field>
+      <Field ID="{a1ca0063-779f-49f9-999c-a4a2e3645b07}" ReadOnly="TRUE" Type="Computed" Name="EncodedAbsWebImgUrl" DisplayName="$Resources:core,Web_Image_URL;" DisplayNameSrcField="FileLeafRef" Filterable="FALSE" Sortable="FALSE" RenderXMLUsingPattern="TRUE" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="EncodedAbsWebImgUrl">
+        <FieldRefs>
+          <FieldRef Name="ImageWidth" />
+          <FieldRef Name="EncodedAbsUrl" />
+          <FieldRef Name="FileRef" />
+          <FieldRef Name="File_x0020_Type" />
+          <FieldRef Name="HTML_x0020_File_x0020_Type" />
+          <FieldRef Name="PreviewExists" />
+          <FieldRef Name="AlternateThumbnailUrl" />
+        </FieldRefs>
+        <DisplayPattern>
+          <IfEqual>
+            <Expr1>
+              <LookupColumn Name="AlternateThumbnailUrl" />
+            </Expr1>
+            <Expr2 />
+            <Then>
+              <IfEqual>
+                <Expr1>
+                  <LookupColumn Name="PreviewExists" />
+                </Expr1>
+                <Expr2>1</Expr2>
+                <Then>
+                  <HttpHost />
+                  <UrlDirName><HTML>/</HTML>
+                    <LookupColumn URLEncodeAsURL="TRUE" IncludeVersions="TRUE" Name="FileRef" />
+                  </UrlDirName><HTML>/_w/</HTML>
+                  <UrlBaseName>
+                    <Field Name="EncodedAbsUrl" />
+                  </UrlBaseName><HTML>_</HTML>
+                  <GetFileExtension>
+                    <Field Name="EncodedAbsUrl" />
+                  </GetFileExtension><HTML>.jpg</HTML>
+                </Then>
+                <Else>
+                  <IfEqual>
+                    <Expr1>
+                      <LookupColumn Name="PreviewExists" />
+                    </Expr1>
+                    <Expr2>0</Expr2>
+                    <Then><HTML><![CDATA[/_layouts/images/]]></HTML>
+                      <MapToIcon>
+                        <Column Name="HTML_x0020_File_x0020_Type" /><HTML>|</HTML>
+                        <Column Name="File_x0020_Type" />
+                      </MapToIcon>
+                    </Then>
+                    <Else>
+                      <IfEqual>
+                        <Expr1>
+                          <LookupColumn Name="ImageWidth" />
+                        </Expr1>
+                        <Expr2 />
+                        <Then><HTML><![CDATA[/_layouts/images/]]></HTML>
+                          <MapToIcon>
+                            <Column Name="HTML_x0020_File_x0020_Type" /><HTML>|</HTML>
+                            <Column Name="File_x0020_Type" />
+                          </MapToIcon>
+                        </Then>
+                        <Else>
+                          <HttpHost />
+                          <UrlDirName><HTML>/</HTML>
+                            <LookupColumn URLEncodeAsURL="TRUE" IncludeVersions="TRUE" Name="FileRef" />
+                          </UrlDirName><HTML>/_w/</HTML>
+                          <UrlBaseName>
+                            <Field Name="EncodedAbsUrl" />
+                          </UrlBaseName><HTML>_</HTML>
+                          <GetFileExtension>
+                            <Field Name="EncodedAbsUrl" />
+                          </GetFileExtension><HTML>.jpg</HTML>
+                        </Else>
+                      </IfEqual>
+                    </Else>
+                  </IfEqual>
+                </Else>
+              </IfEqual>
+            </Then>
+            <Else>
+              <Column Name="AlternateThumbnailUrl" />
+            </Else>
+          </IfEqual>
+        </DisplayPattern>
+      </Field>
+      <Field ID="{7ebf72ca-a307-4c18-9e5b-9d89e1dae74f}" ReadOnly="TRUE" Type="Computed" Name="SelectedFlag" DisplayName="$Resources:core,Selection_Checkbox;" Filterable="FALSE" Sortable="FALSE" HeaderImage="blank.gif" AuthoringInfo="$Resources:core,piclibPicSelect;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="SelectedFlag">
+        <FieldRefs>
+          <FieldRef Name="FSObjType" />
+          <FieldRef Name="FileLeafRef" />
+        </FieldRefs>
+        <DisplayPattern>
+          <IfEqual>
+            <Expr1>
+              <LookupColumn Name="FSObjType" />
+            </Expr1>
+            <Expr2>0</Expr2>
+            <Then><HTML><![CDATA[
+                        <script type="text/javascript">fSelectFieldAppeared = true; firstIdWithCheckbox =']]></HTML>
+              <Column Name="ID" /><HTML><![CDATA['; </script>
+                        <input type="checkbox" disabled="true" style="visibility:hidden" title=']]></HTML>
+              <LookupColumn Name="FileLeafRef" HTMLEncode="TRUE" /><HTML><![CDATA[' name="selectionCheckBox" id="cbx_]]></HTML>
+              <Column Name="ID" /><HTML><![CDATA[" onfocus="if (!IsImgLibJssLoaded()) return; HiLiteRow(]]></HTML>
+              <Column Name="ID" /><HTML><![CDATA[)" onclick="if (!IsImgLibJssLoaded()) return; ToggleSelection(]]></HTML>
+              <Column Name="ID" /><HTML><![CDATA[)">]]></HTML>
+            </Then>
+          </IfEqual>
+        </DisplayPattern>
+      </Field>
+      <Field ID="{76d1cc87-56de-432c-8a2a-16e5ba5331b3}" ReadOnly="TRUE" Type="Computed" Name="NameOrTitle" ClassInfo="Menu" DisplayName="$Resources:core,Name;" DisplayNameSrcField="FileLeafRef" Filterable="FALSE" AuthoringInfo="$Resources:core,piclibLinkDisplay;" CalloutMenu="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="NameOrTitle">
+        <FieldRefs>
+          <FieldRef Name="FileLeafRef" />
+          <FieldRef Name="FileDirRef" />
+          <FieldRef Name="Title" />
+          <FieldRef Name="DocIcon" />
+          <FieldRef Name="FileRef" />
+          <FieldRef Name="Description" />
+          <FieldRef Name="FSObjType" />
+          <FieldRef Name="CheckoutUser" />
+          <FieldRef Name="ServerUrl" />
+          <FieldRef Name="PermMask" />
+          <FieldRef Name="_ModerationStatus" />
+          <FieldRef Name="_UIVersion" />
+          <FieldRef Name="_HasCopyDestinations" />
+          <FieldRef Name="_CopySource" />
+        </FieldRefs>
+        <DisplayPattern><HTML><![CDATA[
+                <table cellspacing="0" class="ms-unselectedtitle" NameOrTitle="true"
+                Url="]]></HTML>
+          <Field Name="ServerUrl" URLEncodeAsURL="TRUE" /><HTML><![CDATA[" 
+                DRef="]]></HTML>
+          <Field Name="FileDirRef" /><HTML><![CDATA["
+                COUId="]]></HTML>
+          <Column Name="CheckoutUser" HTMLEncode="TRUE" /><HTML><![CDATA["
+                MS="]]></HTML>
+          <Column Name="_ModerationStatus" HTMLEncode="TRUE" /><HTML><![CDATA["
+                UIS="]]></HTML>
+          <Column Name="_UIVersion" HTMLEncode="TRUE" /><HTML><![CDATA["                
+                Perm="]]></HTML>
+          <Field Name="PermMask" /><HTML><![CDATA["
+                Type="]]></HTML>
+          <Column Name="HTML_x0020_File_x0020_Type" HTMLEncode="TRUE" /><HTML>"
+                HCD="</HTML>
+          <Column Name="_HasCopyDestinations" /><HTML>"
+                CSrc="</HTML>
+          <Column Name="_CopySource" URLEncodeAsURL="TRUE" /><HTML>"
+                Icon="</HTML>
+          <MapToAll>
+            <Column Name="HTML_x0020_File_x0020_Type" /><HTML>|</HTML>
+            <Column Name="File_x0020_Type" />
+          </MapToAll><HTML>" FSObjType="</HTML>
+          <LookupColumn Name="FSObjType" /><HTML><![CDATA["
+                            Ext="]]></HTML>
+          <Column Name="File_x0020_Type" /><HTML><![CDATA[" cellspacing="0" cellpadding="0"><tr id="title]]></HTML>
+          <Column Name="ID" /><HTML><![CDATA[" onclick="if (!IsImgLibJssLoaded()) return; ClickRow(]]></HTML>
+          <Column Name="ID" /><HTML><![CDATA[)" oncontextmenu="if (!IsImgLibJssLoaded()) return true; return ContextMenuOnRow(]]></HTML>
+          <Column Name="ID" /><HTML><![CDATA[);" onmouseover="if (!IsImgLibJssLoaded()) return; MouseOverRow(]]></HTML>
+          <Column Name="ID" /><HTML><![CDATA[)" onmouseout="if (!IsImgLibJssLoaded()) return; MouseOutRow(]]></HTML>
+          <Column Name="ID" /><HTML><![CDATA[)">
+                <td class="ms-vb">]]></HTML>
+          <IfEqual>
+            <Expr1>
+              <LookupColumn Name="FSObjType" />
+            </Expr1>
+            <Expr2>0</Expr2>
+            <Then>
+              <IfEqual>
+                <Expr1>
+                  <LookupColumn Name="ImageWidth" />
+                </Expr1>
+                <Expr2>
+                </Expr2>
+                <Then><HTML><![CDATA[<a href="]]></HTML>
+                  <Field Name="EncodedAbsUrl" /><HTML><![CDATA[" onclick="if (!IsImgLibJssLoaded()) return; javascript:DisplayItemOnFileRef(]]></HTML>
+                  <Column Name="ID" /><HTML><![CDATA[);return false;" onmouseover="if (!IsImgLibJssLoaded()) return; javascript:MouseOverRow(]]></HTML>
+                  <Column Name="ID" /><HTML><![CDATA[)" target="_self">]]></HTML>
+                  <UrlBaseName HTMLEncode="TRUE">
+                    <LookupColumn Name="FileLeafRef" />
+                  </UrlBaseName><HTML><![CDATA[</a>]]></HTML>
+                </Then>
+                <Else><HTML><![CDATA[<a href="]]></HTML>
+                  <URL Cmd="Display" /><HTML><![CDATA[" ]]></HTML><HTML><![CDATA[onclick="if (!IsImgLibJssLoaded()) return; javascript:DisplayItemOnFileRef(]]></HTML>
+                  <Column Name="ID" /><HTML><![CDATA[);return false;" onmouseover="if (!IsImgLibJssLoaded()) return; javascript:MouseOverRow(]]></HTML>
+                  <Column Name="ID" /><HTML><![CDATA[)" target="_self">]]></HTML>
+                  <UrlBaseName HTMLEncode="TRUE">
+                    <LookupColumn Name="FileLeafRef" />
+                  </UrlBaseName><HTML><![CDATA[</a>]]></HTML>
+                </Else>
+              </IfEqual>
+              <IfNew Name="Created_x0020_Date"><HTML><![CDATA[<img src="/_layouts/15/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/new.gif" alt="]]></HTML><HTML>$Resources:core,new_gif_alttext;</HTML><HTML><![CDATA[" class="ms-newgif" />]]></HTML>
+              </IfNew>
+            </Then>
+            <Else>
+              <Switch>
+                <Expr>
+                  <GetVar Name="RecursiveView" />
+                </Expr>
+                <Case Value="1">
+                  <LookupColumn Name="FileLeafRef" HTMLEncode="TRUE" />
+                </Case>
+                <Default><HTML><![CDATA[<a href="]]></HTML>
+                  <SetVar Name="RootFolder"><HTML>/</HTML>
+                    <LookupColumn Name="FileRef" />
+                  </SetVar>
+                  <FilterLink Default="" Paged="FALSE" /><HTML><![CDATA[" target="_self">]]></HTML>
+                  <LookupColumn Name="FileLeafRef" HTMLEncode="TRUE" /><HTML><![CDATA[</a>]]></HTML>
+                </Default>
+              </Switch>
+            </Else>
+          </IfEqual><HTML><![CDATA[</td>
+                    <td class='ms-menuimagecell' style='visibility:hidden' width="10" id="menuTd]]></HTML>
+          <Column Name="ID" /><HTML><![CDATA["><a id="menuHref]]></HTML>
+          <Column Name="ID" /><HTML><![CDATA[" href="javascript:ClickRow(]]></HTML>
+          <Column Name="ID" /><HTML><![CDATA[)" onclick="JavaScript:ClickRow(]]></HTML>
+          <Column Name="ID" /><HTML><![CDATA[); JavaScript:return false;"><img border="0" width="13" src="/_layouts/15/images/menudark.gif?rev=23" alt="]]></HTML><HTML>Edit Menu</HTML><HTML><![CDATA["></a></td>
+                </tr></table>
+                ]]></HTML>
+        </DisplayPattern>
+      </Field>
+      <Field ID="{de1baa4b-2117-473b-aa0c-4d824034142d}" ReadOnly="TRUE" Type="Computed" Name="RequiredField" DisplayName="$Resources:core,RequiredField;" AuthoringInfo="$Resources:core,piclibSelectionRequired;" Sortable="FALSE" Filterable="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RequiredField">
+        <FieldRefs>
+          <FieldRef Name="FileRef" />
+          <FieldRef Name="FileLeafRef" />
+          <FieldRef Name="Title" />
+          <FieldRef Name="Description" />
+          <FieldRef Name="ImageSize" />
+          <FieldRef Name="DocIcon" />
+        </FieldRefs>
+      </Field>
+      <Field ID="{b66e9b50-a28e-469b-b1a0-af0e45486874}" Type="Note" Name="Keywords" ShowInNewForm="FALSE" ShowInFileDlg="FALSE" DisplayName="$Resources:core,Keywords;" Sealed="TRUE" Sortable="FALSE" Description="$Resources:core,piclibForExample;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Keywords">
+      </Field>
+      <Field ID="{ac7bb138-02dc-40eb-b07a-84c15575b6e9}" ReadOnly="TRUE" Type="Computed" Name="Thumbnail" ShowInNewForm="FALSE" ShowInFileDlg="FALSE" ShowInEditForm="FALSE" DisplayName="$Resources:core,Thumbnail;" Sealed="TRUE" Sortable="FALSE" Filterable="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Thumbnail">
+        <FieldRefs>
+          <FieldRef Name="ImageWidth" />
+          <FieldRef Name="ImageHeight" />
+          <FieldRef Name="FSObjType" />
+          <FieldRef Name="EncodedAbsThumbnailUrl" />
+          <FieldRef Name="Description" />
+          <FieldRef Name="ThumbnailExists" />
+          <FieldRef Name="AlternateThumbnailUrl" />
+        </FieldRefs>
+        <DisplayPattern>
+          <IfEqual>
+            <Expr1>
+              <LookupColumn Name="FSObjType" />
+            </Expr1>
+            <Expr2>0</Expr2>
+            <Then>
+              <IfEqual>
+                <Expr1>
+                  <LookupColumn Name="ImageWidth" />
+                </Expr1>
+                <Expr2>
+                </Expr2>
+                <Then>
+                </Then>
+                <Else>
+                  <IfEqual>
+                    <Expr1>
+                      <LookupColumn Name="ImageWidth" />
+                    </Expr1>
+                    <Expr2>0</Expr2>
+                    <Then>
+                    </Then>
+                    <Else><HTML><![CDATA[<a href="]]></HTML>
+                      <URL Cmd="Display" /><HTML><![CDATA["><img border="0" alt="]]></HTML>
+                      <IfEqual>
+                        <Expr1>
+                          <Column Name="Description" />
+                        </Expr1>
+                        <Expr2>
+                        </Expr2>
+                        <Then><HTML><![CDATA[$Resources:core,Thumbnail;]]></HTML>
+                        </Then>
+                        <Else>
+                          <Column Name="Description" HTMLEncode="TRUE" />
+                        </Else>
+                      </IfEqual><HTML><![CDATA[" src="]]></HTML>
+                      <Field Name="EncodedAbsThumbnailUrl" /><HTML><![CDATA[">
+                                        </a>
+                                        ]]></HTML>
+                    </Else>
+                  </IfEqual>
+                </Else>
+              </IfEqual>
+            </Then>
+          </IfEqual>
+        </DisplayPattern>
+      </Field>
+      <Field ID="{bd716b26-546d-43f2-b229-62699581fa9f}" ReadOnly="TRUE" Type="Computed" Name="Preview" ShowInNewForm="FALSE" ShowInFileDlg="FALSE" ShowInEditForm="FALSE" DisplayName="$Resources:core,Web_Preview;" Sealed="TRUE" Sortable="FALSE" Filterable="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Preview">
+        <FieldRefs>
+          <FieldRef Name="ImageWidth" />
+          <FieldRef Name="ImageHeight" />
+          <FieldRef Name="FSObjType" />
+          <FieldRef Name="EncodedAbsWebImgUrl" />
+          <FieldRef Name="Description" />
+          <FieldRef Name="PreviewExists" />
+          <FieldRef Name="AlternateThumbnailUrl" />
+        </FieldRefs>
+        <DisplayPattern>
+          <IfEqual>
+            <Expr1>
+              <LookupColumn Name="FSObjType" />
+            </Expr1>
+            <Expr2>0</Expr2>
+            <Then>
+              <IfEqual>
+                <Expr1>
+                  <LookupColumn Name="ImageWidth" />
+                </Expr1>
+                <Expr2>
+                </Expr2>
+                <Then>
+                </Then>
+                <Else>
+                  <IfEqual>
+                    <Expr1>
+                      <LookupColumn Name="ImageWidth" />
+                    </Expr1>
+                    <Expr2>0</Expr2>
+                    <Then>
+                    </Then>
+                    <Else><HTML><![CDATA[<a href="]]></HTML>
+                      <URL Cmd="Display" /><HTML><![CDATA["><img alt="]]></HTML>
+                      <IfEqual>
+                        <Expr1>
+                          <Column Name="Description" />
+                        </Expr1>
+                        <Expr2>
+                        </Expr2>
+                        <Then><HTML><![CDATA[$Resources:core,Web_Preview;]]></HTML>
+                        </Then>
+                        <Else>
+                          <Column Name="Description" HTMLEncode="TRUE" />
+                        </Else>
+                      </IfEqual><HTML><![CDATA[" src="]]></HTML>
+                      <Field Name="EncodedAbsWebImgUrl" /><HTML><![CDATA[">
+                                        </a>
+                                        ]]></HTML>
+                    </Else>
+                  </IfEqual>
+                </Else>
+              </IfEqual>
+            </Then>
+          </IfEqual>
+        </DisplayPattern>
+      </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Position="After" Type="Freeform">
+          <IfHasRights>
+            <RightsChoices>
+              <RightsGroup PermAddListItems="required" />
+            </RightsChoices>
+            <Then><HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idAddPicture" href="]]></HTML>
+              <HttpVDir /><HTML><![CDATA[/_layouts/15/Upload.aspx?List=]]></HTML>
+              <ListProperty Select="Name" /><HTML><![CDATA[&RootFolder=]]></HTML>
+              <GetVar Name="RootFolder" URLEncode="TRUE" /><HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <HttpVDir />
+              </ScriptQuote><HTML><![CDATA[/_layouts/15/Upload.aspx?List=]]></HTML>
+              <ListProperty Select="Name" /><HTML><![CDATA[&RootFolder=]]></HTML>
+              <GetVar Name="RootFolder" URLEncode="TRUE" /><HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML><HTML>$Resources:core,Add_New_Picture;</HTML><HTML><![CDATA[</a></div>]]></HTML>
+            </Then>
+          </IfHasRights>
+        </Toolbar>
+        <RowLimit>4</RowLimit>
+        <ViewFields>
+          <FieldRef Name="Thumbnail">
+          </FieldRef>
+          <FieldRef Name="LinkFilenameNoMenu">
+          </FieldRef>
+          <FieldRef Name="ImageSize">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,Add_New_Picture)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noitemsinview_picturelibrary)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noitemsinview_picturelibrary_howto)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,piclibAllPicturesView;" TabularView="TRUE" DefaultView="FALSE" MobileView="TRUE" MobileDefaultView="TRUE" Url="Forms/AllItems.aspx" ImageUrl="/_layouts/15/images/plicon.png?rev=23">
+        <RowLimit Paged="TRUE">40</RowLimit>
+        <JSLink>clienttemplates.js|callout.js</JSLink>
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard">
+        </Toolbar>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="FileLeafRef">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ViewFields>
+          <FieldRef Name="DocIcon" />
+          <FieldRef Name="LinkFilename" />
+          <FieldRef Name="ImageSize" />
+          <FieldRef Name="FileSizeDisplay" />
+          <FieldRef Name="Modified" />
+          <FieldRef Name="RequiredField" Explicit="TRUE" />
+          <FieldRef Name="PreviewOnForm" Explicit="TRUE" />
+        </ViewFields>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,nopicturesinview_clickupload)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,nopicturesinview_clickupload_howto)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="7" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,piclibSelectedPicturesView;" Scope="Recursive" TabularView="FALSE" DefaultView="FALSE" Hidden="TRUE" ReadOnly="TRUE" ImageUrl="/_layouts/15/images/plicon.png?rev=23">
+        <RowLimit Paged="TRUE">200</RowLimit>
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard">
+        </Toolbar>
+        <ViewFields>
+          <FieldRef Name="SelectedFlag">
+          </FieldRef>
+          <FieldRef Name="DocIcon" />
+          <FieldRef Name="NameOrTitle">
+          </FieldRef>
+          <FieldRef Name="ImageSize">
+          </FieldRef>
+          <FieldRef Name="FileSizeDisplay">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="FileLeafRef">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,nopicturesinview_clickupload)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,nopicturesinview_clickupload_howto)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="8" DisplayName="$Resources:core,piclibSlideShowView;" Type="HTML" TabularView="FALSE" WebPartZoneID="Main" Hidden="TRUE" ImageUrl="/_layouts/15/images/plicon.png?rev=23">
+        <XslLink>main.xsl</XslLink>
+        <RowLimit>100000</RowLimit>
+        <ViewEmpty><HTML><![CDATA[
+<script type="text/javascript">
+    alert(L_EmptySlideShow_Text);
+    window.close();
+</script>
+            ]]></HTML>
+        </ViewEmpty>
+        <ViewBody><HTML><![CDATA[
+<script type="text/javascript">
+fNewItem = false;
+]]></HTML>
+          <IfNew Name="Created_x0020_Date"><HTML><![CDATA[fNewItem = true;]]></HTML>
+          </IfNew><HTML><![CDATA[
+InsertItem(
+]]></HTML>
+          <ScriptQuote>
+            <Field Name="EncodedAbsUrl" />
+          </ScriptQuote><HTML><![CDATA[,
+"]]></HTML>
+          <Column Name="ID" /><HTML><![CDATA[",
+]]></HTML>
+          <ScriptQuote>
+            <UrlBaseName>
+              <LookupColumn Name="FileLeafRef" />
+            </UrlBaseName>
+          </ScriptQuote><HTML><![CDATA[,
+]]></HTML>
+          <ScriptQuote>
+            <GetFileExtension>
+              <LookupColumn Name="FileLeafRef" />
+            </GetFileExtension>
+          </ScriptQuote><HTML><![CDATA[, 
+"]]></HTML>
+          <Column Name="ImageWidth" /><HTML><![CDATA[",
+"]]></HTML>
+          <Column Name="ImageHeight" /><HTML><![CDATA[",
+]]></HTML>
+          <ScriptQuote>
+            <Column Name="Title" />
+          </ScriptQuote><HTML><![CDATA[,
+]]></HTML>
+          <ScriptQuote>
+            <Column Name="Description" />
+          </ScriptQuote><HTML><![CDATA[,
+]]></HTML>
+          <ScriptQuote>
+            <LookupColumn Name="FSObjType" />
+          </ScriptQuote><HTML><![CDATA[, 
+]]></HTML>
+          <ScriptQuote>
+            <MapToIcon>
+              <Column Name="HTML_x0020_File_x0020_Type" /><HTML>|</HTML>
+              <Column Name="File_x0020_Type" />
+            </MapToIcon>
+          </ScriptQuote><HTML><![CDATA[,
+fNewItem);
+items[ ]]></HTML>
+          <Column Name="ID" /><HTML><![CDATA[ ].createdDate = ]]></HTML>
+          <ScriptQuote>
+            <Column Name="ImageCreateDate" />
+          </ScriptQuote><HTML><![CDATA[;
+</script>
+]]></HTML>
+        </ViewBody>
+        <ViewFooter><HTML><![CDATA[
+<span id="selectionCacheMgr" class="userdata"></span>
+<span id="DebugBox"></span>
+<script type="text/javascript">
+var strSeperator = "&";
+if (ctx.displayFormUrl.indexOf("?") == -1)
+            strSeperator = "?";
+urlCmdForDisplay = ctx.displayFormUrl +  strSeperator + "RootFolder=]]></HTML>
+          <GetVar Name="RootFolder" URLEncode="TRUE" /><HTML><![CDATA[";
+RecursiveViewHeaderScript(]]></HTML>
+          <ScriptQuote>
+            <GetVar Name="ViewStyle" HTMLEncode="TRUE" />
+          </ScriptQuote><HTML><![CDATA[,
+]]></HTML>
+          <ListProperty Select="WebImageWidth" /><HTML><![CDATA[,
+]]></HTML>
+          <ListProperty Select="WebImageHeight" /><HTML><![CDATA[,
+]]></HTML>
+          <ListProperty Select="ThumbnailSize" /><HTML><![CDATA[);
+currentPicture = ]]></HTML>
+          <IfEqual>
+            <Expr1>
+              <GetVar Name="picID" />
+            </Expr1>
+            <Expr2>
+            </Expr2>
+            <Then>0</Then>
+            <Else>
+              <GetVar Name="picID" />
+            </Else>
+          </IfEqual><HTML><![CDATA[;
+RecursiveViewFooterScript();
+</script>
+</table>
+</td></tr></table>
+]]></HTML>
+        </ViewFooter>
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard">
+        </Toolbar>
+        <ViewFields>
+          <FieldRef Name="NameOrTitle" />
+          <FieldRef Name="File_x0020_Size" />
+          <FieldRef Name="ImageCreateDate" Explicit="TRUE" />
+          <FieldRef Name="Description" />
+          <FieldRef Name="Modified" Explicit="TRUE" />
+          <FieldRef Name="Created_x0020_Date" />
+          <FieldRef Name="Author" />
+          <FieldRef Name="Editor" Explicit="TRUE" />
+          <FieldRef Name="RequiredField" Explicit="TRUE" />
+          <FieldRef Name="EncodedAbsUrl" Explicit="TRUE" />
+          <FieldRef Name="ImageWidth" Explicit="TRUE" />
+          <FieldRef Name="ImageHeight" Explicit="TRUE" />
+        </ViewFields>
+        <Query>
+          <Where>
+            <Gt>
+              <FieldRef Name="ImageWidth" />
+              <Value Type="Integer">0</Value>
+            </Gt>
+          </Where>
+          <OrderBy>
+            <FieldRef Name="FileLeafRef">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,nopicturesinview_clickupload)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,nopicturesinview_clickupload_howto)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="3" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,piclibExplorerView;" RequiresClientIntegration="TRUE" TabularView="FALSE" SetupPath="pages\webfldr.aspx" ReadOnly="TRUE" ImageUrl="/_layouts/15/images/plicon.png?rev=23">
+        <Toolbar Type="Standard">
+        </Toolbar>
+        <XslLink>main.xsl</XslLink>
+        <ViewEmpty><HTML><![CDATA[
+        <iframe id="expFrame" width="100%" height="500px" name="expFrame" src="/_layouts/blank.htm"></iframe>
+        <script type="text/javascript">
+        function navtoframe()
+        {
+        }
+        function navtoframe2()
+        {
+            NavigateHttpFolderIfSupported(
+                ]]></HTML>
+          <ScriptQuote>
+            <Switch>
+              <Expr>
+                <GetVar Name="RootFolder" />
+              </Expr>
+              <Case Value="">
+                <ListUrlDir ForInstance="TRUE" />
+              </Case>
+              <Default>
+                <GetVar Name="RootFolder" />
+              </Default>
+            </Switch>
+          </ScriptQuote><HTML><![CDATA[, "expFrame");
+        }
+        var _spBodyOnLoadFunctionNames;
+        if (_spBodyOnLoadFunctionNames == null)
+        { 
+            _spBodyOnLoadFunctionNames = new Array();
+        }
+        _spBodyOnLoadFunctionNames.push("navtoframe2");
+        </script>]]></HTML><HTML><![CDATA[<span id="selectionCacheMgr" class="userdata"></span>
+<script type="text/javascript" src="_layouts/15/imglib.js"></script>
+    <script type="text/javascript">
+    WebFolderViewInit("]]></HTML>
+          <List /><HTML><![CDATA[");
+    ViewEmptyScript(
+]]></HTML>
+          <ListProperty Select="WebImageWidth" /><HTML><![CDATA[,
+]]></HTML>
+          <ListProperty Select="WebImageHeight" /><HTML><![CDATA[,
+]]></HTML>
+          <ListProperty Select="ThumbnailSize" /><HTML><![CDATA[);
+    </script>]]></HTML>
+        </ViewEmpty>
+        <ViewFields />
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="6" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,piclibThumbnailsView;" TabularView="TRUE" DefaultView="TRUE" SetupPath="pages\viewpage.aspx" Url="Forms/Thumbnails.aspx" ImageUrl="/_layouts/15/images/plicon.png?rev=23">
+        <JSLink>SP.UI.TileView.js|callout.js</JSLink>
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="DocIcon" />
+          <FieldRef Name="LinkFilenameNoMenu" />
+          <FieldRef Name="ImageSize" />
+          <FieldRef Name="FileSizeDisplay" />
+          <FieldRef Name="Modified" />
+          <FieldRef Name="Created_x0020_Date" Explicit="TRUE" />
+          <FieldRef Name="Author" Explicit="TRUE" />
+          <FieldRef Name="Editor" Explicit="TRUE" />
+          <FieldRef Name="RequiredField" Explicit="TRUE" />
+          <FieldRef Name="ImageWidth" Explicit="TRUE" />
+          <FieldRef Name="ImageHeight" Explicit="TRUE" />
+          <FieldRef Name="NameOrTitle" Explicit="TRUE" />
+          <FieldRef Name="PreviewOnForm" Explicit="TRUE" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="FileLeafRef">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,nopicturesinview_clickupload)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,nopicturesinview_clickupload_howto)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="2" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,piclibSinglePictView;" TabularView="FALSE" DefaultView="FALSE" SetupPath="pages\viewpage.aspx" Url="Forms/SinglePict.aspx" ImageUrl="/_layouts/15/images/plicon.png?rev=23">
+        <RowLimit Paged="TRUE">1</RowLimit>
+        <JSLink>clienttemplates.js</JSLink>
+        <ViewFields>
+          <FieldRef Name="LinkFilenameNoMenu" />
+          <FieldRef Name="FileSizeDisplay" />
+          <FieldRef Name="ImageSize" />
+          <FieldRef Name="NameOrTitle" Explicit="TRUE" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="FileLeafRef">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,nopicturesinview_clickupload)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,nopicturesinview_clickupload_howto)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="Forms/DispForm.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="Forms/EditForm.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="Forms/Upload.aspx" WebPartZoneID="Main" />
+    </Forms>
+    <DefaultDescription>
+                       $Resources:core,piclib_desc;
+                   </DefaultDescription>
+  </MetaData>
+</List>

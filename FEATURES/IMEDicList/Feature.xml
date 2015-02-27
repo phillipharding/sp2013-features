@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="1C6A572C-1B58-49ab-B5DB-75CAF50692E6"
+    Title="$Resources:core,ImeFeatureTitle;"
+    Description="$Resources:core,ImeFeatureDescription;"
+    Version="2.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\IMEDicList.xml" />
+        <ElementFile Location="imedic\schema.xml" />
+    </ElementManifests>
+    <UpgradeActions
+        ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        ReceiverClass="Microsoft.SharePoint.SPIMEDicListUpgradeFeatureReceiver">
+        <VersionRange EndVersion="1.0.0.0">
+            <CustomUpgradeAction Name="V2VUpgrade" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

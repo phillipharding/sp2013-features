@@ -1,0 +1,16 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        FeatureId="D32700C7-9EC5-45e6-9C89-EA703EFCA1DF"
+        Name="categories"
+        Type="500"
+        BaseType="0"
+        OnQuickLaunch="TRUE"
+        DisableAttachments="TRUE"
+        FolderCreation="TRUE"
+        Hidden="TRUE"
+        SecurityBits="12"
+        AllowDeletion="FALSE"
+        DisplayName="$Resources:spscore,CategoriesList_Disp"
+        Description="$Resources:spscore,CategoriesList_Desc"
+        Image="/_layouts/15/images/itcommcat.png?rev=23"/>
+</Elements>

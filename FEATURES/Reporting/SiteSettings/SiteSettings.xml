@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Id="AuditReporting"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        RequireSiteAdministrator="true"
+        Sequence="71"
+        Title="$Resources:Reporting_AuditReportingFeatureTitle;"
+        Description="$Resources:SiteSettings_AuditLogReports_Tooltip;">
+        <UrlAction
+            Url="_layouts/15/Reporting.aspx?Category=Auditing" />
+    </CustomAction>
+    <CustomAction
+        Id="WorkflowReporting"
+        GroupId="LeftNavBarLinks"
+        Location="Microsoft.SharePoint.Workflows"
+        Sequence="100"
+        Title="$Resources:Reporting_WorkflowReportingFeatureTitle;">
+        <UrlAction
+            Url="_layouts/15/Reporting.aspx?Category=Workflow&amp;backtype=list&amp;" />
+    </CustomAction>
+    <CustomAction 
+        Id="FilePlanReport"
+        GroupId="Permissions"
+        Location="Microsoft.SharePoint.ListEdit"
+        Rights="ManageLists"        
+        Sequence="100" 
+        Title="$Resources:dlccore, PolicyLinks_FilePlanReport;">
+        <UrlAction Url="_layouts/15/customizereport.aspx?Category=FilePlan&amp;backtype=list&amp;List={ListId}" />
+    </CustomAction>
+</Elements>

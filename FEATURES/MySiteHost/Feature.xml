@@ -1,0 +1,119 @@
+<Feature Id="49571CD1-B6A1-43a3-BF75-955ACC79C8D8"
+    Title="$Resources:spscore,PeopleFeatures_MySiteHost_Text;"
+    Description="$Resources:spscore,PeopleFeatures_MySiteHost_Desc;"
+    Version="15.0.29.0"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.UserProfiles.MySiteHostFeatureReceiver"
+    Scope="Site"
+    Hidden="TRUE"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="elements.xml"/>
+        <ElementManifest Location="peopleelements.xml"/>
+        <ElementManifest Location="threadelements.xml"/>
+        <ElementManifest Location="HtmlDisplayTemplateFiles.xml"/>
+    </ElementManifests>
+    <UpgradeActions
+        ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        ReceiverClass="Microsoft.SharePoint.Portal.UserProfiles.MySiteHostUpgrader">
+        <VersionRange EndVersion="14.0.1.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="elements.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.1.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="peopleelements.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.2.0">
+          <CustomUpgradeAction Name="MySite_QuickLaunchPeopleUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.3.0">
+          <CustomUpgradeAction Name="MySite_MyMicrofeedUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.4.0">
+          <CustomUpgradeAction Name="MySiteHost_MicroBlogCtrlUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.5.0">
+          <CustomUpgradeAction Name="MySiteHost_ProfileUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.6.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="threadelements.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.7.0">
+          <CustomUpgradeAction Name="MySite_QuickLaunchUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.8.0">
+          <CustomUpgradeAction Name="MySite_DeactivateFeaturesUpgrade" />
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.1.0" EndVersion="15.0.10.0">
+          <CustomUpgradeAction Name="MySite_DefaultPageRecommendationWebpartUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.11.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="peopleelements.xml" />
+          </ApplyElementManifests>
+          <CustomUpgradeAction Name="MySite_DeactivateFeaturesUpgrade" />
+          <CustomUpgradeAction Name="MySite_TopNavigationUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.13.0">
+          <CustomUpgradeAction Name="MySite_SearchResultsUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.14.0">
+          <CustomUpgradeAction Name="MySite_DeactivateFeaturesUpgrade" />
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.10.0" EndVersion="15.0.15.0">
+          <CustomUpgradeAction Name="MySite_DefaultPageRecommendationWebpartModeUpgrade" />
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.7.0" EndVersion="15.0.16.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="peopleelements.xml" />
+          </ApplyElementManifests>
+          <CustomUpgradeAction Name="MySite_RenameQuickLaunchUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.18.0">
+          <CustomUpgradeAction Name="MySiteHost_MySitePersonalSiteUpgradeOnNavigationWebPartUpgrade" />
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.11.0" EndVersion="15.0.19.0">
+          <CustomUpgradeAction Name="MySite_QuickLaunchUpgrade" />
+          <CustomUpgradeAction Name="MySite_TopNavigationUpgrade" />
+          <CustomUpgradeAction Name="MySite_ReactivateUnifiedNavigationUpgrade" />
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.5.0" EndVersion="15.0.20.0">
+          <CustomUpgradeAction Name="MySiteHost_ProfileTagsWebPartUpgrade" />
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.16.0" EndVersion="15.0.21.0">
+          <CustomUpgradeAction Name="MySite_RenameQuickLaunchUpgrade" />
+        </VersionRange>        
+        <VersionRange EndVersion="15.0.22.0">
+          <CustomUpgradeAction Name="MySite_DefaultPageWebpartUpgrade" />
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.19.0" EndVersion="15.0.23.0">
+          <CustomUpgradeAction Name="MySite_UpgradeDefaultPageFile" />
+          <CustomUpgradeAction Name="MySite_QuickLaunchUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.24.0">
+          <CustomUpgradeAction Name="MySite_LogoUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.25.0">
+          <CustomUpgradeAction Name="MySiteHost_MySiteFirstRunExperienceWebPartUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.26.0">
+          <CustomUpgradeAction Name="MySiteHost_LocalizeWebPartTitlesAndDescriptions" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.27.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="HtmlDisplayTemplateFiles.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.28.0">
+          <CustomUpgradeAction Name="MySiteHost_RemoveExtraPeopleWebParts" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.29.0">
+          <CustomUpgradeAction Name="MySiteHost_AnalyticsHashTagWebPartUpgrade" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="00BFEA71-2062-426C-90BF-714C59600103"
+    Title="$Resources:core,linkslistFeatureTitle;"
+    Description="$Resources:core,linkslistFeatureDesc;"
+    Version="1.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"    
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\Links.xml" />
+    </ElementManifests>
+</Feature>

@@ -1,0 +1,82 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:dmscore,IDS_CBSItemTitle</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:ManagedPropertyMapping msdt:dt="string">&quot;Image Url&quot;:&quot;PictureThumbnailURL&quot;,&quot;Line 1&quot;:&quot;DMSDocTitle&quot;,&quot;Line 1 Link Url&quot;:&quot;Path&quot;,&quot;Line 2&quot;:&quot;DMSDocAuthor&quot;,&quot;Line 2 Link Url&quot;:&quot;url&quot;,&quot;Line 3&quot;:&quot;LastModifiedTime&quot;,&quot;FileExtension&quot;,&quot;Description&quot;,&quot;owstaxidmetadataalltagsinfo&quot;,&quot;DMSDocAccessRight&quot;,&quot;DMSLeaseTerm&quot;</mso:ManagedPropertyMapping>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentType msdt:dt="string">Item Display Template</mso:ContentType>
+<mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="DMSCBSItem">
+<!--#_
+        if(!$isNull(ctx.CurrentItem) && !$isNull(ctx.ClientControl))
+        {
+            var id = ctx.ClientControl.get_nextUniqueId();
+            $setResultItem(id, ctx.CurrentItem);
+            var hoverUrl = "~sitecollection/_catalogs/masterpage/Display Templates/Content Web Parts/Item_EducationBookThumbnail_HoverPanel.js";
+            var hover_id = id + "_hover";
+_#-->
+        <div id="_#= $htmlEncode(id) =#_" class="dms-cbs-item" name="Item" onmouseover="EnsureScriptParams('SearchUI.js', 'HP.Init', event, '_#= $scriptEncode(id) =#_', '_#= $scriptEncode(hover_id) =#_', '_#= $scriptEncode(hoverUrl) =#_');" onmouseout="EnsureScriptParams('SearchUI.js', 'HP.Init', event, '_#= $scriptEncode(id) =#_', '_#= $scriptEncode(hover_id) =#_', '_#= $scriptEncode(hoverUrl) =#_');">
+            <div id="_#= $htmlEncode(hover_id) =#_" data-displaytemplate="DMSCBSItem" class="ms-srch-hover-outerContainer"></div>
+            <div id="Main">
+            <div class="dms-cbs-icon-container">
+<!--#_
+            var releaseDate = ctx.CurrentItem.LastModifiedTime;
+            if (!$isNull(releaseDate))
+            {
+                releaseDateIntl = SP.DateTimeUtil.IntlDate.createFromJsLocalDate(releaseDate, _spRegionalSettings.calendarType);
+                releaseDateFormattedString = releaseDateIntl.format('d', Sys.CultureInfo.CurrentCulture.name);
+            }
+
+            var imageURL = ctx.CurrentItem.PictureThumbnailURL;
+            if (!$isNull(imageURL))
+            {
+_#-->
+                <a href="_#= $urlHtmlEncode(ctx.CurrentItem.Path) =#_">
+                <img class="dms-cbs-itemicon" alt="" src="_#= $urlHtmlEncode(imageURL) =#_" /></a>
+<!--#_
+            }
+            else
+            {
+_#-->
+                <img class="dms-cbs-itemicon" src="_#= $urlHtmlEncode(Srch.U.getIconUrl(ctx.CurrentItem)) =#_" />
+<!--#_
+            }
+_#-->
+            </div>
+
+            <div class="dms-cbsDetail">
+                <div class="dms-textblock-clip" >
+                    <a href="_#= $urlHtmlEncode(ctx.CurrentItem.Path) =#_" title="_#= $htmlEncode(ctx.CurrentItem.DMSDocTitle) =#_">_#= $htmlEncode(ctx.CurrentItem.DMSDocTitle) =#_</a>
+                </div>
+
+                <div class="dms-textblock-clip" >
+                    _#= $htmlEncode(dms.res.writtenBy_Label) =#_ <span title="_#= $htmlEncode(ctx.CurrentItem.DMSDocAuthor) =#_">_#= $htmlEncode(ctx.CurrentItem.DMSDocAuthor) =#_</span>
+                </div>
+<!--#_
+
+            if (!$isNull(releaseDate))
+            {
+_#-->
+                <div class="dms-textblock-clip" >
+                    <span title="_#= $htmlEncode(releaseDateFormattedString) =#_">_#= $htmlEncode(releaseDateFormattedString) =#_</span>
+                </div>
+<!--#_
+            }
+_#-->
+            </div>
+            </div>
+        </div>
+<!--#_
+    }
+_#-->
+    </div>
+</body>
+</html>

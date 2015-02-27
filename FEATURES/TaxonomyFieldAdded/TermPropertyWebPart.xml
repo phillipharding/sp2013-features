@@ -1,0 +1,15 @@
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <Module
+        Name="TermPropertyWebPart"
+        List="113"
+        Url="_catalogs/wp"
+        Path="WebParts"
+        RootWebOnly="TRUE">
+        <File Url="TermProperty.webpart" IgnoreIfAlreadyExists="TRUE" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:core,ContentRollupWebPartGroup;" />
+            <Property Name="QuickAddGroups" Value=";#Default;#" />
+        </File>
+    </Module>
+</Elements>

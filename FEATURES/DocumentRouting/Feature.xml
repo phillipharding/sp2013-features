@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="15.0.4420" _dal="1" -->
+<!-- _LocalBinding -->
+<Feature  Id="7AD5272A-2694-4349-953E-EA5EF290E97C"
+          Title="$Resources:DocumentRoutingFeatureTitle"	
+          Description="$Resources:DocumentRoutingFeatureDescription"
+          DefaultResourceFile="dlccore"
+          Version="14.0.0.0"
+          Hidden="FALSE"
+          Scope="Web"
+          ReceiverAssembly="Microsoft.Office.Policy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.Office.RecordsManagement.Internal.DocumentRoutingFeatureReceiver"         
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="RoutingLists.xml" />
+    </ElementManifests>
+    <ActivationDependencies> 
+        <ActivationDependency FeatureId="0C8A9A47-22A9-4798-82F1-00E62A96006E" /> 
+    </ActivationDependencies> 
+</Feature>

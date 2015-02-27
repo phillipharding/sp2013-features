@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Name="holidays" Title="$Resources:core,HolidaysListTitle;" Direction="0" Url="Lists/Holidays" EnableContentTypes="TRUE" MultipleTypes="FALSE" FolderCreation="FALSE" BaseType="0">
+  <MetaData>
+    <ContentTypes>
+      <ContentTypeRef ID="0x01009be2ab5291bf4c1a986910bd278e4f18" />
+    </ContentTypes>
+    <Fields>
+      <Field ID="{335e22c3-b8a4-4234-9790-7a03eeb7b0d4}" Name="HolidayDate" DisplayName="$Resources:core,GBW_HL_Date_Field;" Type="Text" Sealed="TRUE" Description="$Resources:core,GBW_HL_Date_Field_Description;" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="HolidayDate">
+      </Field>
+      <!-- For upgrade -->
+      <Field ID="{492b1ac0-c594-4013-a2b6-ea70f5a8a506}" Name="V4HolidayDate" DisplayName="$Resources:core,GBW_HL_Date_Field;" Type="DateTime" Format="DateOnly" Required="TRUE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="V4HolidayDate">
+      </Field>
+      <Field ID="{6df9bd52-550e-4a30-bc31-a4366832a87d}" Name="Category" DisplayName="$Resources:core,GBW_HL_Category_Field;" Type="Choice" FillInChoice="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Category">
+        <CHOICES><CHOICE>$Resources:core,GBW_HL_Category_Group1;</CHOICE><CHOICE>$Resources:core,GBW_HL_Category_Group2;</CHOICE><CHOICE>$Resources:core,GBW_HL_Category_Group3;</CHOICE>
+        </CHOICES>
+        <Default>$Resources:core,GBW_HL_Category_Group1;</Default>
+      </Field>
+      <Field ID="{baf7091c-01fb-4831-a975-08254f87f234}" Name="IsNonWorkingDay" DisplayName="$Resources:core,GBW_HL_IsNonWorkingDay_Field;" Description="$Resources:core,GBW_HL_IsNonWorkingDay_Field_Description;" Type="Boolean" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="IsNonWorkingDay">
+        <Default>1</Default>
+      </Field>
+      <!-- for upgrade -->
+      <Field ID="{1da99e12-2fea-465c-9579-544bdba7ce42}" Name="Date" DisplayName="Date" Hidden="TRUE" Type="Text" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Date">
+      </Field>
+      <!-- end for upgrade -->
+      <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" Required="TRUE" DisplayName="$Resources:core,GBW_HL_Title_Field;" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title">
+      </Field>
+      <Field ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" Name="LinkTitle" DisplayName="$Resources:core,GBW_HL_LinkTitle_Field;" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkTitle">
+      </Field>
+      <Field ID="{bc91a437-52e7-49e1-8c4e-4698904b2b6d}" Name="LinkTitleNoMenu" DisplayName="$Resources:core,GBW_HL_LinkTitleNoMenu_Field;" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkTitleNoMenu">
+      </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" TabularView="FALSE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Position="After" Type="Freeform">
+          <IfHasRights>
+            <RightsChoices>
+              <RightsGroup PermAddListItems="required" />
+            </RightsChoices>
+            <Then><HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idAddNewItem" href="]]></HTML>
+              <URL Cmd="New" /><HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <URL Cmd="New" />
+              </ScriptQuote><HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML><HTML>$Resources:core,addnewitem;</HTML><HTML><![CDATA[</a></div>]]></HTML>
+            </Then>
+          </IfHasRights>
+        </Toolbar>
+        <RowLimit>20</RowLimit>
+        <ViewFields>
+          <FieldRef Name="V4HolidayDate">
+          </FieldRef>
+          <FieldRef Name="LinkTitleNoMenu">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <GroupBy>
+            <FieldRef Name="Category" Ascending="TRUE" />
+          </GroupBy>
+          <OrderBy>
+            <FieldRef Name="V4HolidayDate" Ascending="TRUE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,HolidaysAllItemsDisplayName;" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/gbho.png?rev=23" Url="AllItems.aspx">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="V4HolidayDate">
+          </FieldRef>
+          <FieldRef Name="LinkTitle">
+          </FieldRef>
+          <FieldRef Name="Category">
+          </FieldRef>
+          <FieldRef Name="IsNonWorkingDay">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <GroupBy>
+            <FieldRef Name="Category" Ascending="TRUE" />
+          </GroupBy>
+          <OrderBy>
+            <FieldRef Name="V4HolidayDate" />
+            <FieldRef Name="Title" />
+          </OrderBy>
+        </Query>
+        <RowLimit>2147483647</RowLimit>
+      </View>
+      <View BaseViewID="2" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,HolidaysDisplayHolidayDisplayName;" DefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/gbho.png?rev=23" Url="DispHol.aspx">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="V4HolidayDate">
+          </FieldRef>
+          <FieldRef Name="LinkTitle">
+          </FieldRef>
+          <FieldRef Name="Category">
+          </FieldRef>
+          <FieldRef Name="IsNonWorkingDay">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Category" />
+            <FieldRef Name="V4HolidayDate" />
+          </OrderBy>
+        </Query>
+        <RowLimit>2147483647</RowLimit>
+      </View>
+      <View BaseViewID="3" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,HolidaysNonWorkingDayDisplayName;" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/gbho.png?rev=23" Url="NonWDay.aspx">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="V4HolidayDate">
+          </FieldRef>
+          <FieldRef Name="LinkTitle">
+          </FieldRef>
+          <FieldRef Name="Category">
+          </FieldRef>
+          <FieldRef Name="IsNonWorkingDay">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <Where>
+            <Eq>
+              <FieldRef Name="IsNonWorkingDay" />
+              <Value Type="Boolean">1</Value>
+            </Eq>
+          </Where>
+          <OrderBy>
+            <FieldRef Name="Category" />
+            <FieldRef Name="V4HolidayDate" />
+          </OrderBy>
+        </Query>
+        <RowLimit>2147483647</RowLimit>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+    <DefaultDescription>$Resources:core,GBW_HL_DefaultDescription;</DefaultDescription>
+  </MetaData>
+</List>

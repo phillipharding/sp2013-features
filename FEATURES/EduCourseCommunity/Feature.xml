@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="A16E895C-E61A-11DF-8F6E-103EDFD72085"
+	Title="$Resources:eduserver,IDS_EduCourseCommunityFeatureTitle"
+	Description="$Resources:eduserver,IDS_EduCourseCommunityFeatureDescription"
+    SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+	Version="15.0.21.0"
+	Scope="Web"
+	AlwaysForceInstall="FALSE"
+	ReceiverAssembly="Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+	ReceiverClass="Microsoft.Office.Education.EduCourseCommunityFeatureReceiver"
+	DefaultResourceFile="eduserver"
+	xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<ActivationDependencies>
+		<!-- EduCourseCommunitySite -->
+		<ActivationDependency FeatureId="824A259F-2CCE-4006-96CD-20C806EE9CFD" />
+		<!-- CommunitySite -->
+		<ActivationDependency FeatureId="961D6A9C-4388-4cf2-9733-38EE8C89AFD4" />
+		<!-- EduDashboard -->
+		<ActivationDependency FeatureId="5025492C-DAE2-4C00-8F34-CD08F7C7C294" />
+	</ActivationDependencies>
+
+	<ElementManifests>
+		<ElementFile Location="GradeReportTemplate.xlsx"/>
+		<ElementFile Location="Pages\Assignments.aspx" />
+		<ElementFile Location="Pages\Calendar.aspx" />
+		<ElementFile Location="Pages\CourseGrades.aspx" />
+		<ElementFile Location="Pages\Home.aspx" />
+		<ElementFile Location="Pages\Planner.aspx" />
+		<ElementFile Location="Pages\QuizView.aspx" />
+		<ElementFile Location="Pages\View.aspx" />
+		<ElementManifest Location="Elements.xml" />
+		<ElementManifest Location="HomePageElements.xml" />
+		<ElementManifest Location="schema3.xml"/>
+	</ElementManifests>
+
+	<UpgradeActions>
+		<VersionRange EndVersion="15.0.2.0">
+			<CustomUpgradeAction Name="15.0.2.0" />
+			<ApplyElementManifests>
+				<ElementManifest Location="HomePageElements.xml"/>
+			</ApplyElementManifests>
+		</VersionRange>
+		<VersionRange EndVersion="15.0.3.0">
+			<CustomUpgradeAction Name="15.0.3.0" />
+		</VersionRange>
+		<VersionRange EndVersion="15.0.9.0">
+			<CustomUpgradeAction Name="15.0.9.0" />
+		</VersionRange>
+		<VersionRange EndVersion="15.0.10.0">
+			<CustomUpgradeAction Name="15.0.10.0" />
+		</VersionRange>
+		<VersionRange EndVersion="15.0.11.0">
+			<CustomUpgradeAction Name="15.0.11.0" />
+		</VersionRange>
+		<VersionRange EndVersion="15.0.12.0">
+			<CustomUpgradeAction Name="15.0.12.0" />
+		</VersionRange>
+		<VersionRange EndVersion="15.0.13.0">
+			<CustomUpgradeAction Name="15.0.13.0" />
+		</VersionRange>
+		<VersionRange EndVersion="15.0.14.0">
+			<CustomUpgradeAction Name="15.0.14.0" />
+		</VersionRange>
+		<VersionRange EndVersion="15.0.15.0">
+			<CustomUpgradeAction Name="15.0.15.0" />
+		</VersionRange>
+		<VersionRange EndVersion="15.0.16.0">
+			<CustomUpgradeAction Name="15.0.16.0" />
+		</VersionRange>
+		<VersionRange EndVersion="15.0.17.0">
+			<CustomUpgradeAction Name="15.0.17.0" />
+		</VersionRange>
+		<VersionRange EndVersion="15.0.18.0">
+			<CustomUpgradeAction Name="15.0.18.0" />
+		</VersionRange>
+		<VersionRange EndVersion="15.0.19.0">
+			<CustomUpgradeAction Name="15.0.19.0" />
+		</VersionRange>
+		<VersionRange EndVersion="15.0.20.0">
+			<CustomUpgradeAction Name="15.0.20.0" />
+			<ApplyElementManifests>
+				<ElementManifest Location="HomePageElements.xml"/>
+			</ApplyElementManifests>
+		</VersionRange>
+		<VersionRange EndVersion="15.0.21.0">
+			<CustomUpgradeAction Name="15.0.21.0" />
+		</VersionRange>
+	</UpgradeActions>
+
+</Feature>

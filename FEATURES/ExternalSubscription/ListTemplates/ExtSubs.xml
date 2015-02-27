@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="ExternalSubscriptions"
+        Type="2001"
+        BaseType="0"
+        OnQuickLaunch="FALSE"
+        SecurityBits="22"
+        Hidden="TRUE"
+        DisplayName="$Resources:core,ExternalSubscriptionListTemplateDisplayName;"
+        Image="/_layouts/15/images/itgen.png?rev=23"
+        DontSaveInTemplate="TRUE"/>
+</Elements>

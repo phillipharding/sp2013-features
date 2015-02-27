@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+	This is for the InfoPath Form Settings to customize form associated with a list
+	-->
+
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<CustomAction
+		Id="IPFSSettingsListEditPage"
+		RegistrationType="List"
+		GroupId="GeneralSettings"
+		Location="Microsoft.SharePoint.ListEdit"
+		Sequence="230"
+		Title="$Resources:ipfscore,FormSettingsTitle;"
+		>
+		<UrlAction Url="~site/_layouts/15/FormSettings.aspx?List={ListId}&amp;Source={Source}"/>
+	</CustomAction>
+
+	<CustomAction UIVersion="3"
+		Id="IPFSSettingsMenuListSettings"
+		GroupId="SettingsMenu"
+		Location="Microsoft.SharePoint.StandardMenu"
+		Sequence="240"
+		Rights="ManageLists"
+		Title="$Resources:ipfscore,FormSettingsMenuItem;"
+		Description="$Resources:ipfscore,FormSettingsMenuItemDescription;"
+		ImageUrl="/_layouts/15/inc/ipfscustomizeform32.png"
+		>
+		<UrlAction Url='javascript:
+		{ 
+			try 
+			{ 
+				if (!browseris.ie) 
+				{ 
+					alert("$Resources:ipfscore,FormSettingsErrorMessageIncompatibleBrowser"); 
+				} 
+				else 
+				{ 
+					var ctx = SP.ClientContext.get_current(); 
+					var result = SP.Utilities.Utility.isUserLicensedForEntityInContext(ctx, "IPFS"); 
+					ctx.executeQueryAsync( 
+					function () 
+					{ 
+						if (!result.get_value()) 
+						{ 
+							var message="$Resources:core,RequiredUserLicenseMissing";
+							message = message.replace("{0}", "$Resources:ipfscore,AdminLinksFeatureSectionTitle");
+							alert(message);
+						} 
+						else 
+						{
+
+							var protocolHandlerAvailable = false;
+							if (phManager != null)
+							{
+								if (phManager.IsProtocolHandlerEnabled("infopath"))
+								{
+									protocolHandlerAvailable = true;
+
+									var protocolUrl = [];
+									protocolUrl.push("ms-infopath:csl|u|");
+									protocolUrl.push("{SiteUrl}");
+									protocolUrl.push("|l|");
+									protocolUrl.push("{ListId}");
+									window.location.href = protocolUrl.join("");
+								}
+							}
+							if (!protocolHandlerAvailable)
+							{
+								try 
+								{ 
+									var spOpener = new ActiveXObject("SharePoint.OpenXMLDocuments.3"); 
+									if (spOpener != null) 
+									{ 
+										var x = spOpener.CustomizeSharePointList("{SiteUrl}", "{ListId}");
+									} 
+								} 
+								catch (e) 
+								{ 
+									alert("$Resources:ipfscore,ErrorMessageListcustomizationProductNotFound"); 
+								} 
+							}
+						} 
+					}); 
+				} 
+			} 
+			catch (e) 
+			{ 
+				var message="$Resources:core,RequiredUserLicenseMissing";
+				message = message.replace("{0}", "$Resources:ipfscore,AdminLinksFeatureSectionTitle");
+				alert(message);
+			}
+		}'/>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		Location="CommandUI.Ribbon"
+		Sequence="240"
+		Rights="ManageLists"
+		Title="$Resources:ipfscore,FormSettingsMenuItem;"
+		Description="$Resources:ipfscore,FormSettingsMenuItemDescription;"
+		ImageUrl="/_layouts/15/inc/ipfscustomizeform16.png"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls._children">
+					<Button Id="Ribbon.List.CustomizeList.Controls.btnCustomizeList2"
+							Sequence="20"
+							Command="InfoPathCustomizeList"
+							Image16by16="/_layouts/15/inc/ipfscustomizeform16.png"
+							Image32by32="/_layouts/15/inc/ipfscustomizeform32.png"
+							LabelText="$Resources:ipfscore,FormSettingsMenuItem;"
+							ToolTipTitle="$Resources:ipfscore,FormSettingsMenuItem;"
+							ToolTipDescription="$Resources:ipfscore,cui_stt_CustomizeFormDescription;"
+							TemplateAlias="o1"
+				/>
+				</CommandUIDefinition>
+			</CommandUIDefinitions>
+			<CommandUIHandlers>
+				<CommandUIHandler 
+					Command="InfoPathCustomizeList"
+					CommandAction='javascript:
+					{ 
+						try 
+						{ 
+							if (!browseris.ie) 
+							{ 
+								alert("$Resources:ipfscore,FormSettingsErrorMessageIncompatibleBrowser"); 
+							} 
+							else 
+							{ 
+								var ctx = SP.ClientContext.get_current(); 
+								var result = SP.Utilities.Utility.isUserLicensedForEntityInContext(ctx, "IPFS"); 
+								ctx.executeQueryAsync( 
+								function () 
+								{
+									if (!result.get_value()) 
+									{
+										var message="$Resources:core,RequiredUserLicenseMissing";
+										message = message.replace("{0}", "$Resources:ipfscore,AdminLinksFeatureSectionTitle");
+										alert(message);
+									} 
+									else 
+									{
+
+										var protocolHandlerAvailable = false;
+										if (phManager != null)
+										{
+											if (phManager.IsProtocolHandlerEnabled("infopath"))
+											{
+												protocolHandlerAvailable = true;
+
+												var protocolUrl = [];
+												protocolUrl.push("ms-infopath:csl|u|");
+												protocolUrl.push("{SiteUrl}");
+												protocolUrl.push("|l|");
+												protocolUrl.push("{SelectedListId}");
+												window.location.href = protocolUrl.join("");
+											}
+										}
+										if (!protocolHandlerAvailable)
+										{
+											try 
+											{ 
+												var spOpener = new ActiveXObject("SharePoint.OpenXMLDocuments.3"); 
+												if (spOpener != null) 
+												{ 
+													var x = spOpener.CustomizeSharePointList("{SiteUrl}", "{SelectedListId}"); 
+												} 
+											} 
+											catch (e) 
+											{ 
+												alert("$Resources:ipfscore,ErrorMessageListcustomizationProductNotFound"); 
+											} 
+										}
+									} 
+								}); 
+							} 
+						} 
+						catch (e) 
+						{ 
+							var message="$Resources:core,RequiredUserLicenseMissing";
+							message = message.replace("{0}", "$Resources:ipfscore,AdminLinksFeatureSectionTitle");
+							alert(message);
+						}
+					}'/>
+			</CommandUIHandlers>
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="102"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="106"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="108"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="140"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="200"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="201"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="202"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="204"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="207"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="210"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="211"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="212"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="301"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="302"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="303"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="402"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="403"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="404"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="405"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="499"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="170"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="398"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="399"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="432"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="450"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="600"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="1301"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="1305"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="1306"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="1307"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="1308"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="1309"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+	<CustomAction UIVersion="4"
+		Id="IPFSSettingsRibbon"
+		RegistrationType="List"
+		RegistrationId="1310"
+		Location="CommandUI.Ribbon.Custom"
+		Sequence="240"
+		>
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.List.CustomizeList.Controls.btnCustomizeList2" />
+			</CommandUIDefinitions>		
+		</CommandUIExtension>
+	</CustomAction>
+
+</Elements>

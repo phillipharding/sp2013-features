@@ -1,0 +1,94 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Id="Ribbon.Image.Image.Edit.Edit.Menu.Image.FromSharePoint"
+        Location="CommandUI.Ribbon"
+        Sequence="20"
+        Title="Add from SharePoint in change Image Drop Down">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.Image.Image.Edit.Edit.Menu.Image.Controls._children">
+                      <Button
+                        Id="Ribbon.Image.Image.Edit.Edit.Menu.Image.FromSharePoint"
+                        Alt="$Resources:core,ButFromSharePointAlt;"
+                        Command="InsertImageSharepoint"
+                        Sequence="30"
+                        ToolTipTitle="$Resources:core,ButFromSharePointAlt;"
+                        ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButImageFromSharePointTooltip;"
+                        LabelText="$Resources:core,ButFromSharePoint;"/>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+   </CustomAction>
+   <CustomAction
+        Id="Ribbon.EditingTools.CPInsert.Media.Image.Menu.Image.FromSharePoint"
+        Location="CommandUI.Ribbon"
+        Sequence="20"
+        Title="Add insert from SharePoint in Insert Image Drop Down">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.EditingTools.CPInsert.Media.Image.Menu.Image.Controls._children">
+          <Button
+                Id="Ribbon.EditingTools.CPInsert.Media.Image.Menu.Image.FromSharePoint"
+                Alt="$Resources:core,ButFromSharePointAlt;"
+                Command="InsertImageSharepoint"
+                Sequence="30"
+                ToolTipTitle="$Resources:core,ButFromSharePointAlt;"
+                ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButLinkFromSharePointTooltip;"
+                LabelText="$Resources:core,ButFromSharePoint;"/>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+   </CustomAction>
+   <CustomAction
+        Id="Ribbon.EditingTools.CPInsert.Links.InsertLink"
+        Location="CommandUI.Ribbon"
+        Sequence="5"
+        Title="Show two options for Insert Link">
+        <CommandUIExtension>
+         <CommandUIDefinitions>
+		<CommandUIDefinition Location="Ribbon.EditingTools.CPInsert.Links.Link">
+	            <FlyoutAnchor
+	                Id="Ribbon.EditingTools.CPInsert.Links.InsertLink.Link"
+	                Command="InsertLinkMenuOpen"
+	                CommandMenuClose="InsertLinkMenuClose"
+                        Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-287" Image16by16Left="-37"
+                        Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-171" Image32by32Left="-511"
+	                LabelText="$Resources:core,cui_ButInsertLink;"
+                        ToolTipTitle="$Resources:core,cui_ButInsertLinkTitle;"
+                        ToolTipDescription="$Resources:core,cui_STT_ButInsertLink;"
+	                Alt="$Resources:core,ButInsertLinkMenuAlt;"
+                        Sequence="10"
+	                TemplateAlias="o1">
+	                <Menu Id="Ribbon.EditingTools.CPInsert.Links.InsertLink.Link.Menu">
+	                  <MenuSection 
+                            Id="Ribbon.EditingTools.CPInsert.Links.InsertLink.Link.Menu.Link"
+                            DisplayMode="Menu"
+                            Sequence="10">
+	                    <Controls Id="Ribbon.EditingTools.CPInsert.Links.InsertLink.Link.Menu.Link.Controls">
+	                      <Button
+	                        Id="Ribbon.EditingTools.CPInsert.Links.InsertLink.Link.Menu.Link.FromSharePoint"
+	                        Sequence="10"
+	                        Alt="$Resources:core,ButFromSharePointAlt;"
+	                        Command="InsertLinkSharepoint"
+	                        LabelText="$Resources:core,ButFromSharePoint;"/>
+	                      <Button
+	                        Id="Ribbon.EditingTools.CPInsert.Links.InsertLink.Link.Menu.Link.FromAddress"
+	                        Sequence="20"
+	                        Alt="$Resources:core,ButFromAddressAlt;"
+	                        Command="InsertLinkWeb"
+	                        LabelText="$Resources:core,ButFromAddress;"/>
+	                    </Controls>
+	                  </MenuSection>
+	                </Menu>
+	              </FlyoutAnchor>
+          </CommandUIDefinition>   
+         </CommandUIDefinitions>
+        </CommandUIExtension>
+	</CustomAction>
+    <Control 
+        Id="AdditionalPageHead"
+        ControlClass="Microsoft.SharePoint.Publishing.WebControls.EditingMenuActions.RTEV4Action" 
+        ControlAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+</Elements>

@@ -1,0 +1,42 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Id="Ribbon.WikiPageTab.EditAndCheckout.New"
+        Location="CommandUI.Ribbon">
+        <CommandUIExtension>
+            <CommandUIDefinitions>
+                <CommandUIDefinition
+                    Location="Ribbon.WikiPageTab.EditAndCheckout.Controls._children">
+                    <Button
+                        Id="Ribbon.WikiPageTab.EditAndCheckout.Controls.New"
+                        Command="Ribbon.WikiPageTab.EditAndCheckout.New"
+                        Sequence="25"
+                        Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-217" Image16by16Left="-181"
+                        Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-341" Image32by32Left="-307"
+                        LabelText="$Resources:cmscore,pagetab_new_title"
+                        TemplateAlias="o1"
+                        ToolTipTitle="$Resources:cmscore,pagetab_new_title"
+                        ToolTipDescription="$Resources:cmscore,pagetab_new_description" />
+                </CommandUIDefinition>
+            </CommandUIDefinitions>
+            <CommandUIHandlers>
+                <CommandUIHandler
+                    Command="Ribbon.WikiPageTab.EditAndCheckout.New"
+                    CommandAction="javascript:
+if (LaunchCreateHandler('PublishingPage')) {
+    EnsureScript('SP.js',typeof SP.PageContextInfo, function () {
+        SP.SOD.executeFunc(
+            'sp.ui.dialog.js', 'SP.UI.ModalDialog.showModalDialog', function () {
+                SP.UI.ModalDialog.showModalDialog({
+                    url:  SP.Utilities.Utility.getLayoutsPageUrl('CreatePublishingPageDialog.aspx?CancelSource=' + location.href),
+                    autoSize: true
+                });
+            }
+        );
+    });
+}" />
+            </CommandUIHandlers>
+        </CommandUIExtension>
+    </CustomAction>
+</Elements>

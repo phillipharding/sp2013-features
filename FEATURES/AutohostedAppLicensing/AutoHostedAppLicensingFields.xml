@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Field
+        Name="AutohostedAppLicensingField"
+        ID="{80bde541-f55e-4fcb-8ab9-3909a09b54a2}"
+        Type="Integer"
+        DisplayName="$Resources:core,AutoHostedAppLicensesAssigned_FieldTitle;"
+        Group="_Hidden"
+        Sealed="TRUE"
+        ReadOnly="FALSE"
+        ShowInEditForm="TRUE"
+        ShowInDisplayForm="TRUE"
+        ShowInNewForm="TRUE"
+        JSLink="autohostedlicensingtemplates.js"
+        Min="0"
+        Max="2147483647">
+        <FieldRefs>
+            <FieldRef ID="{5a7ad4d7-13d0-48e6-864f-ad693b491788}" Name="IsAutoHostedApp" />
+        </FieldRefs>
+        <Default>0</Default>
+    </Field>
+</Elements>

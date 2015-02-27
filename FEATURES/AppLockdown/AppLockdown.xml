@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements
+  xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Hides contextual tabs/groups that should not be used in apps -->
+  <CustomAction
+    Id="AppLockdownRibbonTrimming"
+    Location="CommandUI.Ribbon">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <!-- Wiki 'Page' tab -->
+        <CommandUIDefinition Location="Ribbon.WikiPageTab.Scaling" />
+        <CommandUIDefinition Location="Ribbon.WikiPageTab" />
+        <!-- Web Part 'Page' tab -->
+        <CommandUIDefinition Location="Ribbon.WebPartPage.Scaling" />
+        <CommandUIDefinition Location="Ribbon.WebPartPage" />
+        <!-- Library tab: Customize group, Library Settings, Export to Outlook, Analytics -->
+        <CommandUIDefinition Location="Ribbon.Library.CustomizeLibrary" />
+        <CommandUIDefinition Location="Ribbon.Library.Settings.DocumentLibrarySettings" />
+        <CommandUIDefinition Location="Ribbon.Library.Actions.ConnectToClient" />
+        <CommandUIDefinition Location="Ribbon.Library.Share.Analytics" />
+        <CommandUIDefinition Location="Ribbon.Library.Share.ViewTopReport" />
+        <!-- List tab: Customize group, List Settings, Export to Outlook -->
+        <CommandUIDefinition Location="Ribbon.List.CustomizeList" />
+        <CommandUIDefinition Location="Ribbon.List.Settings.ListSettings" />
+        <CommandUIDefinition Location="Ribbon.List.Actions.ConnectToClient" />
+        <!-- Calendar tab: Customize group, List Settings, Export to Outlook -->
+        <CommandUIDefinition Location="Ribbon.Calendar.Calendar.CustomizeList" />
+        <CommandUIDefinition Location="Ribbon.Calendar.Calendar.Settings.ListSettings" />
+        <CommandUIDefinition Location="Ribbon.Calendar.Calendar.Actions.ConnectToClient" />
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <!-- Adds app.master to the master page gallery -->
+  <Module Name="MasterPageGallery" List="116" SetupPath="global" Url="_catalogs/masterpage">
+    <File Url="app.master" Path="app.master" Type="GhostableInLibrary">
+      <Property Name="UIVersion" Value="15" />
+      <Property Name="ContentTypeId" Value="0x010105" />
+      <Property Name="DefaultCssFile" Value="corev15.css" />
+    </File>
+  </Module>
+</Elements>

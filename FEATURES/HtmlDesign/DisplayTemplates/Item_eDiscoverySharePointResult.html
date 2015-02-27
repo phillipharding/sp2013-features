@@ -1,0 +1,76 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_DiscoveryResultItemSP</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">1</mso:TemplateHidden>
+<mso:ManagedPropertyMapping msdt:dt="string">'Title':'Title','Path':'Path','Created By':'MetadataAuthor','Created On':'Write','Author':'DisplayAuthor','Size':'Size','LastModifiedTime':'LastModifiedTime','CollapsingStatus':'CollapsingStatus','DocId':'DocId','HitHighlightedSummary':'HitHighlightedSummary','ContentClass':'ContentClass','ContentType':'ContentType','FileExtension':'FileExtension','ViewsLifeTime':'ViewsLifeTime','ParentLink':'ParentLink'</mso:ManagedPropertyMapping>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+
+    <div id="Item_eDiscoverySharePointResult">
+<!--#_
+var path = $getItemValue(ctx,"Path");
+path.overrideValueRenderer($urlHtmlEncode);
+
+var name = $getItemValue(ctx,"Title");
+
+var creator = $getItemValue(ctx,"Created By");
+
+var createdDate = $getItemValue(ctx,"Created On");
+var dateFormat = function(date)
+{
+    if(!(date.isNull) && !$isNull(date.value.format)) 
+    {
+        return $htmlEncode(date.value.localeFormat(Sys.CultureInfo.CurrentCulture.dateTimeFormat.ShortDatePattern));
+    }
+    else 
+    {
+        return "";
+    }
+};
+createdDate.overrideValueRenderer(dateFormat);
+
+window.eDiscIsDialog = function()
+{
+    return !$isNull(window.top.g_childDialog);
+}
+
+var id = ctx.ClientControl.get_nextUniqueId();
+var itemId = id + Srch.U.Ids.item;
+var hoverId = id + Srch.U.Ids.hover;
+$setResultItem(itemId, ctx.CurrentItem);
+var hoverUrl = "~sitecollection/_catalogs/masterpage/Display Templates/System/Item_eDiscoverySharePoint_HoverPanel.js";
+_#-->
+        <tr class="edisc-SearchResultItemContainer">
+            <td>
+                <div class="edisc-SearchResultItem" id="_#= $htmlEncode(itemId) =#_" name="Item" onmouseover="if (!eDiscIsDialog()) EnsureScriptParams('SearchUI.js', 'HP.Init', event, '_#= $scriptEncode(itemId) =#_', '_#= $scriptEncode(hoverId) =#_', '_#= $scriptEncode(hoverUrl)=#_');" onmouseout="if (!eDiscIsDialog()) EnsureScriptParams('SearchUI.js', 'HP.Hide');">
+                    <div id='_#= hoverId =#_' class='ms-srch-hover-outerContainer'></div>
+                        <div class='edisc-SubjectContainer'>
+                            <a href='_#= path =#_' TARGET='_blank'>
+                                _#= name =#_
+                            </a>
+                        </div>
+                    </div>
+            </td>
+            <td>
+                <div class='edisc-PeopleContainer'>
+                    _#= creator =#_
+                </div>
+            </td>
+            <td>
+                <div class='edisc-DateContainer'>
+                    _#= createdDate =#_
+                </div>
+            </td>
+        </tr>
+    </div>
+</body>
+</html>

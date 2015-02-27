@@ -1,0 +1,3 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Control Id="GlobalNavigation" Sequence="100" ControlSrc="~/_controltemplates/mysitetopnavigation.ascx" />
+</Elements>

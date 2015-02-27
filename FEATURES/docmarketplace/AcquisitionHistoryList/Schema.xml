@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="$Resources:dmscore, IDS_AcquisitionHistoryListTitle" FolderCreation="TRUE" Direction="LTR" Url="$Resources:core,lists_Folder;/$Resources:dmscore, IDS_AcquisitionHistoryListUrl" BaseType="0">
+  <!--BaseType = 0 indicate this is a list type for standard list -->
+  <MetaData>
+    <ContentTypes>
+      <!--The acquisition history list content type-->
+      <ContentTypeRef ID="0x0100d8e3f2cec5264ee08d4c7db74f989900" />
+      <!-- this is the standard content type for folders-->
+      <ContentTypeRef ID="0x0120" />
+    </ContentTypes>
+    <Fields>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">20</RowLimit>
+        <Toolbar Position="After" Type="Freeform">
+          <IfHasRights>
+            <RightsChoices>
+              <RightsGroup PermAddListItems="required" />
+            </RightsChoices>
+            <Then>
+              <HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idAddNewItem" href="]]></HTML>
+              <URL Cmd="New" />
+              <HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <URL Cmd="New" />
+              </ScriptQuote>
+              <HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML>
+              <HTML>$Resources:core,addnewitem;</HTML>
+              <HTML><![CDATA[</a></div>]]></HTML>
+            </Then>
+          </IfHasRights>
+        </Toolbar>
+        <RowLimit>20</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" DisplayName="$Resources:dmscore, IDS_AcquisitionHistoryListAllItemsViewDisplayName" MobileView="TRUE" SetupPath="FEATURES\docmarketplace\pages\mycollection.aspx" Url="AllItems.aspx" WebPartZoneID="Main" IncludeRootFolder="TRUE" Scope="RecursiveAll" Hidden="FALSE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">20</RowLimit>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="DMSDocTitle"/>
+          <FieldRef Name="DMSDocAuthor"/>
+          <FieldRef Name="DMSDocAuthorURL"/>
+          <FieldRef Name="DMSDetailsPageUrl"/>
+          <FieldRef Name="DMSCoverImage"/>
+          <FieldRef Name="DMSDocId"/>
+          <FieldRef Name="DMSDocUrl"/>
+          <FieldRef Name="DMSStatus"/>
+          <FieldRef Name="DMSTransactionDate"/>
+          <FieldRef Name="DMSTransactionReference"/>
+          <FieldRef Name="DMSGroupId"/>
+          <FieldRef Name="DMSGroupEmail"/>
+          <FieldRef Name="DMSExpirationDate"/>
+          <FieldRef Name="DMSExpirationDateJSMillisec"/>
+          <FieldRef Name="DMSReleaseDate"/>
+          <FieldRef Name="Language"/>
+          <FieldRef Name="DMSDocAccessRight"/>
+          <FieldRef Name="DMSAbstract"/>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="DMSTransactionDate" Ascending="FALSE"/>
+            <FieldRef Name="DMSDocTitle" />
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss, noXinviewofY_DEFAULT" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="2" Type="HTML" DisplayName="$Resources:dmscore, IDS_AcquisitionHistoryListMyCollectionViewDisplayName" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="FEATURES\docmarketplace\pages\mycollection.aspx" Url="MyCollection.aspx" Scope="Recursive" WebPartZoneID="Main" Hidden="FALSE">
+        <JSLink>dmsmycollectiontemplates.js|mQuery.js|callout.js</JSLink>
+        <RowLimit Paged="TRUE">20</RowLimit>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="DMSDocTitle"/>
+          <FieldRef Name="DMSDocAuthor"/>
+          <FieldRef Name="DMSDocAuthorURL"/>
+          <FieldRef Name="DMSDetailsPageUrl"/>
+          <FieldRef Name="DMSCoverImage" />
+          <FieldRef Name="DMSDocId"/>
+          <FieldRef Name="DMSDocUrl"/>
+          <FieldRef Name="DMSStatus"/>
+          <FieldRef Name="DMSTransactionDate"/>
+          <FieldRef Name="DMSTransactionReference"/>
+          <FieldRef Name="DMSGroupId"/>
+          <FieldRef Name="DMSGroupEmail"/>
+          <FieldRef Name="DMSExpirationDate"/>
+          <FieldRef Name="DMSExpirationDateJSMillisec"/>
+          <FieldRef Name="DMSReleaseDate"/>
+          <FieldRef Name="Language"/>
+          <FieldRef Name="DMSDocAccessRight"/>
+          <FieldRef Name="DMSAbstract"/>
+        </ViewFields>
+        <Query>
+          <Where>
+            <And>
+                <Eq>
+                    <FieldRef Name="FileDirRef"/>
+                    <Value Type="Lookup">{FolderUrl}</Value>
+                </Eq>
+                <Neq>
+                    <FieldRef Name="DMSStatus"/>
+                    <Value Type="Choice">4</Value>
+                </Neq>
+            </And>
+          </Where>
+          <OrderBy>
+            <FieldRef Name="DMSTransactionDate" Ascending="FALSE"/>
+            <FieldRef Name="DMSDocTitle"/>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(dms,IDS_NoItemsInMyCollectionView)" />
+          <ParameterBinding Name="FolderUrl" Location="QueryString(FolderUrl)" DefaultValue="empty"/>
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

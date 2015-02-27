@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="03509CFB-8B2F-4F46-A4C9-8316D1E62A4B"
+          Title="$Resources:eduserver,IDS_EduAdminLinksFeatureTitle;"
+          Description="$Resources:eduserver,IDS_EduAdminLinksFeatureDescription;"
+          SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+          Version="15.0.0.0"
+          Scope="Web"
+          Hidden="TRUE"
+          DefaultResourceFile="eduserver"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <ElementManifests>
+        <ElementManifest Location="education.xml" />
+    </ElementManifests>
+</Feature>

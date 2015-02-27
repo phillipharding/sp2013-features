@@ -1,0 +1,69 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_RefinementPreview</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:CompatibleManagedProperties msdt:dt="string"></mso:CompatibleManagedProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:CompatibleSearchDataTypes msdt:dt="string"></mso:CompatibleSearchDataTypes>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106604</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#Refinement;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+</mso:CustomDocumentProperties></xml><![endif]-->
+</head>
+<body>
+    <div id="Filter_RefinementPreview">
+
+<!--#_
+      var listData = ctx.ListData;
+      var hasControl = true;
+      if($isNull(ctx.RefinementControl) || $isNull(ctx.ClientControl)) hasControl = false;
+      var hasNoListData = ($isEmptyArray(listData));
+
+      if(hasControl)
+      { 
+        if(hasNoListData)
+        {
+_#-->
+          <div id="EmptyContainer">
+             _#= $htmlEncode(Srch.U.loadResource('refconf_NoSampleValues')) =#_
+          </div>
+<!--#_
+        }
+        else
+        {
+_#-->
+          <div id='Container'>
+<!--#_
+            for (var i = 0; i < listData.length; i++)
+            {
+              var filter = listData[i];
+              var refinementName = filter.RefinementName;
+              var refinementCount = filter.RefinementCount;
+_#-->          
+              <div name='Item'>         
+                    <div id='RefinementName' class='ms-ref-name ms-displayInlineBlock ms-ref-ellipsis ms-srch-refpreview-name' title='_#= $htmlEncode(String.format(Srch.U.loadResource("rf_RefineBy"), refinementName)) =#_'>
+                    _#= $htmlEncode(refinementName) =#_
+                    </div>
+<!--#_
+                  if (!$isNull(refinementCount))
+                  {
+_#-->          
+                    <div class='ms-ref-count ms-textSmall'>
+                      (_#= $htmlEncode(refinementCount) =#_)
+                    </div>
+<!--#_
+                  }
+_#-->          
+              </div>
+<!--#_
+            };
+        }
+      }
+_#-->
+        </div>
+    </div>
+</body>
+</html>

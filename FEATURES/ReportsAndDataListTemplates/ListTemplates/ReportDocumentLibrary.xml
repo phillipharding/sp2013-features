@@ -1,0 +1,12 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListTemplate
+	  Name="ReportDocumentLibrary" 
+          Type="701"
+	  DisplayName="$Resources:spscore,ReportsAndDataListTemplates_ReportDocumentLibrary_Name" 
+	  Description="$Resources:spscore,ReportsAndDataListTemplates_ReportDocumentLibrary_Description" 
+          Image="/_layouts/images/iReportsLibrary.png"
+	  BaseType="1" 
+	  OnQuickLaunch="TRUE"
+	  SecurityBits="11">
+  </ListTemplate>
+</Elements>

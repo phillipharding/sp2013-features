@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+-->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ContentType ID="0x010106"
+        Name="$Resources:MasterPagePreview"
+        Group="$Resources:Document_Content_Types" 
+        Description="$Resources:MasterPagePreviewCTDesc"
+        Version="0">
+        <FieldRefs>
+            <FieldRef ID="{8e334549-c2bd-4110-9f61-672971be6504}" Name="UIVersion" DisplayName="$Resources:core,UIVersion;"/>
+        </FieldRefs>
+        <DocumentTemplate TargetName="/_layouts/15/upload.aspx" />
+    </ContentType>             
+    <ContentType ID="0x0101002039C03B61C64EC4A04F5361F3851068"
+        Name="$Resources:DisplayTemplateJS"
+        Description="$Resources:TemplateContentType_DisplayJavascript_Desc"
+        Group="$Resources:TemplateContentType_TemplateContentTypeGroup"
+        Sealed="FALSE"
+        Version="0">
+        <FieldRefs>
+            <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+            <FieldRef ID="{9da97a8a-1da5-4a77-98d3-4bc10456e700}" Name="Description" />
+            <FieldRef ID="{3d0684f7-ca97-413d-9d03-d00f480059ae}" Name="DisplayTemplateJSTemplateHidden" />
+            <FieldRef ID="{0e49b273-3102-4b7d-b609-2e05dd1a17d9}" Name="DisplayTemplateJSTargetControlType" Required="TRUE" />
+            <FieldRef ID="{57468ccb-0c02-422c-ba0a-61a44ba41784}" Name="DisplayTemplateJSIconUrl" />
+            <FieldRef ID="{d63173ac-b914-4f90-9cf8-4ff4352e41a3}" Name="DisplayTemplateJSTemplateType" Required="TRUE" />
+            <FieldRef ID="{df8bd7e5-b3db-4a94-afb4-7296397d829d}" Name="DisplayTemplateJSTargetScope" Required="TRUE" />
+            <FieldRef ID="{9f927425-78e9-49c3-b03b-65e1211394e1}" Name="DisplayTemplateJSTargetListTemplate" />
+            <FieldRef ID="{ed095cf7-534e-460b-965f-f14269e70f5a}" Name="DisplayTemplateJSTargetContentType" Hidden="TRUE" />
+            <FieldRef ID="{0f2f686a-3921-432e-85fd-9c535bf671b2}" Name="DisplayTemplateJSConfigurationUrl" Hidden="TRUE" />
+        </FieldRefs>
+    </ContentType>
+</Elements>

@@ -1,0 +1,28 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+        <Module Name="WebPartPopulation" Url="_catalogs/wp" Path="" RootWebOnly="TRUE">
+            <File Url="SearchTopologyOverview.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:Microsoft.Office.Server.Search,SearchAdminWebParts_GroupName;"></Property>
+                <Property Name="QuickAddGroups" Value=";#SearchAdministration;#" />
+            </File>
+            <File Url="SearchAppSystemStatus.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:Microsoft.Office.Server.Search,SearchAdminWebParts_GroupName;"></Property>
+                <Property Name="QuickAddGroups" Value=";#SearchAdministration;#" />
+            </File>
+            <File Url="FarmSystemStatus.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:Microsoft.Office.Server.Search,SearchAdminWebParts_GroupName;"></Property>
+                <Property Name="QuickAddGroups" Value=";#SearchAdministration;#" />
+            </File>
+            <File Url="ContentSourcesStatus.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:Microsoft.Office.Server.Search,SearchAdminWebParts_GroupName;"></Property>
+                <Property Name="QuickAddGroups" Value=";#SearchAdministration;#" />
+            </File>
+            <File Url="FarmSearchApplications.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:Microsoft.Office.Server.Search,SearchAdminWebParts_GroupName;"></Property>
+                <Property Name="QuickAddGroups" Value=";#SearchAdministration;#" />
+            </File>
+            <File Url="SearchAppShortcutsList.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:Microsoft.Office.Server.Search,SearchAdminWebParts_GroupName;"></Property>
+                <Property Name="QuickAddGroups" Value=";#SearchAdministration;#" />
+            </File>
+        </Module>
+</Elements>

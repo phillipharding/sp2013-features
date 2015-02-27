@@ -1,0 +1,29 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Feature  Id="20477D83-8BDB-414e-964B-080637F7D99B"
+          Title="Publishing Timer Jobs"
+          Description="Create Publishing timer jobs in the web application to support scheduling and variations."
+          Version="15.0.4.0"
+          Scope="WebApplication"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          ReceiverAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Publishing.PublishingTimerJobsFeatureHandler"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+    </ElementManifests>
+	<UpgradeActions>
+	  <VersionRange EndVersion="15.0.3.0">
+            <CustomUpgradeAction Name="VariationsInfrastructure" />
+	  </VersionRange>
+      <VersionRange EndVersion="15.0.2.0">
+            <CustomUpgradeAction Name="SitemapTimerJob" />
+	  </VersionRange>
+          <VersionRange EndVersion="15.0.3.0">
+            <CustomUpgradeAction Name="PersistedNavTermSetSyncJob" />
+	  </VersionRange>
+          <VersionRange EndVersion="15.0.4.0">
+            <CustomUpgradeAction Name="SearchChangeLogGeneratorJob" />
+	  </VersionRange>
+    </UpgradeActions>
+</Feature>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="29D85C25-170C-4df9-A641-12DB0B9D4130"
+          Title="$Resources:MultiLangDisplayName"
+          Description="$Resources:MultiLangDescription"
+          Version="14.0.0.0"
+          Scope="Web"
+          Hidden="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/"
+          DefaultResourceFile="_Res">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\TransMgmtLibTemplate.xml"/>
+        <ElementManifest Location="ListTemplates\XlateListTemplate.xml"/>
+    </ElementManifests>
+</Feature>

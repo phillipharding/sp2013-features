@@ -1,0 +1,241 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Id="Ribbon.Link.Link.Link.SelectLink"
+        Location="CommandUI.Ribbon"
+        Sequence="5"
+        Title="Add Select Link in link tab">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.Link.Link.Link.Controls._children">
+                <Button
+                  Id="Ribbon.Link.Link.Link.SelectLink"
+                  Command="LinkEditSharepoint"
+                  Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-287" Image16by16Left="-37"
+                  Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-171" Image32by32Left="-511"
+                  LabelText="$Resources:core,ButEditLink;"
+                  Sequence="5" 
+                  ToolTipTitle="$Resources:core,ButEditLink;"
+                  ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButEditLinkTooltip;"
+                  TemplateAlias="o1"/>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+   </CustomAction>
+   <CustomAction
+        Id="Ribbon.Link.Link.Properties.BookmarkLabel"
+        Location="CommandUI.Ribbon"
+        Sequence="50"
+        Title="Add Bookmark Label in link tab">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.Link.Link.Properties.Controls._children">
+        <Label
+          Id="Ribbon.Link.Link.Properties.BookmarkLabel"
+          LabelText="$Resources:sp.publishing.Resources,LabelLinkBookmark;"
+          Command="LinkBookmarkLabel"
+          ForId="Ribbon.Link.Link.Properties.Bookmark"
+          Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-127" Image16by16Left="-271"
+          Sequence="50" 
+          TemplateAlias="o1"/>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+   </CustomAction>
+   <CustomAction
+        Id="Ribbon.Link.Link.Properties.Bookmark"
+        Location="CommandUI.Ribbon"
+        Sequence="50"
+        Title="Add Bookmark in link tab">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.Link.Link.Properties.Controls._children">
+        <TextBox
+          Id="Ribbon.Link.Link.Properties.Bookmark"
+          Command="LinkBookmark"
+          QueryCommand="QueryLinkBookmark"
+          ToolTipTitle="$Resources:sp.publishing.Resources,cui_LinkBookmark;"
+          ToolTipDescription="$Resources:sp.publishing.Resources,cui_STT_LinkBookmark;"
+          MaxLength="128"
+          Sequence="60"
+          TemplateAlias="o2"/>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+   </CustomAction>
+   <CustomAction
+        Id="Ribbon.Image.Image.PubSpaceGroup"
+        Location="CommandUI.Ribbon"
+        Sequence="50"
+        Title="Add Image Spacing to Image Tab">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.Image.Image.Groups._children">
+          <Group Id="Ribbon.Image.Image.Space"
+                 Sequence="60"
+                 Command="ImageSpacing"
+                 Description=""
+                 Title="$Resources:sp.publishing.resources,GrpImageSpacing;"
+                 Image32by32Popup="/_layouts/15/images/publishing.png?rev=23" Image32by32PopupTop="0" Image32by32PopupLeft="-32"
+                 Template="Ribbon.Templates.Flexible2" >
+             <Controls Id="Ribbon.Image.Image.Space.Controls">
+                <Label
+                  Id="Ribbon.Image.Image.Space.HorizontalSpaceLabel"
+                  LabelText="$Resources:sp.publishing.Resources,LabelHorizSpace;"
+                  Command="ImageHorizontalSpaceLabel"
+                  ForId="Ribbon.Image.Image.Space.HorizontalSpace"
+                  TemplateAlias="o1"
+                  Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-224" Image16by16Left="-80"
+                  Sequence="10"
+                />
+                <Spinner
+                   Id="Ribbon.Image.Image.Space.HorizontalSpace"
+                   DefaultUnit="pixel"
+                   DefaultValue="10"
+                   AltUpArrow="Up"
+                   AltDownArrow="Down"
+                   AccelerationInterval="125"
+                   MultiplierInterval="2000"
+                   Command="ImageHorizontalSpace"
+                   QueryCommand="QueryImageHorizontalSpace"
+                   ToolTipTitle="$Resources:sp.publishing.Resources,LabelHorizSpace;"
+                   ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButSizeMenuHorizontalSpaceTooltip;"
+                   TemplateAlias="o2"
+                   Sequence="20"
+                >
+                  <Unit
+                      Name="pixel"
+                      MinimumValue="0"
+                      MaximumValue="2000"
+                      DecimalDigits="0"
+                      Interval="5"
+      					    >
+                    <UnitAbbreviation Value="px" />
+                  </Unit>
+                  <Unit
+                      Name="percent"
+                      MinimumValue="0"
+                      MaximumValue="100"
+                      DecimalDigits="0"
+                      Interval="1"
+					          >
+                    <UnitAbbreviation Value="%" />
+                  </Unit>
+                </Spinner>
+                <Label
+                  Id="Ribbon.Image.Image.Space.VertSizeLabel"
+                  LabelText="$Resources:sp.publishing.Resources,LabelVerticalSpace;"
+                  ForId="Ribbon.Image.Image.Space.VerticalSpace" 
+                  Command="ImageVerticalSpaceLabel"
+                  Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-224" Image16by16Left="-256"
+                  TemplateAlias="o1"
+                  Sequence="30"
+                />
+                <Spinner
+                  Id="Ribbon.Image.Image.Space.VerticalSpace"
+                  DefaultUnit="pixel"
+                  DefaultValue="10"
+                  AltUpArrow="Up"
+                  AltDownArrow="Down"
+                  AccelerationInterval="125"
+                  MultiplierInterval="2000"
+                  Command="ImageVerticalSpace"
+                  QueryCommand="QueryImageVerticalSpace"
+                  ToolTipTitle="$Resources:sp.publishing.Resources,LabelVerticalSpace;"
+                  ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButSizeMenuVerticalSpaceTooltip;"
+                  TemplateAlias="o2"
+                  Sequence="40"
+                >
+                  <Unit
+                      Name="pixel"
+                      MinimumValue="0"
+                      MaximumValue="2000"
+                      DecimalDigits="0"
+                      Interval="5"
+					          >
+                    <UnitAbbreviation Value="px" />
+                  </Unit>
+                  <Unit
+                      Name="percent"
+                      MinimumValue="0"
+                      MaximumValue="100"
+                      DecimalDigits="0"
+                      Interval="1"
+					          >
+                    <UnitAbbreviation Value="%" />
+                  </Unit>
+                </Spinner>
+              </Controls>
+          </Group>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+   <CustomAction
+        Id="Ribbon.Image.Image.PubSpaceGroup.Scaling"
+        Location="CommandUI.Ribbon"
+        Title="Add Image Spacing scaling to Image Tab">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.Image.Image.Scaling._children">
+          <MaxSize Id="Ribbon.Image.Image.Scaling.Space.MaxSize" Sequence="53" GroupId="Ribbon.Image.Image.Space" Size="MediumMedium"/>
+      </CommandUIDefinition>
+      <CommandUIDefinition Location="Ribbon.Image.Image.Scaling._children">
+          <Scale Id="Ribbon.Image.Image.Scaling.Space.SmallMedium" Sequence="56" GroupId="Ribbon.Image.Image.Space" Size="SmallMedium"/>
+      </CommandUIDefinition>
+      <CommandUIDefinition Location="Ribbon.Image.Image.Scaling._children">
+          <Scale Id="Ribbon.Image.Image.Scaling.Space.Popup" Sequence="75" GroupId="Ribbon.Image.Image.Space" Size="Popup" PopupSize="MediumMedium"/>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+   <CustomAction
+        Id="Ribbon.EditingTools.CPEditTab.Groups.PubSpellCheckGroup"
+        Location="CommandUI.Ribbon"
+        Sequence="55"
+        Title="Add Spellcheck to Edit Tab">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.EditingTools.CPEditTab.Groups._children">
+          <Group Id="Ribbon.EditingTools.CPEditTab.SpellCheck"
+                 Sequence="55"
+                 Command="SpellCheckGroup"
+                 Description=""
+                 Title="$Resources:sp.publishing.resources,GrpSpellCheck;"
+                 Template="Ribbon.Templates.Flexible2" >
+            <Controls Id="Ribbon.EditingTools.CPEditTab.SpellCheck.Controls">
+              <SplitButton
+                Id="Ribbon.EditingTools.CPEditTab.SpellCheck.SpellCheck"
+                Alt="$Resources:sp.publishing.resources,SpellcheckerSpellButton;"
+                Command="SpellcheckUsingDefault"
+                Image16by16="/_layouts/15/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/spellingHS.png"
+                Image32by32="/_layouts/15/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/images/spellingHH.png"
+                LabelText="$Resources:sp.publishing.Resources,SpellcheckerSpellButton;"
+                ToolTipTitle="$Resources:sp.publishing.resources,SpellcheckerSpellButton;"
+                ToolTipDescription="$Resources:sp.publishing.resources,SpellcheckerSpellButtonTooltip;"
+                PopulateDynamically="true"
+                PopulateOnlyOnce="false"
+                PopulateQueryCommand="GetSpellCheckMenuXml"
+                Sequence="10"
+                TemplateAlias="o1">
+              </SplitButton>
+            </Controls>
+          </Group>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+   <CustomAction
+        Id="Ribbon.EditingTools.CPEditTab.Groups.PubSpellCheckGroup.Scaling.MaxSize.Definition"
+        Location="CommandUI.Ribbon"
+        Title="Add Spellchecking scaling to Edit Tab">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.EditingTools.CPEditTab.Scaling._children">
+          <MaxSize Id="Ribbon.EditingTools.CPEditTab.Scaling.SpellCheck.MaxSize" Sequence="10" GroupId="Ribbon.EditingTools.CPEditTab.SpellCheck" Size="LargeMedium"/>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+</Elements>

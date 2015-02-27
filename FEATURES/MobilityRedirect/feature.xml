@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="F41CC668-37E5-4743-B4A8-74D1DB3FD8A4" 
+    Title="$Resources:core,mobilityFeatureTitle;"
+    Description="$Resources:core,mobilityFeatureDesc;" 
+    Version="1.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="elements.xml" />
+    </ElementManifests>
+</Feature>

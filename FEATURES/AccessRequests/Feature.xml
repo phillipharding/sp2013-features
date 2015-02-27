@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="A0F12EE4-9B60-4ba4-81F6-75724F4CA973" 
+    Title="$Resources:core,AccReqListFeatureTitle;"
+    Description="$Resources:core,AccReqListFeatureDesc;"
+    Version="1.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"    
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="accessrequeststemplates\accessrequests.xml"/>
+    </ElementManifests>
+</Feature>

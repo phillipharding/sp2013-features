@@ -1,0 +1,387 @@
+<List xmlns:ows="Microsoft SharePoint" Name="KPIList" Title="Status Indicator List" Direction="0" Url="Lists/Basic List" BaseType="0" EnableContentTypes="True" FolderCreation="FALSE" Type="432"> 
+<MetaData>
+    <ContentTypes>
+        <ContentTypeRef ID="0x00A7470EADF4194e2e9ED1031B61DA088402"><Folder TargetName="SharePoint List based Key Performance Indicator"/></ContentTypeRef>
+        <ContentTypeRef ID="0x00A7470EADF4194e2e9ED1031B61DA088403"><Folder TargetName="Excel based Key Performance Indicator"/></ContentTypeRef>
+        <ContentTypeRef ID="0x00A7470EADF4194e2e9ED1031B61DA088404"><Folder TargetName="SQL Server Analysis Services based Key Performance Indicator"/></ContentTypeRef>
+        <ContentTypeRef ID="0x00A7470EADF4194e2e9ED1031B61DA088401"><Folder TargetName="Fixed Value based Key Performance Indicator"/></ContentTypeRef>
+        <ContentTypeRef ID="0x0120" />
+    </ContentTypes>
+    <Fields>
+
+        <Field ID="{249A1C1A-5A3E-4173-ABAD-779B01892510}" Name="KpiDescription" StaticName="KpiDescription" Description="$Resources:spscore,BizAppsFields_KpiDescription_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Note" DisplayName="$Resources:spscore,BizAppsFields_KpiDescription_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{0121CB2B-4515-44f2-9D5A-0DCB3BF556AA}" Name="KpiComments" StaticName="KpiComments" Description="$Resources:spscore,BizAppsFields_KpiComments_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Note" DisplayName="$Resources:spscore,BizAppsFields_KpiComments_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{F0816223-FD98-41f9-AA57-B7F7DB462FAA}" Name="Value" StaticName="Value" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Number" DisplayName="$Resources:spscore,BizAppsFields_KpiValue_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{6E4B3AAD-350D-42fa-BD61-D1DE715B45DB}" Name="Goal" StaticName="Goal" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Number" DisplayName="$Resources:spscore,BizAppsFields_KpiGoal_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{E84A049E-230D-4751-8D5C-8F615E968DF2}" Name="Warning" StaticName="Warning" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Number" DisplayName="$Resources:spscore,BizAppsFields_KpiWarning_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{3366AAE9-30A9-43f5-A2CB-1A6EE44E2CE4}" Name="FormattedValue" StaticName="FormattedValue" Description="$Resources:spscore,BizAppsFields_KpiFormattedValue_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiFormattedValue_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{E9DF93F4-7951-474b-8CC4-E240C2F5E600}" Name="FormattedGoal" StaticName="FormattedGoal" Description="$Resources:spscore,BizAppsFields_KpiFormattedGoal_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiFormattedGoal_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{F53D350D-854E-4962-9318-89D56D30773A}" Name="FormattedWarning" StaticName="FormattedWarning" Description="$Resources:spscore,BizAppsFields_KpiFormattedWarning_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiFormattedWarning_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{9730102C-9470-4515-960E-6DFB2D89A68B}" Name="DetailLink" StaticName="DetailLink" Description="$Resources:spscore,BizAppsFields_KpiDetailLink_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="URL" DisplayName="$Resources:spscore,BizAppsFields_KpiDetailLink_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{56747800-D36E-4625-ABE3-B1BC74A7D5F8}" Name="LowerValuesAreBetter" StaticName="LowerValuesAreBetter" Description="$Resources:spscore,BizAppsFields_KpiLowerValuesAreBetter_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Boolean" DisplayName="$Resources:spscore,BizAppsFields_KpiLowerValuesAreBetter_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{96226EED-EC6F-4f0e-ADD5-9CFE66A441A0}" Name="AutoUpdate" StaticName="AutoUpdate" Description="$Resources:spscore,BizAppsFields_KpiAutoUpdate_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Boolean" DisplayName="$Resources:spscore,BizAppsFields_KpiAutoUpdate_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{E247CBB0-ABB3-4759-B9F4-0128E37DD34A}" Name="UpdateError" StaticName="UpdateError" Description="$Resources:spscore,BizAppsFields_KpiUpdateError_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Note" DisplayName="$Resources:spscore,BizAppsFields_KpiUpdateError_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{A9EA6E2D-BC5C-4ccc-BAD8-8DDFE519710F}" Name="DataSource" StaticName="DataSource" Description="$Resources:spscore,BizAppsFields_KpiDataSource_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="URL" DisplayName="$Resources:spscore,BizAppsFields_KpiDataSource_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{FD3E3A59-BF10-4c99-B678-5DD7FCC6CB28}" Name="LastUpdated" StaticName="LastUpdated" Description="$Resources:spscore,BizAppsFields_KpiLastUpdated_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="DateTime" DisplayName="$Resources:spscore,BizAppsFields_KpiLastUpdated_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+
+        <Field ID="{2C7DB8AF-02B0-4177-B77F-15C942C08427}" Name="ViewGuid" StaticName="ViewGuid"  Description="$Resources:spscore,BizAppsFields_KpiViewGuid_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiViewGuid_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{FC315A3F-6979-4da9-B5D5-3DC325556603}" Name="ViewName" StaticName="ViewName"  Description="$Resources:spscore,BizAppsFields_KpiViewName_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiViewName_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{93DF9772-1E34-40c5-8C54-4BF3CDD56B34}" Name="ValueExpression" StaticName="ValueExpression" Description="$Resources:spscore,BizAppsFields_KpiValueExpression_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Note" DisplayName="$Resources:spscore,BizAppsFields_KpiValueExpression_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{D43E8A19-F4F3-4e6a-B8C1-02E972C3ED6F}" Name="PercentExpression" StaticName="PercentExpression" Description="$Resources:spscore,BizAppsFields_KpiPercentExpression_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Boolean" DisplayName="$Resources:spscore,BizAppsFields_KpiPercentExpression_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+
+        <Field ID="{D096D5F3-B399-462b-9A32-83F82D9237D4}" Name="ValueSheet" StaticName="ValueSheet" Description="$Resources:spscore,BizAppsFields_KpiValueSheet_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiValueSheet_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{3B32F47B-F1A1-45ff-B5AD-7B28B84C720A}" Name="ValueCell" StaticName="ValueCell" Description="$Resources:spscore,BizAppsFields_KpiValueCell_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiValueCell_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{69AC2B6E-F626-49b4-B0CC-C2B9580E8719}" Name="GoalSheet" StaticName="GoalSheet" Description="$Resources:spscore,BizAppsFields_KpiGoalSheet_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiGoalSheet_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{4181B96A-3125-4f75-B823-3A4D675C6B19}" Name="GoalCell" StaticName="GoalCell" Description="$Resources:spscore,BizAppsFields_KpiGoalCell_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiGoalCell_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{3E223474-75FF-466b-B53F-9B641CE74B6C}" Name="WarningSheet" StaticName="WarningSheet" Description="$Resources:spscore,BizAppsFields_KpiWarningSheet_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiWarningSheet_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{EEAABF1D-F6AE-4dc6-873F-7397A17C36F0}" Name="WarningCell" StaticName="WarningCell" Description="$Resources:spscore,BizAppsFields_KpiWarningCell_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiWarningCell_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{20906227-D1C8-430c-989A-30A62E3E40B2}" Name="GoalFromWorkBook" StaticName="GoalFromWorkBook" Description="$Resources:spscore,BizAppsFields_KpiGoalFromWorkbook_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Boolean" DisplayName="$Resources:spscore,BizAppsFields_KpiGoalFromWorkbook_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{3C6188A0-2761-4e0a-9FC0-EE32D47E4D49}" Name="WarningFromWorkBook" StaticName="WarningFromWorkBook" Description="$Resources:spscore,BizAppsFields_KpiWarningFromWorkbook_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Boolean" DisplayName="$Resources:spscore,BizAppsFields_KpiWarningFromWorkbook_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+
+        <Field ID="{11A86235-9D18-4134-B58C-FA7243F4CBBA}" Name="Trend" StaticName="Trend" Description="$Resources:spscore,BizAppsFields_KpiTrend_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Number" DisplayName="$Resources:spscore,BizAppsFields_KpiTrend_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{3C497036-038F-41db-AEC7-C9849649B135}" Name="KpiStatus" StaticName="KpiStatus" Description="$Resources:spscore,BizAppsFields_KpiStatus_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Number" DisplayName="$Resources:spscore,BizAppsFields_KpiStatus_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{DD83A5ED-83C5-47b7-823A-415C6EA1B8A3}" Name="DisplayFolder" StaticName="DisplayFolder" Description="$Resources:spscore,BizAppsFields_KpiDisplayFolder_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiDisplayFolder_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{291AACDA-4CFB-4d59-968B-5E2EA0C9EAB7}" Name="KPI" StaticName="KPI" Description="$Resources:spscore,BizAppsFields_KpiASName_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Text" DisplayName="$Resources:spscore,BizAppsFields_KpiASName_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+        <Field ID="{F6DF49EC-807B-4d40-A7DA-A17684121F92}" Name="IncludeHierarchy" StaticName="IncludeHierarchy" Description="$Resources:spscore,BizAppsFields_KpiIncludeHierarchy_Description;" Group="$Resources:spscore,BizAppsFields_KpiGroup;" Type="Boolean" DisplayName="$Resources:spscore,BizAppsFields_KpiIncludeHierarchy_Name;" SourceID="http://schemas.microsoft.com/sharepoint/v3" />
+    </Fields>
+    <Views>
+            <View BaseViewID="0" Type="HTML" MobileView="TRUE" ImageUrl="/_layouts/15/<%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%>/images/KpiListView.png">
+
+<XslLink Default="TRUE">main.xsl</XslLink>
+
+<RowLimit Paged="TRUE">30</RowLimit>
+
+<Toolbar Position="After" Type="Freeform"> <IfHasRights> <RightsChoices><RightsGroup PermAddListItems="required" /></RightsChoices> <Then> <HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idAddNewItem" href="]]></HTML><URL Cmd="New"/><HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML><ScriptQuote NotAddingQuote="TRUE"><URL Cmd="New"/></ScriptQuote><HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML> <HTML><!-- _locID_text="onetid6" _locComment="{StringCategory=HTX}" -->$Resources:core,addnewitem;</HTML><HTML><![CDATA[</a></div>]]></HTML> </Then> </IfHasRights> </Toolbar>
+
+                <RowLimit>20</RowLimit>
+                <ViewFields>
+                    <FieldRef Name="LinkTitleNoMenu"></FieldRef>
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+                    </OrderBy>
+                </Query>
+            </View>
+
+            <View BaseViewID="1" Type="HTML" MobileView="TRUE" MobileDefaultView="TRUE" WebPartZoneID="Main" DisplayName="$Resources:spscore,KPIListTemplate_AllItemsView;" Url="AllItems.aspx" ImageUrl="/_layouts/15/<%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%>/images/KpiListView.png" ><!-- _locID@DisplayName="camlidCu2" _locComment=" " -->
+
+<XslLink Default="TRUE">main.xsl</XslLink>
+
+<JSLink>clienttemplates.js</JSLink>
+
+<RowLimit Paged="TRUE">30</RowLimit>
+
+<Toolbar Type="Standard"/>
+
+                <ViewFields>
+                    <FieldRef Name="LinkTitle"></FieldRef>
+                    <FieldRef Name="KpiDescription"></FieldRef>
+                    <FieldRef Name="Value"></FieldRef>
+                    <FieldRef Name="Goal"></FieldRef>
+                    <FieldRef Name="Warning"></FieldRef>
+                    <FieldRef Name="ContentType"></FieldRef>
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="ID"></FieldRef>
+                    </OrderBy>
+                </Query>
+            </View>
+
+            <View BaseViewID="2" Type="HTML" MobileView="TRUE" WebPartZoneID="Main" DisplayName="$Resources:spscore,KPIListTemplate_KPIListView;" DefaultView="TRUE" Url="KPIListViewPage.aspx" ImageUrl="/_layouts/15/<%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%>/images/KpiListView.png">
+
+<XslLink Default="TRUE">main.xsl</XslLink>
+
+<JSLink>clienttemplates.js</JSLink>
+
+<RowLimit Paged="TRUE">30</RowLimit>
+
+<Toolbar Type="Standard"/>
+
+                <ViewFields>
+                    <FieldRef Name="LinkTitle"></FieldRef>
+                    <FieldRef Name="KpiDescription"></FieldRef>
+                    <FieldRef Name="DataSource"></FieldRef>
+                    <FieldRef Name="Value"></FieldRef>
+                    <FieldRef Name="Goal"></FieldRef>
+                    <FieldRef Name="Warning"></FieldRef>
+                    <FieldRef Name="ContentType"></FieldRef>
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="ID"></FieldRef>
+                    </OrderBy>
+                </Query>
+            </View>
+        </Views>
+        <Forms> 
+            <Form Type="DisplayForm" SetupPath="pages\form.aspx" Url="DispForm.aspx" WebPartZoneID="Main">
+
+            </Form>
+            <Form Type="EditForm" SetupPath="pages\form.aspx" Url="EditForm.aspx" WebPartZoneID="Main">
+
+            </Form>
+            <Form Type="NewForm" SetupPath="pages\form.aspx" Url="NewForm.aspx" WebPartZoneID="Main">
+
+<ListFormOpening><HTML><![CDATA[
+<script type="text/javascript">
+
+var frm = new OWSForm(]]></HTML><ScriptQuote><Switch><Expr><GetVar Name="HTMLFormName"/></Expr><Case Value=""><HTML><![CDATA[OWSForm]]></HTML></Case><Default><GetVar Name="HTMLFormName"/></Default></Switch></ScriptQuote><HTML><![CDATA[, true, ]]></HTML><ScriptQuote><HttpVDir/><HTML>/_layouts/</HTML></ScriptQuote><HTML><![CDATA[);
+
+</script>
+]]></HTML>
+<HTML><![CDATA[
+<script type="text/javascript">]]></HTML>
+<HTML><![CDATA[ frm.dopt.chDateSep = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="29"/></ScriptQuote><HTML><![CDATA[; frm.dopt.chTimeSep = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="30"/></ScriptQuote><HTML><![CDATA[; frm.dopt.SetTimeFormat(]]></HTML><ProjectProperty Select="Time24"/><HTML><![CDATA[); frm.dopt.SetDateOrder(]]></HTML><LocaleInfo LCTYPE="33"/><HTML><![CDATA[); frm.dopt.SetDOW(]]></HTML><LocaleInfo LCTYPE="4108"/> <HTML><![CDATA[); frm.dopt.stAM = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="40"/></ScriptQuote><HTML><![CDATA[; frm.dopt.stPM = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="41"/></ScriptQuote><HTML><![CDATA[; frm.dopt.TimeMarkPosn = ]]></HTML><LocaleInfo LCTYPE="4101"/><HTML><![CDATA[; frm.dopt.webTZOffsetMin = ]]></HTML><ProjectProperty Select="TimeZoneBias"/><HTML><![CDATA[; ]]></HTML>
+<HTML><![CDATA[ frm.nopt.chDigSep = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="15"/></ScriptQuote><HTML><![CDATA[; frm.nopt.chDecimal = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="14"/></ScriptQuote><HTML><![CDATA[; frm.nopt.chMinus = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="81"/></ScriptQuote><HTML><![CDATA[; frm.nopt.iNegNumber = ]]></HTML><LocaleInfo LCTYPE="4112"/><HTML><![CDATA[; frm.nopt.SetGrouping(]]></HTML><ScriptQuote><LocaleInfo LCTYPE="16"/></ScriptQuote><HTML><![CDATA[); ]]></HTML>
+<HTML><![CDATA[
+frm.stFieldPrefix = ]]></HTML><ScriptQuote><FieldPrefix/></ScriptQuote><HTML><![CDATA[;
+frm.stImagesPath = ]]></HTML><ScriptQuote>/_layouts/15/images/</ScriptQuote><HTML><![CDATA[;
+frm.wBaseType = ]]></HTML><ListProperty Select="BaseType"/><HTML><![CDATA[;
+</script>]]></HTML>
+
+<Switch><Expr><GetVar Name="HTMLFormName"/></Expr><Case Value=""><HTML><![CDATA[<form name="OWSForm" id="OWSForm" EncType="multipart/form-data" Action="]]></HTML><HttpPath/><HTML><![CDATA[" Method=POST onSubmit="return false;">]]></HTML></Case></Switch>
+<HTML><![CDATA[
+<input type="Hidden" name="_charset_" value="utf-8">
+<input id="onetidCmd" type="Hidden" name="Cmd" value="Save">
+<input id="onetidIsFormValid" type="hidden" name="IsFormValid">
+<input id="onetidFormWasPosted" type="hidden" name="FormWasPosted">
+<input id="MustUpdateForm" type="hidden" name="MustUpdateForm" value="true">
+<input type="hidden" name="NextID" id="NextID" value="-1">
+<input type="hidden" name="NextUsing" id="NextUsing" value="]]></HTML><GetVar Name="Source" HTMLEncode="TRUE"/><HTML><![CDATA[">
+]]></HTML>
+<HTML><![CDATA[<span id='part1'>]]></HTML>
+
+<Identity/>
+</ListFormOpening>
+
+<ListFormBody>
+
+<HTML><![CDATA[<table border="0" cellpadding="2">
+
+<script type="text/javascript">var _g_tp_fNewForm = true;</script>
+]]></HTML>
+
+      <Fields>
+         <Switch><Expr><Property Select="Name"/></Expr>
+          <Case Value="FileLeafRef">
+           <SetVar Name="ShowField" Scope="Request">0</SetVar>
+          </Case>
+          <Default>
+           <SetVar Name="ShowField" Scope="Request">1</SetVar>
+
+    <HTML><![CDATA[<tr style="display:none"><th nowrap="nowrap" valign="top" class="ms-formlabel"><nobr>]]></HTML>
+
+    <Property Select="DisplayName" HTMLEncode="TRUE" AutoNewLine="TRUE"/>
+    <Switch>
+      <Expr><Property Select="Required"/></Expr>
+      <Case Value="TRUE">
+        <HTML><![CDATA[<font color=red> *</font>]]></HTML>
+        <SetVar Scope="Request" Name="HasRequired">TRUE</SetVar>
+      </Case>
+      <Default>
+        <HTML><![CDATA[<font color=red></font>]]></HTML>
+      </Default>
+    </Switch>
+
+    <HTML><![CDATA[</nobr></th><td class="ms-formbody">]]></HTML>
+
+    <Switch>
+      <Expr><Property Select="Type"/></Expr>
+      <Case Value="File">
+          <Switch>
+              <Expr><GetVar Name="Type"/></Expr>
+              <Case Value="1"><Field/></Case>
+              <Default></Default>
+          </Switch>
+       </Case>
+      <Default>
+
+    <Field/>
+
+      </Default>
+    </Switch>
+
+    <Switch>
+      <Expr><Property Select="RichText"/></Expr>
+      <Case Value="TRUE"/>
+      <Default>
+        <Switch>
+          <Expr><Property Select="Type"/></Expr>
+          <Case Value="Choice"/>
+          <Case Value="MultiChoice"/>
+          <Default>
+            <HTML><![CDATA[&#160;]]></HTML>
+            <Switch>
+              <Expr><Property Select="NoEditFormBreak"/></Expr>
+              <Case Value="TRUE"/>
+              <Default>
+                <HTML><![CDATA[<br>]]></HTML>
+              </Default>
+            </Switch>
+          </Default>
+        </Switch>
+      </Default>
+    </Switch>
+
+    <HTML><![CDATA[<span class="ms-formdescription">]]></HTML>
+
+    <Property Select="Description" HTMLEncode="TRUE" AutoHyperLink="TRUE" AutoNewLine="TRUE"/>
+    <HTML><![CDATA[</span></td></tr>]]></HTML>
+
+        </Default>
+       </Switch>
+      </Fields>
+
+<HTML><![CDATA[<tr style='display:none' id="idAttachmentsRow"><th nowrap="nowrap" valign="top" class="ms-formlabel">]]></HTML>
+<FieldProperty Name="Attachments" Select="DisplayName" HTMLEncode="TRUE"/>
+<HTML><![CDATA[</th>]]></HTML>
+<HTML><![CDATA[<td class="ms-formbody">]]></HTML>
+<HTML><![CDATA[<table border="0" cellpadding="0" cellspacing="0"><tbody id="idAttachmentsTable">]]></HTML>
+<HTML><![CDATA[</tbody></table>]]></HTML>
+<HTML><![CDATA[</td></tr>]]></HTML>
+
+<HTML><![CDATA[</table>]]></HTML>
+      <Switch>
+        <Expr><GetVar Name="HasRequired"/></Expr>
+        <Case Value="TRUE"><HTML><![CDATA[
+          <table border="0" cellpadding="2">
+          <tr>
+            <td id="reqdFldTxt" class="ms-descriptiontext" colspan="2" height="150px" valign="top"><br><font color=red>*</font> 
+             &#160;]]></HTML><HTML HTMLEncode="TRUE">$Resources:core,webview_editdlg_required_field;</HTML><HTML><![CDATA[
+            </td>
+          </tr>
+          </table>
+          ]]></HTML>
+        </Case>
+      </Switch>
+
+<ContentTypes>
+    <HTML><![CDATA[
+    <script type = "text/javascript">
+        frmCurrent.MapCtName(]]></HTML>
+    <ScriptQuote>
+      <Property Select="Name" />
+    </ScriptQuote>
+    <HTML><![CDATA[ ,]]></HTML>
+    <ScriptQuote>
+      <Property Select="ID" />
+    </ScriptQuote>
+    <HTML><![CDATA[);
+    </script>]]></HTML>
+    <IfSubString>
+        <Expr1>0x0120</Expr1>
+        <Expr2><Property Select="ID"/></Expr2>
+        <Then>
+            <HTML><![CDATA[
+            <script type="text/javascript">
+            _tp_rgctfld = new Array;
+            _g_tp_rgcts.push(_tp_rgctfld);
+            var fldct = frmCurrent.FindField("ContentType");
+            if (fldct != null)
+            	fldct.AddChoice(]]></HTML>
+            <ScriptQuote><Property Select="Name"/></ScriptQuote>
+            <HTML><![CDATA[);
+            </script>
+            ]]></HTML>
+        </Then>
+        <Else>
+            <HTML><![CDATA[
+            <script type="text/javascript">
+            var fldct = frmCurrent.FindField("ContentType");
+            if (fldct != null)
+            	fldct.AddChoice(]]></HTML>
+            <ScriptQuote><Property Select="Name"/></ScriptQuote>
+            <HTML><![CDATA[);
+            _tp_rgctfld = new Array;            
+            ]]></HTML>
+            <ForEach Select="FieldRefs/FieldRef">
+                <HTML>
+                _tp_ctfld = new Object(null);
+                _tp_ctfld.stName=</HTML>
+                <ScriptQuote><Property Select="Name"/></ScriptQuote>
+                <HTML>;
+                _tp_ctfld.fRequired = BoolFromString(</HTML>
+                <ScriptQuote><Property Select="Required"/></ScriptQuote>
+                <HTML>);
+                _tp_ctfld.fHidden = BoolFromString(</HTML>
+                <ScriptQuote><Property Select="Hidden"/></ScriptQuote>
+                <HTML>);
+                _tp_ctfld.fShowInNewForm = BoolFromString2(</HTML>
+                <ScriptQuote><Property Select="ShowInNewForm"/></ScriptQuote>
+                <HTML>, true);
+                _tp_ctfld.fShowInEditForm = BoolFromString2(</HTML>
+                <ScriptQuote><Property Select="ShowInEditForm"/></ScriptQuote>
+                <HTML>, true);
+                _tp_ctfld.fShowInFileDlg = BoolFromString2(</HTML>
+                <ScriptQuote><Property Select="ShowInFileDlg"/></ScriptQuote>
+                <HTML>, true);                
+                _tp_ctfld.fReadOnly = BoolFromString(</HTML>
+                <ScriptQuote><Property Select="ReadOnly"/></ScriptQuote>
+                <HTML>);
+                _tp_ctfld.stDisplay =</HTML>
+                <ScriptQuote><Property Select="DisplayName"/></ScriptQuote>
+                <HTML>;</HTML>
+                <ForEach Select="Default">
+                    <HTML>
+                    _tp_ctfld.stDefault=</HTML>
+                    <ScriptQuote><Property Select="."/></ScriptQuote>
+                    <HTML>;</HTML>            
+                </ForEach>
+                <HTML>
+                    _tp_rgctfld.push(_tp_ctfld);
+                </HTML>
+            </ForEach>
+            <HTML><![CDATA[
+            _g_tp_rgcts.push(_tp_rgctfld);
+            </script>
+            ]]></HTML>
+        </Else>
+    </IfSubString>
+</ContentTypes>
+<HTML><![CDATA[
+<script type="text/javascript">
+var fldct = frmCurrent.FindField("ContentType");
+if (fldct != null)
+	fldct.BuildUI();
+</script>
+]]></HTML>
+
+</ListFormBody>
+
+<ListFormClosing>
+<HTML><![CDATA[
+</span>]]></HTML>
+
+<Switch><Expr><GetVar Name="HTMLFormName"/></Expr>
+<Case Value=""><HTML><![CDATA[</form>]]></HTML></Case>
+</Switch>
+<HTML><![CDATA[
+<script type="text/javascript">
+
+function OnLoadWrapper()
+{
+
+    try{frm.SetFirstFocus();}catch(e){}
+}
+
+if (browseris.ie4up && !browseris.mac)
+{
+    document.body.onload = OnLoadWrapper;
+}
+else
+{
+
+    frm.SetFirstFocus();
+}
+
+</script>
+]]></HTML>
+</ListFormClosing>
+
+            </Form>
+        </Forms>
+
+    </MetaData>
+</List>

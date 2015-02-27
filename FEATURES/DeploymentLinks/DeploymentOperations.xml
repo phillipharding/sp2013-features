@@ -1,0 +1,51 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <!-- Deployment Paths and jobs link on CA default page under General Application Settings category -->
+    <CustomAction
+        Id="DeployManage"
+        GroupId="CA_GeneralApplicationSettings"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Sequence="20"
+        Title="$Resources:cmscore,Operations_DeployManage_Title;">
+        <UrlAction
+            Url="/_admin/Deployment.aspx" />
+    </CustomAction>
+    <!-- Content Deployment category on General Application Settings page -->
+    <CustomActionGroup
+        Id="ContentDeployment"
+        Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"	
+        Title="$Resources:cmscore,Operations_ContentDeployment_Title;"
+        ImageUrl="/_layouts/15/images/centraladmin_generalapplicationsettings_contentdeployment_32x32.png?rev=23" 
+        Sequence="60" /> 
+    <!-- Deployment Paths and jobs link on General Application Settings page under Content Deployment category -->
+    <CustomAction
+        Id="DeployManage"
+        GroupId="ContentDeployment"
+        Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"
+        Sequence="10"
+        Title="$Resources:cmscore,Operations_DeployManage_Title;">
+        <UrlAction
+            Url="/_admin/Deployment.aspx" />
+    </CustomAction>
+    <!-- Deployment Settings link on General Application Settings page under Content Deployment category -->
+    <CustomAction
+        Id="DeploySettings"
+        GroupId="ContentDeployment"
+        Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"
+        Sequence="20"
+        Title="$Resources:cmscore,Operations_DeploySettings_Title;">
+        <UrlAction
+            Url="/_admin/DeploymentSettings.aspx" />
+    </CustomAction>
+    <!-- Deployment Status link on General Application Settings page under Content Deployment category -->
+    <CustomAction
+        Id="DeployStatus"
+        GroupId="ContentDeployment"
+        Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"
+        Sequence="30"
+        Title="$Resources:cmscore,Operations_DeployStatus_Title;">
+        <UrlAction
+            Url="/_admin/DeploymentStatus.aspx" />
+    </CustomAction>
+</Elements>

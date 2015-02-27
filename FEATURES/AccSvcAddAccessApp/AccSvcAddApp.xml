@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="15.0.4420" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListTemplate
+		Name="AccSrvAddApp"
+		Type="3100"
+		BaseType="1"
+		OnQuickLaunch="TRUE"
+		SecurityBits="11"
+		NewPage="accsvc\addaccessapp.aspx"
+		DisplayName="$Resources:AccsvcWss,AddAccessAppFeatureTitle"
+		Description="$Resources:AccsvcWss,AddAccessAppFeatureDescription"
+		Image="/_layouts/15/images/i_access_logo.png"/>
+</Elements>

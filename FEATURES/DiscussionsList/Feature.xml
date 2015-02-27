@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="00BFEA71-6A49-43FA-B535-D15C05500108" 
+    Title="$Resources:core,discussionslistFeatureTitle;"
+    Description="$Resources:core,discussionslistFeatureDesc;"
+    Version="15.0.7.0"
+    Hidden="TRUE"
+    Scope="Web"
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\Discussions.xml" />
+        <ElementManifest Location="CustomActions\Ribbon.xml" />
+    </ElementManifests>
+    <UpgradeActions
+       ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+       ReceiverClass="Microsoft.SharePoint.SPDiscussionsListUpgradeFeatureReceiver">
+        <VersionRange EndVersion="15.0.1.0">
+            <CustomUpgradeAction Name="EnsureFeaturedDiscussions"/>
+            <ApplyElementManifests>
+                <ElementManifest Location="CustomActions\Ribbon.xml" />
+            </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.2.0">
+            <CustomUpgradeAction Name="EnsureDisableGridEditing"/>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.5.0">
+            <ApplyElementManifests>
+                <ElementManifest Location="ListTemplates\Discussions.xml" />
+            </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.0.0" EndVersion="15.0.6.0">
+             <CustomUpgradeAction Name="SetPagingRowLimitForViews"/>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.7.0">
+             <CustomUpgradeAction Name="FixupViewJSLink"/>
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

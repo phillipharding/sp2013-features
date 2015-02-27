@@ -1,0 +1,11 @@
+<Feature Id="04A98AC6-82D5-4E01-80EA-C0B7D9699D94"
+    Title="$Resources:wmafeatures,MyTasksDashboardCustomRedirectTitle;"
+    Description="$Resources:wmafeatures,MyTasksDashboardCustomRedirectDescription;"
+    Hidden="TRUE"
+    Version="15.0.0.0"
+    Scope="Farm"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="elements.xml"/>
+    </ElementManifests>
+</Feature>

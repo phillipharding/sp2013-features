@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature 
+  ActivateOnDefault = "FALSE"
+  xmlns="http://schemas.microsoft.com/sharepoint/" 
+  Title="$Resources:core,Marketplace_IFEDependentAppsFeatureTitle;"
+  Description="$Resources:core,Marketplace_IFEDependentAppsFeatureDescription;" 
+  Id="{7877BBF6-30F5-4f58-99D9-A0CC787C1300}"
+  Hidden="FALSE"
+  Version="15.0.0.0"
+  Scope="WebApplication">
+</Feature>

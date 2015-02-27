@@ -1,0 +1,11 @@
+<Feature Id="39D18BBF-6E0F-4321-8F16-4E3B51212393"
+    Title="$Resources:spscore,ItemFormRecommendations_Feature_Title;"
+    Description="$Resources:spscore,ItemFormRecommendations_Feature_Description;"
+    Version="15.0.0.0"
+    Hidden="TRUE"
+    Scope="Site"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="elements.xml"/>
+    </ElementManifests>
+</Feature>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate Name="posts" EnableModeration="False" DisplayName="$Resources:core,posts_schema_blg_title;" Type="301" BaseType="0" OnQuickLaunch="TRUE" FolderCreation="FALSE" AllowDeletion="FALSE" Unique="TRUE" SecurityBits="11" Description="$Resources:core,posts_schema_blg_description" Image="/_layouts/15/images/itposts.gif?rev=23"></ListTemplate>
+    <ListTemplate Name="comments" DisplayName="$Resources:core,comments_schema_blg_title;" Type="302" BaseType="0" OnQuickLaunch="TRUE" FolderCreation="FALSE" AllowDeletion="FALSE" Unique="TRUE"  SecurityBits="12" DisableAttachments="TRUE" Description="$Resources:core,comments_schema_blg_description" Image="/_layouts/15/images/itcommnt.gif?rev=23"></ListTemplate>
+    <ListTemplate Name="categories" DisplayName="$Resources:core,categories_schema_blg_title;" Type="303" BaseType="0" OnQuickLaunch="TRUE" FolderCreation="FALSE" AllowDeletion="FALSE" Unique="TRUE" DisallowContentTypes="TRUE" SecurityBits="11" Description="$Resources:core,categories_schema_blg_description" Image="/_layouts/15/images/itcat.gif?rev=23"></ListTemplate>
+</Elements>

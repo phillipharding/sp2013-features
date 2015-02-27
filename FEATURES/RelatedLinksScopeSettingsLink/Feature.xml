@@ -1,0 +1,8 @@
+<Feature  Id="E8734BB6-BE8E-48A1-B036-5A40FF0B8A81"
+          Title="Related Links scope settings page"
+          Description="Related Links scope settings page"
+          Version="15.0.0.0"
+          Scope="Web"
+          Hidden="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature Id="7890E045-6C96-48d8-96E7-6A1D63737D71"
+    Title="$Resources:spscore,ContentFollowing_Feature_Title;"
+    Description="$Resources:spscore,ContentFollowing_Feature_Description;"
+    Version="15.0.4.0"
+    Scope="Site"
+    Hidden="TRUE"
+    DefaultResourceFile="core"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.ContentFollowingFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <ElementManifests>
+        <ElementManifest Location="elements.xml" />
+    </ElementManifests>
+
+    <UpgradeActions>
+        <VersionRange BeginVersion="15.0.1.0" EndVersion="15.0.4.0">
+            <ApplyElementManifests>
+                <ElementManifest Location="elements.xml"/>
+            </ApplyElementManifests>
+        </VersionRange>
+    </UpgradeActions>
+</Feature>
+

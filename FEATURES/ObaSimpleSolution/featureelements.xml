@@ -1,0 +1,105 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction
+      Id="TakeListOffline"
+      RegistrationType="List"
+      RegistrationId="600"
+      Location="Microsoft.SharePoint.StandardMenu"
+      GroupId="ActionsMenu"
+      Title="$Resources:SimpleSolutionFeatureTitle;"
+      ImageUrl="/_layouts/images/ToOutlookHS.png"
+      ControlAssembly= "Microsoft.Office.SharePoint.ClientExtensions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+      ControlClass="Microsoft.Office.SharePoint.ClientExtensions.Publishing.TakeListOfflineControl">
+  </CustomAction>
+  <CustomAction
+   Id="Ribbon.List.Actions.Controls.TakeListOffline"
+   RegistrationType="List"
+   RegistrationId="600"
+   Location="CommandUI.Ribbon"
+   Sequence="30"
+   Title="$Resources:SimpleSolutionFeatureTitle;">
+   <CommandUIExtension>
+    <CommandUIDefinitions>
+     <CommandUIDefinition Location="Ribbon.List.Actions.Controls._children">
+      <Button
+        Id="Ribbon.List.Actions.Controls.TakeListOffline"
+        Alt="$Resources:SimpleSolutionRibbonButtonLabel;"
+        Command="TakeListOffline"
+        Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-307" Image32by32Left="-137"
+        Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-55" Image16by16Left="-241"
+        LabelText="$Resources:SimpleSolutionRibbonButtonLabel;"
+        ToolTipTitle="$Resources:SimpleSolutionRibbonButtonLabel"
+        ToolTipDescription="$Resources:SimpleSolutionRibbonButtonAltText"
+        TemplateAlias="o1"
+      />
+     </CommandUIDefinition>
+     </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler
+         Command="TakeListOffline"
+         CommandAction="javascript:
+          function invokePackageGeneration()
+          {			 
+             var site='{SiteUrl}'; 			 
+             var url = site + '/_layouts/packagegeneration.aspx?listId={ListId}';
+			 var officeVersion = GetClientVersion();
+			 if(officeVersion != null)
+			 {
+				url = url + '&amp;clientVersion=' + officeVersion;
+			 }
+             window.navigate(url);
+          }
+		 function GetLobiLauncher2() 
+		 {
+			var bcsLauncher = null;
+			try 
+			{
+				bcsLauncher = new ActiveXObject('BCSLaunch.Launcher.2');
+			}
+			catch (ex)
+			{
+			}
+			return bcsLauncher;
+		 }
+		 function GetClientVersion() 
+		 {
+			var bcslaunch2 = GetLobiLauncher2();
+			if ((typeof(bcslaunch2) != 'undefined') &amp;&amp; (bcslaunch2 != null)) 
+			{
+				var clientVersion = bcslaunch2.GetClientVersion();
+				if ((typeof(clientVersion) != 'undefined') &amp;&amp; (clientVersion != null)) 
+				{
+					return clientVersion;
+				}
+			}
+			return null;
+		 }
+         invokePackageGeneration();"
+         EnabledScript="javascript:
+          function enablePackageGeneration()
+          {
+            var enabled = true;
+            var bcsLauncher;
+
+            if (!browseris.ie)
+            {
+               enabled = false;
+            }
+
+            if (enabled== true)
+            {
+                try
+                {
+                    bcsLauncher = new ActiveXObject('BCSLaunch.Launcher');
+                }
+                catch (ex)
+                {
+                   enabled = false;
+                }
+            }
+            return enabled;
+          }
+          enablePackageGeneration();"/>
+      </CommandUIHandlers>
+   </CommandUIExtension>
+  </CustomAction>
+</Elements>

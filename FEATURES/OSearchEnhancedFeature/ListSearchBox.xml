@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Control 
+        Id="ListSearchInputBox" 
+        Sequence="50"
+        ControlClass="Microsoft.SharePoint.Portal.WebControls.SearchAdapter" ControlAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+</Elements>

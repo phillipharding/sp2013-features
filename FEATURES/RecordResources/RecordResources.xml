@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="15.0.4420" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <!-- Records and Holds fields -->
+    <Field
+        ID="{3AFCC5C7-C6EF-44f8-9479-3561D72F9E8E}"
+        Name="_vti_ItemHoldRecordStatus" StaticName="_vti_ItemHoldRecordStatus" DisplayName="$Resources:dlccore,RecordResourcesItemHoldRecordStatus_DisplayName;"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="$Resources:dlccore,RecordResourcesColumnGroup;"
+        Type="Integer" Min="0" Max="32" Decimals="0"
+        Indexed="FALSE"
+        Hidden="TRUE" CanToggleHidden="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInFileDlg="FALSE" ShowInDisplayForm="FALSE"
+        Required="FALSE" Sealed="TRUE" ReadOnly="TRUE"
+    />
+    <Field
+        ID="{F9A44731-84EB-43a4-9973-CD2953AD8646}"
+        Name="_vti_ItemDeclaredRecord" StaticName="_vti_ItemDeclaredRecord" DisplayName="$Resources:dlccore,RecordResourcesItemDeclaredRecord_DisplayName;"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="$Resources:dlccore,RecordResourcesColumnGroup;"
+        Type="DateTime"
+        Indexed="FALSE"
+        Hidden="FALSE" CanToggleHidden="TRUE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInFileDlg="FALSE" ShowInDisplayForm="TRUE"
+        Required="FALSE" Sealed="TRUE" ReadOnly="TRUE"
+    />
+    <Field
+        ID="{740931E6-D79E-44a6-A752-A06EB23C11B0}"
+        Name="_vti_ItemIsLocked" StaticName="_vti_ItemIsLocked" DisplayName="$Resources:dlccore,RecordResourcesItemIsLocked_DisplayName;"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="$Resources:dlccore,RecordResourcesColumnGroup;"
+        Type="Boolean"
+        Indexed="FALSE"
+        Hidden="TRUE" CanToggleHidden="TRUE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInFileDlg="FALSE" ShowInDisplayForm="TRUE"
+        Required="FALSE" Sealed="TRUE" ReadOnly="TRUE"
+    />
+    <!-- Policy fields -->
+    <Field
+        ID="{B0227F1A-B179-4D45-855B-A18F03706BCB}"
+        Name="_dlc_Exempt" StaticName="_dlc_Exempt" DisplayName="$Resources:dlccore,RecordResourcesItemExemptFromPolicy_DisplayName;"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="$Resources:dlccore,RecordResourcesColumnGroup;"
+        Type="ExemptField"
+        Indexed="FALSE"
+        Hidden="TRUE" CanToggleHidden="TRUE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInFileDlg="FALSE" ShowInDisplayForm="FALSE"
+        Required="FALSE" Sealed="TRUE" ReadOnly="TRUE"
+        OverwriteInChildScopes="TRUE"
+    />
+    <!-- Expiration fields -->
+    <Field
+        ID="{ACD16FDF-052F-40F7-BB7E-564C269C9FBC}"
+        Name="_dlc_ExpireDate" StaticName="_dlc_ExpireDate" DisplayName="$Resources:dlccore,RecordResourcesItemExpirationDate_DisplayName;"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="$Resources:dlccore,RecordResourcesColumnGroup;"
+        Type="DateTime"
+        Indexed="FALSE"
+        Hidden="FALSE" CanToggleHidden="TRUE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInFileDlg="FALSE" ShowInDisplayForm="FALSE"
+        Required="FALSE" Sealed="TRUE" ReadOnly="TRUE"
+        OverwriteInChildScopes="TRUE"
+    />
+    <Field
+        ID="{74E6AE8A-0E3E-4DCB-BBFF-B5A016D74D64}"
+        Name="_dlc_ExpireDateSaved" StaticName="_dlc_ExpireDateSaved" DisplayName="$Resources:dlccore,RecordResourcesItemExpirationDateSaved_DisplayName;"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="$Resources:dlccore,RecordResourcesColumnGroup;"
+        Type="DateTime"
+        Indexed="FALSE"
+        Hidden="TRUE" CanToggleHidden="TRUE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInFileDlg="FALSE" ShowInDisplayForm="FALSE"
+        Required="FALSE" Sealed="TRUE" ReadOnly="TRUE"
+        OverwriteInChildScopes="TRUE"
+    />
+    <!-- Policy-related layouts/settings pages -->
+    <CustomAction
+        Id="PolicyTemplate"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        RequireSiteAdministrator="true"
+        Sequence="90"
+        Title="$Resources:dlccore, PolicyLinks_SiteSettings_PolicyTemplates_15;"
+        Description="$Resources:dlccore,SiteSettings_SiteCollectionPolicies_Tooltip;">
+        <UrlAction
+            Url="_layouts/15/Policylist.aspx" />
+    </CustomAction>
+    <CustomAction 
+        Id="ListPolicySettings"
+        GroupId="Permissions"
+        Location="Microsoft.SharePoint.ListEdit"
+        Rights="ManageLists"
+        Sequence="100"
+        Title="$Resources:dlccore, PolicyLinks_ContentTypeSettings_PolicySettings;">
+            <UrlAction Url="_layouts/15/policycts.aspx?List={ListId}" />
+    </CustomAction>
+    <CustomAction 
+        Id="ContentTypePolicySettings"
+        GroupId="General"
+        Location="Microsoft.SharePoint.ContentTypeSettings"
+        Sequence="100" 
+        Title="$Resources:dlccore, PolicyLinks_ContentTypeSettings_PolicySettings;">
+            <UrlAction Url="_layouts/15/policy.aspx" />
+    </CustomAction>
+    <CustomAction 
+        Id="ContentTypeTemplatePolicySettings"
+        GroupId="General"
+        Location="Microsoft.SharePoint.ContentTypeTemplateSettings"
+        Sequence="100"
+        Title="$Resources:dlccore, PolicyLinks_ContentTypeSettings_PolicySettings;">
+            <UrlAction Url="_layouts/15/policy.aspx" />
+    </CustomAction>
+    <CustomAction Id="ViewItemExpirationECB"
+        Location="EditControlBlock"
+        Title="$Resources:dlccore,PolicyLinks_ViewItemExpirationTitle;"
+        Description="$Resources:dlccore,PolicyLinks_ViewItemExpirationDescription;"
+        RegistrationType="ContentType"
+        RegistrationId="0x01"
+        Rights="ViewListItems"
+        Sequence="898"
+        >
+        <UrlAction Url="javascript:commonShowModalDialog('{SiteUrl}'+ 
+            '/_layouts/15/itemexpiration.aspx' 
+            +'?ID={ItemId}&amp;List={ListId}', 'center:1;dialogHeight:500px;dialogWidth:500px;resizable:yes;status:no;location:no;menubar:no;help:no', function GotoPageAfterClose(pageid){if(pageid == 'hold') {STSNavigate(unescape(decodeURI('{SiteUrl}'))+ 
+            '/_layouts/15/hold.aspx' 
+            +'?ID={ItemId}&amp;List={ListId}');  return false;} if(pageid == 'audit') {STSNavigate(unescape(decodeURI('{SiteUrl}'))+
+            '/_layouts/15/Reporting.aspx'
+            +'?Category=Auditing&amp;backtype=item&amp;ID={ItemId}&amp;List={ListId}'); return false;} if(pageid == 'config') {STSNavigate(unescape(decodeURI('{SiteUrl}'))+
+            '/_layouts/15/expirationconfig.aspx'
+            +'?ID={ItemId}&amp;List={ListId}'); return false;}}, null);"/>
+    </CustomAction>
+</Elements>

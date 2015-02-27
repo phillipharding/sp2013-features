@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature  Id="FF48F7E6-2FA1-428d-9A15-AB154762043D"
+          Title="$Resources:AddToMyLinks_FeatureTitle;"
+          Description="$Resources:AddToMyLinks_FeatureDescription"
+          Version="14.0.0.0"
+          Scope="Farm"
+          Hidden="FALSE"
+          xmlns="http://schemas.microsoft.com/sharepoint/"
+          DefaultResourceFile="dlccore">
+  <ElementManifests>
+    <ElementManifest Location="AddToMyLinks.xml" />
+  </ElementManifests>
+</Feature>

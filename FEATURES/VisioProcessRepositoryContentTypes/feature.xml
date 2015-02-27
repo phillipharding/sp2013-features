@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature 
+
+    Id="12E4F16B-8B04-42D2-90F2-AEF1CC0B65D9"
+
+    Title="$Resources:vsrv,PR15_ContentTypeFeatureTitle;"
+    Description="$Resources:vsrv,PR15_ContentTypeFeatureDesc;"
+    Version="1.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3" 
+    DefaultResourceFile="core"
+xmlns="http://schemas.microsoft.com/sharepoint/">
+<ElementManifests>
+        <ElementManifest Location="VisPR15ContentTypes.xml"/>
+    </ElementManifests>
+</Feature>

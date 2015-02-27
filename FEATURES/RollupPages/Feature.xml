@@ -1,0 +1,16 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Feature Id="DFFAAE84-60EE-413A-9600-1CF431CF0560"
+         Title="$Resources:cmscore,RollupPages_Feature_Title;"
+         Description="$Resources:cmscore,RollupPages_Feature_Description;"
+         Version="15.0.1.0"
+         Scope="Web"
+         Hidden="TRUE"
+         DefaultResourceFile="core"
+         ReceiverAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+         ReceiverClass="Microsoft.SharePoint.Publishing.RollupPagesFeatureHandler"
+         xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="RollupPageSettings.xml"/>
+    </ElementManifests>
+</Feature>

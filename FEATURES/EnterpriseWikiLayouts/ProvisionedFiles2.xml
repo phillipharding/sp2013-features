@@ -1,0 +1,13 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="Project Page" Url="_catalogs/masterpage" Path="PageLayouts" RootWebOnly="TRUE">
+        <File Url="ProjectPage.aspx" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:cmscore,ProjectPage_DefaultLayout_Title;" />
+            <Property Name="MasterPageDescription" Value="$Resources:cmscore,ProjectPage_DefaultLayout_Description;" />
+            <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+            <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/ArticleLinks.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/ArticleLinks.png" />			
+            <Property Name="PublishingAssociatedContentType" Value=";#$Resources:cmscore,contenttype_projectpage_name;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39004C1F8B46085B4d22B1CDC3DE08CFFB9C0055EF50AAFF2E4badA437E4BAE09A30F8;#"/>			
+        </File>
+    </Module>
+</Elements>

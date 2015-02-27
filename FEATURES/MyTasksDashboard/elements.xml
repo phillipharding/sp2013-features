@@ -1,0 +1,11 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module
+        Name="WebPartPopulation15"
+        List="113"
+        Url="_catalogs/wp"
+        RootWebOnly="TRUE">
+     	<File Url="Tasklist.webpart" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:core,ContentRollupWebPartGroup;"></Property>
+        </File>
+    </Module>
+</Elements>

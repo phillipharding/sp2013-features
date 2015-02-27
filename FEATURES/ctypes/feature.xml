@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+-->
+<Feature  Id="695B6570-A48B-4A8E-8EA5-26EA7FC1D162"
+          Title="$Resources:core,ctypesFeatureTitle"
+          Description="$Resources:core,ctypesFeatureDesc"
+          Version="15.0.6.0"
+          Scope="Site"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ctypeswss.xml" />
+        <ElementManifest Location="ctypeswss2.xml" />
+        <ElementManifest Location="ctypeswss3.xml"/>
+    </ElementManifests>
+    <ActivationDependencies> 
+        <!-- Fields Feature -->
+        <ActivationDependency FeatureId="CA7BD552-10B1-4563-85B9-5ED1D39C962A" MinimumVersion="15.0.6.0"/>
+    </ActivationDependencies>
+    <UpgradeActions
+       ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+       ReceiverClass="Microsoft.SharePoint.SPContentTypesUpgradeFeatureReceiver">
+        <VersionRange EndVersion="14.0.1.0">
+          <CustomUpgradeAction Name="EnsureWorkflowContentType"/>
+          <ApplyElementManifests>
+              <ElementManifest Location="ctypeswss2.xml"/>
+          </ApplyElementManifests>
+          <AddContentTypeField 
+              ContentTypeId="0x010102" 
+              FieldId="{1f43cd21-53c5-44c5-8675-b8bb86083244}" 
+              PushDown="TRUE" />
+          <AddContentTypeField 
+              ContentTypeId="0x010102" 
+              FieldId="{3ca8efcd-96e8-414f-ba90-4c8c4a8bfef8}" 
+              PushDown="TRUE" />
+          <AddContentTypeField 
+              ContentTypeId="0x010102" 
+              FieldId="{f39d44af-d3f3-4ae6-b43f-ac7330b5e9bd}" 
+              PushDown="TRUE" />
+          <AddContentTypeField 
+              ContentTypeId="0x010105" 
+              FieldId="{8e334549-c2bd-4110-9f61-672971be6504}" 
+              PushDown="TRUE" />
+          <AddContentTypeField 
+              ContentTypeId="0x010107" 
+              FieldId="{a05a8639-088a-4aea-b8a9-afc888971c81}" 
+              PushDown="TRUE" />
+          <AddContentTypeField 
+              ContentTypeId="0x0108" 
+              FieldId="{c3a92d97-2b77-4a25-9698-3ab54874bc6f}" 
+              PushDown="TRUE" />
+          <AddContentTypeField 
+              ContentTypeId="0x010A"     
+              FieldId="{bf03d3ca-aa6e-4845-809a-b4378b37ce08}" 
+              PushDown="TRUE" />
+          <AddContentTypeField
+              ContentTypeId="0x010101"
+              FieldId="{e52012a0-51eb-4c0c-8dfb-9b8a0ebedcb6}"
+              PushDown="TRUE" />
+          <AddContentTypeField
+              ContentTypeId="0x010101"
+              FieldId="{086f2b30-460c-4251-b75a-da88a5b205c1}"
+              PushDown="TRUE" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.5.0">
+            <AddContentTypeField 
+                ContentTypeId="0x012002" 
+                FieldId="{5a034ff8-d7a4-4d69-ab26-5f5a043b572d}"
+                PushDown="TRUE" />
+            <ApplyElementManifests>
+                <ElementManifest Location="ctypeswss3.xml"/>
+            </ApplyElementManifests>            
+            <AddContentTypeField 
+                ContentTypeId="0x010106"
+                FieldId="{8e334549-c2bd-4110-9f61-672971be6504}"
+                PushDown="TRUE" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.3.0">
+            <CustomUpgradeAction Name="ReorderTaskContentType"/>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.4.0">
+            <AddContentTypeField
+              ContentTypeId="0x0108"
+              FieldId="{d2a04afc-9a05-48c8-a7fa-fa98f9496141}"
+              PushDown="TRUE" />
+        </VersionRange>
+      <VersionRange EndVersion="15.0.6.0">
+          <CustomUpgradeAction Name="ChangeTaskFormTemplates"/>
+      </VersionRange>
+    </UpgradeActions>
+</Feature>

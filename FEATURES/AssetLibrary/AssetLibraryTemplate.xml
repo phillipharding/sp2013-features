@@ -1,0 +1,15 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="AssetLibrary"
+        Type="851"
+        BaseType="1"
+        SecurityBits="11" 
+        OnQuickLaunch="TRUE"
+        DisplayName="$Resources:cmscore,List_AssetLibrary_DisplayName"
+        Description="$Resources:cmscore,List_AssetLibrary_Description"
+        Image="/_layouts/15/images/ital.png?rev=23"
+        DocumentAsEnclosure="TRUE">
+    </ListTemplate>
+</Elements>

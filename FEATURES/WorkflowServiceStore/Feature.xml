@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="{2C63DF2B-CEAB-42c6-AEFF-B3968162D4B1}" 
+    Title="workflow service store"
+    Description="workflow service store"
+    Scope="Web"
+    Hidden="TRUE" 
+    Version="1.0.0.0"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="listtemplates\wfsvc.xml" />
+        <ElementManifest Location="fields\fields.xml" />
+        <ElementManifest Location="contenttypes\contenttypes.xml" />
+        <ElementFile Location="wfsvc\schema.xml" />
+    </ElementManifests>
+</Feature>

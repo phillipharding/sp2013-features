@@ -1,0 +1,116 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Field ID="{CBB92DA4-FD46-4C7D-AF6C-3128C2A5576E}"
+          Indexed="FALSE"
+          Name="DocumentSetDescription"
+          StaticName="DocumentSetDescription"
+          SourceID="http://schemas.microsoft.com/sharepoint/v3"
+          Group="_Hidden"
+          DisplayName="$Resources:dlccore,DocumentSetDescription_DisplayName;"
+          Description="$Resources:dlccore,DocumentSetDescription_Description;"
+          Type="Note"
+          NumLines="5"
+          UnlimitedLengthInDocumentLibrary="TRUE"
+          Hidden="FALSE"
+          Required="FALSE"
+          CanToggleHidden="TRUE"
+          Sealed="TRUE"
+    >
+    </Field>
+    <ContentType ID="0x0120D520"
+          Name="$Resources:dlccore,DocSet_CT_Name;"
+          Group="$Resources:dlccore,DocSet_CT_Group;"
+          Description="$Resources:dlccore,DocSet_CT_Description;"
+          ProgId="Sharepoint.DocumentSet"
+          PushDownChangedResourceFilesOnly="TRUE"
+          Version="0">
+        <FieldRefs>
+	        <FieldRef ID="{CBB92DA4-FD46-4C7D-AF6C-3128C2A5576E}" ShowInNewForm="TRUE" ShowInEditForm="TRUE" />
+        </FieldRefs>
+        <XmlDocuments>
+          <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+            <FormUrls xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+              <New>_layouts/15/NewDocSet.aspx</New>
+            </FormUrls>
+          </XmlDocument>
+          <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+            <FormTemplates  xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+              <Display>ListForm</Display>
+              <Edit>ListForm</Edit>
+              <New>DocSetDisplayForm</New>
+            </FormTemplates>
+          </XmlDocument>
+          <XmlDocument NamespaceURI="http://schemas.microsoft.com/office/documentsets/sharedfields">
+          <SharedFields xmlns="http://schemas.microsoft.com/office/documentsets/sharedfields" LastModified="1/1/1 0:00:01 AM">
+          </SharedFields>
+          </XmlDocument>
+          <XmlDocument NamespaceURI="http://schemas.microsoft.com/office/documentsets/defaultdocuments">
+          <DefaultDocuments xmlns="http://schemas.microsoft.com/office/documentsets/defaultdocuments" LastModified="1/1/1 0:00:01 AM" AddSetName="">
+          </DefaultDocuments>
+          </XmlDocument>
+          <XmlDocument NamespaceURI="http://schemas.microsoft.com/office/documentsets/welcomepagefields">
+            <WelcomePageFields xmlns="http://schemas.microsoft.com/office/documentsets/welcomepagefields" LastModified="1/1/1 0:00:01 AM">
+            </WelcomePageFields>
+          </XmlDocument>
+          <XmlDocument NamespaceURI="http://schemas.microsoft.com/office/documentsets/welcomepageview">
+            <WelcomePageView xmlns="http://schemas.microsoft.com/office/documentsets/welcomepageview" LastModified="1/1/1 0:00:01 AM">
+            </WelcomePageView>
+          </XmlDocument>
+        </XmlDocuments>
+    </ContentType>
+    <CustomAction
+        Id="DocumentSetContentTypeSettings"
+        GroupId="General"
+        RegistrationType="ContentType"
+        RegistrationId="0x0120D520"
+        Location="Microsoft.SharePoint.ContentTypeSettings"
+        Sequence="100"
+        Title="$Resources:dlccore,DocSet_Link_Settings;">
+            <UrlAction Url="_layouts/15/docsetsettings.aspx"/>
+    </CustomAction>
+    <CustomAction
+        Id="DocumentSetContentTypeTemplateSettings"
+        GroupId="General"
+        RegistrationType="ContentType"
+        RegistrationId="0x0120D520"
+        Location="Microsoft.SharePoint.ContentTypeTemplateSettings"
+        Sequence="100"
+        Title="$Resources:dlccore,DocSet_Link_Settings;">
+            <UrlAction Url="_layouts/15/docsetsettings.aspx"/>
+    </CustomAction>
+    <CustomAction Id="DocumentSetVersionHistoryECB"
+        Location="EditControlBlock"
+        Title="$Resources:dlccore,DocSet_VersionHistoryECB_Title;"
+        Description="$Resources:dlccore,DocSet_VersionHistoryECB_Description;"
+        ImageUrl = "/_layouts/15/images/versions.gif?rev=23"
+        RegistrationType="ContentType"
+        RegistrationId="0x0120D520"
+        Sequence="330">
+            <UrlAction Url="javascript:SP.UI.ModalDialog.ShowPopupDialog('{SiteUrl}'+ 
+                '/_layouts/15/DocSetVersions.aspx'
+                + '?List={ListId}&amp;ID={ItemId}')"/>
+    </CustomAction>
+    <CustomAction Id="DocumentSetSendToRCECB"
+        Location="EditControlBlock"
+        Title="$Resources:dlccore,DocSet_SendToRCECB_Title;"
+        Description="$Resources:dlccore,DocSet_SendToRCECB_Description;"
+        ImageUrl = "/_layouts/15/images/sendOtherLoc.gif?rev=23"
+        RegistrationType="ContentType"
+        RegistrationId="0x0120D520"
+        Sequence="350">
+            <UrlAction Url="javascript:GoToPage('{SiteUrl}' +
+                '/_layouts/15/docsetsend.aspx' 
+                + '?List={ListId}&amp;ID={ItemId}')"/>
+    </CustomAction>
+    <Module
+        Name="DocumentSetWebPartPopulation"
+        List="113"
+        Url="_catalogs/wp"
+        RootWebOnly="TRUE">
+            <File Url="DocumentSetProperties.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,DocumentsWebPartsGroup;" />
+            </File>
+            <File Url="DocumentSetContents.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,DocumentsWebPartsGroup;" />
+            </File>
+    </Module>
+</Elements>

@@ -1,0 +1,11 @@
+<Feature Id="C5D947D6-B0A2-4e07-9929-8E54F5A9FFF9"
+    Title="Report Center Sample Data"
+    Description="Creates a sample dashboard in the ReportsLibrary of the parent Report Center"
+    Hidden="TRUE"
+    Version="14.0.0.0"
+    Scope="Web"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.ReportCenterSampleDataFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+
+</Feature>

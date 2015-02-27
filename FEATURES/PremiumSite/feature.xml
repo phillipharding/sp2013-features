@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="8581A8A7-CF16-4770-AC54-260265DDB0B2"
+          Title="$Resources:osrvcore,PremiumSiteFeatureTitle;"
+          Description="$Resources:osrvcore,PremiumSiteFeatureDescription;"
+          Version="15.0.1.0"
+          SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+          Scope="Site"
+          ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Portal.PremiumSiteFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ActivationDependencies>
+
+        <ActivationDependency FeatureId="14AAFD3A-FCB9-4bb7-9AD7-D8E36B663BBD" />   
+        <ActivationDependency FeatureId="5F3B0127-2F1D-4cfd-8DD2-85AD1FB00BFC" />   
+        <ActivationDependency FeatureId="2ED1C45E-A73B-4779-AE81-1524E4DE467A" />   
+        <ActivationDependency FeatureId="0C8A9A47-22A9-4798-82F1-00E62A96006E" />   
+        <ActivationDependency FeatureId="5BCCB9A4-B903-4fd1-8620-B795FA33C9BA" /> 
+        <ActivationDependency FeatureId="4326E7FC-F35A-4b0f-927C-36264B0A4CF0" /> 
+        <ActivationDependency FeatureId="EAF6A128-0482-4F71-9A2F-B1C650680E77" /> 
+        <ActivationDependency FeatureId="8B2C6BCB-C47F-4F17-8127-F8EAE47A44DD" /> 
+        <ActivationDependency FeatureId="39D18BBF-6E0F-4321-8F16-4E3B51212393" /> 
+
+        <ActivationDependency FeatureId="C88C4FF1-DBF5-4649-AD9F-C6C426EBCBF5" /> 
+        <ActivationDependency FeatureId="4248E21F-A816-4c88-8CAB-79D82201DA7B" /> 
+        <ActivationDependency FeatureId="43F41342-1A37-4372-8CA0-B44D881E4434" /> 
+        <ActivationDependency FeatureId="5A979115-6B71-45a5-9881-CDC872051A69" /> 
+        <ActivationDependency FeatureId="3CB475E7-4E87-45Eb-A1F3-DB96AD7CF313" /> 
+        <ActivationDependency FeatureId="4C42AB64-55AF-4c7c-986A-AC216A6E0C0E" /> 
+        <ActivationDependency FeatureId="9FEC40EA-A949-407d-BE09-6CBA26470A0C" /> 
+        <ActivationDependency FeatureId="875D1044-C0CF-4244-8865-D2A0039C2A49" /> 
+        <ActivationDependency FeatureId="5EAC763D-FBF5-4d6f-A76B-EDED7DD7B0A5" /> 
+        <ActivationDependency FeatureId="6E8F2B8D-D765-4e69-84EA-5702574C11D6" /> 
+        <ActivationDependency FeatureId="744B5FD3-3B09-4da6-9BD1-DE18315B045D" /> 
+    </ActivationDependencies>
+    <UpgradeActions>
+        <VersionRange EndVersion="15.0.1.0">
+            <CustomUpgradeAction Name="V14ToV15Upgrade" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

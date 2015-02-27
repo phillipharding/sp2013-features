@@ -1,0 +1,20 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="FilterDisplayTemplates" Url="_catalogs/masterpage/Display Templates/Filters" Path="DisplayTemplates" RootWebOnly="TRUE">
+        <File Url="Filter_eDiscoveryExchangeRefinement.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Filter_eDiscoveryExchangeTypeRefinement.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Filter_eDiscoverySharePointRefinement.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Filter_MultiValue.html" Type="GhostableInLibrary" >
+        </File>
+    </Module>
+    <Module Name="SystemDisplayTemplates" Url="_catalogs/masterpage/Display Templates/System" Path="DisplayTemplates" RootWebOnly="TRUE">
+        <File Url="Item_eDiscoverySharePoint_HoverPanel.html" Type="GhostableInLibrary" >
+        </File>
+        <File Url="Item_eDiscoveryExchange_HoverPanel.html" Type="GhostableInLibrary" >
+        </File>
+    </Module>
+</Elements>

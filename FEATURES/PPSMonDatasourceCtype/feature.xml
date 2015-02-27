@@ -1,0 +1,15 @@
+<Feature  Id="05891451-F0C4-4d4e-81B1-0DABD840BAD4" 
+          Title="$Resources:ppsma,MonDataSource_ContentType_Title" 
+          Description="$Resources:ppsma,MonDataSource_ContentType_Description" 
+          Version="15.0.0.0"
+          Scope="Site" 
+          SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+          Hidden="TRUE" 
+          DefaultResourceFile="core" 
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests>
+		<ElementManifest Location="contenttype_docbase.xml" />
+		<ElementManifest Location="contenttype.xml" />
+	</ElementManifests>
+	<ActivationDependencies/>
+</Feature>

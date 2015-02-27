@@ -1,0 +1,14 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Feature  Id="CD1A49B0-C067-4FDD-ADFE-69E6F5022C1A"
+          Title="$Resources:cmscore,ContentDeploymentSource_Feature_Title;"
+          Description="$Resources:cmscore,ContentDeploymentSource_Feature_Description;"
+          DefaultResourceFile="core"
+          Version="15.0.0.0"
+          Scope="Site"
+          Hidden="FALSE"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ContentDeploymentSource.xml"/>
+    </ElementManifests>
+</Feature>

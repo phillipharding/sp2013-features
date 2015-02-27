@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="EduMySiteHostPageModule" Path="Pages" Url="SitePages/Edu">
+    <File Path="Assignments.aspx" Url="Assignments.aspx" IgnoreIfAlreadyExists="TRUE" NavBarHome="False" Type="GhostableInLibrary">
+      <AllUsersWebPart WebPartZoneID="Body" WebPartOrder="1">
+        <![CDATA[
+          <webParts>
+            <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+              <metaData>
+                <type name="Microsoft.Office.Education.WebUI.RoleSelectorWebPart" />
+                <importErrorMessage>$Resources:eduserver,IDS_WebPartLoadError;</importErrorMessage>
+              </metaData>
+              <data>
+                <properties>
+                  <property name="Title" type="string">$Resources:eduserver,IDS_RoleSelectorWebPartTitle;</property>
+                  <property name="Description" type="string">$Resources:eduserver,IDS_RoleSelectorWebPartDescription;</property>
+                  <property name="ChromeType" type="chrometype">None</property>
+                </properties>
+              </data>
+            </webPart>
+          </webParts>
+        ]]>
+      </AllUsersWebPart>
+	  <AllUsersWebPart WebPartZoneID="Body" WebPartOrder="2">
+        <![CDATA[
+          <webParts>
+            <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+              <metaData>
+                <type name="Microsoft.Office.Education.WebUI.AssignmentsWebPart" />
+                <importErrorMessage>$Resources:eduserver,IDS_WebPartLoadError;</importErrorMessage>
+              </metaData>
+              <data>
+                <properties>
+                  <property name="Title" type="string">$Resources:eduserver,IDS_AssignmentsWebPartTitle;</property>
+                  <property name="Description" type="string">$Resources:eduserver,IDS_AssignmentsWebPartDescription;</property>
+                  <property name="ChromeType" type="chrometype">None</property>
+                  <property name="IsSummaryState" type="bool">False</property>
+                </properties>
+              </data>
+            </webPart>
+          </webParts>
+        ]]>
+      </AllUsersWebPart>
+    </File>
+    <File Path="Calendar.aspx" Url="Calendar.aspx" IgnoreIfAlreadyExists="TRUE" NavBarHome="False" Type="GhostableInLibrary">
+      <AllUsersWebPart WebPartZoneID="Body" WebPartOrder="1">
+        <![CDATA[
+          <webParts>
+            <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+              <metaData>
+                <type name="Microsoft.Office.Education.WebUI.CalendarWebPart" />
+                <importErrorMessage>$Resources:eduserver,IDS_WebPartLoadError;</importErrorMessage>
+              </metaData>
+              <data>
+                <properties>
+                  <property name="Title" type="string">$Resources:eduserver,IDS_CalendarWebPartTitle;</property>
+                  <property name="Description" type="string">$Resources:eduserver,IDS_CalendarWebPartDescription;</property>
+                  <property name="ChromeType" type="chrometype">None</property>
+                  <property name="IsSummaryState" type="bool">False</property>
+                </properties>
+              </data>
+            </webPart>
+          </webParts>
+        ]]>
+      </AllUsersWebPart>
+    </File>
+	<File Path="Portal.aspx" Url="Portal.aspx" IgnoreIfAlreadyExists="TRUE" NavBarHome="False" Type="GhostableInLibrary">    
+      <AllUsersWebPart WebPartZoneID="Body" WebPartOrder="1">
+        <![CDATA[
+          <webParts>            
+            <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+              <metaData>
+                <type name="Microsoft.Office.Education.WebUI.MyClassesWebPart" />
+                <importErrorMessage>$Resources:eduserver,IDS_WebPartLoadError;</importErrorMessage>
+              </metaData>
+              <data>
+                <properties>
+                  <property name="Title" type="string">$Resources:eduserver,IDS_MyClassesWebPartTitle;</property>
+                  <property name="Description" type="string">$Resources:eduserver,IDS_MyClassesWebPartDescription;</property>
+                  <property name="ChromeType" type="chrometype">None</property>
+                  <property name="IsSummaryState" type="bool">False</property>
+                  <property name="ShowOnlyToEducationUsers" type="bool">False</property>
+                </properties>
+              </data>
+            </webPart>
+          </webParts>          
+        ]]>
+      </AllUsersWebPart>
+    </File>
+    <File Path="Settings.aspx" Url="Settings.aspx" IgnoreIfAlreadyExists="TRUE" NavBarHome="False" Type="GhostableInLibrary"/>
+  </Module>
+  <Control Id="TopNavigationDataSource" Sequence="15"
+    ControlClass="System.Web.UI.WebControls.SiteMapDataSource"
+    ControlAssembly="System.Web, version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Property Name="SiteMapProvider">EduTopNavProvider</Property>
+      <Property Name="ShowStartingNode">false</Property>
+      <Property Name="ID">topSiteMap</Property>
+  </Control>
+</Elements>

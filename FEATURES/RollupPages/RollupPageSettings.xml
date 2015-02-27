@@ -1,0 +1,67 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction Id="Ribbon.WikiPageTab.Manage.EditFriendlyUrlTermProperties"
+        Location="CommandUI.Ribbon"
+        Sequence="20"
+        Title="Edit Friendly URL Term Properties">
+        <CommandUIExtension>
+            <CommandUIDefinitions>
+                <CommandUIDefinition Location="Ribbon.WikiPageTab.Manage.PageProperties.Menu.PageProperties.Controls._children">
+                    <Button Id="Ribbon.WikiPageTab.Manage.PageProperties.Menu.PageProperties.EditTermProperties"
+                        Sequence="5"
+                        Command="EditTermProperties"
+                        Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-144" Image16by16Left="-256"
+                        Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-64" Image32by32Left="-192"
+                        LabelText="$Resources:cmscore,Ribbon_Button_EditTermProperties_Text;"
+                        ToolTipTitle="$Resources:cmscore,Ribbon_Button_EditTermProperties_Text;"
+                        ToolTipDescription="$Resources:cmscore,Ribbon_Button_EditTermProperties_Description;"
+                        Alt="$Resources:cmscore,Ribbon_Button_EditTermProperties_Text" />
+                </CommandUIDefinition>
+            </CommandUIDefinitions>
+        </CommandUIExtension>
+    </CustomAction>
+    <CustomAction Id="Ribbon.WikiPageTab.Manage.EditPageUrls"
+        Location="CommandUI.Ribbon"
+        Sequence="30"
+        Title="Edit Page URLs">
+        <CommandUIExtension>
+            <CommandUIDefinitions>
+                <CommandUIDefinition Location="Ribbon.WikiPageTab.Manage.Controls._children">
+                    <Button Id="Ribbon.WikiPageTab.Manage.EditPageUrls"
+                        Sequence="25"
+                        Command="EditPageUrls"
+                        Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-240" Image16by16Left="-128"
+                        Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-32" Image32by32Left="-192"
+                        LabelText="$Resources:cmscore,Ribbon_Button_EditPageUrls_Text;"
+                        ToolTipTitle="$Resources:cmscore,Ribbon_Button_EditPageUrls_Text;"
+                        ToolTipDescription="$Resources:cmscore,Ribbon_Button_EditPageUrls_Description;"
+                        Alt="$Resources:cmscore,Ribbon_Button_EditPageUrls_Text"
+                        TemplateAlias="o1" />
+                </CommandUIDefinition>
+            </CommandUIDefinitions>
+        </CommandUIExtension>
+    </CustomAction>
+    <CustomAction Id="Ribbon.WikiPageTab.Manage.DeleteFriendlyUrlPage"
+        Location="CommandUI.Ribbon"
+        Sequence="40"
+        Title="Delete Friendly URL Page">
+        <CommandUIExtension>
+            <CommandUIDefinitions>
+                <CommandUIDefinition Location="Ribbon.WikiPageTab.Manage.Controls._children">
+                    <Button
+                        Id="Ribbon.WikiPageTab.Manage.DeleteFriendlyUrlPage"
+                        Sequence="55"
+                        Alt="$Resources:core,DeletePage;"
+                        Command="DeleteFriendlyUrlPage"
+                        Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-271" Image16by16Left="-271"
+                        Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-69" Image32by32Left="-511"
+                        LabelText="$Resources:core,DeletePage;"
+                        TemplateAlias="o2"
+                        ToolTipTitle="$Resources:core,DeletePage;"
+                        ToolTipDescription="$Resources:core,cui_STT_DeletePage;"/>
+                </CommandUIDefinition>
+            </CommandUIDefinitions>
+        </CommandUIExtension>
+    </CustomAction>
+</Elements>

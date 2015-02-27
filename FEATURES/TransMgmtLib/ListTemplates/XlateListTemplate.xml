@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="xlatelist"
+        Type="1301"
+        BaseType="0"
+        OnQuickLaunch="TRUE"
+        FolderCreation="FALSE"
+        SecurityBits="11"
+        DisplayName="$Resources:XlateListDisplayName"
+        Description="$Resources:XlateListDescription"
+        Image="/_layouts/15/images/itmltl.gif?rev=23">
+    </ListTemplate>
+</Elements>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template>
+	<!-- Education profile db schema -->
+	<!-- this is a Site feature, and the ServiceContext is initialized in the Site -->
+	<ServiceContext>
+
+		<!-- define the user profile DB schema -->
+		<UserProfileConfigManager>
+			<ProfilePropertyManager>
+
+				<!-- define the core properties -->
+				<CorePropertyManager>
+					<CoreProperty>
+						<Name>EduUserRole</Name>
+						<DisplayName>Role</DisplayName>
+						<Type>Integer</Type>
+					</CoreProperty>
+					<CoreProperty>
+						<Name>EduPersonalSiteState</Name>
+						<DisplayName>PersonalSiteState</DisplayName>
+						<Type>BigInteger</Type>
+					</CoreProperty>
+					<CoreProperty>
+						<Name>EduExternalSyncState</Name>
+						<DisplayName>EduExternalSyncState</DisplayName>
+						<Type>Integer</Type>
+					</CoreProperty>
+					<CoreProperty>
+						<Name>SISUserId</Name>
+						<DisplayName>SIS UserId</DisplayName>
+						<Type>String</Type>
+						<Length>400</Length>
+					</CoreProperty>
+				</CorePropertyManager>
+
+				<ProfileTypePropertyManager ProfileType="User">
+					<ProfileTypeProperty>
+						<Name>EduUserRole</Name>
+					</ProfileTypeProperty>
+					<ProfileTypeProperty>
+						<Name>EduPersonalSiteState</Name>
+					</ProfileTypeProperty>
+					<ProfileTypeProperty>
+						<Name>EduExternalSyncState</Name>
+					</ProfileTypeProperty>
+					<ProfileTypeProperty>
+						<Name>SISUserId</Name>
+					</ProfileTypeProperty>
+				</ProfileTypePropertyManager>
+
+			</ProfilePropertyManager>
+		</UserProfileConfigManager>
+
+		<!-- define the user profile DB subtypes -->
+		<ProfileSubtypeManager>
+
+			<!-- define the default user profile subtype -->
+			<ProfileSubtype ProfileType="User" Name="UserProfile">
+				<!-- TODO: localize this to align with ProfileDBLoc_ProfileSubtype_UserProfile -->
+				<DisplayName>Default User Profile Subtype</DisplayName>
+
+				<!-- associate profile type properties with the profile subtype -->
+				<ProfileSubtypePropertyManager>
+					<ProfileSubtypeProperty Name="EduUserRole">
+						<IsUserEditable>True</IsUserEditable>
+					</ProfileSubtypeProperty>
+					<ProfileSubtypeProperty Name="EduPersonalSiteState">
+						<IsUserEditable>True</IsUserEditable>
+					</ProfileSubtypeProperty>
+					<ProfileSubtypeProperty Name="EduExternalSyncState">
+						<IsUserEditable>True</IsUserEditable>
+					</ProfileSubtypeProperty>
+					<ProfileSubtypeProperty Name="SISUserId">
+						<IsUserEditable>False</IsUserEditable>
+					</ProfileSubtypeProperty>
+				</ProfileSubtypePropertyManager>
+			</ProfileSubtype>
+
+		</ProfileSubtypeManager>
+
+	</ServiceContext>
+</Template>

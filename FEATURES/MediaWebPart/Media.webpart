@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Microsoft.SharePoint.Publishing.WebControls.MediaWebPart,Microsoft.SharePoint.Publishing,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+      <importErrorMessage>$Resources:cmscore,WebPartImportError</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title">$Resources:cmscore,MediaWebPart_Title</property>
+        <property name="Description">$Resources:cmscore,MediaWebPart_Description</property>
+        <property name="ChromeType">None</property>
+        <property name="ChromeState">Normal</property>
+        <property name="Width">640px</property>
+        <property name="Height">360px</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

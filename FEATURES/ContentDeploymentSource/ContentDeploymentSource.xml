@@ -1,0 +1,15 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <!-- Content Deployment Source - Site collection administration menu -->
+    <CustomAction
+        Id="CDSourceStatus"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Sequence="120"
+        Title="$Resources:cmscore,Settings_CDSourceStatus_Title;"
+        Description="$Resources:cmscore,Settings_CDSourceStatus_Description;">
+        <UrlAction
+            Url="_layouts/15/CDSourceStatus.aspx" />
+    </CustomAction>
+</Elements>

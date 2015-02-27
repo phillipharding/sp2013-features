@@ -1,0 +1,47 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_DefaultTaxonomyRefinement</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:CompatibleManagedProperties msdt:dt="string"></mso:CompatibleManagedProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106601</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#TaxonomyRefinement;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+<div id="Control_TaxonomyRefinement">
+    <div class="ms-ref-ctrl" id="TaxonomyRefinement" name="Control">
+<!--#_
+        var hasControl = !$isNull(ctx.ClientControl);
+        var hasNoTaxonomyNodes = ($isEmptyArray(ctx.ListData));
+
+        if(hasControl)
+        { 
+            if(hasNoTaxonomyNodes)
+            {
+_#-->
+        <div id="EmptyContainer"></div>
+<!--#_
+            }
+            else
+            {
+_#-->
+        <div class="ms-ref-refiner">
+            <div id="Container">
+                _#= ctx.RenderItems(ctx) =#_
+            </div>
+        </div>
+<!--#_
+            }
+        }
+_#-->
+
+    </div>
+</div>
+</body>
+</html>

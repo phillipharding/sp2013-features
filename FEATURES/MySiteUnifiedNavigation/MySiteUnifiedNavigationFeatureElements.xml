@@ -1,0 +1,32 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="MasterPages" Url="_catalogs/masterpage" Path="" RootWebOnly="TRUE">
+        <File Url="mysite15.master" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:spscore,MySiteMaster15_Title;" />
+            <Property Name="MasterPageDescription" Value="$Resources:spscore,MySiteMaster15_Description;" />
+        </File>
+    </Module>
+    <HideCustomAction
+        Id="HideSaveAsTemplate"
+        HideActionId="SaveAsTemplate"
+        GroupId="SiteTasks"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideEnableSearchConfigExport"
+        HideActionId="EnableSearchConfigExport"
+        GroupId="SiteTasks"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <Control Id="QuickLaunchDataSource" Sequence="25"
+        ControlClass="System.Web.UI.WebControls.SiteMapDataSource"
+        ControlAssembly="System.Web, version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+            <Property Name="SiteMapProvider">MySiteHostQuickLaunchProvider</Property>
+            <Property Name="ShowStartingNode">false</Property>
+            <Property Name="ID">QuickLaunchSiteMap</Property>
+    </Control>
+    <Control Id="MySiteUserQLDataSource" Sequence="25"
+        ControlClass="System.Web.UI.WebControls.SiteMapDataSource"
+        ControlAssembly="System.Web, version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+            <Property Name="SiteMapProvider">MySitePersonalQuickLaunchProvider</Property>
+            <Property Name="ShowStartingNode">false</Property>
+            <Property Name="ID">MySiteUserQLSiteMap</Property>
+    </Control>
+</Elements>

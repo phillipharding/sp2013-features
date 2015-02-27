@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="FAF00902-6BAB-4583-BD02-84DB191801D8"
+        Title="$Resources:core,blogFeatureTitle;" 
+        Description="$Resources:core,blogFeatureDesc;" 
+        Version="15.0.2.0"
+        ImageUrl=""
+        Scope="Web"
+        Hidden="TRUE"
+        DefaultResourceFile="core"
+        ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        ReceiverClass="Microsoft.SharePoint.SPBlogFeatureReceiver"
+        xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="Elements.xml" />
+    </ElementManifests>
+    <UpgradeActions
+       ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+       ReceiverClass="Microsoft.SharePoint.SPBlogFeatureReceiver">
+        <VersionRange EndVersion="15.0.0.2">
+            <CustomUpgradeAction Name="AddNotificationsWebPart"/>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.1.0">
+            <CustomUpgradeAction Name="SetWelcomePage"/>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.2.0">
+            <CustomUpgradeAction Name="MakeQueryStringViewsReadOnly"/>
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

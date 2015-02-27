@@ -1,0 +1,7 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="ProjectSearchBrowseWebPart" Url="_catalogs/wp" Path="dwp" RootWebOnly="TRUE">
+        <File Type="GhostableInLibrary" Url="ProjectSearchBrowse.webpart">
+            <Property Name="Group" Value="$Resources:spscore,ProjectDiscoveryWebpartGroup;" />
+        </File>
+    </Module>
+</Elements>

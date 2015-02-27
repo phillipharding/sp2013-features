@@ -1,0 +1,103 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="PageUpload" Url="$Resources:osrvcore,List_Pages_UrlName;" Path="">
+        <File Url="conversationresults.aspx" Type="GhostableInLibrary">
+            <Property Name="PublishingPageLayout" Value="~SiteCollection/_catalogs/masterpage/searchresults.aspx, $Resources:Microsoft.Office.Server.Search,SearchResultsTitle;" />
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,Search_Conversation_Results_Page_Title;" />
+            <Property Name="ContentType" Value="$Resources:Microsoft.Office.Server.Search,contenttype_welcomepage_name;" />
+            <AllUsersWebPart WebPartZoneID="NavigationZone" WebPartOrder="1">
+                <![CDATA[
+                    <webParts>
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                            <metaData>
+                                <type name="Microsoft.Office.Server.Search.WebControls.RefinementScriptWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                            </metaData>
+                            <data>	
+                                <properties>
+                                    <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,RefinementScript_Title;</property>
+                                    <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,RefinementScript_Desc;</property>
+                                    <property name="ChromeType">None</property>
+                                    <property name="AllowMinimize" type="bool">true</property>
+                                    <property name="AllowClose" type="bool">true</property>
+                                    <property name="Hidden" type="bool">false</property>
+
+                                    <property name="SelectedRefinementControlsJson" type="string">{"refinerConfigurations":[{"propertyName":"Tags","propertyID":null,"displayName":null,"displayTemplate":"~sitecollection/_catalogs/masterpage/Display Templates/Filters/Filter_Default.js","maxNumberRefinementOptions":7,"type":null,"description":null,"refinerSpecStringOverride":null,"useDefaultDateIntervals":false,"countDisplay":0,"isInherited":false,"sortBy":0,"sortOrder":0},{"propertyName":"DisplayAuthor","propertyID":null,"displayName":null,"displayTemplate":"~sitecollection/_catalogs/masterpage/Display Templates/Filters/Filter_Default.js","maxNumberRefinementOptions":7,"type":null,"description":null,"refinerSpecStringOverride":null,"useDefaultDateIntervals":false,"countDisplay":0,"isInherited":false,"sortBy":0,"sortOrder":0},{"propertyName":"Created","propertyID":null,"displayName":null,"displayTemplate":"~sitecollection/_catalogs/masterpage/Display Templates/Filters/Filter_SliderBarGraph.js","maxNumberRefinementOptions":0,"type":null,"description":null,"refinerSpecStringOverride":null,"useDefaultDateIntervals":true,"countDisplay":0,"isInherited":false,"sortBy":0,"sortOrder":0}]}</property>
+                                </properties>
+                            </data>
+                        </webPart>
+                    </webParts>
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="MainZone" WebPartOrder="1">
+                <![CDATA[
+                    <webParts>
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                            <metaData>
+                                <type name="Microsoft.Office.Server.Search.WebControls.SearchBoxScriptWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                            </metaData>
+                            <data>
+                                <properties>
+                                    <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,SearchBoxWP_Title;</property>
+                                    <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,SearchBoxWP_Desc;</property>
+                                    <property name="ChromeType">None</property>
+                                    <property name="AllowMinimize" type="bool">true</property>
+                                    <property name="AllowClose" type="bool">true</property>
+                                    <property name="Hidden" type="bool">false</property>
+                                    <property name="PageTitlePrefix" type="string">$Resources:Microsoft.Office.Server.Search, SearchConversationResultsPageTitle;</property>
+                                </properties>
+                            </data>
+                        </webPart>
+                    </webParts>
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="MainZone" WebPartOrder="2">
+                <![CDATA[
+                    <webParts>
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                            <metaData>
+                                <type name="Microsoft.Office.Server.Search.WebControls.SearchNavigationWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                            </metaData>
+                            <data>
+                                <properties>
+                                    <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,SearchNavigation_Title;</property>
+                                    <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,SearchNavigation_Desc;</property>
+                                    <property name="ChromeType">None</property>
+                                    <property name="AllowMinimize" type="bool">true</property>
+                                    <property name="AllowClose" type="bool">true</property>
+                                    <property name="Hidden" type="bool">false</property>
+                                </properties>
+                            </data>
+                        </webPart>
+                    </webParts>
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="MainZone" WebPartOrder="3">
+                <![CDATA[
+                    <webParts>
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                            <metaData>
+                                <type name="Microsoft.Office.Server.Search.WebControls.ResultScriptWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                            </metaData>
+                            <data>
+                                <properties>
+                                    <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,ResultsScriptWP_Title;</property>
+                                    <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,ResultsScriptWP_Desc;</property>
+                                    <property name="ChromeType">None</property>
+                                    <property name="AllowMinimize" type="bool">true</property>
+                                    <property name="AllowClose" type="bool">true</property>
+                                    <property name="Hidden" type="bool">false</property>
+
+                                    <property name="DataProviderJSON" type="string">{"SourceID":"459dd1b7-216f-4386-9709-287d5d22f568","AsynchronousResultRetrieval":true,"ClientType":"AllResultsQuery"}</property>
+                                    <property name="PreloadedItemTemplateIdsJson" type="string">["~sitecollection/_catalogs/masterpage/Display Templates/Search/Group_Default.js","~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_Default.js","~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_Site.js","~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_MicroBlog.js","~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_Person.js","~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_Person_CompactHorizontal.js"]</property>
+                                </properties>
+                            </data>
+                        </webPart>
+                    </webParts>
+                ]]>
+            </AllUsersWebPart>
+        </File>
+    </Module>
+</Elements>

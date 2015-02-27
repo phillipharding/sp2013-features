@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="1B811CFE-8C78-4982-AAD7-E5C112E397D1"
+        Title="$Resources:core,MonitoredAppsUI_FeatureName;" 
+        Description="$Resources:core,MonitoredAppsUI_FeatureDesc;" 
+        Scope="Farm" 
+        Hidden="True"
+        DefaultResourceFile="core"
+        xmlns="http://schemas.microsoft.com/sharepoint/">		
+    <ElementManifests>
+        <ElementManifest Location="elements.xml" />
+    </ElementManifests>
+</Feature>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">    
+     <CustomActionGroup
+        Id="CA_Education"
+        Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"
+        Title="$Resources:eduserver, IDS_EducationAdminTitle;"
+        Sequence="10"
+        ImageUrl="/_layouts/15/images/manageclassesandgroups.32x32x32.png?rev=23" />
+    <CustomAction
+        Id="Edu_Manage_Community"
+        GroupId="CA_Education"
+        Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"
+        Sequence="10"
+        Title="$Resources:eduserver,IDS_ManageCommunityLink;"
+        Description="$Resources:eduserver,IDS_ManageCommunityLinkDescription;">
+        <UrlAction
+            Url="/SitePages/Edu/ManageCourses.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="Edu_Import_Data"
+        GroupId="CA_Education"
+        Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"
+        Sequence="20"
+        Title="$Resources:eduserver,IDS_ImportDataLink;"
+        Description="$Resources:eduserver,IDS_ImportDataLinkDescription;">
+        <UrlAction
+            Url="/SitePages/Edu/DataImport.aspx" />
+    </CustomAction>
+	<CustomAction
+        Id="Edu_Results_Reports"
+        GroupId="CA_Education"
+        Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"
+        Sequence="40"
+        Title="$Resources:eduserver,IDS_ResultsAndReportsLink;"
+        Description="$Resources:eduserver,IDS_ResultsAndReportsLinkDescription;">
+        <UrlAction
+            Url="/SitePages/Edu/ResultsAndReports.aspx" />
+    </CustomAction>
+	<CustomAction
+        Id="Edu_Manage_Group_Creation_Links"
+        GroupId="CA_Education"
+        Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"
+        Sequence="50"
+        Title="$Resources:eduserver,IDS_ManageGroupCreationLinksAction;"
+        Description="$Resources:eduserver,IDS_ManageGroupCreationLinksActionDescription;">
+        <UrlAction
+            Url="/SitePages/Edu/ManageOfficeGroupLink.aspx" />
+    </CustomAction>
+</Elements>

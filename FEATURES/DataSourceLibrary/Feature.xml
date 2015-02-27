@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="00BFEA71-F381-423D-B9D1-DA7A54C50110"
+    Title="$Resources:core,datasourcelibraryFeatureTitle;"
+    Description="$Resources:core,datasourcelibraryFeatureDesc;"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\DataSourceLibrary.xml" />
+    </ElementManifests>
+</Feature>

@@ -1,0 +1,19 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="SocialDataStoreList"
+        Type="550"
+        DisplayName="$Resources:spscore,SocialDataStoreList_List_Title;"
+        Description="$Resources:spscore,SocialDataStoreList_List_Description;"
+        BaseType="0"
+        DisableAttachments="TRUE"
+        DontSaveInTemplate="TRUE"
+        OnQuickLaunch="TRUE"
+        AllowDeletion="FALSE"
+        FolderCreation="FALSE"
+        Hidden="TRUE"
+        SecurityBits="11"
+        CacheSchema="TRUE"
+        Unique="TRUE"
+        Image="/_layouts/15/images/itgen.png?rev=23">
+    </ListTemplate>
+</Elements>

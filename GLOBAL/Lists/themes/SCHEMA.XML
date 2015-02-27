@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Name="ThemeCatalog" Title="$Resources:core,themegalleryList;" Url="_catalogs/theme" BaseType="1">
+  <MetaData>
+    <Fields>
+      <Field ID="{9da97a8a-1da5-4a77-98d3-4bc10456e700}" Name="ThemeDescription" DisplayName="$Resources:Description;" Type="Note" ShowInNewForm="TRUE" ShowInFileDlg="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="ThemeDescription">
+      </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,themegalleryList_AllThemes;" DefaultView="TRUE" Url="Forms/AllItems.aspx" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/wlicon.png?rev=23">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard">
+        </Toolbar>
+        <ViewFields>
+          <FieldRef Name="DocIcon">
+          </FieldRef>
+          <FieldRef Name="LinkFilename">
+          </FieldRef>
+          <FieldRef Name="Edit">
+          </FieldRef>
+          <FieldRef Name="Modified">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="FileLeafRef" />
+          </OrderBy>
+        </Query>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="Forms/DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="Forms/EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="Forms/Upload.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+    <DefaultDescription>$Resources:core,themegalleryList_Desc;</DefaultDescription>
+  </MetaData>
+</List>

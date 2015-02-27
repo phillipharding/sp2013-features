@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="00BFEA71-9549-43f8-B978-E47E54A10600"
+    Title="$Resources:core,externallistFeatureTitle;"
+    Description="$Resources:core,externallistFeatureDesc;"
+    Version="1.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\ExternalList.xml" />
+    </ElementManifests>
+</Feature>

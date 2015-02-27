@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+<Field
+    Name="AppContentMarket"
+    ID="{BEF27D40-47DA-4F7F-82F1-99B26A1D17B3}"
+    Type="Text" 
+    DisplayName="$Resources:core,Marketplace_AppContentMarketFieldTitle;"
+    Group="_Hidden"
+    Sealed="TRUE"
+    ReadOnly="FALSE"
+    ShowInEditForm="FALSE"
+    ShowInDisplayForm="TRUE"
+    ShowInNewForm="FALSE" />
+<Field
+    Name="AppBillingMarket"
+    ID="{C3322BD9-8148-4B2C-9939-AD36B6D99B15}"
+    Type="Text" 
+    DisplayName="$Resources:core,Marketplace_AppBillingMarketFieldTitle;"
+    Group="_Hidden"
+    Sealed="TRUE"
+    ReadOnly="FALSE"
+    ShowInEditForm="FALSE"
+    ShowInDisplayForm="TRUE"
+    ShowInNewForm="FALSE" />
+<Field
+    Name="AppRequestSeats"
+    ID="{CD62CD73-8268-434D-A1DD-C7B62CB1267B}"
+    Type="Integer" 
+    DisplayName="$Resources:core,Marketplace_AppRequestSeatsFieldTitle;"
+    Group="_Hidden"
+    Sealed="TRUE"
+    ReadOnly="FALSE"
+    ShowInEditForm="TRUE"
+    ShowInDisplayForm="TRUE"
+    ShowInNewForm="TRUE">
+    <Default>1</Default>
+</Field>
+<Field
+    Name="AppRequestIsSiteLicense"
+    ID="{F419FC3C-7EE5-47F6-9175-B5C337698963}"
+    Type="Boolean" 
+    DisplayName="$Resources:core,Marketplace_AppRequestIsSiteLicenseFieldTitle;"
+    Group="_Hidden"
+    Sealed="TRUE"
+    ReadOnly="FALSE"
+    ShowInEditForm="TRUE"
+    ShowInDisplayForm="TRUE"
+    ShowInNewForm="TRUE">
+    <Default>0</Default>
+</Field>
+<Field
+    Name="AppRequestJustification"
+    ID="{0628F37E-8691-414A-8491-D7E1F44B0964}"
+    Type="Note" 
+    DisplayName="$Resources:core,Marketplace_AppRequestJustificationFieldTitle;"
+    Group="_Hidden"
+    Sealed="TRUE"
+    ReadOnly="FALSE"
+    ShowInEditForm="TRUE"
+    ShowInDisplayForm="TRUE"
+    ShowInNewForm="TRUE" />
+<Field
+    Name="AppRequestStatus"
+    ID="{0D4B4289-33B2-4277-8404-E28FB699A403}"
+    Type="Choice"
+    DisplayName="$Resources:core,Marketplace_AppRequestStatusFieldTitle;"
+    Group="_Hidden"
+    Sealed="TRUE"
+    ReadOnly="FALSE"
+    ShowInEditForm="TRUE"
+    ShowInDisplayForm="TRUE"
+    ShowInNewForm="FALSE">
+    <CHOICES> 
+        <CHOICE>$Resources:core,Marketplace_AppRequestStatus_New;</CHOICE>
+        <CHOICE>$Resources:core,Marketplace_AppRequestStatus_Pending;</CHOICE>
+        <CHOICE>$Resources:core,Marketplace_AppRequestStatus_Approved;</CHOICE>
+        <CHOICE>$Resources:core,Marketplace_AppRequestStatus_Declined;</CHOICE>
+        <CHOICE>$Resources:core,Marketplace_AppRequestStatus_Canceled;</CHOICE>
+        <CHOICE>$Resources:core,Marketplace_AppRequestStatus_ApproveClosed;</CHOICE>
+        <CHOICE>$Resources:core,Marketplace_AppRequestStatus_DeclineClosed;</CHOICE>
+    </CHOICES>
+    <Default>$Resources:core,Marketplace_AppRequestStatus_New;</Default>
+</Field>
+<Field
+    Name="AppRequestApprovedBy"
+    ID="{D2F7B98A-E911-4ACE-9195-A187499F00A1}"
+    Type="User" 
+    DisplayName="$Resources:core,Marketplace_AppRequestApprovedByFieldTitle;"
+    Group="_Hidden"
+    Sealed="TRUE"
+    ReadOnly="FALSE"
+    ShowInEditForm="TRUE"
+    ShowInDisplayForm="TRUE"
+    ShowInNewForm="FALSE" />
+<Field
+    Name="AppRequestApproverComments"
+    ID="{4509C4F1-A6D5-4ED7-955D-C0C9693F88EC}"
+    DisplayName="$Resources:core,Marketplace_AppRequestApproverCommentsFieldTitle;"
+    Type="Note" 
+    Group="_Hidden"
+    Sealed="TRUE"
+    ReadOnly="FALSE"
+    ShowInEditForm="TRUE"
+    ShowInDisplayForm="TRUE"
+    ShowInNewForm="FALSE" />
+<Field
+    ID="{28612BF7-7676-4652-BE68-45F6A38C53BB}"
+    DisplayName="$Resources:core,Marketplace_AppRequestViewAppDetailsFieldTitle;"
+    Name="AppRequestViewAppDetails"
+    Type="Computed"
+    Group="_Hidden"
+    Sealed="TRUE"
+    Filterable="FALSE"
+    Sortable="FALSE"
+    ShowInEditForm="TRUE"
+    ShowInDisplayForm="TRUE"
+    ShowInNewForm="FALSE">
+    <FieldRefs>
+        <FieldRef ID="{C3322BD9-8148-4B2C-9939-AD36B6D99B15}" Name="AppBillingMarket" />
+        <FieldRef ID="{BEF27D40-47DA-4F7F-82F1-99B26A1D17B3}" Name="AppContentMarket"/>
+        <FieldRef ID="{D3321FFF-46F3-407d-89EF-FFF1E075A018}" Name="AssetID" />
+    </FieldRefs>
+    <DisplayPattern>
+        <HTML><![CDATA[<a href="]]></HTML>
+        <HttpVDir/>
+        <HTML><![CDATA[/_layouts/15/storefront.aspx?source=]]></HTML>
+        <URL Cmd="EDIT" />
+        <HTML><![CDATA[&sname=]]></HTML>
+        <HTML><![CDATA[$Resources:core,Marketplace_AppRequestsListInstanceTitle;]]></HTML>
+        <HTML><![CDATA[#vw=AppDetailsView,clg=0,app=]]></HTML>
+        <Column Name="AssetID" HTMLEncode="TRUE" />
+        <HTML><![CDATA[,bm=]]></HTML>
+        <Column Name="AppBillingMarket" HTMLEncode="TRUE" />
+        <HTML><![CDATA[,cm=]]></HTML>
+        <Column Name="AppContentMarket" HTMLEncode="TRUE" />
+        <HTML><![CDATA[" target="_blank">$Resources:core,Marketplace_AppRequestViewAppDetailsText;</a>]]></HTML>
+    </DisplayPattern>
+</Field>
+<Field ID="{0AD40F37-A70E-4527-96F1-178B766DEF0E}"
+    DisplayName="$Resources:core,Marketplace_AppRequesterFieldTitle;"
+    Name="AppRequester"
+    Group="_Hidden"
+    Type="User"
+    Sealed="TRUE"
+    ReadOnly="FALSE"
+    Indexed="TRUE" 
+    ShowInEditForm="TRUE"
+    ShowInDisplayForm="TRUE"
+    ShowInNewForm="FALSE" />
+</Elements>

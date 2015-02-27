@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Microsoft.SharePoint.Portal.WebControls.TasksAndToolsWebPart,Microsoft.SharePoint.Portal,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+      <importErrorMessage>$Resources:spscore,WPImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="SampleData">
+         &lt;dsQueryResponse&gt;
+          &lt;NewDataSet&gt;
+           &lt;Row /&gt;
+          &lt;/NewDataSet&gt; 
+         &lt;/dsQueryResponse&gt;
+        </property>
+	<property name="Xsl" type="string"><![CDATA[
+                                    <xsl:stylesheet xmlns:x="http://www.w3.org/2001/XMLSchema"
+                                    version="1.0" exclude-result-prefixes="xsl ddwrt slwrt msxsl" xmlns:ddwrt="http://schemas.microsoft.com/WebParts/v2/DataView/runtime" xmlns:slwrt="http://schemas.microsoft.com/WebParts/v3/SummaryLink/runtime"
+                                        xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:tnt="urn:schemas-microsoft-com:sharepoint:TasksAndToolsWebPart" >
+
+                                        <xsl:param name="tasksAndtools_IsRTL" />
+                                        <xsl:param name="tasksAndTools_Width" />
+                                        <xsl:param name="tasksAndTools_WebpartID" />
+
+                                        <xsl:template match="/">
+                                            <xsl:call-template name="MainTemplate"/>
+                                        </xsl:template>
+
+                                        <xsl:template name="MainTemplate" xmlns:ddwrt="http://schemas.microsoft.com/WebParts/v2/DataView/runtime" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+                                            <xsl:variable name="Rows" select="/dsQueryResponse/NewDataSet/Row"/>
+                                            <xsl:variable name="RowCount" select="count($Rows)"/>
+                                            <xsl:variable name="TasksAndToolsDDID" select="concat($tasksAndTools_WebpartID,'_TasksAndToolsDDID')"/>
+                                            <xsl:variable name="TasksAndToolsGo" select="concat($tasksAndTools_WebpartID,'_TasksAndToolsGo')"/>
+
+                                            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; margin:0px;">
+                                                <tr style="margin-top:3px;margin-bottom:1px;height:28px;border:0px;">
+                                                    <td style="padding-left:4px; white-space:nowrap ;">
+                                                        <xsl:if test="string-length($tasksAndTools_Width) != 0">                                                        
+                                                            <select id="{$TasksAndToolsDDID}" class="ms-selwidth" style="width:{$tasksAndTools_Width}" size="1" title="$Resources:spscore,INeedToDropDown_Title_Text;" >
+                                                            <option selected="true" value="0">$Resources:spscore,INeedToDefaultChoice;</option>
+                                                            <xsl:call-template name="MainTemplate.body">
+                                                                <xsl:with-param name="Rows" select="$Rows"/>
+                                                            </xsl:call-template>
+                                                        </select>
+                                                        </xsl:if>
+                                                        <xsl:if test="string-length($tasksAndTools_Width) = 0">
+                                                        <select id="{$TasksAndToolsDDID}" class="ms-selwidth" size="1" title="$Resources:spscore,INeedToDropDown_Title_Text;">
+                                                            <option selected="true" value="0">$Resources:spscore,INeedToDefaultChoice;</option>
+                                                            <xsl:call-template name="MainTemplate.body">
+                                                                <xsl:with-param name="Rows" select="$Rows"/>
+                                                            </xsl:call-template>
+                                                        </select>
+                                                        </xsl:if>
+                                                    </td>
+                                                    <xsl:if test="$tasksAndtools_IsRTL = true()">
+                                                    <td style="padding-right:5px; padding-left: 14px;white-space:nowrap ;">                                                               
+                                                        <a id="{$TasksAndToolsGo}" accesskey="G" title="Go" href="{concat(&quot;javascript:TATWP_jumpMenu('&quot;,$TasksAndToolsDDID,&quot;')&quot;)}">
+                                                            <img title="$Resources:spscore,TasksAndTools_GoImage_ToolTip;" alt="$Resources:spscore,TasksAndTools_GoImage_ToolTip;" border="0" src="/_layouts/images/icongo01RTL.gif" style="border-width:0px;" onmouseover="this.src='/_layouts/images/icongo02RTL.gif'" onmouseout="this.src='/_layouts/images/icongo01RTL.gif'"/>
+                                                        </a>
+                                                    </td>
+                                                    </xsl:if>
+                                                    <xsl:if test="$tasksAndtools_IsRTL = false()">
+                                                    <td style="padding-right:14px; padding-left: 5px;white-space:nowrap ;">                                                               
+                                                        <a id="{$TasksAndToolsGo}" accesskey="G" title="Go" href="{concat(&quot;javascript:TATWP_jumpMenu('&quot;,$TasksAndToolsDDID,&quot;')&quot;)}">
+                                                            <img title="$Resources:spscore,TasksAndTools_GoImage_ToolTip;" alt="$Resources:spscore,TasksAndTools_GoImage_ToolTip;" border="0" src="/_layouts/images/icongo01.gif" style="border-width:0px;" onmouseover="this.src='/_layouts/images/icongo02.gif'" onmouseout="this.src='/_layouts/images/icongo01.gif'" />
+                                                        </a>
+                                                    </td>                                                                    
+                                                    </xsl:if>
+                                                </tr>
+                                            </table>
+                                        </xsl:template>
+
+                                        <xsl:template name="MainTemplate.body" xmlns:ddwrt="http://schemas.microsoft.com/WebParts/v2/DataView/runtime" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+                                            <xsl:param name="Rows"/>
+                                            <xsl:for-each select="$Rows">
+                                                <xsl:variable name="GroupStyle" select="'auto'"/>
+                                                <option style="display:{$GroupStyle}" value="{ddwrt:EnsureAllowedProtocol(substring-before(@URL, ', '))}" > 
+                                                    <xsl:value-of select="@Title"/>
+                                                </option>
+                                            </xsl:for-each>
+                                        </xsl:template>
+                                    </xsl:stylesheet>
+    ]]>
+    </property>
+    <property name="Title" type="string">$Resources:spscore,INeedToWP_Title;</property>
+    <property name="Description" type="string">$Resources:spscore,INeedToWP_Description;</property>
+    <property name="ChromeType">Default</property>
+    <property name="ChromeState">Normal</property>
+        <property name="TasksAndToolsWebUrl" type="string">/SiteDirectory</property>
+       <property name="TasksAndToolsListName" type="string">$Resources:spscore,SitesOnet_SitesList_Title;</property>
+    <property name="FilterCategory" type="string">TasksAndTools</property>
+    <property name="FilterFieldValue" type="string">$Resources:spscore,SitesList_TopTasks_Text;</property>
+     </properties>
+    </data>
+  </webPart>
+</webParts>

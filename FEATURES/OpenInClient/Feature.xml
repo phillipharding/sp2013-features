@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="8A4B8DE2-6FD8-41e9-923C-C7C3C00F8295"
+          Title="$Resources:Core,OpenInClientFeatureTitle"
+          Description="$Resources:Core,OpenInClientFeatureDescription" 
+          Version="1.0.0.0"
+          Scope="Site"
+          Hidden="FALSE"
+          DefaultResourceFile="Core"         
+          xmlns="http://schemas.microsoft.com/sharepoint/">          
+</Feature>

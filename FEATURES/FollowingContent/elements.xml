@@ -1,0 +1,141 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Control Id="AdditionalPageHead"
+    ControlClass="Microsoft.SharePoint.Portal.WebControls.FollowingScriptControl"
+    ControlAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+  <Control Id="PromotedActions"
+    ControlClass="Microsoft.SharePoint.Portal.WebControls.SPFollowPromotedActionButton"
+    ControlAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+  <CustomAction
+    Id="FollowingCalloutScriptBlock"
+    Location="ScriptLink"
+    ScriptBlock="(function(){
+
+        if (typeof(_spBodyOnLoadFunctions) === 'undefined' || _spBodyOnLoadFunctions === null) {
+            return;
+        }
+        _spBodyOnLoadFunctions.push(function() {
+
+            if (typeof(SPClientTemplates) === 'undefined' || SPClientTemplates === null || (typeof(APD_InAssetPicker) === 'function' &amp;&amp; APD_InAssetPicker())) {
+                return;
+            }
+
+            var renderFollowFooter = function(renderCtx,  calloutActionMenu)
+            {
+                if (renderCtx.ListTemplateType == 700) 
+                    myDocsActionsMenuPopulator(renderCtx, calloutActionMenu);
+                else
+                    CalloutOnPostRenderTemplate(renderCtx, calloutActionMenu);
+
+                var listItem = renderCtx.CurrentItem;
+                if (typeof(listItem) === 'undefined' || listItem === null) {
+                    return;
+                }
+                if (listItem.FSObjType == 0) {
+                    calloutActionMenu.addAction(new CalloutAction({
+                        text: Strings.STS.L_CalloutFollowAction,
+                        tooltip: Strings.STS.L_CalloutFollowAction_Tooltip,
+                        onClickCallback: function (calloutActionClickEvent, calloutAction) {
+                            var callout = GetCalloutFromRenderCtx(renderCtx);
+                            if (!(typeof(callout) === 'undefined' || callout === null))
+                                callout.close();
+                            SP.SOD.executeFunc('followingcommon.js', 'FollowSelectedDocument', function() { FollowSelectedDocument(renderCtx); });
+                        }
+                    }));
+                }
+            };
+
+            var registerOverride = function(id) {
+                var followingOverridePostRenderCtx = {};
+                followingOverridePostRenderCtx.BaseViewID = 'Callout';
+                followingOverridePostRenderCtx.ListTemplateType = id;
+                followingOverridePostRenderCtx.Templates = {};
+                followingOverridePostRenderCtx.Templates.Footer = function(renderCtx) {
+                    var  renderECB;
+                    if (typeof(isSharedWithMeView) === 'undefined' || isSharedWithMeView === null) {
+                        renderECB = true;
+                    } else {
+                        var viewCtx = getViewCtxFromCalloutCtx(renderCtx);
+                        renderECB = !isSharedWithMeView(viewCtx);
+                    }
+                    return CalloutRenderFooterTemplate(renderCtx, renderFollowFooter, renderECB);
+                };
+                SPClientTemplates.TemplateManager.RegisterTemplateOverrides(followingOverridePostRenderCtx);
+            }
+            registerOverride(101);
+            registerOverride(700);
+        });
+    })();"
+    UIVersion=">=15"
+    />
+
+  <CustomAction
+    Id="FollowingDocScriptBlock"
+    Location="ScriptLink"
+    ScriptBlock="(function(){
+
+        if (typeof(_spBodyOnLoadFunctions) === 'undefined' || _spBodyOnLoadFunctions === null) {
+            return;
+        }
+        _spBodyOnLoadFunctions.push(function() 
+        {
+          ExecuteOrDelayUntilScriptLoaded(
+            function()
+            {
+              var pairs = SP.ScriptHelpers.getDocumentQueryPairs();
+              var followDoc, itemId, listId, docName;
+              for (var key in pairs)
+              {
+                if(key.toLowerCase() == 'followdocument') 
+                  followDoc = pairs[key];
+                else if(key.toLowerCase() == 'itemid') 
+                  itemId = pairs[key];
+                else if(key.toLowerCase() == 'listid') 
+                  listId = pairs[key];
+                else if(key.toLowerCase() == 'docname') 
+                  docName = decodeURI(pairs[key]);
+              } 
+
+              if(followDoc != null &amp;&amp; followDoc == '1' &amp;&amp; listId!=null &amp;&amp; itemId != null &amp;&amp; docName != null)
+              {
+                SP.SOD.executeFunc('followingcommon.js', 'FollowDocumentFromEmail', function() 
+                { 
+                  FollowDocumentFromEmail(itemId, listId, docName);
+                });
+              }
+
+            }, 'SP.init.js');
+
+        });
+    })();"
+    UIVersion=">=15"
+  />
+
+  <CustomAction Id="Ribbon.Documents.Share.Follow" RegistrationType="List" RegistrationId="101" Location="CommandUI.Ribbon.ListView" UIVersion=">=15"> <CommandUIExtension> <CommandUIDefinitions> <CommandUIDefinition Location="Ribbon.Documents.Share.Controls._children"> <Button Id="Ribbon.Documents.Share.Follow" Sequence="5" Command="Ribbon.Documents.Share.Follow_CMD" Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-217" Image16by16Left="-127" Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-35" Image32by32Left="-375" LabelText="$Resources:spscore,ContentFollowingOnet_Ribbon_Follow_Text" TemplateAlias="o2" ToolTipTitle="$Resources:spscore,ContentFollowingOnet_Ribbon_Follow_Text" ToolTipDescription="$Resources:spscore,ContentFollowingOnet_Ribbon_Follow_TooltipText" /> </CommandUIDefinition> </CommandUIDefinitions> <CommandUIHandlers> <CommandUIHandler Command="Ribbon.Documents.Share.Follow_CMD" EnabledScript="javascript:            (function() {                var sel = SP.ListOperation.Selection.getSelectedItems();                if (sel.length != 1) { return false; }                if (sel[0].fsObjType == 0) { return true; }                return false;            })();" CommandAction="javascript: SP.SOD.executeFunc('followingcommon.js', 'FollowSelectedDocument', function() { FollowSelectedDocument(); });" /> </CommandUIHandlers> </CommandUIExtension> </CustomAction>
+  <CustomAction Id="Ribbon.Documents.Share.Follow" RegistrationType="List" RegistrationId="700" Location="CommandUI.Ribbon.ListView" UIVersion=">=15"> <CommandUIExtension> <CommandUIDefinitions> <CommandUIDefinition Location="Ribbon.Documents.Share.Controls._children"> <Button Id="Ribbon.Documents.Share.Follow" Sequence="5" Command="Ribbon.Documents.Share.Follow_CMD" Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-217" Image16by16Left="-127" Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-35" Image32by32Left="-375" LabelText="$Resources:spscore,ContentFollowingOnet_Ribbon_Follow_Text" TemplateAlias="o2" ToolTipTitle="$Resources:spscore,ContentFollowingOnet_Ribbon_Follow_Text" ToolTipDescription="$Resources:spscore,ContentFollowingOnet_Ribbon_Follow_TooltipText" /> </CommandUIDefinition> </CommandUIDefinitions> <CommandUIHandlers> <CommandUIHandler Command="Ribbon.Documents.Share.Follow_CMD" EnabledScript="javascript:            (function() {                var sel = SP.ListOperation.Selection.getSelectedItems();                if (sel.length != 1) { return false; }                if (sel[0].fsObjType == 0) { return true; }                return false;            })();" CommandAction="javascript: SP.SOD.executeFunc('followingcommon.js', 'FollowSelectedDocument', function() { FollowSelectedDocument(); });" /> </CommandUIHandlers> </CommandUIExtension> </CustomAction>
+
+  <Receivers ListTemplateId="101">
+    <Receiver>
+      <Name>Content Following Item Updated Event Receiver 101</Name>
+      <Type>ItemUpdated</Type>
+      <Assembly>Microsoft.Office.Server.UserProfiles, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+      <Class>Microsoft.Office.Server.UserProfiles.ContentFollowingItemEventReceiver</Class>
+    </Receiver>
+  </Receivers>
+  <Receivers ListTemplateId="700">
+    <Receiver>
+      <Name>Content Following Item Updated Event Receiver 700</Name>
+      <Type>ItemUpdated</Type>
+      <Assembly>Microsoft.Office.Server.UserProfiles, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+      <Class>Microsoft.Office.Server.UserProfiles.ContentFollowingItemEventReceiver</Class>
+    </Receiver>
+  </Receivers>
+  <Receivers Scope="Site">
+    <Receiver>
+      <Name>Auto-Follow New Site Event receiver</Name>
+      <Type>WebProvisioned</Type>
+      <Synchronization>Asynchronous</Synchronization>
+      <Assembly>Microsoft.Office.Server.UserProfiles, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+      <Class>Microsoft.Office.Server.UserProfiles.ContentFollowingWebEventReceiver</Class>
+    </Receiver>
+  </Receivers>
+</Elements>

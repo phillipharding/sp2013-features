@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Name="DesignCatalog" Title="$Resources:core,designgalleryList;" Url="_catalogs/design" BaseType="0">
+  <MetaData>
+    <Fields>
+      <Field Name="Name" ID="{bfc6f32c-668c-43c4-a903-847cca2f9b3c}" DisplayName="$Resources:core,Name;" Type="Text" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Name">
+      </Field>
+      <Field Name="MasterPageUrl" ID="{B65D5645-28C4-44B5-8F87-C49250C5C98C}" DisplayName="$Resources:core,designgalleryField_MasterPageUrl;" Type="URL" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="MasterPageUrl">
+      </Field>
+      <Field Name="ThemeUrl" ID="{F0490CD6-93E0-42BD-8DE3-1BE68E3045F1}" DisplayName="$Resources:core,designgalleryField_ThemeUrl;" Type="URL" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="ThemeUrl">
+      </Field>
+      <Field Name="ImageUrl" ID="{833CB87D-835F-4FA7-8927-E781C890F023}" DisplayName="$Resources:core,designgalleryField_ImageUrl;" Type="URL" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="ImageUrl">
+      </Field>
+      <Field Name="FontSchemeUrl" ID="{B5DFC328-900E-4306-93E1-43C74A847320}" DisplayName="$Resources:core,designgalleryField_FontSchemeUrl;" Type="URL" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="FontSchemeUrl">
+      </Field>
+      <Field Name="DisplayOrder" ID="{2CC33755-5880-44C7-925C-FD41FD76CEFB}" DisplayName="$Resources:core,designgalleryField_DisplayOrder;" Type="Number" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="DisplayOrder">
+        <Default>100</Default>
+      </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="1" Type="HTML" DisplayName="$Resources:core,designgalleryList_AllItemsView;" DefaultView="TRUE" MobileDefaultView="TRUE" WebPartZoneID="Main" Url="AllItems.aspx" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/wlicon.png?rev=23">
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard">
+        </Toolbar>
+        <ViewFields>
+          <FieldRef Name="Name">
+          </FieldRef>
+          <FieldRef Name="MasterPageUrl">
+          </FieldRef>
+          <FieldRef Name="ThemeUrl">
+          </FieldRef>
+          <FieldRef Name="ImageUrl">
+          </FieldRef>
+          <FieldRef Name="FontSchemeUrl">
+          </FieldRef>
+          <FieldRef Name="DisplayOrder">
+          </FieldRef>
+        </ViewFields>
+      </View>
+      <View BaseViewID="2" Type="HTML" DisplayName="$Resources:core,designgalleryList_ThumbnailView;" DefaultView="FALSE" MobileDefaultView="FALSE" Hidden="TRUE" WebPartZoneID="Main" Url="Thumbnail.aspx" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/wlicon.png?rev=23">
+        <JSLink>designgallery.js</JSLink>
+        <RowLimit Paged="TRUE">18</RowLimit>
+        <Toolbar Type="Standard">
+        </Toolbar>
+        <ViewFields>
+          <FieldRef Name="Name">
+          </FieldRef>
+          <FieldRef Name="MasterPageUrl">
+          </FieldRef>
+          <FieldRef Name="ThemeUrl">
+          </FieldRef>
+          <FieldRef Name="ImageUrl">
+          </FieldRef>
+          <FieldRef Name="FontSchemeUrl">
+          </FieldRef>
+          <FieldRef Name="DisplayOrder">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="DisplayOrder" Ascending="TRUE" />
+          </OrderBy>
+        </Query>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="Upload.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+    <DefaultDescription>$Resources:core,designgalleryList_Desc;</DefaultDescription>
+  </MetaData>
+</List>

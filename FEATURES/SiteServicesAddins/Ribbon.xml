@@ -1,0 +1,50 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+   <CustomAction
+        Id="Ribbon.EditingTools.CPInsert.SocialPlugin"
+        Location="CommandUI.Ribbon"
+        Sequence="35"
+        Title="Add social plugin to Insert Tab">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.EditingTools.CPInsert.WebParts.Controls._children">
+        <Button
+            Id="Ribbon.EditingTools.CPInsert.Social.SocialPlugins"
+            Alt="$Resources:sp.publishing.resources,cui_stt_ButContentMenuSocialPluginAlt;"
+            Command="GetSocialPluginMenuXml"
+            Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-217" Image16by16Left="-163"
+            Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-341" Image32by32Left="-341"
+            Sequence="10"
+            TemplateAlias="o1"
+            LabelText="$Resources:sp.publishing.Resources,SocialPlugin;"
+            ToolTipTitle="$Resources:sp.publishing.Resources,SocialPlugin;"
+            ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButContentMenuSocialPluginTooltip;"/>
+      </CommandUIDefinition>
+      <CommandUIDefinition Location="Ribbon.EditingTools.CPInsert.WebParts.Controls._children">
+        <Button
+            Id="Ribbon.EditingTools.CPInsert.Social.GetSocialApps"
+            Alt="$Resources:sp.publishing.resources,cui_stt_ButContentMenuSocialPluginAlt;"
+            Command="Ribbon.EditingTools.CPInsert.Social.GetSocialApps"
+            CommandValueId="Ribbon.EditingTools.CPInsert.Social.GetSocialApps"
+            Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-217" Image16by16Left="-163"
+            Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-341" Image32by32Left="-341"
+            Sequence="10"
+            TemplateAlias="o1"
+            LabelText="$Resources:sp.publishing.Resources,SocialPlugin;"
+            ToolTipTitle="$Resources:sp.publishing.Resources,SocialPlugin;"
+            ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButContentMenuSocialPluginTooltip;"/>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+     <CommandUIHandlers>
+      <CommandUIHandler
+       Command="Ribbon.EditingTools.CPInsert.Social.GetSocialApps"
+       EnabledScript="javascript: true"
+       CommandAction="javascript:
+		(function (){
+            window.open(encodeURI(SP.Utilities.Utility.getLayoutsPageUrl('storefront.aspx') + '?sname=' + SP.PageContextInfo.get_webTitle()));
+		}());" />
+      </CommandUIHandlers>
+    </CommandUIExtension>
+  </CustomAction>
+</Elements>

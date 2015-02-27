@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3"
+	Title="$Resources:ListPolicyFeatureTitle"	
+	Description="$Resources:ListPolicyFeatureDescription"
+	DefaultResourceFile="dlccore"
+	Version="15.0.0.0"
+	Scope="Site"
+	ReceiverAssembly="Microsoft.Office.Policy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+	ReceiverClass="Microsoft.Office.RecordsManagement.Internal.ListPolicyFeatureReceiver"
+	xmlns="http://schemas.microsoft.com/sharepoint/"	
+	>
+    <ActivationDependencies>
+        <ActivationDependency FeatureId="5BCCB9A4-B903-4fd1-8620-B795FA33C9BA" />
+    </ActivationDependencies>
+</Feature>

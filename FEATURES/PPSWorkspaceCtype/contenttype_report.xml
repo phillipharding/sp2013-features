@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ContentType ID="0x01002DDC53CB1D5F4520BE0568558051291F04"
+	 Name="$Resources:ppsma,ContentType_Report_Name"
+	 Group="$Resources:ppsma,ContentType_Group"
+	 Description="$Resources:ppsma,ContentType_Report_Description"
+	 Version="0">
+		<FieldRefs/>
+		<XmlDocuments>
+			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+				<FormUrls xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+					<New>_layouts/15/ppswebparts/DesignerRedirect.aspx</New>
+				</FormUrls>
+			</XmlDocument>
+		</XmlDocuments>		
+	</ContentType>
+	<CustomAction
+	  Id="PPSEdit.ECB"
+	  RegistrationType="ContentType"
+	  RegistrationId="0x01002DDC53CB1D5F4520BE0568558051291F04"
+	  Location="EditControlBlock"
+	  Sequence="231"
+	  Title="$Resources:ppsma,ContentType_Report_Preview"
+	  ImageUrl="/_layouts/15/images/PPSSiteTemplateRun.png?rev=23"
+	  Description="$Resources:ppsma,ContentType_Report_Preview_Description">
+		<UrlAction Url="javascript:window.open('{SiteUrl}/_layouts/15/ppswebparts/ReportViewPreview.aspx?SiteLocation={SiteUrl}&amp;ItemLocation={ItemUrl}')"/>
+	</CustomAction>
+	<CustomAction
+	  Id="PPSEdit.ECB"
+	  RegistrationType="ContentType"
+	  RegistrationId="0x01002DDC53CB1D5F4520BE0568558051291F04"
+	  Location="EditControlBlock"
+	  Sequence="230"
+	  Title="$Resources:ppsma,ContentTypeAction_Base_Edit_Title"
+	  ImageUrl="/_layouts/15/images/ppsEditDesigner.png?rev=23"
+	  Description="$Resources:ppsma,ContentTypeAction_Base_Edit_Description">
+    <UrlAction Url="{SiteUrl}/_layouts/15/ppswebparts/DesignerRedirect.aspx?Operation=OpenItem&amp;ItemLocation={ItemUrl}&amp;ItemType=ReportView"/>
+	</CustomAction>
+</Elements>

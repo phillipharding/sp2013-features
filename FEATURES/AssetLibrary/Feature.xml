@@ -1,0 +1,53 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Feature  Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4"
+          Title="Asset Library"
+          Description="Enable Asset Library Creation for site collection."
+          Version="15.0.9.0"
+          Scope="Site"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="AssetLibraryTemplate.xml"/>
+        <ElementManifest Location="AssetContentTypes.xml"/>
+        <ElementManifest Location="AssetFields.xml"/>
+        <ElementManifest Location="AssetContentTypes2.xml"/>
+        <ElementManifest Location="AssetFields2.xml"/>
+        <ElementManifest Location="ProvisionedUI.xml"/>
+        <ElementManifest Location="ProvisionedUI2.xml"/>
+    </ElementManifests>
+    <UpgradeActions
+        ReceiverAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        ReceiverClass="Microsoft.SharePoint.Publishing.AssetLibraryFeatureHandler">
+        <VersionRange EndVersion="14.0.1.0">
+            <ApplyElementManifests>
+                <ElementManifest Location="AssetFields.xml"/>
+                <ElementManifest Location="AssetContentTypes2.xml"/>
+            </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.1.0">
+            <ApplyElementManifests>
+                <ElementManifest Location="AssetFields2.xml" />
+            </ApplyElementManifests>
+            <AddContentTypeField ContentTypeId="0x0101009148F5A04DDD49cbA7127AADA5FB792B00291D173ECE694d56B19D111489C4369D" FieldId="{FD7EF3C2-486E-40cd-B651-6BE6D1ABBE25}" PushDown="TRUE" />
+            <AddContentTypeField ContentTypeId="0x0101009148F5A04DDD49cbA7127AADA5FB792B00291D173ECE694d56B19D111489C4369D" FieldId="{CF42542F-DF94-4136-A0AC-29326FCCD565}" PushDown="TRUE" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.4.0">
+            <ApplyElementManifests>
+                <ElementManifest Location="ProvisionedUI.xml" />
+            </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.7.0">
+            <ApplyElementManifests>
+                <ElementManifest Location="ProvisionedUI2.xml"/>
+            </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.8.0">
+            <CustomUpgradeAction Name="UpdateVideoContentTypeName" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.9.0">
+            <CustomUpgradeAction Name="VideoAndRichMedia" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

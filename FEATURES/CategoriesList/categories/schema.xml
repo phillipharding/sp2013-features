@@ -1,0 +1,215 @@
+<List
+    xmlns:ows="Microsoft SharePoint"
+    Name="Categories"
+    Title="Categories"
+    Direction="$Resources:Direction;"
+    DisableAttachments="TRUE"
+    EnableContentTypes="TRUE"
+    FolderCreation="FALSE"
+    Url="Lists/Categories"
+    BaseType="0">
+    <MetaData>
+        <ContentTypes>
+            <!-- Category Content type -->
+            <ContentTypeRef ID="0x010019ACC57FBA4146afA4C822E719824BED" />
+        </ContentTypes>
+        <Fields>
+
+            <Field
+                ID="{AB065451-14D6-485a-88C3-414C908D50D3}"
+                Name="CategoryDescription"
+                DisplayName="$Resources:spscore,CategoriesList_DescFieldName"
+                Type="Text"
+                SourceID="http://schemas.microsoft.com/sharepoint.v3"
+                DisplaceOnUpgrade="TRUE"
+                Hidden="FALSE"
+                Sealed="FALSE"
+                AllowDeletion="FALSE" />
+            <Field
+                ID="{7CC564F1-ABD4-4a2f-BD9B-85DD1D071BDC}"
+                Name="CategoryImage"
+                DisplayName="$Resources:spscore,CategoriesList_ImageFieldName"
+                Type="URL"
+                SourceID="http://schemas.microsoft.com/sharepoint.v3"
+                DisplaceOnUpgrade="TRUE"
+                Hidden="FALSE"
+                Sealed="FALSE"
+                AllowDeletion="FALSE" />
+            <Field
+                ID="{D2264183-83DC-4d08-A57D-974686192D7A}"
+                Name="TopicCount"
+                DisplayName="$Resources:spscore,CategoriesList_TopicCountFieldName"
+                Type="Integer"
+                SourceID="http://schemas.microsoft.com/sharepoint.v3"
+                DisplaceOnUpgrade="TRUE"
+                ReadOnly="TRUE"
+                Hidden="FALSE"
+                Sealed="FALSE"
+                AllowDeletion="FALSE" >
+                <Default>0</Default>
+            </Field>
+            <Field
+                ID="{D42630F0-0084-4b16-B876-80FE8CF88879}"
+                Name="ReplyCount"
+                DisplayName="$Resources:spscore,CategoriesList_ReplyCountFieldName"
+                Type="Integer"
+                SourceID="http://schemas.microsoft.com/sharepoint.v3"
+                DisplaceOnUpgrade="TRUE"
+                ReadOnly="TRUE"
+                Hidden="FALSE"
+                Sealed="FALSE"
+                AllowDeletion="FALSE" >
+                <Default>0</Default>
+            </Field>
+            <Field
+                ID="{497E00DF-75C8-4e61-AC5C-A143B6A0FDDC}"
+                Name="LastPostBy"
+                DisplayName="$Resources:spscore,CategoriesList_LastPostByFieldName"
+                Type="User"
+                List="UserInfo"
+                SourceID="http://schemas.microsoft.com/sharepoint.v3"
+                DisplaceOnUpgrade="TRUE"
+                ReadOnly="TRUE"
+                Hidden="FALSE"
+                Sealed="FALSE"
+                AllowDeletion="FALSE" />
+            <Field
+                ID="{539458A6-152C-460f-A915-53722C6EB4A6}"
+                Name="LastPostDate"
+                DisplayName="$Resources:spscore,CategoriesList_LastPostDateFieldName"
+                Type="DateTime"
+                SourceID="http://schemas.microsoft.com/sharepoint.v3"
+                DisplaceOnUpgrade="TRUE"
+                ReadOnly="TRUE"
+                Hidden="FALSE"
+                Sealed="FALSE"
+                AllowDeletion="FALSE" />
+
+        </Fields>
+        <Views>
+            <View 
+                BaseViewID="1"
+                Type="HTML"
+                WebPartZoneID="Main"
+                Hidden="TRUE"
+                DisplayName="$Resources:spscore,CategoriesList_CategoriesListView;"
+                DefaultView="FALSE"
+                SetupPath="pages\viewpage.aspx"
+                ReadOnly="TRUE" >
+                <XslLink Default="TRUE">main.xsl</XslLink>
+                <JSLink>clienttemplates.js</JSLink>
+                <ViewFields>
+                    <FieldRef Name="LinkTitle" />
+                    <FieldRef Name="CategoryDescription" />
+                    <FieldRef Name="TopicCount" />
+                    <FieldRef Name="ReplyCount" />
+                    <FieldRef Name="LastPostBy" />
+                    <FieldRef Name="LastPostDate" />
+                    <FieldRef Name="CategoryImage" />
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="Title" />
+                    </OrderBy>
+                </Query>
+            </View>
+            <View 
+                BaseViewID="2"
+                Type="HTML"
+                WebPartZoneID="Main"
+                DisplayName="$Resources:spscore,CategoriesList_AdminView;"
+                DefaultView="FALSE"
+                SetupPath="pages\viewpage.aspx"
+                ImageUrl="/_layouts/15/images/generic.png?rev=23"
+                Url="AdminView.aspx">
+                <RowLimit Paged="TRUE">20</RowLimit>
+                <XslLink Default="TRUE">main.xsl</XslLink>
+                <JSLink>clienttemplates.js</JSLink>
+                <ViewFields>
+                    <FieldRef Name="LinkTitle" />
+                    <FieldRef Name="CategoryDescription" />
+                    <FieldRef Name="TopicCount" />
+                    <FieldRef Name="ReplyCount" />
+                    <FieldRef Name="LastPostBy" />
+                    <FieldRef Name="LastPostDate" />
+                    <FieldRef Name="CategoryImage" />
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="Title" />
+                    </OrderBy>
+                </Query>
+            </View>
+            <View 
+                BaseViewID="3"
+                Type="HTML"
+                WebPartZoneID="Main"
+                DisplayName="$Resources:spscore,CategoriesList_SingleCategoryView;"
+                DefaultView="FALSE"
+                Hidden="TRUE"
+                ReadOnly="TRUE"
+                SetupPath="pages\viewpage.aspx"
+                ImageUrl="/_layouts/15/images/generic.png?rev=23"
+                Url="SingleCategory.aspx">
+                <XslLink Default="TRUE">main.xsl</XslLink>
+                <JSLink>sp.ui.discussions.js|sp.ui.communities.js</JSLink>
+                <ViewFields>
+                    <FieldRef Name="LinkTitle" />
+                    <FieldRef Name="CategoryDescription" />
+                    <FieldRef Name="TopicCount" />
+                    <FieldRef Name="ReplyCount" />
+                    <FieldRef Name="LastPostBy" />
+                    <FieldRef Name="LastPostDate" />
+                    <FieldRef Name="CategoryImage" />
+                </ViewFields>
+                <ParameterBindings>
+                    <ParameterBinding
+                        Name="CategoryID"
+                        Location="QueryString(CategoryID)" />
+                </ParameterBindings>
+                <Query>
+                    <Where>
+                        <Eq>
+                            <FieldRef Name="ID"></FieldRef>
+                            <Value Type="Number">{CategoryID}</Value>
+                        </Eq>
+                    </Where>
+                </Query>
+            </View>
+            <View 
+                BaseViewID="4"
+                Type="HTML"
+                WebPartZoneID="Main"
+                DisplayName="$Resources:spscore,CategoriesList_CategoriesTileView;"
+                DefaultView="TRUE"
+                ReadOnly="TRUE"
+                SetupPath="pages\viewpage.aspx"
+                ImageUrl="/_layouts/15/images/generic.png?rev=23"
+                Url="CategoryTiles.aspx"
+                CssStyleSheet="Themable/communities.css">
+                <RowLimit Paged="TRUE">24</RowLimit>
+                <XslLink Default="TRUE">main.xsl</XslLink>
+                <JSLink>sp.ui.communities.tileview.js</JSLink>
+                <ViewFields>
+                    <FieldRef Name="LinkTitle" />
+                    <FieldRef Name="CategoryDescription" />
+                    <FieldRef Name="TopicCount" />
+                    <FieldRef Name="ReplyCount" />
+                    <FieldRef Name="LastPostBy" />
+                    <FieldRef Name="LastPostDate" />
+                    <FieldRef Name="CategoryImage" />
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="Title" />
+                    </OrderBy>
+                </Query>
+            </View>
+        </Views>
+        <Forms>
+            <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main"/>
+            <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main"/>
+            <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main"/>
+        </Forms> 
+    </MetaData>
+</List>

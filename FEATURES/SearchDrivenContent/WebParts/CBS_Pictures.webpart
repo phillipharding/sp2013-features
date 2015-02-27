@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Microsoft.Office.Server.Search.WebControls.ContentBySearchWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>	
+      <properties>
+        <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,CBS_Pictures_Title;</property>
+        <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,CBS_Pictures_Description;</property>
+        <property name="ChromeType">None</property>
+        <property name="AllowMinimize" type="bool">true</property>
+        <property name="AllowClose" type="bool">true</property>			
+        <property name="Hidden" type="bool">false</property>
+        <property name="UseSimplifiedQueryBuilder" type="bool">true</property>
+        <property name="DataProviderJSON" type="string">{"Properties":{"TryCache":true,"Scope":"{Site.URL}"},"PropertiesJson":"{\"TryCache\":true,\"Scope\":\"{Site.URL}\"}","SourceId":"38403C8C-3975-41A8-826E-717F2D41568A"}</property>
+        <property name="ItemTemplateId" type="string">~sitecollection/_catalogs/masterpage/Display Templates/Content Web Parts/Item_LargePicture.js</property>
+        <property name="RenderTemplateId" type="string">~sitecollection/_catalogs/masterpage/Display Templates/Content Web Parts/Control_Slideshow.js</property>
+        <property name="NumberOfItems" type="int">10</property>
+        <property name="ResultsPerPage" type="int">10</property>
+     </properties>
+</data>
+</webPart>
+</webParts>
+

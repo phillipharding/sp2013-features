@@ -1,0 +1,10 @@
+<Feature Id="0867298A-70E0-425f-85DF-7F8BD9E06F15"
+    Title="$Resources:spscore,UserProfileUserSettingsProvider_Feature_Title;"
+    Description="$Resources:spscore,UserProfileUserSettingsProvider_Feature_Description;"
+    Version="14.0.0.0"
+    Hidden="FALSE"
+    Scope="Farm"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.UserProfiles.UserSettingsProviderFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

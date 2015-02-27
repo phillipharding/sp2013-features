@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="184C82E7-7EB1-4384-8E8C-62720EF397A0"
+         Title="$Resources:dmscore,IDS_DMSFeatureTitle"
+         Description="$Resources:dmscore,IDS_DMSFeatureDescription"
+         SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+         Version="15.0.7.0"
+         Scope="Web"
+         Hidden="True"
+         AlwaysForceInstall="FALSE"
+         ReceiverAssembly="Microsoft.Office.DocMarketplace, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+         ReceiverClass="Microsoft.Office.DocMarketplace.DMSFeatureReceiver"
+         DefaultResourceFile="dmscore"
+         xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <ElementManifests>
+        <ElementManifest Location="elements.xml" />
+        <ElementManifest Location="schema.xml" />
+        <ElementManifest Location="ListTemplates\AcquisitionHistoryList.xml" />
+
+        <ElementFile Location="AcquisitionHistoryList\schema.xml" />
+        <ElementFile Location="pages\default.aspx" />
+        <ElementFile Location="pages\mycollection.aspx" />
+        <ElementFile Location="layoutpages\basic.aspx" />
+        <ElementFile Location="layoutpages\details.aspx" />
+    </ElementManifests>
+
+    <UpgradeActions>
+        <VersionRange EndVersion="15.0.1.0">
+            <ApplyElementManifests>
+                <ElementManifest Location="elements.xml" />
+            </ApplyElementManifests>
+            <CustomUpgradeAction Name="15.0.1.0" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.2.0">
+            <CustomUpgradeAction Name="15.0.2.0" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.3.0">
+            <CustomUpgradeAction Name="UpdateDisplayTemplates" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.4.0">
+            <CustomUpgradeAction Name="15.0.4.0" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.5.0">
+            <CustomUpgradeAction Name="15.0.5.0" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.6.0">
+            <CustomUpgradeAction Name="15.0.6.0" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.7.0">
+            <CustomUpgradeAction Name="15.0.7.0" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

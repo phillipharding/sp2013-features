@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="0125140F-7123-4657-B70A-DB9AA1F209E5"
+          Title="Feature Pushdown Links"
+          Description="Link to display the feature pushdown page"
+          Version="14.0.0.0"
+          Scope="Farm"
+          Hidden="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <ElementManifests>
+        <ElementManifest Location="FeaturePushdownLinks.xml"/>
+    </ElementManifests>
+
+</Feature>

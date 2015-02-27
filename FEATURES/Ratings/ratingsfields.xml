@@ -1,0 +1,48 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field ID="{5a14d1ab-1513-48c7-97b3-657a5ba6c742}"
+        Name="AverageRating"
+        StaticName="AverageRating"
+        DisplayName="$Resources:spscore,Ratings_AverageRatingFieldName"
+        Description="$Resources:spscore,Ratings_AverageRatingFieldDescription"
+        Group="$Resources:spscore,Ratings_FieldsGroup_15"
+        Type="AverageRating"
+        Decimals="2"
+        Min="0"
+        Max="5"
+        ShowInEditForm="FALSE"
+        ShowInDisplayForm="FALSE"
+        ShowInNewForm="FALSE"
+        CanToggleHidden="TRUE"
+        JSLink="sp.ui.reputation.js"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3">
+        <FieldRefs>
+            <FieldRef Name="RatingCount"/>
+            <FieldRef Name="RatedBy"/>
+            <FieldRef Name="Ratings"/>
+        </FieldRefs>
+  </Field>
+  <Field ID="{b1996002-9167-45e5-a4df-b2c41c6723c7}"
+        Name="RatingCount"
+        StaticName="RatingCount"
+        DisplayName="$Resources:spscore,Ratings_RatingCountFieldName"
+        Description="$Resources:spscore,Ratings_RatingCountFieldDescription"
+        Group="$Resources:spscore,Ratings_FieldsGroup_15"
+        Type="RatingCount"
+        Min="0"
+        Decimals="0"
+        ShowInEditForm="FALSE"
+        ShowInDisplayForm="FALSE"
+        ShowInNewForm="FALSE"
+        CanToggleHidden="TRUE"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3">
+  </Field>
+  <CustomAction
+        Id="EnableListRatingsLink"
+        GroupId="GeneralSettings"
+        Location="Microsoft.SharePoint.ListEdit"
+        Sequence="10"
+        Title="$Resources:spscore,Ratings_EnableLink;">	
+        <UrlAction
+            Url="_layouts/RatingsSettings.aspx?List={ListId}" />
+  </CustomAction>
+</Elements>

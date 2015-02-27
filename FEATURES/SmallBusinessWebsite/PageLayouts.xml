@@ -1,0 +1,41 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="SBPageLayouts" Url="_catalogs/masterpage" Path="Files" RootWebOnly="TRUE">
+    <File Url="SBFullPageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="$Resources:cmscore,PageLayout_SBFullPageLayout_Title;" />
+      <Property Name="MasterPageDescription" Value="$Resources:cmscore,PageLayout_SBFullPageLayout_Description;" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="/_layouts/15/images/PageLayoutOneColumn.png?rev=23" />
+      <Property Name="PublishingAssociatedContentType" Value=";#$Resources:cmscore,contenttype_sbwpage_name;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF390018EA875251284D5A8F0059B0597CFEC8;#"/>
+    </File>
+    <File Url="SBTwoColumnLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="$Resources:cmscore,PageLayout_SBTwoColumnLayout_Title;" />
+      <Property Name="MasterPageDescription" Value="$Resources:cmscore,PageLayout_SBTwoColumnLayout_Description;" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="/_layouts/15/images/PageLayoutTwoColumn.png?rev=23" />
+      <Property Name="PublishingAssociatedContentType"  Value=";#$Resources:cmscore,contenttype_sbwmultiareapage_name;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF390018EA875251284D5A8F0059B0597CFEC800A6B66DDD155D42B4989337F292AAD6BE;#"/>
+    </File>
+    <File Url="SBTwoColumnRightLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="$Resources:cmscore,PageLayout_SBTwoColumnRightLayout_Title;" />
+      <Property Name="MasterPageDescription" Value="$Resources:cmscore,PageLayout_SBTwoColumnRightLayout_Description;" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="/_layouts/15/images/PageLayoutOneColumnSideBar.png?rev=23" />
+      <Property Name="PublishingAssociatedContentType"  Value=";#$Resources:cmscore,contenttype_sbwmultiareapage_name;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF390018EA875251284D5A8F0059B0597CFEC800A6B66DDD155D42B4989337F292AAD6BE;#"/>
+    </File>   
+    <File Url="SBTwoColumnLeftLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="$Resources:cmscore,PageLayout_SBTwoColumnLeftLayout_Title;" />
+      <Property Name="MasterPageDescription" Value="$Resources:cmscore,PageLayout_SBTwoColumnLeftLayout_Description;" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="/_layouts/15/images/PageLayoutOneColumnSideBarLeft.png?rev=23" />
+      <Property Name="PublishingAssociatedContentType"  Value=";#$Resources:cmscore,contenttype_sbwmultiareapage_name;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF390018EA875251284D5A8F0059B0597CFEC800A6B66DDD155D42B4989337F292AAD6BE;#"/>
+    </File>
+    <File Url="SBTwoRowTwoColumnLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="$Resources:cmscore,PageLayout_SBTwoRowTwoColumnLayout_Title;" />
+      <Property Name="MasterPageDescription" Value="$Resources:cmscore,PageLayout_SBTwoRowTwoColumnLayout_Description;" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="/_layouts/15/images/PageLayoutTwoColumnHeader.png?rev=23" />
+      <Property Name="PublishingAssociatedContentType"  Value=";#$Resources:cmscore,contenttype_sbwmultiareapage_name;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF390018EA875251284D5A8F0059B0597CFEC800A6B66DDD155D42B4989337F292AAD6BE;#"/>
+    </File>
+  </Module>  
+</Elements>

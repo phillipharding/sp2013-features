@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ContentType ID="0x01002DDC53CB1D5F4520BE0568558051291F"
+    Name="$Resources:ppsma,ContentType_Base_Name"
+    Group="_Hidden"
+    Hidden="TRUE"
+    Description="$Resources:ppsma,ContentType_Base_Description"
+    Version="0">
+		<FieldRefs>
+			<FieldRef ID="{9CDC5C49-B00D-4224-925F-B5443E27555E}" Name="PPSMA_Description"/>
+			<FieldRef ID="{D2987D24-D5A5-4c92-9BD7-8BF4CC9D3A28}" Name="PPSMA_PersonResponsible"/>
+			<FieldRef ID="{8D1C1258-E2E1-47e3-A0C5-E88918B62B90}" Name="PPSMA_DisplayFolder"/>
+			<FieldRef ID="{A6626D3C-461B-4412-AFAB-1410FFFC9359}" Name="PPSMA_ObjectXML"/>
+			<FieldRef ID="{0760DCAC-227D-4E68-BC88-0E2CF7A37D78}" Name="PPSMA_FCOImage" ShowInDisplayForm="FALSE" ShowInEditForm="FALSE"/>
+			<FieldRef ID="{583B03D7-869B-4DE8-B86E-908D19A9E0FE}" Name="PPSMA_FCOSubType"/>
+		</FieldRefs>
+		<XmlDocuments>
+			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+				<FormUrls xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+					<New>_layouts/15/ppswebparts/DesignerRedirect.aspx?InPopUp=false</New>
+				</FormUrls>
+			</XmlDocument>
+		</XmlDocuments>
+	</ContentType>
+</Elements>

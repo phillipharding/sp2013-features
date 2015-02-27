@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="webpagelib"
+        Type="119"
+        BaseType="1"
+        OnQuickLaunch="TRUE"
+        UseRootFolderForNavigation="TRUE"
+        SecurityBits="11"
+        Sequence="130"
+        DisplayName="$Resources:core,webpagelibList;"
+        Description="$Resources:core,webpagelibList_Desc;"
+        Image="/_layouts/15/images/itwp.png?rev=23"/>
+</Elements>

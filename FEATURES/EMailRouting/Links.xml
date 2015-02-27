@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="15.0.4420" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <!-- Rule Fields -->
+    <Field ID="{11DF9B39-5DCE-41cb-8114-B4153D545435}"      Name="dlc_EmailSubject"        StaticName="dlc_EmailSubject"      SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="$Resources:dlccore,EmailRoutingColumns_GroupName;" DisplayName="$Resources:dlccore,EmailRoutingSubject_DisplayName;"   Type="Text"       CanToggleHidden="TRUE" Sealed="TRUE" MaxLength="255"   ></Field>
+    <Field ID="{0724B08D-8267-49d8-AC93-84E880292B27}"    Name="dlc_EmailMailbox"      StaticName="dlc_EmailMailbox"    SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="$Resources:dlccore,EmailRoutingColumns_GroupName;" DisplayName="$Resources:dlccore,EmailRoutingSubmitter_DisplayName;" Type="User"       CanToggleHidden="TRUE" Sealed="TRUE"                   ></Field>
+    <Field ID="{F40A0DC2-7D69-489e-A52A-515491FC5F8C}"           Name="dlc_EmailTo"             StaticName="dlc_EmailTo"           SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="$Resources:dlccore,EmailRoutingColumns_GroupName;" DisplayName="$Resources:dlccore,EmailRoutingTo_DisplayName;"        Type="Text"       CanToggleHidden="TRUE" Sealed="TRUE" MaxLength="255"   ></Field>
+    <Field ID="{7AEAF0A9-C562-45f4-8FD7-5A7E222E58C9}"         Name="dlc_EmailFrom"           StaticName="dlc_EmailFrom"         SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="$Resources:dlccore,EmailRoutingColumns_GroupName;" DisplayName="$Resources:dlccore,EmailRoutingFrom_DisplayName;"      Type="Text"       CanToggleHidden="TRUE" Sealed="TRUE" MaxLength="255"   ></Field>
+    <Field ID="{C1785C50-6078-41ee-A8E4-3A5FAE047DD4}"           Name="dlc_EmailCC"             StaticName="dlc_EmailCC"           SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="$Resources:dlccore,EmailRoutingColumns_GroupName;" DisplayName="$Resources:dlccore,EmailRoutingCc_DisplayName;"        Type="Note"       CanToggleHidden="TRUE" Sealed="TRUE" MaxLength="1024"  ></Field>
+    <Field ID="{1A00FEAB-B954-47a5-B173-2028B1A3EC67}"          Name="dlc_EmailBCC"            StaticName="dlc_EmailBCC"          SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="$Resources:dlccore,EmailRoutingColumns_GroupName;" DisplayName="$Resources:dlccore,EmailRoutingBcc_DisplayName;"       Type="Note"       CanToggleHidden="TRUE" Sealed="TRUE" MaxLength="1024"  ></Field>
+    <Field ID="{C2C0C664-2CB6-45a5-8CB0-7932DE61DA0D}"      Name="dlc_EmailSentUTC"        StaticName="dlc_EmailSentUTC"      SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="$Resources:dlccore,EmailRoutingColumns_GroupName;" DisplayName="$Resources:dlccore,EmailRoutingSent_DisplayName;"      Type="DateTime"   CanToggleHidden="TRUE" Sealed="TRUE" ></Field>
+    <Field ID="{5F1A5338-27DB-4d7c-8996-845F77A41AA2}"      Name="dlc_EmailReceivedUTC"        StaticName="dlc_EmailReceivedUTC"      SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="$Resources:dlccore,EmailRoutingColumns_GroupName;" DisplayName="$Resources:dlccore,EmailRoutingRecd_DisplayName;"      Type="DateTime"   CanToggleHidden="TRUE" Sealed="TRUE" ></Field>
+    <!-- END Rule Fields -->
+    <ContentType ID="0x010100672A3FCA98991645BE083C320B7539B7"  Name="$Resources:dlccore,EmailRoutingContentType_DisplayName;" Description="$Resources:dlccore,EmailRoutingContentType_Description;" Group="$Resources:dlccore,DocumentRoutingContentTypeGroup;" Sealed="TRUE" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{11DF9B39-5DCE-41cb-8114-B4153D545435}"        Name="dlc_EmailSubject"      DisplayName="$Resources:dlccore,EmailRoutingSubject_DisplayName;"/>
+            <FieldRef ID="{0724B08D-8267-49d8-AC93-84E880292B27}"      Name="dlc_EmailMailbox"    DisplayName="$Resources:dlccore,EmailRoutingSubmitter_DisplayName;" />
+            <FieldRef ID="{F40A0DC2-7D69-489e-A52A-515491FC5F8C}"             Name="dlc_EmailTo"           DisplayName="$Resources:dlccore,EmailRoutingTo_DisplayName;" />
+            <FieldRef ID="{7AEAF0A9-C562-45f4-8FD7-5A7E222E58C9}"           Name="dlc_EmailFrom"         DisplayName="$Resources:dlccore,EmailRoutingFrom_DisplayName;" />
+            <FieldRef ID="{C1785C50-6078-41ee-A8E4-3A5FAE047DD4}"             Name="dlc_EmailCC"           DisplayName="$Resources:dlccore,EmailRoutingCc_DisplayName;" />
+            <FieldRef ID="{1A00FEAB-B954-47a5-B173-2028B1A3EC67}"            Name="dlc_EmailBCC"          DisplayName="$Resources:dlccore,EmailRoutingBcc_DisplayName;" />                        
+            <FieldRef ID="{C2C0C664-2CB6-45a5-8CB0-7932DE61DA0D}"        Name="dlc_EmailSentUTC"      DisplayName="$Resources:dlccore,EmailRoutingSent_DisplayName;" />            
+            <FieldRef ID="{5F1A5338-27DB-4d7c-8996-845F77A41AA2}"        Name="dlc_EmailReceivedUTC"      DisplayName="$Resources:dlccore,EmailRoutingRecd_DisplayName;" />            
+        </FieldRefs>
+    </ContentType>
+</Elements>

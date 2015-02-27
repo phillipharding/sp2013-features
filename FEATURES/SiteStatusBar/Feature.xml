@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="001F4BD7-746D-403b-AA09-A6CC43DE7999"
+    Title="Site status bar"
+    Description="$Resources:core,SiteNotebook_Desc;"
+    Version="15.0.0.0"
+    Scope="Farm"
+    Hidden="TRUE"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml" />
+  </ElementManifests>
+</Feature>

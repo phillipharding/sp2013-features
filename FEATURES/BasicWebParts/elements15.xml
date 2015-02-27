@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module
+        Name="WebPartPopulation15"
+        List="113"
+        Url="_catalogs/wp"
+        RootWebOnly="TRUE">
+        <File Url="MSScriptEditor.webpart" IgnoreIfAlreadyExists="TRUE" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:core,AuthoringWebPartGroup;"></Property>
+        </File>
+     	<File Url="Timeline.webpart" IgnoreIfAlreadyExists="TRUE" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:core,ContentRollupWebPartGroup;"></Property>
+        </File>
+     	<File Url="GettingStarted.webpart" IgnoreIfAlreadyExists="TRUE" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:core,AuthoringWebPartGroup;"></Property>
+        </File>
+        <File Url="BlogNotifications.webpart" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:core,BlogWebPartGroup;"></Property>
+        </File>
+        <File Url="BlogAdmin.dwp" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:core,BlogWebPartGroup;"></Property>
+        </File>
+        <File Url="BlogArchives.dwp" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:core,BlogWebPartGroup;"></Property>
+        </File>
+    </Module>
+</Elements>

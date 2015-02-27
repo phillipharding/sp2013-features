@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+    <ListTemplate 
+        Name="gridlist" 
+        Type="120" 
+        BaseType="0" 
+        OnQuickLaunch="TRUE" 
+        SecurityBits="11" 
+        Sequence="420"
+        DisplayName="$Resources:core,gridList;" 
+        Description="$Resources:core,gridList_Desc;" 
+        Image="/_layouts/15/images/itdatash.png?rev=23" />
+</Elements>

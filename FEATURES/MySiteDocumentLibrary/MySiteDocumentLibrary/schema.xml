@@ -1,0 +1,158 @@
+<List
+    xmlns:ows="Microsoft SharePoint"
+    Name="$Resources:spscore,PeopleFeatures_MySiteDocumentLibrary_Text;"
+    Title="$Resources:spscore,PeopleFeatures_MySiteDocumentLibrary_Text;"
+    Direction="$Resources:Direction;"
+    Url="Documents"
+    BaseType="1">
+
+    <MetaData>
+        <ContentTypes>
+            <ContentTypeRef ID="0x0101" ><Folder TargetName="Forms/Document"/></ContentTypeRef>
+            <ContentTypeRef ID="0x0120" />
+        </ContentTypes>
+        <Fields>
+            <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" ShowInNewForm="FALSE" ShowInFileDlg="FALSE" DisplayName="$Resources:core,Title;" Sealed="TRUE"><!-- _locID@DisplayName="camlid2" _locComment=" " --></Field>
+            <Field ID="{DCC67EBD-247F-4bee-8626-85FF6F69FBB6}" 
+                Name="PrincipalCount"
+                DisplaceOnUpgrade="TRUE"
+                ReadOnly="TRUE"
+                Hidden="TRUE"
+                RenderXMLUsingPattern="TRUE"
+                ShowInFileDlg="FALSE"
+                Type="Computed"
+                DisplayName="$Resources:core,Principal_Count;">
+                <FieldRefs>
+                    <FieldRef Name="ID"/>
+                </FieldRefs>
+                <DisplayPattern>
+                    <PrincipalCount/>
+                </DisplayPattern>
+            </Field>                   
+            <Field ID="{4B84094E-9D33-44B2-9F92-88421D1AD098}"
+                Name="SharedWith"
+                StaticName="SharedWith"
+                DisplayName="$Resources:spscore,PeopleFeatures_SharedWithFieldName;"
+                Description="$Resources:spscore,PeopleFeatures_SharedWithFieldDescription;"
+                Group="_Hidden"
+                Type="Computed" 
+                DisplaceOnUpgrade="TRUE"
+                ReadOnly="TRUE"
+                Sortable="FALSE"
+                Filterable="FALSE"
+                ShowInVersionHistory="FALSE"
+                ShowInEditForm="FALSE"
+                ShowInDisplayForm="FALSE"
+                ShowInNewForm="FALSE"
+                ShowInFileDlg="FALSE"
+                JSLink="MyDocs.js"
+                SourceID="http://schemas.microsoft.com/sharepoint/v3">
+                <FieldRefs>
+                    <FieldRef ID="{DCC67EBD-247F-4bee-8626-85FF6F69FBB6}"  Name="PrincipalCount" />
+                </FieldRefs>
+            </Field>                   
+            <Field ID="{8100A343-029A-470A-AE87-27E8D038D781}"
+                Name="IsMyDocuments"
+                StaticName="IsMyDocuments"
+                DisplayName="$Resources:spscore,PeopleFeatures_IsMyDocumentsFieldName;"
+                Description="$Resources:spscore,PeopleFeatures_IsMyDocumentsFieldDescription;"
+                Type="Boolean"
+                ShowInVersionHistory="FALSE"
+                ShowInEditForm="FALSE"
+                ShowInDisplayForm="FALSE"
+                ShowInNewForm="FALSE"
+                ShowInFileDlg="FALSE"
+                SourceID="http://schemas.microsoft.com/sharepoint/v3">
+                    <Default>TRUE</Default>
+            </Field>
+            <Field ID="{6898F701-4B04-49FC-B1F9-77392F75DDBC}"
+                Name="SharedWithInternal"
+                StaticName="SharedWithInternal"
+                DisplayName="$Resources:spscore,SharedWithInternalFieldName;"
+                Description="$Resources:spscore,SharedWithInternalFieldDescription;"
+                Group="_Hidden"
+                Mult="TRUE"
+                ShowField="ImnName"
+                Type="UserMulti"
+                ShowInVersionHistory="FALSE"
+                ShowInEditForm="FALSE"
+                ShowInDisplayForm="FALSE"
+                ShowInNewForm="FALSE"
+                ShowInFileDlg="FALSE"
+                SourceID="http://schemas.microsoft.com/sharepoint/v3">
+            </Field>
+        </Fields>
+        <Views>
+            <View BaseViewID="51" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:spscore,PeopleFeatures_DocumentsAllView_Text;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="features\mysitedocumentlibrary\mydocviewpage.aspx" ImageUrl="/_layouts/15/images/dlicon.png?rev=23" Url="Forms/All.aspx" Hidden="FALSE" ReadOnly="TRUE">
+                <JSLink>mydocs.js</JSLink>
+
+<XslLink Default="TRUE">main.xsl</XslLink>
+
+<JSLink>clienttemplates.js</JSLink>
+
+<RowLimit Paged="TRUE">30</RowLimit>
+
+<Toolbar Type="Standard">
+</Toolbar>
+
+                <ViewFields>
+                    <FieldRef Name="DocIcon"></FieldRef>
+                    <FieldRef Name="LinkFilename"></FieldRef>
+                    <FieldRef Name="Modified"></FieldRef>
+                    <FieldRef Name="SharedWith"></FieldRef>
+                    <FieldRef Name="Editor"></FieldRef>
+                </ViewFields>
+                <ParameterBindings>
+
+    <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noitemsinview_doclibrary)" />
+
+    <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noitemsinview_doclibrary_howto2)" />
+
+                </ParameterBindings>                        
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="FileLeafRef"/>
+                    </OrderBy>
+                </Query>
+            </View>
+            <View BaseViewID="54" Scope="Recursive" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:spscore,PeopleFeatures_DocumentsSharedWithMeView_Text;" DefaultView="FALSE" MobileView="TRUE" MobileDefaultView="FALSE" SetupPath="features\mysitedocumentlibrary\mydocviewpage.aspx" ImageUrl="/_layouts/15/images/dlicon.png?rev=23" Url="Forms/SharedWithMe.aspx" Hidden="TRUE" ReadOnly="TRUE">
+                <XslLink>mydocs.xsl</XslLink>
+                <JSLink>mydocs.js</JSLink>
+                <RowLimit>0</RowLimit>
+
+<XslLink Default="TRUE">main.xsl</XslLink>
+
+<JSLink>clienttemplates.js</JSLink>
+
+<Toolbar Type="Standard">
+</Toolbar>
+
+                <ViewFields>
+                    <FieldRef Name="DocIcon" />
+                    <FieldRef Name="LinkFilename" />
+                    <FieldRef Name="Modified" />
+                    <FieldRef Name="Author" />
+                    <FieldRef Name="Editor" />
+                </ViewFields>
+                <ParameterBindings>
+
+    <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noitemsinview_doclibrary)" />
+
+    <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noitemsinview_doclibrary_howto2)" />
+
+                </ParameterBindings>                        
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="Modified" Ascending="FALSE"/>
+                    </OrderBy>
+                </Query>
+            </View>
+        </Views>
+        <Forms>
+            <Form Type="DisplayForm" SetupPath="pages\form.aspx" Url="Forms/DispForm.aspx" WebPartZoneID="Main"/>
+            <Form Type="EditForm" SetupPath="pages\form.aspx" Url="Forms/EditForm.aspx" WebPartZoneID="Main"/>                    
+            <Form Type="NewForm" SetupPath="pages\form.aspx" Url="Forms/Upload.aspx" WebPartZoneID="Main"/>
+        </Forms>
+    </MetaData>
+</List>
+

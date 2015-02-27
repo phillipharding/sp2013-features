@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="d5191a77-fa2d-4801-9baf-9f4205c9e9d2"
+    Title="$Resources:core,GbwFeatureTimeCardTitle;"
+    Description="$Resources:core,GbwFeatureTimeCardDescription;"
+    Version="2.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\timecardlist.xml" />
+        <ElementFile Location="timecard\schema.xml" />
+    </ElementManifests>
+    <UpgradeActions
+        ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        ReceiverClass="Microsoft.SharePoint.SPTimeCardListUpgradeFeatureReceiver">
+        <VersionRange EndVersion="1.0.0.0">
+            <CustomUpgradeAction Name="V2VUpgrade" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

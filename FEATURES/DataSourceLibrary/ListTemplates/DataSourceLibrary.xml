@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="datasrcs"
+        Type="110"
+        BaseType="1"
+        Hidden="TRUE"
+        HiddenList="TRUE"
+        OnQuickLaunch="FALSE"
+        SecurityBits="11"
+        DisplayName="$Resources:core,datasourcesList;"
+        Description="$Resources:core,datasourcesList_Desc;"
+        Image="/_layouts/15/images/itdl.png?rev=23"
+        DocumentTemplate="100"/>
+</Elements>

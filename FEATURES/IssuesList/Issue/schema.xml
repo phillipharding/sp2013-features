@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="$Resources:core,issuesList" VersioningEnabled="TRUE" FolderCreation="FALSE" Direction="$Resources:core,Direction" Url="Lists/Issue Tracking" BaseType="5">
+  <MetaData>
+    <ContentTypes>
+      <ContentTypeRef ID="0x0103">
+        <Folder TargetName="Issue" />
+      </ContentTypeRef>
+      <ContentTypeRef ID="0x0120" />
+    </ContentTypes>
+    <Fields>
+      <Field ID="{53101f38-dd2e-458c-b245-0c236cc13d1a}" Type="User" List="UserInfo" Name="AssignedTo" ShowField="ImnName" DisplayName="$Resources:core,Assigned_To;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="AssignedTo" />
+      <Field ID="{3f277a5c-c7ae-4bbe-9d44-0456fb548f94}" Type="Choice" Name="Status" DisplayName="$Resources:core,IssueStatus;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Status">
+        <CHOICES><CHOICE>$Resources:core,Status_Active</CHOICE><CHOICE>$Resources:core,Status_Resolved</CHOICE><CHOICE>$Resources:core,Status_Closed</CHOICE>
+        </CHOICES>
+        <Default>$Resources:core,Status_Active</Default>
+      </Field>
+      <Field ID="{a8eb573e-9e11-481a-a8c9-1104a54b2fbd}" Type="Choice" Name="Priority" DisplayName="$Resources:core,Priority;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Priority">
+        <CHOICES><CHOICE>$Resources:core,Priority_High</CHOICE><CHOICE>$Resources:core,Priority_Normal</CHOICE><CHOICE>$Resources:core,Priority_Low</CHOICE>
+        </CHOICES>
+        <Default>$Resources:core,Priority_Normal</Default>
+      </Field>
+      <Field ID="{6df9bd52-550e-4a30-bc31-a4366832a87f}" Type="Note" RichText="TRUE" Name="Comment" DisplayName="$Resources:core,Description;" Sortable="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Comment" />
+      <Field ID="{6df9bd52-550e-4a30-bc31-a4366832a87d}" FromBaseType="TRUE" Type="Choice" Name="Category" DisplayName="$Resources:core,Category;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Category">
+        <CHOICES><CHOICE>$Resources:core,Category1</CHOICE><CHOICE>$Resources:core,Category2</CHOICE><CHOICE>$Resources:core,Category3</CHOICE>
+        </CHOICES>
+        <Default>$Resources:core,Category2</Default>
+      </Field>
+      <Field Type="DateTime" ID="{cd21b4c2-6841-4f9e-a23a-738a65f99889}" Name="DueDate" DisplayName="$Resources:core,Due_Date;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="DueDate" />
+      <Field ID="{d8a2155a-aaf8-4d38-a14d-52bc83061d05}" ReadOnly="TRUE" Hidden="TRUE" Type="Computed" Name="RemoveRelatedID" Sortable="FALSE" DisplayName="$Resources:core,Remove_Related_ID;" AuthoringInfo="(no longer used field rendered link to remove this issue from related issues list)" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RemoveRelatedID">
+        <FieldRefs>
+        </FieldRefs>
+        <DisplayPattern><HTML><![CDATA[Unused]]></HTML>
+        </DisplayPattern>
+      </Field>
+      <Field ID="{875fab27-6e95-463b-a4a6-82544f1027fb}" Name="RelatedIssues" DisplaceOnUpgrade="TRUE" Type="LookupMulti" Mult="TRUE" DisplayName="$Resources:core,Related_Issues;" List="Self" ShowField="Title" PrependId="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RelatedIssues" />
+      <Field ID="{6df9bd52-550e-4a30-bc31-a4366832a87e}" Type="Note" RichText="TRUE" AppendOnly="TRUE" Name="V3Comments" DisplaceOnUpgrade="TRUE" DisplayName="$Resources:core,Comments;" Sortable="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="V3Comments" />
+      <Field ID="{03f89857-27c9-4b58-aaab-620647deda9b}" ReadOnly="TRUE" Type="Computed" Name="LinkIssueIDNoMenu" DisplayName="$Resources:core,Issue_ID;" Dir="" DisplayNameSrcField="IssueID" AuthoringInfo="$Resources:core,Linked_Item;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkIssueIDNoMenu">
+        <FieldRefs>
+          <FieldRef Name="ID" />
+        </FieldRefs>
+        <DisplayPattern><HTML><![CDATA[<a href="]]></HTML>
+          <URL /><HTML><![CDATA[" onclick="GoToLink(this);return false;" target="_self">]]></HTML>
+          <Column HTMLEncode="TRUE" Name="ID">
+          </Column><HTML><![CDATA[</a>]]></HTML>
+        </DisplayPattern>
+      </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Position="After" Type="Freeform">
+          <IfHasRights>
+            <RightsChoices>
+              <RightsGroup PermAddListItems="required" />
+            </RightsChoices>
+            <Then><HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idAddNewItem" href="]]></HTML>
+              <URL Cmd="New" /><HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <URL Cmd="New" />
+              </ScriptQuote><HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML><HTML>$Resources:core,addnewitem;</HTML><HTML><![CDATA[</a></div>]]></HTML>
+            </Then>
+          </IfHasRights>
+        </Toolbar>
+        <RowLimit>20</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu">
+          </FieldRef>
+          <FieldRef Name="AssignedTo">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+          <Where>
+            <Eq>
+              <FieldRef Name="IsCurrent">
+              </FieldRef>
+              <Value Type="Boolean">1</Value>
+            </Eq>
+          </Where>
+        </Query>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,issue_schema_all_issues;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/issuelst.png?rev=23" Url="AllItems.aspx">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="LinkIssueIDNoMenu">
+          </FieldRef>
+          <FieldRef Name="LinkTitle">
+          </FieldRef>
+          <FieldRef Name="AssignedTo">
+          </FieldRef>
+          <FieldRef Name="Status">
+          </FieldRef>
+          <FieldRef Name="Priority">
+          </FieldRef>
+          <FieldRef Name="DueDate">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+      <View BaseViewID="2" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,issue_schema_my_issues;" MobileView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/issuelst.png?rev=23" Url="MyItems.aspx" ReqAuth="TRUE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="LinkIssueIDNoMenu">
+          </FieldRef>
+          <FieldRef Name="LinkTitle">
+          </FieldRef>
+          <FieldRef Name="Status">
+          </FieldRef>
+          <FieldRef Name="Priority">
+          </FieldRef>
+          <FieldRef Name="DueDate">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <Where>
+            <Eq>
+              <FieldRef Name="AssignedTo">
+              </FieldRef>
+              <Value Type="">
+                <UserID>
+                </UserID>
+              </Value>
+            </Eq>
+          </Where>
+          <OrderBy>
+            <FieldRef Name="ID">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+      <View BaseViewID="3" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,issue_schema_active_issues;" MobileView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/issuelst.png?rev=23" Url="active.aspx">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="LinkIssueIDNoMenu">
+          </FieldRef>
+          <FieldRef Name="LinkTitle">
+          </FieldRef>
+          <FieldRef Name="AssignedTo">
+          </FieldRef>
+          <FieldRef Name="Priority">
+          </FieldRef>
+          <FieldRef Name="DueDate">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <Where>
+            <Eq>
+              <FieldRef Name="Status">
+              </FieldRef>
+              <Value Type="Text">$Resources:core,Status_Active</Value>
+            </Eq>
+          </Where>
+          <OrderBy>
+            <FieldRef Name="ID">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+    <DefaultDescription>
+            $Resources:core,issue_schema_description
+        </DefaultDescription>
+  </MetaData>
+</List>

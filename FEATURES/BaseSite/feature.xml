@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE"
+          Title="$Resources:osrvcore,BaseSiteFeatureTitle;"
+          Description="$Resources:osrvcore,BaseFeatureDescription;"
+          Version="15.0.0.1"
+          Scope="Site"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ActivationDependencies>
+
+        <ActivationDependency FeatureId="14AAFD3A-FCB9-4bb7-9AD7-D8E36B663BBD" />   
+        <ActivationDependency FeatureId="5F3B0127-2F1D-4cfd-8DD2-85AD1FB00BFC" />   
+        <ActivationDependency FeatureId="2ED1C45E-A73B-4779-AE81-1524E4DE467A" />   
+        <ActivationDependency FeatureId="0C8A9A47-22A9-4798-82F1-00E62A96006E" />   
+        <ActivationDependency FeatureId="5BCCB9A4-B903-4fd1-8620-B795FA33C9BA" /> 
+        <ActivationDependency FeatureId="4326E7FC-F35A-4b0f-927C-36264B0A4CF0" /> 
+        <ActivationDependency FeatureId="EAF6A128-0482-4F71-9A2F-B1C650680E77" /> 
+        <ActivationDependency FeatureId="8B2C6BCB-C47F-4F17-8127-F8EAE47A44DD" /> 
+        <ActivationDependency FeatureId="39D18BBF-6E0F-4321-8F16-4E3B51212393" /> 
+
+    </ActivationDependencies>
+</Feature>

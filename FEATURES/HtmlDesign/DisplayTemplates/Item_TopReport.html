@@ -1,0 +1,173 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_TopReportItem</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">1</mso:TemplateHidden>
+<mso:ManagedPropertyMapping msdt:dt="string">'Image Url':'PictureThumbnailURL;PictureURL','Title','Path','Description','FileExtension','ListItemID','ListID','HitHighlightedSummary','HitHighlightedProperties'</mso:ManagedPropertyMapping>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="Item_TopReport">
+
+<!--#_
+		if(!$isNull(ctx.CurrentItem) && !$isNull(ctx.ClientControl)){
+			var id = ctx.ClientControl.get_nextUniqueId();
+			$setResultItem(id, ctx.CurrentItem);
+
+			var summaryChars = Srch.U.summaryTruncationLength;
+			var pathChars = Srch.U.pathTruncationLength;
+			var titleChars = Srch.U.titleTruncationLength;
+			var titleTerms = 2;
+
+			var imageURL = $getItemValue(ctx, "Image Url");
+			imageURL.overrideValueRenderer($imgSrcUrl);
+
+			var hasImage = !imageURL.isEmpty;
+			var bodyClass = "";
+			var iconURL = "";
+			if(hasImage)
+			{
+				summaryChars = Srch.U.summaryTruncationLengthWithPreview;
+				pathChars = Srch.U.pathTruncationLengthWithPreview;
+				titleChars = Srch.U.titleTruncationLengthWithPreview;
+				titleTerms = 1;
+				bodyClass = "ms-srch-item-body tprprt-body-preview";
+			}
+			else
+			{
+				iconURL = $urlHtmlEncode(Srch.U.getIconUrlByFileExtension(ctx.CurrentItem));
+				bodyClass = "ms-srch-item-body";
+			}
+
+			var title = Srch.U.getHighlightedProperty(id, ctx.CurrentItem, "Title");
+			if($isEmptyString(title))
+			{
+				title = $htmlEncode($getItemValue(ctx, "Title").value);
+			}
+			title = Srch.U.trimTitle(title, titleChars, titleTerms);
+
+			var desc;
+			if(!Srch.U.e(ctx.CurrentItem.HitHighlightedSummary))
+			{
+                                desc = Srch.U.processHHXML(ctx.CurrentItem.HitHighlightedSummary);    
+                                desc = Srch.U.getTrimmedProcessedHHXMLString(desc, summaryChars);
+			}
+			else
+			{
+				desc = Srch.U.getTrimmedProcessedHHXMLString($htmlEncode($getItemValue(ctx, "Description").value), summaryChars);
+			}
+
+			var displayPath = Srch.U.getHighlightedProperty(id, ctx.CurrentItem, "Path");
+			if($isEmptyString(displayPath))
+			{
+				displayPath = $htmlEncode(ctx.CurrentItem.Path);
+			}
+			displayPath = Srch.U.truncateHighlightedUrl(displayPath, pathChars);
+
+			var path = $getItemValue(ctx, "Path");
+			path.overrideValueRenderer($urlHtmlEncode);
+
+			var listID = $getItemValue(ctx, "ListID");
+			var listItemID = $getItemValue(ctx, "ListItemID");
+
+			var excellink = "";
+			if(!listID.isEmpty && !listItemID.isEmpty)
+			{
+				excellink = Srch.U.replaceUrlTokens("~site/_layouts/15/reporting.aspx?Category=Analytics&List=" + listID.toString() + "&ID=" + listItemID.toString());
+				if(!Srch.U.e(ctx.CurrentItem.Path))
+				{
+					excellink = excellink + "&ItemUrl=" + $urlKeyValueEncode(ctx.CurrentItem.Path);
+				}
+			}
+
+			var recentCount = null;
+			var lifetimeCount = null;
+			if(typeof trSelectedPropertyRecent != "undefined")
+			{
+				recentCount = $getItemValue(ctx, trSelectedPropertyRecent);
+			}
+			else
+			{
+				recentCount = $getItemValue(ctx, "ViewsRecent");
+			}
+			if(typeof trSelectedPropertyLifetime != "undefined")
+			{
+				lifetimeCount = $getItemValue(ctx, trSelectedPropertyLifetime);
+			}
+			else
+			{
+				lifetimeCount = $getItemValue(ctx, "ViewsLifeTime");
+			}
+
+			recentCount = new Number(recentCount.value);
+			recentCount = recentCount.localeFormat("N0");
+			lifetimeCount = new Number(lifetimeCount.value);
+			lifetimeCount = lifetimeCount.localeFormat("N0");
+_#-->	
+		<tr class="ms-srch-item" style="cursor: default">
+			<td class="tprprt-cell">
+			<div id="tprprt-item-container">
+<!--#_
+			if (hasImage)
+			{
+_#-->
+				<div class="tprprt-preview" id="Preview">
+					<a href="_#= path =#_">
+					<img alt="_#= $htmlEncode($resource('item_Alt_Preview')) =#_" onload="this.style.display='inline';" src="_#= imageURL =#_" /></a>
+				</div>
+<!--#_
+			}
+_#-->
+				<div id="Main" class="_#= bodyClass =#_">
+					<div class="ms-srch-item-title">
+<!--#_
+			if(!hasImage)
+			{
+_#-->
+						<img id="Icon" class="ms-srch-item-icon" src="_#= iconURL =#_" />
+<!--#_
+			}
+_#-->
+						<h3><a class="ms-srch-item-link" href="_#= path =#_">_#= title =#_</a></h3>
+					</div>                    
+					<div id="Summary" class="ms-srch-item-summary">
+						_#= desc =#_
+					</div>
+					<div id="Footer">
+                        <div tabindex="0" title="_#= path =#_" class="ms-srch-item-path" onblur="Srch.U.restorePath(this, '_#= $scriptEncode(displayPath) =#_', '_#= $scriptEncode(ctx.CurrentItem.Path) =#_')" onclick="Srch.U.selectPath('_#= $scriptEncode(ctx.CurrentItem.Path) =#_', this)">
+						    _#= displayPath =#_
+					    </div>						
+<!--#_
+			if(!Srch.U.e(excellink))
+			{      
+_#-->
+						<div id="ReportLinkDiv">
+							<a id="ReportLink" href="_#= $urlHtmlEncode(excellink) =#_">_#= $htmlEncode($resource('tprprt_excel_report_entrypoint')) =#_</a>
+						</div>
+<!--#_
+			}
+_#-->
+					</div>
+				</div>
+			</div>
+			</td>
+			<td class="ms-verticalAlignTop ms-vb2 tprprt-number-cell">
+			_#= recentCount =#_
+			</td>
+			<td class="ms-verticalAlignTop ms-vb2 ms-vb-lastCell tprprt-number-cell">
+			_#= lifetimeCount =#_
+			</td>
+		</tr>
+<!--#_
+		}
+_#-->
+    </div>
+</body>
+</html>

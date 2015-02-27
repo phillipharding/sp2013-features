@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="4AEC7207-0D02-4f4f-AA07-B370199CD0C7"
+    Title="$Resources:core,GettingStartedFeatureTitle;"
+    Description="$Resources:core,GettingStartedFeatureDesc;"
+    Version="1.0.2.0"
+    Scope="Web"
+    Hidden="FALSE"
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="elements.xml" />
+    </ElementManifests>
+    <UpgradeActions
+        ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        ReceiverClass="Microsoft.SharePoint.SPGettingStartedFeatureReceiver">
+      <VersionRange EndVersion="1.0.2.0">
+        <CustomUpgradeAction Name="RemoveListInstance"/>
+        <ApplyElementManifests>
+          <ElementManifest Location="elements.xml"/>
+        </ApplyElementManifests>
+      </VersionRange>
+    </UpgradeActions>
+</Feature>

@@ -1,0 +1,10 @@
+<Feature  Id="AE3A1339-61F5-4f8f-81A7-ABD2DA956A7D"
+          Title="$Resources:AppDevelopmentCore, EnableAppSideLoadingFeatureTitle"
+          Description="$Resources:AppDevelopmentCore, EnableAppSideLoadingFeatureDesc"
+          Version="15.0.0.0"
+          Scope="Site"
+          Hidden="TRUE"
+          ReceiverAssembly="Microsoft.SharePoint.AppDevelopment, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.AppDevelopment.EnableAppSideLoadingFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

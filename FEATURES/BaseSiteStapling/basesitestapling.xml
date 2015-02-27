@@ -1,0 +1,471 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="STS#0" />
+
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="STS#2" />
+
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="MPS#0" />
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="MPS#1" />
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="MPS#2" />
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="MPS#3" />
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="MPS#4" />
+
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="WIKI#0" />
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="BLOG#0" />
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="SGS#0" />
+
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="BDR#0" />
+
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="OFFILE#0" />
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="OFFILE#1" />
+
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="EDISC#0" />
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="EDISC#1" />
+
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="PWA#0" />
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="PWS#0" />
+
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="SPS#0" />
+
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="SPSMSITE#0" />
+
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="SPSTOC#0" />
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="SPSTOPIC#0" />
+
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="SPSNEWS#0" />
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="SPSNHOME#0" />
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="SPSSITES#0" />
+
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="SPSBWEB#0" />
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="SPSCOMMU#0" />
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="COMMUNITY#0" />
+
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="SPSREPORTCENTER#0" />
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="SPSPORTAL#0" />
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="SRCHCEN#0" />
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="PROFILES#0" />
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="PROJECTSITE#0" />
+
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="CMSPUBLISHING#0" />
+
+	<FeatureSiteTemplateAssociation Id="B21B090C-C796-4b0f-AC0F-7EF1659C20AE" TemplateName="DEV#0" />
+
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="STS#0" />
+
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="STS#2" />
+
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="MPS#0" />
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="MPS#1" />
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="MPS#2" />
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="MPS#3" />
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="MPS#4" />
+
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="WIKI#0" />
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="BLOG#0" />
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="SGS#0" />
+
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="BDR#0" />
+
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="OFFILE#0" />
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="OFFILE#1" />
+
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="EDISC#0" />
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="EDISC#1" />
+
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="PWA#0" />
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="PWS#0" />
+
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="SPS#0" />
+
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="SPSMSITE#0" />
+
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="SPSTOC#0" />
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="SPSTOPIC#0" />
+
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="SPSNEWS#0" />
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="SPSNHOME#0" />
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="SPSSITES#0" />
+
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="SPSBWEB#0" />
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="SPSCOMMU#0" />
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="COMMUNITY#0" />
+
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="SPSREPORTCENTER#0" />
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="SPSPORTAL#0" />
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="SRCHCEN#0" />
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="PROFILES#0" />
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="PROJECTSITE#0" />
+
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="CMSPUBLISHING#0" />
+
+	<FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="DEV#0" />
+
+	<FeatureSiteTemplateAssociation Id="541F5F57-C847-4e16-B59A-B31E90E6F9EA" TemplateName="SRCHCENTERLITE#1" >
+
+		<Property Key="IncludeInGlobalNavigation" Value="false" />
+
+		<Property Key="IncludeInCurrentNavigation" Value="false" />
+
+		<Property Key="InheritCurrentNavigation" Value="true" />
+
+		<Property Key="IncludePages" Value="false" />
+
+	</FeatureSiteTemplateAssociation>
+
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="STS#0" />
+
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="STS#2" />
+
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="MPS#0" />
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="MPS#1" />
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="MPS#2" />
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="MPS#3" />
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="MPS#4" />
+
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="WIKI#0" />
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="BLOG#0" />
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="SGS#0" />
+
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="BDR#0" />
+
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="OFFILE#0" />
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="OFFILE#1" />
+
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="EDISC#0" />
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="EDISC#1" />
+
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="PWA#0" />
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="PWS#0" />
+
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="SPS#0" />
+
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="SPSMSITE#0" />
+
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="SPSTOC#0" />
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="SPSTOPIC#0" />
+
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="SPSNEWS#0" />
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="SPSNHOME#0" />
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="SPSSITES#0" />
+
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="SPSBWEB#0" />
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="SPSCOMMU#0" />
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="COMMUNITY#0" />
+
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="SPSREPORTCENTER#0" />
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="SPSPORTAL#0" />
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="SRCHCEN#0" />
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="PROFILES#0" />
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="PROJECTSITE#0" />
+
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="CMSPUBLISHING#0" />
+
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="DEV#0" />
+
+	<FeatureSiteTemplateAssociation Id="4BCCCD62-DCAF-46dc-A7D4-E38277EF33F4" TemplateName="PRODUCTCATALOG#0" />
+
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="STS#0" />
+
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="STS#2" />
+
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="MPS#0" />
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="MPS#1" />
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="MPS#2" />
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="MPS#3" />
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="MPS#4" />
+
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="WIKI#0" />
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="BLOG#0" />
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="SGS#0" />
+
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="BDR#0" />
+
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="OFFILE#0" />
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="OFFILE#1" />
+
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="EDISC#0" />
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="EDISC#1" />
+
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="PWA#0" />
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="PWS#0" />
+
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="SPS#0" />
+
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="SPSMSITE#0" />
+
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="SPSTOC#0" />
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="SPSTOPIC#0" />
+
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="SPSNEWS#0" />
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="SPSNHOME#0" />
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="SPSSITES#0" />
+
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="SPSBWEB#0" />
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="SPSCOMMU#0" />
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="COMMUNITY#0" />
+
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="SPSREPORTCENTER#0" />
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="SPSPORTAL#0" />
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="SRCHCEN#0" />
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="PROFILES#0" />
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="PROJECTSITE#0" />
+
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="CMSPUBLISHING#0" />
+
+	<FeatureSiteTemplateAssociation Id="068BC832-4951-11DC-8314-0800200C9A66" TemplateName="DEV#0" />
+
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="STS#0" />
+
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="STS#2" />
+
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="WIKI#0" />
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="BLOG#0" />
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="SGS#0" />
+
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="BDR#0" />
+
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="OFFILE#0" />
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="OFFILE#1" />
+
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="EDISC#0" />
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="EDISC#1" />
+
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="SPS#0" />
+
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="SPSMSITE#0" />
+
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="SPSNEWS#0" />
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="SPSNHOME#0" />
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="SPSSITES#0" />
+
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="SPSREPORTCENTER#0" />
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="SPSPORTAL#0" />
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="SRCHCEN#0" />
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="PROFILES#0" />
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="PROJECTSITE#0" />
+
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="CMSPUBLISHING#0" />
+
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="SPSPORTAL#0" />
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="SPS#0" />
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="SPSREPORTCENTER#0" />
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="SPSTOC#0" />
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="SPSTOPIC#0" />
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="SPSNEWS#0" />
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="SPSNHOME#0" />
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="SPSSITES#0" />
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="SRCHCEN#0" />
+
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="CMSPUBLISHING#0" />
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="BLANKINTERNET#0" />
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="BLANKINTERNET#1" />
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="BLANKINTERNET#2" />
+
+	<FeatureSiteTemplateAssociation Id="7094BD89-2CFE-490a-8C7E-FBACE37B4A34" TemplateName="DEV#0" />
+
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="STS#0" />
+
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="STS#2" />
+
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="MPS#0" />
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="MPS#1" />
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="MPS#2" />
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="MPS#3" />
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="MPS#4" />
+
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="WIKI#0" />
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="BLOG#0" />
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="SGS#0" />
+
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="BDR#0" />
+
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="OFFILE#0" />
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="OFFILE#1" />
+
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="EDISC#0" />
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="EDISC#1" />
+
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="SPS#0" />
+
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="SPSMSITE#0" />
+
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="SPSNEWS#0" />
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="SPSNHOME#0" />
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="SPSSITES#0" />
+
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="SPSREPORTCENTER#0" />
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="SPSPORTAL#0" />
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="SRCHCEN#0" />
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="PROFILES#0" />
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="PROJECTSITE#0" />
+
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="CMSPUBLISHING#0" />
+
+	<FeatureSiteTemplateAssociation Id="063C26FA-3CCC-4180-8A84-B6F98E991DF3" TemplateName="DEV#0" />
+
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="STS#0" />
+
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="STS#2" />
+
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="MPS#0" />
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="MPS#1" />
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="MPS#2" />
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="MPS#3" />
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="MPS#4" />
+
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="WIKI#0" />
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="BLOG#0" />
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="SGS#0" />
+
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="BDR#0" />
+
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="OFFILE#0" />
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="OFFILE#1" />
+
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="EDISC#0" />
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="EDISC#1" />
+
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="SPS#0" />
+
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="SPSMSITE#0" />
+
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="SPSNEWS#0" />
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="SPSNHOME#0" />
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="SPSSITES#0" />
+
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="SPSREPORTCENTER#0" />
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="SPSPORTAL#0" />
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="SRCHCEN#0" />
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="PROFILES#0" />
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="PROJECTSITE#0" />
+
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="CMSPUBLISHING#0" />
+
+	<FeatureSiteTemplateAssociation Id="2FCD5F8A-26B7-4a6a-9755-918566DBA90A" TemplateName="DEV#0" />
+
+	<FeatureSiteTemplateAssociation Id="7201D6A4-A5D3-49A1-8C19-19C4BAC6E668" TemplateName="BDR#0" />
+
+	<FeatureSiteTemplateAssociation Id="7201D6A4-A5D3-49A1-8C19-19C4BAC6E668" TemplateName="OFFILE#0" />
+	<FeatureSiteTemplateAssociation Id="7201D6A4-A5D3-49A1-8C19-19C4BAC6E668" TemplateName="OFFILE#1" />
+
+	<FeatureSiteTemplateAssociation Id="7201D6A4-A5D3-49A1-8C19-19C4BAC6E668" TemplateName="BLANKINTERNET#0" />
+	<FeatureSiteTemplateAssociation Id="7201D6A4-A5D3-49A1-8C19-19C4BAC6E668" TemplateName="BLANKINTERNET#1" />
+	<FeatureSiteTemplateAssociation Id="7201D6A4-A5D3-49A1-8C19-19C4BAC6E668" TemplateName="BLANKINTERNET#2" />
+
+	<FeatureSiteTemplateAssociation Id="7201D6A4-A5D3-49A1-8C19-19C4BAC6E668" TemplateName="PRODUCTCATALOG#0" />
+
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="STS#0" />
+
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="STS#2" />
+
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="MPS#0" />
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="MPS#1" />
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="MPS#2" />
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="MPS#3" />
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="MPS#4" />
+
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="WIKI#0" />
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="BLOG#0" />
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="SGS#0" />
+
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="BDR#0" />
+
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="OFFILE#0" />
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="OFFILE#1" />
+
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="EDISC#0" />
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="EDISC#1" />
+
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="PWA#0" />
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="PWS#0" />
+
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="SPS#0" />
+
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="SPSMSITE#0" />
+
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="SPSTOC#0" />
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="SPSTOPIC#0" />
+
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="SPSNEWS#0" />
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="SPSNHOME#0" />
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="SPSSITES#0" />
+
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="SPSBWEB#0" />
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="SPSCOMMU#0" />
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="COMMUNITY#0" />
+
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="SPSREPORTCENTER#0" />
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="SPSPORTAL#0" />
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="SRCHCEN#0" />
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="PROFILES#0" />
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="PROJECTSITE#0" />
+
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="CMSPUBLISHING#0" />
+
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="DEV#0" />
+
+	<FeatureSiteTemplateAssociation Id="6E1E5426-2EBD-4871-8027-C5CA86371EAD" TemplateName="PRODUCTCATALOG#0" />
+
+	<FeatureSiteTemplateAssociation Id="0AF5989A-3AEA-4519-8AB0-85D91ABE39FF" TemplateName="PRODUCTCATALOG#0" />
+
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="STS#0" />
+
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="STS#2" />
+
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="MPS#0" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="MPS#1" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="MPS#2" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="MPS#3" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="MPS#4" />
+
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="WIKI#0" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="BLOG#0" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="SGS#0" />
+
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="BDR#0" />
+
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="OFFILE#0" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="OFFILE#1" />
+
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="EDISC#0" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="EDISC#1" />
+
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="PWA#0" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="PWS#0" />
+
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="SPS#0" />
+
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="SPSMSITE#0" />
+
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="SPSTOC#0" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="SPSTOPIC#0" />
+
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="SPSNEWS#0" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="SPSNHOME#0" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="SPSSITES#0" />
+
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="SPSBWEB#0" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="SPSCOMMU#0" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="COMMUNITY#0" />
+
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="SPSREPORTCENTER#0" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="SPSPORTAL#0" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="SRCHCEN#0" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="PROFILES#0" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="PROJECTSITE#0" />
+
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="CMSPUBLISHING#0" />
+
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="SPSPORTAL#0" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="SPS#0" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="SPSREPORTCENTER#0" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="SPSTOC#0" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="SPSTOPIC#0" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="SPSNEWS#0" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="SPSNHOME#0" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="SPSSITES#0" />
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="SRCHCEN#0" />
+
+	<FeatureSiteTemplateAssociation Id="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" TemplateName="DEV#0" />
+
+</Elements>

@@ -1,0 +1,84 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	 <CustomActionGroup 
+            Id="UAP"
+            Location="Office.Server.ServiceProvider.Administration"
+            Title="$Resources:spscore,ProfileAdminLinks_SectionTitle"
+            Sequence="10" />
+        <CustomAction 
+            Id="ManageProf"
+            GroupId="UAP"
+            Location="Office.Server.ServiceProvider.Administration"
+            Sequence="11" 
+            Title="$Resources:spscore,ProfileAdminLinks_ManageProfiles" >
+                <UrlAction Url="_layouts/ProfMain.aspx"/>
+        </CustomAction>
+        <CustomAction 
+            Id="ManagePriv"
+            GroupId="UAP"
+            Location="Office.Server.ServiceProvider.Administration"
+            Sequence="13" 
+            Title="$Resources:spscore,ProfileAdminLinks_ManagePrivacyPolicy" >
+                <UrlAction Url="_layouts/ManagePrivacyPolicy.aspx"/>
+        </CustomAction>
+        <CustomAction 
+            Id="ManagePS"
+            GroupId="UAP"
+            Location="Office.Server.ServiceProvider.Administration"
+            Sequence="14" 
+            Title="$Resources:spscore,ProfileAdminLinks_ManagePersonalSites" >
+                <UrlAction Url="_layouts/PersonalSites.aspx"/>
+        </CustomAction>
+        <CustomAction 
+            Id="TrustedPersLinks"
+            GroupId="UAP"
+            Location="Office.Server.ServiceProvider.Administration"
+            Sequence="15" 
+            Title="$Resources:spscore,ProfileAdminLinks_TrustedPersonalSites" >
+                <UrlAction Url="_layouts/ManageLinks.aspx?LinksType=0"/>
+        </CustomAction>
+        <CustomAction 
+            Id="ManagePubLinks"
+            GroupId="UAP"
+            Location="Office.Server.ServiceProvider.Administration"
+            Sequence="16" 
+            Title="$Resources:spscore,ProfileAdminLinks_PublishedLinks" >
+                <UrlAction Url="_layouts/ManageLinks.aspx?LinksType=2"/>
+        </CustomAction>
+        <CustomAction 
+            Id="ManagePersLinks"
+            GroupId="UAP"
+            Location="Office.Server.ServiceProvider.Administration"
+            Sequence="17" 
+            Title="$Resources:spscore,ProfileAdminLinks_PersonalizationLinks" >
+                <UrlAction Url="_layouts/ManageLinks.aspx?LinksType=1"/>
+        </CustomAction>
+        <CustomAction 
+            Id="ManagePermissions"
+            GroupId="UAP"
+            Location="Office.Server.ServiceProvider.Administration"
+            Sequence="18" 
+            Title="$Resources:spscore,ProfileAdminLinks_ManagePermissions" >
+                <UrlAction Url="_layouts/ManageServicePermissions.aspx"/>
+        </CustomAction>
+        <CustomAction 
+            Id="ManageOrgsDelegationSettings"
+            GroupId="UAP"
+            Location="Office.Server.ServiceProvider.Administration"
+            Sequence="19" 
+            Title="$Resources:spscore,ProfileAdminLinks_ManageOrgsDelegationSettings" >
+          <UrlAction Url="_layouts/DelegationSettings.aspx"/>
+        </CustomAction>
+  <CustomActionGroup 
+            Id="AUD"
+            Location="Office.Server.ServiceProvider.Administration"
+            Title="$Resources:spscore,AudienceAdminLinks_SectionTitle"
+            Sequence="20" />
+        <CustomAction 
+            Id="ManageAud"
+            GroupId="AUD"
+            Location="Office.Server.ServiceProvider.Administration"
+            Sequence="21" 
+            Title="$Resources:spscore,ProfileAdminLinks_ManageAudiences" >
+                <UrlAction Url="_layouts/Audience_main.aspx"/>
+        </CustomAction>
+</Elements>

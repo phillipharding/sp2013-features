@@ -1,0 +1,12 @@
+<Feature  Id="34339DC9-DEC4-4256-B44A-B30FF2991A64"
+          Title="Content type syndication"
+          Description="Content type syndication."
+          Version="14.0.0.0"
+          Scope="WebApplication"
+          Hidden="TRUE"
+          DefaultResourceFile="osrvcore"
+          ReceiverAssembly="Microsoft.SharePoint.Taxonomy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Taxonomy.ContentTypeSync.Internal.SyndicationFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/" 
+	  ActivateOnDefault="TRUE">
+</Feature>

@@ -1,0 +1,17 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Field ID="{BCD999A7-9DCA-4824-A515-878BEE641ED3}"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Name="PeopleInMedia"
+        DisplayName="$Resources:dlccore,PeopleInMedia_DisplayName;"
+        Description="$Resources:dlccore,PeopleInMedia_Description;"
+        StaticName="PeopleInMedia"
+        Group="_Hidden"
+        Type="UserMulti"
+        Mult="TRUE"
+        List="UserInfo"
+        ShowField="ImnName"
+        Hidden="FALSE"
+        ShowInNewForm="TRUE"
+        ShowInEditForm="TRUE">
+    </Field>    
+</Elements>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="08585E12-4762-4CC9-842A-A8D7B074BDB7"
+	Title="$Resources:eduserver,IDS_EduSharedFeatureTitle"
+	Description="$Resources:eduserver,IDS_EduSharedFeatureDescription"
+	Hidden="TRUE"
+	SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+	Version="15.0.4.0"
+	Scope="Site"
+	AlwaysForceInstall="FALSE"
+	ReceiverAssembly="Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+	ReceiverClass="Microsoft.Office.Education.EduSharedFeatureReceiver"
+	DefaultResourceFile="eduserver"
+	xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<ElementManifests>
+		<ElementFile Location="WebParts\AnnouncementsWebPart.webpart" />
+		<ElementFile Location="WebParts\AssignmentsWebPart.webpart" />
+		<ElementFile Location="WebParts\CalendarWebPart.webpart" />
+		<ElementFile Location="WebParts\CourseGradesWebPart.webpart" />
+		<ElementFile Location="WebParts\CoursePlanningWebPart.webpart" />
+		<ElementFile Location="WebParts\DueListWebPart.webpart" />
+		<ElementFile Location="WebParts\MyClassesWebPart.webpart" />
+		<ElementFile Location="WebParts\NextUpWebPart.webpart" />
+		<ElementFile Location="WebParts\QuizViewWebPart.webpart" />
+		<ElementFile Location="WebParts\RoleSelectorWebPart.webpart" />
+		<ElementFile Location="WebParts\ViewWebPart.webpart" />
+		<ElementFile Location="WebParts\StudentSubmissionWebPart.webpart" />
+		<ElementManifest Location="Elements.xml" />
+		<ElementManifest Location="schema3.xml" />
+	</ElementManifests>
+
+	<UpgradeActions>
+		<VersionRange EndVersion="15.0.0.0">
+			<ApplyElementManifests>
+				<ElementFile Location="WebParts\AssignmentsWebPart.webpart" />
+				<ElementFile Location="WebParts\CalendarWebPart.webpart" />
+				<ElementFile Location="WebParts\CourseGradesWebPart.webpart" />
+				<ElementFile Location="WebParts\CoursePlanningWebPart.webpart" />
+				<ElementFile Location="WebParts\DueListWebPart.webpart" />
+				<ElementFile Location="WebParts\MyClassesWebPart.webpart" />
+				<ElementFile Location="WebParts\NextUpWebPart.webpart" />
+				<ElementFile Location="WebParts\QuizViewWebPart.webpart" />
+				<ElementFile Location="WebParts\RoleSelectorWebPart.webpart" />
+				<ElementFile Location="WebParts\ViewWebPart.webpart" />
+				<ElementFile Location="WebParts\StudentSubmissionWebPart.webpart" />
+				<ElementManifest Location="schema3.xml" />
+			</ApplyElementManifests>
+		</VersionRange>
+		<VersionRange EndVersion="15.0.4.0">
+			<CustomUpgradeAction Name="15.0.4.0" />
+			<ApplyElementManifests>
+				<ElementManifest Location="Elements.xml"/>
+			</ApplyElementManifests>
+		</VersionRange>
+	</UpgradeActions>
+</Feature>

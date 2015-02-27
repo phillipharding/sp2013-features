@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature  Id="C6561405-EA03-40A9-A57F-F25472942A22"
+          Title="$Resources:Feature_Title;"
+          Description="$Resources:Translation_Description;"
+          ImageUrl="WorkflowSolutionFeature.gif"
+          Version="15.0.0.0"
+          Hidden="TRUE"
+          Scope="Site"
+          AlwaysForceInstall="TRUE"
+          ReceiverAssembly="Microsoft.Office.Workflow.Feature, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.Office.Workflow.Feature.WorkflowFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/"
+          DefaultResourceFile="_Res">
+  <ElementManifests>
+    <ElementManifest Location="Translation.xml" />
+  </ElementManifests>
+  <Properties>
+    <Property Key="RegisterForms" Value="Forms\*.xsn" />
+    <Property Key="GloballyAvailable" Value="true" />
+  </Properties>
+</Feature>

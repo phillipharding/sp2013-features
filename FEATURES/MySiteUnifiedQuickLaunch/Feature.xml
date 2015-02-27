@@ -1,0 +1,13 @@
+<Feature Id="EAA41F18-8E4A-4894-BAEE-60A87F026E42"
+    Title="$Resources:spscore,PeopleFeatures_MySiteUnifiedQuickLaunch_Text;"
+    Description="$Resources:spscore,PeopleFeatures_MySiteUnifiedQuickLaunch_Desc;"
+    Version="15.0.0.0"
+    Hidden="TRUE"
+    Scope="Site"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.UserProfiles.MySiteUnifiedQuickLaunchFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="mysiteunifiedquicklaunchfeatureelements.xml"/>
+    </ElementManifests>
+</Feature>

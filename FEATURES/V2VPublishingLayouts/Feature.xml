@@ -1,0 +1,14 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Feature  Id="2FBBE552-72AC-11DC-8314-0800200C9A66"
+          Title="V2V Publishing Layouts Upgrade"
+          Description="Add new masterpages and CSS styles"
+          Version="14.0.0.0"
+          Scope="Site"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ProvisionedFiles.xml"/>
+    </ElementManifests>
+</Feature>

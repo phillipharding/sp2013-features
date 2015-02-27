@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="068F8656-BEA6-4d60-A5FA-7F077F8F5C20"
+          Title="Shared Services Administration Links"
+          Description="Links to the Shared Services administration pages"
+          Version="14.0.0.0"
+          Scope="Web"
+          Hidden="TRUE"
+          AutoActivateInCentralAdmin="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <ElementManifests>
+        <ElementManifest Location="officeserveradminlinks.xml"/>
+    </ElementManifests>
+
+</Feature>

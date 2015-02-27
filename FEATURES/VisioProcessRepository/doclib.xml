@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="doclib"
+
+        Type="505"
+        Sequence="110"
+        DisplayName="$Resources:vsrv,PR_doclibName;"
+
+        BaseType="1"
+        DocumentTemplate="150"
+        OnQuickLaunch="TRUE"
+        SecurityBits="11"
+        Description="$Resources:vsrv,PR_doclibDesc;"
+        Image="/_layouts/15/images/itdl.png"
+        VersioningEnabled="TRUE"/>
+</Elements>

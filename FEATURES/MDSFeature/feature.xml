@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="87294C72-F260-42f3-A41B-981A2FFCE37A"
+    Title="$Resources:core,MDSFeature;"
+    Description="$Resources:core,MDSFeature_Desc;"
+    Version="1.0.0.0"
+    Scope="Web"
+    Hidden="FALSE"
+    ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.SPMDSFeatureReceiver"
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

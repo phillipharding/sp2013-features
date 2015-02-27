@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="15.0.4420" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ContentType ID="0x01000AAA585D2F204488913BA823D4594738"       Name="$Resources:dlccore,EDiscoverySourcesContentType_Title;"       Description="$Resources:dlccore,EDiscoverySourcesContentType_Description;"          Group="$Resources:dlccore,EDiscoveryContentTypeGroup;" Sealed="FALSE" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{9EACC6A1-9675-49A3-B625-14AECA1A2D32}"              Name="DiscoveryCustodians"            DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryCustodians;"              Required="FALSE"    />
+            <FieldRef ID="{7A0D5A7E-E85F-47E1-9A57-86A3C409843D}"              Name="DiscoverySourceType"            DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoverySourceType;"              Required="FALSE"    />
+            <FieldRef ID="{1AD790F6-412E-4A2A-85F8-73238DF6BA5D}"           Name="DiscoveryRawSourceType"         DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryRawSourceType;"           Required="FALSE"    />
+            <FieldRef ID="{1B42307B-43A7-4040-A581-4CDBDD11227D}"      Name="DiscoveryPreservationStatus"    DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryPreservationStatus;"      Required="FALSE"    />
+            <FieldRef ID="{D42B2135-E1F6-4007-9738-3EBD21488202}"               Name="DiscoveryRawStatus"             DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryRawStatus;"               Required="FALSE"    />
+            <FieldRef ID="{F66784C5-D2E7-4F43-8032-D8A406E9C977}"                   Name="DiscoveryNotes"                 DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryNotes;"                   Required="FALSE"    />
+            <FieldRef ID="{19710ffa-3f22-4987-b480-5d4b34b3ff00}"         Name="DiscoveryLastIndexedTime"       DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryLastIndexedTime;"         Required="FALSE"    />
+            <FieldRef ID="{1ba12569-c197-4842-919f-7a95d6e077e4}"              Name="DiscoveryItemErrors"            DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryItemErrors;"              Required="FALSE"    />
+            <FieldRef ID="{4e64d81a-6994-490f-9b24-6effaf67f0fb}"    Name="DiscoverySharePointSiteErrors"  DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoverySharePointSiteErrors;"    Required="FALSE"    />
+            <FieldRef ID="{2eba3a22-ee5a-46ee-8371-10e420b1c11f}"       Name="DiscoveryCrawlErrorPercent"     DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryCrawlErrorPercent;"       Required="FALSE"    />
+            <FieldRef ID="{3289DFA6-7DE2-483E-9550-96CAC01005BC}"                Name="DiscoveryErrorLog"              DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryErrorLog;"                Required="FALSE"    />
+        </FieldRefs>
+        <XmlDocuments>
+            <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+                <FormUrls xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+                    <New>_layouts/15/SourcePage.aspx</New>
+                    <Edit>_layouts/15/SourcePage.aspx</Edit>
+                </FormUrls>
+            </XmlDocument>
+            <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+                <FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+                    <New>DiscoveryTemplate</New>
+                    <Edit>DiscoveryTemplate</Edit>
+                    <Display>DiscoveryTemplate</Display>
+                </FormTemplates>
+            </XmlDocument>
+        </XmlDocuments>
+    </ContentType>
+    <ContentType ID="0x01000AAA585D2F204488913BA823D459473801"      Name="$Resources:dlccore,EDiscoveryMailboxContentType_Title;"       Description="$Resources:dlccore,EDiscoveryMailboxContentType_Description;"          Group="$Resources:dlccore,EDiscoveryContentTypeGroup;" Sealed="FALSE" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{A9318FDB-F60F-43C7-9911-6857E7BCCCD9}"               Name="DiscoveryContainer"             DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryContainer;"               Required="TRUE"     />
+            <FieldRef ID="{CD1F5D9D-8A6E-4C54-9AC4-27A8FFA5238C}"               Name="DiscoveryDisplayId"             DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryDisplayId;"               Required="TRUE"     />
+            <FieldRef ID="{9EACC6A1-9675-49A3-B625-14AECA1A2D32}"              Name="DiscoveryCustodians"            DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryCustodians;"              Required="FALSE"    />
+            <FieldRef ID="{7A0D5A7E-E85F-47E1-9A57-86A3C409843D}"              Name="DiscoverySourceType"            DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoverySourceType;"              Required="FALSE"    />
+            <FieldRef ID="{1AD790F6-412E-4A2A-85F8-73238DF6BA5D}"           Name="DiscoveryRawSourceType"         DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryRawSourceType;"           Required="FALSE"    />
+            <FieldRef ID="{1B42307B-43A7-4040-A581-4CDBDD11227D}"      Name="DiscoveryPreservationStatus"    DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryPreservationStatus;"      Required="FALSE"    />
+            <FieldRef ID="{D42B2135-E1F6-4007-9738-3EBD21488202}"               Name="DiscoveryRawStatus"             DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryRawStatus;"               Required="FALSE"    />
+            <FieldRef ID="{F66784C5-D2E7-4F43-8032-D8A406E9C977}"                   Name="DiscoveryNotes"                 DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryNotes;"                   Required="FALSE"    />
+            <FieldRef ID="{19710ffa-3f22-4987-b480-5d4b34b3ff00}"         Name="DiscoveryLastIndexedTime"       DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryLastIndexedTime;"         Required="FALSE"    />
+            <FieldRef ID="{1ba12569-c197-4842-919f-7a95d6e077e4}"              Name="DiscoveryItemErrors"            DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryItemErrors;"              Required="FALSE"    />
+            <FieldRef ID="{2eba3a22-ee5a-46ee-8371-10e420b1c11f}"       Name="DiscoveryCrawlErrorPercent"     DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryCrawlErrorPercent;"       Required="FALSE"    />
+<FieldRef ID="{3289DFA6-7DE2-483E-9550-96CAC01005BC}"                Name="DiscoveryErrorLog"              DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryErrorLog;"                Required="FALSE"    />
+        </FieldRefs>
+        <XmlDocuments>
+            <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+                <FormUrls xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+                    <New>_layouts/15/SourcePage.aspx</New>
+                    <Edit>_layouts/15/SourcePage.aspx</Edit>
+                </FormUrls>
+            </XmlDocument>
+            <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+                <FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+                    <New>DiscoveryTemplate</New>
+                    <Edit>DiscoveryTemplate</Edit>
+                    <Display>DiscoveryTemplate</Display>
+                </FormTemplates>
+            </XmlDocument>
+        </XmlDocuments>
+    </ContentType>
+    <ContentType ID="0x01000AAA585D2F204488913BA823D459473802"     Name="$Resources:dlccore,EDiscoveryLocationContentType_Title;"      Description="$Resources:dlccore,EDiscoveryLocationContentType_Description;"         Group="$Resources:dlccore,EDiscoveryContentTypeGroup;" Sealed="FALSE" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{A9318FDB-F60F-43C7-9911-6857E7BCCCD9}"               Name="DiscoveryContainer"             DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryContainer;"               Required="TRUE"     />
+            <FieldRef ID="{CD1F5D9D-8A6E-4C54-9AC4-27A8FFA5238C}"               Name="DiscoveryDisplayId"             DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryDisplayId;"               Required="TRUE"     />
+            <FieldRef ID="{9EACC6A1-9675-49A3-B625-14AECA1A2D32}"              Name="DiscoveryCustodians"            DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryCustodians;"              Required="FALSE"    />
+            <FieldRef ID="{7BCE978E-4FDC-4520-A0FA-0207CDEDC1A2}"                  Name="DiscoverySiteId"                DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoverySiteId;"                  Required="FALSE"    />
+            <FieldRef ID="{7A0D5A7E-E85F-47E1-9A57-86A3C409843D}"              Name="DiscoverySourceType"            DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoverySourceType;"              Required="FALSE"    />
+            <FieldRef ID="{1AD790F6-412E-4A2A-85F8-73238DF6BA5D}"           Name="DiscoveryRawSourceType"         DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryRawSourceType;"           Required="FALSE"    />
+            <FieldRef ID="{45EE20C3-2455-45E9-AAEB-50D536F6F2BB}"                   Name="DiscoveryWebId"                 DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryWebId;"                   Required="FALSE"    />
+            <FieldRef ID="{23776B71-1F77-464C-8FDC-11AAE330F0C8}"            Name="DiscoveryFederationId"          DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryFederationId;"            Required="FALSE"    />
+            <FieldRef ID="{1B42307B-43A7-4040-A581-4CDBDD11227D}"      Name="DiscoveryPreservationStatus"    DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryPreservationStatus;"      Required="FALSE"    />
+            <FieldRef ID="{D42B2135-E1F6-4007-9738-3EBD21488202}"               Name="DiscoveryRawStatus"             DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryRawStatus;"               Required="FALSE"    />
+            <FieldRef ID="{F66784C5-D2E7-4F43-8032-D8A406E9C977}"                   Name="DiscoveryNotes"                 DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryNotes;"                   Required="FALSE"    />
+            <FieldRef ID="{19710ffa-3f22-4987-b480-5d4b34b3ff00}"         Name="DiscoveryLastIndexedTime"       DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryLastIndexedTime;"         Required="FALSE"    />
+            <FieldRef ID="{1ba12569-c197-4842-919f-7a95d6e077e4}"              Name="DiscoveryItemErrors"            DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryItemErrors;"              Required="FALSE"    />
+            <FieldRef ID="{4e64d81a-6994-490f-9b24-6effaf67f0fb}"    Name="DiscoverySharePointSiteErrors"  DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoverySharePointSiteErrors;"    Required="FALSE"    />
+            <FieldRef ID="{2eba3a22-ee5a-46ee-8371-10e420b1c11f}"       Name="DiscoveryCrawlErrorPercent"     DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryCrawlErrorPercent;"       Required="FALSE"    />
+            <FieldRef ID="{3289DFA6-7DE2-483E-9550-96CAC01005BC}"                Name="DiscoveryErrorLog"              DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryErrorLog;"                Required="FALSE"    />
+        </FieldRefs>
+        <XmlDocuments>
+            <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+                <FormUrls xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+                    <New>_layouts/15/SourcePage.aspx</New>
+                    <Edit>_layouts/15/SourcePage.aspx</Edit>
+                </FormUrls>
+            </XmlDocument>
+            <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+                <FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+                    <New>DiscoveryTemplate</New>
+                    <Edit>DiscoveryTemplate</Edit>
+                    <Display>DiscoveryTemplate</Display>
+                </FormTemplates>
+            </XmlDocument>
+        </XmlDocuments>
+    </ContentType>
+    <ContentType ID="0x01000B9E164436BF45B4961077F66DA14B80" Name="$Resources:dlccore,EDiscoverySourcesGroupContentType_Title;"  Description="$Resources:dlccore,EDiscoverySourcesGroupContentType_Description;"     Group="$Resources:dlccore,EDiscoveryContentTypeGroup;" Sealed="FALSE" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{26A86748-E2BA-40E4-AF4A-1CB304A972AA}"                  Name="DiscoveryHoldId"                DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryHoldId;"              Required="TRUE"     />
+            <FieldRef ID="{2A91EB10-B686-4175-AD05-B443FCE9BFD7}"                Name="DiscoveryPreserve"              DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryPreserve;"            Required="FALSE"    />
+            <FieldRef ID="{A3BDC3A8-B98B-4E68-B1B8-D3AF8C434774}"                   Name="DiscoveryQuery"                 DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryQuery;"               Required="FALSE"    />
+            <FieldRef ID="{E639C972-1391-456B-984F-D8CC27F3F379}"                Name="DiscoveryAuthorMult"                DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryAuthor;"              Required="FALSE"    />
+            <FieldRef ID="{6917E0A9-D12F-4842-B15B-697578FCBADF}"             Name="DiscoveryStartDate"             DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryStartDate;"           Required="FALSE"    />
+            <FieldRef ID="{C93F9BB3-79D1-4546-97D3-422185F8E65F}"               Name="DiscoveryEndDate"               DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryEndDate;"             Required="FALSE"    />
+            <FieldRef ID="{94D41036-023A-40AD-B2C1-573BC8000C03}"          Name="DiscoveryDomainFilter"          DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryDomainFilter;"        Required="FALSE"    />
+            <FieldRef ID="{C964B640-43D0-4BCA-AEFA-884378AAA7A0}"                   Name="DiscoveryIntItems"                 DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryItems;"               Required="FALSE"    />
+            <FieldRef ID="{E3CCEF67-BC67-44D5-A8F2-85718F389E5C}"                    Name="DiscoveryIntSize"                  DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoverySize;"                Required="FALSE"    />
+            <FieldRef ID="{580BD1C1-2326-4C58-AC67-DADF20FD1985}"            Name="DiscoverySourceLookup"          DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoverySourceLookup"         Required="FALSE"    />
+        </FieldRefs>
+    <XmlDocuments>
+        <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+            <FormUrls xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+                <Display>_layouts/15/SourceGroup.aspx</Display>
+                <New>_layouts/15/SourceGroup.aspx</New> 
+                <Edit>_layouts/15/SourceGroup.aspx</Edit> 
+            </FormUrls>
+        </XmlDocument>
+    </XmlDocuments>
+    </ContentType>
+    <ContentType ID="0x01008F1914ADF7D74969AFC53D74A9EF7FB6" Name="$Resources:dlccore,EDiscoverySavedSearchContentType_Title;"  Description="$Resources:dlccore,EDiscoverySavedSearchContentType_Description;"     Group="$Resources:dlccore,EDiscoveryContentTypeGroup;" Sealed="FALSE" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{A3BDC3A8-B98B-4E68-B1B8-D3AF8C434774}"                   Name="DiscoveryQuery"                 DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryQuery;"               Required="FALSE"    />
+            <FieldRef ID="{E639C972-1391-456B-984F-D8CC27F3F379}"                Name="DiscoveryAuthorMult"                DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryAuthor;"              Required="FALSE"    />
+            <FieldRef ID="{6917E0A9-D12F-4842-B15B-697578FCBADF}"             Name="DiscoveryStartDate"             DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryStartDate;"           Required="FALSE"    />
+            <FieldRef ID="{C93F9BB3-79D1-4546-97D3-422185F8E65F}"               Name="DiscoveryEndDate"               DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryEndDate;"             Required="FALSE"    />
+            <FieldRef ID="{7363A6F5-B99E-4D71-B3F2-9B8293BDA906}"            Name="DiscoverySPRefiners"            DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoverySPRefiners;"          Required="FALSE"    />
+            <FieldRef ID="{49500877-3A9A-4BF9-A4A1-1D8DD4F2708A}"            Name="DiscoveryEXRefiners"            DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryEXRefiners;"          Required="FALSE"    />
+            <FieldRef ID="{4D36D5A9-9DE1-4F20-8EB1-862EA17CBD62}"        Name="DiscoverySourceManagement"      DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoverySourceManagement;"    Required="FALSE"    />
+            <FieldRef ID="{C964B640-43D0-4BCA-AEFA-884378AAA7A0}"                   Name="DiscoveryIntItems"                 DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryItems;"               Required="FALSE"    />
+            <FieldRef ID="{E3CCEF67-BC67-44D5-A8F2-85718F389E5C}"                    Name="DiscoveryIntSize"                  DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoverySize;"                Required="FALSE"    />
+            <FieldRef ID="{580BD1C1-2326-4C58-AC67-DADF20FD1985}"            Name="DiscoverySourceLookup"          DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoverySourceLookup"         Required="FALSE"    />
+            <FieldRef ID="{8A298360-1138-4B5D-B360-532EEFAA9965}"       Name="DiscoverySourceGroupLookup"     DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoverySourceGroupLookup"    Required="FALSE"    />
+            <FieldRef ID="{B3A0B886-5605-4B8B-B538-8450EDB8B462}"           Name="DiscoveryDeduplication"         DisplayName="$Resources:dlccore,ediscoverysearch_dedup"        Required="FALSE"    />
+            <FieldRef ID="{32304053-5DDD-483A-9B06-7228D84D1766}"                Name="DiscoveryStemming"              DisplayName="$Resources:dlccore,ediscoverysearch_stem"             Required="FALSE"    />
+        </FieldRefs>
+        <XmlDocuments>
+            <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+                <FormUrls xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+                    <New>DiscoverySearch.aspx</New> 
+                    <Edit>DiscoverySearch.aspx</Edit> 
+                    <Display>DiscoverySearch.aspx</Display>
+                </FormUrls>
+            </XmlDocument>
+        </XmlDocuments>
+    </ContentType>
+    <ContentType ID="0x0100F98AA11005A64B11A26F10B8CE31D63A" Name="$Resources:dlccore,EDiscoveryCustodianContentType_Title;"  Description="$Resources:dlccore,EDiscoveryCustodianContentType_Description;"     Group="$Resources:dlccore,EDiscoveryContentTypeGroup;" Sealed="FALSE" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{ED2E74CE-3312-4FD5-B516-336286B07A51}"                    Name="DiscoveryUser"                  DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryUser;"                Required="FALSE"    />
+            <FieldRef ID="{F66784C5-D2E7-4F43-8032-D8A406E9C977}"                   Name="DiscoveryNotes"                 DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryNotes;"               Required="FALSE"    />
+        </FieldRefs>
+    </ContentType>
+    <ContentType ID="0x0100C355A83360C241B884DDC8591691716E"      Name="$Resources:dlccore,EDiscoveryExportContentType_Title;"       Description="$Resources:dlccore,EDiscoveryExportContentType_Description;"          Group="$Resources:dlccore,EDiscoveryContentTypeGroup;" Sealed="TRUE" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{E70145C2-3C99-4F00-8C96-BDB00747F058}"         Name="DiscoveryExportStructure"       DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryExportStructure;"     Required="FALSE"    />
+            <FieldRef ID="{C6492C69-DC6D-4CBA-8ADB-2443CCBBD5CE}"        Name="DiscoveryRightsManagement"      DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryRightsManagement;"    Required="FALSE"    />
+            <FieldRef ID="{3C157C9C-0EE8-46F0-A48D-67E016BB6A61}"                Name="DiscoveryVersions"              DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryVersions;"            Required="FALSE"    />
+            <FieldRef ID="{92F662D0-1FB9-46CB-A03D-338F9DD9F6C4}"      Name="DiscoveryNonSearchable"    DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryNonSearchedItems;"    Required="FALSE"    />
+            <FieldRef ID="{C964B640-43D0-4BCA-AEFA-884378AAA7A0}"                   Name="DiscoveryIntItems"                 DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryItems;"               Required="FALSE"    />
+            <FieldRef ID="{E3CCEF67-BC67-44D5-A8F2-85718F389E5C}"                    Name="DiscoveryIntSize"                  DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoverySize;"                Required="FALSE"    />
+            <FieldRef ID="{A32575AA-69BF-4C20-B1B0-4980A5B2696B}"            Name="DiscoveryExportStatus"          DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryExportStatus;"        Required="FALSE"    />
+            <FieldRef ID="{C80341B6-3ADD-4575-A284-FDF25FB8920B}"             Name="DiscoveryQueryLookup"           DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryQueryLookup;"         Required="FALSE"    />
+        </FieldRefs>
+        <XmlDocuments>
+            <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+                <FormUrls xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+                    <New>_layouts/15/ExportCreate.aspx</New>
+                    <Edit>_layouts/15/ExportView.aspx</Edit>
+                    <Display>_layouts/15/ExportView.aspx</Display>
+                </FormUrls>
+            </XmlDocument>
+        </XmlDocuments>
+    </ContentType>
+</Elements>

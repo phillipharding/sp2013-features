@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="CA_Apps_MonitorApps"
+                     Location="Microsoft.SharePoint.Administration.Default"
+                     GroupId="CA_Apps"
+                     Sequence="30"
+                     Title="$Resources:core,MonitoredApps_SettingsLinkTitle;"
+                     Description="$Resources:core,MonitorApps_LinkDescription;">
+    <UrlAction Url="/_layouts/MonitoredApps.aspx" />
+  </CustomAction>
+  <CustomAction Id="AppManagement_MonitorApps"
+                     Location="Microsoft.SharePoint.Administration.Apps"
+                     GroupId="AppManagement"
+                     Sequence="15"
+                     Title="$Resources:core,MonitoredApps_SettingsLinkTitle;"
+                     Description="$Resources:core,MonitorApps_LinkDescription;">
+    <UrlAction Url="/_layouts/MonitoredApps.aspx" />
+  </CustomAction>
+  <CustomAction
+      Id="Ribbon.MonAppsCustomAction"
+      Location="CommandUI.Ribbon">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition
+            Location="Ribbon.Tabs._children">
+          <Tab
+              Id="Ribbon.MonApps"
+              Sequence="150"
+              Title="$Resources:core,MonitoredAppsRibbon_TabTitle;">
+            <Scaling Id="Ribbon.MonApps.Scaling">
+              <MaxSize Id="Ribbon.MonApps.Scaling.MonAppsManage.MaxSize"
+                  Sequence="10" GroupId="Ribbon.MonApps.MonAppsManage" Size="LargeLarge"/>
+              <MaxSize Id="Ribbon.MonApps.Scaling.MonAppsDetails.MaxSize"
+                  Sequence="20" GroupId="Ribbon.MonApps.MonAppsDetails" Size="LargeLarge"/>
+              <Scale Id="Ribbon.MonApps.Scaling.MonAppsManage.LargeLarge"
+                  Sequence="30" GroupId="Ribbon.MonApps.MonAppsManage" Size="MediumMedium" />
+              <Scale Id="Ribbon.MonApps.Scaling.MonAppsDetails.LargeLarge"
+                  Sequence="40" GroupId="Ribbon.MonApps.MonAppsDetails" Size="MediumMedium" />
+            </Scaling>
+            <Groups Id="Ribbon.MonApps.Groups">
+              <Group Id="Ribbon.MonApps.MonAppsManage"
+                  Sequence="10"
+                  Description="$Resources:core,MonitoredAppsRibbon_MonAppsManage_ButtonGroupDesc;"
+                  Title="$Resources:core,MonitoredAppsRibbon_MonAppsManage_ButtonGroupTitle;"
+                  Template="Ribbon.Templates.Flexible2" >
+                <Controls Id="Ribbon.MonApps.ApplicationModelManagement.Controls">
+                  <Button
+                      Id="Ribbon.MonApps.MonAppsManage.Add"
+                      Command="MonAppsAdd"
+                      Sequence="10"
+                      LabelText="$Resources:core,MonitoredAppsRibbon_AddButtonTitle;"
+                      Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-199" Image16by16Left="-199"
+                      Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-273" Image32by32Left="-375"
+                      ToolTipTitle="$Resources:core,MonitoredAppsRibbon_AddButtonTooltipTitle;"
+                      ToolTipDescription="$Resources:core,MonitoredAppsRibbon_AddButtonTooltipDesc;"
+                      TemplateAlias="o1"/>
+                  <Button
+                      Id="Ribbon.MonApps.MonAppsManage.Delete"
+                      Command="MonAppsDelete"
+                      Sequence="20"
+                      LabelText="$Resources:core,MonitoredAppsRibbon_DeleteButtonTitle;"
+                      Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-271" Image16by16Left="-271"
+                      Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-69" Image32by32Left="-511"
+                      ToolTipTitle="$Resources:core,MonitoredAppsRibbon_DeleteButtonTooltipTitle;"
+                      ToolTipDescription="$Resources:core,MonitoredAppsRibbon_DeleteButtonTooltipDesc;"
+                      TemplateAlias="o1"/>
+                </Controls>
+              </Group>
+              <Group Id="Ribbon.MonApps.MonAppsDetails"
+                  Sequence="20"
+                  Description="$Resources:core,MonitoredAppsRibbon_MonAppsDetails_ButtonGroupDesc;"
+                  Title="$Resources:core,MonitoredAppsRibbon_MonAppsDetails_ButtonGroupTitle;"
+                  Template="Ribbon.Templates.Flexible2" >
+                <Controls Id="Ribbon.MonApps.ApplicationModelManagement.Controls">
+                  <Button
+                      Id="Ribbon.MonApps.MonAppsDetails.Details"
+                      Command="MonAppsDetails"
+                      Sequence="10"
+                      LabelText="$Resources:core,MonitoredAppsRibbon_DetailsButtonTitle;"
+                      Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-217" Image16by16Left="-145"
+                      Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-375" Image32by32Left="-1"
+                      ToolTipTitle="$Resources:core,MonitoredAppsRibbon_DetailsButtonTooltipTitle;"
+                      ToolTipDescription="$Resources:core,MonitoredAppsRibbon_DetailsButtonTooltipDesc;"
+                      TemplateAlias="o1"/>
+                  <Button
+                      Id="Ribbon.MonApps.MonAppsDetails.Errors"
+                      Command="MonAppsErrors"
+                      Sequence="20"
+                      Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-223" Image16by16Left="-19"
+                      Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-205" Image32by32Left="-375"
+                      LabelText="$Resources:core,MonitoredAppsRibbon_ErrorsButtonTitle;"
+                      ToolTipTitle="$Resources:core,MonitoredAppsRibbon_ErrorsButtonTooltipTitle;"
+                      ToolTipDescription="$Resources:core,MonitoredAppsRibbon_ErrorsButtonTooltipDesc;"
+                      TemplateAlias="o1"/>
+                </Controls>
+              </Group>
+            </Groups>
+          </Tab>
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler Command="MonAppsAdd" CommandAction="javascript:ShowAppSelectDialog();" EnabledScript="javascript:AddEnabled();"/>
+        <CommandUIHandler Command="MonAppsDelete" CommandAction="javascript:DeleteSelectedApps();" EnabledScript="javascript:DeleteEnabled();" />
+        <CommandUIHandler Command="MonAppsDetails" CommandAction="javascript:ShowDetails();" EnabledScript="javascript:DetailsEnabled();" />
+        <CommandUIHandler Command="MonAppsErrors" CommandAction="javascript:ViewErrors();" EnabledScript="javascript:DetailsEnabled();" />
+      </CommandUIHandlers>       
+    </CommandUIExtension>
+  </CustomAction>
+</Elements>

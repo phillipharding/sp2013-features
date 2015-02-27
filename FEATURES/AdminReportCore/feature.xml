@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  xmlns="http://schemas.microsoft.com/sharepoint/"
+          Id="B8F36433-367D-49f3-AE11-F7D76B51D251"
+          Title="Administrative Reporting Infrastructure"
+          Description="Library for administrative reporting."
+          Version="14.0.1.0"
+          Scope="Site"
+          ReceiverAssembly="Microsoft.Office.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.Office.Server.Monitoring.AdminReportCoreFeatureReceiver"
+          Hidden="TRUE">
+    <ElementManifests>
+        <ElementManifest Location="AdminReportLibraryInstance.xml"/>
+        <ElementManifest Location="AdminReportLinks.xml"/>
+    </ElementManifests>
+    <UpgradeActions
+          ReceiverAssembly="Microsoft.Office.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.Office.Server.Monitoring.AdminReportCoreFeatureReceiver">
+        <VersionRange EndVersion="14.0.1.0">
+            <CustomUpgradeAction Name="B2BUpgrade" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

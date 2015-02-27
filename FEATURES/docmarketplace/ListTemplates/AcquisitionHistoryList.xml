@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!--Type should be a number larger than 10000 for custom list types-->
+  <!--The type value should be the same with TemplateType value in elements.xml for list instance-->
+  <!--Name should be the same with the folder name that holds the schema.xml file-->
+  <!--BaseType 0 indicuates it is a list type for standard list-->
+  <!--Sequence number is to position the list types's link on the Create page-->
+  <ListTemplate
+      Name="AcquisitionHistoryList"
+      Type="10099"
+      BaseType="0"
+      OnQuickLaunch="TRUE"
+      SecurityBits="11"
+      Sequence="810"
+      DisplayName="$Resources:dmscore, IDS_AcquisitionHistoryListTemplateDisplayName"
+      Description="$Resources:dmscore, IDS_AcquisitionHistoryListTemplateDescription"/>
+</Elements>

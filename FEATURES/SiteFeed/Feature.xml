@@ -1,0 +1,31 @@
+<Feature Id="15A572C6-E545-4D32-897A-BAB6F5846E18"
+    Title="$Resources:spscore,SiteFeed_Feature_Title"
+    Description="$Resources:spscore,SiteFeed_Feature_Description"
+    Version="15.0.2.0"
+    Scope="Web"
+    Hidden="FALSE"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.SiteFeedFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <ElementManifests>
+        <ElementManifest Location="module.xml"/>
+        <ElementManifest Location="webpartdwpfiles.xml"/>
+    </ElementManifests>
+
+    <UpgradeActions>
+        <VersionRange EndVersion="15.0.1.0">
+          <MapFile FromPath="Features\MySiteLayouts\DWP\SiteFeed.dwp" ToPath="Features\SiteFeed\DWP\SiteFeed.dwp" />
+          <ApplyElementManifests>
+            <ElementManifest Location="webpartdwpfiles.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+		<VersionRange EndVersion="15.0.2.0">
+          <CustomUpgradeAction Name="SiteFeed_RemoveWhoCanSeeThisWebpart" />
+        </VersionRange>
+    </UpgradeActions>
+
+    <Properties>
+        <Property Key="NavigationStructure" Value="navbars.xml" />
+    </Properties>
+</Feature>

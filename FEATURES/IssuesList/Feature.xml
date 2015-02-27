@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature 
+    Title="$Resources:core,issueslistFeatureTitle;" 
+    Description="$Resources:core,issueslistFeatureDesc;" 
+    Id="00BFEA71-5932-4F9C-AD71-1557E5751100" 
+    Scope="Web" 
+    Hidden="TRUE"
+    DefaultResourceFile="core"    
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\Issues.xml" />
+    </ElementManifests>
+</Feature>

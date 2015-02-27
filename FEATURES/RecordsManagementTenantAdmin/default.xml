@@ -1,0 +1,12 @@
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Id="TenantAdmin_Sites_ManageConnections"
+        GroupId="TenantAdmin_Settings"
+        Location="Microsoft.SharePoint.TenantAdministration"
+        Sequence="11"
+        Title="$Resources:tenantadmin_settings_externalconnections;">
+        <UrlAction
+            Url="_layouts/15/TA_OfficialFileAdmin.aspx?Source={Source}" />
+    </CustomAction>
+</Elements>

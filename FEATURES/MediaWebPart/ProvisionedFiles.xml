@@ -1,0 +1,19 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="WCMWebParts14" List="113" Url="_catalogs/wp" Path="" RootWebOnly="TRUE">
+        <File Url="Media.webpart" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE">
+            <Property Name="Group" Value="$Resources:core,AuthoringWebPartGroup;"></Property>
+            <Property Name="QuickAddGroups" Value=";#Default;#" />
+        </File>
+    </Module>
+    <Module Name="MediaPlayerStyles" Url="Style Library" Path="" RootWebOnly="TRUE">
+        <File Url="AlternateMediaPlayer.xaml" Name="Media Player/AlternateMediaPlayer.xaml" Type="GhostableInLibrary"  IgnoreIfAlreadyExists="TRUE"/>
+        <File Url="AudioPreview.png" Name="Media Player/AudioPreview.png" Type="GhostableInLibrary"  IgnoreIfAlreadyExists="TRUE"/>
+        <File Url="VideoPreview.png" Name="Media Player/VideoPreview.png" Type="GhostableInLibrary"  IgnoreIfAlreadyExists="TRUE"/>
+        <File Url="MediaWebPartPreview.png" Name="Media Player/MediaWebPartPreview.png" Type="GhostableInLibrary"  IgnoreIfAlreadyExists="TRUE"/>
+    </Module>
+    <Module Name="ECMControlsStyles14" Url="Style Library" IncludeFolders="??*-??*" Path="" RootWebOnly="TRUE"> 
+        <File Url="controls.css" Name="Themable/Core Styles/controls.css" Type="GhostableInLibrary"  IgnoreIfAlreadyExists="TRUE"/>
+    </Module>
+</Elements>

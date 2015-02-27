@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="4DDC5942-98B0-4d70-9F7F-17ACFEC010E5"
+    Title="$Resources:core,Marketplace_GettingStartedWithAppCatalogSiteFeatureTitle;"
+    Description="$Resources:core,Marketplace_GettingStartedWithAppCatalogSiteFeatureDesc;"
+    Version="15.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"
+    ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Marketplace.CorporateCuratedGallery.SPGettingStartedWithAppCatalogFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="Elements.xml" />
+    </ElementManifests>
+</Feature>

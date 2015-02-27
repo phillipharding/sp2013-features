@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature Id="0EE1129F-A2F3-41A9-9E9C-C7EE619A8C33"
+    Title="MySite Storage Deployment Scenario"
+    Description="Enables MySite storage features."
+    Version="15.0.2.0"
+    Scope="Site"
+    Hidden="TRUE"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.StorageDeploymentFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <UpgradeActions
+		ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+		ReceiverClass="Microsoft.SharePoint.Portal.StorageDeploymentFeatureReceiver" >
+        <VersionRange EndVersion="15.0.1.0">
+          <CustomUpgradeAction Name="EnableMySiteLayoutsFeature" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.2.0">
+          <CustomUpgradeAction Name="AddToPersonalSiteCapabilities" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

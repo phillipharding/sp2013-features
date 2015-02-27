@@ -1,0 +1,13 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Id="SiteDirSettings"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Sequence="21"
+        RequireSiteAdministrator="true"
+        Title="$Resources:spscore,LocalSiteDirectorySettingsLink;"
+        Description="$Resources:spscore,SiteSettings_SiteDirectorySettings_Tooltip;">
+        <UrlAction
+            Url="_layouts/SiteDirectorySettings.aspx" />
+    </CustomAction>
+</Elements>

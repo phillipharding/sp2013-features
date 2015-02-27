@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+        <CustomActionGroup 
+            Id="FarmSearchSettings"
+	    Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"	
+	    Title="$Resources:Microsoft.Office.Server.Search,Admin_SearchSection_Title;"
+            ImageUrl="/_layouts/15/images/search32x32.png?rev=23" 
+            Sequence="50" />    
+        <CustomAction 
+            Id="FarmDashboard"
+            GroupId="FarmSearchSettings"
+            Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"
+            Sequence="10" 
+            Title="$Resources:Microsoft.Office.Server.Search,Admin_SearchFarmDasboard_Title;" >
+            	<UrlAction Url="searchfarmdashboard.aspx"/>
+        </CustomAction>
+        <CustomAction 
+            Id="CrawlImpacrRules"
+            GroupId="FarmSearchSettings"
+            Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"
+            Sequence="20" 
+            Title="$Resources:Microsoft.Office.Server.Search,ManageCrawlerRules_SearchAdminBreadcrumb;" >
+            	<UrlAction Url="_admin/search/managesitehitrules.aspx"/>
+        </CustomAction>
+</Elements>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="circulation"
+        Type="405"
+        BaseType="0"
+        Category="Communications"
+        OnQuickLaunch="FALSE"
+        FolderCreation="FALSE"
+        SecurityBits="11"
+        DisplayName="$Resources:core,GbwListTemplateCirculationDisplay;"
+        Description="$Resources:core,GbwListTemplateCirculationDescription;"
+        Image="/_layouts/15/images/itgbcirc.png?rev=23" />
+    <CustomAction
+      Id="Ribbon.ListItem.Manage.Confirm"
+      RegistrationType="List"
+      RegistrationId="405"
+      Location="CommandUI.Ribbon.ListView"
+      Sequence="5"
+      UIVersion="4"
+      Title="$Resources:core,cui_CirculationCustomActionTitle;">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.ListItem.Manage.Controls._children">
+        <SplitButton
+          Id="Ribbon.ListItem.Manage.Confirm"
+          Sequence="5"
+          Command="CirculationConfirm"
+          CommandMenuOpen="CirculationMenuOpen"
+          Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-1" Image16by16Left="-267"
+          Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-69" Image32by32Left="-273"
+          LabelText="$Resources:core,cui_CirculationConfirm;"
+          TemplateAlias="o1"
+          ToolTipTitle="$Resources:core,cui_stt_CirculationConfirm;"
+          ToolTipDescription="$Resources:core,cui_stt_CirculationConfirmDesc;">                    
+          <Menu Id="Ribbon.ListItem.Manage.Confirm.Menu">
+            <MenuSection Id="Ribbon.ListItem.Manage.Confirm.Menu.Actions" DisplayMode="Menu16">
+              <Controls Id="Ribbon.ListItem.Manage.Confirm.Menu.Actions.Controls">
+                <Button
+                  Id="Ribbon.ListItem.Manage.Confirm"
+                  Sequence="5"
+                  Alt="$Resources:core,cui_CirculationConfirmAlt;"
+                  Command="CirculationConfirm"
+                  CommandType="OptionSelection"
+                  LabelText="$Resources:core,cui_CirculationConfirm;"
+                  Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-1" Image16by16Left="-267"
+                  Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-69" Image32by32Left="-273"
+                  TemplateAlias="o1"
+                  ToolTipTitle="$Resources:core,cui_stt_CirculationConfirm;"
+                  ToolTipDescription="$Resources:core,cui_stt_CirculationConfirmDesc;"
+                />
+                <Button
+                  Id="Ribbon.ListItem.Manage.Disconfirm"
+                  Sequence="6"
+                  Alt="$Resources:core,cui_CirculationDisconfirmAlt;"
+                  Command="CirculationDisconfirm"
+                  CommandType="OptionSelection"
+                  LabelText="$Resources:core,cui_CirculationDisconfirm;"
+                  Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-253" Image16by16Left="-235"
+                  Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-103" Image32by32Left="-273"
+                  TemplateAlias="o1"
+                  ToolTipTitle="$Resources:core,cui_stt_CirculationDisconfirm;"
+                  ToolTipDescription="$Resources:core,cui_stt_CirculationDisconfirmDesc;"
+                />
+              </Controls>
+            </MenuSection>
+          </Menu>
+        </SplitButton>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+   </CustomAction>
+   <CustomAction
+      Id="Ribbon.ListForm.Display.Manage.Confirm"
+      RegistrationType="List"
+      RegistrationId="405"
+      Location="CommandUI.Ribbon.DisplayForm"
+      Sequence="5"
+      UIVersion="4"
+      Title="$Resources:core,cui_CirculationCustomActionTitle;">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.ListForm.Display.Manage.Controls._children">
+          <Button
+            Id="Ribbon.ListForm.Display.Manage.Confirm"
+            Sequence="5"
+            Alt="$Resources:core,cui_CirculationConfirmAlt;"
+            Command="CirculationConfirm"
+            LabelText="$Resources:core,cui_CirculationConfirm;"
+            Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-1" Image16by16Left="-267"
+            Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-69" Image32by32Left="-273"
+            TemplateAlias="o1"
+          />
+        </CommandUIDefinition>
+        <CommandUIDefinition Location="Ribbon.ListForm.Display.Manage.Controls._children">
+          <Button
+            Id="Ribbon.ListForm.Display.Manage.Disconfirm"
+            Sequence="6"
+            Alt="$Resources:core,cui_CirculationDisconfirmAlt;"
+            Command="CirculationDisconfirm"
+            LabelText="$Resources:core,cui_CirculationDisconfirm;"
+            Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-253" Image16by16Left="-235"
+            Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-103" Image32by32Left="-273"
+            TemplateAlias="o1"
+          />
+        </CommandUIDefinition>
+        <CommandUIDefinition Location="Ribbon.ListForm.Display.Manage.Controls._children">
+          <Button
+            Id="Ribbon.ListForm.Display.Manage.CopyCirculation"
+            Sequence="7"
+            Alt="$Resources:core,cui_CirculationCopyAlt;"
+            Command="CirculationCopy"
+            LabelText="$Resources:core,cui_CirculationCopy;"
+            Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-163" Image16by16Left="-73"
+            Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-443" Image32by32Left="-137"
+            TemplateAlias="o1"
+          />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+</Elements>

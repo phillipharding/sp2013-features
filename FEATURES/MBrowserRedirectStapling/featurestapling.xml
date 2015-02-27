@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <FeatureSiteTemplateAssociation Id="D95C97F3-E528-4DA2-AE9F-32B3535FBB59" TemplateName="STS#0" />
+    <FeatureSiteTemplateAssociation Id="D95C97F3-E528-4DA2-AE9F-32B3535FBB59" TemplateName="STS#1" />
+    <FeatureSiteTemplateAssociation Id="D95C97F3-E528-4DA2-AE9F-32B3535FBB59" TemplateName="STS#2" />
+    <FeatureSiteTemplateAssociation Id="D95C97F3-E528-4DA2-AE9F-32B3535FBB59" TemplateName="BDR#0" />
+    <FeatureSiteTemplateAssociation Id="D95C97F3-E528-4DA2-AE9F-32B3535FBB59" TemplateName="PROJECTSITE#0" />
+</Elements>

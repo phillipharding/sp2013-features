@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<WebPart xmlns="http://schemas.microsoft.com/WebPart/v2" >
+	<Assembly>Microsoft.Office.Excel.WebUI, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+	<TypeName>Microsoft.Office.Excel.WebUI.ExcelWebRenderer</TypeName>
+	<Title>$Resources:xlsrv,dwp-title;</Title>
+	<Description>$Resources:xlsrv,dwp-description;</Description>
+	<FrameType>TitleBarOnly</FrameType>
+	<PartImageSmall>/_layouts/15/images/ewr023.gif</PartImageSmall>
+	<PartImageLarge>/_layouts/15/images/ewr023.gif</PartImageLarge>
+</WebPart>

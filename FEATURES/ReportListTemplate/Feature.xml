@@ -1,0 +1,13 @@
+<Feature  Id="2510D73F-7109-4ccc-8A1C-314894DEEB3A"
+          Title="SharePoint Portal Server Report Library"
+          Description="SharePoint Portal Server Report Library"
+          Version="14.0.0.0"
+          Scope="Web"
+          SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\ReportLibrary.xml" />
+    </ElementManifests>
+</Feature>

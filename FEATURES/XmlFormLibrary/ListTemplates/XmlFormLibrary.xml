@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="xmlform"
+        Type="115"
+        BaseType="1"
+        OnQuickLaunch="TRUE"
+        SecurityBits="11"
+        Sequence="120"
+        DisplayName="$Resources:core,formlibList;"
+        Description="$Resources:core,formlibList_Desc;"
+        Image="/_layouts/15/images/itfl.png?rev=23"
+        DocumentTemplate="1000"/>
+</Elements>

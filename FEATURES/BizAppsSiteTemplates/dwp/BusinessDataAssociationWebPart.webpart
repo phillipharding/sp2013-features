@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Microsoft.SharePoint.Portal.WebControls.BusinessDataAssociationWebPart,Microsoft.SharePoint.Portal,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+      <importErrorMessage>$Resources:spscore,DwpBdlCannotImport</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">$Resources:spscore,DwpBdAssociationTitle</property>
+        <property name="Description" type="string">$Resources:spscore,DwpBdAssociationDesc</property>
+        <property name="CatalogIconImageUrl" type="string">/_layouts/images/bizdatawebpart.gif</property>
+        <property name="DataSourcesString" type="string"><![CDATA[<%@ Register TagPrefix="WebControls" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %><WebControls:BdcDataSource runat="server" />]]></property>
+        <property name="ParameterBindings" type="string"><![CDATA[<ParameterBinding Name="dvt_fieldsort" Location="Postback;Connection"/><ParameterBinding Name="dvt_sortfield" Location="Postback;Connection"/><ParameterBinding Name="dvt_sortdir" Location="Postback;Connection"/><ParameterBinding Name="dvt_sorttype" Location="Postback;Connection"/><ParameterBinding Name="dvt_filterfield" Location="Postback;Connection"/><ParameterBinding Name="dvt_filterval" Location="Postback;Connection"/><ParameterBinding Name="dvt_filtertype" Location="Postback;Connection"/><ParameterBinding Name="dvt_firstrow" Location="Postback;Connection"/><ParameterBinding Name="dvt_nextpagedata" Location="Postback;Connection"/><ParameterBinding Name="dvt_apos" Location="Postback;Connection"/><ParameterBinding Name="filterParam" Location="Postback;Connection"/><ParameterBinding Name="dvt_1_form_selectkey" Location="Postback;Connection"/>]]></property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

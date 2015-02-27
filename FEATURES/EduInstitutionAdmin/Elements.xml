@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Receivers ListUrl="$Resources:core,lists_Folder;/$Resources:eduserver,IDS_EduAdminBulkRequestListName">
+		<Receiver>
+			<Name>BulkRequestListItemAdded</Name>
+			<Type>ItemAdded</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Institution, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.BulkRequestEventReceiver</Class>
+			<Synchronization>Asynchronous</Synchronization>
+		</Receiver>
+        <Receiver>
+			<Name>BulkRequestListItemDeleted</Name>
+			<Type>ItemDeleted</Type>
+			<SequenceNumber>10001</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Institution, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.BulkRequestEventReceiver</Class>
+			<Synchronization>Asynchronous</Synchronization>
+		</Receiver>
+  </Receivers>
+</Elements>

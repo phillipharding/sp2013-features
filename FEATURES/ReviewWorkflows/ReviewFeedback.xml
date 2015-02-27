@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Workflow
+        Name="$Resources:ReviewFeedback_Title;"
+        Description="$Resources:ReviewFeedback_Description;"
+        Id="46C389A4-6E18-476c-AA17-289B0C79FB8F"
+        CodeBesideClass="Microsoft.Office.Workflow.ReviewRouting"
+        CodeBesideAssembly="Microsoft.Office.Workflow.Routing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        TaskListContentTypeId="0x01080100C9C9515DE4E24001905074F980F93160"
+        AssociationUrl="~layouts/CstWrkflIP.aspx"
+        InstantiationUrl="~layouts/IniWrkflIP.aspx"
+        ModificationUrl="~layouts/ModWrkflIP.aspx">
+        <Categories/>
+        <AssociationData>
+            <my:myFields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD" xml:lang="en-us">
+                <my:Reviewers></my:Reviewers>
+                <my:CC></my:CC>
+                <my:DueDate xsi:nil="true"></my:DueDate>
+                <my:Description></my:Description>
+                <my:Title></my:Title>
+                <my:DefaultTaskType>0</my:DefaultTaskType>
+                <my:CreateTasksInSerial>false</my:CreateTasksInSerial>
+                <my:AllowDelegation>true</my:AllowDelegation>
+                <my:AllowChangeRequests>true</my:AllowChangeRequests>
+                <my:StopOnAnyReject xsi:nil="true"></my:StopOnAnyReject>
+                <my:WantedTasks xsi:nil="true"></my:WantedTasks>
+                <my:SetMetadataOnSuccess>false</my:SetMetadataOnSuccess>
+                <my:MetadataSuccessField></my:MetadataSuccessField>
+                <my:MetadataSuccessValue></my:MetadataSuccessValue>
+                <my:ApproveWhenComplete>false</my:ApproveWhenComplete>
+                <my:TimePerTaskVal xsi:nil="true"></my:TimePerTaskVal>
+                <my:TimePerTaskType xsi:nil="true"></my:TimePerTaskType>
+                <my:Voting>false</my:Voting>
+                <my:MetadataTriggerField></my:MetadataTriggerField>
+                <my:MetadataTriggerValue></my:MetadataTriggerValue>
+                <my:InitLock>false</my:InitLock>
+                <my:MetadataStop>false</my:MetadataStop>
+                <my:ItemChangeStop>false</my:ItemChangeStop>
+                <my:GroupTasks>false</my:GroupTasks>
+            </my:myFields>
+        </AssociationData>
+        <MetaData>
+            <InitiationCategories>General</InitiationCategories>
+            <AssociationCategories>None</AssociationCategories>
+            <Association_FormURN>urn:schemas-microsoft-com:office:infopath:workflow:ReviewRouting-Assoc:$Subst:LCID;</Association_FormURN>
+            <Instantiation_FormURN>urn:schemas-microsoft-com:office:infopath:workflow:ReviewRouting-Init:$Subst:LCID;</Instantiation_FormURN>
+            <Task0_FormURN>urn:schemas-microsoft-com:office:infopath:workflow:ReviewRouting-Review:$Subst:LCID;</Task0_FormURN>
+            <Task1_FormURN>urn:schemas-microsoft-com:office:infopath:workflow:ReviewRouting-Review:$Subst:LCID;</Task1_FormURN>
+            <Task2_FormURN>urn:schemas-microsoft-com:office:infopath:workflow:ReviewRouting-Review:$Subst:LCID;</Task2_FormURN>
+            <Modification_af71f77b-e6c8-483a-acbf-30b4a84bd209_FormURN>urn:schemas-microsoft-com:office:infopath:workflow:ReviewRouting-Modify:$Subst:LCID;</Modification_af71f77b-e6c8-483a-acbf-30b4a84bd209_FormURN>
+            <Modification_af71f77b-e6c8-483a-acbf-30b4a84bd209_Name>$Resources:ReviewFeedback_AddReviewer;</Modification_af71f77b-e6c8-483a-acbf-30b4a84bd209_Name>
+            <Modification_27f914ae-3112-493d-86cf-43dc93870418_FormURN>urn:schemas-microsoft-com:office:infopath:workflow:ReviewRouting-UpdateTasks:$Subst:LCID;</Modification_27f914ae-3112-493d-86cf-43dc93870418_FormURN>
+            <Modification_27f914ae-3112-493d-86cf-43dc93870418_Name>$Resources:ReviewWorkflow_UpdateTasks;</Modification_27f914ae-3112-493d-86cf-43dc93870418_Name>
+            <Modification_b21bcc38-2c23-4b64-8e7d-c32c43ad42cf_Name>$Resources:ReviewWorkflow_WrapItUp;</Modification_b21bcc38-2c23-4b64-8e7d-c32c43ad42cf_Name>
+            <Modification_b21bcc38-2c23-4b64-8e7d-c32c43ad42cf_FormURN>urn:schemas-microsoft-com:office:infopath:workflow:OOB-WrapItUp:$Subst:LCID;</Modification_b21bcc38-2c23-4b64-8e7d-c32c43ad42cf_FormURN>
+            <Modification_Format><my:myFields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD">{0}</my:myFields></Modification_Format>
+            <StatusPageUrl>~layouts/WrkStat.aspx</StatusPageUrl>
+            <InitiationType>Manual;#OnNewItem;#OnItemUpdate</InitiationType>
+            <ExtendedStatusColumnValues>
+                <StatusColumnValue>$Resources:ReviewFeedback_CanceledStatus</StatusColumnValue>
+            </ExtendedStatusColumnValues>  
+        </MetaData>
+     </Workflow>
+</Elements>

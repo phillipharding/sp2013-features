@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+   <Assembly>Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly> 
+   <TypeName>Microsoft.SharePoint.Portal.WebControls.ScorecardFilterWebPart</TypeName>
+   <Title>$Resources:spscore,DwpOlapFilterTitle</Title>
+   <Description>$Resources:spscore,DwpOlapFilterDescription</Description>
+   <FrameType>None</FrameType>
+   <PartImageSmall>/_layouts/images/wp_Filter.gif</PartImageSmall>
+   <PartImageLarge>/_layouts/images/wp_Filter.gif</PartImageLarge>
+</WebPart>

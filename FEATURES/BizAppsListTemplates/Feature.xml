@@ -1,0 +1,13 @@
+<Feature  Id="065C78BE-5231-477e-A972-14177CC5B3C7"
+          Title="SharePoint Portal Server Status Indicator List template"
+          Description="SharePoint Portal Server Status Indicator List template"
+          Version="14.0.0.0"
+          Scope="Web"
+          SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\StatusIndicatorList.xml"/>
+    </ElementManifests>
+</Feature>

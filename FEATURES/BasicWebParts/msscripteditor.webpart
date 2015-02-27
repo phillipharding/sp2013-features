@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+	<webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+		<metaData>
+			<type name=
+"Microsoft.SharePoint.WebPartPages.ScriptEditorWebPart, Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+			<importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+		</metaData>
+		<data>
+			<properties>
+				<property name="Title" type="string">$Resources:core,ScriptEditorWebPartTitle;</property>
+				<property name="Description" type="string">$Resources:core,ScriptEditorWebPartDescription;</property>
+				<property name="ChromeType" type="chrometype">None</property>
+			</properties>
+		</data>
+	</webPart>
+</webParts>

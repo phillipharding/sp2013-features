@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Control Id="QuickLaunchDataSource" Sequence="5"
+	ControlClass="System.Web.UI.WebControls.SiteMapDataSource"
+	ControlAssembly="System.Web, version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <Property Name="SiteMapProvider">SPAdministrationQuickLaunchProvider</Property>
+        <Property Name="ShowStartingNode">false</Property>
+        <Property Name="ID">QuickLaunchSiteMap</Property>
+    </Control>
+</Elements>

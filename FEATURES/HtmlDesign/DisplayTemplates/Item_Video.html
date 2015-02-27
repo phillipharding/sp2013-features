@@ -1,0 +1,111 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_VideoItem</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:ManagedPropertyMapping msdt:dt="string">'Image Url'{$Resources:Microsoft.Office.Server.Search,SlotName_ImageURL;}:'PictureThumbnailURL;PictureURL;','Title','Title Link Url'{$Resources:Microsoft.Office.Server.Search,SlotName_URL;}:'Path','Summary'{$Resources:Microsoft.Office.Server.Search,SlotName_Line2;}:'Description','HitHighlightedProperties','HitHighlightedSummary','FileExtension'{$Resources:Microsoft.Office.Server.Search,SlotName_FileExtension;}:'SecondaryFileExtension','Author','ContentTypeId','Created','PeopleInMedia','MediaDuration','VideoFileURL'{$Resources:Microsoft.Office.Server.Search,SlotName_VideoFileURL;}:'UserEncodingURL;ExternalMediaURL;DefaultEncodingURL;'</mso:ManagedPropertyMapping>
+<mso:MasterPageDescription msdt:dt="string">$Resources:Microsoft.Office.Server.Search,DisplayTemplateDescription_VideoItem</mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#SearchResults;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="Item_Video">
+<!--#_
+var id = ctx.ClientControl.get_nextUniqueId();
+var itemId = id + Srch.U.Ids.item;
+var hoverId = id + Srch.U.Ids.hover; 
+$setResultItem(itemId, ctx.CurrentItem);
+var hoverUrl = "~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_Video_HoverPanel.js";
+ctx.CurrentItem.ShowDescription = false;
+ctx.CurrentItem.ShowCloseButton = false;
+
+var encodedId = $htmlEncode(id);
+var templateId = encodedId + "_VideoOrganicTemplate";
+var thumbnailPathId = encodedId + "_videoItemThumbnailPath";
+
+var imageURL = $getItemValue(ctx, "Image Url");
+var imageMarkup = Srch.U.getVideoImageWithFallbackSource(imageURL, 120, 68);
+var titleLinkUrl = $getItemValue(ctx, "Title Link Url");
+var videoFileURL = $getItemValue(ctx, "VideoFileURL");
+var fileExtension = $getItemValue(ctx, "FileExtension");
+var isRendition = !fileExtension.isEmpty;
+if(isRendition && !videoFileURL.isEmpty)
+{
+    titleLinkUrl = videoFileURL;
+    videoFileURL.value = unescape(videoFileURL.value);
+}
+titleLinkUrl.overrideValueRenderer($urlHtmlEncode);
+
+var truncatedUrl = Srch.U.truncateHighlightedUrl(titleLinkUrl.value, Srch.U.pathTruncationLengthWithPreview);
+
+var title = Srch.U.getHighlightedProperty(id, ctx.CurrentItem, "Title");
+var itemTitle = $getItemValue(ctx, "Title");
+if ($isEmptyString(title)) 
+{
+    title = itemTitle.toString();
+}
+
+var maxTitleLengthInChars = Srch.U.titleTruncationLength;
+var termsToUse = 2;
+if(!imageURL.isEmpty)
+{
+    maxTitleLengthInChars = Srch.U.titleTruncationLengthWithPreview;
+    termsToUse = 1;
+}
+
+var summaryText = null; 
+var hhSummary = $getItemValue(ctx, "HitHighlightedSummary");
+if(!hhSummary.isEmpty)
+{
+    var su = Srch.U.processHHXML(hhSummary.value);    
+    summaryText = Srch.U.getTrimmedProcessedHHXMLString(su, Srch.U.summaryTruncationLengthWithPreview);
+}
+else
+{
+    var summary = $getItemValue(ctx, "Summary");
+    summaryText = $htmlEncode(Srch.U.truncateEnd(summary.value, Srch.U.summaryTruncationLengthWithPreview));
+}
+var hasSummary = !$isEmptyString(summaryText);
+var pathStyle = hasSummary ? "" : "display:inherit";
+_#-->
+        <div id="_#= $htmlEncode(itemId) =#_" name="Item" data-displaytemplate="VideoItem" class="ms-srch-item" onmouseover="_#= Srch.U.getShowHoverPanelCallback(itemId, hoverId, hoverUrl) =#_" onmouseout="_#= Srch.U.getHideHoverPanelCallback() =#_">
+            <div id="_#= $htmlEncode(hoverId) =#_" class="ms-srch-hover-outerContainer"></div>
+            <div id="_#= templateId =#_">
+                <div class="ms-srch-video-itemthumbnail">
+                    <a clicktype="Result" href="_#= titleLinkUrl =#_" id="_#= thumbnailPathId =#_">
+                        _#= imageMarkup =#_
+                        <div class="ms-srch-video-playbutton ms-srch-video-playbutton-result"><span></span></div>
+                    </a>
+                </div>
+                <div class="ms-srch-video-itemmain">
+                    <div id="_#= $htmlEncode(id + Srch.U.Ids.title) =#_" class="ms-srch-item-title">
+                        <h3>
+                            <a clicktype="Result" id="_#= $htmlEncode(id + Srch.U.Ids.titleLink) =#_" href="_#= titleLinkUrl =#_" class="ms-srch-item-link" title="_#= itemTitle =#_" onfocus="_#= ctx.currentItem_ShowHoverPanelCallback =#_">
+                                _#= Srch.U.trimTitle(title, maxTitleLengthInChars, termsToUse) =#_
+                            </a>
+                        </h3>
+                    </div>                    
+<!--#_
+    if(hasSummary)
+    {
+_#-->
+                    <div id="_#= $htmlEncode(id + Srch.U.Ids.summary) =#_" class="ms-srch-item-summary">
+                        _#= summaryText =#_
+                    </div>
+<!--#_
+    }
+_#-->              
+                    <div id="_#= $htmlEncode(id + Srch.U.Ids.path) =#_" tabindex="0" class="ms-srch-item-path ms-srch-item-video-path"  style="_#= pathStyle =#_" title="_#= $htmlEncode(titleLinkUrl.value) =#_" onblur="Srch.U.restorePath(this, '_#= $scriptEncode(truncatedUrl) =#_', '_#= $scriptEncode(titleLinkUrl.value) =#_')" onclick="Srch.U.selectPath('_#= $scriptEncode(titleLinkUrl.value) =#_', this)" onkeydown="Srch.U.setPath(event, this, '_#= $scriptEncode(titleLinkUrl.value) =#_', '_#= $scriptEncode(truncatedUrl) =#_')" >
+                        _#= $htmlEncode(truncatedUrl) =#_
+                    </div>      
+                </div>
+            </div>
+        </div> 
+    </div>
+</body>
+</html>

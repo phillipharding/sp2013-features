@@ -1,0 +1,45 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+  <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ContentType ID="0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF390018EA875251284D5A8F0059B0597CFEC8" Name="$Resources:cmscore,contenttype_sbwpage_name;" Description="$Resources:cmscore,contenttype_sbwpage_description;" Group="$Resources:cmscore,group_sbwcontenttypes;" Sealed="TRUE" Version="0">
+      <FieldRefs>
+        <FieldRef ID="{D83897E5-2430-4DF7-8E5A-9BC06C664992}" Name="SeoMetaDescription"/>
+        <FieldRef ID="{FF92F929-D18B-46D4-9879-521378C689EF}" Name="SeoBrowserTitle"/>
+        <FieldRef ID="{325C00DD-FD91-468B-81CF-5BB9951ABBA1}" Name="RobotsNoIndex"/>
+        <FieldRef ID="{45AE2169-585C-440B-AA4C-1D5E981FBBE5}" Name="SeoKeywords" />
+        <FieldRef ID="{3de94b06-4120-41a5-b907-88773e493458}" Name="PublishingPageImage" />
+        <FieldRef ID="{F55C4D88-1F2E-4ad9-AAA8-819AF4EE7EE8}" Name="PublishingPageContent" />
+        <FieldRef ID="{B3525EFE-59B5-4f0f-B1E4-6E26CB6EF6AA}" Name="SummaryLinks" />
+        <FieldRef ID="{D3429CC9-ADC4-439b-84A8-5679070F84CB}" Name="ArticleByLine" />
+        <FieldRef ID="{71316CEA-40A0-49f3-8659-F0CEFDBDBD4F}" Name="ArticleStartDate" />
+        <FieldRef ID="{66F500E9-7955-49ab-ABB1-663621727D10}" Name="PublishingImageCaption" />
+        <RemoveFieldRef ID="{51d39414-03dc-4bd0-b777-d3e20cb350f7}" />
+        <RemoveFieldRef ID="{a990e64f-faa3-49c1-aafa-885fda79de62}" />
+        <RemoveFieldRef ID="{c79dba91-e60b-400e-973d-c6d06f192720}" />
+        <RemoveFieldRef ID="{7546ad0d-6c33-4501-b470-fb3003ca14ba}" />
+        <RemoveFieldRef ID="{dc47d55f-9bf9-494a-8d5b-e619214dd19a}" />
+        <RemoveFieldRef ID="{543BC2CF-1F30-488e-8F25-6FE3B689D9AC}" />
+        <RemoveFieldRef ID="{61cbb965-1e04-4273-b658-eedaa662f48d}" />
+      </FieldRefs>
+      <DocumentTemplate TargetName="/_layouts/15/CreatePage.aspx" /> 
+    </ContentType>
+    <ContentType ID="0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF390018EA875251284D5A8F0059B0597CFEC800A1D58B428CD342DAA74D50DB8A57A7F9" Name="$Resources:cmscore,contenttype_sbwinformationpage_name;" Description="$Resources:cmscore,contenttype_sbwinformationpage_description;" Group="$Resources:cmscore,group_sbwcontenttypes;" Sealed="TRUE" Version="0">
+      <FieldRefs>
+        <FieldRef ID="{fc2e188e-ba91-48c9-9dd3-16431afddd50}" Name="WorkAddress" Sealed="TRUE"/>
+        <FieldRef ID="{fce16b4c-fe53-4793-aaab-b4892e736d15}" Name="EMail" Sealed="TRUE"/>
+        <FieldRef ID="{fd630629-c165-4513-b43c-fdb16b86a14d}" Name="WorkPhone" Sealed="TRUE"/>
+      </FieldRefs>
+      <DocumentTemplate TargetName="/_layouts/15/CreatePage.aspx" />
+    </ContentType>
+    <ContentType ID="0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF390018EA875251284D5A8F0059B0597CFEC800A6B66DDD155D42B4989337F292AAD6BE" Name="$Resources:cmscore,contenttype_sbwmultiareapage_name;" Description="$Resources:cmscore,contenttype_sbwmultiareapage_description;" Group="$Resources:cmscore,group_sbwcontenttypes;" Sealed="TRUE" Version="0">
+      <FieldRefs>
+        <FieldRef ID="{F7A6DC89-BD88-4878-9976-8A44541DE64B}" Name="SBWPageContent1"/>
+        <FieldRef ID="{36FB7B32-5BAC-45C1-B925-15B6F4C4ACE9}" Name="SBWPageContent2"/>
+        <FieldRef ID="{6BC453F1-81C8-468F-9908-290C514F60A6}" Name="SBWPageContent3"/>
+      </FieldRefs>
+      <DocumentTemplate TargetName="/_layouts/15/CreatePage.aspx" />
+    </ContentType>
+    <ContentTypeBinding ContentTypeId="0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF390018EA875251284D5A8F0059B0597CFEC800A1D58B428CD342DAA74D50DB8A57A7F9" ListUrl="$Resources:osrvcore,List_Pages_UrlName;" />
+    <ContentTypeBinding ContentTypeId="0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF390018EA875251284D5A8F0059B0597CFEC800A6B66DDD155D42B4989337F292AAD6BE" ListUrl="$Resources:osrvcore,List_Pages_UrlName;" />
+    <ContentTypeBinding ContentTypeId="0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF390018EA875251284D5A8F0059B0597CFEC8" ListUrl="$Resources:osrvcore,List_Pages_UrlName;" />
+  </Elements>

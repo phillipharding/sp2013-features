@@ -1,0 +1,28 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ContentType ID="0x0101009148F5A04DDD49cbA7127AADA5FB792B00291D173ECE694d56B19D111489C4369D" Name="$Resources:cmscore,contenttype_video_name_15;" Description="$Resources:cmscore,contenttype_video_description;" Group="$Resources:cmscore,group_digitalassetcontenttypes;" Inherits="TRUE" Sealed="FALSE" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{246d0907-637c-46b7-9aa0-0bb914daa832}" Name="_Author" />
+            <FieldRef ID="{52578fc3-1f01-4f4d-b016-94ccbcf428cf}" Name="_Comments" />
+            <FieldRef ID="{f39d44af-d3f3-4ae6-b43f-ac7330b5e9bd}" Name="AlternateThumbnailUrl" />
+            <FieldRef ID="{f08ab41d-9a03-49ae-9413-6cd284a15625}" Name="wic_System_Copyright" />
+            <FieldRef ID="{DE38F937-8578-435e-8CD3-50BE3EA59253}" Name="MediaLengthInSeconds" ShowInEditForm="FALSE"/>
+            <FieldRef ID="{59CD571E-E2D9-485d-BB5D-E70D12F8D0B7}" Name="VideoWidthInPixels" ShowInEditForm="FALSE"/>
+            <FieldRef ID="{84CD09BD-85A9-461f-86E3-4C3C1738AD6B}" Name="VideoHeightInPixels" ShowInEditForm="FALSE"/>
+            <FieldRef ID="{FD7EF3C2-486E-40cd-B651-6BE6D1ABBE25}" Name="VideoRenditionLabel"/>
+            <FieldRef ID="{CF42542F-DF94-4136-A0AC-29326FCCD565}" Name="VideoRenditionBitRate" ShowInEditForm="FALSE"/>
+        </FieldRefs>
+        <DocumentTemplate TargetName="/_layouts/15/UploadEx.aspx" />
+    </ContentType>
+    <ContentType ID="0x0101009148F5A04DDD49cbA7127AADA5FB792B006973ACD696DC4858A76371B2FB2F439A" Name="$Resources:cmscore,contenttype_audio_name;" Description="$Resources:cmscore,contenttype_audio_description;" Group="$Resources:cmscore,group_digitalassetcontenttypes;" Inherits="TRUE" Sealed="FALSE" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{246d0907-637c-46b7-9aa0-0bb914daa832}" Name="_Author" />
+            <FieldRef ID="{52578fc3-1f01-4f4d-b016-94ccbcf428cf}" Name="_Comments" />
+            <FieldRef ID="{f39d44af-d3f3-4ae6-b43f-ac7330b5e9bd}" Name="AlternateThumbnailUrl" />
+            <FieldRef ID="{f08ab41d-9a03-49ae-9413-6cd284a15625}" Name="wic_System_Copyright" />
+            <FieldRef ID="{DE38F937-8578-435e-8CD3-50BE3EA59253}" Name="MediaLengthInSeconds"/>
+        </FieldRefs>
+        <DocumentTemplate TargetName="/_layouts/15/UploadEx.aspx" />
+    </ContentType>
+</Elements>

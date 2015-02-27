@@ -1,0 +1,112 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="PremiumVerticalsPageUpload" Url="$Resources:osrvcore,List_Pages_UrlName;" Path="">
+         <File Url="videoresults.aspx" Type="GhostableInLibrary">
+            <Property Name="PublishingPageLayout" Value="~SiteCollection/_catalogs/masterpage/searchresults.aspx, $Resources:Microsoft.Office.Server.Search,SearchResultsTitle;" />
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,VideoSearchResultsTitle;" />
+            <Property Name="ContentType" Value="$Resources:Microsoft.Office.Server.Search,contenttype_welcomepage_name;" />
+            <AllUsersWebPart WebPartZoneID="NavigationZone" WebPartOrder="1">
+                <![CDATA[
+                <webParts>
+                    <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                        <metaData>
+                            <type name="Microsoft.Office.Server.Search.WebControls.RefinementScriptWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                            <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                        </metaData>
+                        <data>
+                            <properties>
+                                <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,RefinementScript_Title;</property>
+                                <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,RefinementScript_Desc;</property>
+                                <property name="ChromeType">None</property>
+                                <property name="AllowMinimize" type="bool">true</property>
+                                <property name="AllowClose" type="bool">true</property>
+                                <property name="Hidden" type="bool">false</property>
+                                <property name="SelectedRefinementControlsJson" type="string">{&quot;refinerConfigurations&quot;:[{&quot;sortBy&quot;:0,&quot;sortOrder&quot;:0,&quot;countDisplay&quot;:1,&quot;maxNumberRefinementOptions&quot;:7,&quot;propertyName&quot;:&quot;PeopleInMedia&quot;,&quot;type&quot;:&quot;Text&quot;,&quot;propertyID&quot;:null,&quot;displayName&quot;:null,&quot;description&quot;:null,&quot;displayTemplate&quot;:&quot;~sitecollection/_catalogs/masterpage/Display Templates/Filters/Filter_Default.js&quot;,&quot;refinerSpecString&quot;:&quot;&quot;,&quot;refinerSpecStringOverride&quot;:&quot;&quot;,&quot;useDefaultDateIntervals&quot;:false,&quot;isInherited&quot;:false},{&quot;sortBy&quot;:0,&quot;sortOrder&quot;:0,&quot;countDisplay&quot;:1,&quot;maxNumberRefinementOptions&quot;:100,&quot;propertyName&quot;:&quot;MediaDuration&quot;,&quot;type&quot;:&quot;Integer&quot;,&quot;displayTemplate&quot;:&quot;~sitecollection/_catalogs/masterpage/Display Templates/Filters/Filter_Default.js&quot;,&quot;useDefaultDateIntervals&quot;:false,&quot;refinerSpecString&quot;:&quot;(discretize=manual/300/1200)&quot;,&quot;refinerSpecStringOverride&quot;:&quot;(discretize=manual/300/1200)&quot;,&quot;propertyID&quot;:null,&quot;displayName&quot;:null,&quot;description&quot;:null,&quot;isInherited&quot;:false},{&quot;sortBy&quot;:0,&quot;sortOrder&quot;:0,&quot;countDisplay&quot;:0,&quot;maxNumberRefinementOptions&quot;:7,&quot;propertyName&quot;:&quot;Created&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;displayTemplate&quot;:&quot;~sitecollection/_catalogs/masterpage/Display Templates/Filters/Filter_SliderBarGraph.js&quot;,&quot;useDefaultDateIntervals&quot;:true,&quot;propertyID&quot;:null,&quot;displayName&quot;:null,&quot;description&quot;:null,&quot;refinerSpecString&quot;:&quot;&quot;,&quot;refinerSpecStringOverride&quot;:&quot;&quot;,&quot;isInherited&quot;:false}]}</property>
+                            </properties>
+                        </data>
+                    </webPart>
+                </webParts>
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="MainZone" WebPartOrder="1">
+                <![CDATA[
+                <webParts>
+                    <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                        <metaData>
+                            <type name="Microsoft.Office.Server.Search.WebControls.SearchBoxScriptWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                            <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                        </metaData>
+                        <data>
+                            <properties>
+                                <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,SearchBoxWP_Title;</property>
+                                <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,SearchBoxWP_Desc;</property>
+                                <property name="ChromeType">None</property>
+                                <property name="AllowMinimize" type="bool">true</property>
+                                <property name="AllowClose" type="bool">true</property>
+                                <property name="Hidden" type="bool">false</property>
+                                <property name="PageTitlePrefix" type="string">$Resources:Microsoft.Office.Server.Search, VideoSearchResultsPageTitle;</property>
+                            </properties>
+                        </data>
+                    </webPart>
+                </webParts>
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="MainZone" WebPartOrder="2">
+                <![CDATA[
+                <webParts>
+                    <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                        <metaData>
+                            <type name="Microsoft.Office.Server.Search.WebControls.SearchNavigationWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                            <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                        </metaData>
+                        <data>
+                            <properties>
+                                <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,SearchNavigation_Title;</property>
+                                <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,SearchNavigation_Desc;</property>
+                                <property name="ChromeType">None</property>
+                                <property name="AllowMinimize" type="bool">true</property>
+                                <property name="AllowClose" type="bool">true</property>
+                                <property name="Hidden" type="bool">false</property>
+                            </properties>
+                        </data>
+                    </webPart>
+                </webParts>
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="MainZone" WebPartOrder="3">
+                    <![CDATA[
+                    <webParts>
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                            <metaData>
+                                <type name="Microsoft.Office.Server.Search.WebControls.ResultScriptWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                            </metaData>
+                            <data>
+                                <properties>
+                                    <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,ResultsScriptWP_Title;</property>
+                                    <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,ResultsScriptWP_Desc;</property>
+                                    <property name="ChromeType">None</property>
+                                    <property name="AllowMinimize" type="bool">true</property>
+                                    <property name="AllowClose" type="bool">true</property> 
+                                    <property name="Hidden" type="bool">false</property>
+                                    <property name="BypassResultTypes" type="bool">true</property>
+                                    <property name="ShowBestBets" type="bool">true</property>
+                                    <property name="ShowPersonalFavorites" type="bool">false</property>
+                                    <property name="ShowDefinitions" type="bool">false</property>
+                                    <property name="ShowDidYouMean" type="bool">true</property>
+                                    <property name="ShowAdvancedLink" type="bool">false</property>
+                                    <property name="ShowSortOptions" type="bool">false</property>
+                                    <property name="ItemTemplateId" type="string">~sitecollection/_catalogs/masterpage/Display Templates/System/Item_VideoVertical.js</property>
+                                    <property name="ResultsPerPage" type="int">24</property>
+                                    <property name="SelectedPropertiesJson" type="string">[&quot;Title&quot;,&quot;Author&quot;,&quot;Path&quot;,&quot;Description&quot;,&quot;Created&quot;,&quot;PictureThumbnailURL&quot;,&quot;PeopleInMedia&quot;,&quot;MediaDuration&quot;,&quot;ViewsLifeTime&quot;]</property>
+                                    <property name="DataProviderJSON" type="string">{&quot;SourceID&quot;:&quot;78B793CE-7956-4669-AA3B-451FC5DEFEBF&quot;,&quot;IgnoreStaleServerQuery&quot;:true,&quot;ClientType&quot;:&quot;VideoResultsQuery&quot;}</property>
+                                    <property name="PreloadedItemTemplateIdsJson" type="string">[&quot;~sitecollection/_catalogs/masterpage/Display Templates/System/Item_VideoVertical.js&quot;]</property>
+                                    <property name="RepositionLanguageDropDown" type="bool">true</property>
+                                </properties>
+                            </data>
+                        </webPart>
+                    </webParts>
+                    ]]>
+                </AllUsersWebPart>
+        </File>   
+    </Module>
+</Elements>

@@ -1,0 +1,623 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">    
+    <CustomAction
+        Id="Ribbon.WikiPageTab.Manage.VersionRevert"
+        Location="CommandUI.Ribbon">
+        <CommandUIExtension>
+            <CommandUIDefinitions>
+                <CommandUIDefinition
+                    Location="Ribbon.WikiPageTab.Manage.Controls._children">
+                    <Button
+                        Id="Ribbon.WikiPageTab.Manage.VersionRevert"
+                        Sequence="25"
+                        Alt="$Resources:cmscore,ButVersionRevert;"
+                        Command="Ribbon.WikiPageTab.Manage.VersionRevert"
+                        Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-217" Image16by16Left="-199"
+                        Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-341" Image32by32Left="-273"
+                        LabelText="$Resources:cmscore,ButVersionRevert;"
+                        TemplateAlias="o2"
+                        ToolTipTitle="$Resources:cmscore,ButVersionRevert;"
+                        ToolTipDescription="$Resources:cmscore,ButVersionRevertDescription;"/>
+                </CommandUIDefinition>
+            </CommandUIDefinitions>
+            <CommandUIHandlers>
+                <CommandUIHandler
+                    Command="Ribbon.WikiPageTab.Manage.VersionRevert"
+                    EnabledScript="javascript:
+(function (){
+    if (typeof(g_sbwIsVersionRevertButtonEnabled) != 'undefined' &amp;&amp; g_sbwIsVersionRevertButtonEnabled)
+        return true;
+    return false;
+}());"
+                    CommandAction="javascript:
+(function (){
+    if (confirm('$Resources:cmscore,VersionRevertConfirm;')) {
+        if (typeof(SetDoVersionRevert) === 'function') {
+            SetDoVersionRevert();
+            __doPostBack('Ribbon.WikiPageTab.Manage.VersionRevert', '');
+        }
+    }
+}());" />
+            </CommandUIHandlers>
+        </CommandUIExtension>
+    </CustomAction>
+    <CustomAction
+        Id="Ribbon.WikiPageTab.Groups.PublishingGroup"
+        Location="CommandUI.Ribbon">
+        <CommandUIExtension>
+            <CommandUIDefinitions>
+                <CommandUIDefinition
+                    Location="Ribbon.WikiPageTab.Scaling._children">
+                    <MaxSize 
+                        Id="Ribbon.WikiPageTab.Scaling.PublishingGroup.MaxSize"
+                        GroupId="Ribbon.WikiPageTab.PublishingGroup"
+                        Sequence="65"
+                        Size="LargeMedium" />
+                </CommandUIDefinition>
+                <CommandUIDefinition
+                    Location="Ribbon.WikiPageTab.Scaling._children">
+                    <Scale 
+                        Id="Ribbon.WikiPageTab.Scaling.PublishingGroup.Popup"
+                        GroupId="Ribbon.WikiPageTab.PublishingGroup"
+                        Sequence="135"
+                        Size="Popup" />
+                </CommandUIDefinition>
+                <CommandUIDefinition
+                    Location="Ribbon.WikiPageTab.Groups._children" >
+                    <Group
+                        Id="Ribbon.WikiPageTab.PublishingGroup"
+                        Sequence="65"
+                        Description=""
+                        Title="$Resources:core,cui_GrpPublishing;"
+                        Image32by32Popup="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32PopupTop="-35" Image32by32PopupLeft="-205"
+                        Template="Ribbon.Templates.Flexible2" >
+                        <Controls Id="Ribbon.WikiPageTab.PublishingGroup.Controls">
+                            <MRUSplitButton
+                                Id="Ribbon.WikiPageTab.PublishingGroup.Publish"
+                                Sequence="10"
+                                Alt="$Resources:core,ButPublish;"
+                                Command="PageStateGroupPagePublishSplit"
+                                MenuCommand="PageStateGroupOpenMenuPublish"
+                                QueryCommand="PageStateGroupQueryPagePublishMenu"
+                                InitialItem="Ribbon.WikiPageTab.Approval.Publish.Menu.Publish.Publish"
+                                MenuAlt="$Resources:core,ButPublish;"
+                                TemplateAlias="o1" >
+                                <Menu Id="Ribbon.WikiPageTab.PublishingGroup.Publish.Menu">
+                                    <MenuSection Id="Ribbon.WikiPageTab.PublishingGroup.Publish.Menu.Publish" Sequence="10" DisplayMode="Menu16">
+                                        <Controls Id="Ribbon.WikiPageTab.PublishingGroup.Publish.Menu.Publish.Controls">
+                                            <Button
+                                                Id="Ribbon.WikiPageTab.PublishingGroup.Publish.Menu.Publish.Publish"
+                                                MenuItemId="Ribbon.WikiPageTab.Approval.Publish.Menu.Publish.Publish"
+                                                Sequence="10"
+                                                Alt="$Resources:core,ButPublish;"
+                                                Command="PageStateGroupPublish"
+                                                CommandValueId="PageStateGroupPublish"
+                                                Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-271" Image16by16Left="-163"
+                                                Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-341" Image32by32Left="-375"
+                                                LabelText="$Resources:core,ButPublish;"
+                                                ToolTipTitle="$Resources:core,ButPublish;"
+                                                ToolTipDescription="$Resources:core,cui_STT_ButPublish_page;"
+                                            />
+                                            <Button
+                                                Id="Ribbon.WikiPageTab.PublishingGroup.Publish.Menu.Publish.SubmitForApproval"
+                                                MenuItemId="Ribbon.WikiPageTab.Approval.Publish.Menu.Publish.SubmitForApproval"
+                                                Sequence="20"
+                                                Alt="$Resources:core,ButSubmitForApproval;"
+                                                Command="PageStateGroupSubmitForApproval"
+                                                CommandValueId="PageStateGroupSubmitForApproval"
+                                                Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-37" Image16by16Left="-133"
+                                                Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-477" Image32by32Left="-171"
+                                                LabelText="$Resources:core,ButSubmitForApprovalLabelText;"
+                                                ToolTipTitle="$Resources:core,ButSubmitForApproval;"
+                                                ToolTipDescription="$Resources:core,cui_STT_ButSubmitForApproval;"
+                                            />
+                                            <Button
+                                                Id="Ribbon.WikiPageTab.PublishingGroup.Publish.Menu.Publish.CancelApproval"
+                                                MenuItemId="Ribbon.WikiPageTab.Approval.Publish.Menu.Publish.CancelApproval"
+                                                Sequence="30"
+                                                Alt="$Resources:core,ButCancelApproval;"
+                                                Command="PageStateGroupCancelApproval"
+                                                CommandValueId="PageStateGroupCancelApproval"
+                                                Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-61" Image16by16Left="-1"
+                                                Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-1" Image32by32Left="-35"
+                                                LabelText="$Resources:core,ButCancelApproval;"
+                                                ToolTipTitle="$Resources:core,ButCancelApproval;"
+                                                ToolTipDescription="$Resources:core,cui_STT_ButCancelApproval_page;"
+                                            />
+                                        </Controls>
+                                    </MenuSection>
+                                </Menu>
+                            </MRUSplitButton>
+                            <Button
+                                Id="Ribbon.WikiPageTab.PublishingGroup.Publish.Menu.Publish.Unpublish"
+                                Sequence="20"
+                                Alt="$Resources:core,ButUnpublish;"
+                                Command="PageStateGroupUnpublish"
+                                Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-19" Image16by16Left="-303"
+                                Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-1" Image32by32Left="-103"
+                                LabelText="$Resources:core,ButUnpublish;"
+                                ToolTipTitle="$Resources:core,ButUnpublish;"
+                                ToolTipDescription="$Resources:core,cui_STT_ButUnpublish_page;"
+                                TemplateAlias="o1"
+                            />
+                        </Controls>
+                    </Group>
+                </CommandUIDefinition>
+            </CommandUIDefinitions>
+        </CommandUIExtension>
+    </CustomAction>
+    <CustomAction
+        Id="Ribbon.Design"
+        GroupId=""
+        Location="CommandUI.Ribbon"
+        Title="Design Tab for Small Business websites">
+        <CommandUIExtension>
+            <CommandUIDefinitions>
+                <CommandUIDefinition Location="Ribbon.Tabs._children">
+                    <Tab
+                        Id="Ribbon.DesignTab"
+                        Title="$Resources:cmscore,designtab_title"
+                        Command="Ribbon.DesignTab"
+                        Description="$Resources:cmscore,designtab_description"
+                        Sequence="2101" >
+                        <Scaling Id="Ribbon.DesignTab.Scaling">
+                            <MaxSize
+                                Id="Ribbon.DesignTab.Design.MaxSize"
+                                Sequence="11"
+                                GroupId="Ribbon.DesignTab.Design"
+                                Size="LargeLarge" />
+                            <MaxSize
+                                Id="Ribbon.DesignTab.Site.MaxSize"
+                                Sequence="12"
+                                GroupId="Ribbon.DesignTab.Site"
+                                Size="LargeLarge" />
+                            <MaxSize
+                                Id="Ribbon.DesignTab.Advanced.MaxSize"
+                                Sequence="13"
+                                GroupId="Ribbon.DesignTab.Advanced"
+                                Size="LargeLarge" />
+                            <Scale
+                                Id="Ribbon.DesignTab.Advanced.Popup"
+                                Sequence="14"
+                                GroupId="Ribbon.DesignTab.Advanced"
+                                Size="Popup" />
+                            <Scale
+                                Id="Ribbon.DesignTab.Site.Popup"
+                                Sequence="15"
+                                GroupId="Ribbon.DesignTab.Site"
+                                Size="Popup" />
+                        </Scaling>
+                        <Groups Id="Ribbon.DesignTab.Groups">
+                            <Group
+                                Id="Ribbon.DesignTab.Design"
+                                Sequence="101"
+                                Command="Ribbon.DesignTab.Design"
+                                Title="$Resources:cmscore,designtab_designgroup_title"
+                                Description="$Resources:cmscore,designtab_designgroup_description"
+                                Template="Ribbon.Templates.Flexible2">
+                                <Controls Id="Ribbon.DesignTab.Design.Controls" >
+                                    <Button
+                                        Id="Ribbon.DesignTab.Design.DesignGallery"
+                                        Command="Ribbon.DesignTab.Design.DesignGallery"
+                                        Sequence="301"
+                                        Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-37" Image16by16Left="-223"
+                                        Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-341" Image32by32Left="-171"
+                                        LabelText="$Resources:cmscore,designtab_designgallery_title"
+                                        TemplateAlias="o2"
+                                        ToolTipTitle="$Resources:cmscore,designtab_designgallery_title"
+                                        ToolTipDescription="$Resources:cmscore,designtab_designgallery_description" />
+                                </Controls>
+                            </Group>
+                            <Group
+                                Id="Ribbon.DesignTab.Site"
+                                Sequence="201"
+                                Command="Ribbon.DesignTab.Site"
+                                Title="$Resources:cmscore,designtab_sitegroup_title"
+                                Description="$Resources:cmscore,designtab_sitegroup_description"
+                                Template="Ribbon.Templates.Flexible2">
+                                <Controls Id="Ribbon.DesignTab.Site.Controls" >
+                                    <Button
+                                        Id="Ribbon.DesignTab.Site.Title"
+                                        Command="Ribbon.DesignTab.Site.Title"
+                                        Sequence="501"
+                                        Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-55" Image16by16Left="-205"
+                                        Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-375" Image32by32Left="-171"
+                                        LabelText="$Resources:cmscore,designtab_title_title"
+                                        TemplateAlias="o2"
+                                        ToolTipTitle="$Resources:cmscore,designtab_title_title"
+                                        ToolTipDescription="$Resources:cmscore,designtab_title_description" />
+                                    <Button
+                                        Id="Ribbon.DesignTab.Site.Logo"
+                                        Command="Ribbon.DesignTab.Site.Logo"
+                                        Sequence="601"
+                                        Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-1" Image16by16Left="-231"
+                                        Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-341" Image32by32Left="-239"
+                                        LabelText="$Resources:cmscore,designtab_logo_title"
+                                        TemplateAlias="o2"
+                                        ToolTipTitle="$Resources:cmscore,designtab_logo_title"
+                                        ToolTipDescription="$Resources:cmscore,designtab_logo_description" />
+                                    <Button
+                                        Id="Ribbon.DesignTab.Site.EditMenu"
+                                        Command="Ribbon.DesignTab.Site.EditMenu"
+                                        Sequence="611"
+                                        Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-127" Image16by16Left="-199"
+                                        Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-375" Image32by32Left="-35"
+                                        LabelText="$Resources:cmscore,designtab_editmenu_title"
+                                        TemplateAlias="o2"
+                                        ToolTipTitle="$Resources:cmscore,designtab_editmenu_title"
+                                        ToolTipDescription="$Resources:cmscore,designtab_editmenu_description" />
+                                    <Button
+                                        Id="Ribbon.DesignTab.Site.SiteElements.Menu.SaveEdit.Edit"
+                                        MenuItemId="Ribbon.DesignTab.Site.SiteElements.Menu.SaveEdit.Edit"
+                                        Sequence="701"
+                                        Alt="$Resources:cmscore,designtab_siteelements_title;"
+                                        Command="Ribbon.DesignTab.Site.SiteElements.Edit"
+                                        CommandValueId="Ribbon.DesignTab.Site.SiteElements.Edit"
+                                        Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-19" Image16by16Left="-231"
+                                        Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-341" Image32by32Left="-205"
+                                        LabelText="$Resources:cmscore,designtab_siteelements_title;"
+                                        TemplateAlias="o2"
+                                        ToolTipTitle="$Resources:cmscore,designtab_siteelements_title;"
+                                        ToolTipDescription="$Resources:cmscore,designtab_siteelements_description;" />
+                                    <ToggleButton
+                                        Id="Ribbon.DesignTab.Site.SearchBox"
+                                        Sequence="801"
+                                        Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-109" Image16by16Left="-199"
+                                        Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-375" Image32by32Left="-69"
+                                        Alt="$Resources:cmscore,designtab_site_searchbox_title"
+                                        Command="Ribbon.DesignTab.Site.SearchBox"
+                                        LabelText="$Resources:cmscore,designtab_site_searchbox_title;"
+                                        ToolTipTitle="$Resources:cmscore,designtab_site_searchbox_title;"
+                                        ToolTipDescription="$Resources:cmscore,designtab_site_searchbox_description;"
+                                        TemplateAlias="o2" />
+                                </Controls>
+                            </Group>
+                            <Group
+                                Id="Ribbon.DesignTab.Advanced"
+                                Sequence="301"
+                                Command="Ribbon.DesignTab.Advanced"
+                                Title="$Resources:cmscore,designtab_advgroup_title"
+                                Description="$Resources:cmscore,designtab_advgroup_description"
+                                Template="Ribbon.Templates.Flexible2">
+                                <Controls Id="Ribbon.DesignTab.Advanced.Controls" >
+                                    <Button
+                                        Id="Ribbon.DesignTab.Advanced.StyleSheet"
+                                        Command="Ribbon.DesignTab.Advanced.StyleSheet"
+                                        Sequence="301"
+                                        Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-91" Image16by16Left="-199"
+                                        Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-375" Image32by32Left="-103"
+                                        LabelText="$Resources:cmscore,designtab_stylesheet_title"
+                                        TemplateAlias="o2"
+                                        ToolTipTitle="$Resources:cmscore,designtab_stylesheet_title"
+                                        ToolTipDescription="$Resources:cmscore,designtab_stylesheet_description" />
+                                </Controls>
+                            </Group>
+                        </Groups>
+                    </Tab>
+                </CommandUIDefinition>
+            </CommandUIDefinitions>
+            <CommandUIHandlers>
+                <CommandUIHandler
+                    Command="Ribbon.DesignTab"
+                    CommandAction="" />
+                <CommandUIHandler
+                    Command="Ribbon.DesignTab.Design"
+                    CommandAction="" />
+                <CommandUIHandler
+                    Command="Ribbon.DesignTab.Design.DesignGallery"
+                    CommandAction="javascript:document.readyState !== 'loading' &amp;&amp; EnsureScript('SP.js',typeof SP.PageContextInfo,function(){location.href=SP.Utilities.Utility.getLayoutsPageUrl('DesignGallery.aspx?Source='+location.pathname);});" />
+                <CommandUIHandler
+                    Command="Ribbon.DesignTab.Site"
+                    CommandAction="" />
+                <CommandUIHandler
+                    Command="Ribbon.DesignTab.Site.Title"
+                    EnabledScript="javascript:
+			            (function (){
+                            var p = SP.PageContextInfo.get_webPermMasks();
+                            return p &amp;&amp; p.has(SP.PermissionKind.manageWeb);
+                        }());"
+                    CommandAction="javascript:
+EnsureScript('SP.js', typeof SP.PageContextInfo, function () {
+    SP.SOD.execute('sp.ui.dialog.js', 'SP.UI.ModalDialog.showModalDialog', {
+        url: SP.Utilities.Utility.getLayoutsPageUrl('prjsetng.aspx?section=title'),
+        dialogReturnValueCallback: function (result, retval) {
+            result &amp;&amp; location.reload();
+        }
+    });
+});" />
+                <CommandUIHandler
+                    Command="Ribbon.DesignTab.Site.Logo"
+                    EnabledScript="javascript:
+			            (function (){
+                            var p = SP.PageContextInfo.get_webPermMasks();
+                            return p &amp;&amp; p.has(SP.PermissionKind.manageWeb);
+                        }());"
+                    CommandAction="javascript:
+EnsureScript('SP.js', typeof SP.PageContextInfo, function () {
+    var i = document.querySelector('.ms-siteicon-img'), src = i &amp;&amp; i.src;
+    SP.SOD.execute('sp.ui.dialog.js', 'SP.UI.ModalDialog.showModalDialog', {
+        url: SP.Utilities.Utility.getLayoutsPageUrl('prjsetng.aspx?section=logo'), autoSize: true,
+        dialogReturnValueCallback: i &amp;&amp; function (result, retval) {
+            if (!result) i.src = src;
+            else if (!i) location.reload();
+        }
+    });
+});" />
+                <CommandUIHandler
+                    Command="Ribbon.DesignTab.Site.EditMenu"
+                    CommandAction="javascript:
+(function () {
+	var menu = document.querySelector('.ms-core-listMenu-verticalBox,.ms-core-listMenu-horizontalBox');
+	if (menu) {
+		EnsureScriptParams('QuickLaunch.js', 'QuickLaunchInitEditMode', menu.id, 1, 2, 0, '');
+	}
+}()); " />
+                <CommandUIHandler
+                    Command="Ribbon.DesignTab.Site.SiteElements.Edit"
+                    EnabledScript="javascript:
+			           (function (){
+                            if ((typeof(IsSiteElementInEditMode) === 'function') &amp;&amp; 
+                                    (typeof(GetSiteElementStateInJavascript) === 'function') &amp;&amp; 
+                                    (!IsSiteElementInEditMode(GetSiteElementStateInJavascript() ) ) )
+                                    return true;
+                            return false;
+                            }());"
+                    CommandAction="javascript:
+			            (function (){
+                             SetSiteElementStateInJavascript(SiteElementStateEnum.Edit);                                                                
+			                __doPostBack('Ribbon.DesignTab.Site.SiteElements.Edit', '0');                                
+			            }());" />
+                <CommandUIHandler
+                    Command="Ribbon.DesignTab.Site.SearchBox"
+                    CommandAction="javascript:
+EnsureScript('SP.js', typeof SP.PageContextInfo, function () {
+    SP.SOD.execute('sp.ui.dialog.js', 'SP.UI.ModalDialog.showModalDialog', {
+        url: SP.Utilities.Utility.getLayoutsPageUrl('togglesearchbox.aspx'), autoSize: true, allowMaximize: true,
+        dialogReturnValueCallback: function (result, retval) {
+            result &amp;&amp; location.reload();
+        }
+    });
+});
+" />
+                <CommandUIHandler
+                    Command="Ribbon.DesignTab.Advanced"
+                    CommandAction="" />
+                <CommandUIHandler
+                    Command="Ribbon.DesignTab.Advanced.StyleSheet"
+                    CommandAction="javascript:
+EnsureScript('SP.js', typeof SP.PageContextInfo, function () {
+    SP.SOD.execute('sp.ui.dialog.js', 'SP.UI.ModalDialog.showModalDialog', {
+        url: SP.Utilities.Utility.getLayoutsPageUrl('alternatecss.aspx'), autoSize: true, allowMaximize: true,
+        dialogReturnValueCallback: function (result, retval) {
+            var s, old, v;
+            if (!result) {
+                if ((s = document.getElementById('ms-altcss-preview')) &amp;&amp;
+                    (old = document.getElementById('ms-altcss-old'))) {
+                    v = old.value;
+                    if (Sys.Browser.agent === Sys.Browser.InternetExplorer &amp;&amp; Sys.Browser.version &lt; 9) {
+                        s.styleSheet.cssText = v;
+                    } else {
+                        s[s.innerText !== undefined ? 'innerText' : 'textContent'] = v;
+                    }
+                }
+            }
+        }
+    });
+});
+" />
+                <CommandUIHandler
+                    Command="Ribbon.DesignTab.Advanced.DesignManager"
+                    CommandAction="javascript:EnsureScript('SP.js',typeof SP.PageContextInfo,function(){document.location.href=SP.Utilities.Utility.getLayoutsPageUrl('DesignSite.aspx');});" />
+            </CommandUIHandlers>
+        </CommandUIExtension>
+    </CustomAction>    
+    <CustomAction
+       Id="Ribbon.EditingTools.CPEditTab.EditAndCheckout.SaveSiteElements"
+       Location="CommandUI.Ribbon">
+        <CommandUIExtension>
+            <CommandUIDefinitions>
+                <CommandUIDefinition
+                    Location="Ribbon.EditingTools.CPEditTab.EditAndCheckout.Controls._children">
+                    <MRUSplitButton
+                        Id="Ribbon.DesignTab.Site.SiteElements"
+                        Sequence="10"
+                        Alt="$Resources:core,save_15;"
+                        Command="Ribbon.DesignTab.Site.SiteElements.SaveAndStop"
+                        MenuCommand="Ribbon.DesignTab.Site.SiteElements.SaveAndStop"
+                        InitialItem="Ribbon.DesignTab.Site.SiteElements.Menu.SaveEdit.SaveAndStop"
+                        MenuAlt="$Resources:core,save_15;"
+                        TemplateAlias="o1">
+                        <Menu Id="Ribbon.DesignTab.Site.SiteElements.Menu">
+                            <MenuSection Id="Ribbon.DesignTab.Site.SiteElements.Menu.SaveEdit" Sequence="10" DisplayMode="Menu16">
+                                <Controls Id="Ribbon.DesignTab.Site.SiteElements.Menu.SaveEdit.Controls">
+                                    <Button
+                                        Id="Ribbon.DesignTab.Site.SiteElements.Menu.SaveEdit.SaveAndStop"
+                                        MenuItemId="Ribbon.DesignTab.Site.SiteElements.Menu.SaveEdit.SaveAndStop"
+                                        Sequence="10"
+                                        Alt="$Resources:core,save_15;"
+                                        Command="Ribbon.DesignTab.Site.SiteElements.SaveAndStop"
+                                        CommandValueId="Ribbon.DesignTab.Site.SiteElements.SaveAndStop"
+                                        Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-197" Image16by16Left="-37"
+                                        Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-103" Image32by32Left="-409"
+                                        LabelText="$Resources:core,save_15;"
+                                        ToolTipTitle="$Resources:core,save_15;"
+                                        ToolTipDescription="$Resources:core,cui_STT_save;"
+                                    />
+                                    <Button
+                                        Id="Ribbon.DesignTab.Site.SiteElements.Menu.SaveEdit.Save"
+                                        MenuItemId="Ribbon.DesignTab.Site.SiteElements.Menu.SaveEdit.Save"
+                                        Sequence="20"
+                                        Alt="$Resources:core,cui_saveAndKeepEditing;"
+                                        Command="Ribbon.DesignTab.Site.SiteElements.Save"
+                                        CommandValueId="Ribbon.DesignTab.Site.SiteElements.Save"
+                                        Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-145" Image16by16Left="-91"
+                                        Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-137" Image32by32Left="-239"
+                                        LabelText="$Resources:core,cui_saveAndKeepEditing;"
+                                        ToolTipTitle="$Resources:core,cui_saveAndKeepEditing;"
+                                        ToolTipDescription="$Resources:core,cui_STT_saveAndKeepEditing;"
+                                    />
+                                    <Button
+                                        Id="Ribbon.DesignTab.Site.SiteElements.Menu.SaveEdit.StopEditing"
+                                        MenuItemId="Ribbon.DesignTab.Site.SiteElements.Menu.SaveEdit.StopEditing"
+                                        Sequence="30"
+                                        Alt="$Resources:core,stop_edit;"
+                                        Command="Ribbon.DesignTab.Site.SiteElements.StopEditing"
+                                        CommandValueId="Ribbon.DesignTab.Site.SiteElements.StopEditing"
+                                        Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-109" Image16by16Left="-289"
+                                        Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-511" Image32by32Left="-273"
+                                        LabelText="$Resources:core,stop_edit;"
+                                        ToolTipTitle="$Resources:core,stop_edit;"
+                                        ToolTipDescription="$Resources:core,cui_STT_stop_edit;"
+                                    />
+                                </Controls>
+                            </MenuSection>
+                        </Menu>
+                    </MRUSplitButton>
+                </CommandUIDefinition>
+            </CommandUIDefinitions>
+            <CommandUIHandlers>
+                <CommandUIHandler
+                  Command="Ribbon.DesignTab.Site.SiteElements.SaveAndStop"
+                  EnabledScript="javascript:
+			            (function (){
+                            if ((typeof(IsSiteElementInEditMode) === 'function') &amp;&amp; 
+                                    (typeof(GetSiteElementStateInJavascript) === 'function') &amp;&amp; 
+                                    (IsSiteElementInEditMode(GetSiteElementStateInJavascript() ) ) )
+                                    return true;
+                            return false;
+                            }());"
+                  CommandAction="javascript:
+			            (function (){
+                            SetSiteElementStateInJavascript(SiteElementStateEnum.SaveAndStop);
+			                __doPostBack('Ribbon.DesignTab.Site.SiteElements.SaveAndStop', '0');
+			            }());" />
+                <CommandUIHandler
+                    Command="Ribbon.DesignTab.Site.SiteElements.Save"
+                    EnabledScript="javascript:
+			           (function (){
+                            if ((typeof(IsSiteElementInEditMode) === 'function') &amp;&amp; 
+                                    (typeof(GetSiteElementStateInJavascript) === 'function') &amp;&amp; 
+                                    (IsSiteElementInEditMode(GetSiteElementStateInJavascript() ) ) )
+                                    return true;
+                            return false;
+                            }());"
+                    CommandAction="javascript:
+			            (function (){
+                            SetSiteElementStateInJavascript(SiteElementStateEnum.Save);
+			                __doPostBack('Ribbon.DesignTab.Site.SiteElements.Save', '0');
+			            }());" />
+                <CommandUIHandler
+                    Command="Ribbon.DesignTab.Site.SiteElements.StopEditing"
+                    EnabledScript="javascript:
+			           (function (){
+                            if ((typeof(IsSiteElementInEditMode) === 'function') &amp;&amp; 
+                                    (typeof(GetSiteElementStateInJavascript) === 'function') &amp;&amp; 
+                                    (IsSiteElementInEditMode(GetSiteElementStateInJavascript() ) ) )
+                                    return true;
+                            return false;
+                            }());"
+                    CommandAction="javascript:
+			            (function (){
+                            SetSiteElementStateInJavascript(SiteElementStateEnum.StopEditing);                           
+			                __doPostBack('Ribbon.DesignTab.Site.SiteElements.StopEditing', '0');
+			            }());" />
+            </CommandUIHandlers>
+        </CommandUIExtension>
+    </CustomAction>
+    <CustomAction
+        Id="Ribbon.HtmlDesignTab.Administration.SiteElement"
+        Location="CommandUI.Ribbon">
+         <CommandUIExtension>
+            <CommandUIDefinitions>
+                <CommandUIDefinition
+                    Location="Ribbon.HtmlDesignTab.Administration.Controls._children">
+                        <FlyoutAnchor
+                           Id="Ribbon.HtmlDesignTab.Administration.SiteElement"
+                           Sequence="20" 
+                           Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-19" Image16by16Left="-231"
+                           Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-341" Image32by32Left="-205"
+                           LabelText="$Resources:sp.publishing.Resources,HtmlDesignSiteElementButtonText;"
+                           Alt="$Resources:sp.publishing.Resources,HtmlDesignSiteElementButtonText;"
+                           ToolTipTitle="$Resources:sp.publishing.Resources,HtmlDesignSiteElementButtonText;"
+                           ToolTipDescription="$Resources:sp.publishing.Resources,HtmlDesignSiteElementButtonToolTipText;"
+                           TemplateAlias="o1"
+                           PopulateDynamically="true"
+                           PopulateOnlyOnce="false"
+                           PopulateQueryCommand="HtmlDesign.Command.PopulateSiteElementGallery" 
+                           Command="HtmlDesign.Command.QuerySiteElements"/>
+                </CommandUIDefinition>
+            </CommandUIDefinitions>
+           <CommandUIHandlers>
+                <CommandUIHandler
+                    Command="HtmlDesign.Command.QuerySiteElements"
+		            CommandAction=""
+                    EnabledScript="javascript:
+			           (function (){
+                           var siteElementList = siteelementbuttonlist.buttonInfoList;
+                           if (siteElementList &amp;&amp; siteElementList.length > 0)
+                                    return true;
+                            return false;
+                            }());"/>
+            </CommandUIHandlers>
+        </CommandUIExtension>
+    </CustomAction>
+    <CustomAction
+        Id="Ribbon.WikiPageTab.EditAndCheckout.PreviewMenu"
+        Location="CommandUI.Ribbon">
+        <CommandUIExtension>
+            <CommandUIDefinitions>
+                <CommandUIDefinition 
+                    Location="Ribbon.WikiPageTab.EditAndCheckout.Controls._children">
+                    <SplitButton
+                        Id="Ribbon.WikiPageTab.EditAndCheckout.PreviewMenu"
+                        Sequence="30"
+                        Command="PreviewDefaultChannel"
+                        Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-256" Image16by16Left="-80"
+                        Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-224" Image32by32Left="0"
+                        LabelText="$Resources:sp.publishing.Resources,CUI_ButPreview;"
+                        ToolTipTitle="$Resources:sp.publishing.Resources,CUI_ButPreview;"
+                        ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButReviewMenuPreviewChannelTooltip;"
+                        Alt="$Resources:sp.publishing.resources,CUI_ButPreviewAlt;"
+                        TemplateAlias="o1"
+                        PopulateDynamically="true"
+                        PopulateOnlyOnce="true"
+                        PopulateQueryCommand="GetPreviewableChannelsXml"
+                    >
+                    </SplitButton>
+                </CommandUIDefinition>
+            </CommandUIDefinitions>
+        </CommandUIExtension>
+    </CustomAction>
+ <CustomAction
+        Id="Ribbon.EditingTools.CPInsert.Media.Map"
+        Location="CommandUI.Ribbon">
+        <CommandUIExtension>
+            <CommandUIDefinitions>
+                <CommandUIDefinition 
+                    Location="Ribbon.EditingTools.CPInsert.Media.Controls._children">
+                    <Button
+                        Id="Ribbon.EditingTools.CPInsert.Media.Map"
+                        Sequence="30"                        
+                        Command="EmbedMap"                        
+                        Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-207" Image16by16Left="-55"
+                        Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-171" Image32by32Left="-375"
+                        LabelText="$Resources:cmscore,inserttab_map_title;"
+                        ToolTipTitle="$Resources:cmscore,inserttab_map_title;"
+                        ToolTipDescription="$Resources:cmscore,inserttab_map_description;"
+                        Alt="$Resources:cmscore,inserttab_map_title;"                        
+                        TemplateAlias="o1"
+                      />
+                </CommandUIDefinition>
+            </CommandUIDefinitions>
+            <CommandUIHandlers>
+                <CommandUIHandler
+                    Command="EmbedMap"
+                    CommandAction="javascript:
+		(function (){
+            window.open(encodeURI('http://go.microsoft.com/fwlink/?LinkID=254468&amp;mkt=' + BingMapCurrenUitLanguage + '&amp;region=' + BingMapRegion));
+		}());" />            
+            </CommandUIHandlers>
+        </CommandUIExtension>
+    </CustomAction>
+</Elements>

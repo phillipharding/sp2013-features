@@ -1,0 +1,13 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListInstance
+            Title="$Resources:spscore,AbuseReportsListInstance_Title;"
+            Description="$Resources:spscore,AbuseReportsListInstance_Desc;"
+            FeatureId="C6A92DBF-6441-4b8b-882F-8D97CB12C83A"
+            Id="AbuseReportsListInstance"
+            Hidden="TRUE"
+            OnQuickLaunch="FALSE"
+            TemplateType="925"
+            Url="$Resources:core,lists_Folder;/$Resources:spscore,abuseReports_Folder;">
+    </ListInstance>
+</Elements>
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="E1580C3C-C510-453b-BE15-35FEB0DDB1A5"
+          Title="$Resources:spscore,ContentFollowingStapling_Feature_Title;"
+          Description="$Resources:spscore,ContentFollowingStapling_Feature_Description;"
+          DefaultResourceFile="core"
+          Version="15.0.1.0"
+          Scope="Farm"
+          Hidden="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <ElementManifests>
+        <ElementManifest Location="elements.xml"/>
+    </ElementManifests>
+
+    <UpgradeActions>
+        <VersionRange BeginVersion="15.0.0.0" EndVersion="15.0.1.0">
+            <ApplyElementManifests>
+                <ElementManifest Location="elements.xml"/>
+            </ApplyElementManifests>
+        </VersionRange>
+    </UpgradeActions>
+</Feature>
+

@@ -1,0 +1,18 @@
+<Feature Id="D97DED76-7647-4b1e-B868-2AF51872E1B3"
+    Title="$Resources:spscore,SPSBlogFeature_Text;"
+    Description="$Resources:spscore,SPSBlogFeature_Desc;"
+    Version="15.0.1.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="spscore"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.SPSBlogFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+    </ElementManifests>
+    <UpgradeActions>
+        <VersionRange EndVersion="15.0.1.0">
+            <CustomUpgradeAction Name="EnableLikes" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

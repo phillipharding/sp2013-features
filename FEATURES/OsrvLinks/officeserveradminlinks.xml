@@ -1,0 +1,58 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction 
+        Id="LicenseConversion"
+        GroupId="Patch"
+        Location="Microsoft.SharePoint.Administration.UpgradeAndMigration"
+        Sequence="5"
+        Title="$Resources:osrvcore,ServerConversionLinkText;" >
+            <UrlAction Url="/_admin/Conversion.aspx"/>
+    </CustomAction>
+    <CustomAction
+        Id="CA_UpgradeAndMigration_ConvertFarmLicenseType"
+        GroupId="CA_UpgradeAndMigration"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Sequence="5"
+        Title="$Resources:osrvcore,ServerConversionLinkText;">
+        <UrlAction Url="/_admin/Conversion.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="CA_SPO_Yammer"
+        GroupId="CA_SPO"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Sequence="10"
+        Title="$Resources:osrvcore,yammersettings_title;"
+        Description="$Resources:osrvcore,yammersettings_description;">
+        <UrlAction
+            Url="/_admin/yammerconfiguration.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="CA_SPO_Yammer"
+        GroupId="CA_SPO"
+        Location="Microsoft.SharePoint.Administration.Office365Configuration"
+        Sequence="10"
+        Title="$Resources:osrvcore,yammersettings_title;"
+        Description="$Resources:osrvcore,yammersettings_description;">
+        <UrlAction
+            Url="/_admin/yammerconfiguration.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="CA_SPO_CloudStorage"
+        GroupId="CA_SPO"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Sequence="20"
+        Title="$Resources:osrvcore,CloudConfigure_Title;"
+        Description="$Resources:osrvcore,CloudConfigure_Title;">
+        <UrlAction
+            Url="/_admin/cloudconfiguration.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="CA_SPO_CloudStorage"
+        GroupId="CA_SPO"
+        Location="Microsoft.SharePoint.Administration.Office365Configuration"
+        Sequence="20"
+        Title="$Resources:osrvcore,CloudConfigure_Title;"
+        Description="$Resources:osrvcore,CloudConfigure_Title;">
+        <UrlAction
+            Url="/_admin/cloudconfiguration.aspx" />
+    </CustomAction>
+</Elements>

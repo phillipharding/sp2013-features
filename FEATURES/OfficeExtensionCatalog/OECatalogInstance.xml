@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="$Resources:core,Marketplace_OfficeExtensionCatalogInstanceTitle;"
+                OnQuickLaunch="TRUE"
+                TemplateType="332"
+                Url="AgaveCatalog"
+                Description="$Resources:core,Marketplace_OfficeExtensionCatalogInstanceDescription;">
+  </ListInstance>
+</Elements>

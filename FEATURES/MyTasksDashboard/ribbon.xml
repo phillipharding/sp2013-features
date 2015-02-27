@@ -1,0 +1,317 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Custom ribbon for the AllMyWorkInOnePlace feature -->
+  <CustomAction
+      Id="Ribbon.AWIOP"
+      Location="CommandUI.Ribbon"
+      Sequence="30"
+      Title="AWIOP Ribbon">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+
+        <!-- TASK DASHBOARD RIBBON -->
+        <!-- Template -->
+        <CommandUIDefinition Location="Ribbon.Templates._children">
+          <GroupTemplate Id="Ribbon.Templates.AWIOP.SingleButton">
+            <Layout Title="OneLarge" LayoutTitle="OneLarge">
+              <Section Alignment="Top" Type="OneRow">
+                <Row>
+                  <ControlRef DisplayMode="Large" TemplateAlias="SingleButton" />
+                </Row>
+              </Section>
+            </Layout>
+          </GroupTemplate>
+        </CommandUIDefinition>
+
+        <!-- Template -->
+        <CommandUIDefinition Location="Ribbon.Templates._children">
+          <GroupTemplate Id="Ribbon.Templates.AWIOP.ThreeItem">
+            <Layout Title="ThreeLarge" LayoutTitle="ThreeLarge">
+              <Section Alignment="Top" Type="OneRow">
+                <Row>
+                  <ControlRef DisplayMode="Large" TemplateAlias="Button1" />
+                  <ControlRef DisplayMode="Large" TemplateAlias="Button2" />
+                  <ControlRef DisplayMode="Large" TemplateAlias="Button3" />
+                </Row>
+              </Section>
+            </Layout>
+            <Layout Title="ThreeMedium" LayoutTitle="ThreeMedium">
+              <Section Alignment="Top" Type="ThreeRow">
+                <Row>
+                  <ControlRef DisplayMode="Medium" TemplateAlias="Button1" />
+                </Row>
+                <Row>
+                  <ControlRef DisplayMode="Medium" TemplateAlias="Button2" />
+                </Row>
+                <Row>
+                  <ControlRef DisplayMode="Medium" TemplateAlias="Button3" />
+                </Row>
+              </Section>
+            </Layout>
+            <Layout Title="Popup" LayoutTitle="ThreeLarge"/>
+          </GroupTemplate>
+        </CommandUIDefinition>
+
+        <CommandUIDefinition Location="Ribbon.Templates._children">
+          <GroupTemplate Id="Ribbon.Templates.AWIOP.Tags">
+            <Layout Title="ThreeLarge">
+              <Section Alignment="Top" Type="OneRow">
+                <Row>
+                  <ControlRef DisplayMode="Large" TemplateAlias="tag1" />
+                  <ControlRef DisplayMode="Large" TemplateAlias="tag2" />
+                  <ControlRef DisplayMode="Large" TemplateAlias="tag3" />
+                </Row>
+              </Section>
+            </Layout>
+            <Layout Title="ThreeMedium">
+              <Section Alignment="Top" Type="ThreeRow">
+                <Row>
+                  <ControlRef DisplayMode="Medium" TemplateAlias="tag1" />
+                </Row>
+                <Row>
+                  <ControlRef DisplayMode="Medium" TemplateAlias="tag2" />
+                </Row>
+                <Row>
+                  <ControlRef DisplayMode="Medium" TemplateAlias="tag3" />
+                </Row>
+              </Section>
+            </Layout>
+            <Layout Title="Popup" LayoutTitle="ThreeLarge"/>
+          </GroupTemplate>
+        </CommandUIDefinition>
+
+        <!-- Ribbon -->
+        <CommandUIDefinition Location="Ribbon.ContextualTabs._children">
+          <ContextualGroup Id="Ribbon.ContextualTabs.AWIOP.Tasks"  Color="Teal" Command="cxtTasks" Title="$Resources:core,taskList" ContextualGroupId="cxtTasks" Sequence="100">
+            <Tab Id="Ribbon.AWIOP.Tasks" Sequence="1700" Command="TasksTab" Description="" Title="$Resources:core,taskList">
+              <Scaling Id="Ribbon.AWIOP.Tasks.Scaling">
+                <MaxSize Id="Ribbon.AWIOP.Tasks.Scaling.New.MaxSize" Sequence="10" GroupId="Ribbon.AWIOP.Tasks.New" Size="OneLarge" />
+                <MaxSize Id="Ribbon.AWIOP.Tasks.Scaling.Tags.MaxSize" Sequence="20" GroupId="Ribbon.AWIOP.Tasks.Tags" Size="ThreeLarge" />
+                <MaxSize Id="Ribbon.AWIOP.Tasks.Scaling.Item.MaxSize" Sequence="30" GroupId="Ribbon.AWIOP.Tasks.Item" Size="ThreeLarge" />
+                <MaxSize Id="Ribbon.AWIOP.Tasks.Scaling.Settings.MaxSize" Sequence="40" GroupId="Ribbon.AWIOP.Tasks.Settings" Size="ThreeLarge" />
+                <Scale Id="Ribbon.AWIOP.Tasks.Scaling.New.Medium" Sequence="50" GroupId="Ribbon.AWIOP.Tasks.New" Size="OneLarge" />
+                <Scale Id="Ribbon.AWIOP.Tasks.Scaling.Tags.Popup" Sequence="60" GroupId="Ribbon.AWIOP.Tasks.Tags" Size="ThreeLarge" />
+                <Scale Id="Ribbon.AWIOP.Tasks.Scaling.Item.Popup" Sequence="70" GroupId="Ribbon.AWIOP.Tasks.Item" Size="ThreeLarge" />
+                <Scale Id="Ribbon.AWIOP.Tasks.Scaling.Settings.Popup" Sequence="80" GroupId="Ribbon.AWIOP.Tasks.Settings" Size="ThreeLarge" />
+              </Scaling>
+              <Groups Id="Ribbon.AWIOP.Tasks.Groups">
+                 <Group
+                  Id="Ribbon.AWIOP.Tasks.New"
+                  Sequence="10"
+                  Template="Ribbon.Templates.AWIOP.SingleButton"
+                  Command="NewGroup"
+                  Description=""
+                  Title="$Resources:wmafeatures,AWIOP_Group_New">
+                    <Controls Id="Ribbon.AWIOP.Tasks.New.Controls">
+                      <Button
+                      Id="Ribbon.AWIOP.Tasks.New.NewTask"
+                      Sequence="10"
+                      Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-199" Image16by16Left="-163"
+                      Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-341" Image32by32Left="-103"
+                      Command="NewTask"
+                      LabelText="$Resources:wmafeatures,AWIOP_Button_NewTask"
+                      ToolTipTitle="$Resources:wmafeatures,AWIOP_Button_NewTask_SuperTooltipHeader"
+                      ToolTipDescription="$Resources:wmafeatures,AWIOP_Button_NewTask_SuperTooltipDesc"
+                      TemplateAlias="SingleButton"/>
+                    </Controls>
+                 </Group>
+                 <Group
+                    Id="Ribbon.AWIOP.Tasks.Tags"
+                    Sequence="20"
+                    Template="Ribbon.Templates.AWIOP.Tags"
+                    Command="TagsGroup"
+                    Description=""
+                    Image32by32Popup="/_layouts/images/placeholder32x32.png"
+                    Title="$Resources:wmafeatures,AWIOP_Tab_Tags">
+                  <Controls Id="Ribbon.AWIOP.Tasks.Tags.Controls">
+                    <ToggleButton
+                        Id="Ribbon.AWIOP.Tasks.Tags.MarkComplete"
+                        Sequence="10"
+                        Image16by16="/_layouts/15/images/awiopribbon.png?rev=23" Image16by16Top="-35" Image16by16Left="-69"
+                        Image32by32="/_layouts/15/images/awiopribbon.png?rev=23" Image32by32Top="-1" Image32by32Left="-35"
+                        Command="MarkComplete"
+                        QueryCommand="QueryMarkComplete"
+                        LabelText="$Resources:wmafeatures,AWIOP_TL_MarkComplete"
+                        ToolTipTitle="$Resources:wmafeatures,AWIOP_TL_MarkComplete"
+                        ToolTipDescription="$Resources:wmafeatures,AWIOP_TL_MarkComplete_Desc"
+                        TemplateAlias="tag1"/>
+                    <ToggleButton
+                        Id="Ribbon.AWIOP.Tasks.Tags.TrackTask"
+                        Sequence="20"
+                        Image16by16="/_layouts/15/images/awiopribbon.png?rev=23" Image16by16Top="-69" Image16by16Left="-37"
+                        Image32by32="/_layouts/15/images/awiopribbon.png?rev=23" Image32by32Top="-1" Image32by32Left="-1"
+                        Command="TrackTask"
+                        QueryCommand="QueryTrackTask"
+                        LabelText="$Resources:wmafeatures,AWIOP_TL_TrackTask"
+                        ToolTipTitle="$Resources:wmafeatures,AWIOP_TL_TrackTask_SuperTooltipHeader"
+                        ToolTipDescription="$Resources:wmafeatures,AWIOP_TL_TrackTask_SuperTooltipDesc"
+                        TemplateAlias="tag2"/>
+                    <ToggleButton
+                        Id="Ribbon.AWIOP.Tasks.Tags.AddToTimeline"
+                        Sequence="30"
+                        Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-199" Image16by16Left="-109"
+                        Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-375" Image32by32Left="-375"
+                        Command="AddToTimeline"
+                        QueryCommand="QueryAddToTimeline"
+                        LabelText="$Resources:wmafeatures,AWIOP_AddToTimeline"
+                        ToolTipTitle="$Resources:wmafeatures,AWIOP_AddToTimeline_SuperTooltipHeader"
+                        ToolTipDescription="$Resources:wmafeatures,AWIOP_AddToTimeline_SuperTooltipDesc"
+                        TemplateAlias="tag3"/>
+                  </Controls>
+                </Group>
+                <Group
+                  Id="Ribbon.AWIOP.Tasks.Item"
+                  Sequence="30"
+                  Template="Ribbon.Templates.AWIOP.ThreeItem"
+                  Command="ItemGroup"
+                  Description=""
+                  Image32by32Popup="/_layouts/images/placeholder32x32.png"
+                  Title="$Resources:wmafeatures,AWIOP_Tab_Manage">
+                  <Controls Id="Ribbon.AWIOP.Tasks.Item.Controls">
+                    <Button
+                    Id="Ribbon.AWIOP.Tasks.Item.EditTask"
+                    Sequence="10"
+                    Image16by16="/_layouts/15/images/awiopribbon.png?rev=23" Image16by16Top="-53" Image16by16Left="-69"
+                    Image32by32="/_layouts/15/images/awiopribbon.png?rev=23" Image32by32Top="-1" Image32by32Left="-69"
+                    Command="EditTask"
+                    LabelText="$Resources:wmafeatures,AWIOP_TL_EditTask"
+                    ToolTipTitle="$Resources:wmafeatures,AWIOP_TL_EditTask"
+                    ToolTipDescription="$Resources:wmafeatures,AWIOP_TL_EditTask_Desc"
+                    TemplateAlias="Button1"/>
+                    <Button
+                    Id="Ribbon.AWIOP.Tasks.Item.Rename"
+                    Sequence="20"
+                    Image16by16="/_layouts/15/images/awiopribbon.png?rev=23" Image16by16Top="-69" Image16by16Left="-19"
+                    Image32by32="/_layouts/15/images/awiopribbon.png?rev=23" Image32by32Top="-35" Image32by32Left="-1"
+                    Command="Rename"
+                    LabelText="$Resources:wmafeatures,AWIOP_TL_Rename"
+                    ToolTipTitle="$Resources:wmafeatures,AWIOP_TL_Rename"
+                    ToolTipDescription="$Resources:wmafeatures,AWIOP_TL_Rename_Desc"
+                    TemplateAlias="Button2"/>
+                    <Button
+                    Id="Ribbon.AWIOP.Tasks.Item.Delete"
+                    Sequence="30"
+                    Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-271" Image16by16Left="-271"
+                    Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-69" Image32by32Left="-511"
+                    Command="Delete"
+                    LabelText="$Resources:wmafeatures,AWIOP_TL_Delete"
+                    ToolTipTitle="$Resources:wmafeatures,AWIOP_TL_Delete"
+                    ToolTipDescription="$Resources:wmafeatures,AWIOP_TL_Delete_Desc"
+                    TemplateAlias="Button3"/>
+                  </Controls>
+                </Group>
+                <Group
+                   Id="Ribbon.AWIOP.Tasks.Settings"
+                   Sequence="40"
+                   Template="Ribbon.Templates.AWIOP.ThreeItem"
+                   Command="Settings"
+                   Image32by32Popup="/_layouts/images/placeholder32x32.png"
+                   Description=""
+                   Title="$Resources:wmafeatures,AWIOP_Settings">
+                    <Controls Id="Ribbon.AWIOP.Tasks.Settings.Controls">
+                      <Button
+                      Id="Ribbon.AWIOP.Tasks.Settings.Settings"
+                      Sequence="10"
+                      Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-253" Image16by16Left="-91"
+                      Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-239" Image32by32Left="-443"
+                      Command="Settings"
+                      LabelText="$Resources:wmafeatures,AWIOP_Settings"
+                      ToolTipTitle="$Resources:wmafeatures,AWIOP_Settings_SuperTooltipHeader"
+                      ToolTipDescription="$Resources:wmafeatures,AWIOP_Settings_SuperTooltipDesc"
+                      TemplateAlias="Button1"/>
+                      <Button
+                      Id="Ribbon.AWIOP.Tasks.Settings.ExchangeSyncSettings"
+                      Sequence="20"
+                      Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-55" Image16by16Left="-241"
+                      Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-307" Image32by32Left="-137"
+                      Command="ExchangeSyncSettings"
+                      LabelText="$Resources:wmafeatures,AWIOP_SyncToOutlook"
+                      ToolTipTitle="$Resources:wmafeatures,AWIOP_SyncToOutlook_SuperTooltipHeader"
+                      ToolTipDescription="$Resources:wmafeatures,AWIOP_SyncToOutlook_SuperTooltipDesc"
+                      TemplateAlias="Button2"/>
+                      <ToggleButton
+                      Id="Ribbon.AWIOP.Tasks.Manage.Grouping"
+                      Sequence="30"
+                      Image16by16="/_layouts/15/images/awiopribbon.png?rev=23" Image16by16Top="-69" Image16by16Left="-1"
+                      Image32by32="/_layouts/15/images/awiopribbon.png?rev=23" Image32by32Top="-35" Image32by32Left="-35"
+                      Command="Grouping"
+                      QueryCommand="QueryGrouping"
+                      LabelText="$Resources:wmafeatures,AWIOP_Button_Grouping"
+                      ToolTipTitle="$Resources:wmafeatures,AWIOP_Button_Grouping_SuperTooltipHeader"
+                      ToolTipDescription="$Resources:wmafeatures,AWIOP_Button_Grouping_SuperTooltipDesc"
+                      TemplateAlias="Button3"/>
+                    </Controls>
+                  </Group>
+              </Groups>
+            </Tab>
+          </ContextualGroup>
+        </CommandUIDefinition>
+
+        <!-- DIALOG RIBBON -->
+
+        <!-- Template -->
+        <CommandUIDefinition Location="Ribbon.Templates._children">
+          <GroupTemplate Id="Ribbon.Templates.CustomTemplateExample">
+            <Layout Title="OneLargeTwoMedium2" LayoutTitle="OneLargeTwoMedium2">
+              <Section Alignment="Top" Type="OneRow">
+                <Row>
+                  <ControlRef DisplayMode="Large" TemplateAlias="cust1" />
+                </Row>
+              </Section>
+              <Section Alignment="Top" Type="OneRow">
+                <Row>
+                  <ControlRef DisplayMode="Large" TemplateAlias="cust2" />
+                </Row>
+              </Section>
+            </Layout>
+          </GroupTemplate>
+        </CommandUIDefinition>
+
+        <!-- Ribbon -->
+        <CommandUIDefinition Location="Ribbon.ContextualTabs._children">
+          <ContextualGroup Id="Ribbon.ContextualTabs.AWIOP.EditTask" Color="Teal" Command="cxtEditTask" Title="$Resources:core,cui_TabListFormEditTitle" ContextualGroupId="cxtEditTask"  Sequence="100">
+            <Tab Id="Ribbon.AWIOP.EditTaskForm.Edit" Sequence="1700" Command="EditTab" Description="" Title="$Resources:core,cui_TabListFormEditTitle">
+
+              <Scaling Id="Ribbon.AWIOP.EditTaskForm.Edit.Scaling">
+                <MaxSize Id="Ribbon.AWIOP.EditTaskForm.Edit.Scaling.Commit.MaxSize" Sequence="10" GroupId="Ribbon.AWIOP.EditTaskForm.Edit.Commit" Size="OneLargeTwoMedium2" />
+                <Scale Id="Ribbon.AWIOP.EditTaskForm.Edit.Scaling.Commit.Popup" Sequence="20" GroupId="Ribbon.AWIOP.EditTaskForm.Edit.Commit" Size="OneLargeTwoMedium2" />
+              </Scaling>
+              <Groups Id="Ribbon.AWIOP.EditTaskForm.Edit.Groups">
+                <Group
+                Id="Ribbon.AWIOP.EditTaskForm.Edit.Commit"
+                Sequence="10"
+                Template="Ribbon.Templates.CustomTemplateExample"
+                Command="EditGroup"
+                Description=""
+                Title="$Resources:core,cui_GrpListFormCommitGroup">
+                  <Controls Id="Ribbon.AWIOP.EditTaskForm.Edit.Commit.Controls">
+                    <Button
+                    Id="Ribbon.AWIOP.EditTaskForm.Edit.Commit.Save"
+                    Sequence="10"
+                    Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-127" Image16by16Left="-91"
+                    Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-477" Image32by32Left="-307"
+                    Command="Save"
+                    LabelText="$Resources:core,cui_ButListFormSave"
+                    ToolTipTitle="$Resources:core,cui_ButListFormSave"
+                    ToolTipDescription="$Resources:core,cui_STT_ButListFormSave"
+                    TemplateAlias="cust1"/>
+                    <Button
+                    Id="Ribbon.AWIOP.EditTaskForm.Edit.Commit.Cancel"
+                    Sequence="20"
+                    Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-109" Image16by16Left="-289"
+                    Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-511" Image32by32Left="-273"
+                    Command="Cancel"
+                    LabelText="$Resources:core,cui_ButListFormCancel"
+                    ToolTipTitle="$Resources:core,cui_ButListFormCancel"
+                    ToolTipDescription="$Resources:core,cui_STT_ButListFormCancel"
+                    TemplateAlias="cust2"/>
+                  </Controls>
+                </Group>
+              </Groups>
+            </Tab>
+          </ContextualGroup>
+
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+</Elements>

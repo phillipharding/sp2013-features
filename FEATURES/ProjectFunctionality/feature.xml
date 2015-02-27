@@ -1,0 +1,18 @@
+<Feature Id="E2F2BB18-891D-4812-97DF-C265AFDBA297"
+    Title="$Resources:spscore,ProjectFunctionalityFeatureTitle;"
+    Description="$Resources:spscore,ProjectFunctionalityFeatureDescription;"
+    Version="15.0.6.0"
+    Scope="Web"
+    Hidden="False"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.ProjectFunctionalityFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <UpgradeActions
+        ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        ReceiverClass="Microsoft.SharePoint.Portal.ProjectFunctionalityFeatureReceiver">
+
+        <VersionRange EndVersion="15.0.6.0">
+            <CustomUpgradeAction Name="ReorderNavLinks" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

@@ -1,0 +1,15 @@
+<Feature  Id="9A447926-5937-44cb-857A-D3829301C73B"
+          Title="$Resources:osrvcore,ContentTypeHubFeatureTitle;"
+          Description="$Resources:osrvcore,ContentTypeHubFeatureDescription;"
+          Version="14.0.0.0"
+          Scope="Site"
+          Hidden="FALSE"
+          DefaultResourceFile="core"
+          ReceiverAssembly="Microsoft.SharePoint.Taxonomy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Taxonomy.ContentTypeSync.Internal.MetadataHubFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/" 
+	  ActivateOnDefault="FALSE">
+    <ElementManifests>
+        <ElementManifest Location="ApplicationLog.xml"/>
+    </ElementManifests>
+</Feature>

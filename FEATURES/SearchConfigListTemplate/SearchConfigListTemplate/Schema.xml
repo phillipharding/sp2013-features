@@ -1,0 +1,109 @@
+<List xmlns:ows="Microsoft SharePoint"
+      Title="$Resources:Microsoft.Office.Server.Search,SearchConfigList_Name"
+      FolderCreation="FALSE"
+      Direction="$Resources:core,Direction;"
+      Url="Lists/SearchConfig"
+      BaseType="1"
+	  xmlns="http://schemas.microsoft.com/sharepoint/">
+	<MetaData>  
+		<ContentTypes>
+			<ContentTypeRef ID="0x010080060E093E2F463EBA41A5F044428F32">
+			</ContentTypeRef>
+		</ContentTypes>
+		<Fields>
+			<Field 
+				Type="Text"
+				DisplayName="$Resources:Microsoft.Office.Server.Search,SearchConfigField_Status" 
+				Group="$Resources:Microsoft.Office.Server.Search,SearchConfigField_GroupName"
+				ID="{D26B5F0C-27CF-46D0-984C-A0C2EA81CB10}"
+				SourceId="0x010080060E093E2F463EBA41A5F044428F32"
+				StaticName="Status"
+				Name="Status"/>
+            <Field 
+				Type="Note"
+				DisplayName="$Resources:Microsoft.Office.Server.Search,SearchConfigField_Notes" 
+				Group="$Resources:Microsoft.Office.Server.Search,SearchConfigField_GroupName"
+				ID="{DF38FC53-0740-4846-80B2-CD5C4CF6B5D7}"
+				SourceId="0x010080060E093E2F463EBA41A5F044428F32"
+				StaticName="ConfigNotes"
+				Name="ConfigNotes"/>
+			<Field 
+				Type="Choice"
+				DisplayName="$Resources:Microsoft.Office.Server.Search,SearchConfigField_Scope" 
+				Group="$Resources:Microsoft.Office.Server.Search,SearchConfigField_GroupName"
+				ID="{F2630201-2B18-4F74-867B-18551759B437}"
+				SourceId="0x010080060E093E2F463EBA41A5F044428F32"
+				StaticName="Scope"
+				Name="Scope">
+		        <CHOICES>
+		            <CHOICE>$Resources:Microsoft.Office.Server.Search,SearchConfigScope_Tenant</CHOICE>
+		            <CHOICE>$Resources:Microsoft.Office.Server.Search,SearchConfigScope_SPSite</CHOICE>
+		            <CHOICE>$Resources:Microsoft.Office.Server.Search,SearchConfigScope_SPWeb</CHOICE>
+		        </CHOICES>
+			</Field>
+		</Fields>
+	    <Views>
+			<View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+				<XslLink Default="TRUE">main.xsl</XslLink>
+				<RowLimit Paged="TRUE">30</RowLimit>
+				<Toolbar Position="After" Type="Freeform">
+				  <IfHasRights>
+					<RightsChoices>
+					  <RightsGroup PermAddListItems="required" />
+					</RightsChoices>
+					<Then><HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif" alt="" />&#160;<a class="ms-addnew" id="idAddNewItem" href="]]></HTML>
+					  <URL Cmd="New" /><HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML>
+					  <ScriptQuote NotAddingQuote="TRUE">
+						<URL Cmd="New" />
+					  </ScriptQuote><HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML><HTML>$Resources:core,addnewitem;</HTML><HTML><![CDATA[</a></div>]]></HTML>
+					</Then>
+				  </IfHasRights>
+				</Toolbar>
+				<RowLimit>20</RowLimit>
+				<ViewFields>
+				  <FieldRef Name="LinkFilename"></FieldRef>
+				  <FieldRef Name="Scope"></FieldRef>
+				  <FieldRef Name="Status"></FieldRef>
+				  <FieldRef Name="ConfigNotes"></FieldRef>
+				</ViewFields>
+				<Query>
+				  <OrderBy>
+					<FieldRef Name="Status" Ascending="FALSE">
+					</FieldRef>
+				  </OrderBy>
+				</Query>
+				<ParameterBindings>
+				  <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+				  <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+				  <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+				</ParameterBindings>
+			</View>
+			<View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="List View" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png" Url="AllItems.aspx">
+				<XslLink Default="TRUE">main.xsl</XslLink>
+				<RowLimit Paged="TRUE">30</RowLimit>
+				<Toolbar Type="Standard" />
+				<ViewFields>
+				  <FieldRef Name="LinkFilename"></FieldRef>
+				  <FieldRef Name="Scope"></FieldRef>
+				  <FieldRef Name="Status"></FieldRef>
+				  <FieldRef Name="ConfigNotes"></FieldRef>
+				 </ViewFields>
+				<Query>
+				  <OrderBy>
+					<FieldRef Name="Status" Ascending="FALSE">
+					</FieldRef>
+				  </OrderBy>
+				</Query>
+				<ParameterBindings>
+				  <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+				  <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+				</ParameterBindings>
+			</View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+	</MetaData>
+</List>

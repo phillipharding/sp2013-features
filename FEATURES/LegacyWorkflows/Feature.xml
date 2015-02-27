@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature  Id="C845ED8D-9CE5-448c-BD3E-EA71350CE45B"
+          Title="$Resources:Feature_Title;"
+          Description="$Resources:Feature_Description;"
+          ImageUrl="WorkflowSolutionFeature.gif"
+          Scope="Site"
+          AlwaysForceInstall="TRUE"
+          Version="15.0.0.0"
+          DefaultResourceFile="_Res"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ActivationDependencies> 
+    <ActivationDependency FeatureId="C9C9515D-E4E2-4001-9050-74F980F93160" />
+    <ActivationDependency FeatureId="02464C6A-9D07-4F30-BA04-E9035CF54392" />
+    <ActivationDependency FeatureId="6C09612B-46AF-4B2F-8DFC-59185C962A29" />
+  </ActivationDependencies> 
+</Feature>

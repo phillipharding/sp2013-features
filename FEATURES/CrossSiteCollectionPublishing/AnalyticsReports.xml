@@ -1,0 +1,19 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Id="Ribbon.ListItem.Share.Analytics" 
+        Location="CommandUI.Ribbon"
+        UIVersion=">=15">
+        <CommandUIExtension>
+            <CommandUIDefinitions>
+                <CommandUIDefinition Location="Ribbon.ListItem.Share.Controls._children"> <Button Id="Ribbon.ListItem.Share.ViewAnalyticsReport" Sequence="55" Command="viewAnalyticsReport" Image16by16="/_layouts/15/images/analyticsreport16x16.png?rev=23" Image32by32="/_layouts/15/images/analyticsreport32x32.png?rev=23" LabelText="$Resources:dlccore,Reporting_AnalyticsReportingFeatureTitle;" ToolTipTitle="$Resources:dlccore,Reporting_AnalyticsReportingFeatureTitle;" ToolTipDescription="$Resources:dlccore,SiteSettings_AnalyticsReports_Tooltip;" TemplateAlias="o1"/> </CommandUIDefinition>
+                <CommandUIDefinition Location="Ribbon.List.Share.Controls._children"> <Button Id="Ribbon.List.Share.ViewTopReport" Sequence="40" Command="viewTopReport" Image16by16="/_layouts/15/images/topreport16x16.png?rev=23" Image32by32="/_layouts/15/images/topreport32x32.png?rev=23" LabelText="$Resources:dlccore,Reporting_TopReportFeatureTitle;" ToolTipTitle="$Resources:dlccore,Reporting_TopReportFeatureTitle;" ToolTipDescription="$Resources:dlccore,SiteSettings_AnalyticsReports_Tooltip;" TemplateAlias="o1"/> </CommandUIDefinition>
+            </CommandUIDefinitions>
+            <CommandUIHandlers>
+                <CommandUIHandler Command="viewAnalyticsReport" CommandAction="javascript: function getItemIds() { var itemIds = ''; var items = SP.ListOperation.Selection.getSelectedItems(); var item; for (var i in items) { item = items[i]; if(itemIds != '') { itemIds = itemIds + ','; } itemIds = itemIds + item.id; } return itemIds; } function invokeViewAnalyticsReport() { window.location = '{SiteUrl}' + '/_layouts/15/reporting.aspx' + '?Category=Analytics&amp;List=' + encodeURIComponent(ctx.listName) + '&amp;ID=' + getItemIds(); } invokeViewAnalyticsReport();" EnabledScript="javascript: function enableViewAnalyticsReport() {     var items = SP.ListOperation.Selection.getSelectedItems();     return (items.length > 0); } enableViewAnalyticsReport();" />
+                <CommandUIHandler Command="viewTopReport" CommandAction="javascript: function invokeViewTopReport() { STSNavigate('{SiteUrl}' + '/_layouts/15/topreport.aspx' + '?List=' + encodeURIComponent(ctx.listName)); } invokeViewTopReport();" EnabledScript="javascript: function enableViewTopReport() {     return true; } enableViewTopReport();" />
+            </CommandUIHandlers>
+        </CommandUIExtension>
+    </CustomAction>
+</Elements>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="15.0.4420" _dal="1" -->
+<!-- _LocalBinding -->
+<List xmlns:ows="Microsoft SharePoint" Name="XlateList" Title="$Resources:dlccore,DM_XListSchema_XListName" Direction="0" Url="Translators List" BaseType="0" >
+
+	<MetaData>
+		<Fields>
+			<Field Name="Title" ReadOnly="TRUE" Required="FALSE" Hidden="TRUE" />	
+			<Field Type="Choice" Name="Language_x0020_From" DisplayName="$Resources:dlccore,DM_XListSchema_TransFromFieldName" Required="TRUE" FillInChoice="TRUE">
+				<CHOICES> <CHOICE>$Resources:core,Lang_Arabic_SaudiArabia</CHOICE> <CHOICE>$Resources:core,Lang_Bulgarian_Bulgaria</CHOICE> <CHOICE>$Resources:core,Lang_Chinese_HongKong</CHOICE> <CHOICE>$Resources:core,Lang_Chinese_PRC</CHOICE> <CHOICE>$Resources:core,Lang_Chinese_Taiwan</CHOICE> <CHOICE>$Resources:core,Lang_Croatian_Croatia</CHOICE> <CHOICE>$Resources:core,Lang_Czech_CzechRepublic</CHOICE> <CHOICE>$Resources:core,Lang_Danish_Denmark</CHOICE> <CHOICE>$Resources:core,Lang_Dutch_Netherlands</CHOICE> <CHOICE>$Resources:core,Lang_English</CHOICE> <CHOICE>$Resources:core,Lang_Estonian_Estonia</CHOICE> <CHOICE>$Resources:core,Lang_Finnish_Finland</CHOICE> <CHOICE>$Resources:core,Lang_French_France</CHOICE> <CHOICE>$Resources:core,Lang_German_Germany</CHOICE> <CHOICE>$Resources:core,Lang_Greek_Greece</CHOICE> <CHOICE>$Resources:core,Lang_Hebrew_Israel</CHOICE> <CHOICE>$Resources:core,Lang_Hindi_India</CHOICE> <CHOICE>$Resources:core,Lang_Hungarian_Hungary</CHOICE> <CHOICE>$Resources:core,Lang_Indonesian_Indonesia</CHOICE> <CHOICE>$Resources:core,Lang_Italian_Italy</CHOICE> <CHOICE>$Resources:core,Lang_Japanese_Japan</CHOICE> <CHOICE>$Resources:core,Lang_Korean_Korea</CHOICE> <CHOICE>$Resources:core,Lang_Latvian_Latvia</CHOICE> <CHOICE>$Resources:core,Lang_Lithuanian_Lithuania</CHOICE> <CHOICE>$Resources:core,Lang_Malay_Malaysia</CHOICE> <CHOICE>$Resources:core,Lang_Norwegian_BokmalNorway</CHOICE> <CHOICE>$Resources:core,Lang_Polish_Poland</CHOICE> <CHOICE>$Resources:core,Lang_Portuguese_Brazil</CHOICE> <CHOICE>$Resources:core,Lang_Portuguese_Portugal</CHOICE> <CHOICE>$Resources:core,Lang_Romanian_Romania</CHOICE> <CHOICE>$Resources:core,Lang_Russian_Russia</CHOICE> <CHOICE>$Resources:core,Lang_Serbian_LatinSerbia</CHOICE> <CHOICE>$Resources:core,Lang_Slovak_Slovakia</CHOICE> <CHOICE>$Resources:core,Lang_Slovenian_Slovenia</CHOICE> <CHOICE>$Resources:core,Lang_Spanish_Spain</CHOICE> <CHOICE>$Resources:core,Lang_Swedish_Sweden</CHOICE> <CHOICE>$Resources:core,Lang_Thai_Thailand</CHOICE> <CHOICE>$Resources:core,Lang_Turkish_Turkey</CHOICE> <CHOICE>$Resources:core,Lang_Ukrainian_Ukraine</CHOICE> <CHOICE>$Resources:core,Lang_Urdu_Pakistan</CHOICE> <CHOICE>$Resources:core,Lang_Vietnamese_Vietnam</CHOICE> </CHOICES>
+				<Default>$Resources:core,Lang_Default</Default>
+			</Field>
+			<Field Type="Choice" Name="Language_x0020_To" DisplayName="$Resources:dlccore,DM_XListSchema_TransToFieldName" Required="TRUE" FillInChoice="TRUE">
+				<CHOICES> <CHOICE>$Resources:core,Lang_Arabic_SaudiArabia</CHOICE> <CHOICE>$Resources:core,Lang_Bulgarian_Bulgaria</CHOICE> <CHOICE>$Resources:core,Lang_Chinese_HongKong</CHOICE> <CHOICE>$Resources:core,Lang_Chinese_PRC</CHOICE> <CHOICE>$Resources:core,Lang_Chinese_Taiwan</CHOICE> <CHOICE>$Resources:core,Lang_Croatian_Croatia</CHOICE> <CHOICE>$Resources:core,Lang_Czech_CzechRepublic</CHOICE> <CHOICE>$Resources:core,Lang_Danish_Denmark</CHOICE> <CHOICE>$Resources:core,Lang_Dutch_Netherlands</CHOICE> <CHOICE>$Resources:core,Lang_English</CHOICE> <CHOICE>$Resources:core,Lang_Estonian_Estonia</CHOICE> <CHOICE>$Resources:core,Lang_Finnish_Finland</CHOICE> <CHOICE>$Resources:core,Lang_French_France</CHOICE> <CHOICE>$Resources:core,Lang_German_Germany</CHOICE> <CHOICE>$Resources:core,Lang_Greek_Greece</CHOICE> <CHOICE>$Resources:core,Lang_Hebrew_Israel</CHOICE> <CHOICE>$Resources:core,Lang_Hindi_India</CHOICE> <CHOICE>$Resources:core,Lang_Hungarian_Hungary</CHOICE> <CHOICE>$Resources:core,Lang_Indonesian_Indonesia</CHOICE> <CHOICE>$Resources:core,Lang_Italian_Italy</CHOICE> <CHOICE>$Resources:core,Lang_Japanese_Japan</CHOICE> <CHOICE>$Resources:core,Lang_Korean_Korea</CHOICE> <CHOICE>$Resources:core,Lang_Latvian_Latvia</CHOICE> <CHOICE>$Resources:core,Lang_Lithuanian_Lithuania</CHOICE> <CHOICE>$Resources:core,Lang_Malay_Malaysia</CHOICE> <CHOICE>$Resources:core,Lang_Norwegian_BokmalNorway</CHOICE> <CHOICE>$Resources:core,Lang_Polish_Poland</CHOICE> <CHOICE>$Resources:core,Lang_Portuguese_Brazil</CHOICE> <CHOICE>$Resources:core,Lang_Portuguese_Portugal</CHOICE> <CHOICE>$Resources:core,Lang_Romanian_Romania</CHOICE> <CHOICE>$Resources:core,Lang_Russian_Russia</CHOICE> <CHOICE>$Resources:core,Lang_Serbian_LatinSerbia</CHOICE> <CHOICE>$Resources:core,Lang_Slovak_Slovakia</CHOICE> <CHOICE>$Resources:core,Lang_Slovenian_Slovenia</CHOICE> <CHOICE>$Resources:core,Lang_Spanish_Spain</CHOICE> <CHOICE>$Resources:core,Lang_Swedish_Sweden</CHOICE> <CHOICE>$Resources:core,Lang_Thai_Thailand</CHOICE> <CHOICE>$Resources:core,Lang_Turkish_Turkey</CHOICE> <CHOICE>$Resources:core,Lang_Ukrainian_Ukraine</CHOICE> <CHOICE>$Resources:core,Lang_Urdu_Pakistan</CHOICE> <CHOICE>$Resources:core,Lang_Vietnamese_Vietnam</CHOICE> </CHOICES>
+				<Default>$Resources:core,Lang_Default</Default>
+			</Field>
+			<Field Name="Translator" Type="User" List="UserInfo" DisplayName="$Resources:dlccore,DM_XListSchema_TranslatorFieldName" /> 
+		</Fields>
+		<Views>
+			<View BaseViewID="0" Type="HTML">
+<XslLink Default="TRUE">main.xsl</XslLink>
+<RowLimit Paged="TRUE">30</RowLimit>
+<Toolbar Position="After" Type="Freeform"> <IfHasRights> <RightsChoices><RightsGroup PermAddListItems="required" /></RightsChoices> <Then> <HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idAddNewItem" href="]]></HTML><URL Cmd="New"/><HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML><ScriptQuote NotAddingQuote="TRUE"><URL Cmd="New"/></ScriptQuote><HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML> <HTML>$Resources:core,addnewitem;</HTML><HTML><![CDATA[</a></div>]]></HTML> </Then> </IfHasRights> </Toolbar>
+				<RowLimit>20</RowLimit>
+				<ViewFields>
+					<FieldRef Name="Language_x0020_From"></FieldRef>
+					<FieldRef Name="Language_x0020_To"></FieldRef>
+					<FieldRef Name="Translator"></FieldRef>
+				</ViewFields>
+				<Query>
+					<OrderBy>
+						<FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+					</OrderBy>
+				</Query>
+			</View>
+			<View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24" DefaultView="TRUE" Url="AllItems.aspx" >
+<XslLink Default="TRUE">main.xsl</XslLink>
+<JSLink>clienttemplates.js</JSLink>
+<RowLimit Paged="TRUE">30</RowLimit>
+<Toolbar Type="Standard"/>
+				<ViewFields>
+					<FieldRef Name="Language_x0020_From"></FieldRef>
+					<FieldRef Name="Language_x0020_To"></FieldRef>
+					<FieldRef Name="Translator"></FieldRef>
+					<FieldRef Name="Edit"></FieldRef>
+				</ViewFields>
+				<Query>
+					<OrderBy>
+						<FieldRef Name="ID"></FieldRef>
+					</OrderBy>
+				</Query>
+			</View>
+			<View BaseViewID="2" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:dlccore,DM_XListSchema_LanguagesViewName" DefaultView="FALSE" Url="Languages.aspx" >
+<XslLink Default="TRUE">main.xsl</XslLink>
+<JSLink>clienttemplates.js</JSLink>
+<RowLimit Paged="TRUE">30</RowLimit>
+<Toolbar Type="Standard"/>
+				<ViewFields>
+					<FieldRef Name="Language_x0020_From"></FieldRef>
+					<FieldRef Name="Language_x0020_To"></FieldRef>
+					<FieldRef Name="Translator"></FieldRef>
+					<FieldRef Name="Edit"></FieldRef>
+				</ViewFields>
+				<Query>
+					<GroupBy Collapse="FALSE">
+						<FieldRef Name="Language_x0020_From" />
+					</GroupBy>
+					<OrderBy>
+						<FieldRef Name="Language_x0020_From" />
+						<FieldRef Name="Language_x0020_To" />
+						<FieldRef Name="Translator" />
+					</OrderBy>
+				</Query>
+				<RowLimit Paged="TRUE">100</RowLimit>
+			</View>
+		</Views>
+		<Forms>
+			<Form Type="DisplayForm" Url="DispForm.aspx" WebPartZoneID="Main"/>
+			<Form Type="EditForm" Url="EditForm.aspx" WebPartZoneID="Main"/>
+			<Form Type="NewForm" Url="NewForm.aspx" WebPartZoneID="Main"/>
+		</Forms>
+		<DefaultDescription>
+		    $Resources:core,xlatelist_desc;
+		</DefaultDescription>
+	</MetaData>
+</List>

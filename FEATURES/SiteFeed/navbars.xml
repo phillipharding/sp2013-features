@@ -1,0 +1,5 @@
+<Project xmlns="http://schemas.microsoft.com/sharepoint/" UIVersion="15">
+    <NavBars>
+        <NavBar Name="$Resources:spscore,SiteFeed_NavBars_Newsfeed" Url="newsfeed.aspx" />
+    </NavBars>
+</Project>

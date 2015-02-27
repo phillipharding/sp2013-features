@@ -1,0 +1,17 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Feature  Id="CA2543E6-29A1-40C1-BBA9-BD8510A4C17B"
+          Title="Content Deployment"
+          Description="OOB Content Deployment Feature."
+          Version="14.0.0.0"
+          Scope="Web"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          AutoActivateInCentralAdmin="TRUE"
+          ReceiverAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Publishing.DeploymentFeatureHandler" 
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="DeploymentOperations.xml"/>
+    </ElementManifests>
+</Feature>

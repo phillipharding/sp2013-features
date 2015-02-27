@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <WebPartAdderExtension
+        Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" 
+        Class="Microsoft.SharePoint.Meetings.MeetingsListGallerySource" />
+    <!--Hide theming as it's not supported for MWS-->
+    <HideCustomAction
+        GroupId = "Customization"
+        HideActionId = "Theme"
+        Id = "HideTheming"
+        Location = "Microsoft.SharePoint.SiteSettings">
+    </HideCustomAction>
+</Elements>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module
+        Name="WebPartPopulation"
+        List="113"
+        Url="_catalogs/wp"
+        RootWebOnly="TRUE">
+        <File Url="MSContentEditor.dwp" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:core,AuthoringWebPartGroup;"></Property>
+        </File>
+        <File Url="MSPageViewer.dwp" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:core,AuthoringWebPartGroup;"></Property>
+        </File>
+        <File Url="MSImage.dwp" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:core,AuthoringWebPartGroup;"></Property>
+        </File>
+        <File Url="MSMembers.dwp" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:core,PeopleWebPartGroup;"></Property>
+        </File>
+        <File Url="MSSimpleForm.dwp" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:core,FormsWebPartGroup;"></Property>
+        </File>
+        <File Url="MSUserDocs.dwp" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:core,ContentRollupWebPartGroup;"></Property>
+        </File>
+        <File Url="MSUserTasks.dwp" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:core,PeopleWebPartGroup;"></Property>
+        </File>
+        <File Url="MSXml.dwp" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:core,ContentRollupWebPartGroup;"></Property>
+        </File>
+    </Module>
+</Elements>

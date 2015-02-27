@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature  Id="B9455243-E547-41F0-80C1-D5F6CE6A19E5"
+          Title="$Resources:ReportAndDataSearch_Feature_Title;"
+          Description="$Resources:ReportAndDataSearch_Feature_Description;"
+          DefaultResourceFile="Microsoft.Office.Server.Search"
+          Version="15.0.2.0"
+          Scope="Web"
+          Hidden="TRUE"
+          ReceiverAssembly="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.Office.Server.Search.Administration.ReportAndDataSearchFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <ElementManifests>
+        <ElementManifest Location="ProvisionedFiles.xml"/>
+    </ElementManifests>
+    <UpgradeActions>
+        <VersionRange EndVersion="15.0.1.0">
+            <CustomUpgradeAction Name="UpgradeRefinementConfiguration" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.2.0">
+            <CustomUpgradeAction Name="UpgradeQueryRuleContext" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

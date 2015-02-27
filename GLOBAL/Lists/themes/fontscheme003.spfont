@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:fontScheme name="Rockwell" previewSlot1="title" previewSlot2="body" xmlns:s="http://schemas.microsoft.com/sharepoint/">
+    <s:fontSlots>
+        <s:fontSlot name="title">
+            <s:latin typeface="Rockwell Light" eotsrc="/_layouts/15/fonts/RockwellLight.eot" woffsrc="/_layouts/15/fonts/RockwellLight.woff" ttfsrc="/_layouts/15/fonts/RockwellLight.ttf" svgsrc="/_layouts/15/fonts/RockwellLight.svg" largeimgsrc="/_layouts/15/fonts/RockwellLightLarge.png" smallimgsrc="/_layouts/15/fonts/RockwellLightSmall.png" />
+            <s:ea typeface="" />
+            <s:cs typeface="Segoe UI Light" />
+            <s:font script="Arab" typeface="Segoe UI Light" />
+            <s:font script="Deva" typeface="Nirmala UI" />
+            <s:font script="Grek" typeface="Segoe UI Light" />
+            <s:font script="Hang" typeface="Malgun Gothic" />
+            <s:font script="Hans" typeface="Microsoft YaHei UI" />
+            <s:font script="Hant" typeface="Microsoft JhengHei UI" />
+            <s:font script="Hebr" typeface="Tahoma" />
+            <s:font script="Hira" typeface="Meiryo UI" />
+            <s:font script="Thai" typeface="Tahoma" />
+            <s:font script="Armn" typeface="Segoe UI Light" />
+            <s:font script="Beng" typeface="Nirmala UI" />
+            <s:font script="Cher" typeface="Gadugi" />
+            <s:font script="Ethi" typeface="Ebrima" />
+            <s:font script="Geor" typeface="Segoe UI Light" />
+            <s:font script="Gujr" typeface="Nirmala UI" />
+            <s:font script="Guru" typeface="Nirmala UI" />
+            <s:font script="Knda" typeface="Nirmala UI" />
+            <s:font script="Khmr" typeface="Khmer UI" />
+            <s:font script="Laoo" typeface="Lao UI" />
+            <s:font script="Mlym" typeface="Nirmala UI" />
+            <s:font script="Mymr" typeface="Myanmar Text" />
+            <s:font script="Orya" typeface="Nirmala UI" />
+            <s:font script="Sinh" typeface="Nirmala UI" />
+            <s:font script="Syrc" typeface="Estrangelo Edessa" />
+            <s:font script="Taml" typeface="Nirmala UI" />
+            <s:font script="Telu" typeface="Nirmala UI" />
+            <s:font script="Thaa" typeface="MV Boli" />
+            <s:font script="Tibt" typeface="Microsoft Himalaya" />
+            <s:font script="Yiii" typeface="Microsoft Yi Baiti" />
+        </s:fontSlot>
+        <s:fontSlot name="navigation">
+            <s:latin typeface="Rockwell Light" eotsrc="/_layouts/15/fonts/RockwellLight.eot" woffsrc="/_layouts/15/fonts/RockwellLight.woff" ttfsrc="/_layouts/15/fonts/RockwellLight.ttf" svgsrc="/_layouts/15/fonts/RockwellLight.svg" largeimgsrc="/_layouts/15/fonts/RockwellLightLarge.png" smallimgsrc="/_layouts/15/fonts/RockwellLightSmall.png" />
+            <s:ea typeface="" />
+            <s:cs typeface="Segoe UI" />
+            <s:font script="Arab" typeface="Segoe UI" />
+            <s:font script="Deva" typeface="Nirmala UI" />
+            <s:font script="Grek" typeface="Segoe UI" />
+            <s:font script="Hang" typeface="Malgun Gothic" />
+            <s:font script="Hans" typeface="Microsoft YaHei UI" />
+            <s:font script="Hant" typeface="Microsoft JhengHei UI" />
+            <s:font script="Hebr" typeface="Tahoma" />
+            <s:font script="Hira" typeface="Meiryo UI" />
+            <s:font script="Thai" typeface="Tahoma" />
+            <s:font script="Armn" typeface="Segoe UI" />
+            <s:font script="Beng" typeface="Nirmala UI" />
+            <s:font script="Cher" typeface="Gadugi" />
+            <s:font script="Ethi" typeface="Ebrima" />
+            <s:font script="Geor" typeface="Segoe UI" />
+            <s:font script="Gujr" typeface="Nirmala UI" />
+            <s:font script="Guru" typeface="Nirmala UI" />
+            <s:font script="Knda" typeface="Nirmala UI" />
+            <s:font script="Khmr" typeface="Khmer UI" />
+            <s:font script="Laoo" typeface="Lao UI" />
+            <s:font script="Mlym" typeface="Nirmala UI" />
+            <s:font script="Mymr" typeface="Myanmar Text" />
+            <s:font script="Orya" typeface="Nirmala UI" />
+            <s:font script="Sinh" typeface="Nirmala UI" />
+            <s:font script="Syrc" typeface="Estrangelo Edessa" />
+            <s:font script="Taml" typeface="Nirmala UI" />
+            <s:font script="Telu" typeface="Nirmala UI" />
+            <s:font script="Thaa" typeface="MV Boli" />
+            <s:font script="Tibt" typeface="Microsoft Himalaya" />
+            <s:font script="Yiii" typeface="Microsoft Yi Baiti" />
+        </s:fontSlot>
+        <s:fontSlot name="small-heading">
+            <s:latin typeface="Rockwell Light" eotsrc="/_layouts/15/fonts/RockwellLight.eot" woffsrc="/_layouts/15/fonts/RockwellLight.woff" ttfsrc="/_layouts/15/fonts/RockwellLight.ttf" svgsrc="/_layouts/15/fonts/RockwellLight.svg" largeimgsrc="/_layouts/15/fonts/RockwellLightLarge.png" smallimgsrc="/_layouts/15/fonts/RockwellLightSmall.png" />
+            <s:ea typeface="" />
+            <s:cs typeface="Segoe UI" />
+            <s:font script="Arab" typeface="Segoe UI" />
+            <s:font script="Deva" typeface="Nirmala UI" />
+            <s:font script="Grek" typeface="Segoe UI" />
+            <s:font script="Hang" typeface="Malgun Gothic" />
+            <s:font script="Hans" typeface="Microsoft YaHei UI" />
+            <s:font script="Hant" typeface="Microsoft JhengHei UI" />
+            <s:font script="Hebr" typeface="Tahoma" />
+            <s:font script="Hira" typeface="Meiryo UI" />
+            <s:font script="Thai" typeface="Tahoma" />
+            <s:font script="Armn" typeface="Segoe UI" />
+            <s:font script="Beng" typeface="Nirmala UI" />
+            <s:font script="Cher" typeface="Gadugi" />
+            <s:font script="Ethi" typeface="Ebrima" />
+            <s:font script="Geor" typeface="Segoe UI" />
+            <s:font script="Gujr" typeface="Nirmala UI" />
+            <s:font script="Guru" typeface="Nirmala UI" />
+            <s:font script="Knda" typeface="Nirmala UI" />
+            <s:font script="Khmr" typeface="Khmer UI" />
+            <s:font script="Laoo" typeface="Lao UI" />
+            <s:font script="Mlym" typeface="Nirmala UI" />
+            <s:font script="Mymr" typeface="Myanmar Text" />
+            <s:font script="Orya" typeface="Nirmala UI" />
+            <s:font script="Sinh" typeface="Nirmala UI" />
+            <s:font script="Syrc" typeface="Estrangelo Edessa" />
+            <s:font script="Taml" typeface="Nirmala UI" />
+            <s:font script="Telu" typeface="Nirmala UI" />
+            <s:font script="Thaa" typeface="MV Boli" />
+            <s:font script="Tibt" typeface="Microsoft Himalaya" />
+            <s:font script="Yiii" typeface="Microsoft Yi Baiti" />
+        </s:fontSlot>
+        <s:fontSlot name="heading">
+            <s:latin typeface="Rockwell Light" eotsrc="/_layouts/15/fonts/RockwellLight.eot" woffsrc="/_layouts/15/fonts/RockwellLight.woff" ttfsrc="/_layouts/15/fonts/RockwellLight.ttf" svgsrc="/_layouts/15/fonts/RockwellLight.svg" largeimgsrc="/_layouts/15/fonts/RockwellLightLarge.png" smallimgsrc="/_layouts/15/fonts/RockwellLightSmall.png" />
+            <s:ea typeface="" />
+            <s:cs typeface="Segoe UI Semilight" />
+            <s:font script="Arab" typeface="Segoe UI Semilight" />
+            <s:font script="Deva" typeface="Nirmala UI" />
+            <s:font script="Grek" typeface="Segoe UI Semilight" />
+            <s:font script="Hang" typeface="Malgun Gothic" />
+            <s:font script="Hans" typeface="Microsoft YaHei UI" />
+            <s:font script="Hant" typeface="Microsoft JhengHei UI" />
+            <s:font script="Hebr" typeface="Tahoma" />
+            <s:font script="Hira" typeface="Meiryo UI" />
+            <s:font script="Thai" typeface="Tahoma" />
+            <s:font script="Armn" typeface="Segoe UI Semilight" />
+            <s:font script="Beng" typeface="Nirmala UI" />
+            <s:font script="Cher" typeface="Gadugi" />
+            <s:font script="Ethi" typeface="Ebrima" />
+            <s:font script="Geor" typeface="Segoe UI Semilight" />
+            <s:font script="Gujr" typeface="Nirmala UI" />
+            <s:font script="Guru" typeface="Nirmala UI" />
+            <s:font script="Knda" typeface="Nirmala UI" />
+            <s:font script="Khmr" typeface="Khmer UI" />
+            <s:font script="Laoo" typeface="Lao UI" />
+            <s:font script="Mlym" typeface="Nirmala UI" />
+            <s:font script="Mymr" typeface="Myanmar Text" />
+            <s:font script="Orya" typeface="Nirmala UI" />
+            <s:font script="Sinh" typeface="Nirmala UI" />
+            <s:font script="Syrc" typeface="Estrangelo Edessa" />
+            <s:font script="Taml" typeface="Nirmala UI" />
+            <s:font script="Telu" typeface="Nirmala UI" />
+            <s:font script="Thaa" typeface="MV Boli" />
+            <s:font script="Tibt" typeface="Microsoft Himalaya" />
+            <s:font script="Yiii" typeface="Microsoft Yi Baiti" />
+        </s:fontSlot>
+        <s:fontSlot name="large-heading">
+            <s:latin typeface="Rockwell Light" eotsrc="/_layouts/15/fonts/RockwellLight.eot" woffsrc="/_layouts/15/fonts/RockwellLight.woff" ttfsrc="/_layouts/15/fonts/RockwellLight.ttf" svgsrc="/_layouts/15/fonts/RockwellLight.svg" largeimgsrc="/_layouts/15/fonts/RockwellLightLarge.png" smallimgsrc="/_layouts/15/fonts/RockwellLightSmall.png" />
+            <s:ea typeface="" />
+            <s:cs typeface="Segoe UI Light" />
+            <s:font script="Arab" typeface="Segoe UI Light" />
+            <s:font script="Deva" typeface="Nirmala UI" />
+            <s:font script="Grek" typeface="Segoe UI Light" />
+            <s:font script="Hang" typeface="Malgun Gothic" />
+            <s:font script="Hans" typeface="Microsoft YaHei UI" />
+            <s:font script="Hant" typeface="Microsoft JhengHei UI" />
+            <s:font script="Hebr" typeface="Tahoma" />
+            <s:font script="Hira" typeface="Meiryo UI" />
+            <s:font script="Thai" typeface="Tahoma" />
+            <s:font script="Armn" typeface="Segoe UI Light" />
+            <s:font script="Beng" typeface="Nirmala UI" />
+            <s:font script="Cher" typeface="Gadugi" />
+            <s:font script="Ethi" typeface="Ebrima" />
+            <s:font script="Geor" typeface="Segoe UI Light" />
+            <s:font script="Gujr" typeface="Nirmala UI" />
+            <s:font script="Guru" typeface="Nirmala UI" />
+            <s:font script="Knda" typeface="Nirmala UI" />
+            <s:font script="Khmr" typeface="Khmer UI" />
+            <s:font script="Laoo" typeface="Lao UI" />
+            <s:font script="Mlym" typeface="Nirmala UI" />
+            <s:font script="Mymr" typeface="Myanmar Text" />
+            <s:font script="Orya" typeface="Nirmala UI" />
+            <s:font script="Sinh" typeface="Nirmala UI" />
+            <s:font script="Syrc" typeface="Estrangelo Edessa" />
+            <s:font script="Taml" typeface="Nirmala UI" />
+            <s:font script="Telu" typeface="Nirmala UI" />
+            <s:font script="Thaa" typeface="MV Boli" />
+            <s:font script="Tibt" typeface="Microsoft Himalaya" />
+            <s:font script="Yiii" typeface="Microsoft Yi Baiti" />
+        </s:fontSlot>
+        <s:fontSlot name="body">
+            <s:latin typeface="Segoe UI" />
+            <s:ea typeface="" />
+            <s:cs typeface="Segoe UI" />
+            <s:font script="Arab" typeface="Segoe UI" />
+            <s:font script="Deva" typeface="Nirmala UI" />
+            <s:font script="Grek" typeface="Segoe UI" />
+            <s:font script="Hang" typeface="Malgun Gothic" />
+            <s:font script="Hans" typeface="Microsoft YaHei UI" />
+            <s:font script="Hant" typeface="Microsoft JhengHei UI" />
+            <s:font script="Hebr" typeface="Tahoma" />
+            <s:font script="Hira" typeface="Meiryo UI" />
+            <s:font script="Thai" typeface="Tahoma" />
+            <s:font script="Armn" typeface="Segoe UI" />
+            <s:font script="Beng" typeface="Nirmala UI" />
+            <s:font script="Cher" typeface="Gadugi" />
+            <s:font script="Ethi" typeface="Ebrima" />
+            <s:font script="Geor" typeface="Segoe UI" />
+            <s:font script="Gujr" typeface="Nirmala UI" />
+            <s:font script="Guru" typeface="Nirmala UI" />
+            <s:font script="Knda" typeface="Nirmala UI" />
+            <s:font script="Khmr" typeface="Khmer UI" />
+            <s:font script="Laoo" typeface="Lao UI" />
+            <s:font script="Mlym" typeface="Nirmala UI" />
+            <s:font script="Mymr" typeface="Myanmar Text" />
+            <s:font script="Orya" typeface="Nirmala UI" />
+            <s:font script="Sinh" typeface="Nirmala UI" />
+            <s:font script="Syrc" typeface="Estrangelo Edessa" />
+            <s:font script="Taml" typeface="Nirmala UI" />
+            <s:font script="Telu" typeface="Nirmala UI" />
+            <s:font script="Thaa" typeface="MV Boli" />
+            <s:font script="Tibt" typeface="Microsoft Himalaya" />
+            <s:font script="Yiii" typeface="Microsoft Yi Baiti" />
+        </s:fontSlot>
+        <s:fontSlot name="large-body">
+            <s:latin typeface="Segoe UI Semilight" />
+            <s:ea typeface="" />
+            <s:cs typeface="Segoe UI Semilight" />
+            <s:font script="Arab" typeface="Segoe UI Semilight" />
+            <s:font script="Deva" typeface="Nirmala UI" />
+            <s:font script="Grek" typeface="Segoe UI Semilight" />
+            <s:font script="Hang" typeface="Malgun Gothic" />
+            <s:font script="Hans" typeface="Microsoft YaHei UI" />
+            <s:font script="Hant" typeface="Microsoft JhengHei UI" />
+            <s:font script="Hebr" typeface="Tahoma" />
+            <s:font script="Hira" typeface="Meiryo UI" />
+            <s:font script="Thai" typeface="Tahoma" />
+            <s:font script="Armn" typeface="Segoe UI Semilight" />
+            <s:font script="Beng" typeface="Nirmala UI" />
+            <s:font script="Cher" typeface="Gadugi" />
+            <s:font script="Ethi" typeface="Ebrima" />
+            <s:font script="Geor" typeface="Segoe UI Semilight" />
+            <s:font script="Gujr" typeface="Nirmala UI" />
+            <s:font script="Guru" typeface="Nirmala UI" />
+            <s:font script="Knda" typeface="Nirmala UI" />
+            <s:font script="Khmr" typeface="Khmer UI" />
+            <s:font script="Laoo" typeface="Lao UI" />
+            <s:font script="Mlym" typeface="Nirmala UI" />
+            <s:font script="Mymr" typeface="Myanmar Text" />
+            <s:font script="Orya" typeface="Nirmala UI" />
+            <s:font script="Sinh" typeface="Nirmala UI" />
+            <s:font script="Syrc" typeface="Estrangelo Edessa" />
+            <s:font script="Taml" typeface="Nirmala UI" />
+            <s:font script="Telu" typeface="Nirmala UI" />
+            <s:font script="Thaa" typeface="MV Boli" />
+            <s:font script="Tibt" typeface="Microsoft Himalaya" />
+            <s:font script="Yiii" typeface="Microsoft Yi Baiti" />
+        </s:fontSlot>
+    </s:fontSlots>
+</s:fontScheme>

@@ -1,0 +1,35 @@
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <CustomAction
+        Id="TermStoreManagement"
+        GroupId="SiteAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ApplyThemeAndBorder"
+        Sequence="200"
+        Title="$Resources:osrvcore,TaxonomyManagerEntryPoint;"
+        Description="$Resources:osrvcore,TaxonomyManagerEntryPointTooltip;">
+        <UrlAction
+            Url="_layouts/15/termstoremanager.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="HubUrlLinks"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb"
+        Sequence="200"
+        Title="$Resources:osrvcore,TaxonomyHubUrlLinks;"
+        Description="$Resources:osrvcore,TaxonomyHubUrlLinksDescription;">
+        <UrlAction
+            Url="_layouts/15/contenttypesyndicationhubs.aspx" />
+    </CustomAction>
+     <CustomAction 
+        Id="ListMetadataColSettings"
+        GroupId="Permissions"
+        Location="Microsoft.SharePoint.ListEdit"
+        Rights="ManageLists"
+        Sequence="100" 
+        Title="$Resources:osrvcore, metadatacolsettings_link_title;">
+            <UrlAction Url="_layouts/15/metadatacolsettings.aspx?List={ListId}" />
+    </CustomAction>
+</Elements>

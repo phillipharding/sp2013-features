@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">    
+
+	<Field ID="{7FC844FC-573D-11E0-B6F9-4DEBDED72085}"
+		Name="EduCommunity"
+		DisplayName="$Resources:eduserver,IDS_EduCommunityFieldTitle"
+		Group="Education"
+		Type="Lookup"
+		Overwrite="TRUE"
+		List="Self"
+		ShowField="EduEntityId"
+		Hidden="TRUE">
+	</Field>
+
+    <Field ID="{B570DFC9-83CC-46E5-B0BE-3903A7520900}"
+        Name="EduParent"
+        DisplayName="$Resources:eduserver,IDS_EduParentFieldTitle"
+        Group="Education"
+        Type="Lookup"
+        Indexed="TRUE"
+        Overwrite="TRUE"
+        List="Self"
+        ShowField="EduEntityId"
+        Hidden="TRUE">
+    </Field>
+
+	<Field ID="{D5BA510E-5BDC-11E0-AF99-12DEDFD72085}"
+		Name="EduAssignmentFormat"
+		DisplayName="$Resources:eduserver,IDS_EduAssignmentFormatFieldTitle"
+		Group="Education"
+		Type="Integer">
+	</Field>
+
+	<Field ID="{057553D0-F1D9-11DF-B83F-6BFFDED72085}"
+		Name="EduAssignmentType"
+		DisplayName="$Resources:eduserver,IDS_EduAssignmentTypeFieldTitle"
+		Group="Education"
+		Type="Integer">
+	</Field>
+
+	<Field ID="{D84D2420-2B0B-11E0-9FB4-BD40DFD72085}"
+		Name="EduEvent"
+		DisplayName="$Resources:eduserver,IDS_EduEventFieldTitle"
+		Group="Education"
+		Type="Lookup"
+		Overwrite="TRUE"
+		List="Self"
+		ShowField="EduEntityId"
+		Hidden="TRUE">
+	</Field>
+
+	<Field ID="{6878D89C-0289-11E0-B67F-63F3DFD72085}"
+		Name="EduAssignmentStatus"
+		DisplayName="$Resources:eduserver,IDS_EduAssignmentStatusFieldTitle"
+		Group="Education"
+		Type="Integer">
+	</Field>
+
+	<Field ID="{79945C82-0289-11E0-A448-64F3DFD72085}"
+		Name="EduIsSubmissionRequired"
+		DisplayName="$Resources:eduserver,IDS_EduIsSubmissionRequiredFieldTitle"
+		Group="Education"
+		Type="Boolean">
+	</Field>
+
+	<Field ID="{850826DE-0289-11E0-B828-6AF3DFD72085}"
+		Name="EduMaximumScore"
+		DisplayName="$Resources:eduserver,IDS_EduMaximumScoreFieldTitle"
+		Group="Education"
+		Type="Integer">
+	</Field>
+
+	<Field ID="{8EFE940C-0289-11E0-B4ED-84F3DFD72085}"
+		Name="EduAssignedAssignmentStatus"
+		DisplayName="$Resources:eduserver,IDS_EduAssignedAssignmentStatusFieldTitle"
+		Group="Education"
+		Type="Integer">
+	</Field>
+
+	<Field ID="{DBA7EF4C-7A10-11E1-AB73-11324924019B}"
+		Name="EduGradingStatus"
+		DisplayName="$Resources:eduserver,IDS_EduGradingStatusFieldTitle"
+		Group="Education"
+		Type="Integer">
+	</Field>
+
+    <Field ID="{BBB18327-AC9D-4269-87F7-F4C518A02665}"
+      Name="EduAssignedToUid"
+      DisplayName="$Resources:eduserver,IDS_EduAssignedToUidFieldTitle"
+      Group="Education"
+      Type="Text"
+      Indexed="TRUE">
+    </Field>
+
+	<Field ID="{AB058A8E-0289-11E0-A43C-87F3DFD72085}"
+		Name="EduDocumentType"
+		DisplayName="$Resources:eduserver,IDS_EduDocumentTypeFieldTitle"
+		Group="Education"
+		Type="Text"
+		Hidden="TRUE">
+	</Field>
+
+	<Field ID="{53CF4719-10FA-4ba1-9ECF-1130B28AE66A}"
+		Name="EduDocumentCategory"
+		DisplayName="$Resources:eduserver,IDS_EduDocumentCategoryFieldTitle"
+		Group="Education"
+		Type="Choice"
+		FillInChoice="TRUE">
+		<CHOICES>
+			<CHOICE>$Resources:eduserver,IDS_EduChoiceLectureNotes</CHOICE>
+			<CHOICE>$Resources:eduserver,IDS_EduChoiceReadings</CHOICE>
+			<CHOICE>$Resources:eduserver,IDS_EduChoiceStudyGuides</CHOICE>
+			<CHOICE>$Resources:eduserver,IDS_EduChoiceHandouts</CHOICE>
+			<CHOICE>$Resources:eduserver,IDS_EduChoiceUncategorized</CHOICE>
+		</CHOICES>
+		<Default>$Resources:eduserver,IDS_EduChoiceUncategorized</Default>
+	</Field>
+
+	<Field ID="{8CB73124-1871-11E0-8F55-A3DDDFD72085}"
+		Name="EduEventCategory"
+		DisplayName="$Resources:eduserver,IDS_EduEventCategoryFieldTitle"
+		Group="Education"
+		Type="Text">
+	</Field>
+
+	<Field ID="{6C61ED2C-7D9A-11E0-B9DC-DF5A4824019B}"
+		Name="EduSchedule"
+		DisplayName="$Resources:eduserver,IDS_EduScheduleFieldTitle"
+		Group="Education"
+		Type="Lookup"
+		List="Self"
+		ShowField="EduEntityId">
+	</Field>
+
+	<Field ID="{56F0D49E-185F-11E0-BC7E-B3CBDFD72085}"
+		Name="EduIsOnline"
+		DisplayName="$Resources:eduserver,IDS_EduIsOnlineFieldTitle"
+		Group="Education"
+		Type="Boolean">
+	</Field>
+
+	<Field ID="{EF94F5F0-1935-11E0-B43A-683FDFD72085}"
+		Name="EduScore"
+		DisplayName="$Resources:eduserver,IDS_EduScoreFieldTitle"
+		Group="Education"
+		Type="Text">
+	</Field>
+
+	<Field ID="{6CF0AE24-3E0F-49a2-B5C2-4CE87106A0C3}"
+		Name="EduNumericScore"
+		DisplayName="$Resources:eduserver,IDS_EduNumericScoreFieldTitle"
+		Group="Education"
+		Type="Number">
+	</Field>
+
+	<Field ID="{9CFA443B-3B6A-416d-A3A7-3AA84EFC5C3D}"
+		Name="EduAssignmentGradeFormat"
+		DisplayName="$Resources:eduserver,IDS_EduAssignmentGradeFormatFieldTitle"
+		Group="Education"
+		Type="Integer">
+	</Field>
+
+	<Field ID="{A53D5FBE-5A4F-11E0-9844-C54ADFD72085}"
+		Name="EduWeight"
+		DisplayName="$Resources:eduserver,IDS_EduWeightFieldTitle"
+		Group="Education"
+		Type="Number">
+	</Field>
+
+	<Field ID="{E4B49028-571F-11E0-AA88-3853E0D72085}"
+		Name="EduParentLesson"
+		DisplayName="$Resources:eduserver,IDS_EduParentLessonFieldTitle"
+		Group="Education"
+		Type="Lookup"
+		List="Self"
+		ShowField="EduEntityId">
+	</Field>
+
+	<Field ID="{7A7E4630-5A4F-11E0-9BE9-8E4ADFD72085}"
+		Name="EduAssignmentCategory"
+		DisplayName="$Resources:eduserver,IDS_EduAssignmentCategoryFieldTitle"
+		Group="Education"
+		Type="Lookup"
+		Overwrite="TRUE"
+		List="Self"
+		ShowField="EduEntityId">
+	</Field>
+
+	<Field ID="{FE1DB8CA-5B14-11E0-8473-08DADED72085}"
+		Name="EduAttendees"
+		DisplayName="$Resources:eduserver,IDS_EduAttendeesFieldTitle"
+		Group="Education"
+		Type="Note">
+	</Field>
+
+	<Field ID="{0B6898CE-5B15-11E0-A27D-18DADED72085}"
+		Name="EduIsRecorded"
+		DisplayName="$Resources:eduserver,IDS_EduIsRecordedFieldTitle"
+		Group="Education"
+		Type="Boolean">
+	</Field>
+
+	<Field ID="{1C0CA472-5B15-11E0-8A48-20DADED72085}"
+		Name="EduRecordingUrl"
+		DisplayName="$Resources:eduserver,IDS_EduRecordingUrlFieldTitle"
+		Group="Education"
+		Type="URL">
+	</Field>
+
+	<Field ID="{35FAC904-5B15-11E0-9E2E-41DADED72085}"
+		Name="EduConferenceId"
+		DisplayName="$Resources:eduserver,IDS_EduConferenceIdFieldTitle"
+		Group="Education"
+		Type="Text">
+	</Field>
+
+	<Field ID="{861DE858-DD23-4371-AFBB-0C113E1A9400}"
+		Name="EduConferenceData"
+		DisplayName="$Resources:eduserver,IDS_EduConferenceDataFieldTitle"
+		Group="Education"
+		Type="Note">
+	</Field>
+
+	<Field ID="{3AD6757C-5B15-11E0-85E0-42DADED72085}"
+		Name="EduConferenceUrl"
+		DisplayName="$Resources:eduserver,IDS_EduConferenceUrlFieldTitle"
+		Group="Education"
+		Type="URL">
+	</Field>
+
+	<Field ID="{86B4253E-5BDD-11E0-A51B-48DFDFD72085}"
+		Name="EduSubmissionDate"
+		DisplayName="$Resources:eduserver,IDS_EduSubmissionDateFieldTitle"
+		Group="Education"
+		Type="DateTime">
+	</Field>
+
+	<Field ID="{B10EB0D9-14BB-4884-AEC5-656ADFD4F373}"
+		Name="EduIsSubmitted"
+		DisplayName="$Resources:eduserver,IDS_EduIsSubmittedFieldTitle"
+		Group="Education"
+		Type="Boolean">
+	</Field>
+
+	<Field ID="{50F1A420-71BE-11E0-968D-2FDA4824019B}"
+		Name="EduSequence"
+		DisplayName="$Resources:eduserver,IDS_EduSequenceFieldTitle"
+		Group="Education"
+		Type="Text"
+		Hidden="TRUE">
+	</Field>
+
+    <Field ID="{43B85D85-55CB-4F25-835D-90CA7388F655}"
+        Name="EduOrder"
+        DisplayName="$Resources:eduserver,IDS_EduOrderFieldTitle"
+        Group="Education"
+        Type="Integer"
+        Hidden="TRUE" />
+
+	<Field ID="{A3FCD032-6350-49ac-9E09-4151FFD240B8}"
+		Name="EduAssignedUsers"
+		DisplayName="$Resources:eduserver,IDS_EduAssignedUsersFieldTitle"
+		Group="Education"
+		Type="Note">
+	</Field>
+
+	<Field ID="{51EBF7CA-314E-4330-ADD3-E25F4114E958}"
+		Name="EduQuizId"
+		DisplayName="$Resources:eduserver,IDS_EduQuizIdFieldTitle"
+		Group="Education"
+		Type="Text">
+	</Field>
+
+	<Field ID="{56229A83-9737-465d-A649-EE7831E30EC1}"
+		Name="EduRelatedDocument"
+		DisplayName="$Resources:eduserver,IDS_EduRelatedDocumentFieldTitle"
+		Group="Education"
+		Type="Text">
+	</Field>
+
+	<Field ID="{B6C42F16-5187-450d-950E-17000E83F47F}"
+		Name="EduDocumentLink"
+		DisplayName="$Resources:eduserver,IDS_EduDocumentLinkFieldTitle"
+		Group="Education"
+		Type="Lookup"
+		List="Self"
+		ShowField="EduEntityId"
+		Hidden="TRUE">
+	</Field>
+
+	<Field ID="{B1D6D079-53CE-4C1B-8499-E054F730EEF8}"
+		Name="EduIsVisibleToStudent"
+		DisplayName="$Resources:eduserver,IDS_EduIsVisibleToStudentFieldTitle"
+		Description="$Resources:eduserver,IDS_EduIsVisibleToStudentFieldDescription"
+		Group="Education"
+		Type="Boolean">
+		<Default>1</Default>
+	</Field>
+
+	<Field ID="{099D52C8-5BEC-11E0-A6CC-BBF0DFD72085}"
+		Name="EduIsRefreshing"
+		DisplayName="$Resources:eduserver,IDS_EduIsRefreshingFieldTitle"
+		Group="Education"
+		Type="Boolean">
+	</Field>
+
+	<Field ID="{04CD5464-5BEC-11E0-9C73-BAF0DFD72085}"
+		Name="EduLastRefreshStartDate"
+		DisplayName="$Resources:eduserver,IDS_EduLastRefreshStartDateFieldTitle"
+		Group="Education"
+		Type="DateTime">
+	</Field>
+
+	<Field ID="{1D6ED372-6AB9-11E0-8DE5-EE154924019B}"
+		Name="EduLastRefreshEndDate"
+		DisplayName="$Resources:eduserver,IDS_EduLastRefreshEndDateFieldTitle"
+		Group="Education"
+		Type="DateTime">
+	</Field>
+
+	<Field ID="{5DA25DE2-7676-11E0-A4DA-E3924824019B}"
+		Name="EduCourseId"
+		DisplayName="EduCourseId"
+		Group="Education"
+		Type="Text">
+	</Field>
+
+	<Field ID="{B739B0B4-7674-11E0-8555-B8904824019B}"
+		Name="EduAssignmentNew"
+		DisplayName="EduAssignmentNew"
+		Group="Education"
+		Type="Boolean">
+	</Field>
+
+	<Field ID="{21F74452-7675-11E0-A4BF-36914824019B}"
+		Name="EduAssignmentDueChanged"
+		DisplayName="EduAssignmentDueChanged"
+		Group="Education"
+		Type="Boolean">
+	</Field>
+
+	<Field ID="{3E9DB9F6-7675-11E0-87B4-4B914824019B}"
+		Name="EduAssignmentCancelled"
+		DisplayName="EduAssignmentCancelled"
+		Group="Education"
+		Type="Boolean">
+	</Field>
+
+	<Field ID="{42585A9C-7675-11E0-A4DD-5B914824019B}"
+		Name="EduAssignmentContentChanged"
+		DisplayName="EduAssignmentContentChanged"
+		Group="Education"
+		Type="Boolean">
+	</Field>
+
+	<Field ID="{524CC186-7675-11E0-A80D-62914824019B}"
+		Name="EduAssignmentGradePublished"
+		DisplayName="EduAssignmentGradePublished"
+		Group="Education"
+		Type="Boolean">
+	</Field>
+
+	<Field ID="{54341990-7675-11E0-904F-63914824019B}"
+		Name="EduAssignmentGradeChanged"
+		DisplayName="EduAssignmentGradeChanged"
+		Group="Education"
+		Type="Boolean">
+	</Field>
+
+	<Field ID="{2590A576-7676-11E0-AAB9-9B924824019B}"
+		Name="EduCourseAdded"
+		DisplayName="EduCourseAdded"
+		Group="Education"
+		Type="Boolean">
+	</Field>
+
+	<Field ID="{277D3E30-7676-11E0-894B-9C924824019B}"
+		Name="EduCourseRemoved"
+		DisplayName="EduCourseRemoved"
+		Group="Education"
+		Type="Boolean">
+	</Field>
+
+	<Field ID="{1AF26B96-76A2-11E0-9181-B7C94824019B}"
+		Name="EduCourseGradeChanged"
+		DisplayName="EduCourseGradeChanged"
+		Group="Education"
+		Type="Boolean">
+	</Field>
+
+	<Field ID="{397DE558-7676-11E0-A70B-A0924824019B}"
+		Name="EduCourseGradePublished"
+		DisplayName="EduCourseGradePublished"
+		Group="Education"
+		Type="Boolean">
+	</Field>
+
+	<Field ID="{3C291C32-7676-11E0-8386-C8924824019B}"
+		Name="EduCourseComplete"
+		DisplayName="EduCourseComplete"
+		Group="Education"
+		Type="Boolean">
+	</Field>
+
+	<Field ID="{9CCE6534-86B7-48DE-B3A6-7312FA2BC182}"
+		Name="EduAnnouncementPosted"
+		DisplayName="EduAnnouncementPosted"
+		Group="Education"
+		Type="Boolean">
+	</Field>
+
+	<Field ID="{2FAFF94B-B1EA-4AA4-928C-4A15D4E86CBC}"
+		Name="EduOptOut"
+		DisplayName="EduOptOut"
+		Group="Education"
+		Type="Boolean">
+	</Field>
+
+	<Field ID="{9DF0F67D-C437-418C-A031-8DC1F2E969F2}"
+        Name="EduAssignmentSubmissionProgress"
+        DisplayName="$Resources:eduserver,IDS_EduAssignmentSubmissionProgressFieldTitle"
+        Group="Education"
+        Type="LookupMulti"
+        Mult="TRUE" 
+        List="Self"
+        ShowField="EduAssignedAssignmentStatus"
+        Hidden="TRUE" />
+
+	<ContentType ID="0x01002DC5EE125BEC11E093DEDDF0DFD72085"
+		Name="$Resources:eduserver,IDS_EduUserCacheSettingsContentTypeName"
+		Group="Education">
+		<FieldRefs>
+			<FieldRef ID="{099D52C8-5BEC-11E0-A6CC-BBF0DFD72085}" Name="EduIsRefreshing"/>
+			<FieldRef ID="{1D6ED372-6AB9-11E0-8DE5-EE154924019B}" Name="EduLastRefreshEndDate"/>
+			<FieldRef ID="{04CD5464-5BEC-11E0-9C73-BAF0DFD72085}" Name="EduLastRefreshStartDate"/>
+		</FieldRefs>
+	</ContentType>
+
+	<ContentType ID="0x010063C2F478ACC511DFB869B5BFDFD7208512"
+		Name="$Resources:eduserver,IDS_EduCommunityEntityContentTypeName"
+		Group="Education">
+		<FieldRefs>
+			<FieldRef ID="{7FC844FC-573D-11E0-B6F9-4DEBDED72085}" Name="EduCommunity"/>
+		</FieldRefs>
+	</ContentType>
+
+	<ContentType ID="0x010063C2F478ACC511DFB869B5BFDFD720851251"
+		Name="$Resources:eduserver,IDS_EduLessonContentTypeName"
+		Group="Education">
+		<FieldRefs>
+			<FieldRef ID="{8032C34C-81E3-11E0-97EF-E40B4924019B}" Name="EduDefaultFolderUrl"/>
+            <FieldRef ID="{B570DFC9-83CC-46E5-B0BE-3903A7520900}" Name="EduParent"/>
+			<FieldRef ID="{50F1A420-71BE-11E0-968D-2FDA4824019B}" Name="EduSequence"/>
+            <FieldRef ID="{43B85D85-55CB-4F25-835D-90CA7388F655}" Name="EduOrder"/>
+		</FieldRefs>
+	</ContentType>
+
+	<ContentType ID="0x010063C2F478ACC511DFB869B5BFDFD720851252"
+		Name="$Resources:eduserver,IDS_EduAssignmentContentTypeName"
+		Group="Education">
+		<FieldRefs>
+			<FieldRef ID="{A3FCD032-6350-49ac-9E09-4151FFD240B8}" Name="EduAssignedUsers"/>
+			<FieldRef ID="{7A7E4630-5A4F-11E0-9BE9-8E4ADFD72085}" Name="EduAssignmentCategory"/>
+			<FieldRef ID="{D5BA510E-5BDC-11E0-AF99-12DEDFD72085}" Name="EduAssignmentFormat"/>
+			<FieldRef ID="{9CFA443B-3B6A-416d-A3A7-3AA84EFC5C3D}" Name="EduAssignmentGradeFormat"/>
+			<FieldRef ID="{6878D89C-0289-11E0-B67F-63F3DFD72085}" Name="EduAssignmentStatus"/>
+			<FieldRef ID="{057553D0-F1D9-11DF-B83F-6BFFDED72085}" Name="EduAssignmentType"/>
+			<FieldRef ID="{8032C34C-81E3-11E0-97EF-E40B4924019B}" Name="EduDefaultFolderUrl"/>
+			<FieldRef ID="{79945C82-0289-11E0-A448-64F3DFD72085}" Name="EduIsSubmissionRequired"/>
+			<FieldRef ID="{B570DFC9-83CC-46E5-B0BE-3903A7520900}" Name="EduParent"/>
+			<FieldRef ID="{850826DE-0289-11E0-B828-6AF3DFD72085}" Name="EduMaximumScore"/>
+			<FieldRef ID="{51EBF7CA-314E-4330-ADD3-E25F4114E958}" Name="EduQuizId"/>
+			<FieldRef ID="{50F1A420-71BE-11E0-968D-2FDA4824019B}" Name="EduSequence"/>
+            <FieldRef ID="{43B85D85-55CB-4F25-835D-90CA7388F655}" Name="EduOrder"/>
+			<FieldRef ID="{2684F9F2-54BE-429F-BA06-76754FC056BF}" Name="EndDate"/>
+			<FieldRef ID="{64CD368D-2F95-4BFC-A1F9-8D4324ECB007}" Name="StartDate"/>
+			<FieldRef ID="{9DF0F67D-C437-418C-A031-8DC1F2E969F2}" Name="EduAssignmentSubmissionProgress"/>
+		</FieldRefs>
+	</ContentType>
+
+	<ContentType ID="0x010063C2F478ACC511DFB869B5BFDFD720851254"
+		Name="$Resources:eduserver,IDS_EduSubmissionContentTypeName"
+		Group="Education">
+		<FieldRefs>
+            <FieldRef ID="{B570DFC9-83CC-46E5-B0BE-3903A7520900}" Name="EduParent"/>
+			<FieldRef ID="{8032C34C-81E3-11E0-97EF-E40B4924019B}" Name="EduDefaultFolderUrl"/>
+			<FieldRef ID="{86B4253E-5BDD-11E0-A51B-48DFDFD72085}" Name="EduSubmissionDate"/>
+			<FieldRef ID="{B10EB0D9-14BB-4884-AEC5-656ADFD4F373}" Name="EduIsSubmitted"/>
+		</FieldRefs>
+	</ContentType>
+
+	<ContentType ID="0x010063C2F478ACC511DFB869B5BFDFD720851255"
+		Name="$Resources:eduserver,IDS_EduGradeContentTypeName"
+		Group="Education">
+		<FieldRefs>
+			<FieldRef ID="{8032C34C-81E3-11E0-97EF-E40B4924019B}" Name="EduDefaultFolderUrl"/>
+			<FieldRef ID="{6CF0AE24-3E0F-49a2-B5C2-4CE87106A0C3}" Name="EduNumericScore"/>
+			<FieldRef ID="{EF94F5F0-1935-11E0-B43A-683FDFD72085}" Name="EduScore"/>
+		</FieldRefs>
+	</ContentType>
+
+	<ContentType ID="0x010063C2F478ACC511DFB869B5BFDFD720851256"
+		Name="$Resources:eduserver,IDS_EduAssignmentCategoryContentTypeName"
+		Group="Education">
+		<FieldRefs>
+			<FieldRef ID="{A53D5FBE-5A4F-11E0-9844-C54ADFD72085}" Name="EduWeight"/>
+		</FieldRefs>
+	</ContentType>
+
+	<ContentType ID="0x0101008DA831F4ACC511DF8205CDBFDFD7208552"
+		Name="$Resources:eduserver,IDS_EduFeedbackDocumentContentTypeName"
+		Group="Education">
+		<FieldRefs>
+			<FieldRef ID="{56229A83-9737-465d-A649-EE7831E30EC1}" Name="EduRelatedDocument"/>
+            <FieldRef ID="{B570DFC9-83CC-46E5-B0BE-3903A7520900}" Name="EduParent"/>
+			<FieldRef ID="{50F1A420-71BE-11E0-968D-2FDA4824019B}" Name="EduSequence"/>
+            <FieldRef ID="{43B85D85-55CB-4F25-835D-90CA7388F655}" Name="EduOrder"/>
+		</FieldRefs>
+	</ContentType>
+
+	<ContentType ID="0x0101008DA831F4ACC511DF8205CDBFDFD7208554"
+		Name="$Resources:eduserver,IDS_EduAcademicDocumentContentTypeName"
+		Group="Education">
+		<FieldRefs>
+			<FieldRef ID="{AB058A8E-0289-11E0-A43C-87F3DFD72085}" Name="EduDocumentType"/>
+			<FieldRef ID="{53CF4719-10FA-4ba1-9ECF-1130B28AE66A}" Name="EduDocumentCategory"/>
+			<FieldRef ID="{D84D2420-2B0B-11E0-9FB4-BD40DFD72085}" Name="EduEvent"/>
+            <FieldRef ID="{B570DFC9-83CC-46E5-B0BE-3903A7520900}" Name="EduParent"/>
+			<FieldRef ID="{50F1A420-71BE-11E0-968D-2FDA4824019B}" Name="EduSequence"/>
+            <FieldRef ID="{43B85D85-55CB-4F25-835D-90CA7388F655}" Name="EduOrder"/>
+			<FieldRef ID="{B1D6D079-53CE-4C1B-8499-E054F730EEF8}" Name="EduIsVisibleToStudent"/>
+		</FieldRefs>
+	</ContentType>
+
+	<ContentType ID="0x01010A00256755BE5C9E11E09BD59556DFD7208551"
+		Name="$Resources:eduserver,IDS_EduDocumentLinkContentTypeName"
+		Group="Education">
+		<FieldRefs>
+			<FieldRef ID="{AB058A8E-0289-11E0-A43C-87F3DFD72085}" Name="EduDocumentType"/>
+			<FieldRef ID="{53CF4719-10FA-4ba1-9ECF-1130B28AE66A}" Name="EduDocumentCategory"/>
+			<FieldRef ID="{D84D2420-2B0B-11E0-9FB4-BD40DFD72085}" Name="EduEvent"/>
+            <FieldRef ID="{B570DFC9-83CC-46E5-B0BE-3903A7520900}" Name="EduParent"/>
+			<FieldRef ID="{50F1A420-71BE-11E0-968D-2FDA4824019B}" Name="EduSequence"/>
+            <FieldRef ID="{43B85D85-55CB-4F25-835D-90CA7388F655}" Name="EduOrder"/>
+			<FieldRef ID="{B1D6D079-53CE-4C1B-8499-E054F730EEF8}" Name="EduIsVisibleToStudent"/>
+		</FieldRefs>
+		<DocumentTemplate TargetName="/_layouts/15/NewLink.aspx" />
+	</ContentType>
+
+	<ContentType ID="0x01010A00256755BE5C9E11E09BD59556DFD7208552"
+		Name="$Resources:eduserver,IDS_EduDocumentLookupContentTypeName"
+		Group="Education">
+		<FieldRefs>
+			<FieldRef ID="{B6C42F16-5187-450d-950E-17000E83F47F}" Name="EduDocumentLink"/>
+			<FieldRef ID="{53CF4719-10FA-4ba1-9ECF-1130B28AE66A}" Name="EduDocumentCategory"/>
+			<FieldRef ID="{AB058A8E-0289-11E0-A43C-87F3DFD72085}" Name="EduDocumentType"/>
+			<FieldRef ID="{D84D2420-2B0B-11E0-9FB4-BD40DFD72085}" Name="EduEvent"/>
+            <FieldRef ID="{B570DFC9-83CC-46E5-B0BE-3903A7520900}" Name="EduParent"/>
+			<FieldRef ID="{50F1A420-71BE-11E0-968D-2FDA4824019B}" Name="EduSequence"/>
+            <FieldRef ID="{43B85D85-55CB-4F25-835D-90CA7388F655}" Name="EduOrder"/>
+			<FieldRef ID="{B1D6D079-53CE-4C1B-8499-E054F730EEF8}" Name="EduIsVisibleToStudent"/>
+		</FieldRefs>
+	</ContentType>
+
+	<ContentType ID="0x0102001E41EAB6184B11E0AE8631B7DFD7208553"
+		Name="$Resources:eduserver,IDS_EduEventContentTypeName"
+		Group="Education">
+		<FieldRefs>
+			<FieldRef ID="{8032C34C-81E3-11E0-97EF-E40B4924019B}" Name="EduDefaultFolderUrl"/>
+			<FieldRef ID="{8CB73124-1871-11E0-8F55-A3DDDFD72085}" Name="EduEventCategory"/>
+            <FieldRef ID="{B570DFC9-83CC-46E5-B0BE-3903A7520900}" Name="EduParent"/>
+			<FieldRef ID="{6C61ED2C-7D9A-11E0-B9DC-DF5A4824019B}" Name="EduSchedule"/>
+		</FieldRefs>
+	</ContentType>
+
+	<ContentType ID="0x0102001E41EAB6184B11E0AE8631B7DFD7208554"
+		Name="$Resources:eduserver,IDS_EduEventScheduleContentTypeName"
+		Group="Education">
+		<FieldRefs>
+			<FieldRef ID="{8CB73124-1871-11E0-8F55-A3DDDFD72085}" Name="EduEventCategory"/>
+		</FieldRefs>
+	</ContentType>
+
+	<ContentType ID="0x0108005CBC699A566E11E0A996B888DFD7208551"
+		Name="$Resources:eduserver,IDS_EduAssignedAssignmentContentTypeName"
+		Group="Education">
+		<FieldRefs>
+			<FieldRef ID="{8EFE940C-0289-11E0-B4ED-84F3DFD72085}" Name="EduAssignedAssignmentStatus"/>
+			<FieldRef ID="{DBA7EF4C-7A10-11E1-AB73-11324924019B}" Name="EduGradingStatus"/>
+            <FieldRef ID="{BBB18327-AC9D-4269-87F7-F4C518A02665}" Name="EduAssignedToUid"/>
+            <FieldRef ID="{B570DFC9-83CC-46E5-B0BE-3903A7520900}" Name="EduParent"/>
+			<FieldRef ID="{8032C34C-81E3-11E0-97EF-E40B4924019B}" Name="EduDefaultFolderUrl"/>
+			<FieldRef ID="{2684F9F2-54BE-429F-BA06-76754FC056BF}" Name="EndDate"/>
+		</FieldRefs>
+	</ContentType>
+
+	<ContentType ID="0x012000324696745BE411E0A68280E7DFD7208551"
+		Name="$Resources:eduserver,IDS_EduDocumentFolderContentTypeName"
+		Group="Education">
+		<FieldRefs>
+			<FieldRef ID="{AB058A8E-0289-11E0-A43C-87F3DFD72085}" Name="EduDocumentType"/>
+			<FieldRef ID="{53CF4719-10FA-4ba1-9ECF-1130B28AE66A}" Name="EduDocumentCategory"/>
+			<FieldRef ID="{D84D2420-2B0B-11E0-9FB4-BD40DFD72085}" Name="EduEvent"/>
+            <FieldRef ID="{B570DFC9-83CC-46E5-B0BE-3903A7520900}" Name="EduParent"/>
+			<FieldRef ID="{50F1A420-71BE-11E0-968D-2FDA4824019B}" Name="EduSequence"/>
+            <FieldRef ID="{43B85D85-55CB-4F25-835D-90CA7388F655}" Name="EduOrder"/>
+			<FieldRef ID="{B1D6D079-53CE-4C1B-8499-E054F730EEF8}" Name="EduIsVisibleToStudent"/>
+		</FieldRefs>
+	</ContentType>
+
+	<ContentType ID="0x010063C2F478ACC511DFB869B5BFDFD72085125551"
+		Name="$Resources:eduserver,IDS_EduAssignmentGradeContentTypeName"
+		Group="Education">
+		<FieldRefs>
+			<FieldRef ID="{B570DFC9-83CC-46E5-B0BE-3903A7520900}" Name="EduParent"/>
+			<FieldRef ID="{A51B7058-E929-11DF-9BF4-01BCDFD72085}" Name="EduUser"/>
+			<FieldRef ID="{B96E512F-7F9D-47EF-940B-30B120CC5520}" Name="EduUserUid"/>
+		</FieldRefs>
+	</ContentType>
+
+	<ContentType ID="0x010063C2F478ACC511DFB869B5BFDFD72085125552"
+		Name="$Resources:eduserver,IDS_EduCourseGradeContentTypeName"
+		Group="Education">
+		<FieldRefs>
+			<FieldRef ID="{A51B7058-E929-11DF-9BF4-01BCDFD72085}" Name="EduUser"/>
+			<FieldRef ID="{B96E512F-7F9D-47EF-940B-30B120CC5520}" Name="EduUserUid"/>
+		</FieldRefs>
+	</ContentType>
+
+	<ContentType ID="0x0102001E41EAB6184B11E0AE8631B7DFD720855351"
+		Name="$Resources:eduserver,IDS_EduMeetingContentTypeName"
+		Group="Education">
+		<FieldRefs>
+			<FieldRef ID="{FE1DB8CA-5B14-11E0-8473-08DADED72085}" Name="EduAttendees"/>
+			<FieldRef ID="{861DE858-DD23-4371-AFBB-0C113E1A9400}" Name="EduConferenceData"/>
+			<FieldRef ID="{35FAC904-5B15-11E0-9E2E-41DADED72085}" Name="EduConferenceId"/>
+			<FieldRef ID="{3AD6757C-5B15-11E0-85E0-42DADED72085}" Name="EduConferenceUrl"/>
+			<FieldRef ID="{56F0D49E-185F-11E0-BC7E-B3CBDFD72085}" Name="EduIsOnline"/>
+			<FieldRef ID="{0B6898CE-5B15-11E0-A27D-18DADED72085}" Name="EduIsRecorded"/>
+			<FieldRef ID="{1C0CA472-5B15-11E0-8A48-20DADED72085}" Name="EduRecordingUrl"/>
+		</FieldRefs>
+	</ContentType>
+
+	<ContentType ID="0x0102001E41EAB6184B11E0AE8631B7DFD720855451"
+		Name="$Resources:eduserver,IDS_EduMeetingScheduleContentTypeName"
+		Group="Education">
+		<FieldRefs>
+			<FieldRef ID="{FE1DB8CA-5B14-11E0-8473-08DADED72085}" Name="EduAttendees"/>
+		</FieldRefs>
+	</ContentType>
+
+	<ContentType ID="0x01007BAC4D2A767611E08CFA17934824019B"
+		Name="User Settings"
+		Group="Education">
+		<FieldRefs>
+			<FieldRef ID="{9CCE6534-86B7-48DE-B3A6-7312FA2BC182}" Name="EduAnnouncementPosted"/>
+			<FieldRef ID="{3E9DB9F6-7675-11E0-87B4-4B914824019B}" Name="EduAssignmentCancelled"/>
+			<FieldRef ID="{42585A9C-7675-11E0-A4DD-5B914824019B}" Name="EduAssignmentContentChanged"/>
+			<FieldRef ID="{21F74452-7675-11E0-A4BF-36914824019B}" Name="EduAssignmentDueChanged"/>
+			<FieldRef ID="{54341990-7675-11E0-904F-63914824019B}" Name="EduAssignmentGradeChanged"/>
+			<FieldRef ID="{524CC186-7675-11E0-A80D-62914824019B}" Name="EduAssignmentGradePublished"/>
+			<FieldRef ID="{B739B0B4-7674-11E0-8555-B8904824019B}" Name="EduAssignmentNew"/>
+			<FieldRef ID="{2590A576-7676-11E0-AAB9-9B924824019B}" Name="EduCourseAdded"/>
+			<FieldRef ID="{3C291C32-7676-11E0-8386-C8924824019B}" Name="EduCourseComplete"/>
+			<FieldRef ID="{1AF26B96-76A2-11E0-9181-B7C94824019B}" Name="EduCourseGradeChanged"/>
+			<FieldRef ID="{397DE558-7676-11E0-A70B-A0924824019B}" Name="EduCourseGradePublished"/>
+			<FieldRef ID="{277D3E30-7676-11E0-894B-9C924824019B}" Name="EduCourseRemoved"/>
+			<FieldRef ID="{5DA25DE2-7676-11E0-A4DA-E3924824019B}" Name="EduCourseId"/>
+			<FieldRef ID="{2FAFF94B-B1EA-4AA4-928C-4A15D4E86CBC}" Name="EduOptOut"/>
+		</FieldRefs>
+		<XmlDocuments>
+			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
+				<Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>UserSettingsUpdated</Name>
+						<Type>ItemUpdated</Type>
+						<SequenceNumber>10000</SequenceNumber>
+						<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.Education.EventReceivers.UserSettingsEventReceiver</Class>
+						<Data></Data>
+						<Synchronization>Asynchronous</Synchronization>
+					</Receiver>
+					<Receiver>
+						<Name>UserSettingsAdded</Name>
+						<Type>ItemAdded</Type>
+						<SequenceNumber>10000</SequenceNumber>
+						<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.Education.EventReceivers.UserSettingsEventReceiver</Class>
+						<Data></Data>
+						<Synchronization>Asynchronous</Synchronization>
+					</Receiver>
+				</Receivers>
+			</XmlDocument>
+		</XmlDocuments>
+	</ContentType>
+
+	<ContentType ID="0x0104008A4047FFBB374E0A8932030BE989F795"
+		Name="$Resources:eduserver,IDS_EduAnnouncementContentTypeName"
+		Group="Education">
+		<FieldRefs>
+			<FieldRef ID="{3F155110-A6A2-4D70-926C-94648101F0E8}" Name="Description"/>
+			<FieldRef ID="{4AF405B2-ABF9-11DF-8CBE-D8ADDFD72085}" Name="EduAny"/>
+			<FieldRef ID="{7FC844FC-573D-11E0-B6F9-4DEBDED72085}" Name="EduCommunity"/>
+			<FieldRef ID="{FE29016D-C747-40BC-B001-C1ABBBA6EE04}" Name="EduEntityId"/>
+	</FieldRefs>
+	</ContentType>
+
+	<ListTemplate Name="eduentity"
+		Type="10051"
+		BaseType="0"
+		Hidden="TRUE"
+		OnQuickLaunch="TRUE"
+		SecurityBits="11"
+		DisplayName="Entities"
+		Description="Entities"
+		Image="/_layouts/15/images/itgen.png?rev=23" />
+
+	<ListInstance Title="$Resources:eduserver,IDS_EduEntitiesListName"
+		Description="$Resources:eduserver,IDS_EduEntitiesListDescription"
+		TemplateType="10051"
+		Id="6F34EEBC-72E3-11E0-B241-8AB74824019B"
+		Url="$Resources:core,lists_Folder;/$Resources:eduserver,IDS_EduEntitiesListName"
+		OnQuickLaunch="FALSE"
+		Hidden="TRUE"
+		RootWebOnly="FALSE">
+   		<Data>
+			<Rows>
+				<Row>
+					<Field Name="ContentTypeId">0x01002DC5EE125BEC11E093DEDDF0DFD72085</Field>
+					<Field Name="Title">Default</Field>
+					<Field Name="EduIsRefreshing">FALSE</Field>
+				</Row>
+			</Rows>
+		</Data>
+    </ListInstance>
+
+	<Receivers ListUrl="$Resources:core,lists_Folder;/$Resources:eduserver,IDS_EduEntitiesListName">
+		<Receiver>
+			<Name>AListItemAdding</Name>
+			<Type>ItemAdding</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.UserCacheEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>AListItemUpdating</Name>
+			<Type>ItemUpdating</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.UserCacheEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>AListItemDeleting</Name>
+			<Type>ItemDeleting</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.UserCacheEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+	</Receivers>
+
+	<ListTemplate Name="eduusersetting"
+		Type="10060"
+		BaseType="0"
+		Hidden="TRUE"
+		OnQuickLaunch="TRUE"
+		SecurityBits="11"
+		DisplayName="User Settings"
+		Description="User Settings"
+		Image="/_layouts/15/images/itgen.png?rev=23" />
+
+	<ListInstance Title="User Settings"
+		Description="User settings."
+		TemplateType="10060"
+		Id="C5CB1B38-7677-11E0-80DF-C2944824019B"
+		Url="$Resources:core,lists_Folder;/User Settings"
+		OnQuickLaunch="FALSE"
+		Hidden="TRUE"
+		RootWebOnly="FALSE" />
+
+</Elements>
+

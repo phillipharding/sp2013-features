@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module
+        Name="WebPartPopulation"
+        List="113"
+        Url="_catalogs/wp"
+        RootWebOnly="TRUE">
+        <File Url="GettingStartedWithAppCatalogSite.webpart" IgnoreIfAlreadyExists="TRUE" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:core,AuthoringWebPartGroup;"></Property>
+        </File>
+    </Module>
+</Elements>

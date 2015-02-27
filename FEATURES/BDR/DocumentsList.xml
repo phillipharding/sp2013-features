@@ -1,0 +1,81 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListInstance
+        FeatureId="00BFEA71-E717-4E80-AA17-D0C71B360101"
+        TemplateType="101"
+        Title="$Resources:dlccore,DocumentsTitle;"
+        Url="$Resources:dlccore,DocumentsFolder;"
+        OnQuickLaunch="TRUE"
+        QuickLaunchUrl="$Resources:dlccore,DocumentsFolder;/Forms/AllItems.aspx">
+    </ListInstance>
+    <Module Name="Default" Url="" Path="">
+        <File Url="default.aspx" NavBarHome="True" IgnoreIfAlreadyExists="True">
+            <AllUsersWebPart WebPartZoneID="Top_Left" WebPartOrder="1">
+                <![CDATA[
+                    <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                        <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                        <TypeName>Microsoft.SharePoint.WebPartPages.ContentEditorWebPart</TypeName>
+                        <ChromeType>None</ChromeType>
+                        <FrameType>None</FrameType>
+                        <ChromeState>Minimized</ChromeState>
+                        <Content xmlns="http://schemas.microsoft.com/WebPart/v2/ContentEditor">
+                          &lt;table &gt;
+                              &lt;tr&gt;
+                                  &lt;td vAlign="top"&gt;
+                                      &lt;img alt="" src="/_layouts/15/images/doccenter.png?rev=23" &gt;
+                                  &lt;/td&gt;
+                                  &lt;td vAlign="top"&gt;
+                                      &lt;h1&gt;$Resources:dlccore, DocumentCenterWelcome;&lt;/h1&gt;
+                                      &lt;p&gt;$Resources:dlccore, DocumentCenterWelcomeDesc;&lt;/p&gt;
+                                  &lt;/td&gt;
+                              &lt;/tr&gt;
+                          &lt;/table&gt;
+                        </Content>
+                    </WebPart> 
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="Top_Right" WebPartOrder="5">
+                <![CDATA[
+                    <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                        <Assembly>Microsoft.Office.DocumentManagement, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                        <TypeName>Microsoft.Office.Server.WebControls.DocIdSearchWebPart</TypeName>
+                        <Title>$Resources:dlccore,DocIdLookupWebpart_Title</Title>
+                        <FrameType>None</FrameType>
+                        <ChromeType>None</ChromeType>                            
+                        <CatalogIconImageUrl>/_layouts/15/images/msimagel.gif</CatalogIconImageUrl>
+                        <DisplayText></DisplayText>
+                    </WebPart>    
+                ]]> 
+            </AllUsersWebPart>            
+            <AllUsersWebPart WebPartZoneID="Top_Right" WebPartOrder="2">
+                <![CDATA[
+                    <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                        <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                        <TypeName>Microsoft.SharePoint.WebPartPages.ContentEditorWebPart</TypeName>
+                        <FrameType>None</FrameType>
+                        <ChromeType>None</ChromeType>
+                        <Content xmlns="http://schemas.microsoft.com/WebPart/v2/ContentEditor">                            
+                           &lt;div &gt;                             
+                               &lt;button onclick="javascript:OpenNewFormUrl('$Resources:dlccore,DocumentsFolder;/Forms/upload.aspx');return false;"&gt;
+                                   &lt;nobr&gt;&lt;img style="vertical-align:middle" alt="$Resources:dlccore, DocumentCenterUploadDoc;" src="/_layouts/15/images/uploaddoc.png?rev=23"&gt;&lt;/img&gt;&amp;nbsp;&lt;span&gt;$Resources:dlccore, DocumentCenterUploadDoc;&lt;/span&gt;&lt;/nobr&gt;
+                               &lt;/button&gt;                             
+                           &lt;/div&gt;
+                        </Content>
+                    </WebPart>
+                ]]>
+            </AllUsersWebPart>                         
+            <NavBarPage Name="$Resources:core,nav_Home;" ID="1002" Position="Start"/>
+            <NavBarPage Name="$Resources:core,nav_Home;" ID="0" Position="Start"/>
+        </File>            
+    </Module>
+    <!-- SiteActions -->
+    <CustomAction
+        Id="BDRObjectCacheSettings"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        RequireSiteAdministrator="true"
+        Sequence="200"
+        Title="$Resources:cmscore,Settings_Publishing_SiteCollectionObjectCache;"
+        Description="$Resources:cmscore,SiteSettings_SiteCollectionObjectCache_Tooltip;">
+        <UrlAction Url="_layouts/15/objectcachesettings.aspx" />
+    </CustomAction>
+</Elements>

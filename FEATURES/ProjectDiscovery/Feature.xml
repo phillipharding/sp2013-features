@@ -1,0 +1,11 @@
+<Feature Id="4446EE9B-227C-4f1a-897D-D78ECDD6A824"
+    Title="$Resources:spscore,ProjectDiscovery_Feature_Title;"
+    Description="$Resources:spscore,ProjectDiscovery_Feature_Description;"
+    Version="15.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="webparts.xml"/>
+    </ElementManifests>
+</Feature>

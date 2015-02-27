@@ -1,0 +1,90 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Feature  Id="D3F51BE2-38A8-4e44-BA84-940D35BE1566"
+          Title="$Resources:cmscore,PublishingLayouts_Feature_Title;"
+          Description="$Resources:cmscore,PublishingLayouts_Feature_Description;"
+          Version="15.0.8.0"
+          Scope="Site"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          ReceiverAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Publishing.PublishingLayoutsFeatureHandler"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ProvisionedFiles.xml"/>
+        <ElementManifest Location="ProvisionedFiles2.xml"/>
+        <ElementManifest Location="ProvisionedFiles4.xml"/>
+        <ElementManifest Location="ProvisionedFiles5.xml"/>
+        <ElementManifest Location="ProvisionedFiles6.xml"/>
+        <ElementManifest Location="ProvisionedFiles7.xml"/>
+        <ElementManifest Location="ProvisionedFiles8.xml"/>
+        <ElementManifest Location="ProvisionedUI.xml"/>
+        <ElementManifest Location="SearchBoundPageLayouts.xml" />
+    </ElementManifests>
+    <UpgradeActions
+          ReceiverAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Publishing.PublishingLayoutsFeatureHandler">
+        <VersionRange EndVersion="14.0.1.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="ProvisionedFiles2.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="14.0.3.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="ProvisionedFiles4.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="14.0.4.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="ProvisionedFiles5.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="14.0.4.0">
+          <AddContentTypeField ContentTypeId="0x0101000F1C8B9E0EB4BE489F09807B2C53288F" FieldId="{8e334549-c2bd-4110-9f61-672971be6504}" PushDown="TRUE" />
+        </VersionRange>        
+        <VersionRange EndVersion="15.0.1.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="SearchBoundPageLayouts.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.2.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="ProvisionedFiles6.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.5.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="ProvisionedFiles7.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.0.0" EndVersion="15.0.3.0">
+          <CustomUpgradeAction Name="RemovePageLayoutGroupEventReceivers" />
+        </VersionRange>        
+        <VersionRange EndVersion="15.0.6.0">
+            <CustomUpgradeAction Name="RemoveRollupPages" />
+        </VersionRange> 
+        <VersionRange EndVersion="15.0.7.0">
+          <MapFile FromPath="Features\PublishingLayouts\MasterPages\Aurora.master" ToPath="Features\PublishingLayouts\MasterPages\unsupported.master"/>
+          <MapFile FromPath="Features\PublishingLayouts\MasterPages\Band.master" ToPath="Features\PublishingLayouts\MasterPages\unsupported.master"/>
+          <MapFile FromPath="Features\PublishingLayouts\MasterPages\BlackBand.master" ToPath="Features\PublishingLayouts\MasterPages\unsupported.master"/>
+          <MapFile FromPath="Features\PublishingLayouts\MasterPages\BlackSingleLevel.master" ToPath="Features\PublishingLayouts\MasterPages\unsupported.master"/>
+          <MapFile FromPath="Features\PublishingLayouts\MasterPages\BlackVertical.master" ToPath="Features\PublishingLayouts\MasterPages\unsupported.master"/>
+          <MapFile FromPath="Features\PublishingLayouts\MasterPages\BlueBand.master" ToPath="Features\PublishingLayouts\MasterPages\unsupported.master"/>
+          <MapFile FromPath="Features\PublishingLayouts\MasterPages\BlueGlassBand.master" ToPath="Features\PublishingLayouts\MasterPages\unsupported.master"/>
+          <MapFile FromPath="Features\PublishingLayouts\MasterPages\BlueTabs.master" ToPath="Features\PublishingLayouts\MasterPages\unsupported.master"/>
+          <MapFile FromPath="Features\PublishingLayouts\MasterPages\BlueVertical.master" ToPath="Features\PublishingLayouts\MasterPages\unsupported.master"/>
+          <MapFile FromPath="Features\PublishingLayouts\MasterPages\GlassBand.master" ToPath="Features\PublishingLayouts\MasterPages\unsupported.master"/>
+          <MapFile FromPath="Features\PublishingLayouts\MasterPages\SingleLevel.master" ToPath="Features\PublishingLayouts\MasterPages\unsupported.master"/>
+          <MapFile FromPath="Features\PublishingLayouts\MasterPages\Suburb.master" ToPath="Features\PublishingLayouts\MasterPages\unsupported.master"/>
+          <MapFile FromPath="Features\PublishingLayouts\MasterPages\Tabs.master" ToPath="Features\PublishingLayouts\MasterPages\unsupported.master"/>
+          <MapFile FromPath="Features\PublishingLayouts\MasterPages\Twilight.master" ToPath="Features\PublishingLayouts\MasterPages\unsupported.master"/>
+          <MapFile FromPath="Features\PublishingLayouts\MasterPages\OrangeSingleLevel.master" ToPath="Features\PublishingLayouts\MasterPages\unsupported.master"/>
+          <MapFile FromPath="Features\PublishingLayouts\MasterPages\Vertical.master" ToPath="Features\PublishingLayouts\MasterPages\unsupported.master"/>
+        </VersionRange>       
+        <VersionRange EndVersion="15.0.8.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="ProvisionedFiles8.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

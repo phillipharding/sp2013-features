@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListInstance
+           FeatureId="E47705EC-268D-4C41-AA4E-0D8727985EBC"
+           Title="$Resources:Microsoft.Office.Server.Search,SearchConfigList_Name"
+           Description="$Resources:Microsoft.Office.Server.Search,SearchConfigList_Desc"
+           Id="1001"
+           TemplateType="101"
+           Url="Lists/SearchConfig">
+    </ListInstance>
+</Elements>

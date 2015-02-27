@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="57FF23FC-EC05-4dd8-B7ED-D93FAA7C795D"
+          Title="$Resources:Core,SiteHelpFeatureTitle"
+          Description="$Resources:Core,SiteHelpFeatureDescription" 
+          Version="1.0.0.0"
+          Scope="Site"
+          Hidden="FALSE"
+          ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Help.SiteHelpFeatureReceiver"
+          DefaultResourceFile="Core"         
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+      <ActivationDependencies>
+        <!-- HelpLibrary Feature -->
+        <ActivationDependency FeatureId="071DE60D-4B02-4076-B001-B456E93146FE"/>        
+    </ActivationDependencies>
+</Feature>

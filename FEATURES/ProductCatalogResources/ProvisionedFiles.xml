@@ -1,0 +1,12 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="PCPageLayouts" Url="_catalogs/masterpage" Path="PageLayouts" RootWebOnly="TRUE">
+        <File Url="ProductCatalog.aspx" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:cmscore,IB_PC_ProductCatalog_DefaultLayoutTitle;" />
+            <Property Name="MasterPageDescription" Value="$Resources:cmscore,IB_PC_ProductCatalog_DefaultLayoutDescription;" />
+            <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+            <Property Name="PublishingAssociatedContentType" Value=";#$Resources:cmscore,contenttype_welcomepage_name;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF390064DEA0F50FC8C147B0B6EA0636C4A7D4;#" /> 
+        </File>
+    </Module>
+</Elements>

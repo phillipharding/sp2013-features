@@ -1,0 +1,32 @@
+<Feature  Id="C88C4FF1-DBF5-4649-AD9F-C6C426EBCBF5"
+		Title="$Resources:SupportFeatureTitle;"
+		Description="$Resources:SupportFeatureDescription;"
+		Version="14.0.0.0"
+		Scope="Site"
+		Hidden="TRUE"
+		SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+		DefaultResourceFile="ipfscore"
+		ReceiverClass="Microsoft.Office.InfoPath.Server.Administration.UserListFeatureReceiver"
+		ReceiverAssembly="Microsoft.Office.InfoPath.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+		xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<ElementManifests>
+		<ElementManifest Location="FormTemplateFields.xml" /> 
+		<ElementManifest Location="FormTemplateCT.xml" />
+		<ElementManifest Location="FormSettings.xml" />
+		<ElementManifest Location="FormServerEcbEntry\EcbEntry.xml" />
+		<ElementManifest Location="IPFSWebParts.xml" /> 
+		<ElementManifest Location="IPFSRibbon.xml" />
+	</ElementManifests>
+
+	<UpgradeActions>
+		<VersionRange EndVersion="14.0.0.0">
+			<ApplyElementManifests>
+				<ElementManifest Location="FormSettings.xml" />
+				<ElementManifest Location="IPFSWebParts.xml" /> 
+				<ElementManifest Location="IPFSRibbon.xml" />
+			</ApplyElementManifests>
+		</VersionRange>
+	</UpgradeActions>
+
+</Feature>

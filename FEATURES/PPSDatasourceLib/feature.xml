@@ -1,0 +1,13 @@
+<Feature Id="5D220570-DF17-405e-B42D-994237D60EBF" 
+    Title="$Resources:ppsma,DataSource_ContentList_Title"
+    Description="$Resources:ppsma,DataSource_ContentList_Description"
+    Version="15.0.0.0"
+    Scope="Web"
+    SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+    Hidden="TRUE"
+    DefaultResourceFile="core"    
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\PPSDataSourceLibrary.xml" />
+    </ElementManifests>
+</Feature>

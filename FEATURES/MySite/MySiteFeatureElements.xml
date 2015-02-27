@@ -1,0 +1,7 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Control Id="ProfileRedirection" Sequence="100" ControlSrc="~/_controltemplates/mysiteredirection.ascx"/>
+	<Control Id="MobileSiteNavigationLink1" Sequence="100"
+		ControlClass="Microsoft.SharePoint.Portal.MobileControls.MobileMySitePageNavigation"
+		ControlAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+	</Control>
+</Elements>

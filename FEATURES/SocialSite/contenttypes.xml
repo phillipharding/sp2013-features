@@ -1,0 +1,75 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ContentType ID="0x010027FC2137D8DE4b00A40E14346D070D52"
+                 Name="$Resources:spscore,SiteMembership_ContentTypeName;"
+                 Description="$Resources:spscore,SiteMembership_ContentTypeDescription;" 
+                 Group="$Resources:spscore,CommunityContentTypesGroupName;" 
+                 Version="0">
+        <FieldRefs>
+            <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" Required="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" Hidden="TRUE"/> <!-- Title -->            
+            <FieldRef ID="{9E1A17BC-4B5A-498b-A0F7-E5D1ED43C349}" Name="Member"/>
+            <FieldRef ID="{DA25725F-5B12-4b26-8ED0-E560E4A87FFF}" Name="MemberStatus"/>
+            <FieldRef ID="{E236652C-CF8F-4917-8BAA-30FFCCCFB7E8}" Name="MemberStatusInt"/>
+        </FieldRefs>
+        <XmlDocuments>
+            <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+                <FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+                    <Display>ListForm</Display>
+                    <Edit>ListForm</Edit>
+                    <New>ListForm</New>
+                </FormTemplates>
+            </XmlDocument>
+        </XmlDocuments>
+    </ContentType>
+
+    <ContentType ID="0x010027FC2137D8DE4b00A40E14346D070D5201"
+                 Name="$Resources:spscore,CommunityMember_ContentTypeName;"
+                 Description="$Resources:spscore,CommunityMember_ContentTypeDescription;"  
+                 Group="$Resources:spscore,CommunityContentTypesGroupName;" 
+                 Version="0">
+        <FieldRefs>
+            <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" Required="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" Hidden="TRUE"/> <!-- Title -->            
+            <FieldRef ID="{CBA948C8-9E42-44a0-B9F1-A39D91B28CB0}" Name="LastActivity"/>
+            <FieldRef ID="{1BC74B88-BB81-4be5-961D-9CF75DFE0911}" Name="NumberOfBestResponses"/>
+            <FieldRef ID="{178D4AF1-459B-4f61-BB41-B347986EE37B}" Name="NumberOfDiscussions"/>
+            <FieldRef ID="{51139F59-4BAC-45cb-8047-9C633EED1DB0}" Name="NumberOfReplies"/>
+            <FieldRef ID="{5E74A6C4-8771-4273-88FC-682CF6839410}" Name="NumberOfRepliesToReachNextLevel"/>
+            <FieldRef ID="{EDD35D15-AE36-4b1b-91AA-0E288DF6C612}" Name="ReputationScore"/>
+            <FieldRef ID="{501C11BE-6DBF-4e6d-B322-B1882DA0C8C0}" Name="HideReputation"/>
+        </FieldRefs>
+        <XmlDocuments>
+            <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+                <FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+                    <Display>ListForm</Display>
+                    <Edit>ListForm</Edit>
+                    <New>ListForm</New>
+                </FormTemplates>
+            </XmlDocument>
+        </XmlDocuments>
+    </ContentType>
+
+    <ContentType ID="0x010019ACC57FBA4146afA4C822E719824BED"
+                 Name="$Resources:spscore,CategoriesList_CategoryContentTypeName;" 
+                 Description="$Resources:spscore,CategoriesList_CategoryContentTypeDescription;" 
+                 Group="$Resources:spscore,CommunityContentTypesGroupName;" 
+                 Version="0"
+                 Inherits="TRUE">
+        <FieldRefs>
+            <FieldRef ID="{AB065451-14D6-485a-88C3-414C908D50D3}" Name="CategoryDescription"/>
+            <FieldRef ID="{7CC564F1-ABD4-4a2f-BD9B-85DD1D071BDC}" Name="CategoryImage"/>
+            <FieldRef ID="{D2264183-83DC-4d08-A57D-974686192D7A}" Name="TopicCount"/>
+            <FieldRef ID="{D42630F0-0084-4b16-B876-80FE8CF88879}" Name="ReplyCount"/>
+            <FieldRef ID="{497E00DF-75C8-4e61-AC5C-A143B6A0FDDC}" Name="LastPostBy"/>
+            <FieldRef ID="{539458A6-152C-460f-A915-53722C6EB4A6}" Name="LastPostDate"/>
+        </FieldRefs>
+        <XmlDocuments>
+            <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+                <FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+                    <Display>ListForm</Display>
+                    <Edit>ListForm</Edit>
+                    <New>ListForm</New>
+                </FormTemplates>
+            </XmlDocument>
+        </XmlDocuments>
+    </ContentType>
+</Elements>
+

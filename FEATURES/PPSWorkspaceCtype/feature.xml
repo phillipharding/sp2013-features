@@ -1,0 +1,20 @@
+<Feature  Id="F45834C7-54F6-48db-B7E4-A35FA470FC9B" 
+          Title="$Resources:ppsma,ContentType_PerformancePoint_Title;"
+          Description="$Resources:ppsma,ContentType_PerformancePoint_Description;"
+          Version="15.0.0.0"
+          Scope="Site"
+          SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="fields.xml" />
+        <ElementManifest Location="contenttype_base.xml" />
+        <ElementManifest Location="contenttype_dashboard.xml" />
+        <ElementManifest Location="contenttype_filter.xml" />
+        <ElementManifest Location="contenttype_indicator.xml" />
+        <ElementManifest Location="contenttype_kpi.xml" />
+        <ElementManifest Location="contenttype_report.xml" />
+        <ElementManifest Location="contenttype_scorecard.xml" />
+    </ElementManifests>
+</Feature>

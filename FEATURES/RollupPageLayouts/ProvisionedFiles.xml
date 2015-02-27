@@ -1,0 +1,182 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="Rollup Pages" Url="_catalogs/masterpage" Path="PageLayouts" RootWebOnly="TRUE">
+        <File Url="RollupPage.aspx" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:cmscore,RollupPages_RollupPageLayout_Title;" />
+            <Property Name="MasterPageDescription" Value="$Resources:cmscore,RollupPages_RollupPageLayout_Description;" />
+            <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+            <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/ArticleBodyOnly.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/ArticleBodyOnly.png" />
+            <Property Name="PublishingAssociatedContentType" Value=";#$Resources:cmscore,contenttype_rolluppage_name;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF3900F90C0E4ADA724E15A72BF399783D53CB;#"/>
+            <AllUsersWebPart WebPartZoneID="TopLeft" WebPartOrder="1"><![CDATA[
+                <webParts>
+                    <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                        <metaData>
+                            <type name="Microsoft.SharePoint.Taxonomy.TermProperty,Microsoft.SharePoint.Taxonomy,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                            <importErrorMessage>$Resources:cmscore,WebPartImportError;</importErrorMessage>
+                        </metaData>
+                        <data>
+                            <properties>
+                                <property name="Title" type="string">$Resources:cmscore,RollupPages_TermPropertyTopicImage_Title;</property>
+                                <property name="Description" type="string"></property>
+                                <property name="ChromeType" type="chrometype">None</property>
+                                <property name="ChromeState" type="chromestate">Normal</property>
+                                <property name="Property" type="string">TopicImage</property>
+                            </properties>
+                        </data>
+                    </webPart>
+                </webParts>]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="TopRight" WebPartOrder="1"><![CDATA[
+                <webParts>
+                    <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                        <metaData>
+                            <type name="Microsoft.SharePoint.Taxonomy.TermProperty,Microsoft.SharePoint.Taxonomy,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                            <importErrorMessage>$Resources:cmscore,WebPartImportError;</importErrorMessage>
+                        </metaData>
+                        <data>
+                            <properties>
+                                <property name="Title" type="string">$Resources:cmscore,RollupPages_TermPropertyName_Title;</property>
+                                <property name="Description" type="string"></property>
+                                <property name="ChromeType" type="chrometype">None</property>
+                                <property name="ChromeState" type="chromestate">Normal</property>
+                                <property name="Property" type="string">Name</property>
+                            </properties>
+                        </data>
+                    </webPart>
+                </webParts>]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="TopRight" WebPartOrder="2"><![CDATA[
+                <webParts>
+                    <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                        <metaData>
+                            <type name="Microsoft.SharePoint.Taxonomy.TermProperty,Microsoft.SharePoint.Taxonomy,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                            <importErrorMessage>$Resources:cmscore,WebPartImportError;</importErrorMessage>
+                        </metaData>
+                        <data>
+                            <properties>
+                                <property name="Title" type="string">$Resources:cmscore,RollupPages_TermPropertyDescription_Title;</property>
+                                <property name="Description" type="string"></property>
+                                <property name="ChromeType" type="chrometype">None</property>
+                                <property name="ChromeState" type="chromestate">Normal</property>
+                                <property name="Property" type="string">Description</property>
+                            </properties>
+                        </data>
+                    </webPart>
+                </webParts>]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="Body" WebPartOrder="1"><![CDATA[
+                <webParts>
+                    <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                        <metaData>
+                            <type name="Microsoft.Office.Server.Search.WebControls.ContentBySearchWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                            <importErrorMessage>$Resources:cmscore,WebPartImportError;</importErrorMessage>
+                        </metaData>
+                        <data>
+                            <properties>
+                                <property name="Title" type="string">$Resources:cmscore,RollupPages_CBS_Title;</property>
+                                <property name="Description" type="string"></property>
+                                <property name="ChromeType" type="chrometype">None</property>
+                                <property name="ChromeState" type="chromestate">Normal</property>
+                                <property name="QueryGroupName" type="string">TopicQueryGroup</property>
+                                <property name="ResultsPerPage" type="int">20</property>
+                                <property name="SelectedPropertiesJson" type="string">["PictureURL", "Rank", "Write", "Description", "Path", "Title", "PictureThumbnailURL", "MetaDataAuthor", "HitHighlightedSummary", "HitHighlightedProperties"]</property>
+                                <property name="DataProviderJSON" type="string">{"QueryGroupName":"TopicQueryGroup","QueryTemplate":"owstaxIdMetadataAllTagsInfo:{Topic}","FallbackSort":[{"p":"Write","d":1}],"FallbackSortJson":"[{\"p\":\"Write\",\"d\":1}]","Properties":"{\"{Scope}\":\"{Site.URL}\",\"Tag\":\"{Term}\"}"}</property>
+                                <property name="RenderTemplateId" type="string">Control_List</property>
+                                <property name="ItemTemplateId" type="string">Item_Picture3Lines</property>
+                            </properties>
+                        </data>
+                    </webPart>
+                </webParts>]]>
+            </AllUsersWebPart>
+        </File>
+        <File Url="CuratedRollupPage.aspx" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:cmscore,RollupPages_CuratedRollupPageLayout_Title;" />
+            <Property Name="MasterPageDescription" Value="$Resources:cmscore,RollupPages_CuratedRollupPageLayout_Description;" />
+            <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+            <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/ArticleBodyOnly.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/ArticleBodyOnly.png" />
+            <Property Name="PublishingAssociatedContentType" Value=";#$Resources:cmscore,contenttype_rolluppage_name;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF3900F90C0E4ADA724E15A72BF399783D53CB;#"/>
+            <AllUsersWebPart WebPartZoneID="TopLeft" WebPartOrder="1"><![CDATA[
+                <webParts>
+                    <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                        <metaData>
+                            <type name="Microsoft.SharePoint.Taxonomy.TermProperty,Microsoft.SharePoint.Taxonomy,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                            <importErrorMessage>$Resources:cmscore,WebPartImportError;</importErrorMessage>
+                        </metaData>
+                        <data>
+                            <properties>
+                                <property name="Title" type="string">Topic Image</property>
+                                <property name="Description" type="string"></property>
+                                <property name="ChromeType" type="chrometype">None</property>
+                                <property name="ChromeState" type="chromestate">Normal</property>
+                                <property name="Property" type="string">TopicImage</property>
+                            </properties>
+                        </data>
+                    </webPart>
+                </webParts>]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="TopRight" WebPartOrder="1"><![CDATA[
+                <webParts>
+                    <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                        <metaData>
+                            <type name="Microsoft.SharePoint.Taxonomy.TermProperty,Microsoft.SharePoint.Taxonomy,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                            <importErrorMessage>$Resources:cmscore,WebPartImportError;</importErrorMessage>
+                        </metaData>
+                        <data>
+                            <properties>
+                                <property name="Title" type="string">$Resources:cmscore,RollupPages_TermPropertyName_Title;</property>
+                                <property name="Description" type="string"></property>
+                                <property name="ChromeType" type="chrometype">None</property>
+                                <property name="ChromeState" type="chromestate">Normal</property>
+                                <property name="Property" type="string">Name</property>
+                            </properties>
+                        </data>
+                    </webPart>
+                </webParts>]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="TopRight" WebPartOrder="2"><![CDATA[
+                <webParts>
+                    <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                        <metaData>
+                            <type name="Microsoft.SharePoint.Taxonomy.TermProperty,Microsoft.SharePoint.Taxonomy,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                            <importErrorMessage>$Resources:cmscore,WebPartImportError;</importErrorMessage>
+                        </metaData>
+                        <data>
+                            <properties>
+                                <property name="Title" type="string">$Resources:cmscore,RollupPages_TermPropertyDescription_Title;</property>
+                                <property name="Description" type="string"></property>
+                                <property name="ChromeType" type="chrometype">None</property>
+                                <property name="ChromeState" type="chromestate">Normal</property>
+                                <property name="Property" type="string">Description</property>
+                            </properties>
+                        </data>
+                    </webPart>
+                </webParts>]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="Body" WebPartOrder="1"><![CDATA[
+                <webParts>
+                    <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                        <metaData>
+                            <type name="Microsoft.Office.Server.Search.WebControls.ContentBySearchWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                            <importErrorMessage>$Resources:cmscore,WebPartImportError;</importErrorMessage>
+                        </metaData>
+                        <data>
+                            <properties>
+                                <property name="Title" type="string">$Resources:cmscore,RollupPages_CBS_Title;</property>
+                                <property name="Description" type="string"></property>
+                                <property name="ChromeType" type="chrometype">None</property>
+                                <property name="ChromeState" type="chromestate">Normal</property>
+                                <property name="QueryGroupName" type="string">TopicQueryGroup</property>
+                                <property name="ResultsPerPage" type="int">20</property>
+                                <property name="SelectedPropertiesJson" type="string">["PictureURL", "Rank", "Write", "Description", "Path", "Title", "PictureThumbnailURL", "MetaDataAuthor", "HitHighlightedSummary", "HitHighlightedProperties"]</property>
+                                <property name="DataProviderJSON" type="string">{"QueryGroupName":"TopicQueryGroup","QueryTemplate":"owstaxIdMetadataAllTagsInfo:{Topic}","FallbackSort":[{"p":"Write","d":1}],"FallbackSortJson":"[{\"p\":\"Write\",\"d\":1}]","Properties":"{\"Scope\":\"{Site.URL}\",\"Tag\":\"{Term}\"}}"}</property>
+                                <property name="RenderTemplateId" type="string">~sitecollection/_catalogs/masterpage/Display Templates/Content Web Parts/Control_List.js</property>
+                                <property name="ItemTemplateId" type="string">~sitecollection/_catalogs/masterpage/Display Templates/Content Web Parts/Item_Picture3Lines.js</property>
+                            </properties>
+                        </data>
+                    </webPart>
+                </webParts>]]>
+            </AllUsersWebPart>
+        </File>
+    </Module>
+</Elements>

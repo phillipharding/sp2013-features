@@ -1,0 +1,36 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Control
+        Id="LogoActions"
+        Sequence="100"
+        ControlClass="Microsoft.SharePoint.WebControls.ScriptLink"
+        ControlAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+        <Property Name="Name">AssetPickers.js</Property>
+        <Property Name="LoadAfterUI">true</Property>
+        <Property Name="Defer">true</Property>
+        <Property Name="OnDemand">true</Property>
+        <Property Name="Localizable">false</Property>
+    </Control>
+    <Control
+        Id="LogoActions"
+        Sequence="200"
+        ControlClass="System.Web.UI.WebControls.Literal"
+        ControlAssembly="System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <Property Name="Text"><![CDATA[<span class="ms-commandLink"> | </span>
+<a href="javascript:(function () {
+    EnsureScriptFunc('SP.js', 'SP.Utilities.Utility', function () {
+        EnsureScript('AssetPickers.js', typeof AssetPickerConfig, function () {
+            var c = new AssetPickerConfig('');
+            c.ClientID = 'assetpicker';
+            c.CurrentWebBaseUrl = SP.PageContextInfo.get_webServerRelativeUrl();
+            c.AllowExternalUrls = true;
+            c.ManageHyperlink = false;
+            c.AssetUrlClientID = imgsrc.id;
+            c.ReturnCallback = updateimg;
+            new ImageAsset(imgsrc.value).LaunchModalAssetPicker(c);
+        });
+    });
+}());" class="ms-commandLink">$Resources:cmscore,prjsetng_fromsp</a>]]></Property>
+    </Control>
+</Elements>

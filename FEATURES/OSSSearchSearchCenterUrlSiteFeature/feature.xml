@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Feature Id="7AC8CC56-D28E-41f5-AD04-D95109EB987A"
+    Title="Site collection level Search Center Url Feature"
+    Description="adds the url of search center in the property bag of root web."
+    Version="15.0.1.0"
+    Scope="Site"
+    Hidden="true"
+    ReceiverAssembly="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.Office.Server.Search.Administration.SearchCenterUrlSiteFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <!-- Attention!!! UpgradeActions/VersionRange needs to start with EndVersion of 15.0.2.0 since a custom upgrade action with EndVersion of 15.0.1.0 was removed-->
+</Feature>

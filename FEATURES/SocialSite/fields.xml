@@ -1,0 +1,531 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <!-- Reputation Lookup Fields -->
+
+    <Field 
+        ID="{559F0DEE-4484-4C86-A699-82D122B63717}"
+        Name="AuthorReputationLookup" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" 
+        DisplaceOnUpgrade="TRUE" 
+        Group="_Hidden" 
+        Type="Lookup"
+        List=""
+        Mult="FALSE"
+        DisplayName="$Resources:spscore,ContentReputation_AuthorReputationLookupFieldName;"
+        Hidden="TRUE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE">
+        <FieldRefs>
+            <FieldRef Name="MemberLookup"/>
+        </FieldRefs>
+    </Field>
+    <Field 
+        ID="{0E9D978A-E4BC-4EFB-A214-75FC81BD8096}"
+        Name="AuthorNumOfRepliesLookup" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" 
+        DisplaceOnUpgrade="TRUE" 
+        Group="_Hidden" 
+        Type="Lookup"
+        List=""
+        Mult="FALSE"
+        DisplayName="$Resources:spscore,ContentReputation_AuthorNumOfRepliesLookupFieldName;"
+        Hidden="TRUE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE">
+        <FieldRefs>
+            <FieldRef Name="MemberLookup"/>
+        </FieldRefs>
+    </Field>
+    <Field 
+        ID="{17828E6A-633B-443A-A503-1DB661F1F5F7}"
+        Name="AuthorNumOfPostsLookup" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" 
+        DisplaceOnUpgrade="TRUE" 
+        Group="_Hidden" 
+        Type="Lookup"
+        List=""
+        Mult="FALSE"
+        DisplayName="$Resources:spscore,ContentReputation_AuthorNumOfPostsLookupFieldName;"
+        Hidden="TRUE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE">
+        <FieldRefs>
+            <FieldRef Name="MemberLookup"/>
+        </FieldRefs>
+    </Field>
+    <Field 
+        ID="{EF72EF5D-9920-48F0-B2AF-4E368FEAABC6}"
+        Name="AuthorNumOfBestResponsesLookup" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" 
+        DisplaceOnUpgrade="TRUE" 
+        Group="_Hidden" 
+        Type="Lookup"
+        List=""
+        Mult="FALSE"
+        DisplayName="$Resources:spscore,ContentReputation_AuthorNumOfBestResponsesLookupFieldName;"
+        Hidden="TRUE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE">
+        <FieldRefs>
+            <FieldRef Name="MemberLookup"/>
+        </FieldRefs>
+    </Field>
+    <Field 
+        ID="{5F060E98-3A10-42D0-BAF6-1D60889FC585}"
+        Name="AuthorLastActivityLookup" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" 
+        DisplaceOnUpgrade="TRUE" 
+        Group="_Hidden" 
+        Type="Lookup"
+        List=""
+        Mult="FALSE"
+        DisplayName="$Resources:spscore,ContentReputation_AuthorLastActivityLookupFieldName;"
+        Hidden="TRUE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE">
+        <FieldRefs>
+            <FieldRef Name="MemberLookup"/>
+        </FieldRefs>
+    </Field>
+    <Field 
+        ID="{6AB3E5A0-98F4-442E-8FFF-730E653EA881}"
+        Name="AuthorMemberSinceLookup" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" 
+        DisplaceOnUpgrade="TRUE" 
+        Group="_Hidden" 
+        Type="Lookup"
+        List=""
+        Mult="FALSE"
+        DisplayName="$Resources:spscore,ContentReputation_AuthorMemberSinceLookupFieldName;"
+        Hidden="TRUE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE">
+        <FieldRefs>
+            <FieldRef Name="MemberLookup"/>
+        </FieldRefs>
+    </Field>
+    <Field 
+        ID="{C42AB4DD-EB3A-4DF5-9C80-0BD400520C15}"
+        Name="AuthorMemberStatusIntLookup" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" 
+        DisplaceOnUpgrade="TRUE" 
+        Group="_Hidden" 
+        Type="Lookup"
+        List=""
+        Mult="FALSE"
+        DisplayName="$Resources:spscore,ContentReputation_AuthorMemberStatusIntLookupFieldName;"
+        Hidden="TRUE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE">
+        <FieldRefs>
+            <FieldRef Name="MemberLookup"/>
+        </FieldRefs>
+    </Field>
+
+<!-- Categories Lookup Fields -->
+
+    <Field 
+        ID="{3F44DEE7-B4BA-4E0F-9A4C-84F4420DFAF6}"
+        Name="CategoriesLookup" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" 
+        DisplaceOnUpgrade="TRUE" 
+        Group="_Hidden" 
+        Type="Lookup"
+        List=""
+        Mult="FALSE"
+        ShowField="Title"
+        DisplayName="$Resources:spscore,Categories_CategoriesLookupFieldName;" 
+        Hidden="FALSE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE"/>
+
+<!-- Members Lookup Fields -->
+
+    <Field 
+        ID="{1805E563-22CF-44ed-96F5-58EBB8A6CB80}"
+        Name="MemberLookup" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" 
+        DisplaceOnUpgrade="TRUE" 
+        Group="_Hidden" 
+        Type="Lookup"
+        List=""
+        Mult="FALSE"
+        ShowField="Title"
+        DisplayName="$Resources:spscore,Members_MemberLookupFieldName;" 
+        ReadOnly="TRUE"
+        Hidden="FALSE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE"/>
+
+<!-- Gifted Badges Lookup Fields -->
+
+    <Field
+        ID="{ABE62893-898D-48f9-9A52-3778B420F81C}"
+        Name="GiftedBadgeLookup"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        DisplaceOnUpgrade="TRUE" 
+        Group="_Hidden"
+        Type="Lookup"
+        List=""
+        Mult="FALSE"
+        ShowField="Title"
+        DisplayName="$Resources:spscore,CommunityMembership_GiftedBadgeLookup;"
+        AllowDeletion="FALSE"
+        Sealed="TRUE" />
+
+    <Field
+        ID="{797192BF-C571-4f18-9A85-BE0ACF22DA05}"
+        Name="GiftedBadgeText"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        DisplaceOnUpgrade="TRUE" 
+        Type="Text"
+        DisplayName="$Resources:spscore,CommunityMembership_GiftedBadgeText;"
+        Group="_Hidden"
+        Hidden="TRUE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE" />
+
+<!-- Abuse reports Fields -->
+
+    <Field 
+        ID="{C3FC749D-C4A7-478b-A915-21C1C68F7199}"
+        Name="AbuseReportsCount" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" 
+        DisplaceOnUpgrade="TRUE" 
+        Group="_Hidden" 
+        Type="Number"
+        DisplayName="$Resources:spscore,AbuseReports_CountFieldName;"
+        ReadOnly="TRUE"
+        Indexed="TRUE"
+        Hidden="TRUE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE"/>
+
+    <Field 
+        ID="{69062C99-D89F-4162-BBC5-B1ACF8BFE123}"
+        Name="AbuseReportsLookup" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" 
+        DisplaceOnUpgrade="TRUE" 
+        Group="_Hidden" 
+        Type="Lookup"
+        List=""
+        Mult="TRUE"
+        ShowField="Comments"
+        DisplayName="$Resources:spscore,AbuseReports_LookupFieldName;"
+        ReadOnly="TRUE"
+        Hidden="TRUE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE"/>
+
+    <Field 
+        ID="{CD4DF6FB-0DA8-4ac9-B551-ED4FA6CD88FD}"
+        Name="AbuseReportsReporterLookup" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" 
+        DisplaceOnUpgrade="TRUE" 
+        Group="_Hidden" 
+        Type="Lookup"
+        List=""
+        Mult="TRUE"
+        DisplayName="$Resources:spscore,AbuseReports_ReporterLookupFieldName;"
+        ReadOnly="TRUE"
+        Hidden="TRUE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE">
+        <FieldRefs>
+            <FieldRef Name="AbuseReportsLookup"/>
+        </FieldRefs>
+    </Field>
+
+    <Field 
+        ID="{672D9500-5649-49ae-8166-777F40527874}"
+        Name="AbuseReportsCommentsLookup" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" 
+        DisplaceOnUpgrade="TRUE" 
+        Group="_Hidden" 
+        Type="Lookup"
+        List=""
+        Mult="TRUE"
+        DisplayName="$Resources:spscore,AbuseReports_CommentsLookupFieldName;"
+        ReadOnly="TRUE"
+        Hidden="TRUE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE">
+        <FieldRefs>
+            <FieldRef Name="AbuseReportsLookup"/>
+        </FieldRefs>
+    </Field>
+
+    <Field ID="{4C481E72-F3FA-46d7-98DD-A258C3DF5403}"
+        Name="DiscussionTitleOrBody" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" 
+        DisplaceOnUpgrade="TRUE" 
+        Group="_Hidden" 
+        Type="Computed" 
+        ReadOnly="TRUE" 
+        Hidden="TRUE"
+        Sealed="TRUE"
+        DisplayName="$Resources:spscore,Discussion_TitleOrBody;" 
+        Sortable="FALSE" 
+        AllowDeletion="FALSE"
+        Filterable="FALSE">
+        <FieldRefs>
+            <FieldRef ID="{7662cd2c-f069-4dba-9e35-082cf976e170}" Name="Body"/>
+            <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title"/>
+            <FieldRef ID="{30bb605f-5bae-48fe-b4e3-1f81d9772af9}" Name="FSObjType"/>
+        </FieldRefs>
+        <DisplayPattern>
+            <Switch><Expr><LookupColumn Name="FSObjType"/></Expr>
+               <Case Value="1"><Column Name="Title" HTMLEncode="TRUE"/></Case>
+               <Default><LookupColumn Name="Body" HTMLEncode="TRUE"/></Default>
+           </Switch>
+        </DisplayPattern>
+    </Field>
+
+<!-- Categories List Fields -->
+
+            <Field
+                ID="{AB065451-14D6-485a-88C3-414C908D50D3}"
+                Name="CategoryDescription"
+                DisplayName="$Resources:spscore,CategoriesList_DescFieldName"
+                Type="Text"
+                SourceID="http://schemas.microsoft.com/sharepoint.v3"
+                DisplaceOnUpgrade="TRUE"
+                Hidden="FALSE"
+                Sealed="FALSE"
+                AllowDeletion="FALSE" />
+            <Field
+                ID="{7CC564F1-ABD4-4a2f-BD9B-85DD1D071BDC}"
+                Name="CategoryImage"
+                DisplayName="$Resources:spscore,CategoriesList_ImageFieldName"
+                Type="URL"
+                SourceID="http://schemas.microsoft.com/sharepoint.v3"
+                DisplaceOnUpgrade="TRUE"
+                Hidden="FALSE"
+                Sealed="FALSE"
+                AllowDeletion="FALSE" />
+            <Field
+                ID="{D2264183-83DC-4d08-A57D-974686192D7A}"
+                Name="TopicCount"
+                DisplayName="$Resources:spscore,CategoriesList_TopicCountFieldName"
+                Type="Integer"
+                SourceID="http://schemas.microsoft.com/sharepoint.v3"
+                DisplaceOnUpgrade="TRUE"
+                ReadOnly="TRUE"
+                Hidden="FALSE"
+                Sealed="FALSE"
+                AllowDeletion="FALSE" >
+                <Default>0</Default>
+            </Field>
+            <Field
+                ID="{D42630F0-0084-4b16-B876-80FE8CF88879}"
+                Name="ReplyCount"
+                DisplayName="$Resources:spscore,CategoriesList_ReplyCountFieldName"
+                Type="Integer"
+                SourceID="http://schemas.microsoft.com/sharepoint.v3"
+                DisplaceOnUpgrade="TRUE"
+                ReadOnly="TRUE"
+                Hidden="FALSE"
+                Sealed="FALSE"
+                AllowDeletion="FALSE" >
+                <Default>0</Default>
+            </Field>
+            <Field
+                ID="{497E00DF-75C8-4e61-AC5C-A143B6A0FDDC}"
+                Name="LastPostBy"
+                DisplayName="$Resources:spscore,CategoriesList_LastPostByFieldName"
+                Type="User"
+                List="UserInfo"
+                SourceID="http://schemas.microsoft.com/sharepoint.v3"
+                DisplaceOnUpgrade="TRUE"
+                ReadOnly="TRUE"
+                Hidden="FALSE"
+                Sealed="FALSE"
+                AllowDeletion="FALSE" />
+            <Field
+                ID="{539458A6-152C-460f-A915-53722C6EB4A6}"
+                Name="LastPostDate"
+                DisplayName="$Resources:spscore,CategoriesList_LastPostDateFieldName"
+                Type="DateTime"
+                SourceID="http://schemas.microsoft.com/sharepoint.v3"
+                DisplaceOnUpgrade="TRUE"
+                ReadOnly="TRUE"
+                Hidden="FALSE"
+                Sealed="FALSE"
+                AllowDeletion="FALSE" />
+
+<!-- Membership fields -->
+
+    <Field
+        ID="{9E1A17BC-4B5A-498b-A0F7-E5D1ED43C349}"
+        Name="Member"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Type="User"
+        List="UserInfo"
+        Required="TRUE"
+        ShowField="NameWithPictureAndDetails"
+        UserSelectionMode="PeopleOnly"
+        UserSelectionScope="0"
+        DisplayName="$Resources:spscore,SiteMembership_MemberFieldName;"
+        StaticName="Member"
+        ReadOnly="TRUE"
+        ReadOnlyEnforced="TRUE"
+        Group="_Hidden"
+        Hidden="FALSE"
+
+        Sealed="TRUE"/>
+
+    <Field
+        ID="{DA25725F-5B12-4b26-8ED0-E560E4A87FFF}"
+        Name="MemberStatus"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Type="Choice"
+        DisplayName="$Resources:spscore,SiteMembership_StatusFieldName;"
+        StaticName="MemberStatus"
+        ReadOnly="TRUE"
+        Group="_Hidden"
+        Hidden="FALSE"
+        Sealed="TRUE">
+            <CHOICES>
+                <CHOICE>$Resources:spscore,SiteMembership_Status_Pending;</CHOICE>
+                <CHOICE>$Resources:spscore,SiteMembership_Status_Active;</CHOICE>
+                <CHOICE>$Resources:spscore,SiteMembership_Status_Inactive;</CHOICE>
+                <CHOICE>$Resources:spscore,SiteMembership_Status_Blocked;</CHOICE>
+                <CHOICE>$Resources:spscore,SiteMembership_Status_Left;</CHOICE>
+            </CHOICES>
+            <MAPPINGS>
+                <MAPPING Value="1">$Resources:spscore,SiteMembership_Status_Pending;</MAPPING>
+                <MAPPING Value="2">$Resources:spscore,SiteMembership_Status_Active;</MAPPING>
+                <MAPPING Value="3">$Resources:spscore,SiteMembership_Status_Inactive;</MAPPING>
+                <MAPPING Value="4">$Resources:spscore,SiteMembership_Status_Blocked;</MAPPING>
+                <MAPPING Value="5">$Resources:spscore,SiteMembership_Status_Left;</MAPPING>
+            </MAPPINGS>
+            <Default>$Resources:spscore,SiteMembership_Status_Active;</Default>
+    </Field>
+
+    <Field
+        ID="{E236652C-CF8F-4917-8BAA-30FFCCCFB7E8}"
+        Name="MemberStatusInt"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Type="Integer"
+        DisplayName="$Resources:spscore,SiteMembership_StatusIntFieldName;"
+        StaticName="MemberStatusInt"
+        ReadOnly="TRUE"
+        Group="_Hidden"
+        Hidden="FALSE"
+
+        Sealed="TRUE">
+            <Default>1</Default>
+    </Field>
+
+<!-- Community membership specific fields -->
+
+    <Field
+        ID="{CBA948C8-9E42-44a0-B9F1-A39D91B28CB0}"
+        Name="LastActivity"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Type="DateTime"
+        Format="DateTime"
+        DisplayName="$Resources:spscore,CommunityMembership_LastActivity;"
+        StaticName="LastActivity"
+        ReadOnly="TRUE"
+        Group="_Hidden"
+        Hidden="FALSE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE"/>
+    <Field
+        ID="{1BC74B88-BB81-4be5-961D-9CF75DFE0911}"
+        Name="NumberOfBestResponses"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Type="Number"
+        DisplayName="$Resources:spscore,CommunityMembership_NumBestResponses;"
+        StaticName="NumberOfBestResponses"
+        ReadOnly="TRUE"
+        Group="_Hidden"
+        Hidden="FALSE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE">
+            <Default>0</Default>
+    </Field>
+    <Field
+        ID="{178D4AF1-459B-4f61-BB41-B347986EE37B}"
+        Name="NumberOfDiscussions"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Type="Number"
+        DisplayName="$Resources:spscore,CommunityMembership_NumDiscussions;"
+        StaticName="NumberOfDiscussions"
+        ReadOnly="TRUE"
+        Group="_Hidden"
+        Hidden="FALSE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE">
+            <Default>0</Default>
+    </Field>
+    <Field
+        ID="{51139F59-4BAC-45cb-8047-9C633EED1DB0}"
+        Name="NumberOfReplies"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Type="Number"
+        DisplayName="$Resources:spscore,CommunityMembership_NumReplies;"
+        StaticName="NumberOfReplies"
+        ReadOnly="TRUE"
+        Group="_Hidden"
+        Hidden="FALSE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE">
+            <Default>0</Default>
+    </Field>
+    <Field
+        ID="{5E74A6C4-8771-4273-88FC-682CF6839410}"
+        Name="NumberOfRepliesToReachNextLevel"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Type="Number"
+        DisplayName="$Resources:spscore,CommunityMembership_NumRepliesToReachNextLevel;"
+        StaticName="NumberOfRepliesToReachNextLevel"
+        ReadOnly="TRUE"
+        Group="_Hidden"
+        Hidden="FALSE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE">
+            <Default>0</Default>
+    </Field>
+    <Field
+        ID="{EDD35D15-AE36-4b1b-91AA-0E288DF6C612}"
+        Name="ReputationScore"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Type="Number"
+        DisplayName="$Resources:spscore,CommunityMembership_ReputationScore;"
+        StaticName="ReputationScore"
+        ReadOnly="TRUE"
+        Group="_Hidden"
+        Hidden="FALSE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE">
+            <Default>0</Default>
+    </Field>
+    <Field
+        ID="{501C11BE-6DBF-4e6d-B322-B1882DA0C8C0}"
+        Name="HideReputation"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Type="Boolean"
+        DisplayName="$Resources:spscore,CommunityMembership_HideReputation;"
+        StaticName="HideReputation"
+        ReadOnly="TRUE"
+        Group="_Hidden"
+        Hidden="TRUE"
+        Sealed="TRUE">
+            <Default>FALSE</Default>
+    </Field>
+
+    <Field ID="{F841E7C6-0491-449f-86DF-9DAE475E2132}"
+           Name="TopicPageUrl"
+           SourceID="http://schemas.microsoft.com/sharepoint/v3" 
+           DisplaceOnUpgrade="TRUE" 
+           Group="_Hidden" 
+           DisplayName="$Resources:spscore,CommunityDiscussion_TopicPageUrl;"
+           Type="Text"
+           Hidden="TRUE"
+           Sealed="TRUE"
+           ReadOnly="TRUE"
+           AllowDeletion="FALSE">
+    </Field>
+</Elements>

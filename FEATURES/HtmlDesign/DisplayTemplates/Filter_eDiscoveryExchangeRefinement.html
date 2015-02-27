@@ -1,0 +1,148 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_UserSpecifiedRefinementEX</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:CompatibleManagedProperties msdt:dt="string"></mso:CompatibleManagedProperties>
+<mso:TemplateHidden msdt:dt="string">1</mso:TemplateHidden>
+<mso:CompatibleSearchDataTypes msdt:dt="string"></mso:CompatibleSearchDataTypes>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106604</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#Refinement;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+</mso:CustomDocumentProperties></xml><![endif]-->
+</head>
+<body>
+<script>
+    $includeScript("", "~sitecollection/_catalogs/masterpage/Display Templates/Filters/Filter_MultiValue_Body.js");
+</script>
+<div id="Filter_eDiscoveryExchangeRefinement">
+
+<!--#_
+
+window.showSpecifyOtherEX = function(anchorElement)
+
+{
+    var refinerName = anchorElement.id;
+    var container = document.createElement("DIV");
+    container.className = "ms-ref-refiner";
+    container.id = "OtherValue";
+
+    Discovery.Refiners.createSpecifyOtherDropdownEX(container, refinerName);
+
+    var valBox = Discovery.Refiners.createSpecifyOtherValueBox(container, refinerName);
+    valBox.onkeypress = function(ev) {
+        if (window.event) 
+        {
+            if (Srch.U.isEnterKey(String.fromCharCode(window.event.keyCode)))
+            {
+                Discovery.Refiners.submitUserSpecifiedRefiner(refinerName, $getClientControl(this));
+                window.event.cancelBubble = true;
+            }
+        } 
+        else if (Srch.U.isEnterKey(String.fromCharCode(ev.which)))
+        {
+            Discovery.Refiners.submitUserSpecifiedRefiner(refinerName, $getClientControl(this));
+            ev.stopPropagation();
+        }
+    };
+    var submitTag = Discovery.Refiners.createSpecifyOtherSubmitTag(container);
+    submitTag.onclick = function() { Discovery.Refiners.submitUserSpecifiedRefiner(refinerName, $getClientControl(this)); };
+
+    var rootRefinerElement = anchorElement.parentNode;
+    var toggleFunction = function(){ EnsureScriptParams('SearchUI.js', 'Srch.SU.toggleRefCategory', rootRefinerElement, refinerName);};
+    anchorElement.onclick = toggleFunction;
+
+    var containerPlaceHolder = rootRefinerElement.querySelector(".ms-ref-unselSec");
+    containerPlaceHolder.appendChild(container);
+
+    toggleFunction();
+    return true;
+}; 
+
+if(!$isNull(ctx.RefinementControl) && !$isNull(ctx.ClientControl)) 
+{
+    if(!$isNull(ctx.DataProvider) && !$isNull(ctx.DataProvider.get_currentQueryState()) && !$isEmptyArray(ctx.DataProvider.get_currentQueryState().r))
+    {
+        var isExpanded = true;
+        var renderEmptyContainer = false;
+        var useContains = true;
+        for(var i = 0; i < ctx.DataProvider.get_currentQueryState().r.length; i++)
+        {
+            var currentRef = ctx.DataProvider.get_currentQueryState().r[i];
+            var refinerNameForComparison = currentRef.n.toLowerCase();
+
+            if(refinerNameForComparison == "kind") continue;
+
+            var useKQL = true;
+
+            var propertyName = currentRef.n;
+            var displayTitle = Srch.Refinement.getRefinementLocalizedTitle(currentRef.n);
+            var refiners = [];
+            for(var j = 0; j < currentRef.t.length; j++)
+            {
+                var currentToken = currentRef.t[j];
+                refiners.push(
+                {   
+                    RefinementName: currentToken,
+                    RefinementToken: currentToken,
+                    IsSelected: true
+                });
+            }
+            ctx["DisplayTemplateData"]["BodyTemplateId"] = "~sitecollection/_catalogs/masterpage/Display Templates/Filters/Filter_MultiValue_Body.js";
+            ctx.RefinementControl["csr_propertyName"] = propertyName;
+            ctx.RefinementControl["csr_displayTitle"] = displayTitle;
+            ctx.RefinementControl["csr_filters"] = refiners;
+            ctx.RefinementControl["csr_isExpanded"] = isExpanded;
+            ctx.RefinementControl["csr_renderEmptyContainer"] = renderEmptyContainer;
+            ctx.RefinementControl["csr_useContains"] = useContains;
+            ctx.RefinementControl["csr_useKQL"] = useKQL;
+_#-->
+        _#= ctx.RenderBody(ctx) =#_
+<!--#_
+        }
+    }
+
+    var anyResults = false;
+    var queryGroup = ctx.ScriptApplicationManager.queryGroups[ctx.DataProvider.get_queryGroupName()];
+    if(!$isNull(queryGroup) && !$isEmptyArray(queryGroup.displays))
+    {
+        var resultTablesCollection = queryGroup.displays[0].get_currentResultTableCollection();
+        if(!$isNull(resultTablesCollection) && !$isEmptyArray(resultTablesCollection.ResultTables))
+        {
+
+            var totalRows = !$isNull(resultTablesCollection.ResultTables[0].Properties.Discovery_TotalItemCount) ? 
+                resultTablesCollection.ResultTables[0].Properties.Discovery_TotalItemCount : resultTablesCollection.ResultTables[0].TotalRows;
+
+            anyResults = totalRows > 0;
+            ctx.ClientControl.set_renderedResult(anyResults);
+        }
+    }
+
+    if(anyResults)
+    { 
+        var iconClass = "ms-ref-downarrow";
+        var refinerCatTitle = Srch.Refinement.getRefinementTitle(ctx.RefinementControl);
+
+        var customOnClick = "showSpecifyOtherEX(this);";
+
+_#-->
+            <div id="Container">
+                _#= Srch.U.collapsibleRefinerTitle(null, refinerCatTitle, iconClass, customOnClick) =#_
+                <div class="ms-ref-unselSec" id="UnselectedSection" style="display:none;"></div>
+            </div>
+<!--#_
+    }
+    else
+    {
+_#-->
+        <div id="EmptyContainer"></div>
+<!--#_
+    }
+}
+_#-->
+
+</div>
+</body>
+</html>

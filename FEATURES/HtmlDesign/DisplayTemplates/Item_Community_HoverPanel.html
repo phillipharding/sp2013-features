@@ -1,0 +1,186 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_CommunityHoverPanel</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#SearchHoverPanel;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:ManagedPropertyMapping msdt:dt="string">'Title':'Title','Path':'Path','SiteLogo':'SiteLogo','SiteDescription':'SiteDescription','CollapsingStatus':'CollapsingStatus','DocId':'DocId','HitHighlightedProperties':'HitHighlightedProperties','FileExtension':'FileExtension','ViewsLifeTime':'ViewsLifeTime','deeplinks':'deeplinks','importance':'importance','FileType':'FileType','CommunityMembersCount':'CommunityMembersCount','CommunityRepliesCount':'CommunityRepliesCount','CommunityTopicsCount':'CommunityTopicsCount'</mso:ManagedPropertyMapping>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="Item_Community_HoverPanel">
+<!--#_
+        var maxDiscussionsToShow  = 2;
+        var maxBodyLengthInChars = 120;
+        var maxMetadataValue = Srch.U.maximumSocialMetadataValue;
+        var maxMetadataLabelLengthInChars = 75;
+
+        var i = 0;
+        var id = ctx.CurrentItem.id;
+        ctx.CurrentItem.csr_ShowFollowLink = !Srch.U.isSPFSKU();
+        ctx.CurrentItem.csr_IsSite = true;
+        ctx.CurrentItem.csr_FileType = Srch.Res.hp_Community;
+
+        if (!Srch.U.n(ctx.CurrentItem.Size) && HP.IsNumeric(ctx.CurrentItem.Size))
+        {
+            ctx.CurrentItem.Size = -1;
+        }
+_#-->
+        <div class="ms-srch-hover-innerContainer ms-srch-hover-standardSize" id="_#= $htmlEncode(id + HP.ids.inner) =#_">
+            <div class="ms-srch-hover-arrowBorder" id="_#= $htmlEncode(id + HP.ids.arrowBorder) =#_"></div>
+            <div class="ms-srch-hover-arrow" id="_#= $htmlEncode(id + HP.ids.arrow) =#_"></div>
+            <div class="ms-srch-hover-content" id="_#= $htmlEncode(id + HP.ids.content) =#_" data-displaytemplate="CommunityHoverPanel">
+
+                <div id="_#= $htmlEncode(id + HP.ids.header) =#_" class="ms-srch-hover-header">
+                    _#= ctx.RenderHeader(ctx) =#_
+                </div>
+
+                <div id="_#= $htmlEncode(id + HP.ids.body) =#_" class="ms-srch-hover-body ms-srch-communityHover-body">
+<!--#_
+                if(!Srch.U.n(ctx.CurrentItem.SiteLogo))
+                {
+                    ctx.CurrentItem.csr_DataShown = true;
+_#-->
+                    <div class="ms-srch-hover-communityLogoContainer" >
+                        <img id="_#= $htmlEncode(id + HP.ids.siteLogo) =#_" alt="_#= $htmlEncode(Srch.Res.hp_Alt_SiteLogo) =#_" src="_#= $urlHtmlEncode(ctx.CurrentItem.SiteLogo) =#_" onload="this.style.display='block';" />
+                    </div>
+<!--#_
+                }
+
+                if (!Srch.U.e(ctx.CurrentItem.SiteDescription))
+                {
+                    ctx.CurrentItem.csr_DataShown = true;
+_#-->
+
+                    <div class="ms-srch-hover-subTitle ms-srch-hover-subTitle-communityDescription">
+                        <h3 class="ms-soften">
+                            _#= $htmlEncode(Srch.Res.hp_SiteDescription) =#_
+                        </h3>
+                    </div>
+
+                    <div class="ms-srch-hover-text" id="_#= $htmlEncode(id + HP.ids.siteDescription) =#_" title="_#= $htmlEncode(ctx.CurrentItem.SiteDescription) =#_">
+                        _#= $htmlEncode(Srch.U.truncateEnd(ctx.CurrentItem.SiteDescription, 150)) =#_
+                    </div>
+<!--#_
+                }
+
+                if (!$isNull(ctx.CurrentItem.CommunityMembersCount))
+                {
+_#-->
+                    <div class="ms-srch-hover-communityMetadataContainer ms-srch-hover-subTitle">
+<!--#_
+                        ctx.CurrentItem.csr_DataShown = true;
+
+                        var memberCount = ctx.CurrentItem.CommunityMembersCount;
+                        if(memberCount > maxMetadataValue)
+                        {
+                            memberCount = String.format(Srch.Res.item_MoreThan, maxMetadataValue);
+                        }
+
+                        var memberLabel = Srch.Res.item_Community_MembersLabel;
+                        if(ctx.CurrentItem.CommunityMembersCount == 1)
+                        {
+                            memberLabel = Srch.Res.item_Community_MemberLabel;
+                        }
+_#-->
+                        <div id="_#= $htmlEncode(id + Srch.U.Ids.members) =#_" class="ms-metadata ms-srch-hover-communityMetadata">
+                            <div class="ms-textXLarge ms-srch-hover-communityMetadataNumbers" title="_#=$htmlEncode(memberLabel)=#_">
+                                _#= $htmlEncode(memberCount) =#_
+                            </div>
+                            <div class="ms-srch-ellipsis" title="_#=$htmlEncode(memberLabel)=#_">
+                                _#= $htmlEncode(memberLabel) =#_
+                            </div>
+                        </div>
+                    </div>
+<!--#_
+                }
+
+                if(!$isNull(ctx.CurrentItem.CommunityTopicsCount) && ctx.CurrentItem.CommunityTopicsCount > 0)
+                {
+                    var headerElementID = id + "_headerElement";
+_#-->
+                    <div id="_#= $htmlEncode(headerElementID) =#_" class="ms-srch-hover-subTitle ms-srch-hover-subTitle-popularDiscussions ms-srch-display-none">
+                        <h3 class="ms-soften">
+                            _#= $htmlEncode(Srch.Res.hp_PopularDiscussions) =#_
+                        </h3>
+                    </div>
+<!--#_
+                    var personaElementIDs = new Array();
+                    var textContainerIDs = new Array();
+
+                    for(j = 0; j < maxDiscussionsToShow && j < ctx.CurrentItem.CommunityTopicsCount; ++j)
+                    {
+                        var nextPersonaElementID =id + "_personaElement_" + j;
+                        personaElementIDs.push(nextPersonaElementID);
+
+                        var nextTextContainerID = id + "_textContainer_" + j;
+                        textContainerIDs.push(nextTextContainerID);
+_#-->
+                    <div class="ms-srch-hover-discussion">
+                        <div id="_#= $htmlEncode(nextPersonaElementID) =#_" class="ms-srch-hover-postPersona"></div>
+                        <div id="_#= $htmlEncode(nextTextContainerID) =#_"></div>
+                    </div>
+<!--#_
+                    }
+
+                    AddPostRenderCallback(ctx, function()
+                    {
+                        var queryText = 'ContentTypeId:\"0x012002*\" AND ParentLink:\"' + Srch.U.concatUrl(ctx.CurrentItem.Path, "/Lists/Community Discussion/AllItems.aspx") + '\"';
+
+                        var sort = new Srch.ResultSort(
+                            "ViewsLifetime",
+                            Microsoft.SharePoint.Client.Search.Query.SortDirection.descending);
+
+                        Srch.SSU.populatePostsByQuery(
+                            ctx.ClientControl,
+                            queryText,
+                            headerElementID,
+                            [sort],
+                            personaElementIDs,
+                            textContainerIDs,
+                            Srch.SSU.TextElementType.discussionElement,
+                            maxBodyLengthInChars)
+                    });
+                }
+_#-->
+                </div>
+                <div id="_#= $htmlEncode(id + HP.ids.actions) =#_" class="ms-srch-hover-actions">
+<!--#_
+                if (!Srch.U.e(ctx.CurrentItem.Path))
+                {
+_#-->
+                    <div class="ms-srch-hover-action">
+                        <a clicktype="ActionEdit" id="_#= $htmlEncode(id + HP.ids.openClient) =#_" class="ms-calloutLink ms-uppercase" href="_#= $urlHtmlEncode(ctx.CurrentItem.Path) =#_">
+                            _#= $htmlEncode(Srch.Res.hp_VisitCommunity) =#_
+                        </a>
+                    </div>
+<!--#_ 
+                    if (ctx.CurrentItem.csr_ShowFollowLink)
+                    {
+                        var isDoc = true;
+                        if(!$isNull(ctx.CurrentItem.csr_IsSite) && ctx.CurrentItem.csr_IsSite == true)
+                        {
+                            isDoc = false;
+                        }
+_#-->
+                        <div class="ms-srch-hover-action">
+                            <a id="_#= $htmlEncode(id + HP.ids.follow) =#_" class="ms-calloutLink ms-uppercase" href="javascript:HP.Follow('_#= $scriptEncode(ctx.CurrentItem.Path) =#_', true, _#= isDoc =#_)" title="_#= $htmlEncode(Srch.Res.hp_Tooltip_Follow) =#_">
+                                _#= $htmlEncode(Srch.Res.hp_Follow) =#_
+                            </a>
+                        </div>
+<!--#_
+                    }
+                }
+_#-->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

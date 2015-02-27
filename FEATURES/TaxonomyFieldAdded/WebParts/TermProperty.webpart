@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Microsoft.SharePoint.Taxonomy.TermProperty,Microsoft.SharePoint.Taxonomy,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+      <importErrorMessage>$Resources:osrvcore,WebPartImportError</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">$Resources:osrvcore,TermProperty_Title</property>
+        <property name="Description" type="string">$Resources:osrvcore,TermProperty_Description</property>
+        <property name="ChromeType">None</property>
+        <property name="AllowMinimize" type="bool">true</property>
+        <property name="AllowClose" type="bool">true</property> 					
+        <property name="Hidden" type="bool">false</property>     
+      </properties>
+    </data>
+  </webPart>
+</webParts>

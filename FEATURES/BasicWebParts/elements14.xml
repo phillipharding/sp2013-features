@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module
+        Name="WebPartPopulation14"
+        List="113"
+        Url="_catalogs/wp"
+        RootWebOnly="TRUE">
+        <File Url="MSPictureLibrarySlideshow.webpart" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:core,AuthoringWebPartGroup;"></Property>
+        </File>
+        <File Url="Silverlight.webpart" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:core,AuthoringWebPartGroup;"></Property>
+        </File>
+    </Module>
+</Elements>

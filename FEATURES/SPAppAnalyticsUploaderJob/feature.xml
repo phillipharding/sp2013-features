@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="ABF42BBB-CD9B-4313-803B-6F4A7BD4898F"
+        Title="$Resources:core,AppAnalyticsUploadJobTitle;" 
+        Description="$Resources:core,AppAnalyticsUploadJobDesc;" 
+        Scope="Farm"
+        ActivateOnDefault="False"
+        Hidden="True"
+        ReceiverAssembly="Microsoft.SharePoint.AppManagement, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        ReceiverClass="Microsoft.SharePoint.AppManagement.SPAppAnalyticsUploaderJobInstaller"
+        DefaultResourceFile="core"	
+        xmlns="http://schemas.microsoft.com/sharepoint/">		
+</Feature>

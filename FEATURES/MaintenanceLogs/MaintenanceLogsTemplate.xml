@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="MaintenanceLogs"
+        FeatureId="8c6f9096-388d-4eed-96ff-698b3ec46fc4"
+        Type="175"
+        BaseType="1"
+        OnQuickLaunch="False"
+        DisplayName="$Resources:core,MaintenanceLogsTemplateDisplayName;"
+        Description="$Resources:core,MaintenanceLogsTemplateDescription;"
+        Catalog="TRUE"
+        DisallowContentTypes="TRUE"
+        AllowDeletion="FALSE"
+        Default="TRUE"
+        FolderCreation="TRUE"
+        Hidden="TRUE"
+        HiddenList="TRUE"
+        NoCrawl="TRUE"
+        Unique="TRUE"        
+        RootWebOnly="TRUE"/>
+</Elements>

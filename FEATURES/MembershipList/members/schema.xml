@@ -1,0 +1,367 @@
+<List xmlns:ows="Microsoft SharePoint" 
+      Name="MembersList" 
+      Title="$Resources:spscore,SiteMembership_ListSchema_Title;" 
+      Direction="$Resources:core,Direction"  
+      EnableContentTypes="True" 
+      FolderCreation="FALSE" 
+      Type="880"
+      BaseType="0">
+    <MetaData>
+        <ContentTypes>
+            <ContentTypeRef ID="0x010027FC2137D8DE4b00A40E14346D070D5201"/>
+        </ContentTypes>
+
+        <Fields>
+
+            <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" ShowInNewForm="FALSE" ShowInEditForm="FALSE" Hidden="TRUE" ShowInFileDlg="FALSE" DisplayName="$Resources:spscore,Members_TitleFieldName;" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title"></Field>
+            <Field ID="{8c06beca-0777-48f7-91c7-6da68bc07b69}" Type="DateTime" Name="Created" StaticName="Created" SourceID="http://schemas.microsoft.com/sharepoint/v3" DisplayName="$Resources:spscore,Members_CreatedFieldName;"></Field>
+
+            <!-- Membership fields -->
+
+    <Field
+        ID="{9E1A17BC-4B5A-498b-A0F7-E5D1ED43C349}"
+        Name="Member"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Type="User"
+        List="UserInfo"
+        Required="TRUE"
+        ShowField="NameWithPictureAndDetails"
+        UserSelectionMode="PeopleOnly"
+        UserSelectionScope="0"
+        DisplayName="$Resources:spscore,SiteMembership_MemberFieldName;"
+        StaticName="Member"
+        ReadOnly="TRUE"
+        ReadOnlyEnforced="TRUE"
+        Group="_Hidden"
+        Hidden="FALSE"
+
+        Indexed="TRUE"
+        EnforceUniqueValues="TRUE"
+        AllowDeletion="FALSE"
+
+        Sealed="TRUE"/>
+
+    <Field
+        ID="{E236652C-CF8F-4917-8BAA-30FFCCCFB7E8}"
+        Name="MemberStatusInt"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Type="Integer"
+        DisplayName="$Resources:spscore,SiteMembership_StatusIntFieldName;"
+        StaticName="MemberStatusInt"
+        ReadOnly="TRUE"
+        Group="_Hidden"
+        Hidden="FALSE"
+
+        Indexed="TRUE"
+        AllowDeletion="FALSE"
+
+        Sealed="TRUE">
+            <Default>1</Default>
+    </Field>
+
+<!-- Community membership specific fields -->
+
+    <Field
+        ID="{CBA948C8-9E42-44a0-B9F1-A39D91B28CB0}"
+        Name="LastActivity"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Type="DateTime"
+        Format="DateTime"
+        DisplayName="$Resources:spscore,CommunityMembership_LastActivity;"
+        StaticName="LastActivity"
+        ReadOnly="TRUE"
+        Group="_Hidden"
+        Hidden="FALSE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE"/>
+    <Field
+        ID="{1BC74B88-BB81-4be5-961D-9CF75DFE0911}"
+        Name="NumberOfBestResponses"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Type="Number"
+        DisplayName="$Resources:spscore,CommunityMembership_NumBestResponses;"
+        StaticName="NumberOfBestResponses"
+        ReadOnly="TRUE"
+        Group="_Hidden"
+        Hidden="FALSE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE">
+            <Default>0</Default>
+    </Field>
+    <Field
+        ID="{178D4AF1-459B-4f61-BB41-B347986EE37B}"
+        Name="NumberOfDiscussions"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Type="Number"
+        DisplayName="$Resources:spscore,CommunityMembership_NumDiscussions;"
+        StaticName="NumberOfDiscussions"
+        ReadOnly="TRUE"
+        Group="_Hidden"
+        Hidden="FALSE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE">
+            <Default>0</Default>
+    </Field>
+    <Field
+        ID="{51139F59-4BAC-45cb-8047-9C633EED1DB0}"
+        Name="NumberOfReplies"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Type="Number"
+        DisplayName="$Resources:spscore,CommunityMembership_NumReplies;"
+        StaticName="NumberOfReplies"
+        ReadOnly="TRUE"
+        Group="_Hidden"
+        Hidden="FALSE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE">
+            <Default>0</Default>
+    </Field>
+    <Field
+        ID="{5E74A6C4-8771-4273-88FC-682CF6839410}"
+        Name="NumberOfRepliesToReachNextLevel"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Type="Number"
+        DisplayName="$Resources:spscore,CommunityMembership_NumRepliesToReachNextLevel;"
+        StaticName="NumberOfRepliesToReachNextLevel"
+        ReadOnly="TRUE"
+        Group="_Hidden"
+        Hidden="FALSE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE">
+            <Default>0</Default>
+    </Field>
+    <Field
+        ID="{EDD35D15-AE36-4b1b-91AA-0E288DF6C612}"
+        Name="ReputationScore"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Type="Number"
+        DisplayName="$Resources:spscore,CommunityMembership_ReputationScore;"
+        StaticName="ReputationScore"
+        ReadOnly="TRUE"
+        Group="_Hidden"
+        Hidden="FALSE"
+        AllowDeletion="FALSE"
+        Sealed="TRUE">
+            <Default>0</Default>
+    </Field>
+    <Field
+        ID="{501C11BE-6DBF-4e6d-B322-B1882DA0C8C0}"
+        Name="HideReputation"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Type="Boolean"
+        DisplayName="$Resources:spscore,CommunityMembership_HideReputation;"
+        StaticName="HideReputation"
+        ReadOnly="TRUE"
+        Group="_Hidden"
+        Hidden="TRUE"
+        Sealed="TRUE">
+            <Default>FALSE</Default>
+    </Field>
+
+        </Fields>
+        <Views>
+            <View 
+                BaseViewID="0"
+                Type="HTML"
+                WebPartZoneID="Main"
+                DefaultView="FALSE"
+                SetupPath="pages\viewpage.aspx"
+                ImageUrl="/_layouts/15/images/generic.png?rev=23"
+                Url="AllItems.aspx">
+                <RowLimit Paged="TRUE">20</RowLimit>
+                <XslLink Default="TRUE">main.xsl</XslLink>
+                <ViewFields>
+                    <FieldRef Name="Member" />
+                    <FieldRef Name="MemberStatusInt" />
+                    <FieldRef Name="Created" />
+                    <FieldRef Name="LastActivity" />
+                    <FieldRef Name="NumberOfDiscussions" />
+                    <FieldRef Name="NumberOfReplies" />
+                    <FieldRef Name="NumberOfBestResponses" />
+                    <FieldRef Name="ReputationScore" />
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="ID" />
+                    </OrderBy>
+                </Query>
+            </View>
+            <View 
+                BaseViewID="1"
+                Type="HTML"
+                WebPartZoneID="Main"
+                DisplayName="$Resources:spscore,MembersView;"
+                DefaultView="TRUE"
+                ReadOnly="TRUE"
+                SetupPath="pages\viewpage.aspx"
+                ImageUrl="/_layouts/15/images/generic.png?rev=23"
+                Url="MembersAllItems.aspx">
+                <RowLimit Paged="TRUE">20</RowLimit>
+                <XslLink Default="TRUE">main.xsl</XslLink>
+                <JSLink>sp.ui.discussions.js|sp.ui.communities.js</JSLink>
+                <ViewFields>
+                    <FieldRef Name="Member" />
+                    <FieldRef Name="MemberStatusInt" />
+                    <FieldRef Name="Created" />
+                    <FieldRef Name="LastActivity" />
+                    <FieldRef Name="NumberOfDiscussions" />
+                    <FieldRef Name="NumberOfReplies" />
+                    <FieldRef Name="NumberOfBestResponses" />
+                    <FieldRef Name="ReputationScore" />
+                </ViewFields>
+                <Query>
+                    <Where>
+                        <Eq>
+                            <FieldRef Name="MemberStatusInt" Ascending="FALSE" />
+                            <Value Type="Integer">1</Value>
+                        </Eq>
+                    </Where>
+                    <OrderBy>
+                        <FieldRef Name="ReputationScore" Ascending="FALSE" />
+                    </OrderBy>
+                </Query>
+            </View>
+            <View 
+                BaseViewID="2"
+                Type="HTML"
+                WebPartZoneID="Main"
+                DisplayName="$Resources:spscore,TopContributorsView;"
+                DefaultView="FALSE"
+                ReadOnly="TRUE"
+                SetupPath="pages\viewpage.aspx"
+                ImageUrl="/_layouts/15/images/generic.png?rev=23"
+                Url="TopContributors.aspx">
+                <XslLink Default="TRUE">main.xsl</XslLink>
+                <RowLimit>5</RowLimit>
+                <JSLink>sp.ui.discussions.js|sp.ui.communities.js</JSLink>
+                <ViewFields>
+                    <FieldRef Name="Member" />
+                    <FieldRef Name="MemberStatusInt" />
+                    <FieldRef Name="Created" />
+                    <FieldRef Name="NumberOfDiscussions" />
+                    <FieldRef Name="NumberOfReplies" />
+                    <FieldRef Name="NumberOfBestResponses" />
+                    <FieldRef Name="LastActivity" />
+                    <FieldRef Name="ReputationScore" />
+                </ViewFields>
+                <Query>
+                    <Where>
+                        <Eq>
+                            <FieldRef Name="MemberStatusInt" Ascending="FALSE" />
+                            <Value Type="Integer">1</Value>
+                        </Eq>
+                    </Where>
+                    <OrderBy>
+                        <FieldRef Name="ReputationScore" Ascending="FALSE" />
+                    </OrderBy>
+                </Query>
+            </View>
+            <View 
+                BaseViewID="3"
+                Type="HTML"
+                WebPartZoneID="Main"
+                DisplayName="$Resources:spscore,NewMembersView;"
+                DefaultView="FALSE"
+                SetupPath="pages\viewpage.aspx"
+                ReadOnly="TRUE"
+                ImageUrl="/_layouts/15/images/generic.png?rev=23"
+                Url="NewMembers.aspx">
+                <RowLimit>5</RowLimit>
+                <XslLink Default="TRUE">main.xsl</XslLink>
+                <JSLink>sp.ui.discussions.js|sp.ui.communities.js</JSLink>
+                <ViewFields>
+                    <FieldRef Name="Member" />
+                    <FieldRef Name="MemberStatusInt" />
+                    <FieldRef Name="Created" />
+                    <FieldRef Name="NumberOfDiscussions" />
+                    <FieldRef Name="NumberOfReplies" />
+                    <FieldRef Name="NumberOfBestResponses" />
+                    <FieldRef Name="LastActivity" />
+                    <FieldRef Name="ReputationScore" />
+                </ViewFields>
+                <Query>
+                    <Where>
+                        <Eq>
+                            <FieldRef Name="MemberStatusInt" Ascending="FALSE" />
+                            <Value Type="Integer">1</Value>
+                        </Eq>
+                    </Where>
+                    <OrderBy>
+                        <FieldRef Name="Created" Ascending="FALSE" />
+                    </OrderBy>
+                </Query>
+            </View>
+            <View 
+                BaseViewID="4"
+                Type="HTML"
+                WebPartZoneID="Main"
+                DisplayName="$Resources:spscore,MembersViewAdmin;"
+                DefaultView="FALSE"
+                SetupPath="pages\viewpage.aspx"
+                ImageUrl="/_layouts/15/images/generic.png?rev=23"
+                Url="AdminView.aspx">
+                <RowLimit Paged="TRUE">20</RowLimit>
+                <XslLink Default="TRUE">main.xsl</XslLink>
+                <JSLink>sp.ui.discussions.js|sp.ui.communities.js</JSLink>
+                <ViewFields>
+                    <FieldRef Name="Member" />
+                    <FieldRef Name="MemberStatusInt" />
+                    <FieldRef Name="Created" />
+                    <FieldRef Name="LastActivity" />
+                    <FieldRef Name="NumberOfDiscussions" />
+                    <FieldRef Name="NumberOfReplies" />
+                    <FieldRef Name="NumberOfBestResponses" />
+                    <FieldRef Name="ReputationScore" />
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="ID" />
+                    </OrderBy>
+                </Query>
+            </View>
+            <View 
+                BaseViewID="5"
+                Type="HTML"
+                WebPartZoneID="Main"
+                DisplayName="$Resources:spscore,SingleMemberView;"
+                DefaultView="FALSE"
+                ReadOnly="TRUE"
+                SetupPath="pages\viewpage.aspx"
+                ImageUrl="/_layouts/15/images/generic.png?rev=23"
+                Url="SingleMemberView.aspx">
+                <RowLimit Paged="TRUE">20</RowLimit>
+                <XslLink Default="TRUE">main.xsl</XslLink>
+                <JSLink>sp.ui.discussions.js|sp.ui.communities.js</JSLink>
+                <ViewFields>
+                    <FieldRef Name="Member" />
+                    <FieldRef Name="MemberStatusInt" />
+                    <FieldRef Name="Created" />
+                    <FieldRef Name="NumberOfDiscussions" />
+                    <FieldRef Name="NumberOfReplies" />
+                    <FieldRef Name="NumberOfBestResponses" />
+                    <FieldRef Name="LastActivity" />
+                    <FieldRef Name="ReputationScore" />
+                </ViewFields>
+                <ParameterBindings>
+                    <ParameterBinding
+                        Name="UserID"
+                        Location="QueryString(UserID)" />
+                </ParameterBindings>
+                <Query>
+                    <Where>
+                        <Eq>
+                            <FieldRef Name="Member" LookupId="TRUE" />
+                            <Value Type="Lookup">{UserID}</Value>
+                        </Eq>
+                    </Where>
+                </Query>
+            </View>
+
+        </Views>
+        <Forms>
+            <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main"/>
+            <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main"/>
+            <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main"/>
+        </Forms>
+    </MetaData>
+</List>

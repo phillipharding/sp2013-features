@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="$Resources:core,ImeListTitle;" Direction="0" Url="Lists/IME Dictionary" BaseType="0" EnableContentTypes="TRUE">
+  <MetaData>
+    <ContentTypes>
+      <ContentTypeRef ID="0x010018f21907ed4e401cb4f14422abc65304" />
+      <ContentTypeRef ID="0x0120" />
+    </ContentTypes>
+    <Fields>
+      <Field Indexed="TRUE" ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" DisplayName="$Resources:core,ImeFieldReading;" MaxLength="60" Sealed="TRUE" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" />
+      <Field ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" Name="LinkTitle" DisplayName="$Resources:core,ImeFieldReading;" MaxLength="60" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkTitle" />
+      <Field ID="{bc91a437-52e7-49e1-8c4e-4698904b2b6d}" Name="LinkTitleNoMenu" DisplayName="$Resources:core,ImeFieldReading;" MaxLength="60" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkTitleNoMenu" />
+      <Field Indexed="TRUE" ID="{90244050-709c-4837-9316-93863fbd3da6}" Name="IMEDisplay" Type="Text" DisplayName="$Resources:core,ImeFieldDisplay;" Required="TRUE" MaxLength="60" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="IMEDisplay" />
+      <Field ID="{d2433b20-3f02-4432-817d-369f104a2dcd}" Name="IMEComment1" Type="Text" DisplayName="$Resources:core,ImeFieldComment1;" Required="FALSE" ShowInEditForm="TRUE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="IMEComment1" />
+      <Field ID="{e2c93917-cf32-4b29-be5c-d71f1bac7714}" Name="IMEComment2" Type="Text" DisplayName="$Resources:core,ImeFieldComment2;" Required="FALSE" ShowInEditForm="TRUE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="IMEComment2" />
+      <Field ID="{7c52f61a-e1e0-4341-9e2f-9b36cddfdd7c}" Name="IMEComment3" Type="Text" DisplayName="$Resources:core,ImeFieldComment3;" Required="FALSE" ShowInEditForm="TRUE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="IMEComment3" />
+      <Field ID="{84b0fe85-6b16-40c3-8507-e56c5bbc482e}" Name="IMEUrl" Type="URL" DisplayName="$Resources:core,ImeFieldUrl;" Required="FALSE" ShowInEditForm="TRUE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="IMEUrl" />
+      <Field ID="{f3cdbcfd-f456-45f4-9000-b6f34bb95d84}" Name="IMEPos" Type="Choice" DisplayName="$Resources:core,ImeFieldPos;" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="IMEPos">
+        <CHOICES><CHOICE>$Resources:core,ImePos_Noun;</CHOICE><CHOICE>$Resources:core,ImePos_FamilyName;</CHOICE><CHOICE>$Resources:core,ImePos_FirstName;</CHOICE><CHOICE>$Resources:core,ImePos_FullName;</CHOICE><CHOICE>$Resources:core,ImePos_PlaceName;</CHOICE><CHOICE>$Resources:core,ImePos_ShortcutWord;</CHOICE><CHOICE>$Resources:core,ImePos_Emoticon;</CHOICE>
+        </CHOICES>
+        <Default>$Resources:core,ImePos_Noun;</Default>
+      </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" TabularView="FALSE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Position="After" Type="Freeform">
+          <IfHasRights>
+            <RightsChoices>
+              <RightsGroup PermAddListItems="required" />
+            </RightsChoices>
+            <Then><HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idAddNewItem" href="]]></HTML>
+              <URL Cmd="New" /><HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <URL Cmd="New" />
+              </ScriptQuote><HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML><HTML>$Resources:core,addnewitem;</HTML><HTML><![CDATA[</a></div>]]></HTML>
+            </Then>
+          </IfHasRights>
+        </Toolbar>
+        <RowLimit>20</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitle">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+      <View BaseViewID="1" Type="HTML" ToolbarTemplate="GroupBoardIMEDictionaryToolBar" WebPartZoneID="Main" DisplayName="$Resources:core,ImeViewName;" DefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/gbimepg.png?rev=23" Url="AllItems.aspx">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="LinkTitle" />
+          <FieldRef Name="IMEDisplay" />
+          <FieldRef Name="IMEComment1" />
+          <FieldRef Name="IMEComment2" />
+          <FieldRef Name="IMEComment3" />
+          <FieldRef Name="IMEUrl" />
+          <FieldRef Name="IMEPos" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ContentType ID="0x010100E4FE8612EC394E3690F102C0A1A07563" Name="$Resources:dlccore,DM_MLangSchema_TransDocContTypeName" BaseType="0x0101" Inherits="TRUE" Group="_Hidden">
+      <FieldRefs>
+        <FieldRef ID="{64fa0111-f9e3-405a-94e1-4f06822dbeb9}" Name="TranslationBaseDocument" />
+        <FieldRef ID="{d3f79d8e-b515-464e-8f28-f8f9b63cce05}" Name="TranslationBaseDocumentVersion" />
+        <FieldRef ID="{a3f608ad-8328-40eb-a477-3a4148de8472}" Name="Translation_x0020_Status" />
+        <FieldRef ID="{ee692a0c-bc4b-4ee2-9aca-39dd63884c35}" Name="Language" Required="TRUE" />
+      </FieldRefs>
+    </ContentType>
+    <ListTemplate
+        Name="TransMgmtLib"
+        Type="1300"
+        BaseType="1"
+        OnQuickLaunch="TRUE"
+        SecurityBits="11"
+        DisplayName="$Resources:MultiLangDisplayName"
+        Description="$Resources:MultiLangDescription"
+        Image="/_layouts/15/images/itmldl.gif?rev=23"
+        DocumentTemplate="101"
+        NewPage="NewTranslationManagement.aspx">
+    </ListTemplate>
+</Elements>

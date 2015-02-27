@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListInstance
+        FeatureId="58160a6b-4396-4d6e-867c-65381fb5fbc9"
+        TemplateType="402"
+        Title="$Resources:core,GbwFacilitiesListTitle;"
+        Url="$Resources:core,lists_Folder;/$Resources:core,facilities_Folder;" />
+    <ListInstance
+        FeatureId="9c2ef9dc-f733-432e-be1c-2e79957ea27b"
+        TemplateType="403"
+        Title="$Resources:core,GbwWhareaboutsListTitle;"
+        Url="$Resources:core,lists_Folder;/$Resources:core,whereabouts_Folder;" />
+    <ListInstance
+        FeatureId="239650e3-ee0b-44a0-a22a-48292402b8d8"
+        TemplateType="404"
+        Title="$Resources:core,GbwCallTrackingListTitle;"
+        Url="$Resources:core,lists_Folder;/$Resources:core,callTracking_Folder;"
+        QuickLaunchUrl="$Resources:core,lists_Folder;/$Resources:core,callTracking_Folder;/CallToMe.aspx" />
+</Elements>

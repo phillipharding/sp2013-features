@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="94C94CA6-B32F-4da9-A9E3-1F3D343D7ECB"
+          Title="$Resources:osrvcore,PublishingUberWebFeatureTitle;"
+          Description="$Resources:osrvcore,PublishingUberWebFeatureDescription;"
+          Version="15.0.1.0"
+          Scope="Web"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ActivationDependencies>
+        <ActivationDependency FeatureId="F6924D36-2FA8-4f0b-B16D-06B7250180FA" />
+        <ActivationDependency FeatureId="22A9EF51-737B-4ff2-9346-694633FE4416" />
+        <!--<ActivationDependency FeatureId="7AD5272A-2694-4349-953E-EA5EF290E97C" />-->
+        <ActivationDependency FeatureId="DFFAAE84-60EE-413A-9600-1CF431CF0560" />
+    </ActivationDependencies>
+</Feature>

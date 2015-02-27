@@ -1,0 +1,17 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Feature  Id="14173c38-5e2d-4887-8134-60f9df889bad"
+          Title="$Resources:cmscore,Converters_Feature_Title;"
+          Description="$Resources:cmscore,Converters_Feature_Desc;"
+          Version="14.0.0.0"
+          Scope="WebApplication"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="DocXPageConverter.xml"/>
+        <ElementManifest Location="DocMPageConverter.xml"/>
+        <ElementManifest Location="InfoPathPageConverter.xml"/>
+        <ElementManifest Location="XslApplicatorConverter.xml"/>
+    </ElementManifests>
+</Feature>

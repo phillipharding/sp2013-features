@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance
+    FeatureId="E374875E-06B6-11E0-B0FA-57F5DFD72085"
+    Title="$Resources:AppDevelopmentCore, LeftNav_Projects;"
+    TemplateType="1230"
+    RootWebOnly="false"
+    Url="$Resources:core,lists_Folder;/$Resources:AppDevelopmentCore,DraftAppsListUrl;"
+    Description="$Resources:AppDevelopmentCore,LeftNav_ProjectsInstanceDescription;">
+  </ListInstance>
+  <ListInstance
+    FeatureId="00BFEA71-E717-4E80-AA17-D0C71B360101" 
+    TemplateType="101" 
+    Title="$Resources:AppDevelopmentCore, DocLibTitle;" 
+    Url="$Resources:core,lists_Folder;/$Resources:AppDevelopmentCore,DocLibUrl;" 
+    Description="$Resources:AppDevelopmentCore,LeftNav_DocumentsInstanceDescription;"/>
+  <ListInstance 
+    Title="$Resources:AppDevelopmentCore,GettingStartedListTitle;"
+    Hidden="TRUE"
+    OnQuickLaunch="FALSE"
+    FeatureId="192EFA95-E50C-475e-87AB-361CEDE5DD7F"
+    TemplateType="170"
+    Url="$Resources:core,lists_Folder;/GettingStarted"
+    Description="$Resources:AppDevelopmentCore,GettingStartedListDescription;" />
+</Elements>

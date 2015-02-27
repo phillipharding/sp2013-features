@@ -1,0 +1,424 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+    Id="Ribbon.Media"
+    Location="CommandUI.Ribbon"
+    Sequence="50"
+    Title="Add media contextual tab"
+    >
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+     <CommandUIDefinition Location="Ribbon.ContextualTabs._children">
+      <ContextualGroup Id="Ribbon.ContextualTabs.Media"
+        Command="MediaContextualTab"
+        ContextualGroupId="Media"
+        Title="$Resources:sp.publishing.resources,CUI_Media_ContextualTab;"
+        Color="Orange"
+        >
+        <Tab Id="Ribbon.ContextualTabs.Media.Options" 
+          Command="MediaOptionsTab" 
+          Title="$Resources:sp.publishing.resources,CUI_Media_OptionsTab"
+          Description=""
+          >
+          <Scaling Id="Ribbon.ContextualTabs.Media.Options.Scaling">
+            <MaxSize Id="Ribbon.ContextualTabs.Media.Options.Scaling.Media" GroupId="Ribbon.ContextualTabs.Media.Options.Media" Size="LargeLarge" Sequence="10"/>
+            <MaxSize Id="Ribbon.ContextualTabs.Media.Options.Scaling.Preview" GroupId="Ribbon.ContextualTabs.Media.Options.Preview" Size="LargeLarge" Sequence="20"/>
+            <MaxSize Id="Ribbon.ContextualTabs.Media.Options.Scaling.Properties" GroupId="Ribbon.ContextualTabs.Media.Options.Properties" Size="MediumMedium" Sequence="30"/>            
+            <MaxSize Id="Ribbon.ContextualTabs.Media.Options.Scaling.PlayerStyles" GroupId="Ribbon.ContextualTabs.Media.Options.PlayerStyles" Size="LargeLarge" Sequence="40"/>
+            <MaxSize Id="Ribbon.ContextualTabs.Media.Options.Scaling.Size" GroupId="Ribbon.ContextualTabs.Media.Options.Size" Size="MediumMedium" Sequence="50"/>
+          </Scaling>
+          <Groups Id="Ribbon.ContextualTabs.Media.Options.Groups">
+            <Group Id="Ribbon.ContextualTabs.Media.Options.Media" 
+              Sequence="10"
+              Command="MediaGroupMedia"
+              Template="Ribbon.Templates.Flexible2"             
+              Title="$Resources:sp.publishing.resources,CUI_Media_GroupMedia;"
+              Description=""
+              >
+              <Controls Id="Ribbon.ContextualTabs.Media.Options.Media.Controls">
+                <SplitButton
+                  Id="Ribbon.ContextualTabs.Media.Options.Media.Change"
+                  Sequence="10"
+                  TemplateAlias="o1"                  
+                  LabelText="$Resources:sp.publishing.resources,CUI_Media_ButtonChangeMedia;"
+                  Alt="$Resources:sp.publishing.resources,CUI_Media_ButtonChangeMediaAlt;"
+                  MenuAlt="$Resources:sp.publishing.resources,CUI_Media_ButtonChangeMediaMenu;"
+                  ToolTipTitle="$Resources:sp.publishing.resources,CUI_Media_ButtonChangeMedia"
+                  ToolTipDescription="$Resources:sp.publishing.resources,CUI_Media_ButtonChangeMediaMenu;"
+                  Command="MediaChangeMedia"
+                  CommandMenuOpen="MediaChangeMediaMenuOpen"
+                  CommandMenuClose="MediaChangeMediaMenuClose"                
+                  Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-240" Image16by16Left="-80"
+                  Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-192" Image32by32Left="-128"
+                  >
+                  <Menu Id="Ribbon.ContextualTabs.Media.Options.Media.Change.Menu">
+                    <MenuSection Id="Ribbon.ContextualTabs.Media.Options.Media.Change.Menu.Section" Sequence="10">
+                      <Controls Id="Ribbon.ContextualTabs.Media.Options.Media.Change.Menu.Section.Controls">
+                        <Button
+                          Id="Ribbon.ContextualTabs.Media.Options.Media.Change.Menu.Section.FromComputer"
+                          Sequence="10"
+                          Command="MediaChangeMediaUpload"
+                          LabelText="$Resources:core,ButFromComputer;"
+                          Alt="$Resources:core,ButFromComputerAlt;"
+                        />
+                        <Button
+                          Id="Ribbon.ContextualTabs.Media.Options.Media.Change.Menu.Section.FromSharePoint"
+                          Sequence="20"
+                          Command="MediaChangeMediaSharePoint"
+                          LabelText="$Resources:core,ButFromSharePoint;"                                             
+                          Alt="$Resources:core,ButFromSharePointAlt;"
+                        />
+                        <Button
+                          Id="Ribbon.ContextualTabs.Media.Options.Media.Change.Menu.Section.FromAddress"
+                          Sequence="30"
+                          Command="MediaChangeMediaWeb"
+                          LabelText="$Resources:core,ButFromAddress;"               
+                          Alt="$Resources:core,ButFromAddressAlt;"
+                        />
+                        <Button
+                          Id="Ribbon.ContextualTabs.Media.Options.Media.Change.Menu.Section.Remove"
+                          Sequence="40"
+                          Command="MediaChangeMediaRemove"
+                          LabelText="$Resources:sp.publishing.resources,CUI_Media_Remove;"               
+                          Alt="$Resources:sp.publishing.resources,CUI_Media_ButtonRemoveMediaAlt;"
+                        />                        
+                      </Controls>
+                    </MenuSection>
+                  </Menu>
+                </SplitButton>
+              </Controls>
+            </Group>
+            <Group Id="Ribbon.ContextualTabs.Media.Options.Preview"
+              Sequence="20"
+              Command="MediaGroupPreview"
+              Template="Ribbon.Templates.Flexible2"              
+              Title="$Resources:sp.publishing.resources,CUI_Media_GroupPreview;"
+              Description=""
+              >
+              <Controls Id="Ribbon.ContextualTabs.Media.Options.Preview.Controls">
+                <SplitButton
+                  Id="Ribbon.ContextualTabs.Media.Options.Preview.Change"
+                  Sequence="10"
+                  TemplateAlias="o1"
+                  LabelText="$Resources:sp.publishing.resources,CUI_Media_ButtonChangePreview;"
+                  Alt="$Resources:sp.publishing.resources,CUI_Media_ButtonChangePreviewAlt;"
+                  MenuAlt="$Resources:sp.publishing.resources,CUI_Media_ButtonChangePreviewMenu;"
+                  ToolTipTitle="$Resources:sp.publishing.resources,CUI_Media_ButtonChangePreview"
+                  ToolTipDescription="$Resources:sp.publishing.resources,CUI_Media_ButtonChangePreviewMenu;"
+                  Command="MediaChangePreview"
+                  CommandMenuOpen="MediaChangePreviewMenuOpen"
+                  CommandMenuClose="MediaChangePreviewMenuClose"                   
+                  Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-176" Image16by16Left="-256"
+                  Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-96" Image32by32Left="-96"
+                  >
+                  <Menu Id="Ribbon.ContextualTabs.Media.Options.Preview.Change.Menu">
+                    <MenuSection Id="Ribbon.ContextualTabs.Media.Options.Preview.Change.Menu.Section" Sequence="10">
+                      <Controls Id="Ribbon.ContextualTabs.Media.Options.Preview.Change.Menu.Section.Controls">
+                        <Button
+                          Id="Ribbon.ContextualTabs.Media.Options.Preview.Change.Menu.Section.FromComputer"
+                          Sequence="10"
+                          Command="MediaChangePreviewUpload"
+                          LabelText="$Resources:core,ButFromComputer;"                                             
+                          Alt="$Resources:core,ButFromComputerAlt;"
+                        />
+                        <Button
+                          Id="Ribbon.ContextualTabs.Media.Options.Preview.Change.Menu.Section.FromSharePoint"
+                          Sequence="20"
+                          Command="MediaChangePreviewSharePoint"
+                          LabelText="$Resources:core,ButFromSharePoint;"
+                          Alt="$Resources:core,ButFromSharePointAlt;"
+                        />
+                        <Button
+                          Id="Ribbon.ContextualTabs.Media.Options.Preview.Change.Menu.Section.FromAddress"
+                          Sequence="30"
+                          Command="MediaChangePreviewWeb"
+                          LabelText="$Resources:core,ButFromAddress;"
+                          Alt="$Resources:core,ButFromAddressAlt;"
+                        />
+                        <Button
+                          Id="Ribbon.ContextualTabs.Media.Options.Preview.Change.Menu.Section.Remove"
+                          Sequence="40"
+                          Command="MediaChangePreviewRemove"
+                          LabelText="$Resources:sp.publishing.resources,CUI_Media_Remove;"               
+                          Alt="$Resources:sp.publishing.resources,CUI_Media_ButtonRemovePreviewAlt;"
+                        />                        
+                      </Controls>
+                    </MenuSection>
+                  </Menu>
+                </SplitButton>
+              </Controls>
+            </Group>
+            <Group 
+              Id="Ribbon.ContextualTabs.Media.Options.Properties"
+              Sequence="30"
+              Command="MediaGroupProperties"
+              Template="Ribbon.Templates.Flexible2"
+              Title="$Resources:sp.publishing.resources,CUI_Media_GroupProperties;"              
+              Description="">
+              <Controls Id="Ribbon.ContextualTabs.Media.Options.Properties.Controls">
+                <Label
+                  Id="Ribbon.ContextualTabs.Media.Options.Properties.TitleLabel"
+                  Sequence="10"
+                  LabelText="$Resources:sp.publishing.resources,CUI_Media_TitleLabel;"
+                  ForId="Ribbon.ContextualTabs.Media.Options.Properties.Title" 
+                  TemplateAlias="o1"
+                />
+                <TextBox
+                  Id="Ribbon.ContextualTabs.Media.Options.Properties.Title"
+                  Sequence="20"
+                  Command="MediaTitle"
+                  QueryCommand="QueryMediaTitle"
+                  TemplateAlias="o2"
+                  ToolTipTitle="$Resources:sp.publishing.resources,CUI_Media_TitleLabel"
+                  ToolTipDescription="$Resources:sp.publishing.resources,CUI_Media_TitleAlt;"
+                />       
+                <Label
+                  Id="Ribbon.ContextualTabs.Media.Options.Properties.AutoPlayLabel"
+                  Sequence="30"
+                  LabelText="$Resources:sp.publishing.resources,CUI_Media_AutoPlayLabel;"
+                  ForId="Ribbon.ContextualTabs.Media.Options.Properties.AutoPlay" 
+                  TemplateAlias="o2"
+                />
+                <CheckBox
+                  Id="Ribbon.ContextualTabs.Media.Options.Properties.AutoPlay"
+                  Sequence="40"
+                  Command="MediaAutoPlay"
+                  QueryCommand="QueryMediaAutoPlay"
+                  TemplateAlias="o1"
+                />
+                <Label
+                  Id="Ribbon.ContextualTabs.Media.Options.Properties.LoopLabel"
+                  Sequence="50"
+                  LabelText="$Resources:sp.publishing.resources,CUI_Media_LoopLabel;"
+                  ForId="Ribbon.ContextualTabs.Media.Options.Properties.Loop" 
+                  TemplateAlias="o2"
+                />
+                <CheckBox
+                  Id="Ribbon.ContextualTabs.Media.Options.Properties.Loop"
+                  Sequence="60"
+                  Command="MediaLoop"
+                  QueryCommand="QueryMediaLoop"
+                  TemplateAlias="o1"
+                />
+              </Controls>
+            </Group>
+            <Group 
+              Id="Ribbon.ContextualTabs.Media.Options.PlayerStyles"
+              Sequence="40"
+              Command="MediaGroupPlayerStyles"
+              Template="Ribbon.Templates.Flexible2"
+              Title="$Resources:sp.publishing.resources,CUI_Media_GroupPlayerStyles;"
+              Description="">
+              <Controls Id="Ribbon.ContextualTabs.Media.Options.PlayerStyles.Controls">
+                <FlyoutAnchor
+                  Id="Ribbon.ContextualTabs.Media.Options.PlayerStyles.Change"
+                  Command="MediaStylesMenu"
+                  Sequence="10"
+                  TemplateAlias="o1"                  
+                  LabelText="$Resources:sp.publishing.resources,CUI_Media_ButtonChangePlayerStyle"
+                  Alt="$Resources:sp.publishing.resources,CUI_Media_ButtonChangePlayerStyleAlt"
+                  ToolTipTitle="$Resources:sp.publishing.resources,CUI_Media_ButtonChangePlayerStyle"
+                  ToolTipDescription="$Resources:sp.publishing.resources,CUI_Media_ButtonChangePlayerStyleAlt;"
+                  Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-192" Image32by32Left="-96"
+                  PopulateDynamically="true"
+                  PopulateOnlyOnce="true"
+                  PopulateQueryCommand="QueryMediaStylesMenu"
+                />
+              </Controls>
+            </Group>
+            <Group 
+              Id="Ribbon.ContextualTabs.Media.Options.Size"
+              Sequence="50"
+              Command="MediaGroupSize"
+              Description=""
+              Title="$Resources:core,GrpSize;"
+              Template="Ribbon.Templates.Flexible2">
+              <Controls Id="Ribbon.ContextualTabs.Media.Options.Size.Controls">
+                <Label
+                  Id="Ribbon.ContextualTabs.Media.Options.Size.WidthLabel"
+                  Sequence="10"
+                  LabelText="$Resources:core,LabelHorizSize;"
+                  ForId="Ribbon.ContextualTabs.Media.Options.Size.Width"
+                  Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-224" Image16by16Left="-112"
+                  TemplateAlias="o1"/>
+                <Spinner
+                   Id="Ribbon.ContextualTabs.Media.Options.Size.Width"
+                   Sequence="20"
+                   DefaultUnit="pixel"
+                   DefaultValue="10"
+                   AccelerationInterval="125"
+                   MultiplierInterval="2000"
+                   Command="MediaWidth"
+                   QueryCommand="QueryMediaWidth"
+                   TemplateAlias="o2"
+                   AltUpArrow="$Resources:core,cui_spnUpAlt;"
+                   AltDownArrow="$Resources:core,cui_spnDownAlt;"
+                   ToolTipTitle="$Resources:core,LabelHorizSize;"
+                   ToolTipDescription="$Resources:core,cui_stt_ButSizeMenuHorizontalSizeTooltip;">
+                  <Unit
+                      Name="pixel"
+                      MinimumValue="1"
+                      MaximumValue="2000"
+                      DecimalDigits="0"
+                      Interval="5">
+                    <UnitAbbreviation Value="px" />
+                  </Unit>
+                  <Unit
+                      Name="percent"
+                      MinimumValue="1"
+                      MaximumValue="100"
+                      DecimalDigits="0"
+                      Interval="1">
+                    <UnitAbbreviation Value="%" />
+                  </Unit>
+                </Spinner>
+                <Label
+                  Id="Ribbon.ContextualTabs.Media.Options.Size.HeightLabel"
+                  Sequence="30"
+                  LabelText="$Resources:core,LabelVertSize;"
+                  ForId="Ribbon.ContextualTabs.Media.Options.Size.Height" 
+                  Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-160" Image16by16Left="-256"
+                  TemplateAlias="o1"/>
+                <Spinner
+                  Id="Ribbon.ContextualTabs.Media.Options.Size.Height"
+                  Sequence="40"
+                  DefaultUnit="pixel"
+                  DefaultValue="10"
+                  AltUpArrow="$Resources:core,cui_spnUpAlt;"
+                  AltDownArrow="$Resources:core,cui_spnDownAlt;"
+                  AccelerationInterval="125"
+                  MultiplierInterval="2000"
+                  Command="MediaHeight"
+                  QueryCommand="QueryMediaHeight"
+                  TemplateAlias="o2"
+                  ToolTipTitle="$Resources:core,LabelVertSize;"
+                  ToolTipDescription="$Resources:core,cui_stt_ButSizeMenuVerticalSizeTooltip;">
+                  <Unit
+                      Name="pixel"
+                      MinimumValue="1"
+                      MaximumValue="2000"
+                      DecimalDigits="0"
+                      Interval="5">
+                    <UnitAbbreviation Value="px" />
+                  </Unit>
+                  <Unit
+                      Name="percent"
+                      MinimumValue="1"
+                      MaximumValue="100"
+                      DecimalDigits="0"
+                      Interval="1">
+                    <UnitAbbreviation Value="%" />
+                  </Unit>
+                </Spinner>
+                <Label
+                  Id="Ribbon.ContextualTabs.Media.Options.Size.LockAspectLabel"
+                  Sequence="50"
+                  LabelText="$Resources:core,LabelLockAspect;"
+                  ForId="Ribbon.ContextualTabs.Media.Options.Size.LockAspect" 
+                  TemplateAlias="o1"
+                />
+                <CheckBox
+                  Id="Ribbon.ContextualTabs.Media.Options.Size.LockAspect"
+                  Sequence="60"
+                  Command="MediaLockRatio"
+                  QueryCommand="QueryMediaLockRatio"
+                  TemplateAlias="o2"
+                />
+              </Controls>
+            </Group>
+          </Groups>
+        </Tab>
+      </ContextualGroup>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>    
+  <CustomAction
+    Id="Ribbon.Media.InsertMediaWP"
+    Location="CommandUI.Ribbon"
+    Sequence="50"
+    Title="Add insert media button to WebPart ribbon"
+    >
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.WebPartInsert.Media.Controls._children">
+		<Button
+		  Id="Ribbon.WebPartInsert.Media.Media"
+		  Sequence="20"
+		  TemplateAlias="o1"
+		  Command="MediaInsertWebPartZone"
+		  LabelText="$Resources:sp.publishing.resources,CUI_Media_InsertMedia;"
+		  ToolTipTitle="$Resources:sp.publishing.resources,CUI_Media_InsertMedia;"
+		  ToolTipDescription="$Resources:sp.publishing.resources,CUI_Media_InsertMediaAlt;"
+		  Alt="$Resources:sp.publishing.resources,CUI_Media_InsertMediaAlt;"
+                  Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-192" Image32by32Left="-64"
+                   />    
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction
+    Id="Ribbon.Media.InsertMediaRTE"
+    Location="CommandUI.Ribbon"
+    Sequence="50"
+    Title="Add insert media button to RTE ribbon"
+    >
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.EditingTools.CPInsert.Media.Controls._children">
+        <FlyoutAnchor
+            Id="Ribbon.EditingTools.CPInsert.Media.Media"
+            Sequence="20"
+            TemplateAlias="o1"
+            Command="MediaInsertRichContent"
+            LabelText="$Resources:sp.publishing.resources,CUI_Media_InsertMedia;"
+            ToolTipTitle="$Resources:sp.publishing.resources,CUI_Media_InsertMedia;"
+            ToolTipDescription="$Resources:sp.publishing.resources,CUI_Media_InsertMediaAlt;"
+            Alt="$Resources:sp.publishing.resources,CUI_Media_InsertMediaAlt;"
+            Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-192" Image32by32Left="-64"
+          >
+            <Menu Id="Ribbon.EditingTools.CPInsert.Media.Media.Menu">
+                <MenuSection Id="Ribbon.EditingTools.CPInsert.Media.Media.Menu.Section" Sequence="10">
+                    <Controls Id="Ribbon.EditingTools.CPInsert.Media.Media.Menu.Section.Controls">
+                        <Button
+                            Id="Ribbon.EditingTools.CPInsert.Media.Media.Menu.Section.FromComputer"
+                            Sequence="10"
+                            Command="MediaInsertMediaUpload"
+                            LabelText="$Resources:core,ButFromComputer;"
+                            Alt="$Resources:core,ButFromComputerAlt;"
+                        />
+                        <Button
+                            Id="Ribbon.EditingTools.CPInsert.Media.Media.Menu.Section.FromEmbed"
+                            Sequence="20"
+                            Command="InsertEmbedding"
+                            LabelText="$Resources:sp.publishing.resources,CUI_Media_FromEmbed;"               
+                            Alt="$Resources:sp.publishing.resources,CUI_Media_FromEmbedMediaAlt;"
+                        /> 
+                        <Button
+                            Id="Ribbon.EditingTools.CPInsert.Media.Media.Menu.Section.FromSharePoint"
+                            Sequence="30"
+                            Command="MediaInsertMediaSharePoint"
+                            LabelText="$Resources:core,ButFromSharePoint;"                                             
+                            Alt="$Resources:core,ButFromSharePointAlt;"
+                        />
+                        <Button
+                            Id="Ribbon.EditingTools.CPInsert.Media.Media.Menu.Section.FromAddress"
+                            Sequence="40"
+                            Command="MediaInsertMediaWeb"
+                            LabelText="$Resources:core,ButFromAddress;"               
+                            Alt="$Resources:core,ButFromAddressAlt;"
+                        />                       
+                    </Controls>
+                </MenuSection>
+            </Menu>
+        </FlyoutAnchor>    
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <Control 
+	Id="AdditionalPageHead"
+	ControlClass="Microsoft.SharePoint.Publishing.WebControls.InsertMediaRibbonButton" 
+	ControlAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+</Elements>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomActionGroup
+        Id="Users"
+        Location="Microsoft.SharePoint.Administration.Security"
+        Title="$Resources:users_title;"
+        Sequence="10"
+        ImageUrl="/_layouts/15/images/CentralAdmin_Security_Users_32x32.png?rev=23" />
+    <CustomAction
+        Id="U_MTFG"
+        GroupId="Users"
+        Location="Microsoft.SharePoint.Administration.Security"
+        Sequence="10"
+        Title="$Resources:managethefarmadministratorsgroup_title;"
+        Description="$Resources:managethefarmadministratorsgroup_description;">
+        <UrlAction
+            Url="/_layouts/15/people.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="U_AORDG"
+        GroupId="Users"
+        Location="Microsoft.SharePoint.Administration.Security"
+        Sequence="20"
+        Title="$Resources:approveorrejectdistributiongroups_title;"
+        Description="$Resources:approveorrejectdistributiongroups_description;">
+    </CustomAction>
+    <CustomAction
+        Id="SpecifyWebApplicationPolicy"
+        GroupId="Users"
+        Location="Microsoft.SharePoint.Administration.Security"
+        Sequence="40"
+        Title="$Resources:specifywebapplicationpolicy_title;"
+        Description="$Resources:specifywebapplicationpolicy_description;">
+        <UrlAction
+            Url="/_admin/policy.aspx" />
+    </CustomAction>
+    <CustomActionGroup
+        Id="GeneralSecurity"
+        Location="Microsoft.SharePoint.Administration.Security"
+        Title="$Resources:generalsecurity_title;"
+        Sequence="20"
+        ImageUrl="/_layouts/15/images/CentralAdmin_Security_GeneralSecurity_32x32.png?rev=23" />
+    <CustomAction
+        Id="GS_MA"
+        GroupId="GeneralSecurity"
+        Location="Microsoft.SharePoint.Administration.Security"
+        Sequence="5"
+        Title="$Resources:managedaccounts_title;"
+        Description="$Resources:managedaccounts_description;">
+        <UrlAction
+            Url="/_admin/ManagedAccounts.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="GS_CSA"
+        GroupId="GeneralSecurity"
+        Location="Microsoft.SharePoint.Administration.Security"
+        Sequence="10"
+        Title="$Resources:configureserviceaccounts_title;"
+        Description="$Resources:configureserviceaccounts_description;">
+        <UrlAction
+            Url="/_admin/FarmCredentialManagement.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="GS_PS"
+        GroupId="GeneralSecurity"
+        Location="Microsoft.SharePoint.Administration.Security"
+        Sequence="15"
+        Title="$Resources:passwordsettings_title;"
+        Description="$Resources:passwordsettings_description;">
+        <UrlAction
+            Url="/_admin/PasswordSettings.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="GS_SAP"
+        GroupId="GeneralSecurity"
+        Location="Microsoft.SharePoint.Administration.Security"
+        Sequence="20"
+        Title="$Resources:specifyauthenticationproviders_title;"
+        Description="$Resources:specifyauthenticationproviders_description;">
+        <UrlAction
+            Url="/_admin/authenticationproviders.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="GS_MGMTRU"
+        GroupId="GeneralSecurity"
+        Location="Microsoft.SharePoint.Administration.Security"
+        Sequence="25"
+        Title="$Resources:managetrust_title;"
+        Description="$Resources:managetrust_description;">
+        <UrlAction
+            Url="/_admin/ManageTrust.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="GS_MAS"
+        GroupId="GeneralSecurity"
+        Location="Microsoft.SharePoint.Administration.Security"
+        Sequence="30"
+        Title="$Resources:manageantivirussettings_title;"
+        Description="$Resources:manageantivirussettings_description;">
+        <UrlAction
+            Url="/_admin/AVAdmin.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="GS_DBFT"
+        GroupId="GeneralSecurity"
+        Location="Microsoft.SharePoint.Administration.Security"
+        Sequence="40"
+        Title="$Resources:defineblockedfiletypes_title;"
+        Description="$Resources:defineblockedfiletypes_description;">
+        <UrlAction
+            Url="/_admin/BlockedFileType.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="GS_MWPS"
+        GroupId="GeneralSecurity"
+        Location="Microsoft.SharePoint.Administration.Security"
+        Sequence="50"
+        Title="$Resources:managewebpartsecurity_title;"
+        Description="$Resources:managewebpartsecurity_description;">
+        <UrlAction
+            Url="/_admin/SPSecuritySettings.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="GS_CSSSC"
+        GroupId="GeneralSecurity"
+        Location="Microsoft.SharePoint.Administration.Security"
+        Sequence="60"
+        Title="$Resources:configureselfservicesitecreation_title;"
+        Description="$Resources:configureselfservicesitecreation_description;">
+        <UrlAction
+            Url="/_admin/ConfigSSC.aspx" />
+    </CustomAction>
+    <CustomActionGroup
+        Id="InformationPolicy"
+        Location="Microsoft.SharePoint.Administration.Security"
+        Title="$Resources:informationpolicy_title;"
+        Sequence="30"
+        ImageUrl="/_layouts/15/images/CentralAdmin_Security_InformationPolicy_32x32.png?rev=23" />
+    <CustomAction
+        Id="InformationPolicyConfiguration"
+        GroupId="InformationPolicy"
+        Location="Microsoft.SharePoint.Administration.Security"
+        Sequence="10"
+        Title="$Resources:informationpolicyconfiguration_title;"
+        Description="$Resources:informationpolicyconfiguration_description;">
+        <UrlAction
+            Url="/_admin/IrmAdmin.aspx" />
+    </CustomAction>
+</Elements>

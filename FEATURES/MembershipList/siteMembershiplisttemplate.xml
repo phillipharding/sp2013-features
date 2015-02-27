@@ -1,0 +1,15 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="members"
+        Type="880"
+        Hidden="TRUE"
+        DisplayName="$Resources:spscore,SiteMembership_ListName;"
+        BaseType="0"
+        OnQuickLaunch="TRUE"
+        AllowDeletion="FALSE"
+        SecurityBits="12"
+        Unique="TRUE"
+        Image="/_layouts/15/images/itcommem.png?rev=23">
+    </ListTemplate>
+</Elements>
+

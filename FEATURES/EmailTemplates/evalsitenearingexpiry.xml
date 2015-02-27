@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EmailContent>
+  <Subject>
+    $ResourcesNoEncode:core,EvalSiteNearingExpirySubject;
+  </Subject>
+  <Body>
+    <HTML>
+      <![CDATA[<html>
+      <body>
+      <h3>$Resources:core,EvalSiteNearingExpiryH3;</h3>
+      <p>]]>
+    </HTML>
+    $ResourcesNoEncode:core,EvalSiteNearingExpiryP1part1;
+    <HTML>
+      <![CDATA[$Resources:core,EvalSiteNearingExpiryP1part2;</p>
+      <h3>$Resources:core,EvalSitesImportantTasks;</h3>
+      <p>$Resources:core,EvalSiteNearingExpiryP2;</p>
+      <ol>
+      <li>$Resources:core,EvalSiteNearingExpiryLi1;</li>
+      <li>$Resources:core,EvalSiteNearingExpiryLi2;</li>
+      <ul>
+        <li>$Resources:core,EvalSiteNearingExpiryULLi1;</li>
+        <li>$Resources:core,EvalSiteNearingExpiryULLi2;</li>
+        <li>$Resources:core,EvalSiteNearingExpiryULLi3;</li>
+        <li>$Resources:core,EvalSiteNearingExpiryULLi4;</li>
+      </ul>
+      </ol>
+      </body>
+      </html>
+      ]]>
+    </HTML>
+  </Body>
+</EmailContent>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="48A243CB-7B16-4B5A-B1B5-07B809B43F47"
+   Title="$Resources:Microsoft.Office.Server.Search,SearchConfigContentType_FeatureTitle"
+   Description="$Resources:Microsoft.Office.Server.Search,SearchConfigContentType_FeatureDesc"
+   Version="15.0.0.0"
+   Hidden="FALSE"
+   Scope="Web"
+   DefaultResourceFile="core"
+   xmlns="http://schemas.microsoft.com/sharepoint/">
+   <ElementManifests>
+      <ElementManifest Location="contenttypesSearchConfig.xml" />
+   </ElementManifests>
+</Feature>
+

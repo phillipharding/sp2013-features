@@ -1,0 +1,13 @@
+<Feature  Id="5A979115-6B71-45a5-9881-CDC872051A69"
+          Title="SPS Biz Apps Field Definition"
+          Description="OOB field definitions for Biz Apps"
+          Version="14.0.0.0"
+          Scope="Site"
+          SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+          DefaultResourceFile="core"
+          Hidden="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="fieldsspsbizapps.xml"/>
+    </ElementManifests>
+</Feature>

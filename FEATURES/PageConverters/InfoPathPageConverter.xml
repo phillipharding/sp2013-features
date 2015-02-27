@@ -1,0 +1,14 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <DocumentConverter 
+        Id="{853d58f5-13c3-46f8-8b81-3ca4abcad7b3}"
+        Name="$Resources:cmscore,Converters_InfoPath_ConverterDisplayName"
+        App="InfoPathPageConverter.exe"
+        From="xml"
+        To="html"
+        ConverterUIPage="CreatePage.aspx"
+        ConverterSpecificSettingsUI="InfoPathPageConverterSettings.ascx"
+        ConverterSettingsForContentType="ConverterSettings.aspx"
+    />
+</Elements>

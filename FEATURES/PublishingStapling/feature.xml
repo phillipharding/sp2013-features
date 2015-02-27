@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="001F4BD7-746D-403b-AA09-A6CC43DE7942"
+          Title="Publishing Features Stapling"
+          Description="Staple Publishing features"
+          Version="14.0.0.0"
+          Scope="Farm"
+          Hidden="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <ElementManifests>
+        <ElementManifest Location="publishingstapling.xml"/>
+    </ElementManifests>
+
+</Feature>

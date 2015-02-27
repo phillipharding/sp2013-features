@@ -1,0 +1,11 @@
+<Feature Id="69CC9662-D373-47fc-9449-F18D11FF732C"
+    Title="$Resources:spscore,PeopleFeatures_MySite_Text;"
+    Description="$Resources:spscore,PeopleFeatures_MySite_Desc;"
+    Version="14.0.0.0"
+    Scope="Farm"
+    Hidden="TRUE"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="mysitefeatureelements.xml"/>
+    </ElementManifests>
+</Feature>

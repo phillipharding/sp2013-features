@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+  Id="87866A72-EFCF-4993-B5B0-769776B5283F"
+  Title="$Resources:core,ShareWithEveryoneStaplingFeatureTitle;"
+  Description="$Resources:core,ShareWithEveryoneStaplingFeatureDesc;"
+  Version="15.0.0.0"
+  Hidden="TRUE"
+  Scope="Farm">
+  <ElementManifests>
+    <ElementManifest Location="featurestapling.xml"/>
+  </ElementManifests>
+</Feature>

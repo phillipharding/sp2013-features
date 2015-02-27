@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="FC33BA3B-7919-4d7e-B791-C6AECCF8F851"
+          Title="$Resources:spscore,PeopleFeatures_ListTargeting_Text;"
+          Description="$Resources:spscore,PeopleFeatures_ListTargeting_Desc;"
+          Version="14.0.0.0"
+          Scope="Farm"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTargetingFeatureElements.xml"/>
+    </ElementManifests>
+</Feature>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebPart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Title>$Resources:spscore,DwpTextFilterTitle</Title>
+  <Description>$Resources:spscore,DwpTextFilterDescription</Description>
+  <Assembly>Microsoft.Office.Server.FilterControls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly> 
+  <TypeName>Microsoft.SharePoint.Portal.WebControls.SPSlicerTextWebPart</TypeName>
+  <FrameType>None</FrameType>
+  <PartImageSmall>/_layouts/images/wp_Filter.gif</PartImageSmall>
+  <PartImageLarge>/_layouts/images/wp_Filter.gif</PartImageLarge>
+</WebPart>

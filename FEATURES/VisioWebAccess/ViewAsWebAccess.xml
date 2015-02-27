@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction   Id="vwaViewAsWebAccessFromEcb"
+                  Title="$Resources:vsrv,Feature_VisioServer_ViewInBrowser_Title;"
+                  Description="$Resources:vsrv,Feature_VisioServer_ViewInBrowser_Description;"
+                  RegistrationType="FileType"
+                  RegistrationId="vdw"
+                  Sequence="255"
+                  Location="EditControlBlock"
+                  Rights="ViewListItems">
+      <UrlAction Url="~site/_layouts/15/VisioWebAccess/VisioWebAccess.aspx?listguid={ListId}&amp;itemid={ItemId}&amp;DefaultItemOpen=1" />
+  </CustomAction>
+
+  <CustomAction   Id="vwaViewAsWebAccessVsdxFromEcb"
+                  Title="$Resources:vsrv,Feature_VisioServer_ViewInBrowser_Title;"
+                  Description="$Resources:vsrv,Feature_VisioServer_ViewInBrowser_Description;"
+                  RegistrationType="FileType"
+                  RegistrationId="vsdx"
+                  Sequence="255"
+                  Location="EditControlBlock"
+                  Rights="ViewListItems">
+      <UrlAction Url="~site/_layouts/15/VisioWebAccess/VisioWebAccess.aspx?listguid={ListId}&amp;itemid={ItemId}&amp;DefaultItemOpen=1"/>
+  </CustomAction>
+
+  <CustomAction   Id="vwaViewAsWebAccessVsdmFromEcb"
+                  Title="$Resources:vsrv,Feature_VisioServer_ViewInBrowser_Title;"
+                  Description="$Resources:vsrv,Feature_VisioServer_ViewInBrowser_Description;"
+                  RegistrationType="FileType"
+                  RegistrationId="vsdm"
+                  Sequence="255"
+                  Location="EditControlBlock"
+                  Rights="ViewListItems">
+      <UrlAction Url="~site/_layouts/15/VisioWebAccess/VisioWebAccess.aspx?listguid={ListId}&amp;itemid={ItemId}&amp;DefaultItemOpen=1"/>
+  </CustomAction>
+
+</Elements>

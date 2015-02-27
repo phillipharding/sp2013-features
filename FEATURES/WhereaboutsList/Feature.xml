@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="9c2ef9dc-f733-432e-be1c-2e79957ea27b"
+    Title="$Resources:core,GbwFeatureWhereaboutsTitle;"
+    Description="$Resources:core,GbwFeatureWhereaboutsDescription;"
+    Version="3.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\whereaboutslist.xml" />
+        <ElementFile Location="whereabouts\schema.xml" />
+    </ElementManifests>
+    <UpgradeActions
+        ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        ReceiverClass="Microsoft.SharePoint.SPWhereaboutsListUpgradeFeatureReceiver">
+        <VersionRange EndVersion="1.0.0.0">
+            <CustomUpgradeAction Name="V2VUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="3.0.0.0">
+            <CustomUpgradeAction Name="FixupFormTemplateName" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

@@ -1,0 +1,17 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Feature Id="588B23D5-8E23-4B1B-9FE3-2F2F62965F2D"
+         Title="$Resources:cmscore,RollupPageLayouts_Feature_Title;"
+         Description="$Resources:cmscore,RollupPageLayouts_Feature_Description;"
+         Version="15.0.0.0"
+         Scope="Site"
+         Hidden="TRUE"
+         DefaultResourceFile="core"
+         ReceiverAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+         ReceiverClass="Microsoft.SharePoint.Publishing.RollupPageLayoutsFeatureHandler"
+         xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="RollupPageContentType.xml" />
+        <ElementManifest Location="ProvisionedFiles.xml" />
+    </ElementManifests>
+</Feature>

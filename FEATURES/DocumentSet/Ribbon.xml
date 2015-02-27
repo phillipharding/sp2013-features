@@ -1,0 +1,154 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Id="Ribbon.ManageDocumentSet"
+        Location="CommandUI.Ribbon"
+        Sequence="10"
+        Title="Manage Set A"
+    >
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.ContextualTabs._children">
+       <ContextualGroup Id="Ribbon.ManageDocumentSet" Color="Teal" Command="DocSet.ContextualGroup" 
+                ContextualGroupId="MDS" Title="$Resources:dlccore, Ribbon_ManageDocumentSet_ContextualTabName">
+       <Tab Id="Ribbon.ManageDocumentSet.MDS" Command="ManageDocumentSetTab" 
+                Title="$Resources:dlccore, Ribbon_ManageDocumentSet_TabName"
+                Description="">
+        <Scaling Id="Ribbon.ManageDocumentSet.MDS.Scaling">
+            <MaxSize Id="Ribbon.ManageDocumentSet.MDS.Scaling.Actions.MaxSize" Sequence="30" GroupId="Ribbon.ManageDocumentSet.MDS.Actions" Size="Large" />
+            <MaxSize Id="Ribbon.ManageDocumentSet.MDS.Scaling.Share.MaxSize" Sequence="40" GroupId="Ribbon.ManageDocumentSet.MDS.Share" Size="Large" />
+            <MaxSize Id="Ribbon.ManageDocumentSet.MDS.Scaling.Manage.MaxSize" Sequence="50" GroupId="Ribbon.ManageDocumentSet.MDS.Manage" Size="Large" />
+            <MaxSize Id="Ribbon.ManageDocumentSet.MDS.Scaling.Workflow.MaxSize" Sequence="60" GroupId="Ribbon.ManageDocumentSet.MDS.Workflow" Size="Medium" />
+            <Scale Id="Ribbon.ManageDocumentSet.MDS.Scaling.Manage.Medium" Sequence="70" GroupId="Ribbon.ManageDocumentSet.MDS.Manage" Size="Medium" />
+            <Scale Id="Ribbon.ManageDocumentSet.MDS.Scaling.Manage.Small" Sequence="80" GroupId="Ribbon.ManageDocumentSet.MDS.Manage" Size="Small" />
+            <Scale Id="Ribbon.ManageDocumentSet.MDS.Scaling.Manage.Popup" Sequence="90" GroupId="Ribbon.ManageDocumentSet.MDS.Manage" Size="Popup" />
+        </Scaling>
+        <Groups Id="Ribbon.ManageDocumentSet.MDS.Groups">
+          <Group 
+            Id="Ribbon.ManageDocumentSet.MDS.Actions"
+            Sequence="30"
+            Command="DocSet.ActionsGroup"
+            Description=""
+            Title="$Resources:dlccore, Ribbon_ManageDocumentSet_ActionsGroupText"
+            Template="Ribbon.Templates.Flexible" 
+          >
+            <Controls Id="Ribbon.ManageDocumentSet.MDS.Actions.Controls">
+              <Button
+                Id="Ribbon.ManageDocumentSet.MDS.Actions.EditProperties"
+                Sequence="20"
+                Command="DocSet.EditProperties"
+                Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-217" Image16by16Left="-217"
+                Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-103" Image32by32Left="-511"
+                LabelText="$Resources:dlccore, Ribbon_ManageDocumentSet_EditPropertiesButtonText"
+                ToolTipTitle="$Resources:dlccore,Ribbon_ManageDocumentSet_EditPropertiesButtonText;"
+                ToolTipDescription="$Resources:dlccore,Ribbon_TTDesc_ManageDocumentSet_EditPropertiesButtonText;"
+                TemplateAlias="o1"
+              />
+              <Button
+                Id="Ribbon.ManageDocumentSet.MDS.Actions.ManagePermissions"
+                Sequence="30"
+                Command="DocSet.ManagePermissions"
+                Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-145" Image16by16Left="-73"
+                Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-137" Image32by32Left="-477"
+                LabelText="$Resources:dlccore, Ribbon_ManageDocumentSet_PermissionsButtonText"
+                ToolTipTitle="$Resources:dlccore,Ribbon_ManageDocumentSet_PermissionsButtonText;"
+                ToolTipDescription="$Resources:dlccore,Ribbon_TTDesc_ManageDocumentSet_PermissionsButtonText;"
+                TemplateAlias="o1"
+              />
+              <Button
+                Id="Ribbon.ManageDocumentSet.MDS.Actions.Delete"
+                Sequence="40"
+                Command="DocSet.Delete"
+                Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-271" Image16by16Left="-271"
+                Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-69" Image32by32Left="-511"
+                LabelText="$Resources:dlccore, Ribbon_ManageDocumentSet_DeleteButtonText"
+                ToolTipTitle="$Resources:dlccore,Ribbon_ManageDocumentSet_DeleteButtonText;"
+                ToolTipDescription="$Resources:dlccore,Ribbon_TTDesc_ManageDocumentSet_DeleteButtonText;"
+                TemplateAlias="o1"
+              />
+            </Controls>
+          </Group>
+          <Group 
+            Id="Ribbon.ManageDocumentSet.MDS.Share"
+            Sequence="40"
+            Command="DocSet.ShareGroup"
+            Description=""
+            Title="$Resources:dlccore, Ribbon_ManageDocumentSet_ShareGroupText"
+            Template="Ribbon.Templates.Flexible" 
+          >
+            <Controls Id="Ribbon.ManageDocumentSet.MDS.Share.Controls">
+              <Button
+                Id="Ribbon.ManageDocumentSet.Share.EmailLink"
+                Sequence="10"
+                Command="DocSet.EmailLink"
+                LabelText="$Resources:dlccore, Ribbon_ManageDocumentSet_EmailLinkButtonText"
+                ToolTipTitle="$Resources:dlccore,Ribbon_ManageDocumentSet_EmailLinkButtonText;"
+                ToolTipDescription="$Resources:dlccore,Ribbon_TTDesc_ManageDocumentSet_EmailLinkButtonText;"
+                Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-115" Image16by16Left="-19"
+                Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-137" Image32by32Left="-511"
+                TemplateAlias="o1"
+              />
+              <Button
+                Id="Ribbon.ManageDocumentSet.MDS.Share.SendToRC"
+                Sequence="20"
+                Command="DocSet.SendToRC"
+                LabelText="$Resources:dlccore, Ribbon_ManageDocumentSet_SendToButtonText"
+                ToolTipTitle="$Resources:dlccore,Ribbon_ManageDocumentSet_SendToButtonText;"
+                ToolTipDescription="$Resources:dlccore,Ribbon_TTDesc_ManageDocumentSet_SendToButtonText;"
+                Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-253" Image16by16Left="-181"
+                Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-443" Image32by32Left="-1"
+                TemplateAlias="o1"
+              />
+            </Controls>
+          </Group>
+          <Group 
+            Id="Ribbon.ManageDocumentSet.MDS.Manage"
+            Sequence="50"
+            Command="DocSet.ManageGroup"
+            Description=""
+            Title="$Resources:dlccore, Ribbon_ManageDocumentSet_ManageGroupText"
+            Template="Ribbon.Templates.Flexible" 
+          >
+            <Controls Id="Ribbon.ManageDocumentSet.MDS.Manage.Controls">
+              <Button
+                Id="Ribbon.ManageDocumentSet.MDS.Manage.CreateVersion"
+                Sequence="30"
+                Command="DocSet.CreateVersion"
+                Image16by16="/_layouts/15/images/docset_captureversion_16.png?rev=23"
+                Image32by32="/_layouts/15/images/docset_captureversion_32.png?rev=23"
+                LabelText="$Resources:dlccore, Ribbon_ManageDocumentSet_CaptureVersionButtonText"
+                ToolTipTitle="$Resources:dlccore,Ribbon_ManageDocumentSet_CaptureVersionButtonText;"
+                ToolTipDescription="$Resources:dlccore,Ribbon_TTDesc_ManageDocumentSet_CaptureVersionButtonText;"
+                TemplateAlias="o1"
+              />
+              <Button
+                Id="Ribbon.ManageDocumentSet.MDS.Manage.VersionHistory"
+                Sequence="40"
+                Command="DocSet.VersionHistory"
+                Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-99" Image16by16Left="-55"
+                Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-35" Image32by32Left="-171"
+                LabelText="$Resources:dlccore, Ribbon_ManageDocumentSet_VersionHistoryButtonText"
+                ToolTipTitle="$Resources:dlccore,Ribbon_ManageDocumentSet_VersionHistoryButtonText;"
+                ToolTipDescription="$Resources:dlccore,Ribbon_TTDesc_ManageDocumentSet_VersionHistoryButtonText;"
+                TemplateAlias="o1"
+              />
+              <Button
+                Id="Ribbon.ManageDocumentSet.MDS.Manage.Workflows"
+                Sequence="50"
+                Command="DocSet.Workflows"
+                Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-55" Image16by16Left="-295"
+                Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-341" Image32by32Left="-477"
+                LabelText="$Resources:dlccore, Ribbon_ManageDocumentSet_WorkflowsButtonText"
+                ToolTipTitle="$Resources:dlccore,Ribbon_ManageDocumentSet_WorkflowsButtonText;"
+                ToolTipDescription="$Resources:dlccore,Ribbon_TTDesc_ManageDocumentSet_WorkflowsButtonText;"
+                TemplateAlias="o1"
+              />             
+            </Controls>
+          </Group>
+        </Groups>
+       </Tab>
+       </ContextualGroup>       
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+    </CustomAction>
+</Elements>

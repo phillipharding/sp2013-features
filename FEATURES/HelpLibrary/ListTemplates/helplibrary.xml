@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListTemplate  
+    Name="HelpLibrary"  
+    Type="151"  
+    BaseType="1"      
+    Catalog="TRUE"
+    DisallowContentTypes="FALSE"    
+    OnQuickLaunch="TRUE"  
+    VersioningEnabled="TRUE" 
+    Hidden="TRUE"
+    SecurityBits="11"  
+    Sequence="220"  
+    DisplayName="$Resources:Core,HelpLibraryDisplayName;"
+    Description="$Resources:Core,HelpLibraryDescription;"  
+    Image="/_layouts/15/images/itdl.png?rev=23"
+    DocumentTemplate="100"/>    
+</Elements>

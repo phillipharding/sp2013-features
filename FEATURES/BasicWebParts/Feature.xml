@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="00BFEA71-1C5E-4A24-B310-BA51C3EB7A57"
+        Title="$Resources:core,basicwebpartsFeatureTitle;" 
+        Description="$Resources:core,basicwebpartsFeatureDesc;" 
+        Version="15.0.4.0"
+        ImageUrl="WssBasicWebPartsFeature.gif"
+        Scope="Site" 
+        Hidden="TRUE"
+        DefaultResourceFile="core"
+        xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="elements.xml" />
+        <ElementManifest Location="elements14.xml" />
+        <ElementManifest Location="elements15.xml" />
+    </ElementManifests>
+    <UpgradeActions
+        ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        ReceiverClass="Microsoft.SharePoint.SPBasicWebpartsFeatureReceiver">
+        <VersionRange EndVersion="14.0.0.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="elements14.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="14.0.1.0">
+            <CustomUpgradeAction Name="SetGroupNames">
+                <Parameters>
+                    <Parameter Name="FileNames">
+			MSContentEditor.dwp|
+			MSImage.dwp|
+                        MSPageViewer.dwp|
+                        Silverlight.webpart|
+                        MSPictureLibrarySlideshow.webpart|
+                        MSMembers.dwp|
+                        MSUserTasks.dwp|
+                        MSSimpleForm.dwp|
+                        MSUserDocs.dwp|
+                        MSXml.dwp
+ 		    </Parameter>
+                    <Parameter Name="GroupNames">
+			$Resources:core,AuthoringWebPartGroup;|
+			$Resources:core,AuthoringWebPartGroup;|
+			$Resources:core,AuthoringWebPartGroup;|
+			$Resources:core,AuthoringWebPartGroup;|
+			$Resources:core,AuthoringWebPartGroup;|
+                        $Resources:core,PeopleWebPartGroup;|
+                        $Resources:core,PeopleWebPartGroup;|
+                        $Resources:core,FormsWebPartGroup;|
+                        $Resources:core,ContentRollupWebPartGroup;|
+                        $Resources:core,ContentRollupWebPartGroup;
+		   </Parameter>
+                </Parameters>
+            </CustomUpgradeAction>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.3.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="elements15.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.3.0" EndVersion="15.0.4.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="elements15.xml"/>
+          </ApplyElementManifests>
+          <CustomUpgradeAction Name="RemoveWebPartsFromGallery">
+              <Parameters>
+                  <Parameter Name="WebPartNames">
+                      BlogAdmin.webpart |
+                      BlogArchives.webpart
+                  </Parameter>
+              </Parameters>
+          </CustomUpgradeAction>
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

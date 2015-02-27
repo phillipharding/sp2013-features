@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="39DD29FB-B6F5-4697-B526-4D38DE4893E5"
+        Title="$Resources:core,mpsWebPartsFeatureTitle;" 
+        Description="$Resources:core,mpsWebPartsFeatureDesc;" 
+        Scope="Web" 
+        Hidden="TRUE"
+        DefaultResourceFile="core"
+        xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="elements.xml" />
+    </ElementManifests>
+</Feature>

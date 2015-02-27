@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature  Id="592CCB4A-9304-49AB-AAB1-66638198BB58"
+          Title="$Resources:SearchDrivenContent_Feature_Title;"
+          Description="$Resources:SearchDrivenContent_Feature_Desc;"
+          DefaultResourceFile="Microsoft.Office.Server.Search"
+          Version="15.0.1.0"
+
+          SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+          Scope="Site"
+          Hidden="TRUE"
+          ReceiverAssembly="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.Office.Server.Search.Administration.SearchEnterpriseWebPartsFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ProvisionedWebParts.xml"/>
+    </ElementManifests>
+    <UpgradeActions>
+        <VersionRange EndVersion="15.0.1.0">
+            <CustomUpgradeAction Name="RemoveOldWebparts"/>
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

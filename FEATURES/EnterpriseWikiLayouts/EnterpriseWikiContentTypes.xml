@@ -1,0 +1,18 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	    <!-- ENTERPRISE WIKI Content Type START -->
+	    <ContentType ID="0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39004C1F8B46085B4d22B1CDC3DE08CFFB9C" Name="$Resources:cmscore,contenttype_enterprisewiki_name;" Description="$Resources:cmscore,contenttype_enterprisewiki_description;" Group="$Resources:cmscore,group_pagelayoutcontenttypes;" Sealed="FALSE" Inherits="TRUE" Version="0">
+	        <FieldRefs>
+	            <FieldRef ID="{822c78e3-1ea9-4943-b449-57863ad33ca9}" Name="Modified_x0020_By" />
+	            <FieldRef ID="{F55C4D88-1F2E-4ad9-AAA8-819AF4EE7EE8}" Name="PublishingPageContent"/>
+	            <FieldRef ID="{5a14d1ab-1513-48c7-97b3-657a5ba6c742}" Name="Rating"/>
+	            <FieldRef ID="{b1996002-9167-45e5-a4df-b2c41c6723c7}" Name="Rating Count" />
+	            <FieldRef ID="{4D64B067-08C3-43DC-A87B-8B8E01673313}" Name="Rated By"/>
+	            <FieldRef ID="{434F51FB-FFD2-4A0E-A03B-CA3131AC67BA}" Name="Ratings" />
+	        </FieldRefs>
+	        <DocumentTemplate TargetName="/_layouts/15/CreatePage.aspx" />        
+	    </ContentType>
+	    <!-- ENTERPRISE WIKI Content Type END -->
+	    <ContentTypeBinding ContentTypeId="0x01010007FF3E057FA8AB4AA42FCB67B453FFC100E214EEE741181F4E9F7ACC43278EE811" ListUrl="_catalogs/masterpage" />
+</Elements>

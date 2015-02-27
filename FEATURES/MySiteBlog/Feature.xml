@@ -1,0 +1,20 @@
+<Feature Id="863DA2AC-3873-4930-8498-752886210911"
+    Title="My Site Blogs"
+    Description="Installs My Site Blog features."
+    Version="15.0.0.2"
+    Hidden="TRUE"
+    Scope="Site"
+    ReceiverAssembly="Microsoft.Office.Server.UserProfiles, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.Office.Server.UserProfiles.MySiteBlogFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+   <UpgradeActions
+       ReceiverAssembly="Microsoft.Office.Server.UserProfiles, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+       ReceiverClass="Microsoft.Office.Server.UserProfiles.MySiteBlogFeatureReceiver">
+        <VersionRange EndVersion="15.0.0.1">
+            <CustomUpgradeAction Name="RemoveBlogListEventReceiver" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.0.2">
+            <CustomUpgradeAction Name="MySiteBlog_DeactivateO14Navigation" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

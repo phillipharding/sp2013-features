@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="D9742165-B024-4713-8653-851573B9DFBD"
+	Title="$Resources:QBEFeatureTitle"	
+	Description="$Resources:QBEFeatureDescription"
+	DefaultResourceFile="dlccore"
+	Version="15.0.0.0"
+	Scope="Site"
+	Hidden="true"
+	xmlns="http://schemas.microsoft.com/sharepoint/"	
+	>
+</Feature>

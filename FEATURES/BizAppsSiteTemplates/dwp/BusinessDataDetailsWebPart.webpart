@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Microsoft.SharePoint.Portal.WebControls.BusinessDataDetailsWebPart,Microsoft.SharePoint.Portal,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+      <importErrorMessage>$Resources:spscore,DwpBdlCannotImport</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">$Resources:spscore,DwpBdItemTitle</property>
+        <property name="DataSourcesString" type="string"><![CDATA[<%@ Register TagPrefix="WebControls" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %><WebControls:BdcDataSource runat="server" />]]></property>
+        <property name="ChromeType">Default</property>
+        <property name="Description" type="string">$Resources:spscore,DwpBdItemDesc</property>
+        <property name="CatalogIconImageUrl" type="string">/_layouts/images/bizdatawebpart.gif</property>
+        <property name="CacheXslStorage" type="bool">true</property>
+        <property name="CacheXslTimeOut" type="int">600</property>
+        <property name="PartOrder" type="int">1</property>
+        <property name="ChromeState">Normal</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

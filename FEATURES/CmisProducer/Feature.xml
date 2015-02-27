@@ -1,0 +1,13 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Feature Id="1FCE0577-1F58-4fc2-A996-6C4BCF59EEED"
+    Title="$Resources:spcmis,spcmis_producer_feature_title;"
+    Description="$Resources:spcmis,spcmis_producer_feature_desc;"
+    Hidden="FALSE"
+    ActivateOnDefault="FALSE"
+    Version="1.0.0.0"
+    Scope="Web"
+    ReceiverAssembly="Microsoft.SharePoint.CMIS.Bindings, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.CMIS.Bindings.FeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

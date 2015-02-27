@@ -1,0 +1,77 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:dmscore,IDS_CBSHoverpanelTitle</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:ManagedPropertyMapping msdt:dt="string">&quot;Image Url&quot;:&quot;PictureThumbnailURL&quot;,&quot;Line 1&quot;:&quot;DMSDocTitle&quot;,&quot;Line 1 Link Url&quot;:&quot;Path&quot;,&quot;Line 2&quot;:&quot;DMSDocAuthor&quot;,&quot;Line 2 Link Url&quot;:&quot;url&quot;,&quot;Line 3&quot;:&quot;LastModifiedTime&quot;,&quot;FileExtension&quot;,&quot;Description&quot;,&quot;owstaxidmetadataalltagsinfo&quot;,&quot;DMSDocAccessRight&quot;,&quot;DMSLeaseTerm&quot;</mso:ManagedPropertyMapping>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentType msdt:dt="string">Item Display Template</mso:ContentType>
+<mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="DMSCBSItemHoverpanel">
+    <!--#_
+        var id = ctx.CurrentItem.id;
+        var closeId = $htmlEncode(id + HP.ids.close);
+    _#-->
+        <div class="ms-srch-hover-innerContainer ms-srch-hover-standardSize" id="_#= $htmlEncode(id + HP.ids.inner) =#_">
+            <div class="ms-srch-hover-arrowBorder" id="_#= $htmlEncode(id + HP.ids.arrowBorder) =#_"></div>
+            <div class="ms-srch-hover-arrow" id="_#= $htmlEncode(id + HP.ids.arrow) =#_"></div>
+            <div class="ms-srch-hover-content" id="_#= $htmlEncode(id + HP.ids.content) =#_" data-displaytemplate="DMSCBSItemHoverpanel">
+                <div class="ms-srch-hover-header">
+                    <div class="ms-srch-hover-close">
+                        <a href="javascript:HP.Close()" id="_#= closeId =#_" title="_#= $htmlEncode(Srch.Res.hp_Tooltip_Close) =#_">
+                            <img src="_#= $urlHtmlEncode(SP.Utilities.VersionUtility.getImageUrl(Srch.SU.closeImage)) =#_" />
+                        </a>
+                    </div>
+                    <div class="ms-srch-hover-title ms-dlg-heading ms-srch-ellipsis">
+    <!--#_
+                    if (!Srch.U.e(ctx.CurrentItem.DMSDocTitle) && !Srch.U.e(ctx.CurrentItem.Path)) 
+                    {
+    _#-->
+                        <span id="title">_#= $htmlEncode(ctx.CurrentItem.DMSDocTitle) =#_</span>
+    <!--#_
+                    }
+    _#-->
+                    </div>
+                </div>
+
+                <div class="ms-srch-hover-body" id="_#= $htmlEncode(id + HP.ids.body) =#_">
+    <!--#_
+                if (!Srch.U.e(ctx.CurrentItem.owstaxidmetadataalltagsinfo))
+                {
+                    var category = ($getItemValue(ctx, "owstaxidmetadataalltagsinfo").value)[0].entityLabel;
+    _#-->
+                    <div class="dms-home-callout-textblock-clip">
+                            _#= $htmlEncode(dms.res.category_Label) =#_ <span title="_#= $htmlEncode(category) =#_">_#= $htmlEncode(category) =#_</span>
+                    </div>
+    <!--#_
+                }
+    _#-->
+
+    <!--#_
+                if (!Srch.U.e(ctx.CurrentItem.Description))
+                {
+                    var description = ctx.CurrentItem.Description;
+                    if (description.length > 200)
+                    {
+                        description = description.substring(0, 200).concat(dms.res.dotDotDot);
+                    }
+    _#-->
+                    <div class="dms-calloutMultiLineBlock">
+                        <p class="dms-calloutMultiLineParagraph">_#= $htmlEncode(description) =#_</p>
+                    </div>
+    <!--#_
+                }
+    _#-->
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

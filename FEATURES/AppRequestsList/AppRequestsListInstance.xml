@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListInstance 
+        Title="$Resources:core,Marketplace_AppRequestsListInstanceTitle;"
+        OnQuickLaunch="TRUE"
+        TemplateType="333"
+        Url="AppRequests"
+        Description="$Resources:core,Marketplace_AppRequestsListInstanceDescription;">
+    </ListInstance>
+</Elements>

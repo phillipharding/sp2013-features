@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="dcl"
+        Type="130"
+        BaseType="1"
+        OnQuickLaunch="TRUE"
+        SecurityBits="11"
+        DisplayName="$Resources:core,dataconnectionlibraryList;"
+        Description="$Resources:core,dataconnectionlibraryList_Desc;"
+        Image="/_layouts/15/images/itdcl.png?rev=23"
+        DocumentTemplate="100"/>
+</Elements>

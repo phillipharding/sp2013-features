@@ -1,0 +1,14 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="abusereports"
+        Type="925"
+        Hidden="TRUE"
+        DisplayName="$Resources:spscore,AbuseReports_ListName;"
+        BaseType="0"
+        OnQuickLaunch="FALSE"
+        AllowDeletion="FALSE"
+        SecurityBits="22"
+        Unique="TRUE">
+    </ListTemplate>
+</Elements>
+

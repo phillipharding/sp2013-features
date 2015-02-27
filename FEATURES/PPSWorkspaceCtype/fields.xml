@@ -1,0 +1,79 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<!-- Description -->
+	<Field ID="{9CDC5C49-B00D-4224-925F-B5443E27555E}" 
+	  Name="PPSMA_Description" 
+	  StaticName="PPSMA_Description" 
+	  Description="$Resources:ppsma,ContentTypeField_Description_Description" 
+	  Group="$Resources:ppsma,ContentType_Group" 
+	  Type="Note"
+	  MaxLength="4000"
+	  DisplayName="$Resources:ppsma,ContentTypeField_Description_DisplayName"
+	  Filterable="FALSE"
+	  Sortable="TRUE"
+	  UnlimitedLengthInDocumentLibrary="TRUE"
+		 />
+
+	<!-- FCO Image -->
+	<Field ID="{0760DCAC-227D-4E68-BC88-0E2CF7A37D78}" 
+	  Name="PPSMA_FCOImage" 
+	  StaticName="PPSMA_FCOImage" 
+	  Description="$Resources:ppsma,ContentTypeField_FCOImage_Description" 
+	  Group="$Resources:ppsma,ContentType_Group" 
+	  Type="URL"
+	  Format="Image"
+	  DisplayName="$Resources:ppsma,ContentTypeField_FCOImage_DisplayName"
+	  Filterable="TRUE"
+	  Sortable="TRUE"
+		 />
+
+	<!-- Person Responsible -->
+	<Field ID="{D2987D24-D5A5-4c92-9BD7-8BF4CC9D3A28}" 
+	  Name="PPSMA_PersonResponsible" 
+	  StaticName="PPSMA_PersonResponsible" 
+	  Description="$Resources:ppsma,ContentTypeField_PersonResponsible_Description" 
+	  Group="$Resources:ppsma,ContentType_Group" 
+	  Type="Text" 
+	  DisplayName="$Resources:ppsma,ContentTypeField_PersonResponsible_DisplayName"
+	  Filterable="TRUE"
+	  Sortable="TRUE"
+		 />
+
+	<!-- Display Folder -->
+	<Field ID="{8D1C1258-E2E1-47e3-A0C5-E88918B62B90}"
+	  Name="PPSMA_DisplayFolder"
+	  StaticName="PPSMA_DisplayFolder"
+	  Description="$Resources:ppsma,ContentTypeField_DisplayFolder_Description"
+	  Group="$Resources:ppsma,ContentType_Group" 
+	  Type="Text"
+	  DisplayName="$Resources:ppsma,ContentTypeField_DisplayFolder_DisplayName"
+	  Filterable="TRUE"
+	  Sortable="TRUE"
+		 />
+
+	<!-- KPI XML Definition-->
+	<Field ID="{A6626D3C-461B-4412-AFAB-1410FFFC9359}" 
+	  Name="PPSMA_ObjectXML" 
+	  StaticName="PPSMA_ObjectXML" 
+	  Description="$Resources:ppsma,ContentTypeField_ObjectXML_Description" 
+	  Group="$Resources:ppsma,ContentType_Group" 
+	  Type="Note" 
+	  DisplayName="$Resources:ppsma,ContentTypeField_ObjectXML_DisplayName" 
+	  Hidden="TRUE"
+	  Filterable="FALSE"
+	  Sortable="FALSE"
+		 />
+
+	<!-- FCO Subtype-->
+	<Field ID="{583B03D7-869B-4DE8-B86E-908D19A9E0FE}" 
+	  Name="PPSMA_FCOSubType" 
+	  StaticName="PPSMA_FCOSubType" 
+	  Description="$Resources:ppsma,ContentTypeField_FCOSubType_Description" 
+	  Group="$Resources:ppsma,ContentType_Group" 
+	  Type="Text" 
+	  DisplayName="$Resources:ppsma,ContentTypeField_FCOSubType_DisplayName" 
+	  Hidden="TRUE"
+	  Filterable="FALSE"
+	  Sortable="FALSE"
+		 />
+</Elements>

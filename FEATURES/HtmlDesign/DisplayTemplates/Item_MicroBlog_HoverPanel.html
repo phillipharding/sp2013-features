@@ -1,0 +1,316 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_MicroBlogHoverPanel</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+    <mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+    <mso:MasterPageDescription msdt:dt="string">$Resources:Microsoft.Office.Server.Search,DisplayTemplateDescription_MicroBlogHoverPanel</mso:MasterPageDescription>
+    <mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+    <mso:TargetControlType msdt:dt="string">;#SearchHoverPanel;#</mso:TargetControlType>
+    <mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+    <mso:ManagedPropertyMapping msdt:dt="string">'Title':'Title','Author':'FullPostAuthor','Path':'Path','Description':'Description','LastModifiedTime':'LastModifiedTime','CollapsingStatus':'CollapsingStatus','Created':'Created','HitHighlightedSummary':'HitHighlightedSummary','HitHighlightedProperties':'HitHighlightedProperties','ParentLink':'ParentLink','AttachmentDescription':'AttachmentDescription','AttachmentType':'AttachmentType','AttachmentURI':'AttachmentURI','RootPostID':'RootPostID','ReplyCount':'ReplyCount','LikesCount':'LikesCount','FullPostBody':'FullPostBody'</mso:ManagedPropertyMapping>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="Item_MicroBlog_HoverPanel">
+<!--#_
+        var maxRepliesToShow = 2;
+        var maxBodyLengthInChars = 120;
+
+        var i = 0;
+        var id = ctx.CurrentItem.id;
+        ctx.CurrentItem.csr_FileType = Srch.Res.hp_MicroBlog;
+
+        var microBlogPostType = -1;
+        if(!$isNull(ctx.CurrentItem.MicroBlogType))
+        {
+            microBlogPostType = ctx.CurrentItem.MicroBlogType;
+        }
+
+        var path = "";
+        var threadLink = "";            
+        if(!$isNull(ctx.CurrentItem.Path))
+        {
+            path = ctx.CurrentItem.Path;
+            var idx = path.lastIndexOf("/Lists/PublishedFeed");
+            if(idx > -1)
+            {
+                threadLink = path.substr(0, idx) + "/newsfeed.aspx?ThreadID=" + $urlKeyValueEncode(path);
+            }
+        }
+
+        var authorUsername = "";
+        if(!$isNull(ctx.CurrentItem.PostAuthor))
+        {
+            authorUsername = ctx.CurrentItem.PostAuthor;
+        }
+
+        var authorElementId = id + "_author";
+        var viewConversationLinkId = id + "_viewConversation";
+        var userPersonaId = id + "_peopleUserPersona";
+
+        AddPostRenderCallback(ctx, function()
+        {
+            var personaControlElement = document.getElementById(userPersonaId);
+            if($isNull(personaControlElement))
+            {
+                return;
+            }
+
+            Srch.U.ensureCSSClassNameExist(personaControlElement, "ms-srch-display-none");
+
+            EnsureScriptFunc("SP.runtime.js", "SP.ClientRuntimeContext", function()
+            {
+                var ctxCurrent = Srch.ScriptApplicationManager.get_clientRuntimeContext();
+
+                var peopleManager = SP.UserProfiles.PeopleManager.newObject(ctxCurrent);
+                var authorprops = peopleManager.getPropertiesFor(authorUsername);
+                var propertiesToInclude = [ "DisplayName", "AccountName", "PictureUrl", "Email" ];
+                ctxCurrent.load(authorprops, propertiesToInclude);
+
+                var rootPostSuccess = function()
+                {
+                    var authorName = "";
+                    if(authorprops.isPropertyAvailable("DisplayName"))
+                    {
+                        authorName = authorprops.get_displayName();
+                        var authorElement = document.getElementById(authorElementId);
+                        if(!$isNull(authorElement))
+                        {
+                            authorElement.innerHTML = $htmlEncode(authorName);
+                        }
+                    }
+
+                    var authorEmail = "";
+                    if(authorprops.isPropertyAvailable("Email"))
+                    {
+                        authorEmail = authorprops.get_email();
+                    }
+
+                    var authorPicUrl = "";
+                    if(authorprops.isPropertyAvailable("PictureUrl"))
+                    {
+                        authorPicUrl = authorprops.get_pictureUrl();
+                    }
+
+                    var renderCtx = new ContextInfo();
+                    renderCtx.Templates = {};
+                    renderCtx.Templates["Fields"] = {};
+                    var fieldSchemaData = { "PictureOnly":"1", "PictureSize": "Size_48px"};
+                    var listSchema = {"EffectivePresenceEnabled": "1", "PresenceAlt": "No presence information"};
+                    var userData = {"title": authorName, "email": authorEmail, "picture": authorPicUrl};
+
+                    personaControlElement.innerHTML = RenderUserFieldWorker(renderCtx, fieldSchemaData, userData, listSchema);
+
+                    Srch.U.ensureCSSClassNameNotExist(personaControlElement, "ms-srch-display-none");
+                    if (personaControlElement.offsetWidth < Srch.U.personaControlRenderedThreshold)
+                    {
+                        Srch.U.ensureCSSClassNameExist(personaControlElement, "ms-srch-display-none");
+                    }
+
+                };
+                var rootPostFailure = function()
+                {
+                    Srch.U.trace(null, "Item_MicroBlog_HoverPanel", "Failed to retrieve user information.");
+                };
+
+                ctxCurrent.executeQueryAsync(rootPostSuccess, rootPostFailure);
+            });
+        });
+_#-->
+        <div class="ms-srch-hover-innerContainer ms-srch-hover-standardSize" id="_#= $htmlEncode(id + HP.ids.inner) =#_">
+            <div class="ms-srch-hover-arrowBorder" id="_#= $htmlEncode(id + HP.ids.arrowBorder) =#_"></div>
+            <div class="ms-srch-hover-arrow" id="_#= $htmlEncode(id + HP.ids.arrow) =#_"></div>
+            <div class="ms-srch-hover-content" id="_#= $htmlEncode(id + HP.ids.content) =#_" data-displaytemplate="MicroBlogHoverPanel">
+                <div id="_#= $htmlEncode(id + HP.ids.header) =#_" class="ms-srch-hover-header">
+                    _#= ctx.RenderHeader(ctx) =#_
+                </div>
+
+                <div id="_#= $htmlEncode(id + HP.ids.body) =#_" class="ms-srch-hover-body ms-srch-discussionHover-body">
+                    <div class="ms-srch-hover-post">
+                        <div id="_#= $htmlEncode(userPersonaId) =#_" class="ms-srch-hover-postPersona"></div>
+                        <div>
+                            <h3 id="_#= $htmlEncode(authorElementId) =#_"></h3>
+
+                            <div class="ms-srch-hover-text ms-srch-hover-postText">
+                                _#= $htmlEncode(Srch.U.truncateEnd(ctx.CurrentItem.FullPostBody, maxBodyLengthInChars)) =#_
+
+<!--#_
+                            if( !$isNull(ctx.CurrentItem.AttachmentType) &&
+                                (ctx.CurrentItem.AttachmentType === 1) &&
+                                !Srch.U.e(ctx.CurrentItem.AttachmentURI))
+                            {
+_#-->
+                                <div class="ms-srch-hover-microBlogImageContainer">
+                                    <img id="PostCalloutPicture" src="_#= $urlHtmlEncode(ctx.CurrentItem.AttachmentURI) =#_" alt="_#= $htmlEncode(ctx.CurrentItem.AttachmentDescription) =#_" />
+                                </div>
+<!--#_
+                            }
+_#-->
+                            </div>
+                            <div class="ms-metadata">
+
+<!--#_
+                            if(!$isNull(ctx.CurrentItem.Created))
+                            {
+                                var timeSincePostId = id + "_timeSincePost";
+                                AddPostRenderCallback(ctx, function()
+                                {
+                                    Srch.U.renderFriendlyTimeIntervalString(ctx.CurrentItem.Created, timeSincePostId);
+                                });
+_#-->
+                                <span class="ms-srch-hover-dateMetadata" id="_#= $htmlEncode(timeSincePostId) =#_"></span>
+<!--#_
+                            }
+_#-->
+                                <span class="ms-srch-hover-popularityMetadata">
+<!--#_ 
+                                    var replyCount = 0;
+                                    if (!$isNull(ctx.CurrentItem.ReplyCount))
+                                    {
+                                        replyCount = ctx.CurrentItem.ReplyCount;
+                                    }
+
+                                    var likesCount = 0;
+                                    if (!$isNull(ctx.CurrentItem.DiscussionLikesCount))
+                                    {
+                                        likesCount = ctx.CurrentItem.DiscussionLikesCount;
+                                    }
+                                    else if (!$isNull(ctx.CurrentItem.LikesCount))
+                                    {
+                                        likesCount = ctx.CurrentItem.LikesCount;
+                                    }
+
+                                    var encodedPopularityMetadata = Srch.SSU.getEncodedSocialMetadataString(
+                                        replyCount,
+                                        likesCount);
+_#-->
+                                    _#= encodedPopularityMetadata =#_
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+<!--#_
+                if( microBlogPostType === SP.Microfeed.MicroBlogType.replyPost &&
+                    !$isNull(ctx.CurrentItem.OriginalPath) &&
+                    !$isNull(ctx.CurrentItem.RootPostID) )
+                {
+                    var headerElementID = id + "_headerElement";
+                    var rootPostPersonaElementID = id + "_personaElement";
+                    var rootPostTextContainerID = id + "_textContainer";
+                    var rootPostTitleElementID = rootPostPersonaElementID + Srch.SSU.microBlogTitleIdSuffix;
+_#-->
+                    <div id="_#= $htmlEncode(headerElementID) =#_" class="ms-srch-hover-additionalRepliesHeader ms-srch-display-none">
+                        <span class="ms-metadata">
+                            _#= $htmlEncode(Srch.Res.hp_OriginalPost) =#_
+                        </span>
+                    </div>
+                    <div class="ms-srch-hover-post">
+                        <div id="_#= $htmlEncode(rootPostPersonaElementID) =#_" class="ms-srch-hover-postPersona"></div>
+                        <div id="_#= $htmlEncode(rootPostTextContainerID) =#_">
+                            <h3 id="_#= $htmlEncode(rootPostTitleElementID) =#_"></h3>
+                        </div>
+                    </div>
+<!--#_
+                    AddPostRenderCallback(ctx, function()
+                    {
+                        var commonUrlEndIndex = ctx.CurrentItem.OriginalPath.indexOf("DispForm.aspx?ID=");
+                        var commonUrlPrefix = ctx.CurrentItem.OriginalPath.substring(0, commonUrlEndIndex) + "*";
+
+                        var queryText = 'listitemid:\"' + ctx.CurrentItem.RootPostID + '\" AND path:\"' + commonUrlPrefix + '\"';
+
+                        Srch.SSU.populatePostsByQuery(
+                            ctx.ClientControl,
+                            queryText,
+                            headerElementID,
+                            null,
+                            [rootPostPersonaElementID],
+                            [rootPostTextContainerID],
+                            Srch.SSU.TextElementType.microblogElement,
+                            maxBodyLengthInChars);
+                    });
+                }
+                else if((microBlogPostType === SP.Microfeed.MicroBlogType.rootPost || microBlogPostType === SP.Microfeed.MicroBlogType.activityEventRootPost) &&
+                        !$isNull(ctx.CurrentItem.ReplyCount) &&
+                        ctx.CurrentItem.ReplyCount > 0 &&
+                        !$isNull(ctx.CurrentItem.OriginalPath) &&
+                        !$isNull(ctx.CurrentItem.ListItemID))
+                {
+                    var headerElementID = id + "_headerElement";
+_#-->
+                    <div id="_#= $htmlEncode(headerElementID) =#_" class="ms-srch-hover-additionalRepliesHeader ms-srch-display-none">
+                        <span class="ms-metadata">
+                            _#= $htmlEncode(Srch.Res.hp_RecentReplies) =#_
+                        </span>
+                    </div>
+
+<!--#_
+                    var personaElementIDs = new Array();
+                    var textContainerIDs = new Array();
+
+                    for(j = 0; j < maxRepliesToShow && j < ctx.CurrentItem.ReplyCount; ++j)
+                    {
+                        var nextPersonaElementID = id + "_personaElement_" + j;
+                        personaElementIDs.push(nextPersonaElementID);
+
+                        var nextTextContainerID = id + "_textContainer_" + j;
+                        textContainerIDs.push(nextTextContainerID);
+
+                        var nextTitleElementID = nextPersonaElementID + Srch.SSU.microBlogTitleIdSuffix;
+_#-->
+                    <div class="ms-srch-hover-post">
+                        <div id="_#= $htmlEncode(nextPersonaElementID) =#_" class="ms-srch-hover-postPersona"></div>
+                        <div id="_#= $htmlEncode(nextTextContainerID) =#_">
+                            <h3 id="_#= $htmlEncode(nextTitleElementID) =#_"></h3>
+                        </div>
+                    </div>
+<!--#_
+                    }
+
+                    AddPostRenderCallback(ctx, function()
+                    {
+                        var commonUrlEndIndex = ctx.CurrentItem.OriginalPath.indexOf("DispForm.aspx?ID=");
+                        var commonUrlPrefix = ctx.CurrentItem.OriginalPath.substring(0, commonUrlEndIndex) + "*";
+
+                        var queryText = 'rootpostid:\"' + ctx.CurrentItem.ListItemID + '\" AND path:\"' + commonUrlPrefix + '\"';
+
+                        var sort = new Srch.ResultSort(
+                            "LastModifiedTime",
+                            Microsoft.SharePoint.Client.Search.Query.SortDirection.descending);
+
+                        Srch.SSU.populatePostsByQuery(
+                            ctx.ClientControl,
+                            queryText,
+                            headerElementID,
+                            [sort],
+                            personaElementIDs,
+                            textContainerIDs,
+                            Srch.SSU.TextElementType.microblogElement,
+                            maxBodyLengthInChars);
+                    });
+                }
+_#-->
+
+                </div>
+                <div id="_#= $htmlEncode(id + HP.ids.actions) =#_" class="ms-srch-hover-actions">
+<!--#_
+                if (!Srch.U.e(threadLink))
+                {
+_#-->
+                    <div class="ms-srch-hover-action">
+                        <a clicktype="ActionEdit" id="_#= $htmlEncode(viewConversationLinkId) =#_" class="ms-calloutLink ms-uppercase" href="_#= $urlHtmlEncode(threadLink) =#_">
+                            _#= $htmlEncode(Srch.Res.hp_ViewConversation) =#_
+                        </a>
+                    </div>
+<!--#_ 
+                }
+_#-->
+                </div>
+            </div> 
+        </div>
+    </div>
+</body>
+</html>

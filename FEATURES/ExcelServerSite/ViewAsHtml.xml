@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <CustomAction   Id="ewrViewAsHtmlFromEcb"
+                  Title="$Resources:xlsrv,ewrViewAsHtmlFromEcb-title;"
+                  Description="$Resources:xlsrv,ewrViewAsHtmlFromEcb-description;"
+                  RegistrationType="FileType"
+                  RegistrationId="xlsx"
+                  Sequence="255"
+                  Location="EditControlBlock"
+                  Rights="ViewListItems"
+                  ShowIfWOPIProviderPresent="FALSE">
+      <UrlAction Url="javascript:(function(){var a=document.createElement('a');a.href=SPClientTemplates.Utility.ReplaceUrlTokens('~site/_layouts/15/xlviewer.aspx?id={ItemUrl}&amp;DefaultItemOpen=1');GoToLinkOrDialogNewWindow(a)})()"/>
+  </CustomAction>
+
+  <CustomAction   Id="ewrViewAsHtmlFromEcb"
+                  Title="$Resources:xlsrv,ewrViewAsHtmlFromEcb-title;"
+                  Description="$Resources:xlsrv,ewrViewAsHtmlFromEcb-description;"
+                  RegistrationType="FileType"
+                  RegistrationId="xlsm"
+                  Sequence="255"
+                  Location="EditControlBlock"
+                  Rights="ViewListItems"
+                  ShowIfWOPIProviderPresent="FALSE">
+   <UrlAction Url="javascript:(function(){var a=document.createElement('a');a.href=SPClientTemplates.Utility.ReplaceUrlTokens('~site/_layouts/15/xlviewer.aspx?id={ItemUrl}&amp;DefaultItemOpen=1');GoToLinkOrDialogNewWindow(a)})()"/>
+   </CustomAction>
+
+  <CustomAction   Id="ewrViewAsHtmlFromEcb"
+                  Title="$Resources:xlsrv,ewrViewAsHtmlFromEcb-title;"
+                  Description="$Resources:xlsrv,ewrViewAsHtmlFromEcb-description;"
+                  RegistrationType="FileType"
+                  RegistrationId="xlsb"
+                  Sequence="255"
+                  Location="EditControlBlock"
+                  Rights="ViewListItems"
+                  ShowIfWOPIProviderPresent="FALSE">
+   <UrlAction Url="javascript:(function(){var a=document.createElement('a');a.href=SPClientTemplates.Utility.ReplaceUrlTokens('~site/_layouts/15/xlviewer.aspx?id={ItemUrl}&amp;DefaultItemOpen=1');GoToLinkOrDialogNewWindow(a)})()"/>
+   </CustomAction>
+
+   <CustomAction  Id="ewrViewAsHtmlFromEcb"
+                  Title="$Resources:xlsrv,ewrViewAsHtmlFromEcb-title;"
+                  Description="$Resources:xlsrv,ewrViewAsHtmlFromEcb-description;"
+                  RegistrationType="FileType"
+                  RegistrationId="ods"
+                  Sequence="255"
+                  Location="EditControlBlock"
+                  Rights="ViewListItems"
+                  ShowIfWOPIProviderPresent="FALSE">
+   <UrlAction Url="javascript:(function(){var a=document.createElement('a');a.href=SPClientTemplates.Utility.ReplaceUrlTokens('~site/_layouts/15/xlviewer.aspx?id={ItemUrl}&amp;DefaultItemOpen=1');GoToLinkOrDialogNewWindow(a)})()"/>
+   </CustomAction>
+</Elements>

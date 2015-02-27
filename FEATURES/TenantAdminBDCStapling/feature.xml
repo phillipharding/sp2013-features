@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+  Id="B5D169C9-12DB-4084-B68D-EEF9273BD898"
+  Title="$Resources:core,tenantadminbdcstaplingFeatureTitle;"
+  Description="$Resources:core,tenantadminbdcstaplingFeatureDesc;"
+  Version="14.0.0.0"
+  Hidden="TRUE"
+  Scope="Farm">
+  <ElementManifests>
+    <ElementManifest Location="featurestapling.xml"/>
+  </ElementManifests>
+</Feature>

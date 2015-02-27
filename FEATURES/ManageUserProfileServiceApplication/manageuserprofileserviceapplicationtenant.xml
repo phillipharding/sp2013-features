@@ -1,0 +1,146 @@
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomActionGroup
+        Id="TPE"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationTenant"
+        Title="$Resources:spscore,ManageProfileService_People_Title;"
+        Sequence="10"
+        ImageUrl="/_layouts/images/peopletitle.png" />
+    <CustomAction
+        Id="TPE_MUP"
+        GroupId="TPE"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationTenant"
+        Sequence="10"
+        Title="$Resources:spscore,ManageProfileService_People_UserProperties_Title;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('MgrProperty.aspx?ProfileType=User&amp;')" />
+    </CustomAction>
+    <CustomAction
+        Id="TPE_MUPR"
+        GroupId="TPE"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationTenant"
+        Sequence="20"
+        Title="$Resources:spscore,ManageProfileService_People_UserProfiles_Title;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('ProfMngr.aspx?ConsoleView=Active&amp;ProfileType=User&amp;')" />
+    </CustomAction>
+    <CustomAction
+        Id="TPE_UST"
+        GroupId="TPE"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationTenant"
+        Sequence="30"
+        Title="$Resources:spscore,ManageProfileService_People_UserSubtypes_Title;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('ManageSubTypes.aspx?ProfileType=User&amp;')" />
+    </CustomAction>
+    <CustomAction
+        Id="TPE_AUD"
+        GroupId="TPE"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationTenant"
+        Sequence="40"
+        Title="$Resources:spscore,ManageProfileService_People_Audiences_Title;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('Audience_List.aspx?')" />
+    </CustomAction>
+    <CustomAction
+        Id="TPE_MP"
+        GroupId="TPE"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationTenant"
+        Sequence="50"
+        Title="$Resources:spscore,ManageProfileService_People_ManageUserPermissions_Title;">
+        <UrlAction
+            Url="javascript:DoSetPermissions('UserProfileApplicationPermissions.aspx?')" />
+    </CustomAction>
+    <CustomAction
+        Id="TPE_MPP"
+        GroupId="TPE"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationTenant"
+        Sequence="60"
+        Title="$Resources:spscore,ManageProfileService_ManagePolicies_Title;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('ManagePrivacyPolicy.aspx?')" />
+    </CustomAction>
+
+    <CustomActionGroup
+        Id="TOR"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationTenant"
+        Title="$Resources:spscore,ManageProfileService__Organization_Title;"
+        Sequence="20"
+        ImageUrl="/_layouts/images/organizationtitle.png" />
+    <CustomAction
+        Id="TOR_MP"
+        GroupId="TOR"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationTenant"
+        Sequence="10"
+        Title="$Resources:spscore,ManageProfileService_Organization_Properties;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('MgrProperty.aspx?ProfileType=Organization&amp;')" />
+    </CustomAction>
+    <CustomAction
+        Id="TOR_MPR"
+        GroupId="TOR"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationTenant"
+        Sequence="30"
+        Title="$Resources:spscore,ManageProfileService_Organization_Profiles;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('ProfMngr.aspx?ConsoleView=Active&amp;ProfileType=Organization&amp;')" />
+    </CustomAction>
+    <CustomAction
+        Id="TOR_ST"
+        GroupId="TOR"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationTenant"
+        Sequence="40"
+        Title="$Resources:spscore,ManageProfileService_Organization_Subtypes;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('ManageSubTypes.aspx?ProfileType=Organization&amp;')" />
+    </CustomAction>
+
+    <CustomActionGroup
+        Id="TMS"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationTenant"
+        Title="$Resources:spscore,ManageProfileService_Mysite;"
+        Sequence="30"
+        ImageUrl="/_layouts/images/mysitetitle.png" />
+    <CustomAction
+        Id="TMS_S"
+        GroupId="TMS"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationTenant"
+        Sequence="10"
+        Title="$Resources:spscore,ManageProfileService_Mysite_Setup;">
+        <UrlAction Url="javascript:AppendApplicationIdAndNavigate('PersonalSites.aspx?')" />
+    </CustomAction>
+    <CustomAction
+        Id="TMS_H"
+        GroupId="TMS"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationTenant"
+        Sequence="20"
+        Title="$Resources:spscore,ManageProfileService_Mysite_Host;">
+        <UrlAction Url="javascript:AppendApplicationIdAndNavigate('ManageLinks.aspx?LinksType=0&amp;')" />
+    </CustomAction>
+    <CustomAction
+        Id="TMS_P"
+        GroupId="TMS"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationTenant"
+        Sequence="30"
+        Title="$Resources:spscore,ManageProfileService_MySite_PromotedSites;">
+        <UrlAction Url="javascript:AppendApplicationIdAndNavigate('ManageLinks.aspx?LinksType=1&amp;')" />
+    </CustomAction>
+
+    <CustomAction
+        Id="TMS_PU"
+        GroupId="TMS"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationTenant"
+        Sequence="40"
+        Title="$Resources:spscore,ManageProfileService_Mysite_Publish;">
+        <UrlAction Url="javascript:AppendApplicationIdAndNavigate('ManageLinks.aspx?LinksType=2&amp;')" />
+    </CustomAction>
+    <CustomAction
+        Id="TMS_MS"
+        GroupId="TMS"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplicationTenant"
+        Sequence="50"
+        Title="$Resources:spscore,ManageProfileService_Mysite_ManageSocial;">
+        <UrlAction Url="javascript:AppendApplicationIdAndNavigate('ManageSocialItems.aspx?')" />
+    </CustomAction>
+
+</Elements>

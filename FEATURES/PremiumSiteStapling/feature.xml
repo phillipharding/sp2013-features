@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="A573867A-37CA-49dc-86B0-7D033A7ED2C8"
+          Title="Premium Site Features Stapling"
+          Description="Staple Premium features"
+          Version="14.0.0.0"
+          SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+          Scope="Farm"
+          Hidden="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <ElementManifests>
+        <ElementManifest Location="premiumsitestapling.xml"/>
+    </ElementManifests>
+
+</Feature>

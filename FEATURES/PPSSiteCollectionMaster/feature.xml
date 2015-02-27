@@ -1,0 +1,23 @@
+<Feature Id="A1CB5B7F-E5E9-421B-915F-BF519B0760EF" 
+         Title="$Resources:ppsma,SiteCollectionMaster_ContentType_Title"
+         Description="$Resources:ppsma,SiteCollectionMaster_ContentType_Description" 
+         Version="15.0.0.0"
+         Scope="Site" 
+         SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+         Hidden="FALSE" 
+         DefaultResourceFile="core" 
+         xmlns="http://schemas.microsoft.com/sharepoint/"
+         ReceiverAssembly="Microsoft.PerformancePoint.Scorecards.BIMonitoringService, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+         ReceiverClass="Microsoft.PerformancePoint.Scorecards.BIMonitoringServiceFeatureReceiver">
+  <ElementManifests/>
+  <ActivationDependencies>
+	<!--  PPS Workspace Content Type --> 
+	<ActivationDependency FeatureId="F45834C7-54F6-48DB-B7E4-A35FA470FC9B" /> 
+	<!--  PPS Datasource Content Type --> 
+	<ActivationDependency FeatureId="05891451-F0C4-4d4e-81B1-0DABD840BAD4" />  
+	<!--  PPS Web Parts --> 
+	<ActivationDependency FeatureId="EE9DBF20-1758-401e-A169-7DB0A6BBCCB2" />
+	<!-- PPS Ribbon -->
+	<ActivationDependency FeatureId="AE31CD14-A866-4834-891A-97C9D37662A2" />
+  </ActivationDependencies>
+</Feature>

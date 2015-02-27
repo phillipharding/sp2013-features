@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance
+    Title="$Resources:spscore,ReportCenterOnet_DataConnectionsListInstanceName"
+    Description="$Resources:spscore,ReportCenterOnet_DataConnectionsListInstanceDescription"
+    TemplateType="130"
+    Url="Data Connections"
+    FeatureId="00BFEA71-DBD7-4F72-B8CB-DA7AC0440130"
+    Id="B37543C6-89B4-40AE-AEAE-517D2C7E1D11">
+  </ListInstance>
+</Elements>

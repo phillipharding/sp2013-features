@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="$Resources:core,PhonePNSubscriberListSchemaTitle;" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="$Resources:core,PhonePNSubscriberListFolderName;" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+    </ContentTypes>
+    <Fields>
+      <Field ID="{98c4c9aa-1e6d-4db6-95af-06d0f1618a54}" Name="DeviceAppInstanceId" DisplayName="$Resources:core,PhonePNSubscriberList_fldDeviceIdName;" Type="Text" Required="TRUE" />
+      <Field ID="{41ec0804-d5ff-4be4-8b4d-3337512244ba}" Name="ServiceToken" DisplayName="$Resources:core,PhonePNSubscriberList_fldServiceTokenName;" Type="Text" Required="TRUE" />
+      <Field ID="{47C3551C-AEDB-4BB7-95B3-3A4EFCBC067B}" Name="CustomArgs" DisplayName="$Resources:core,PhonePNSubscriberList_fldCustomArgsName;" Type="Text" Required="TRUE" />
+      <Field ID="{0C824D5F-317B-4CFB-8CB8-DA2C115A61AC}" Name="SubscriberType" DisplayName="$Resources:core,PhonePNSubscriberList_fldSubscriberTypeName;" Type="Text" Required="TRUE" />
+    </Fields>
+    <Views>
+    </Views>
+    <Forms>
+    </Forms>
+  </MetaData>
+</List>

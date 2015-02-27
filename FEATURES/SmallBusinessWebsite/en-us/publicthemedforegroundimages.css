@@ -1,0 +1,7 @@
+/* _lcid="1033" _version="15.0.4420"
+_LocalBinding */
+images{
+/* [RecolorImage(themeColor:"EmphasisBackground",detach:"true",method:"Tinting",hashOverride:"siteicon-sbw")] */ src:url("/_layouts/15/images/siteIcon-sbw.png?rev=23");
+/* [RecolorImage(themeColor:"TopBarText",detach:"true",method:"Filling",hashOverride:"sitelaunchsharedanonymously")] */ src:url("/_layouts/15/images/sitelaunchsharedanonymously.png?rev=23");
+/* [RecolorImage(themeColor:"TopBarText",detach:"true",method:"Filling",hashOverride:"sitelaunchunshared")] */ src:url("/_layouts/15/images/sitelaunchunshared.png?rev=23");
+}

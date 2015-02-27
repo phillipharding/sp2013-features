@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction 
+        Id="configureEnhacedSearch"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"            
+        Sequence="15" 
+        RequireSiteAdministrator="TRUE"
+        Title="$Resources:Microsoft.Office.Server.Search,SiteSettings_ManageEnhancedSearch_Title2;"
+        Description="$Resources:Microsoft.Office.Server.Search,SiteSettings_SiteCollectionSearchSettings_Tooltip;">
+            <UrlAction Url="_layouts/enhancedSearch.aspx?level=sitecol"/>
+    </CustomAction>
+    <CustomAction 
+        Id="ManageResultTypes"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"            
+        Sequence="12" 
+        RequireSiteAdministrator="TRUE"
+        Title="$Resources:Microsoft.Office.Server.Search,SiteSettings_SiteCollAdmin_ManageResultTypes_Title;"
+        Description="$Resources:Microsoft.Office.Server.Search,SiteSettings_ManageResultTypes_Tooltip;" >
+            <UrlAction Url="~layouts/manageresulttypes.aspx?level=sitecol"/>
+    </CustomAction>
+    <CustomAction 
+        Id="ManageResultTypes"
+        GroupId="SearchAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"            
+        Sequence="2" 
+        RequireSiteAdministrator="FALSE"
+        Rights="CancelCheckout"
+        Title="$Resources:Microsoft.Office.Server.Search,SiteSettings_ManageResultTypes_Title;"
+        Description="$Resources:Microsoft.Office.Server.Search,SiteSettings_ManageResultTypes_Tooltip;" >
+            <UrlAction Url="~layouts/manageresulttypes.aspx?level=site"/>
+    </CustomAction>
+    <CustomAction
+        Id="SiteSearchSettings"
+        GroupId="SearchAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb"
+        Sequence="5"
+        RequireSiteAdministrator="FALSE"
+        Title="$Resources:Microsoft.Office.Server.Search,SiteSettings_ManageEnhancedSearch_Title2;"
+        Description="$Resources:Microsoft.Office.Server.Search,SiteSettings_SiteSearchSettings_Tooltip;">
+            <UrlAction Url="_layouts/enhancedSearch.aspx?level=site" />	 
+    </CustomAction>  
+</Elements>

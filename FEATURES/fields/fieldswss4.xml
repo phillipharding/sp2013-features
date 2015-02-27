@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+-->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">    
+    <Field ID="{FD447DB5-3908-4b47-8F8C-A5895ED0AA6A}"
+        Name="ParentID"
+        Type="Lookup"
+        Mult="FALSE"
+        Required="FALSE"
+        Hidden="TRUE"
+        DisplayName="$Resources:core,Parent_ID;"
+        SourceID="http://schemas.microsoft.com/sharepoint/v4/fields"
+        StaticName="ParentID"
+        List="Self"
+        RelationshipDeleteBehavior="Cascade"
+        ShowField="ID">
+    </Field>
+    <Field ID="{6bfaba20-36bf-44b5-a1b2-eb6346d49716}"
+        Name="AppAuthor"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        StaticName="AppAuthor"
+        Group="_Hidden"
+        ColName="tp_AppAuthor"
+        RowOrdinal="0"
+        ReadOnly="TRUE"
+        Type="Lookup"
+        List="AppPrincipals"
+        ShowField="Title"
+        JoinColName="Id"
+        DisplayName="$Resources:core,App_Created_By;">
+    </Field>
+    <Field ID="{e08400f3-c779-4ed2-a18c-ab7f34caa318}"
+        Name="AppEditor"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        StaticName="AppEditor"
+        Group="_Hidden"
+        ColName="tp_AppEditor"
+        RowOrdinal="0"
+        ReadOnly="TRUE"
+        Type="Lookup"
+        List="AppPrincipals"
+        ShowField="Title"
+        JoinColName="Id"
+        DisplayName="$Resources:core,App_Modified_By;">
+    </Field>
+    <Field ID="{B0E12A3B-CF63-47D1-8418-4EF850D87A3C}"
+        Name="NoCrawl"
+        Type="Boolean"
+        Mult="FALSE"
+        Required="FALSE"
+        Hidden="TRUE"
+        Group="_Hidden"
+        DisplayName="$Resources:core,No_Crawl;"
+        SourceID="http://schemas.microsoft.com/sharepoint/v4/fields"
+        StaticName="NoCrawl">
+        <Default>FALSE</Default>
+    </Field>
+    <Field ID="{DCC67EBD-247F-4bee-8626-85FF6F69FBB6}"
+        Name="PrincipalCount"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        StaticName="PrincipalCount"
+        Group="_Hidden"
+        ReadOnly="TRUE"
+        Hidden="TRUE"
+        RenderXMLUsingPattern="TRUE"
+        ShowInFileDlg="FALSE"
+        Type="Computed"
+        DisplayName="$Resources:core,Principal_Count;">
+        <FieldRefs>
+            <FieldRef ID="{1d22ea11-1e32-424e-89ab-9fedbadb6ce1}" Name="ID"/>
+        </FieldRefs>
+        <DisplayPattern>
+            <PrincipalCount/>
+        </DisplayPattern>
+    </Field>
+    <Field ID="{EBF1C037-47EB-4355-998D-47CE9F2CC047}" 
+        Name="Checkmark" 
+        StaticName="Checkmark"
+        DisplayName="$Resources:core,Check_Mark_Field;" 
+        Group="_Hidden"
+        Type="Calculated" 
+        Required="FALSE" 
+        ResultType="Boolean"
+        ReadOnly="TRUE"
+        SourceID="http://schemas.microsoft.com/sharepoint/v4/fields">
+        <Formula>=PercentComplete&gt;=1</Formula>
+        <FieldRefs>
+            <FieldRef ID="{D2311440-1ED6-46EA-B46D-DAA643DC3886}" Name="PercentComplete" />
+        </FieldRefs>
+    </Field>
+    <Field ID="{1AD7C220-C893-4C15-B95C-B69B992BDEE2}"
+        Name="RelatedLinks"
+        StaticName="RelatedLinks"
+        DisplayName="$Resources:core,Related_Links_Field;"
+        Group="_Hidden"
+        Type="Note"
+        ReadOnly="TRUE"
+        Hidden="TRUE"
+        CanToggleHidden="FALSE"
+        Sortable="FALSE"
+        SourceID="http://schemas.microsoft.com/sharepoint/v4/fields">
+    </Field>
+    <Field ID="{FB005DAA-CAF9-4ecd-84D5-6BDD2EB3DCE7}" 
+        Name="MUILanguages" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v4/fields" 
+        StaticName="MUILanguages" 
+        Group="_Hidden" 
+        DisplayName="$Resources:core,userinfo_schema_MUILanguages;"
+        ReadOnly="FALSE"
+        Hidden="TRUE" 
+        Type="Text"
+        FromBaseType="TRUE">
+    </Field>
+    <Field ID="{58073EBD-B204-4899-BC77-54402C61E9E9}" 
+        Name="ContentLanguages" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v4/fields" 
+        StaticName="ContentLanguages" 
+        Group="_Hidden" 
+        DisplayName="$Resources:core,userinfo_schema_ContentLanguages;"
+        ReadOnly="FALSE"
+        Hidden="TRUE" 
+        Type="Text"
+        FromBaseType="TRUE">
+    </Field>
+    <Field ID="{E8A80787-5F99-459a-AF8D-B830157ED45F}"
+        Name="UserInfoHidden"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        StaticName="UserInfoHidden"
+        Group="_Hidden"
+        DisplayName="$Resources:core,userinfo_schema_Hidden;"
+        ReadOnly="TRUE"
+        ReadOnlyEnforced="TRUE"
+        Type="Boolean"
+        FromBaseType="TRUE" >
+        <Default>FALSE</Default>
+    </Field>                    
+    <!-- Discussion Board new fields -->
+        <Field ID="{5A034FF8-D7A4-4d69-AB26-5F5A043B572D}"
+            Name="IsFeatured"
+            SourceID="http://schemas.microsoft.com/sharepoint/v3"
+            DisplaceOnUpgrade="TRUE"
+            Type="Boolean"
+            DisplayName="$Resources:core,IsFeatured;"
+            Indexed="TRUE"
+            ReadOnly="TRUE"
+            Sealed="TRUE" >
+            <Default>FALSE</Default>
+        </Field>
+    <!-- END Discussion Board new fields -->
+    <Field ID="{3D0684F7-CA97-413d-9D03-D00F480059AE}"
+        Name="DisplayTemplateJSTemplateHidden" 
+        StaticName="DisplayTemplateJSTemplateHidden"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:core,DisplayTemplateJSTemplateColumnsGroup;"
+        DisplayName="$Resources:core,DisplayTemplateJSTemplateHidden_Name;"
+        Description="$Resources:core,DisplayTemplateJSTemplateHidden_Desc;"
+        Type="Boolean"
+        CanToggleHidden="TRUE" 
+        Sealed="TRUE">
+    </Field>
+    <Field ID="{0E49B273-3102-4b7d-B609-2E05DD1A17D9}"
+        Name="DisplayTemplateJSTargetControlType" 
+        StaticName="DisplayTemplateJSTargetControlType"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:core,DisplayTemplateJSTemplateColumnsGroup;"
+        DisplayName="$Resources:core,DisplayTemplateJSTargetControlType_Name;"
+        Description="$Resources:core,DisplayTemplateJSTargetControlType_Desc;"
+        Type="Choice"
+        CanToggleHidden="TRUE" 
+        Sealed="TRUE">
+        <CHOICES>
+            <CHOICE>$Resources:core,DisplayTemplateJSTargetControlType_Choice_Form;</CHOICE>
+            <CHOICE>$Resources:core,DisplayTemplateJSTargetControlType_Choice_View;</CHOICE>
+            <CHOICE>$Resources:core,DisplayTemplateJSTargetControlType_Choice_Field;</CHOICE>
+        </CHOICES>
+    </Field>
+    <Field ID="{57468CCB-0C02-422C-BA0A-61A44BA41784}"
+        Name="DisplayTemplateJSIconUrl"
+        DisplayName="$Resources:core,DisplayTemplateJSIconUrl_Name;"
+        Description="$Resources:core,DisplayTemplateJSIconUrl_Desc;"
+        Group="$Resources:core,DisplayTemplateJSTemplateColumnsGroup;"
+        Type="URL"
+        Format="Image"
+        AllowDeletion="FALSE"
+        StaticName="DisplayTemplateJSIconUrl"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3">
+    </Field>
+    <Field ID="{D63173AC-B914-4f90-9CF8-4FF4352E41A3}"
+        Name="DisplayTemplateJSTemplateType"
+        DisplayName="$Resources:core,DisplayTemplateJSTemplateType_Name;"
+        Description="$Resources:core,DisplayTemplateJSTemplateType_Desc;"
+        Group="$Resources:core,DisplayTemplateJSTemplateColumnsGroup;"
+        Type="Choice"
+        AllowDeletion="FALSE"
+        StaticName="DisplayTemplateJSTemplateType"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3">
+        <CHOICES>
+            <CHOICE>$Resources:core,DisplayTemplateJSTemplateType_Choice_Override;</CHOICE>
+            <CHOICE>$Resources:core,DisplayTemplateJSTemplateType_Choice_Standalone;</CHOICE>
+        </CHOICES>
+        <Default>$Resources:core,DisplayTemplateJSTemplateType_Choice_Override;</Default>
+    </Field>
+    <Field ID="{DF8BD7E5-B3DB-4a94-AFB4-7296397D829D}"
+        Name="DisplayTemplateJSTargetScope"
+        DisplayName="$Resources:core,DisplayTemplateJSTargetScope_Name;"
+        Description="$Resources:core,DisplayTemplateJSTargetScope_Desc;"
+        Group="$Resources:core,DisplayTemplateJSTemplateColumnsGroup;"
+        Type="Text"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        StaticName="DisplayTemplateJSTargetScope"
+        AllowDeletion="FALSE">
+    </Field>
+    <Field ID="{9F927425-78E9-49c3-B03B-65E1211394E1}"
+        Name="DisplayTemplateJSTargetListTemplate"
+        DisplayName="$Resources:core,DisplayTemplateJSTargetListTemplate_Name;"
+        Description="$Resources:core,DisplayTemplateJSTargetListTemplate_Desc;"
+        Group="$Resources:core,DisplayTemplateJSTemplateColumnsGroup;"
+        Type="Text"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        StaticName="DisplayTemplateJSTargetListTemplate"
+        AllowDeletion="FALSE">
+    </Field>
+    <Field ID="{ED095CF7-534E-460b-965F-F14269E70F5A}"
+        Name="DisplayTemplateJSTargetContentType"
+        DisplayName="$Resources:core,DisplayTemplateJSTargetContentType_Name;"
+        Description="$Resources:core,DisplayTemplateJSTargetContentType_Desc;"
+        Group="$Resources:core,DisplayTemplateJSTemplateColumnsGroup;"
+        Type="Text"
+        Hidden="TRUE"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        StaticName="DisplayTemplateJSTargetContentType"
+        AllowDeletion="FALSE">
+    </Field>
+    <Field ID="{0F2F686A-3921-432e-85FD-9C535BF671B2}"
+        Name="DisplayTemplateJSConfigurationUrl"
+        DisplayName="$Resources:core,DisplayTemplateJSConfigurationUrl_Name;"
+        Description="$Resources:core,DisplayTemplateJSConfigurationUrl_Desc;"
+        Group="$Resources:core,DisplayTemplateJSTemplateColumnsGroup;"
+        Type="URL"
+        Hidden="TRUE"
+        Format="Hyperlink"
+        AllowDeletion="FALSE"
+        StaticName="DisplayTemplateJSConfigurationUrl"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3">
+    </Field>
+    <!-- Master page Default Css File -->
+    <Field ID="{CC10B158-50B4-4f02-8F3A-B9B6C3102628}"
+        Name="DefaultCssFile" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" 
+        StaticName="DefaultCssFile" 
+        Group="_Hidden" 
+        DisplayName="$Resources:core,mplib_schema_defaultcssfile;" 
+        ReadOnly="FALSE" 
+        Type="Text" 
+        FromBaseType="TRUE">
+    </Field>
+    <Field ID="{D2A04AFC-9A05-48C8-A7FA-FA98F9496141}"
+        Name="RelatedItems" 
+        SourceID="http://schemas.microsoft.com/sharepoint/v3" 
+        StaticName="RelatedItems" 
+        Group="_Hidden" 
+        DisplayName="$Resources:core,RelatedItemsField_DisplayName;" 
+        ReadOnly="FALSE" 
+        Type="RelatedItems" 
+        Sortable="FALSE"
+        ShowInDisplayForm="TRUE" 
+        ShowInNewForm="FALSE" 
+        ShowInEditForm="FALSE"
+        FromBaseType="TRUE">
+    </Field>
+    <Field ID="{1982e408-0f94-4149-8349-16f301d89134}"
+        Name="PreviouslyAssignedTo"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        StaticName="PreviouslyAssignedTo"
+        Group="_Hidden"
+        Hidden="TRUE"
+        Type="UserMulti"
+        List="UserInfo"
+        DisplayName="$Resources:core,Previously_Assigned_To_Field;">
+    </Field>
+</Elements>

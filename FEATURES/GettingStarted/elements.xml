@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="GettingStartedPage" Url="" Path="">
+      <File Url="GettingStarted.aspx" Path="GettingStarted.aspx" IgnoreIfAlreadyExists="TRUE">
+        <AllUsersWebPart WebPartZoneID="Main" WebPartOrder="1">
+          <![CDATA[
+            <webParts>
+              <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                <metaData>
+                  <type name="Microsoft.SharePoint.WebPartPages.GettingStartedWebPart,Microsoft.SharePoint,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                </metaData>
+                <data>
+                  <properties>
+                    <property name="ChromeType" type="chrometype">None</property>
+                    <property name="BaseViewID" type="string">1</property>
+                    <property name="Title" type="string">$Resources:core,GettingStartedWebPartTitle;</property>
+                  </properties>
+                </data>
+              </webPart>
+            </webParts>
+          ]]>
+        </AllUsersWebPart>
+      </File>
+    </Module>
+    <CustomAction
+      Id="GettingStarted"
+      GroupId="SiteActions"
+      Location="Microsoft.SharePoint.StandardMenu"
+      Rights="ManageLists"
+      Sequence="340"
+      Title="$Resources:core,siteactions_gettingstarted;"
+      Description="$Resources:core,siteactions_gettingstarteddescription;">
+      <UrlAction Url="~site/GettingStarted.aspx" />
+    </CustomAction>
+</Elements>

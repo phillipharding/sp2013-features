@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="wrkflhis"
+        Type="140"
+        BaseType="0"
+        OnQuickLaunch="FALSE"
+        FolderCreation="FALSE"
+	 SecurityBits="11"
+        DisplayName="$Resources:core,workflowhistoryList;"
+        Description="$Resources:core,workflowhistoryList_Desc;"
+        Image="/_layouts/15/images/itwfh.png?rev=23"
+        Hidden="TRUE" />
+</Elements>

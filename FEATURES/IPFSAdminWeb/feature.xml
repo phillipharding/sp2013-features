@@ -1,0 +1,16 @@
+<Feature  Id="750B8E49-5213-4816-9FA2-082900C0201A"
+		Title="$Resources:AdminLinksFeatureTitle;"
+		Description="$Resources:AdminLinksFeatureDescription;"
+		Version="15.0.0.0"
+		DefaultResourceFile="ipfscore"
+		Scope="Web"
+		Hidden="TRUE"
+		AutoActivateInCentralAdmin="TRUE"
+		SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+		xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<ElementManifests>
+		<ElementManifest Location="ipfsManagement.xml"/>
+	</ElementManifests>
+
+</Feature>

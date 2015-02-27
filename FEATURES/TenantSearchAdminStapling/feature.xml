@@ -1,0 +1,11 @@
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+  Id="08EE8DE1-8135-4EF9-87CB-A4944F542BA3"
+  Title="$Resources:TenantAdmin_SearchAdminFeatureStapling_Title;"
+  Description="$Resources:TenantAdmin_SearchAdminFeatureStapling_Description;"
+    Version="15.0.0.0"
+    Hidden="TRUE"
+    Scope="Farm">
+    <ElementManifests>
+        <ElementManifest Location="featurestapling.xml"/>
+    </ElementManifests>
+</Feature>

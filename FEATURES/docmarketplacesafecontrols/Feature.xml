@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="5690F1A0-22B6-4262-B1C2-74F505BC0670"
+         Title="$Resources:dmscore,IDS_DMSSafeControlFeatureTitle"
+         Description="$Resources:dmscore,IDS_DMSSafeControlFeatureDescription"
+         SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+         Version="15.0.0.0"
+         Scope="WebApplication"
+         Hidden="True"
+         AlwaysForceInstall="FALSE"
+         ReceiverAssembly="Microsoft.Office.DocMarketplace, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+         ReceiverClass="Microsoft.Office.DocMarketplace.DMSSafeControlFeatureReceiver"
+         DefaultResourceFile="dmscore"
+         xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

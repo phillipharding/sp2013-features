@@ -1,0 +1,85 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="BlogXSL" Url="" Path="" SetupPath="SiteTemplates\SPSMSITEHOST" RootWebOnly="TRUE">
+        <File Url="blog.xsl" Type="Ghostable" />
+    </Module>
+
+    <Module Name="OVASPX" Url="" Path="" SetupPath="SiteTemplates\SPSMSITEHOST" RootWebOnly="TRUE">
+	<File Url="organizationview.aspx" Type="Ghostable" />
+    </Module>
+
+    <Module Name="ConASPX" Url="" Path="" SetupPath="SiteTemplates\SPSMSITEHOST" RootWebOnly="TRUE">	
+        <File Url="personcontent.aspx" Type="Ghostable">
+	      <AllUsersWebPart WebPartZoneID="TopZone" WebPartOrder="1">
+                 <![CDATA[
+                 <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                     <Assembly>Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                     <TypeName>Microsoft.SharePoint.Portal.WebControls.SiteDocuments</TypeName>
+                     <Title>$Resources:spscore,PeopleWebParts_MembershipDocs_Title_Text;</Title>
+                     <Description>$Resources:spscore,PeopleWebParts_MembershipDocs_Desc_Text;</Description>
+                     <PartOrder>1</PartOrder>
+                     <FrameType>Standard</FrameType>
+                     <AllowMinimize>true</AllowMinimize>
+                     <AllowRemove>true</AllowRemove>
+                     <IsVisible>true</IsVisible>
+                 </WebPart>
+                 ]]>
+             </AllUsersWebPart> 
+             <AllUsersWebPart WebPartZoneID="TopZone" WebPartOrder="2">
+                 <![CDATA[
+			<webParts>
+			<webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+			   <metaData>
+			      <type name="Microsoft.SharePoint.Portal.WebControls.BlogView,Microsoft.SharePoint.Portal,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+			      <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+			   </metaData>
+			   <data>
+		   	      <properties>
+			         <property name="Title">$Resources:spscore,MySiteOnet_WebPart_Blog;</property>
+			         <property name="Description">$Resources:spscore,MySiteOnet_WebPart_Blog_Description;</property>
+			         <property name="ChromeType">TitleOnly</property>
+			         <property name="XslLink" type="string">blog.xsl</property>
+			         <property name="SampleData">
+&lt;dsQueryResponse&gt;
+ &lt;NewDataSet&gt;
+  &lt;Row ID="-1" PublishedDate="1/1/2006" Body="$Resources:spscore,Blog_SampleBody;" Author="$Resources:spscore,Blog_SampleAuthor;" Title="$Resources:spscore,Blog_SampleTitle;" CategoryID="-1" PostCategory="$Resources:spscore,Blog_SampleCategory;" NumComments="0"/&gt;
+ &lt;/NewDataSet&gt; 
+&lt;/dsQueryResponse&gt;</property>
+			      </properties>
+			   </data>
+			</webPart>
+			</webParts>
+                 ]]>
+             </AllUsersWebPart>
+        </File>
+    </Module>
+
+    <HideCustomAction
+        Id="HideSaveAsTemplate"
+        HideActionId="SaveAsTemplate"
+        GroupId="SiteTasks"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideEnableSearchConfigExport"
+        HideActionId="EnableSearchConfigExport"
+        GroupId="SiteTasks"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideDeleteWeb"
+        HideActionId="DeleteWeb"
+        GroupId="SiteTasks"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <CustomAction
+        Id="DeleteMySiteHostWeb"
+        GroupId="SiteTasks"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb,BrowseUserInfo"
+        Sequence="40"
+        Title="$Resources:core,SiteSettings_DeleteWeb_Title;"
+        Description="$Resources:core,SiteSettings_DeleteThisSite_Tooltip;">
+        <UrlAction
+            Url="~layouts/DeleteMySiteHostWeb.aspx?Source=settings.aspx" />
+    </CustomAction>
+    <Module Name="OrgVASPX" Url="" Path="" SetupPath="SiteTemplates\SPSMSITEHOST" RootWebOnly="TRUE">
+	<File Url="organizationview.aspx" Type="Ghostable" />
+    </Module>
+</Elements>

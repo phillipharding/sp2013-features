@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="Basic List" FolderCreation="FALSE" Direction="$Resources:core,Direction;" Url="Lists/Basic List" BaseType="0" EnableContentTypes="TRUE">
+  <MetaData>
+    <ContentTypes>
+      <ContentTypeRef ID="0x01007BAC4D2A767611E08CFA17934824019B" />
+    </ContentTypes>
+    <Fields>
+      <Field ID="{5DA25DE2-7676-11E0-A4DA-E3924824019B}"
+        Name="EduCourseId"
+        DisplayName="EduCourseId"
+        Group="Education"
+        Type="Text"
+        Indexed="TRUE"
+        EnforceUniqueValues="TRUE" />
+      <Field ID="{B739B0B4-7674-11E0-8555-B8904824019B}"
+        Name="EduAssignmentNew"
+        DisplayName="EduAssignmentNew"
+        Group="Education"
+        Type="Boolean" />
+      <Field ID="{21F74452-7675-11E0-A4BF-36914824019B}"
+        Name="EduAssignmentDueChanged"
+        DisplayName="EduAssignmentDueChanged"
+        Group="Education"
+        Type="Boolean" />
+      <Field ID="{3E9DB9F6-7675-11E0-87B4-4B914824019B}"
+        Name="EduAssignmentCancelled"
+        DisplayName="EduAssignmentCancelled"
+        Group="Education"
+        Type="Boolean" />
+      <Field ID="{42585A9C-7675-11E0-A4DD-5B914824019B}"
+        Name="EduAssignmentContentChanged"
+        DisplayName="EduAssignmentContentChanged"
+        Group="Education"
+        Type="Boolean" />
+      <Field ID="{524CC186-7675-11E0-A80D-62914824019B}"
+        Name="EduAssignmentGradePublished"
+        DisplayName="EduAssignmentGradePublished"
+        Group="Education"
+        Type="Boolean" />
+      <Field ID="{54341990-7675-11E0-904F-63914824019B}"
+        Name="EduAssignmentGradeChanged"
+        DisplayName="EduAssignmentGradeChanged"
+        Group="Education"
+        Type="Boolean" />
+      <Field ID="{2590A576-7676-11E0-AAB9-9B924824019B}"
+        Name="EduCourseAdded"
+        DisplayName="EduCourseAdded"
+        Group="Education"
+        Type="Boolean" />
+      <Field ID="{277D3E30-7676-11E0-894B-9C924824019B}"
+        Name="EduCourseRemoved"
+        DisplayName="EduCourseRemoved"
+        Group="Education"
+        Type="Boolean" />
+      <Field ID="{1AF26B96-76A2-11E0-9181-B7C94824019B}"
+        Name="EduCourseGradeChanged"
+        DisplayName="EduCourseGradeChanged"
+        Group="Education"
+        Type="Boolean" />
+      <Field ID="{397DE558-7676-11E0-A70B-A0924824019B}"
+        Name="EduCourseGradePublished"
+        DisplayName="EduCourseGradePublished"
+        Group="Education"
+        Type="Boolean" />
+      <Field ID="{3C291C32-7676-11E0-8386-C8924824019B}"
+        Name="EduCourseComplete"
+        DisplayName="EduCourseComplete"
+        Group="Education"
+        Type="Boolean" />
+      <Field ID="{9CCE6534-86B7-48DE-B3A6-7312FA2BC182}"
+        Name="EduAnnouncementPosted"
+        DisplayName="EduAnnouncementPosted"
+        Group="Education"
+        Type="Boolean" />
+      <Field ID="{2FAFF94B-B1EA-4AA4-928C-4A15D4E86CBC}"
+        Name="EduOptOut"
+        DisplayName="EduOptOut"
+        Group="Education"
+        Type="Boolean" />
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Position="After" Type="Freeform">
+          <IfHasRights>
+            <RightsChoices>
+              <RightsGroup PermAddListItems="required" />
+            </RightsChoices>
+            <Then><HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idAddNewItem" href="]]></HTML>
+              <URL Cmd="New" /><HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <URL Cmd="New" />
+              </ScriptQuote><HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML><HTML>$Resources:core,addnewitem;</HTML><HTML><![CDATA[</a></div>]]></HTML>
+            </Then>
+          </IfHasRights>
+        </Toolbar>
+        <RowLimit>20</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="Attachments">
+          </FieldRef>
+          <FieldRef Name="LinkTitle">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

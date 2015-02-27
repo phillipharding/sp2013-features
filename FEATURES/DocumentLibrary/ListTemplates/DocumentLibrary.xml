@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="doclib"
+        Type="101"
+        BaseType="1"
+        OnQuickLaunch="TRUE"
+        SecurityBits="11"
+        Sequence="110"
+        DisplayName="$Resources:core,doclibList;"
+        Description="$Resources:core,doclibList_Desc_15;"
+        Image="/_layouts/15/images/itdl.png?rev=23"
+        DocumentTemplate="121"/>
+</Elements>

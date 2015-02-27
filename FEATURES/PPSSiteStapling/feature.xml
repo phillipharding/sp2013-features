@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+	Id="8472208F-5A01-4683-8119-3CEA50BEA072"
+	Title="$Resources:ppsma,SiteStapling_ContentType_Title"
+	Description="$Resources:ppsma,SiteStapling_ContentType_Description"
+	Version="14.0.0.0"
+	Hidden="TRUE"
+	Scope="Farm"
+	SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3">
+	<ElementManifests>
+		<ElementManifest Location="featurestapling.xml"/>
+	</ElementManifests>
+</Feature>

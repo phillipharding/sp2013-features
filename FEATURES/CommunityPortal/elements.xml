@@ -1,0 +1,46 @@
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="Default" Url="" Path="">
+      <File Url="default.aspx" IgnoreIfAlreadyExists="TRUE">
+        <AllUsersWebPart WebPartZoneID="TopZone" WebPartOrder="1">
+          <![CDATA[
+            <webParts>
+              <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                <metaData>
+                  <type name="Microsoft.Office.Server.Search.WebControls.SearchBoxScriptWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                </metaData>
+                <data>
+                  <properties>
+                    <property name="ChromeType" type="chrometype">None</property>
+                    <property name="BaseViewID" type="string">1</property>
+                    <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,SearchBoxWP_Title;</property>
+                    <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,SearchBoxWP_Desc;</property>
+                    <property name="SetFocusOnPageLoad" type="bool">false</property>
+                    <property name="ResultsPageAddress" type="string">{searchCenterURL}/conversationresults.aspx</property>
+                    <property name="TryInplaceQuery" type="bool">false</property>
+                    <property name="ShowNavigation" type="bool">false</property>
+                  </properties>
+                </data>
+              </webPart>
+            </webParts>
+          ]]>
+        </AllUsersWebPart>
+        <AllUsersWebPart WebPartZoneID="Main" WebPartOrder="1">
+          <![CDATA[
+            <webParts>
+              <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                <metaData>
+                  <type name="Microsoft.SharePoint.Portal.WebControls.ExistingCommunitiesWebPart,Microsoft.SharePoint.Portal,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                </metaData>
+                <data>
+                  <properties>
+                    <property name="ChromeType" type="chrometype">None</property>
+                  </properties>
+                </data>
+              </webPart>
+            </webParts>
+          ]]>
+        </AllUsersWebPart>
+      </File>
+    </Module>
+</Elements>

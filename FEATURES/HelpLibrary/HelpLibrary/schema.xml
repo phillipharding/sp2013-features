@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="$Resources:Core,HelpLibraryDisplayName;" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/Help" BaseType="1" DisableAttachments="TRUE" VersioningEnabled="TRUE" EnableContentTypes="TRUE">
+  <MetaData>
+    <ContentTypes>
+      <ContentTypeRef ID="0x0101002BC33ABE0D8E4c16869C931114180652" />
+      <ContentTypeRef ID="0x01010200843A16AAA75E4183BE3B5C15E22CD5F3" />
+      <ContentTypeRef ID="0x0120008DA1DFDB55E84aa7BE833756C834A9AD" />
+      <ContentTypeRef ID="0x01200096501358E9504b1a98FE7E8AC436060F" />
+    </ContentTypes>
+    <Fields>
+      <Field ID="{354B40E5-6766-457d-842F-BD1523601C62}" Name="HelpSeeAlso" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="HelpSeeAlso" DisplayName="$Resources:Core,HelpSeeAlsoDisplayName" Description="$Resources:Core,HelpSeeAlsoDescription" Type="Note" Group="$Resources:Core,HelpFieldGroup" UnlimitedLengthInDocumentLibrary="TRUE" Required="FALSE" Sealed="TRUE" />
+      <Field ID="{24289C6E-178F-4608-A2B8-2A50F7EACDF9}" Name="HelpAssetId" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="HelpAssetId" DisplayName="$Resources:Core,HelpAssetIdDisplayName" Description="$Resources:Core,HelpAssetIdDescription" Type="Text" Group="$Resources:Core,HelpFieldGroup" Required="FALSE" Indexed="TRUE" Sealed="TRUE" Hidden="TRUE" />
+      <Field ID="{596AF790-66F6-449a-A513-6E346425BD1E}" Name="HelpResources" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="HelpResources" DisplayName="$Resources:Core,HelpResourcesDisplayName" Description="$Resources:Core,HelpResourcesDescription" Type="Note" Group="$Resources:Core,HelpFieldGroup" UnlimitedLengthInDocumentLibrary="TRUE" Required="FALSE" Sealed="TRUE" />
+      <Field ID="{128E779B-972F-48d5-9EEF-6415A96DA34C}" Name="HelpLocaleId" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="HelpLocaleId" DisplayName="$Resources:Core,HelpLocaleIdDisplayName" Description="$Resources:Core,HelpLocaleIdDescription" Type="Text" Group="$Resources:Core,HelpFieldGroup" Required="TRUE" Indexed="TRUE" Sealed="TRUE" />
+      <Field ID="{AFF14AF7-3F54-423a-B0D1-15FC8103262C}" Name="HelpContextKey" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="HelpContextKey" DisplayName="$Resources:Core,HelpContextKeyDisplayName" Description="$Resources:Core,HelpContextKeyDescription" Type="Text" Group="$Resources:Core,HelpFieldGroup" Required="FALSE" Indexed="TRUE" Sealed="TRUE" />
+      <Field ID="{AFCC93AC-68F6-4855-BAD1-661CBA2A8359}" Name="HelpCollectionId" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="HelpCollectionId" DisplayName="$Resources:Core,HelpCollectionIdDisplayName" Description="$Resources:Core,HelpCollectionIdDescription" Type="Text" Group="$Resources:Core,HelpFieldGroup" Required="FALSE" Sealed="TRUE" Hidden="TRUE" />
+      <Field ID="{AF6680CE-9F7C-45b9-8F90-6CCA21DDF179}" Name="HelpBrandingImage" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="HelpBrandingImage" DisplayName="$Resources:Core,HelpBrandingImageDisplayName" Description="$Resources:Core,HelpBrandingImageDescription" Type="Text" Group="$Resources:Core,HelpFieldGroup" Required="FALSE" Sealed="TRUE" Hidden="TRUE" />
+      <Field ID="{A3C9D50E-2DB2-4a4b-9558-04A7561BE01B}" Name="HelpCollectionsOverride" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="HelpCollectionsOverride" DisplayName="$Resources:Core,HelpCollectionsOverrideDisplayName" Description="$Resources:Core,HelpCollectionsOverrideDescription" Type="Text" Group="$Resources:Core,HelpFieldGroup" Required="FALSE" Sealed="TRUE" Hidden="TRUE" />
+      <Field ID="{D33A3D6C-3D6E-4e44-82C0-8DA4B645B47D}" Name="HelpCollectionProduct" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="HelpCollectionProduct" DisplayName="$Resources:Core,HelpCollectionProductDisplayName" Description="$Resources:Core,HelpCollectionProductDescription" Type="Text" Group="$Resources:Core,HelpFieldGroup" Required="TRUE" Sealed="TRUE" />
+      <Field ID="{DCC1FC54-298E-44E0-B497-3DC291E12B30}" Name="HelpCollectionVersion" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="HelpCollectionVersion" DisplayName="$Resources:Core,HelpCollectionVersionDisplayName" Description="$Resources:Core,HelpCollectionVersionDescription" Type="Integer" Group="$Resources:Core,HelpFieldGroup" Required="FALSE" Sealed="TRUE" />
+      <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" ShowInNewForm="TRUE" ShowInFileDlg="TRUE" DisplayName="$Resources:core,Title;" Sealed="TRUE" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" />
+      <Field ID="{061C420F-D08C-4c08-988C-AC62E51EE97D}" Name="HelpCollectionOnlineBrowseUrl" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="HelpCollectionOnlineBrowseUrl" DisplayName="$Resources:Core,HelpCollectionOnlineBrowseUrlDisplayName" Description="$Resources:Core,HelpCollectionOnlineBrowseUrlDescription" Type="URL" Group="$Resources:Core,HelpFieldGroup" Required="FALSE" Sealed="TRUE" Hidden="TRUE" />
+      <Field ID="{8FB9426C-F545-41d8-93D0-2B75102C8598}" Name="HelpCollectionOnlineSearchUrl" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="HelpCollectionOnlineSearchUrl" DisplayName="$Resources:Core,HelpCollectionOnlineSearchUrlDisplayName" Description="$Resources:Core,HelpCollectionOnlineSearchUrlDescription" Type="URL" Group="$Resources:Core,HelpFieldGroup" Required="FALSE" Sealed="TRUE" Hidden="TRUE" />
+      <Field ID="{D9F40073-B3A9-48aa-8D5B-82AD9C136E5A}" Name="HelpCollectionIsOnByDefault" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="HelpCollectionIsOnByDefault" DisplayName="$Resources:Core,HelpCollectionIsOnByDefaultDisplayName" Description="$Resources:Core,HelpCollectionIsOnByDefaultDescription" Type="Boolean" Group="$Resources:Core,HelpFieldGroup" Required="FALSE" Sealed="TRUE">
+        <Default>TRUE</Default>
+      </Field>
+      <Field ID="{E00333B1-3CEF-43c4-854B-7FEAAAC83F01}" Name="HelpCollectionIsOfficeOnlineHelp" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="HelpCollectionIsOfficeOnlineHelp" DisplayName="$Resources:Core,HelpCollectionIsOfficeOnlineHelpDisplayName" Description="$Resources:Core,HelpCollectionIsOfficeOnlineHelpDescription" Type="Boolean" Group="$Resources:Core,HelpFieldGroup" Required="FALSE" Sealed="TRUE" Hidden="TRUE">
+        <Default>FALSE</Default>
+      </Field>
+      <Field ID="{DC1CC66C-3BF0-4f83-A8A2-49E27A895711}" Name="HelpItemOrder" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="HelpItemOrder" DisplayName="$Resources:Core,HelpItemOrderDisplayName" Description="$Resources:Core,HelpItemOrderDescription" Type="Integer" Group="$Resources:Core,HelpFieldGroup" Required="FALSE" Filterable="TRUE" Sortable="TRUE" Sealed="TRUE">
+        <Default>0</Default>
+      </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Position="After" Type="Freeform">
+          <IfHasRights>
+            <RightsChoices>
+              <RightsGroup PermAddListItems="required" />
+            </RightsChoices>
+            <Then><HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idAddNewItem" href="]]></HTML>
+              <HttpVDir /><HTML><![CDATA[/_layouts/15/Upload.aspx?List=]]></HTML>
+              <ListProperty Select="Name" /><HTML><![CDATA[&RootFolder=]]></HTML>
+              <GetVar Name="RootFolder" URLEncode="TRUE" /><HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <HttpVDir />
+              </ScriptQuote><HTML><![CDATA[/_layouts/15/Upload.aspx?List=]]></HTML>
+              <ListProperty Select="Name" /><HTML><![CDATA[&RootFolder=]]></HTML>
+              <GetVar Name="RootFolder" URLEncode="TRUE" /><HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML><HTML>$Resources:core,addnewitem;</HTML><HTML><![CDATA[</a></div>]]></HTML>
+            </Then>
+          </IfHasRights>
+        </Toolbar>
+        <RowLimit>20</RowLimit>
+        <ViewFields>
+          <FieldRef Name="DocIcon" />
+          <FieldRef Name="LinkFilename" />
+          <FieldRef Name="Title" />
+          <FieldRef Name="ContentType" />
+          <FieldRef Name="HelpContextKey" />
+          <FieldRef Name="Editor" />
+        </ViewFields>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noitemsinview_doclibrary)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noitemsinview_doclibrary_howto)" />
+        </ParameterBindings>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="HelpItemOrder" Ascending="TRUE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,All_Documents;" DefaultView="TRUE" MobileView="True" MobileDefaultView="True" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/dlicon.png?rev=23" Url="Forms/AllItems.aspx">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard">
+        </Toolbar>
+        <RowLimit Paged="TRUE">100</RowLimit>
+        <ViewFields>
+          <FieldRef Name="DocIcon" />
+          <FieldRef Name="LinkFilename" />
+          <FieldRef Name="Title" />
+          <FieldRef Name="ContentType" />
+          <FieldRef Name="HelpContextKey" />
+          <FieldRef Name="Editor" />
+        </ViewFields>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noitemsinview_doclibrary)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noitemsinview_doclibrary_howto2)" />
+        </ParameterBindings>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="HelpItemOrder" Ascending="TRUE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+      <View BaseViewID="2" Type="HTML" FileDialog="TRUE" TabularView="FALSE" DisplayName="$Resources:core,File_Dialog_View;" Hidden="TRUE" Path="filedlg.htm" ModerationType="Moderator">
+        <ViewHeader>
+          <SetVar Name="FileDialog">1</SetVar><HTML><![CDATA[
+            <table id="FileDialogViewTable" width="100%" style="cursor: default;" border="0" rules="rows" cellspacing="0" cellpadding="2">
+                <tr>
+        ]]></HTML>
+          <Fields><HTML><![CDATA[<th class="ms-vh2-nofilter">]]></HTML>
+            <Field /><HTML><![CDATA[</th>]]></HTML>
+          </Fields><HTML><![CDATA[</tr>]]></HTML>
+        </ViewHeader>
+        <ViewBody>
+          <SetVar Name="FileDialog">1</SetVar>
+          <IfEqual>
+            <Expr1>
+              <GetVar Name="AlternateStyle" />
+            </Expr1>
+            <Expr2>ms-alternating</Expr2>
+            <Then>
+              <SetVar Scope="Request" Name="AlternateStyle">
+              </SetVar>
+            </Then>
+            <Else>
+              <SetVar Scope="Request" Name="AlternateStyle">ms-alternating</SetVar>
+            </Else>
+          </IfEqual>
+          <Switch>
+            <Expr>
+              <LookupColumn Name="FSObjType" />
+            </Expr>
+            <Case Value="1"><HTML>&lt;TR fileattribute=folder ID="</HTML>
+            </Case>
+            <Default><HTML>&lt;TR fileattribute=file ID="</HTML>
+            </Default>
+          </Switch>
+          <Field Name="EncodedAbsUrl" /><HTML><![CDATA[" class="]]></HTML>
+          <GetVar Name="AlternateStyle" /><HTML><![CDATA[" onmousedown="selectrow()" onclick="selectrow()">]]></HTML>
+          <Fields><HTML><![CDATA[<td class="ms-vb" style="padding-left: 4px">]]></HTML>
+            <FieldSwitch>
+              <Expr>
+                <Property Select="Type" />
+              </Expr>
+              <Case Value="User">
+                <LookupColumn HTMLEncode="TRUE" />
+              </Case>
+              <Default>
+                <FieldSwitch>
+                  <Expr>
+                    <Property Select="Name" />
+                  </Expr>
+                  <Case Value="CheckoutUser">
+                    <Field HTMLEncode="TRUE" />
+                  </Case>
+                  <Default>
+                    <Field />
+                  </Default>
+                </FieldSwitch>
+              </Default>
+            </FieldSwitch><HTML><![CDATA[</td>]]></HTML>
+          </Fields><HTML><![CDATA[</tr>]]></HTML>
+        </ViewBody>
+        <ViewFooter><HTML><![CDATA[</table>]]></HTML>
+        </ViewFooter>
+        <ViewEmpty>
+          <SetVar Name="FileDialog">1</SetVar><HTML><![CDATA[
+            <table id="FileDialogViewTable" width="100%" style="cursor: default;" border="0" rules="rows" cellspacing="0" cellpadding="2">
+                <tr>
+        ]]></HTML>
+          <Fields>
+            <Switch>
+              <Expr>
+                <Property Select="Name" />
+              </Expr>
+              <Case Value="FileLeafRef">
+              </Case>
+              <Default><HTML><![CDATA[<th class="ms-vh2-nofilter">]]></HTML>
+                <Field /><HTML><![CDATA[</th>]]></HTML>
+              </Default>
+            </Switch>
+          </Fields><HTML><![CDATA[</tr></table>]]></HTML><HTML><![CDATA[<table width="100%" border="0" rules="rows"><tr>]]></HTML><HTML><![CDATA[<td class="ms-vb">]]></HTML><HTML>$Resources:core,noDocOfSpecType;</HTML><HTML><![CDATA[</td></tr></table>]]></HTML>
+        </ViewEmpty>
+        <ViewFields>
+          <FieldRef Name="DocIcon">
+          </FieldRef>
+          <FieldRef Name="BaseName">
+          </FieldRef>
+          <FieldRef Name="Editor" TextOnly="TRUE">
+          </FieldRef>
+          <FieldRef Name="Modified" TextOnly="TRUE">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="FSObjType" Key="Primary" />
+            <FieldRef Name="FileLeafRef" />
+          </OrderBy>
+        </Query>
+      </View>
+      <View BaseViewID="3" Type="HTML" WebPartZoneID="Main" TabularView="FALSE" DisplayName="$Resources:core,Explorer_View;" Url="Forms/WebFldr.aspx" SetupPath="pages\webfldr.aspx" RequiresClientIntegration="TRUE" ReadOnly="TRUE">
+        <Toolbar Type="Standard">
+        </Toolbar>
+        <XslLink>main.xsl</XslLink>
+        <ViewEmpty><HTML><![CDATA[
+        <iframe id="expFrame" width="100%" height="500px" name="expFrame" src="/_layouts/blank.htm"></iframe>
+        <script type="text/javascript">
+        function navtoframe()
+        {
+        }
+        function navtoframe2()
+        {
+            NavigateHttpFolderIfSupported(
+                ]]></HTML>
+          <ScriptQuote>
+            <Switch>
+              <Expr>
+                <GetVar Name="RootFolder" />
+              </Expr>
+              <Case Value="">
+                <ListUrlDir ForInstance="TRUE" />
+              </Case>
+              <Default>
+                <GetVar Name="RootFolder" />
+              </Default>
+            </Switch>
+          </ScriptQuote><HTML><![CDATA[, "expFrame");
+        }
+        var _spBodyOnLoadFunctionNames;
+        if (_spBodyOnLoadFunctionNames == null)
+        { 
+            _spBodyOnLoadFunctionNames = new Array();
+        }
+        _spBodyOnLoadFunctionNames.push("navtoframe2");
+        </script>]]></HTML>
+        </ViewEmpty>
+        <ViewFields />
+      </View>
+      <View BaseViewID="6" Type="HTML" TabularView="FALSE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Position="After" Type="Freeform">
+          <IfHasRights>
+            <RightsChoices>
+              <RightsGroup PermAddListItems="required" />
+            </RightsChoices>
+            <Then><HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idAddNewItem" href="]]></HTML>
+              <HttpVDir /><HTML><![CDATA[/_layouts/15/Upload.aspx?List=]]></HTML>
+              <ListProperty Select="Name" /><HTML><![CDATA[&RootFolder=]]></HTML>
+              <GetVar Name="RootFolder" URLEncode="TRUE" /><HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <HttpVDir />
+              </ScriptQuote><HTML><![CDATA[/_layouts/15/Upload.aspx?List=]]></HTML>
+              <ListProperty Select="Name" /><HTML><![CDATA[&RootFolder=]]></HTML>
+              <GetVar Name="RootFolder" URLEncode="TRUE" /><HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML><HTML>$Resources:core,addnewitem;</HTML><HTML><![CDATA[</a></div>]]></HTML>
+            </Then>
+          </IfHasRights>
+        </Toolbar>
+        <RowLimit>12</RowLimit>
+        <ViewFields>
+          <FieldRef Name="DocIcon">
+          </FieldRef>
+          <FieldRef Name="LinkFilename">
+          </FieldRef>
+          <FieldRef Name="Editor">
+          </FieldRef>
+        </ViewFields>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noitemsinview_doclibrary)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noitemsinview_doclibrary_howto2)" />
+        </ParameterBindings>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="HelpItemOrder" Ascending="TRUE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="Forms/DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="Forms/EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="Forms/NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+    <DefaultDescription>
+      $Resources:Core,HelpLibraryDescription;
+    </DefaultDescription>
+  </MetaData>
+</List>

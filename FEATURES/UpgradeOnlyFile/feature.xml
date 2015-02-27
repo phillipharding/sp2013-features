@@ -1,0 +1,11 @@
+<Feature  Id="2FA4DB13-4109-4A1D-B47C-C7991D4CC934"
+          Title="$Resources:UpgradeOnlyFile_Feature_Title;"
+          Description="$Resources:spscore,UpgradeOnlyFile_Feature_Description;"
+          Version="14.0.0.0"
+          Scope="Web"
+          Hidden="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="Files.xml"/>
+    </ElementManifests>
+</Feature>

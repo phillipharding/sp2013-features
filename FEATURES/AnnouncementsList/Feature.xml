@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="00BFEA71-D1CE-42de-9C63-A44004CE0104" 
+    Title="$Resources:core,announcementslistFeatureTitle;"
+    Description="$Resources:core,announcementslistFeatureDesc;"
+    Version="1.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"    
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\Announcements.xml"/>
+    </ElementManifests>
+</Feature>

@@ -1,0 +1,40 @@
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomActionGroup
+        Id="EDiscoveryLinksGroup"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:dlccore, Hold_eDiscoveryLinksGroup15;"
+        Description=""
+        Sequence="100"
+        ImageUrl="/_layouts/15/images/SiteSettings_HoldAndEDiscovery_48x48.png?rev=23"/>
+  <CustomAction
+        Id="DiscoverAndHoldContent"
+        GroupId="EDiscoveryLinksGroup"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb"
+        Sequence="100"
+        Title="$Resources:dlccore, HoldLinks_DiscoverAndHoldContent;"
+        Description="$Resources:dlccore, HoldLinks_DiscoverAndHoldContentDescription;">
+        <UrlAction Url="_layouts/15/searchAndAddToHold.aspx" />
+  </CustomAction>
+  <CustomAction
+        Id="HoldsList"
+        GroupId="EDiscoveryLinksGroup"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb"
+        Sequence="100"
+        Title="$Resources:dlccore, HoldLinks_HoldsList;"
+        Description="$Resources:dlccore, HoldLinks_HoldsListDescription;">
+        <UrlAction Url="_layouts/15/holdreport.aspx?operation=gotoholdslist" />
+  </CustomAction>
+    <CustomAction
+        Id="HoldsReport"
+        GroupId="EDiscoveryLinksGroup"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb"
+        Sequence="100"
+        Title="$Resources:dlccore, HoldLinks_HoldReports;"
+        Description="$Resources:dlccore, HoldLinks_HoldReportsDescription;">
+        <UrlAction Url="_layouts/15/holdreport.aspx" />
+  </CustomAction>
+</Elements>

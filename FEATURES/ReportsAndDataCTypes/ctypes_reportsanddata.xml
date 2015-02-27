@@ -1,0 +1,7 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ContentType ID="0x01010042FD55FEE68043CBB886E6BFF9275593" Name="$Resources:spscore,ReportsAndDataContentTypes_ReportDocument_Name;" Group="$Resources:spscore,ReportsAndDataContentTypes_BIGroup_Name;" Version="0" Inherits="TRUE" Description="$Resources:spscore,ReportsAndDataContentTypes_ReportDocument_Description;">
+        <FieldRefs>
+            <FieldRef ID="{CD2B20AB-85AB-4D19-89F3-36ED96B91B7B}" Name="IsReport" />
+        </FieldRefs>
+    </ContentType>
+</Elements>

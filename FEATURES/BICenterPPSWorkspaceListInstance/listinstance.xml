@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance
+    Id="E07821F9-C037-446B-939B-431492C45DF8"
+    Title="$Resources:ppsma,Onet_BICenter_Title"
+    Description="$Resources:ppsma,Onet_BICenter_Description"
+    Url="Lists/PerformancePoint Content"
+    FeatureId="481333E1-A246-4d89-AFAB-D18C6FE344CE"
+    TemplateType="450"
+    OnQuickLaunch="FALSE">
+  </ListInstance>  
+</Elements>

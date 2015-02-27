@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="6e8a2add-ed09-4592-978e-8fa71e6f117c"
+    Title="$Resources:core,groupboardSiteProvisionFeatureTitle;"
+    Description="$Resources:core,groupboardSiteProvisionFeatureDesc;"
+    Version="1.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"
+    ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Applications.GroupBoard.GroupBoardSiteProvisionFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListInstance.xml"/>
+    </ElementManifests>
+</Feature>

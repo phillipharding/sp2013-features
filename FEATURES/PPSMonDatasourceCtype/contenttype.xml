@@ -1,0 +1,11 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ContentType ID="0x0101004C06BE72B56941358D9BD0B31603EC4D01"
+   Name="$Resources:ppsma,ContentType_MonDataSource_Name"
+   Group="$Resources:ppsma,ContentType_Group"
+   Description="$Resources:ppsma,ContentType_MonDataSource_Description"
+   Version="0">
+    <FieldRefs/>
+    <DocumentTemplate TargetName="/_layouts/15/ppswebparts/designerredirect.aspx"/>
+  </ContentType>
+</Elements>
+

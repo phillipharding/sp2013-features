@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" BaseType="0" Direction="$Resources:Direction;" DisableAttachments="TRUE" EnableContentTypes="TRUE" FolderCreation="FALSE" PrivateList="FALSE" Title="$Resources:AccReqList_ListName;" Type="160" VersioningEnabled="TRUE">
+  <MetaData>
+    <Fields>
+      <!-- Access Requests List -->
+      <!-- Hide the Title field (which is fa564e0f-0c70-4ab9-b863-0177e6ddd247) -->
+      <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" DisplayName="$Resources:core,Title;" Type="Text" Required="TRUE" ReadOnly="TRUE" Hidden="TRUE" ReadOnlyEnforced="TRUE" ShowInViewForm="FALSE">
+      </Field>
+      <Field ID="{2CD27B85-913E-42ff-BD3F-524D03436A90}" Name="RequestId" AllowDuplicateValues="FALSE" DisplayName="$Resources:AccReqList_RequestId;" Type="Guid" Required="TRUE" ReadOnly="TRUE" Hidden="TRUE" ReadOnlyEnforced="TRUE" ShowInViewForm="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RequestId">
+      </Field>
+      <Field ID="{862D98DB-C09D-4007-B4D5-632D1DBFEA1C}" Name="RequestedObjectUrl" DisplayName="$Resources:AccReqList_RequestedWebUrl;" Type="URL" Required="TRUE" ReadOnly="TRUE" Hidden="TRUE" ReadOnlyEnforced="TRUE" ShowInViewForm="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RequestedObjectUrl">
+      </Field>
+      <Field ID="{CD724C16-3F90-4647-B144-A016D49D30E8}" Name="RequestedObjectTitle" DisplayName="$Resources:AccReqList_RequestedWebTitle;" Type="Text" Required="TRUE" Hidden="TRUE" ReadOnlyEnforced="TRUE" ShowInViewForm="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RequestedObjectTitle">
+      </Field>
+      <!-- If an access request is made for a web which doesn't have unique role assignments  -->
+      <!-- then this field will store that web so that we know which web the user was trying to access. -->
+      <!-- Note that RequestedWebId will always contain the unique role assignments web -->
+      <Field ID="{8F3ECCCD-CE41-4c7b-89B7-D9609844BC3D}" Name="InheritingRequestedWebId" DisplayName="$Resources:AccReqList_InheritingRequestedWebId;" Type="Guid" Required="TRUE" Hidden="TRUE" ReadOnlyEnforced="TRUE" ShowInViewForm="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="InheritingRequestedWebId">
+      </Field>
+      <Field ID="{8E0C2659-8FAF-4668-B18E-995ABE0F5932}" Name="RequestedWebId" DisplayName="$Resources:AccReqList_RequestedWebId;" Type="Guid" Required="TRUE" Hidden="TRUE" ReadOnlyEnforced="TRUE" ShowInViewForm="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RequestedWebId">
+      </Field>
+      <Field ID="{AC5E39AB-4C14-41d5-AEE4-7CE22DF51979}" Name="RequestedListId" DisplayName="$Resources:AccReqList_ListId;" Type="Guid" Required="FALSE" Hidden="TRUE" ReadOnlyEnforced="TRUE" ShowInViewForm="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RequestedListId">
+      </Field>
+      <Field ID="{BB457D8E-D538-4e5e-836A-38CCC8B0D29E}" Name="RequestedListItemId" DisplayName="$Resources:AccReqList_ListItemId;" Type="Guid" Required="FALSE" Hidden="TRUE" ReadOnlyEnforced="TRUE" ShowInViewForm="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RequestedListItemId">
+      </Field>
+      <Field ID="{E542F930-4FA9-4ec7-AEA3-A5A81C902ECF}" Name="RequestedBy" DisplayName="$Resources:AccReqList_RequestedBy;" Type="Text" Required="TRUE" Hidden="TRUE" ReadOnlyEnforced="TRUE" ShowInViewForm="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RequestedBy">
+      </Field>
+      <Field ID="{E542DC30-4FA9-4ec7-AEA3-A5A81C902ECF}" Name="RequestedByUserId" DisplayName="$Resources:AccReqList_RequestedBy;" Type="Integer" Required="FALSE" Hidden="TRUE" ReadOnlyEnforced="FALSE" ShowInViewForm="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RequestedByUserId">
+      </Field>
+      <Field ID="{E54AF930-4FA9-4ec7-AEA3-A5A81C902ECF}" Name="RequestedByDisplayName" DisplayName="$Resources:AccReqList_RequestedBy;" Type="Text" Required="TRUE" Hidden="TRUE" ReadOnlyEnforced="TRUE" ShowInViewForm="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RequestedByDisplayName">
+      </Field>
+      <Field ID="{58944C7D-8942-441d-878A-82C7D7065E3E}" Name="RequestedFor" DisplayName="$Resources:AccReqList_RequestedFor;" Type="Text" Required="TRUE" Hidden="TRUE" ReadOnlyEnforced="TRUE" ShowInViewForm="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RequestedFor">
+      </Field>
+      <Field ID="{00BB4B7D-8942-441d-878A-82C7D7065E3E}" Name="RequestedForDisplayName" DisplayName="$Resources:AccReqList_RequestedFor;" Type="Text" Required="FALSE" Hidden="TRUE" ReadOnlyEnforced="TRUE" ShowInViewForm="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RequestedForDisplayName">
+      </Field>
+      <Field ID="{00BA4B7D-8942-441d-878A-82C7D7065E3E}" Name="RequestedForUserId" DisplayName="$Resources:AccReqList_RequestedForUserId;" Type="Integer" Required="FALSE" Hidden="TRUE" ReadOnlyEnforced="FALSE" ShowInViewForm="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RequestedForUserId">
+      </Field>
+      <Field ID="{B5157518-8AF8-449c-AD81-34F49AB51069}" Name="ApprovedBy" DisplayName="$Resources:AccReqList_ApprovedBy;" Type="User" List="UserInfo" FromBaseType="TRUE" Required="TRUE" Hidden="TRUE" ShowInViewForm="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="ApprovedBy">
+      </Field>
+      <Field ID="{36146F7D-E2BF-4692-824B-263EC43A92CE}" Name="AcceptedBy" DisplayName="$Resources:AccReqList_AcceptedBy;" Type="Text" Required="TRUE" Hidden="TRUE" ShowInViewForm="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="AcceptedBy">
+      </Field>
+      <Field ID="{7CEA1B74-B154-44a9-BCF4-6653E9F93C21}" Name="Status" DisplayName="$Resources:AccReqList_Status;" Type="Integer" Required="TRUE" Hidden="TRUE" ShowInViewForm="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Status">
+      </Field>
+      <Field ID="{74190A86-799C-446b-8DF4-7B728064AC6C}" Name="Expires" DisplayName="$Resources:AccReqList_Expires;" Type="DateTime" Required="TRUE" Hidden="TRUE" ShowInViewForm="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Expires">
+      </Field>
+      <Field ID="{BD9AC514-C078-4d1b-8E12-E06F2791E114}" Name="PermissionType" DisplayName="$Resources:AccReqList_PermissionType;" Type="Choice" Required="TRUE" Hidden="TRUE" ShowInViewForm="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="PermissionType">
+        <CHOICES><CHOICE>SharePoint Group</CHOICE><CHOICE>Role Definition</CHOICE>
+        </CHOICES>
+      </Field>
+      <Field ID="{4990B6B0-0D65-4dba-910B-A871AEF995EB}" Name="PermissionLevelRequested" DisplayName="$Resources:AccReqList_PermissionLevelRequested;" Type="AccessRequestsPermissionLevel" Required="TRUE" ShowInEditForm="TRUE" ShowInViewForm="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="PermissionLevelRequested">
+      </Field>
+      <Field ID="{EEB5334B-3E6D-4d55-907D-48C5D765BB94}" Name="AnonymousLinkType" DisplayName="$Resources:AccReqList_AnonymousLinkType;" Type="Choice" Required="TRUE" Hidden="TRUE" ShowInEditForm="FALSE" ShowInViewForm="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="AnonymousLinkType">
+        <CHOICES><CHOICE>None</CHOICE><CHOICE>View</CHOICE><CHOICE>Edit</CHOICE>
+        </CHOICES>
+      </Field>
+      <Field ID="{885A4839-745F-4685-9843-25120B275367}" Name="SendWelcomeEmail" DisplayName="$Resources:AccReqList_SendWelcomeEmail;" Type="Boolean" Required="TRUE" Hidden="TRUE" ReadOnlyEnforced="TRUE" ShowInViewForm="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="SendWelcomeEmail">
+      </Field>
+      <Field ID="{F9011CCA-05DE-4315-81AB-CFC24FED6F96}" Name="WelcomeEmailSubject" DisplayName="$Resources:AccReqList_WelcomeEmailSubject;" Type="Text" Required="TRUE" Hidden="TRUE" ReadOnlyEnforced="TRUE" ShowInViewForm="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="WelcomeEmailSubject">
+      </Field>
+      <Field ID="{5E4354E3-BD18-4162-A697-41249088C92C}" Name="WelcomeEmailBody" DisplayName="$Resources:AccReqList_WelcomeEmailBody;" Type="Text" Required="TRUE" Hidden="TRUE" ReadOnlyEnforced="TRUE" ShowInViewForm="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="WelcomeEmailBody">
+      </Field>
+      <Field ID="{258C0204-AD04-4e20-99CF-3415F66415C5}" Name="Conversation" AppendOnly="TRUE" DisplayName="$Resources:AccReqList_Conversation;" Type="Note" ShowInEditForm="TRUE" ShowInViewForm="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Conversation">
+      </Field>
+      <Field ID="{A604DD56-A00D-4955-88FD-27300E60C91E}" Name="IsInvitation" DisplayName="$Resources:AccReqList_IsInvitation;" Type="Boolean" Required="TRUE" Hidden="TRUE" ReadOnlyEnforced="TRUE" ShowInViewForm="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="IsInvitation">
+      </Field>
+      <Field ID="{1354a23c-c7f9-4134-88e4-ad842e2d723c}" Hidden="TRUE" Type="Computed" Filterable="FALSE" Sortable="TRUE" Name="PermissionDisp" DisplayName="$Resources:AccReqList_RequestedPermissionDisplay;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="PermissionDisp">
+        <FieldRefs>
+          <FieldRef Name="IsInvitation" />
+          <FieldRef Name="PermissionType" />
+          <FieldRef Name="PermissionLevelRequested" />
+        </FieldRefs>
+      </Field>
+      <Field ID="{1aa4b23c-c7f9-4134-88e4-ad842e2d723c}" Type="Computed" Group="Main" Name="StatusDisp" Filterable="FALSE" Sortable="TRUE" DisplayName="$Resources:AccReqList_RequestedStatusDisplay;" ReadOnlyEnforced="TRUE" ShowInEditForm="TRUE" ShowInViewForm="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="StatusDisp">
+        <FieldRefs>
+          <FieldRef ID="{7CEA1B74-B154-44a9-BCF4-6683E9F93C21}" Name="Status" />
+          <FieldRef ID="{B7157518-8AF8-449c-AD81-34F49AB51069}" Name="ApprovedBy" />
+          <FieldRef ID="{1BEC4DEB-9524-496d-AF14-7547F0581CEF}" Name="ReqForUser" />
+        </FieldRefs>
+        <!-- DisplayPattern is used to render the field in the edit form; it isn't used by client-side rendering -->
+        <DisplayPattern>
+          <Switch>
+            <Expr>
+              <LookupColumn Name="Status" />
+            </Expr>
+            <Case Value="0"><HTML><![CDATA[Pending]]></HTML>
+            </Case>
+            <Case Value="1"><HTML><![CDATA[Approved by ]]></HTML>
+              <LookupColumn Name="ApprovedBy" />
+            </Case>
+            <Case Value="2"><HTML><![CDATA[Accepted]]></HTML>
+            </Case>
+            <Case Value="3"><HTML><![CDATA[Denied]]></HTML>
+            </Case>
+            <Case Value="4"><HTML><![CDATA[Expired]]></HTML>
+            </Case>
+            <Default><HTML><![CDATA[Reactivated]]></HTML>
+            </Default>
+          </Switch>
+        </DisplayPattern>
+      </Field>
+      <Field ID="{13a4a23c-c7f9-4134-88e4-ad842e2d723c}" Hidden="TRUE" Type="Computed" Group="Main" Name="ObjectRequestedTitleDisp" DisplayName="$Resources:AccReqList_RequestedResource;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="ObjectRequestedTitleDisp">
+        <FieldRefs>
+          <FieldRef ID="{CD724C16-3F90-4647-B144-A016D49D30E8}" Name="RequestedObjectTitle" />
+          <FieldRef ID="{862D98DB-C09D-4007-B4D5-632D1DBFEA1C}" Name="RequestedObjectUrl" />
+        </FieldRefs>
+      </Field>
+      <!-- Computed fields are used for some fields so that they will (1) display as read-only in the edit form -->
+      <!-- (even if ReadOnlyEnforced is true for regular fields, they would display as editable otherwise) -->
+      <!-- and (2) have a different display name (for RequestedByDisplayName and RequestedForDisplayName) -->
+      <Field ID="{A06AF90A-81BA-4da6-964A-607F3DE1392F}" Type="Computed" Name="RequestedForDisplayNameDisp" DisplayName="$Resources:AccReqList_RequestedFor;" ReadOnlyEnforced="TRUE" ShowInEditForm="TRUE" ShowInViewForm="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RequestedForDisplayNameDisp">
+        <FieldRefs>
+          <FieldRef ID="{00BB4B7D-8942-441d-878A-82C7D7065E3E}" Name="RequestedForDisplayName" />
+        </FieldRefs>
+        <DisplayPattern>
+          <LookupColumn Name="RequestedForDisplayName" />
+        </DisplayPattern>
+      </Field>
+      <Field ID="{BA79C5A9-9025-4940-BF8E-9EE05B6BF70B}" Type="Computed" Name="RequestedByDisplayNameDisp" DisplayName="$Resources:AccReqList_RequestedBy;" ReadOnlyEnforced="TRUE" ShowInEditForm="TRUE" ShowInViewForm="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RequestedByDisplayNameDisp">
+        <FieldRefs>
+          <FieldRef ID="{E54AF930-4FA9-4ec7-AEA3-A5A81C902ECF}" Name="RequestedByDisplayName" />
+        </FieldRefs>
+        <DisplayPattern>
+          <LookupColumn Name="RequestedByDisplayName" />
+        </DisplayPattern>
+      </Field>
+      <Field ID="{00bf7534-3bd9-4a9d-9b05-e733fe1b9fad}" Name="RequestDate" DisplayName="$Resources:core,AccReqList_RequestDate;" Type="Calculated" FromBaseType="TRUE" Format="DateTime" ReadOnly="TRUE" ResultType="DateTime" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RequestDate">
+        <Formula>=[Created]</Formula>
+        <FieldRefs>
+          <FieldRef Name="Created" />
+        </FieldRefs>
+      </Field>
+      <Field ID="{1BEC4DEB-9524-496d-AF14-7547F0581CEF}" Name="ReqForUser" CalloutMenu="TRUE" FieldRef="RequestedForUserId" RowOrdinal="0" ReadOnly="TRUE" Type="User" List="UserInfo" SourceID="http://schemas.microsoft.com/sharepoint/v3" DisplayName="$Resources:core,AccReqList_RequestedForUser;" StaticName="ReqForUser" FromBaseType="TRUE" Required="FALSE" Group="" ShowField="NameWithPictureAndDetails" AuthoringInfo="$Resources:core,userinfo_schema_NameWithPicDet_editinfo;">
+        <FieldRefs>
+          <FieldRef ID="{0BAC4DE3-9524-496d-AF14-7547F0581CEF}" Name="RequestedForDisplayName" />
+          <FieldRef ID="{0BEC4DE3-9524-496d-AF14-7547F0581CEF}" Name="RequestedForUserId" />
+          <FieldRef ID="{ABDC4DE3-9524-496d-AF14-7547F0581CEF}" Name="ReqForUser" />
+          <FieldRef ID="{0BEC4DE3-9524-496d-AF14-7547F0581CEA}" Name="RequestedByUserId" />
+          <FieldRef ID="{1BEC4DE3-9524-496d-AF14-7547B0081CEF}" Name="ReqByUser" />
+          <FieldRef ID="{0AEC4DE3-9524-496d-AF14-00B7F0581CEF}" Name="Expires" />
+          <FieldRef ID="{0AEC4DE3-9524-496d-AF14-7547F0581CEF}" Name="RequestedWebId" />
+          <FieldRef ID="{0AEC4DE3-9524-496d-AF14-7547F0581CEF}" Name="RequestedListId" />
+          <FieldRef ID="{0AEC4DE3-9524-496d-AF14-7547F0581CEF}" Name="RequestedListItemId" />
+        </FieldRefs>
+      </Field>
+      <Field ID="{1BEC4AEB-9524-496d-AF14-75400B581CEF}" Name="ReqByUser" FieldRef="RequestedByUserId" RowOrdinal="0" ReadOnly="TRUE" Type="User" List="UserInfo" SourceID="http://schemas.microsoft.com/sharepoint/v3" DisplayName="$Resources:core,Modified_By;" StaticName="ReqByUser" FromBaseType="TRUE" Required="FALSE" Group="" ShowField="NameWithPicture" AuthoringInfo="$Resources:core,picture_and_name;" />
+    </Fields>
+    <!--End Access Requests List -->
+    <Views>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" Hidden="TRUE" DisplayName="$Resources:AccReqList_View1;" DefaultView="TRUE" MobileView="True" MobileDefaultView="True" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/placeholder32x32.png?rev=23" Url="pendingreq.aspx">
+        <RowLimit Paged="TRUE">15</RowLimit>
+        <JSLink>accessrequestscontrol.js|mquery.js|callout.js|accessrequestsviewtemplate.js</JSLink>
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+        <ViewFields>
+          <FieldRef Name="ReqForUser">
+          </FieldRef>
+          <FieldRef Name="PermissionDisp">
+          </FieldRef>
+          <FieldRef Name="RequestDate">
+          </FieldRef>
+          <FieldRef Name="StatusDisp">
+          </FieldRef>
+          <FieldRef Name="ObjectRequestedTitleDisp">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <Where>
+            <And>
+              <Eq>
+                <FieldRef Name="IsInvitation">
+                </FieldRef>
+                <Value Type="Boolean">0</Value>
+              </Eq>
+              <Eq>
+                <FieldRef Name="StatusDisp">
+                </FieldRef>
+                <Value Type="Integer">0</Value>
+              </Eq>
+            </And>
+          </Where>
+        </Query>
+      </View>
+      <View BaseViewID="2" Type="HTML" WebPartZoneID="Main" Hidden="TRUE" DisplayName="$Resources:AccReqList_View2;" MobileView="True" MobileDefaultView="True" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/placeholder32x32.png?rev=23" Url="pendinginv.aspx">
+        <RowLimit Paged="TRUE">15</RowLimit>
+        <JSLink>accessrequestscontrol.js|mquery.js|callout.js|accessrequestsviewtemplate.js</JSLink>
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+        <ViewFields>
+          <FieldRef Name="ReqForUser">
+          </FieldRef>
+          <FieldRef Name="PermissionDisp">
+          </FieldRef>
+          <FieldRef Name="RequestDate">
+          </FieldRef>
+          <FieldRef Name="StatusDisp">
+          </FieldRef>
+          <FieldRef Name="ObjectRequestedTitleDisp">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <Where>
+            <And>
+              <And>
+                <Eq>
+                  <FieldRef Name="IsInvitation">
+                  </FieldRef>
+                  <Value Type="Boolean">1</Value>
+                </Eq>
+                <Eq>
+                  <FieldRef Name="Status">
+                  </FieldRef>
+                  <Value Type="Integer">0</Value>
+                </Eq>
+              </And>
+              <Geq>
+                <FieldRef Name="Expires">
+                </FieldRef>
+                <Value Type="DateTime">
+                  <Today />
+                </Value>
+              </Geq>
+            </And>
+          </Where>
+        </Query>
+      </View>
+      <View BaseViewID="3" Type="HTML" WebPartZoneID="Main" Hidden="TRUE" DisplayName="$Resources:AccReqList_View3;" MobileView="True" MobileDefaultView="True" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/placeholder32x32.png?rev=23" Url="oldreq.aspx">
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <JSLink>accessrequestscontrol.js|mquery.js|callout.js|accessrequestsviewtemplate.js</JSLink>
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+        <ViewFields>
+          <FieldRef Name="ReqForUser">
+          </FieldRef>
+          <FieldRef Name="PermissionDisp">
+          </FieldRef>
+          <FieldRef Name="RequestDate">
+          </FieldRef>
+          <FieldRef Name="StatusDisp">
+          </FieldRef>
+          <FieldRef Name="ObjectRequestedTitleDisp">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <Where>
+            <Or>
+              <Neq>
+                <FieldRef Name="Status">
+                </FieldRef>
+                <Value Type="Integer">0</Value>
+              </Neq>
+              <Lt>
+                <FieldRef Name="Expires">
+                </FieldRef>
+                <Value Type="DateTime">
+                  <Today />
+                </Value>
+              </Lt>
+            </Or>
+          </Where>
+        </Query>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+    <DefaultDescription>$Resources:onetid10;</DefaultDescription>
+  </MetaData>
+</List>

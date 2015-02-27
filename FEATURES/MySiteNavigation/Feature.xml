@@ -1,0 +1,13 @@
+<Feature Id="6ADFF05C-D581-4c05-A6B9-920F15EC6FD9"
+    Title="$Resources:spscore,PeopleFeatures_MySiteNavigation_Text;"
+    Description="$Resources:spscore,PeopleFeatures_MySiteNavigation_Desc;"
+    Version="14.0.0.0"
+    Hidden="TRUE"
+    Scope="Web"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.UserProfiles.MySiteNavigationFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="mysitenavigationfeatureelements.xml"/>
+    </ElementManifests>
+</Feature>

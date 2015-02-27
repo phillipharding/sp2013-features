@@ -1,0 +1,16 @@
+<Feature  Id="3C577815-7658-4d4f-A347-CFBB370700A7"
+		Title="$Resources:TenantWebProxyConfigFeatureTitle;"
+		Description="$Resources:TenantWebProxyConfigFeatureDescription;"
+		Version="15.0.0.0"
+		Hidden="TRUE"
+		Scope="Web"
+		DefaultResourceFile="ipfscore"
+		ReceiverClass="Microsoft.Office.InfoPath.Server.Administration.TenantWebProxyFeatureReceiver"
+		ReceiverAssembly="Microsoft.Office.InfoPath.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"		  
+		xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<ElementManifests>
+		<ElementManifest Location="tenantLink.xml"/>
+	</ElementManifests>
+
+</Feature>

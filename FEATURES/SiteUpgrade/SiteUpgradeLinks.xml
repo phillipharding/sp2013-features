@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Id="HealthCheck"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        RequireSiteAdministrator="TRUE"
+        Sequence="1010"
+        Title="$Resources:core,SiteSettings_HealthCheck_Title;"
+        Description="$Resources:core,SiteSettings_HealthCheck_Tooltip;">
+        <UrlAction
+            Url="~layouts/sitehealthcheck.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="Upgrade"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        RequireSiteAdministrator="TRUE"
+        Sequence="1020"
+        Title="$Resources:core,SiteSettings_Upgrade_Title;"
+        Description="$Resources:core,SiteSettings_Upgrade_Tooltip;">
+        <UrlAction
+            Url="~layouts/siteupgrade.aspx" />
+    </CustomAction>
+</Elements>

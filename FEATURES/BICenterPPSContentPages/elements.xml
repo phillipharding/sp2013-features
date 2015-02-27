@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="PPS_ContentPage" Url="$Resources:osrvcore,List_Pages_UrlName;" Path="">                       
+            <File Url="ppssample.aspx" Type="GhostableInLibrary">
+              <AllUsersWebPart WebPartZoneID="Main" WebPartOrder="1">
+                <![CDATA[
+                    <WebPart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/WebPart/v2">
+                        <Title></Title>
+                        <FrameType>None</FrameType>
+                        <Description></Description>
+                        <IsIncluded>true</IsIncluded>
+                        <ZoneID>Main</ZoneID>
+                        <PartOrder>1</PartOrder>
+                        <FrameState>Normal</FrameState>
+                        <Height />
+                        <Width />
+                        <AllowRemove>true</AllowRemove>
+                        <AllowZoneChange>true</AllowZoneChange>
+                        <AllowMinimize>true</AllowMinimize>
+                        <IsVisible>true</IsVisible>
+                        <Hidden>false</Hidden>
+                        <DetailLink />
+                        <HelpLink />
+                        <Dir>Default</Dir>
+                        <PartImageSmall />
+                        <MissingAssembly />
+                        <PartImageLarge>/_layouts/15/images/mscontl.gif</PartImageLarge>
+                        <IsIncludedFilter />
+                        <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                        <TypeName>Microsoft.SharePoint.WebPartPages.ContentEditorWebPart</TypeName>
+                        <ContentLink xmlns="http://schemas.microsoft.com/WebPart/v2/ContentEditor" />
+                        <Content xmlns="http://schemas.microsoft.com/WebPart/v2/ContentEditor"><Value>&lt;table&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;ppsma-fpcsm&quot;&gt;
+				&amp;nbsp;
+			&lt;/td&gt;
+			&lt;td valign=&quot;middle&quot;&gt;
+				&lt;br /&gt;
+				&lt;button onclick=&quot;javascript: OpenDD(); return false;&quot;&gt;
+					&lt;img align=&quot;absmiddle&quot; alt=&quot;$Resources:ppsma,SiteTemplate_RunDDAlt;&quot; src=&quot;/_layouts/15/images/PPSSiteTemplateRun.png&quot;
+						height=&quot;36px&quot; width=&quot;36px&quot; /&gt;&amp;nbsp;&lt;span class=&quot;ppsma-fpbbt&quot;&gt;$Resources:ppsma,SiteTemplate_RunDD;&lt;/span&gt;
+				&lt;/button&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;ppsma-fpcsm&quot;&gt;
+				&amp;nbsp;
+			&lt;/td&gt;
+			&lt;td&gt;
+				&lt;img alt=&quot;$Resources:ppsma,SiteTemplate_SplashAlt;&quot; src=&quot;/_layouts/15/images/PPSSiteTemplateSplash.png&quot;
+					height=&quot;202px&quot; width=&quot;352px&quot; /&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;ppsma-fpcsm&quot;&gt;
+				&amp;nbsp;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;ppsma-fpcsm&quot;&gt;
+				&amp;nbsp;
+			&lt;/td&gt;
+			&lt;td class=&quot;ppsma-fphtd&quot; colspan=&quot;3&quot;&gt;
+				&lt;h1 class=&quot;ppsma-fph1&quot;&gt;
+					$Resources:ppsma,SiteTemplate_PerformancePointServerName;
+				&lt;/h1&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/table&gt;
+	&lt;table&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;ppsma-fpcsm&quot;&gt;
+				&amp;nbsp;
+			&lt;/td&gt;
+			&lt;td&gt;
+				&lt;table&gt;
+					&lt;tr&gt;
+						&lt;td valign=&quot;top&quot;&gt;
+							&lt;img height=&quot;44px&quot; width=&quot;44px&quot; src=&quot;/_layouts/15/images/PPSSiteTemplateScorecard.png&quot;
+								alt=&quot;$Resources:ppsma,SiteTemplate_ScorecardsImageAlt;&quot; class=&quot;ppsma-fpi&quot; /&gt;
+						&lt;/td&gt;
+						&lt;td&gt;
+							&lt;div class=&quot;ppsma-fpct ppsma-fpt&quot;&gt;
+								&lt;h2 class=&quot;ppsma-fph2&quot;&gt;
+									$Resources:ppsma,SiteTemplate_DriveAccountability;&lt;/h2&gt;
+								$Resources:ppsma,SiteTemplate_DriveAccountabilityDescription;&lt;/div&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;ppsma-fpcsl&quot;&gt;
+				&amp;nbsp;
+			&lt;/td&gt;
+			&lt;td&gt;
+				&lt;table&gt;
+					&lt;tr&gt;
+						&lt;td valign=&quot;top&quot;&gt;
+							&lt;img height=&quot;44px&quot; width=&quot;44px&quot; src=&quot;/_layouts/15/images/PPSSiteTemplateDecomp.png&quot;
+								alt=&quot;$Resources:ppsma,SiteTemplate_DecompImageAlt;&quot; class=&quot;ppsma-fpi&quot; /&gt;
+						&lt;/td&gt;
+						&lt;td&gt;
+							&lt;div class=&quot;ppsma-fpct ppsma-fpt&quot;&gt;
+								&lt;h2 class=&quot;ppsma-fph2&quot;&gt;
+									$Resources:ppsma,SiteTemplate_DigDeeper;&lt;/h2&gt;
+								$Resources:ppsma,SiteTemplate_DigDeeperDescription;&lt;/div&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;ppsma-fpcsm&quot;&gt;
+				&amp;nbsp;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;ppsma-fpcsm&quot;&gt;
+				&amp;nbsp;
+			&lt;/td&gt;
+			&lt;td&gt;
+				&lt;table&gt;
+					&lt;tr&gt;
+						&lt;td valign=&quot;top&quot;&gt;
+							&lt;img height=&quot;44px&quot; width=&quot;44px&quot; src=&quot;/_layouts/15/images/PPSSiteTemplateDashboard.png&quot;
+								alt=&quot;$Resources:ppsma,SiteTemplate_DataVisualizationsAlt;&quot; class=&quot;ppsma-fpi&quot; /&gt;
+						&lt;/td&gt;
+						&lt;td&gt;
+							&lt;div class=&quot;ppsma-fpct ppsma-fpt&quot;&gt;
+								&lt;h2 class=&quot;ppsma-fph2&quot;&gt;
+									$Resources:ppsma,SiteTemplate_IntegratedDashboards;&lt;/h2&gt;
+								$Resources:ppsma,SiteTemplate_IntegratedDashboardsDescription;&lt;/div&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;ppsma-fpcsl&quot;&gt;
+				&amp;nbsp;
+			&lt;/td&gt;
+			&lt;td&gt;
+				&lt;table&gt;
+					&lt;tr&gt;
+						&lt;td valign=&quot;top&quot;&gt;
+							&lt;img height=&quot;44px&quot; width=&quot;44px&quot; src=&quot;/_layouts/15/images/PPSSiteTemplateChartGrid.png&quot;
+								alt=&quot;$Resources:ppsma,SiteTemplate_ChartsAndGridsAlt;&quot; class=&quot;ppsma-fpi&quot; /&gt;
+						&lt;/td&gt;
+						&lt;td&gt;
+							&lt;div class=&quot;ppsma-fpct ppsma-fpt&quot;&gt;
+								&lt;h2 class=&quot;ppsma-fph2&quot;&gt;
+									$Resources:ppsma,SiteTemplate_AnalyticPower;&lt;/h2&gt;
+								$Resources:ppsma,SiteTemplate_AnalyticPowerDescription;
+							&lt;/div&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/td&gt;
+			&lt;td class=&quot;ppsma-fpcsm&quot;&gt;
+				&amp;nbsp;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/table&gt;
+			</Value></Content>
+                        <PartStorage xmlns="http://schemas.microsoft.com/WebPart/v2/ContentEditor" />
+                    </WebPart>
+                    ]]>
+              </AllUsersWebPart>
+            </File >
+        </Module>
+</Elements>
+

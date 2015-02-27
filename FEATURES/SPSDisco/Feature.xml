@@ -1,0 +1,10 @@
+<Feature Id="713A65A1-2BC7-4E62-9446-1D0B56A8BF7F"
+    Title="$Resources:spscore,SPSDisco_Feature_Title;"
+    Description="$Resources:spscore,SPSDisco_Feature_Description;"
+    Hidden="TRUE"
+    Version="14.0.0.0"
+    Scope="Farm"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.SPSDiscoFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

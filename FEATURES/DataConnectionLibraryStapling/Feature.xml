@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+    Id="CDFA39C6-6413-4508-BCCF-BF30368472B3"
+    SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+    Title="$Resources:core,dataconnectionlibraryStapling;"
+    Description="$Resources:core,dataconnectionlibraryStapling_Desc;"
+    Version="14.0.0.0"
+    Scope="Farm">
+    <ElementManifests>
+        <ElementManifest Location="FeatureStapling\FeatureStapling.xml" />
+    </ElementManifests>
+</Feature>

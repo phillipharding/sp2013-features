@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="00BFEA71-3A1D-41D3-A0EE-651D11570120"
+    Title="$Resources:core,gridlistFeatureTitle;"
+    Description="$Resources:core,gridlistFeatureDesc;"
+    Version="1.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"    
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\GridList.xml" />
+    </ElementManifests>
+</Feature>

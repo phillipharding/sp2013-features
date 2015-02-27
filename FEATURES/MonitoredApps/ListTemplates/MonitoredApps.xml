@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="MonitoredAppsList"
+        Type="401"
+        BaseType="0"
+        SecurityBits="11"
+        Sequence="401"
+        DisplayName="$Resources:core,MonitoredApps_ListTitle;"
+        Description="$Resources:core,MonitoredApps_ListDesc;"
+        Image="/_layouts/images/itgen.png" 
+        Hidden="TRUE"
+        HiddenList="TRUE"
+        Unique="TRUE"
+    />
+    <ListInstance
+        FeatureId="345FF4F9-F706-41e1-92BC-3F0EC2D9F6EA"
+        Title="$Resources:core,MonitoredApps_ListTitle;"
+        TemplateType="401"
+        Hidden="TRUE"
+        Url="$Resources:core,lists_Folder;/MonitoredApps">
+    </ListInstance>
+</Elements>

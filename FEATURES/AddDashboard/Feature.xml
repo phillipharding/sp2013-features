@@ -1,0 +1,12 @@
+<Feature Id="D250636F-0A26-4019-8425-A5232D592C09"
+    Title="Add Dashboard"
+    Description="Installs the &quot;Add Dashboard&quot; Link in Site Actions menu."
+    Hidden="TRUE"
+    Version="14.0.0.0"
+    Scope="Web"
+    SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="SiteActionsMenuCustomization.xml" />
+    </ElementManifests>
+</Feature>

@@ -1,0 +1,48 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+        <Module Name="SearchDrivenWebPartsPopulation" Url="_catalogs/wp" Path="WebParts" RootWebOnly="TRUE">
+            <File Url="ContentBySearch.webpart" Type="GhostableInLibrary">
+              <Property Name="Group" Value="$Resources:core,ContentRollupWebPartGroup;"></Property>
+              <Property Name="QuickAddGroups" Value=";#Default;#" />
+            </File>
+            <File Url="CatalogItemReuse.webpart" Type="GhostableInLibrary">
+              <Property Name="Group" Value="$Resources:SearchDrivenWebPartGroup;"></Property>
+              <Property Name="QuickAddGroups" Value=";#Search;#" />
+            </File>
+            <File Url="CBS_Articles.webpart" Type="GhostableInLibrary">
+              <Property Name="Group" Value="$Resources:SearchDrivenWebPartGroup;"></Property>
+              <Property Name="QuickAddGroups" Value=";#Default;#" />
+            </File>
+            <File Url="CBS_Tag.webpart" Type="GhostableInLibrary">
+              <Property Name="Group" Value="$Resources:SearchDrivenWebPartGroup;"></Property>
+              <Property Name="QuickAddGroups" Value=";#Default;#" />
+            </File>
+            <File Url="CBS_WebPages.webpart" Type="GhostableInLibrary">
+              <Property Name="Group" Value="$Resources:SearchDrivenWebPartGroup;"></Property>
+              <Property Name="QuickAddGroups" Value=";#Default;#" />
+            </File>
+            <File Url="CBS_Pictures.webpart" Type="GhostableInLibrary">
+              <Property Name="Group" Value="$Resources:SearchDrivenWebPartGroup;"></Property>
+              <Property Name="QuickAddGroups" Value=";#Default;#" />
+            </File>
+            <File Url="CBS_PopularItems.webpart" Type="GhostableInLibrary">
+              <Property Name="Group" Value="$Resources:SearchDrivenWebPartGroup;"></Property>
+              <Property Name="QuickAddGroups" Value=";#Default;#" />
+            </File>
+            <File Url="CBS_RecentChanged.webpart" Type="GhostableInLibrary">
+              <Property Name="Group" Value="$Resources:SearchDrivenWebPartGroup;"></Property>
+              <Property Name="QuickAddGroups" Value=";#Default;#" />
+            </File>
+            <File Url="CBS_RecommendedItems.webpart" Type="GhostableInLibrary">
+              <Property Name="Group" Value="$Resources:SearchDrivenWebPartGroup;"></Property>
+              <Property Name="QuickAddGroups" Value=";#Default;#" />
+            </File>
+            <File Url="CBS_Videos.webpart" Type="GhostableInLibrary">
+              <Property Name="Group" Value="$Resources:SearchDrivenWebPartGroup;"></Property>
+              <Property Name="QuickAddGroups" Value=";#Default;#" />
+            </File>
+            <File Url="CBS_WikiPages.webpart" Type="GhostableInLibrary">
+              <Property Name="Group" Value="$Resources:SearchDrivenWebPartGroup;"></Property>
+              <Property Name="QuickAddGroups" Value=";#Default;#" />
+            </File>
+        </Module>
+</Elements>

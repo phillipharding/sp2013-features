@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="10BDAC29-A21A-47d9-9DFF-90C7CAE1301E"
+          Title="Shared Services Navigation"
+          Description="Shared Services Navigation"
+          Version="14.0.0.0"
+          Scope="Web"
+          Hidden="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="navigationelements.xml"/>
+    </ElementManifests>
+</Feature>

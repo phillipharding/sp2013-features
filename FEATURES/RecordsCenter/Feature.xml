@@ -1,0 +1,14 @@
+<Feature  Id="E0A45587-1069-46bd-BF05-8C8DB8620B08"
+          Title="$Resources:RecordsCenterFeatureTitle"	
+          Description="$Resources:RecordsCenterFeatureDescription"
+          DefaultResourceFile="dlccore"
+          Version="14.0.1.0"
+          Hidden="TRUE"
+          Scope="Web"
+          ReceiverAssembly="Microsoft.Office.Policy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.Office.RecordsManagement.RecordsRepository.Internal.RecordsCenterFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="Links.xml" />
+    </ElementManifests>
+</Feature>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Control
+  Id="GlobalSiteLink0"
+  Sequence="25"
+  ControlSrc="~/_controltemplates/15/Edu/Common/EduTopNav.ascx">
+  </Control>
+</Elements>

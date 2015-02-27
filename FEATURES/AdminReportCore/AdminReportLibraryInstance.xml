@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Id="1" 
+      FeatureId="00BFEA71-E717-4E80-AA17-D0C71B360101"
+      TemplateType="101" 
+      Url="AdminReports"
+      Title="$Resources:osrvcore,AdminReportLibrary;" 
+      Description="$Resources:osrvcore,AdminReportLibraryDescription;" />
+</Elements>

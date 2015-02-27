@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="397942EC-14BF-490E-A983-95B87D0D29D1"
+          Title="$Resources:core,EmailTemplatesTitle;"
+          Description="$Resources:core,EmailTemplatesDesc;"
+          Version="14.0.0.0"
+          Hidden="TRUE"
+          Scope="WebApplication"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="EmailTemplates.xml" />
+    </ElementManifests>
+</Feature>

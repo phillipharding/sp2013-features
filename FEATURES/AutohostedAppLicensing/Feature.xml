@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+	Id="{fa7cefd8-5595-4d68-84fa-fe2d9e693de7}"
+	Title="$Resources:core,AutoHostedAppLicensingFeatureTitle;"
+	Description="$Resources:core,AutoHostedAppLicensingFeatureDescription;"
+	Version="15.0.0.0"
+	Hidden="TRUE"
+	Scope="Site"
+	ActivateOnDefault="FALSE"
+	ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+	ReceiverClass="Microsoft.SharePoint.AutoHostedAppLicensing.SPAutoHostedAppLicensingFeatureReceiver">
+	<ElementManifests>
+		<ElementManifest Location="AutoHostedAppLicensingFields.xml"/>
+		<ElementManifest Location="ResourceBar.xml"/>
+	</ElementManifests>
+</Feature>

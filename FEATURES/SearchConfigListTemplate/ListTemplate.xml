@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        FeatureId="E47705EC-268D-4C41-AA4E-0D8727985EBC"
+        BaseType="1"
+        Category="Libraries"
+        Name="SearchConfigListTemplate"
+        DisplayName="$Resources:Microsoft.Office.Server.Search,SearchConfigListTemplate_DispName"
+        Description="$Resources:Microsoft.Office.Server.Search,SearchConfigListTemplate_Desc"
+        Hidden="TRUE"
+        HiddenList="TRUE"
+        OnQuickLaunch="TRUE"
+		Unique = "TRUE"
+        SecurityBits="11"
+        Type="101">
+    </ListTemplate>
+</Elements>

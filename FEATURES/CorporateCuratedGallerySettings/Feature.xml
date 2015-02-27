@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature 
+  xmlns="http://schemas.microsoft.com/sharepoint/" 
+  Title="$Resources:core,Marketplace_CorporateCuratedGallerySettingsFeatureTitle;"
+  Description="$Resources:core,Marketplace_CorporateCuratedGallerySettingsFeatureDescription;" 
+  Id="F8BEA737-255E-4758-AB82-E34BB46F5828"
+  Hidden="TRUE"
+  Version="15.0.0.0"
+  Scope="WebApplication">
+</Feature>

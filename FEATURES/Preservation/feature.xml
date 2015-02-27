@@ -1,0 +1,14 @@
+<Feature  Id="BFC789AA-87BA-4d79-AFC7-0C7E45DAE01A"
+          Title="$Resources:Preservation_FeatureTitle"	
+          Description="$Resources:Preservation_FeatureDescription"
+          DefaultResourceFile="dlccore"
+          Version="15.0.0.0"
+          Hidden="TRUE"
+          Scope="Site"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="PreservationListTemplate\PreservationListTemplate.xml" />
+        <ElementManifest Location="PreservationListTemplate\FieldsElements.xml" />
+        <ElementManifest Location="PreservationListTemplate\ContentTypesElements.xml" />
+    </ElementManifests>
+</Feature>

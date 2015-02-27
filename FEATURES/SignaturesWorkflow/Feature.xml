@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature  Id="6C09612B-46AF-4B2F-8DFC-59185C962A29"
+          Title="$Resources:Feature_Title;"
+          Description="$Resources:Feature_Description;"
+          ImageUrl="WorkflowSolutionFeature.gif"
+          Version="15.0.1.0"
+          Hidden="TRUE"
+          Scope="Site"
+          AlwaysForceInstall="TRUE"
+          ReceiverAssembly="Microsoft.Office.Workflow.Feature, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.Office.Workflow.Feature.WorkflowFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/"
+          DefaultResourceFile="_Res">
+  <ElementManifests>
+    <ElementManifest Location="Signatures.xml" />
+  </ElementManifests>
+  <Properties>
+    <Property Key="RegisterForms" Value="Forms\*.xsn" />
+    <Property Key="GloballyAvailable" Value="true" />
+  </Properties>
+  <UpgradeActions>
+    <VersionRange EndVersion="15.0.1.0">
+      <CustomUpgradeAction Name="SetNoNewInstance" />
+    </VersionRange>
+  </UpgradeActions>
+</Feature>

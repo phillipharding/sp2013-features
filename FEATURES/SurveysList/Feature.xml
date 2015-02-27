@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="00BFEA71-EB8A-40B1-80C7-506BE7590102"
+    Title="$Resources:core,surveyslistFeatureTitle;"
+    Description="$Resources:core,surveyslistFeatureDesc;"
+    Version="1.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\Surveys.xml" />
+    </ElementManifests>
+</Feature>

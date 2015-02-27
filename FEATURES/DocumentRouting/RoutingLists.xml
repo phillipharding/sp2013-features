@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="15.0.4420" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListInstance
+        FeatureId="00BFEA71-E717-4E80-AA17-D0C71B360101"
+        Title="$Resources:dlccore,DropOffZone_ListTitle;"
+        Url="$Resources:dlccore,DropOffZone_ListFolder;"
+        Description="$Resources:dlccore,DropOffZone_ListDescription;"
+        TemplateType="101"
+        OnQuickLaunch="TRUE"
+        >
+    </ListInstance>
+    <ListInstance
+        FeatureId="00BFEA71-DE22-43B2-A848-C05709900100"
+        Title="$Resources:dlccore,RoutingRuleList_ListTitle;"
+        Url="$Resources:dlccore,RoutingRuleList_ListFolder;"
+        Description="$Resources:dlccore,RoutingRuleList_ListDescription;"
+        TemplateType="100"
+        >
+    </ListInstance>
+    <ContentTypeBinding ContentTypeId="0x0100DC2417D125A4489CA59DCC70E3F152B2" ListUrl="$Resources:dlccore,RoutingRuleList_ListFolder;" />
+    <CustomAction
+        Id="DocumentRouterSettingsSite"
+        GroupId="SiteAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb"
+        Sequence="110"
+        Title="$Resources:dlccore, DocumentRouting_RouterSettingsLink">
+            <UrlAction Url="_layouts/15/DocumentRouterSettings.aspx?Source=settings.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="DocumentRouterRulesSite"
+        GroupId="SiteAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb"
+        Sequence="111"
+        Title="$Resources:dlccore, DocumentRouting_RouterRulesLink">
+            <UrlAction Url="$Resources:dlccore,RoutingRuleList_ListFolder;" />
+    </CustomAction>
+</Elements>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+	Id="E4E6A041-BC5B-45cb-BEAB-885A27079F74"
+	Title="$Resources:xlsrv,Feature-title;"
+	Description="$Resources:xlsrv,Feature-description;"
+	SolutionId="A992B0F0-7B6B-4315-B687-649DCAEEF726"
+	Version="14.0.0.0"
+	Scope="Farm"
+	ReceiverAssembly="Microsoft.Office.Excel.Server.MossHost, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+	ReceiverClass="Microsoft.Office.Excel.Server.MossHost.ExcelServerFeatureHandler">
+
+	<ElementManifests>
+		<ElementManifest Location="FeatureStapling\FeatureStapling.xml" />
+	</ElementManifests>
+</Feature>

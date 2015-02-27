@@ -1,0 +1,12 @@
+<Feature Id="A354E6B3-6015-4744-BDC2-2FC1E4769E65"
+         Title="$Resources:ppsma,BICenterPPSContentPages_Title"
+         Description="$Resources:ppsma,BICenterPPSContentPages_Description"
+         Version="15.0.0.0"
+         Scope="Web"
+         Hidden="TRUE"
+         DefaultResourceFile="core"
+         xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml" />
+  </ElementManifests>
+</Feature>

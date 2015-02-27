@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="00BFEA71-A83E-497E-9BA0-7A5C597D0107"
+    Title="$Resources:core,taskslistFeatureTitle;"
+    Description="$Resources:core,taskslistFeatureDesc;"
+    Version="1.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"    
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\Tasks.xml" />
+    </ElementManifests>
+</Feature>

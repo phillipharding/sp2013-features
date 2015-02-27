@@ -1,0 +1,104 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_SiteHoverPanel</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string">$Resources:Microsoft.Office.Server.Search,DisplayTemplateDescription_SiteHoverPanel</mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#SearchHoverPanel;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:ManagedPropertyMapping msdt:dt="string">'Title':'Title','Path':'Path','SiteLogo':'SiteLogo','SiteDescription':'SiteDescription','CollapsingStatus':'CollapsingStatus','DocId':'DocId','HitHighlightedProperties':'HitHighlightedProperties','FileExtension':'FileExtension','ViewsLifeTime':'ViewsLifeTime','deeplinks':'deeplinks','importance':'importance','FileType':'FileType'</mso:ManagedPropertyMapping>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="Item_Site_HoverPanel">
+<!--#_
+		var i = 0;
+		var id = ctx.CurrentItem.csr_id;
+        var loadSiteFrame = false;        
+        ctx.CurrentItem.csr_ShowFollowLink = true;
+        ctx.CurrentItem.csr_IsSite = true;
+        ctx.CurrentItem.csr_ShowViewLibrary = false;
+        ctx.CurrentItem.csr_ShowLastModifiedTime = false;
+        ctx.CurrentItem.csr_ShowAuthors = false;
+_#-->
+		<div class="ms-srch-hover-innerContainer ms-srch-hover-standardSize" id="_#= $htmlEncode(id + HP.ids.inner) =#_">
+			<div class="ms-srch-hover-arrowBorder" id="_#= $htmlEncode(id + HP.ids.arrowBorder) =#_"></div>
+			<div class="ms-srch-hover-arrow" id="_#= $htmlEncode(id + HP.ids.arrow) =#_"></div>
+			<div class="ms-srch-hover-content" id="_#= $htmlEncode(id + HP.ids.content) =#_" data-displaytemplate="SiteHoverPanel">
+                <div id="_#= $htmlEncode(id + HP.ids.header) =#_" class="ms-srch-hover-header">
+					_#= ctx.RenderHeader(ctx) =#_
+				</div>
+                <div id="_#= $htmlEncode(id + HP.ids.body) =#_" class="ms-srch-hover-body">
+<!--#_
+                    if(!Srch.U.w(ctx.CurrentItem.csr_Path) && Srch.U.isSameHost(ctx.CurrentItem.csr_Path, Srch.U.getHostName())) {
+                        ctx.CurrentItem.csr_DataShown = true;
+                        loadSiteFrame = true;
+                        var idViewerEncoded = $htmlEncode(id + HP.ids.viewer);
+                        var idGlassViewerEncoded = "glass_" + idViewerEncoded;
+_#-->				    
+                        <div class="ms-srch-hover-viewerContainer ms-srch-hover-siteViewerContainer">
+                            <div id="_#= idGlassViewerEncoded =#_" class="ms-srch-hover-glass-siteViewer"></div>
+                            <iframe id="_#=idViewerEncoded=#_" src="_#= $urlHtmlEncode(ctx.CurrentItem.csr_Path) =#_" scrolling="no" frameborder="0px" class="ms-srch-hover-siteViewer">
+                            </iframe>                            
+                        </div>                      
+<!--#_                      
+                    }
+                    if(!loadSiteFrame && !Srch.U.n(ctx.CurrentItem.SiteLogo) && !Srch.U.isDefaultSiteLogo(ctx.CurrentItem.SiteLogo)){
+                        ctx.CurrentItem.csr_DataShown = true;
+_#-->					
+                        <div class="ms-srch-hover-imageContainer">
+                            <img id="_#= $htmlEncode(id + HP.ids.siteLogo) =#_" alt="_#= $htmlEncode(Srch.Res.hp_Alt_SiteLogo) =#_" src="_#= $urlHtmlEncode(ctx.CurrentItem.SiteLogo) =#_" onload="this.style.display='block';" />
+                        </div>
+<!--#_						
+                    }
+                    if (!Srch.U.w(ctx.CurrentItem.SiteDescription)) {
+                        ctx.CurrentItem.csr_DataShown = true;
+_#-->				
+                        <div class="ms-srch-hover-subTitle"><h3 class="ms-soften">_#= $htmlEncode(Srch.Res.hp_SiteDescription) =#_</h3></div>
+                        <span class="ms-srch-hover-text" id="_#= $htmlEncode(id + HP.ids.siteDescription) =#_" title="_#= $htmlEncode(ctx.CurrentItem.SiteDescription) =#_">
+                            _#= $htmlEncode(Srch.U.truncateEnd(ctx.CurrentItem.SiteDescription, 150)) =#_
+                        </span>
+<!--#_						
+                    }
+                    if(!Srch.U.w(ctx.CurrentItem.csr_Path)) {
+                        var siteResultsId = id + "_siteSearchResults";
+                        AddPostRenderCallback(ctx, function()
+                        {
+                            var query = "";
+                            var dataProvider = ctx.ClientControl.get_dataProvider();
+                            if (dataProvider) {
+                                var states = dataProvider.get_currentQueryState()
+                                if (states) {
+                                    query = states.k;
+                                }
+                            }
+
+                            Srch.SiteSearchUtil.populateSiteSearchResults(ctx.CurrentItem.csr_Path, siteResultsId, query, id + HP.ids.noData);
+                        });  
+_#-->			    
+                        <div id="_#= $htmlEncode(siteResultsId) =#_">
+                        </div>
+<!--#_						
+                    }
+_#-->
+                    _#= ctx.RenderBody(ctx) =#_ 
+                </div>			
+				<div id="_#= $htmlEncode(id + HP.ids.actions) =#_" class="ms-srch-hover-actions">                  
+					_#= ctx.RenderFooter(ctx) =#_
+				</div>
+			</div>
+<!--#_			
+			if(loadSiteFrame){
+				AddPostRenderCallback(ctx, function(){
+					HP.loadSiteViewer(ctx.CurrentItem.id, ctx.CurrentItem.id + HP.ids.inner, id + HP.ids.viewer, ctx.CurrentItem.csr_Path, "glass_" + id + HP.ids.viewer);
+				});
+			}
+_#-->
+		</div>
+    </div>
+</body>
+</html>

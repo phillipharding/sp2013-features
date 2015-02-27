@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="00BFEA71-EC85-4903-972D-EBE475780106"
+    Title="$Resources:core,eventslistFeatureTitle;"
+    Description="$Resources:core,eventslistFeatureDesc;"
+    Version="3.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\Events.xml"/>
+    </ElementManifests>
+    <UpgradeActions
+        ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        ReceiverClass="Microsoft.SharePoint.SPEventListUpgradeFeatureReceiver">
+        <VersionRange EndVersion="1.0.0.0">
+            <CustomUpgradeAction Name="V2VUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="3.0.0.0">
+            <CustomUpgradeAction Name="UpgradeFieldIndices" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

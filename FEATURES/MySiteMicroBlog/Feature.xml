@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature Id="EA23650B-0340-4708-B465-441A41C37AF7"
+    Title="MySite MicroBlogging List"
+    Description="Enables MySite MicroBlogging List."
+    Version="15.0.3.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.MicroBlogFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\MicroBlogList.xml"/>
+        <ElementManifest Location="MicroBlogList\MicroBlogListData.xml"/>
+    </ElementManifests>
+
+    <UpgradeActions>
+        <VersionRange EndVersion="15.0.1.0">
+             <CustomUpgradeAction Name="UpdateFeedIdentifier" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.2.0">
+             <CustomUpgradeAction Name="UpdateImageAndPreventListDeletion" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.3.0">
+            <CustomUpgradeAction Name="UpdateFeedListSchema" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

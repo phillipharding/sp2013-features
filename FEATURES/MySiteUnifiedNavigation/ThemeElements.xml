@@ -1,0 +1,12 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <HideCustomAction
+        Id="HideTheme"
+        HideActionId="Theme"
+        GroupId="Customization"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideThemes"
+        HideActionId="Themes"
+        GroupId="Galleries"
+        Location="Microsoft.SharePoint.SiteSettings" />
+</Elements>

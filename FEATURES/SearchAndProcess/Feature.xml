@@ -1,0 +1,10 @@
+<Feature  Id="1dbf6063-d809-45ea-9203-d3ba4a64f86d"
+          Title="$Resources:SearchAndProcessFeatureTitle"
+          Description="$Resources:SearchAndProcessFeatureDescription"
+          Version="14.0.0.0"
+          DefaultResourceFile="dlccore"
+          Hidden="TRUE"
+          Scope="WebApplication"
+          ReceiverAssembly="Microsoft.Office.Policy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.Office.RecordsManagement.Internal.SearchAndProcessFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/" />

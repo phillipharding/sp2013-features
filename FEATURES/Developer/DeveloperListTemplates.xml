@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListTemplate
+      FeatureId="E374875E-06B6-11E0-B0FA-57F5DFD72085"
+      BaseType="0"
+      Name="DraftAppsListTemplate"
+      DisableAttachments="TRUE"
+      DisallowContentTypes="TRUE"
+      FolderCreation="FALSE"
+      Hidden="TRUE"
+      HiddenList="False"
+      OnQuickLaunch="False"
+      SecurityBits="11"
+      Type="1230"
+      VersioningEnabled="FALSE"
+      AllowDeletion="FALSE" >
+  </ListTemplate>
+</Elements>

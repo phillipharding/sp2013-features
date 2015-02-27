@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1036" _version="15.0.4442" _dal="1" -->
+<!-- _LocalBinding -->
+<WorkflowConfig Version="15.0.0.411">
+	<Template BaseID="{3BFB07CB-5C6A-4266-849B-8D671170040C}" DocLibURL="_catalogs/wfpub" XomlHref="_catalogs/wfpub/Recueillir les commentaires - SharePoint 2010/ReviewFeedback_1036.xoml" XomlVersion="V1.0" AssociationURL="~layouts/CstWrkflIP.aspx" TaskContentType="0x01080100C9C9515DE4E24001905074F980F93160000EEA96BE7C83464C9211129CD27F040C" StartManually="true" Visibility="RootPublic" Category="List;Language:1036;#ContentType;Language:1036" RestrictLanguage="1036" RulesHref="_catalogs/wfpub/Recueillir les commentaires - SharePoint 2010/ReviewFeedback_1036.xoml.rules" RulesVersion="V1.0" Description="Envoie un document en révision. Les réviseurs peuvent insérer des commentaires qui seront compilés et envoyés au propriétaire du document à la fin du flux de travail." PreviewHref="/_catalogs/wfpub/Recueillir les commentaires - SharePoint 2010/ReviewFeedback_1036.vdw" ShowPreview="true" PreviewVersion="V1.0"/>
+	<ContentTypes>
+		<ContentType Name="Collect Feedback Workflow Task (fr-fr)" ContentTypeID="0x01080100C9C9515DE4E24001905074F980F93160000EEA96BE7C83464C9211129CD27F040C" WorkflowForm="/_catalogs/wfpub/Recueillir les commentaires - SharePoint 2010/ReviewFeedback_Task_1036.xsn" WorkflowFormVersion="V1.0" Description="Élément de travail créé par un flux de travail que vous ou votre équipe devez accomplir.">
+			<Fields/>
+			<WorkflowFormData>
+				<dfs:myFields xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:dms="http://schemas.microsoft.com/office/2009/documentManagement/types" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:q="http://schemas.microsoft.com/office/infopath/2009/WSSList/queryFields" xmlns:d="http://schemas.microsoft.com/office/infopath/2009/WSSList/dataFields" xmlns:ma="http://schemas.microsoft.com/office/2009/metadata/properties/metaAttributes" xmlns:pc="http://schemas.microsoft.com/office/infopath/2007/PartnerControls" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<dfs:queryFields>
+					</dfs:queryFields>
+					<dfs:dataFields>
+						<d:SharePointListItem_RW>
+							<d:Status/>
+							<d:Author/>
+							<d:FieldName_ConsolidatedComments/>
+							<d:DueDate xsi:nil="true"/>
+							<d:FieldName_Comments/>
+							<d:FieldName_DelegateTo/>
+							<d:FieldName_NewDescription/>
+							<d:FieldName_NewSerialTaskDuration xsi:nil="true"/>
+							<d:FieldName_NewDurationUnits>Day</d:FieldName_NewDurationUnits>
+							<d:FieldName_RequestTo/>
+							<d:Body/>
+							<d:Title/>
+							<d:Priority>(2) Normal</d:Priority>
+							<d:PercentComplete xsi:nil="true"/>
+							<d:AssignedTo/>
+							<d:StartDate/>
+							<d:WorkflowLink Description=""/>
+							<d:OffsiteParticipant/>
+							<d:OffsiteParticipantReason/>
+							<d:WorkflowOutcome/>
+							<d:WorkflowName/>
+							<d:FormURN/>
+							<d:FormData/>
+							<d:EmailBody/>
+							<d:HasCustomEmailBody xsi:nil="true"/>
+							<d:SendEmailNotification xsi:nil="true"/>
+							<d:PendingModTime xsi:nil="true"/>
+							<d:Completed>false</d:Completed>
+							<d:ExtendedProperties/>
+							<d:ID xsi:nil="true"/>
+							<d:Modified xsi:nil="true"/>
+							<d:Created xsi:nil="true"/>
+							<d:Editor/>
+						</d:SharePointListItem_RW>
+					</dfs:dataFields>
+				</dfs:myFields>
+			</WorkflowFormData>
+		</ContentType>
+	</ContentTypes>
+	<Initiation URL="~layouts/IniWrkflIP.aspx">
+		<Fields>
+			<Field Name="Reviewers" GroupName="Assignment" FormType="Both" DisplayName="Réviseurs" Type="HybridUser" Description="Entrez les noms des personnes auxquelles le flux de travail affectera des tâches et sélectionnez l’ordre d’affectation de ces dernières. Séparez-les par des points-virgules. Vous pouvez également ajouter des étapes pour attribuer des tâches à d’autres personnes dans des ordres différents." Direction="None" InsertButtonText="Ajouter une nouvelle étape">
+				<Default/>
+				<Field Name="Assignee" DisplayName="Affecter à" List="UserInfo" Description="" Width="305" Type="UserMulti" ShowField="ImnName" UserSelectionMode="PeopleAndGroups" UserSelectionScope="0" Direction="None"/>
+				<Field Name="Stage" DisplayName="Étape" Description="" Width="1" Type="Number" Direction="None" Hidden="TRUE">
+					<Default></Default>
+				</Field>
+				<Field Name="AssignmentType" Format="Dropdown" BaseType="Text" DisplayName="Ordre" Description="" Width="150" Type="Choice" Direction="None">
+					<Default>Serial</Default>
+					<CHOICES>
+						<CHOICE DisplayName="Un à la fois (en série)">Serial</CHOICE>
+						<CHOICE DisplayName="Simultanément (en parallèle)">Parallel</CHOICE>
+					</CHOICES>
+				</Field>
+			</Field>
+			<Field Name="ExpandGroups" FormType="Both" DisplayName="Développer les groupes" Description="Pour chaque groupe entré, affectez une tâche à chaque membre et à chaque groupe qu'il contient." Direction="None" Type="Boolean">
+				<Default>1</Default>
+			</Field>
+			<Field Name="NotificationMessage" FormType="Both" NumLines="5" Sortable="FALSE" RichTextMode="Compatible" DisplayName="Demande" Description="Ce message sera envoyé aux personnes auxquelles des tâches sont affectées." Direction="None" Type="Note">
+				<Default/>
+			</Field>
+			<Field Name="DueDateforAllTasks" FormType="Both" Format="DateOnly" DisplayName="Échéance pour toutes les tâches " Description="Échéance de toutes les tâches." Direction="None" Type="DateTime">
+				<CustomValidation>
+					<Condition>. != &quot;&quot; and msxsl:string-compare(., xdDate:Now()) &lt; 0</Condition>
+					<Message ScreenTip="Les valeurs de ce contrôle doivent être postérieures à la date et l&apos;heure actuelles." ShowScreenTipOnly="TRUE">Les valeurs de ce contrôle doivent être postérieures à la date et l&apos;heure actuelles.</Message>
+				</CustomValidation>
+			</Field>
+			<Field Name="DurationforSerialTasks" FormType="Both" Min="1" Max="999" DisplayName="Durée par tâche" Description="La durée jusqu'à l’échéance d’une tâche. Choisissez les unités dans le champ Unités de durée." Direction="None" Type="Number" />
+			<Field Name="DurationUnits" FormType="Both" Format="Dropdown" BaseType="Text" DisplayName="Unités de durée" Description="Définit les unités de temps utilisées par la durée par tâche." Direction="None" Type="Choice">
+				<CHOICES>
+					<CHOICE DisplayName="Jour(s)">Day</CHOICE>
+					<CHOICE DisplayName="Semaine(s)">Week</CHOICE>
+					<CHOICE DisplayName="Mois">Month</CHOICE>
+				</CHOICES>
+				<Default>Day</Default>
+			</Field>
+			<Field Name="CC" FormType="Both" List="UserInfo" ShowField="ImnName" UserSelectionMode="PeopleAndGroups" UserSelectionScope="0" DisplayName="CC" Description="Avertir ces personnes lorsque le flux de travail démarre et se termine, sans leur affecter de tâches." Direction="None" Type="UserMulti" Mult="TRUE" />
+			<Field Name="CancelonChange" FormType="Association" DisplayName="Terminer en cas de modification du document" Description="Annule automatiquement le flux de travail si le document est modifié avant la fin de celui-ci." Direction="None" Type="Boolean">
+				<Default>0</Default>
+			</Field>
+		</Fields>
+		<Parameters>
+			<Parameter Name="Reviewers" Type="System.String"/>
+			<Parameter Name="ExpandGroups" Type="System.Boolean"/>
+			<Parameter Name="NotificationMessage" Type="System.String"/>
+			<Parameter Name="DueDateforAllTasks" Type="System.DateTime"/>
+			<Parameter Name="DurationforSerialTasks" Type="System.Double"/>
+			<Parameter Name="DurationUnits" Type="System.String"/>
+			<Parameter Name="CC" Type="System.String"/>
+			<Parameter Name="CancelonChange" Type="System.Boolean"/>
+		</Parameters>
+		<DefaultData>
+			<dfs:myFields xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:dms="http://schemas.microsoft.com/office/2009/documentManagement/types" xmlns:dfs="http://schemas.microsoft.com/office/infopath/2003/dataFormSolution" xmlns:q="http://schemas.microsoft.com/office/infopath/2009/WSSList/queryFields" xmlns:d="http://schemas.microsoft.com/office/infopath/2009/WSSList/dataFields" xmlns:ma="http://schemas.microsoft.com/office/2009/metadata/properties/metaAttributes" xmlns:pc="http://schemas.microsoft.com/office/infopath/2007/PartnerControls" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+				<dfs:queryFields>
+				</dfs:queryFields>
+				<dfs:dataFields>
+					<d:SharePointListItem_RW>
+						<d:Reviewers>
+							<d:Assignment>
+								<d:Assignee/>
+								<d:Stage xsi:nil="true"/>
+								<d:AssignmentType>Serial</d:AssignmentType>
+							</d:Assignment>
+						</d:Reviewers>
+						<d:ExpandGroups>true</d:ExpandGroups>
+						<d:NotificationMessage/>
+						<d:DueDateforAllTasks xsi:nil="true"/>
+						<d:DurationforSerialTasks xsi:nil="true"/>
+						<d:DurationUnits>Day</d:DurationUnits>
+						<d:CC/>
+						<d:CancelonChange>false</d:CancelonChange>
+					</d:SharePointListItem_RW>
+				</dfs:dataFields>
+			</dfs:myFields>
+		</DefaultData>
+	</Initiation>
+	<Extended>
+		<Fields/>
+	</Extended>
+	<MetaData>
+		<TaskForms/>
+		<Modifications ModificationUrl="~layouts/ModWrkflIP.aspx">
+			<Modification TypeId="64aefd44-fd54-48c1-93c0-86f2f7c71be5" NameFormat="Ajouter ou mettre à jour les relecteurs de {0}" FormURN="urn:schemas-microsoft-com:office:infopath:workflow:ReviewRoutingSPD-Modify:1036"/>
+			<Modification TypeId="8ac90eb6-6c4a-469a-8977-8b8368083380" NameFormat="Mettre à jour les tâches actives de {0}" FormURN="urn:schemas-microsoft-com:office:infopath:workflow:ReviewRouting-UpdateTasks:1036"/>
+			<Modification TypeId="a938eabe-8db1-45b9-87cb-b930728afe10" NameFormat="Annuler toutes les tâches de {0}" FormURN="urn:schemas-microsoft-com:office:infopath:workflow:OOB-WrapItUp:1036"/>
+		</Modifications>
+		<Instantiation_FormURI Version="V1.0">/_catalogs/wfpub/Recueillir les commentaires - SharePoint 2010/reviewfeedback_1036.xsn</Instantiation_FormURI>
+		<Association_FormURN Version="V1.0">/_catalogs/wfpub/Recueillir les commentaires - SharePoint 2010/reviewfeedback_1036.xsn</Association_FormURN>
+		<ExtendedStatusColumnValues>
+			<StatusColumnValue>Annulé</StatusColumnValue>
+			<StatusColumnValue>Approuvé</StatusColumnValue>
+			<StatusColumnValue>Refusé</StatusColumnValue>
+		</ExtendedStatusColumnValues>
+	</MetaData>
+</WorkflowConfig>

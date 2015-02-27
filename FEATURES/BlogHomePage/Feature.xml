@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="E4639BB7-6E95-4E2F-B562-03B832DD4793"
+        Title="Blog Home Page" 
+        Description="Creates the default.aspx page for the a Blog site" 
+        Version="15.0.0.0"
+        ImageUrl=""
+        Scope="Web"
+        Hidden="TRUE"
+        DefaultResourceFile="core"
+        xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="Elements.xml" />
+    </ElementManifests>
+</Feature>

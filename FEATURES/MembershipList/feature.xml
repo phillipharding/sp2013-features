@@ -1,0 +1,14 @@
+<Feature Id="947AFD14-0EA1-46c6-BE97-DEA1BF6F5BAE"
+    Title="$Resources:spscore,SiteMembershipListFeature_Text;"
+    Description="$Resources:spscore,SiteMembershipListFeature_Desc;"
+    Version="15.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="spscore"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="siteMembershipListTemplate.xml"/>
+        <ElementManifest Location="siteMembershipListInstance.xml"/>
+        <ElementManifest Location="elements.xml"/>
+    </ElementManifests>
+</Feature>

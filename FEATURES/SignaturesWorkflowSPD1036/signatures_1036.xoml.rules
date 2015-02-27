@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1036" _version="15.0.4442" _dal="1" -->
+<!-- _LocalBinding -->
+<RuleDefinitions xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow">
+    <RuleDefinitions.Conditions>
+        <RuleExpressionCondition Name="__Rule_ID527">
+            <RuleExpressionCondition.Expression>
+                <ns0:CodeBinaryOperatorExpression Operator="ValueEquality" xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                    <ns0:CodeBinaryOperatorExpression.Right>
+                        <ns0:CodePrimitiveExpression>
+                            <ns0:CodePrimitiveExpression.Value>
+                                <ns1:Boolean xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">true</ns1:Boolean>
+                            </ns0:CodePrimitiveExpression.Value>
+                        </ns0:CodePrimitiveExpression>
+                    </ns0:CodeBinaryOperatorExpression.Right>
+                    <ns0:CodeBinaryOperatorExpression.Left>
+                        <ns0:CodeMethodInvokeExpression>
+                            <ns0:CodeMethodInvokeExpression.Method>
+                                <ns0:CodeMethodReferenceExpression MethodName="Compare">
+                                    <ns0:CodeMethodReferenceExpression.TargetObject>
+                                        <ns2:WorkflowCodeTypeReferenceExpression QualifiedName="Microsoft.SharePoint.WorkflowActions.Helper" Type="Microsoft.SharePoint.WorkflowActions.Helper" xmlns:ns2="clr-namespace:Microsoft.SharePoint.WorkflowActions;Assembly=Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=null" />
+                                    </ns0:CodeMethodReferenceExpression.TargetObject>
+                                </ns0:CodeMethodReferenceExpression>
+                            </ns0:CodeMethodInvokeExpression.Method>
+                            <ns0:CodeMethodInvokeExpression.Parameters>
+                                <ns0:CodeFieldReferenceExpression FieldName="__context">
+                                    <ns0:CodeFieldReferenceExpression.TargetObject>
+                                        <ns0:CodeThisReferenceExpression />
+                                    </ns0:CodeFieldReferenceExpression.TargetObject>
+                                </ns0:CodeFieldReferenceExpression>
+                                <ns0:CodePrimitiveExpression>
+                                    <ns0:CodePrimitiveExpression.Value>
+                                        <ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">Equal</ns1:String>
+                                    </ns0:CodePrimitiveExpression.Value>
+                                </ns0:CodePrimitiveExpression>
+                                <ns0:CodeMethodInvokeExpression>
+                                    <ns0:CodeMethodInvokeExpression.Method>
+                                        <ns0:CodeMethodReferenceExpression MethodName="HTLookupString">
+                                            <ns0:CodeMethodReferenceExpression.TargetObject>
+                                                <ns2:WorkflowCodeTypeReferenceExpression QualifiedName="Microsoft.SharePoint.WorkflowActions.Helper" Type="Microsoft.SharePoint.WorkflowActions.Helper" xmlns:ns2="clr-namespace:Microsoft.SharePoint.WorkflowActions;Assembly=Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=null" />
+                                            </ns0:CodeMethodReferenceExpression.TargetObject>
+                                        </ns0:CodeMethodReferenceExpression>
+                                    </ns0:CodeMethodInvokeExpression.Method>
+                                    <ns0:CodeMethodInvokeExpression.Parameters>
+                                        <ns0:CodeFieldReferenceExpression FieldName="__context">
+                                            <ns0:CodeFieldReferenceExpression.TargetObject>
+                                                <ns0:CodeThisReferenceExpression />
+                                            </ns0:CodeFieldReferenceExpression.TargetObject>
+                                        </ns0:CodeFieldReferenceExpression>
+                                        <ns0:CodePropertyReferenceExpression PropertyName="TaskHashtable">
+                                            <ns0:CodePropertyReferenceExpression.TargetObject>
+                                                <ns2:WorkflowAncestorReferenceExpression QualifiedTypeName="Microsoft.Office.Workflow.Actions.OnTaskCompleted, Microsoft.Office.Workflow.Actions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" AncestorName="ID11" xmlns:ns2="clr-namespace:Microsoft.SharePoint.WorkflowActions;Assembly=Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=null" />
+                                            </ns0:CodePropertyReferenceExpression.TargetObject>
+                                        </ns0:CodePropertyReferenceExpression>
+                                        <ns0:CodePrimitiveExpression>
+                                            <ns0:CodePrimitiveExpression.Value>
+                                                <ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">WorkflowOutcome</ns1:String>
+                                            </ns0:CodePrimitiveExpression.Value>
+                                        </ns0:CodePrimitiveExpression>
+                                    </ns0:CodeMethodInvokeExpression.Parameters>
+                                </ns0:CodeMethodInvokeExpression>
+                                <ns0:CodePrimitiveExpression>
+                                    <ns0:CodePrimitiveExpression.Value>
+                                        <ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">Signé</ns1:String>
+                                    </ns0:CodePrimitiveExpression.Value>
+                                </ns0:CodePrimitiveExpression>
+                            </ns0:CodeMethodInvokeExpression.Parameters>
+                        </ns0:CodeMethodInvokeExpression>
+                    </ns0:CodeBinaryOperatorExpression.Left>
+                </ns0:CodeBinaryOperatorExpression>
+            </RuleExpressionCondition.Expression>
+        </RuleExpressionCondition>
+        <RuleExpressionCondition Name="__Rule_ID10127">
+            <RuleExpressionCondition.Expression>
+                <ns0:CodeBinaryOperatorExpression Operator="ValueEquality" xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                    <ns0:CodeBinaryOperatorExpression.Right>
+                        <ns0:CodePrimitiveExpression>
+                            <ns0:CodePrimitiveExpression.Value>
+                                <ns1:Boolean xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">true</ns1:Boolean>
+                            </ns0:CodePrimitiveExpression.Value>
+                        </ns0:CodePrimitiveExpression>
+                    </ns0:CodeBinaryOperatorExpression.Right>
+                    <ns0:CodeBinaryOperatorExpression.Left>
+                        <ns0:CodeMethodInvokeExpression>
+                            <ns0:CodeMethodInvokeExpression.Method>
+                                <ns0:CodeMethodReferenceExpression MethodName="Compare">
+                                    <ns0:CodeMethodReferenceExpression.TargetObject>
+                                        <ns2:WorkflowCodeTypeReferenceExpression QualifiedName="Microsoft.SharePoint.WorkflowActions.Helper" Type="Microsoft.SharePoint.WorkflowActions.Helper" xmlns:ns2="clr-namespace:Microsoft.SharePoint.WorkflowActions;Assembly=Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=null" />
+                                    </ns0:CodeMethodReferenceExpression.TargetObject>
+                                </ns0:CodeMethodReferenceExpression>
+                            </ns0:CodeMethodInvokeExpression.Method>
+                            <ns0:CodeMethodInvokeExpression.Parameters>
+                                <ns0:CodeFieldReferenceExpression FieldName="__context">
+                                    <ns0:CodeFieldReferenceExpression.TargetObject>
+                                        <ns0:CodeThisReferenceExpression />
+                                    </ns0:CodeFieldReferenceExpression.TargetObject>
+                                </ns0:CodeFieldReferenceExpression>
+                                <ns0:CodePrimitiveExpression>
+                                    <ns0:CodePrimitiveExpression.Value>
+                                        <ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">NotIsEmpty</ns1:String>
+                                    </ns0:CodePrimitiveExpression.Value>
+                                </ns0:CodePrimitiveExpression>
+                                <ns0:CodePropertyReferenceExpression PropertyName="ItemExternalURL">
+                                    <ns0:CodePropertyReferenceExpression.TargetObject>
+                                        <ns0:CodeFieldReferenceExpression FieldName="ID4">
+                                            <ns0:CodeFieldReferenceExpression.TargetObject>
+                                                <ns0:CodeThisReferenceExpression />
+                                            </ns0:CodeFieldReferenceExpression.TargetObject>
+                                        </ns0:CodeFieldReferenceExpression>
+                                    </ns0:CodePropertyReferenceExpression.TargetObject>
+                                </ns0:CodePropertyReferenceExpression>
+                                <ns0:CodePrimitiveExpression>
+                                    <ns0:CodePrimitiveExpression.Value>
+                                        <ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"></ns1:String>
+                                    </ns0:CodePrimitiveExpression.Value>
+                                </ns0:CodePrimitiveExpression>
+                            </ns0:CodeMethodInvokeExpression.Parameters>
+                        </ns0:CodeMethodInvokeExpression>
+                    </ns0:CodeBinaryOperatorExpression.Left>
+                </ns0:CodeBinaryOperatorExpression>
+            </RuleExpressionCondition.Expression>
+        </RuleExpressionCondition>
+        <RuleExpressionCondition Name="__Rule_ID10315">
+            <RuleExpressionCondition.Expression>
+                <ns0:CodeBinaryOperatorExpression Operator="ValueEquality" xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                    <ns0:CodeBinaryOperatorExpression.Right>
+                        <ns0:CodePrimitiveExpression>
+                            <ns0:CodePrimitiveExpression.Value>
+                                <ns1:Boolean xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">true</ns1:Boolean>
+                            </ns0:CodePrimitiveExpression.Value>
+                        </ns0:CodePrimitiveExpression>
+                    </ns0:CodeBinaryOperatorExpression.Right>
+                    <ns0:CodeBinaryOperatorExpression.Left>
+                        <ns0:CodeMethodInvokeExpression>
+                            <ns0:CodeMethodInvokeExpression.Method>
+                                <ns0:CodeMethodReferenceExpression MethodName="Compare">
+                                    <ns0:CodeMethodReferenceExpression.TargetObject>
+                                        <ns2:WorkflowCodeTypeReferenceExpression QualifiedName="Microsoft.SharePoint.WorkflowActions.Helper" Type="Microsoft.SharePoint.WorkflowActions.Helper" xmlns:ns2="clr-namespace:Microsoft.SharePoint.WorkflowActions;Assembly=Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=null" />
+                                    </ns0:CodeMethodReferenceExpression.TargetObject>
+                                </ns0:CodeMethodReferenceExpression>
+                            </ns0:CodeMethodInvokeExpression.Method>
+                            <ns0:CodeMethodInvokeExpression.Parameters>
+                                <ns0:CodeFieldReferenceExpression FieldName="__context">
+                                    <ns0:CodeFieldReferenceExpression.TargetObject>
+                                        <ns0:CodeThisReferenceExpression />
+                                    </ns0:CodeFieldReferenceExpression.TargetObject>
+                                </ns0:CodeFieldReferenceExpression>
+                                <ns0:CodePrimitiveExpression>
+                                    <ns0:CodePrimitiveExpression.Value>
+                                        <ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">Equal</ns1:String>
+                                    </ns0:CodePrimitiveExpression.Value>
+                                </ns0:CodePrimitiveExpression>
+                                <ns0:CodeFieldReferenceExpression FieldName="IsItemDeleted">
+                                    <ns0:CodeFieldReferenceExpression.TargetObject>
+                                        <ns0:CodeThisReferenceExpression />
+                                    </ns0:CodeFieldReferenceExpression.TargetObject>
+                                </ns0:CodeFieldReferenceExpression>
+                                <ns0:CodePrimitiveExpression>
+                                    <ns0:CodePrimitiveExpression.Value>
+                                        <ns1:Boolean xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">true</ns1:Boolean>
+                                    </ns0:CodePrimitiveExpression.Value>
+                                </ns0:CodePrimitiveExpression>
+                            </ns0:CodeMethodInvokeExpression.Parameters>
+                        </ns0:CodeMethodInvokeExpression>
+                    </ns0:CodeBinaryOperatorExpression.Left>
+                </ns0:CodeBinaryOperatorExpression>
+            </RuleExpressionCondition.Expression>
+        </RuleExpressionCondition>
+        <RuleExpressionCondition Name="__Rule_ID10318">
+            <RuleExpressionCondition.Expression>
+                <ns0:CodeBinaryOperatorExpression Operator="ValueEquality" xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                    <ns0:CodeBinaryOperatorExpression.Right>
+                        <ns0:CodePrimitiveExpression>
+                            <ns0:CodePrimitiveExpression.Value>
+                                <ns1:Boolean xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">true</ns1:Boolean>
+                            </ns0:CodePrimitiveExpression.Value>
+                        </ns0:CodePrimitiveExpression>
+                    </ns0:CodeBinaryOperatorExpression.Right>
+                    <ns0:CodeBinaryOperatorExpression.Left>
+                        <ns0:CodeMethodInvokeExpression>
+                            <ns0:CodeMethodInvokeExpression.Method>
+                                <ns0:CodeMethodReferenceExpression MethodName="Compare">
+                                    <ns0:CodeMethodReferenceExpression.TargetObject>
+                                        <ns2:WorkflowCodeTypeReferenceExpression QualifiedName="Microsoft.SharePoint.WorkflowActions.Helper" Type="Microsoft.SharePoint.WorkflowActions.Helper" xmlns:ns2="clr-namespace:Microsoft.SharePoint.WorkflowActions;Assembly=Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=null" />
+                                    </ns0:CodeMethodReferenceExpression.TargetObject>
+                                </ns0:CodeMethodReferenceExpression>
+                            </ns0:CodeMethodInvokeExpression.Method>
+                            <ns0:CodeMethodInvokeExpression.Parameters>
+                                <ns0:CodeFieldReferenceExpression FieldName="__context">
+                                    <ns0:CodeFieldReferenceExpression.TargetObject>
+                                        <ns0:CodeThisReferenceExpression />
+                                    </ns0:CodeFieldReferenceExpression.TargetObject>
+                                </ns0:CodeFieldReferenceExpression>
+                                <ns0:CodePrimitiveExpression>
+                                    <ns0:CodePrimitiveExpression.Value>
+                                        <ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">IsEmpty</ns1:String>
+                                    </ns0:CodePrimitiveExpression.Value>
+                                </ns0:CodePrimitiveExpression>
+                                <ns0:CodeMethodInvokeExpression>
+                                    <ns0:CodeMethodInvokeExpression.Method>
+                                        <ns0:CodeMethodReferenceExpression MethodName="HTLookupString">
+                                            <ns0:CodeMethodReferenceExpression.TargetObject>
+                                                <ns2:WorkflowCodeTypeReferenceExpression QualifiedName="Microsoft.SharePoint.WorkflowActions.Helper" Type="Microsoft.SharePoint.WorkflowActions.Helper" xmlns:ns2="clr-namespace:Microsoft.SharePoint.WorkflowActions;Assembly=Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=null" />
+                                            </ns0:CodeMethodReferenceExpression.TargetObject>
+                                        </ns0:CodeMethodReferenceExpression>
+                                    </ns0:CodeMethodInvokeExpression.Method>
+                                    <ns0:CodeMethodInvokeExpression.Parameters>
+                                        <ns0:CodeFieldReferenceExpression FieldName="__context">
+                                            <ns0:CodeFieldReferenceExpression.TargetObject>
+                                                <ns0:CodeThisReferenceExpression />
+                                            </ns0:CodeFieldReferenceExpression.TargetObject>
+                                        </ns0:CodeFieldReferenceExpression>
+                                        <ns0:CodePropertyReferenceExpression PropertyName="TaskHashtable">
+                                            <ns0:CodePropertyReferenceExpression.TargetObject>
+                                                <ns2:WorkflowAncestorReferenceExpression QualifiedTypeName="Microsoft.Office.Workflow.Actions.OnTaskPending, Microsoft.Office.Workflow.Actions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" AncestorName="ID8" xmlns:ns2="clr-namespace:Microsoft.SharePoint.WorkflowActions;Assembly=Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=null" />
+                                            </ns0:CodePropertyReferenceExpression.TargetObject>
+                                        </ns0:CodePropertyReferenceExpression>
+                                        <ns0:CodePrimitiveExpression>
+                                            <ns0:CodePrimitiveExpression.Value>
+                                                <ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">OffsiteParticipant</ns1:String>
+                                            </ns0:CodePrimitiveExpression.Value>
+                                        </ns0:CodePrimitiveExpression>
+                                    </ns0:CodeMethodInvokeExpression.Parameters>
+                                </ns0:CodeMethodInvokeExpression>
+                                <ns0:CodePrimitiveExpression>
+                                    <ns0:CodePrimitiveExpression.Value>
+                                        <ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"></ns1:String>
+                                    </ns0:CodePrimitiveExpression.Value>
+                                </ns0:CodePrimitiveExpression>
+                            </ns0:CodeMethodInvokeExpression.Parameters>
+                        </ns0:CodeMethodInvokeExpression>
+                    </ns0:CodeBinaryOperatorExpression.Left>
+                </ns0:CodeBinaryOperatorExpression>
+            </RuleExpressionCondition.Expression>
+        </RuleExpressionCondition>
+        <RuleExpressionCondition Name="__Rule_ID10354">
+            <RuleExpressionCondition.Expression>
+                <ns0:CodeBinaryOperatorExpression Operator="BooleanAnd" xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                    <ns0:CodeBinaryOperatorExpression.Right>
+                        <ns0:CodeBinaryOperatorExpression Operator="ValueEquality">
+                            <ns0:CodeBinaryOperatorExpression.Right>
+                                <ns0:CodePrimitiveExpression>
+                                    <ns0:CodePrimitiveExpression.Value>
+                                        <ns1:Boolean xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">true</ns1:Boolean>
+                                    </ns0:CodePrimitiveExpression.Value>
+                                </ns0:CodePrimitiveExpression>
+                            </ns0:CodeBinaryOperatorExpression.Right>
+                            <ns0:CodeBinaryOperatorExpression.Left>
+                                <ns0:CodeMethodInvokeExpression>
+                                    <ns0:CodeMethodInvokeExpression.Method>
+                                        <ns0:CodeMethodReferenceExpression MethodName="Compare">
+                                            <ns0:CodeMethodReferenceExpression.TargetObject>
+                                                <ns2:WorkflowCodeTypeReferenceExpression QualifiedName="Microsoft.SharePoint.WorkflowActions.Helper" Type="Microsoft.SharePoint.WorkflowActions.Helper" xmlns:ns2="clr-namespace:Microsoft.SharePoint.WorkflowActions;Assembly=Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=null" />
+                                            </ns0:CodeMethodReferenceExpression.TargetObject>
+                                        </ns0:CodeMethodReferenceExpression>
+                                    </ns0:CodeMethodInvokeExpression.Method>
+                                    <ns0:CodeMethodInvokeExpression.Parameters>
+                                        <ns0:CodeFieldReferenceExpression FieldName="__context">
+                                            <ns0:CodeFieldReferenceExpression.TargetObject>
+                                                <ns0:CodeThisReferenceExpression />
+                                            </ns0:CodeFieldReferenceExpression.TargetObject>
+                                        </ns0:CodeFieldReferenceExpression>
+                                        <ns0:CodePrimitiveExpression>
+                                            <ns0:CodePrimitiveExpression.Value>
+                                                <ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">Equal</ns1:String>
+                                            </ns0:CodePrimitiveExpression.Value>
+                                        </ns0:CodePrimitiveExpression>
+                                        <ns0:CodePropertyReferenceExpression PropertyName="ActiveTaskCount">
+                                            <ns0:CodePropertyReferenceExpression.TargetObject>
+                                                <ns2:WorkflowAncestorReferenceExpression AncestorName="ID4" QualifiedTypeName="Microsoft.Office.Workflow.Actions.OfficeTask, Microsoft.Office.Workflow.Actions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" xmlns:ns2="clr-namespace:Microsoft.SharePoint.WorkflowActions;Assembly=Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=null" />
+                                            </ns0:CodePropertyReferenceExpression.TargetObject>
+                                        </ns0:CodePropertyReferenceExpression>
+                                        <ns0:CodePrimitiveExpression>
+                                            <ns0:CodePrimitiveExpression.Value>
+                                                <ns1:Double xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">0</ns1:Double>
+                                            </ns0:CodePrimitiveExpression.Value>
+                                        </ns0:CodePrimitiveExpression>
+                                    </ns0:CodeMethodInvokeExpression.Parameters>
+                                </ns0:CodeMethodInvokeExpression>
+                            </ns0:CodeBinaryOperatorExpression.Left>
+                        </ns0:CodeBinaryOperatorExpression>
+                    </ns0:CodeBinaryOperatorExpression.Right>
+                    <ns0:CodeBinaryOperatorExpression.Left>
+                        <ns0:CodeBinaryOperatorExpression Operator="ValueEquality">
+                            <ns0:CodeBinaryOperatorExpression.Right>
+                                <ns0:CodePrimitiveExpression>
+                                    <ns0:CodePrimitiveExpression.Value>
+                                        <ns1:Boolean xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">true</ns1:Boolean>
+                                    </ns0:CodePrimitiveExpression.Value>
+                                </ns0:CodePrimitiveExpression>
+                            </ns0:CodeBinaryOperatorExpression.Right>
+                            <ns0:CodeBinaryOperatorExpression.Left>
+                                <ns0:CodeMethodInvokeExpression>
+                                    <ns0:CodeMethodInvokeExpression.Method>
+                                        <ns0:CodeMethodReferenceExpression MethodName="Compare">
+                                            <ns0:CodeMethodReferenceExpression.TargetObject>
+                                                <ns2:WorkflowCodeTypeReferenceExpression QualifiedName="Microsoft.SharePoint.WorkflowActions.Helper" Type="Microsoft.SharePoint.WorkflowActions.Helper" xmlns:ns2="clr-namespace:Microsoft.SharePoint.WorkflowActions;Assembly=Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=null" />
+                                            </ns0:CodeMethodReferenceExpression.TargetObject>
+                                        </ns0:CodeMethodReferenceExpression>
+                                    </ns0:CodeMethodInvokeExpression.Method>
+                                    <ns0:CodeMethodInvokeExpression.Parameters>
+                                        <ns0:CodeFieldReferenceExpression FieldName="__context">
+                                            <ns0:CodeFieldReferenceExpression.TargetObject>
+                                                <ns0:CodeThisReferenceExpression />
+                                            </ns0:CodeFieldReferenceExpression.TargetObject>
+                                        </ns0:CodeFieldReferenceExpression>
+                                        <ns0:CodePrimitiveExpression>
+                                            <ns0:CodePrimitiveExpression.Value>
+                                                <ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">Equal</ns1:String>
+                                            </ns0:CodePrimitiveExpression.Value>
+                                        </ns0:CodePrimitiveExpression>
+                                        <ns0:CodePropertyReferenceExpression PropertyName="FutureTaskCount">
+                                            <ns0:CodePropertyReferenceExpression.TargetObject>
+                                                <ns2:WorkflowAncestorReferenceExpression AncestorName="ID4" QualifiedTypeName="Microsoft.Office.Workflow.Actions.OfficeTask, Microsoft.Office.Workflow.Actions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" xmlns:ns2="clr-namespace:Microsoft.SharePoint.WorkflowActions;Assembly=Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=null" />
+                                            </ns0:CodePropertyReferenceExpression.TargetObject>
+                                        </ns0:CodePropertyReferenceExpression>
+                                        <ns0:CodePrimitiveExpression>
+                                            <ns0:CodePrimitiveExpression.Value>
+                                                <ns1:Double xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">0</ns1:Double>
+                                            </ns0:CodePrimitiveExpression.Value>
+                                        </ns0:CodePrimitiveExpression>
+                                    </ns0:CodeMethodInvokeExpression.Parameters>
+                                </ns0:CodeMethodInvokeExpression>
+                            </ns0:CodeBinaryOperatorExpression.Left>
+                        </ns0:CodeBinaryOperatorExpression>
+                    </ns0:CodeBinaryOperatorExpression.Left>
+                </ns0:CodeBinaryOperatorExpression>
+            </RuleExpressionCondition.Expression>
+        </RuleExpressionCondition>
+    </RuleDefinitions.Conditions>
+</RuleDefinitions>

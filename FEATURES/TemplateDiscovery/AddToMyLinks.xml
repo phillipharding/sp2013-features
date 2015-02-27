@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <!-- Ribbon menu -->
+    <CustomAction
+        Id="Ribbon.Library.Actions.InsertRibbonNodes"
+        Location="CommandUI.Ribbon"
+        Title="$Resources:cui_MyLinks_CustomAction_Title;"
+        Sequence="15">
+        <CommandUIExtension>
+            <CommandUIDefinitions>
+                <CommandUIDefinition Location="Ribbon.Library.Actions.Controls._children">
+                    <SplitButton
+                        Id="Ribbon.Library.Actions.MyLinks"
+                        Alt="$Resources:cui_MyLinks_SplitButton_Alt;"
+                        Command="MyLinksMenu"
+                        Image16by16="/_layouts/15/images/ctoc16.png?rev=23"
+                        Image32by32="/_layouts/15/images/ctoa32.png?rev=23"
+                        LabelText="$Resources:cui_MyLinks_SplitButton_LabelText;"
+                        ToolTipTitle="$Resources:cui_MyLinks_SplitButton_ToolTipTitle;"
+                        ToolTipDescription="$Resources:cui_MyLinks_SplitButton_ToolTipDescription;"
+                        TemplateAlias="o1">
+                        <Menu Id="Ribbon.Library.Actions.MyLinks.Menu">
+                            <MenuSection Id="Ribbon.Library.Actions.MyLinks.MenuSection" Sequence="10" DisplayMode="Menu32">
+                                <Controls Id="Ribbon.Library.Actions.MyLinks.Menu.Controls">
+                                    <Button
+                                        Id="Ribbon.Library.Actions.MyLinks.Add"
+                                        Sequence="10"
+                                        Alt="$Resources:cui_MyLinks_AddButton_Alt;"
+                                        Command="MyLinksAdd"
+                                        Image16by16="/_layouts/15/images/ctoa16.png?rev=23"
+                                        Image32by32="/_layouts/15/images/ctoa32.png?rev=23"
+                                        LabelText="$Resources:cui_MyLinks_AddButton_LabelText;"
+                                        Description="$Resources:cui_MyLinks_AddButton_Description;" />
+                                    <Button
+                                        Id="Ribbon.Library.Actions.MyLinks.Delete"
+                                        Sequence="20"
+                                        Alt="$Resources:cui_MyLinks_DeleteButton_Alt;"
+                                        Command="MyLinksDelete"
+                                        Image16by16="/_layouts/15/images/ctor16.png?rev=23"
+                                        Image32by32="/_layouts/15/images/ctor32.png?rev=23"
+                                        LabelText="$Resources:cui_MyLinks_DeleteButton_LabelText;"
+                                        Description="$Resources:cui_MyLinks_DeleteButton_Description;" />
+                                    <Button
+                                        Id="Ribbon.Library.Actions.MyLinks.Manage"
+                                        Sequence="30"
+                                        Alt="$Resources:cui_MyLinks_ManageButton_Alt;"
+                                        Command="MyLinksManage"
+                                        Image16by16="/_layouts/15/images/ctom16.png?rev=23"
+                                        Image32by32="/_layouts/15/images/ctom32.png?rev=23"
+                                        LabelText="$Resources:cui_MyLinks_ManageButton_LabelText;"
+                                        Description="$Resources:cui_MyLinks_ManageButton_Description;" />
+                                </Controls>
+                            </MenuSection>
+                        </Menu>
+                    </SplitButton>
+                </CommandUIDefinition>
+            </CommandUIDefinitions>
+        </CommandUIExtension>
+    </CustomAction>
+    <Control
+        Id="AdditionalPageHead"
+        Sequence="120"
+        ControlClass="Microsoft.Office.Server.WebControls.MyLinksRibbon"
+        ControlAssembly="Microsoft.Office.DocumentManagement, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+    </Control>
+</Elements>

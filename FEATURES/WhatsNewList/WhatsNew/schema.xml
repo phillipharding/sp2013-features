@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Name="whatsnew" Title="$Resources:core,WhatsNewListTitle;" Direction="0" Url="Lists/WhatsNew" EnableContentTypes="TRUE" FolderCreation="FALSE" BaseType="0">
+  <MetaData>
+    <ContentTypes>
+      <ContentTypeRef ID="0x0100a2ca87ff01b442ad93f37cd7dd0943eb" />
+    </ContentTypes>
+    <Fields>
+      <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" Required="TRUE" DisplayName="$Resources:core,GBW_WN_Title_Field;" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title">
+      </Field>
+      <Field ID="{81dde544-1e25-4765-b5fd-ba613198d850}" Name="ListType" DisplayName="$Resources:core,GBW_WN_ListType_Field;" Type="Choice" Format="Dropdown" FillInChoice="TRUE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="ListType">
+        <CHOICES><CHOICE>$Resources:core,GBW_WN_ListType_GroupSchedule;</CHOICE><CHOICE>$Resources:core,GBW_WN_ListType_PhoneCallMemo;</CHOICE><CHOICE>$Resources:core,GBW_WN_ListType_Circulation;</CHOICE><CHOICE>$Resources:core,GBW_WN_ListType_Others;</CHOICE>
+        </CHOICES>
+      </Field>
+      <Field ID="{53101f38-dd2e-458c-b245-0c236cc13d1a}" Name="AssignedTo" Required="TRUE" DisplayName="$Resources:core,GBW_WN_AssignedTo_Field;" Type="User" List="UserInfo" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="AssignedTo">
+      </Field>
+      <Field ID="{7650d41a-fa26-4c72-a641-af4e93dc7053}" Name="Content" DisplayName="$Resources:core,GBW_WN_Content_Field;" Type="URL" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Content">
+      </Field>
+      <Field ID="{53a2a512-d395-4852-8714-d4c27e7585f3}" Name="MobileContent" DisplayName="$Resources:core,GBW_WN_MobileContent_Field;" Type="URL" Sealed="TRUE" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="MobileContent">
+      </Field>
+      <Field ID="{83ba5dab-8dec-4ed8-a506-7551f09be046}" Name="RefTitle" DisplayName="$Resources:core,GBW_WN_RefTitle_Field;" Type="Computed" AuthoringInfo="$Resources:core,GBW_WN_RefTitle_Field_AuthoringInfo;" DisplayNameSrcField="Title" ReadOnly="TRUE" ClassInfo="Menu" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RefTitle">
+        <FieldRefs>
+          <FieldRef Name="Title" />
+        </FieldRefs>
+        <DisplayPattern><HTML><![CDATA[<table height="100%" cellspacing="0" class="ms-unselectedtitle" onmouseover='GBW_OnItem(this);' CTXName="ctx]]></HTML>
+          <Counter Type="View" /><HTML>" ItemId="</HTML>
+          <Column Name="ID" HTMLEncode="TRUE" /><HTML><![CDATA["><tr><td width="100%" class="ms-vb">]]></HTML>
+          <Column HTMLEncode="TRUE" Name="Title" Default="$Resources:core,GBW_WN_RefTitle_Field_Column_Default;" /><HTML><![CDATA[</td><td><img src="/_layouts/15/images/blank.gif?rev=23" width="13" style="visibility: hidden" /></td></tr></table>]]></HTML>
+        </DisplayPattern>
+      </Field>
+      <Field ID="{250e370a-458a-45cd-87bc-a8f376ba0f1c}" Name="RefContent" DisplayName="$Resources:core,GBW_WN_Content_Field;" Type="Computed" DisplayNameSrcField="Content" ReadOnly="TRUE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RefContent">
+        <FieldRefs>
+          <FieldRef Name="Content" />
+        </FieldRefs>
+        <DisplayPattern><HTML><![CDATA[<table height="100%" cellspacing="0" class="ms-unselectedtitle">]]></HTML><HTML><![CDATA[<tr><td width="100%" class="ms-vb">]]></HTML><HTML><![CDATA[<a href="]]></HTML>
+          <Column Name="Content" /><HTML><![CDATA[" onclick="GoToLink(this);return false;" target="_self">]]></HTML>
+          <Column2 Name="Content" HTMLEncode="TRUE" /><HTML><![CDATA[</a>]]></HTML><HTML><![CDATA[</td><td><img src="/_layouts/15/images/blank.gif?rev=23" width="13" style="visibility: hidden" /></td></tr></table>]]></HTML>
+        </DisplayPattern>
+      </Field>
+      <Field ID="{d33f7534-3bd9-4a9d-9b05-e733fe1b9fad}" Name="Date" DisplayName="$Resources:core,GBW_WN_Date_Field;" Type="Calculated" FromBaseType="TRUE" Format="DateOnly" ResultType="DateTime" ReadOnly="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Date">
+        <Formula>=DATE(YEAR(Modified),MONTH(Modified),DAY(Modified)+3)</Formula>
+      </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" TabularView="FALSE">
+        <ViewHeader><HTML><![CDATA[<link rel="stylesheet" type="text/css" href="/_layouts/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/styles/groupboard.css">]]></HTML><HTML><![CDATA[<script type="text/javascript" src="/_layouts/15/<%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%>/groupboard.js"></script>]]></HTML><HTML><![CDATA[<table width="100%" cellspacing="0" cellpadding="0" border="0">]]></HTML><HTML><![CDATA[<script type="text/javascript">
+ctx = new ContextInfo();
+ctx.listBaseType = ]]></HTML>
+          <ListProperty Select="BaseType" /><HTML><![CDATA[;
+ctx.listTemplate = ]]></HTML>
+          <ListProperty Select="ServerTemplate" /><HTML><![CDATA[;
+ctx.listName = ]]></HTML>
+          <ScriptQuote>
+            <List />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.view = ]]></HTML>
+          <ScriptQuote>
+            <GetVar Name="View" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.listUrlDir = ]]></HTML>
+          <ScriptQuote>
+            <ListUrlDir ServerRel="TRUE" URLEncodeAsURL="TRUE" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.HttpPath = ]]></HTML>
+          <ScriptQuote>
+            <HttpPath ServerRel="TRUE" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.HttpRoot = ]]></HTML>
+          <ScriptQuote>
+            <HttpVDir />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.imagesPath = ]]></HTML>
+          <ScriptQuote>/_layouts/15/images/</ScriptQuote><HTML><![CDATA[;
+ctx.PortalUrl = ]]></HTML>
+          <ScriptQuote>
+            <ProjectProperty Select="PortalUrl" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.SendToLocationName = ]]></HTML>
+          <ScriptQuote>
+            <ListProperty Select="SendToLocationName" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.SendToLocationUrl = ]]></HTML>
+          <ScriptQuote>
+            <ListProperty Select="SendToLocationUrl" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.RecycleBinEnabled = ]]></HTML>
+          <ProjectProperty Select="RecycleBinEnabled" /><HTML><![CDATA[;
+ctx.OfficialFileName = ]]></HTML>
+          <ScriptQuote>
+            <ServerProperty Select="OfficialFileName" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.OfficialFileNames = ]]></HTML>
+          <ScriptQuote>
+            <ServerProperty Select="OfficialFileNames" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.WriteSecurity = ]]></HTML>
+          <ScriptQuote>
+            <ListProperty Select="WriteSecurity" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.SiteTitle = ]]></HTML>
+          <ScriptQuote>
+            <ProjectProperty Select="Title" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.ListTitle = ]]></HTML>
+          <ScriptQuote>
+            <ListProperty Select="Title" />
+          </ScriptQuote><HTML><![CDATA[;
+if (ctx.PortalUrl == "") ctx.PortalUrl = null;
+ctx.displayFormUrl = ]]></HTML>
+          <ScriptQuote>
+            <URL Cmd="DISPLAY" NoID="TRUE" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.editFormUrl = ]]></HTML>
+          <ScriptQuote>
+            <URL Cmd="EDIT" NoID="TRUE" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.isWebEditorPreview = ]]></HTML>
+          <Switch>
+            <Expr>
+              <GetVar Name="WebEditorPreview" />
+            </Expr>
+            <Case Value="TRUE">1</Case>
+            <Default>0</Default>
+          </Switch><HTML><![CDATA[;
+ctx.ctxId = ]]></HTML>
+          <Counter Type="View" /><HTML><![CDATA[;
+g_ViewIdToViewCounterMap[ ]]></HTML>
+          <ScriptQuote>
+            <GetVar Name="View" />
+          </ScriptQuote><HTML><![CDATA[ ]= ]]></HTML>
+          <Counter Type="View" /><HTML><![CDATA[;
+ctx.CurrentUserId = ]]></HTML>
+          <UserID AllowAnonymous="TRUE" /><HTML><![CDATA[;
+]]></HTML>
+          <Switch>
+            <Expr>
+              <GetVar Name="JsGrid" />
+            </Expr>
+            <Case Value="1">
+ctx.isJsGrid = true;
+</Case>
+            <Default>
+ctx.isJsGrid = false;
+</Default>
+          </Switch>
+          <Switch>
+            <Expr>
+              <ListProperty Select="NavigateForFormsPages" />
+            </Expr>
+            <Case Value="1">
+ctx.NavigateForFormsPages = true;
+</Case>
+            <Default>
+ctx.NavigateForFormsPages = false;
+</Default>
+          </Switch>
+          <Switch>
+            <Expr>
+              <ListProperty Select="ModeratedList" />
+            </Expr>
+            <Case Value="1">
+ctx.isModerated = true;
+</Case>
+          </Switch>
+          <Switch>
+            <Expr>
+              <ListProperty Select="ForceCheckout" />
+            </Expr>
+            <Case Value="1">
+ctx.isForceCheckout = true;
+</Case>
+          </Switch>
+          <Switch>
+            <Expr>
+              <ListProperty Select="EnableMinorVersions" />
+            </Expr>
+            <Case Value="1">
+ctx.EnableMinorVersions = true;
+</Case>
+          </Switch>
+          <Switch>
+            <Expr>
+              <ListProperty Select="VersioningEnabled" />
+            </Expr>
+            <Case Value="1">
+ctx.verEnabled = 1;
+</Case>
+          </Switch>
+          <Switch>
+            <Expr>
+              <GetVar Name="RecursiveView" />
+            </Expr>
+            <Case Value="1">
+ctx.recursiveView = true;
+</Case>
+          </Switch>
+          <Switch>
+            <Expr>
+              <ListProperty Select="WorkflowsAssociated" />
+            </Expr>
+            <Case Value="1">
+ctx.WorkflowsAssociated = true;
+</Case>
+          </Switch>
+          <Switch>
+            <Expr>
+              <ListProperty Select="EnableContentTypes" />
+            </Expr>
+            <Case Value="1">
+ctx.ContentTypesEnabled = true;
+</Case>
+          </Switch><HTML><![CDATA[ 
+ctx]]></HTML>
+          <Counter Type="View" /><HTML><![CDATA[ = ctx;
+g_ctxDict['ctx]]></HTML>
+          <Counter Type="View" /><HTML><![CDATA['] = ctx;
+</script>]]></HTML><HTML><![CDATA[<Link REL="stylesheet" Type="text/css" HREF="/_layouts/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/styles/groupboard.css">]]></HTML><HTML><![CDATA[
+<script type="text/javascript" src="/_layouts/15/<%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%>/groupboard.js"></script>
+]]></HTML><HTML><![CDATA[<tr><td>]]></HTML><HTML><![CDATA[<table id="]]></HTML>
+          <WebQueryInfo /><HTML><![CDATA[" width="100%" class="ms-summarystandardbody" border="0" cellspacing="0" cellpadding="1">]]></HTML><HTML><![CDATA[<tr class="ms-viewheadertr" valign="TOP">]]></HTML><HTML><![CDATA[<th class="ms-vh-group"></th>]]></HTML><HTML><![CDATA[<th nowrap class="ms-vh2"><div style="width:100%;position:relative;left:0;top:0;">$Resources:core,GBW_WN_RefTitle_Field;</div></th>]]></HTML><HTML><![CDATA[<th nowrap class="ms-vh2"><div style="width:100%;position:relative;left:0;top:0;">$Resources:core,GBW_WN_Content_Field;</div></th>]]></HTML><HTML><![CDATA[</tr>]]></HTML>
+        </ViewHeader>
+        <ViewBody><HTML><![CDATA[<tr>]]></HTML>
+          <Fields><HTML><![CDATA[<td class="ms-vb-title" style="height:100%;">]]></HTML>
+            <Field /><HTML><![CDATA[</td>]]></HTML>
+          </Fields><HTML><![CDATA[</tr>]]></HTML>
+        </ViewBody>
+        <ViewFooter><HTML><![CDATA[</table>]]></HTML><HTML><![CDATA[</td></tr></table>]]></HTML>
+        </ViewFooter>
+        <RowLimitExceeded><HTML><![CDATA[<table class="ms-summarycustombody" cellpadding="0" cellspacing="0" border="0"><tr><td class="ms-vb"><a href="]]></HTML>
+          <ListProperty Select="DefaultViewUrl" /><HTML><![CDATA[" id="onetidMoreFavs">]]></HTML><HTML>$Resources:core,GBW_WN_MoreItems;</HTML><HTML><![CDATA[</a></td></tr><tr><td height="8"><img src="/_layouts/15/images/blank.gif?rev=23" width="1" height="8" alt="" /></td></tr></table>]]></HTML>
+        </RowLimitExceeded>
+        <ViewEmpty><HTML><![CDATA[<table class="ms-summarycustombody" cellpadding="0" cellspacing="0" border="0"><tr><td class="ms-vb">]]></HTML><HTML>$Resources:core,GBW_WN_NoWhatsNewItems;</HTML><HTML><![CDATA[</td></tr><tr><td height="5"><img src="/_layouts/15/images/blank.gif?rev=23" width="1" height="5" alt="" /></td></tr></table>]]></HTML>
+        </ViewEmpty>
+        <RowLimit>10</RowLimit>
+        <ViewFields>
+          <FieldRef Name="RefTitle">
+          </FieldRef>
+          <FieldRef Name="RefContent">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <Where>
+            <And>
+              <Eq>
+                <FieldRef Name="AssignedTo">
+                </FieldRef>
+                <Value Type="Integer">
+                  <UserID />
+                </Value>
+              </Eq>
+              <Geq>
+                <FieldRef Name="Date">
+                </FieldRef>
+                <Value Type="DateTime">
+                  <Today />
+                </Value>
+              </Geq>
+            </And>
+          </Where>
+          <GroupBy Collapse="FALSE">
+            <FieldRef Name="ListType" />
+          </GroupBy>
+          <OrderBy>
+            <FieldRef Name="Last_x0020_Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+      <View BaseViewID="1" Type="HTML" DisplayName="$Resources:core,WhatsNewAllItemsDisplayName;" MobileView="TRUE" MobileDefaultView="FALSE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/gbwnew.png?rev=23" Url="AllItems.aspx" WebPartZoneID="Main">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <RowLimit>100</RowLimit>
+        <ViewFields>
+          <FieldRef Name="RefTitle">
+          </FieldRef>
+          <FieldRef Name="RefContent">
+          </FieldRef>
+          <FieldRef Name="MobileContent">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <Where>
+            <Eq>
+              <FieldRef Name="AssignedTo">
+              </FieldRef>
+              <Value Type="Integer">
+                <UserID />
+              </Value>
+            </Eq>
+          </Where>
+          <GroupBy Collapse="FALSE">
+            <FieldRef Name="ListType" />
+          </GroupBy>
+          <OrderBy>
+            <FieldRef Name="Last_x0020_Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+      <View BaseViewID="2" Type="HTML" DisplayName="$Resources:core,WhatsNewLatestNotificationsDisplayName;" ToolbarTemplate="GbwWhatsNewToolBar" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/gbwnew.png?rev=23" Url="LatNotif.aspx" WebPartZoneID="Main">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <RowLimit>100</RowLimit>
+        <ViewFields>
+          <FieldRef Name="RefTitle">
+          </FieldRef>
+          <FieldRef Name="RefContent">
+          </FieldRef>
+          <FieldRef Name="MobileContent">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <Where>
+            <And>
+              <Eq>
+                <FieldRef Name="AssignedTo">
+                </FieldRef>
+                <Value Type="Integer">
+                  <UserID />
+                </Value>
+              </Eq>
+              <Geq>
+                <FieldRef Name="Date">
+                </FieldRef>
+                <Value Type="DateTime">
+                  <Today />
+                </Value>
+              </Geq>
+            </And>
+          </Where>
+          <GroupBy Collapse="FALSE">
+            <FieldRef Name="ListType" />
+          </GroupBy>
+          <OrderBy>
+            <FieldRef Name="Last_x0020_Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+      <View BaseViewID="3" Type="HTML" DisplayName="$Resources:core,GBW_WN_ListType_Circulation;" ToolbarTemplate="GbwWhatsNewToolBar" MobileView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/gbwnew.png?rev=23" Url="Circulation.aspx" WebPartZoneID="Main">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <RowLimit>100</RowLimit>
+        <ViewFields>
+          <FieldRef Name="RefTitle" />
+          <FieldRef Name="RefContent" />
+          <FieldRef Name="MobileContent" />
+        </ViewFields>
+        <Query>
+          <Where>
+            <And>
+              <And>
+                <Eq>
+                  <FieldRef Name="AssignedTo" />
+                  <Value Type="Integer">
+                    <UserID />
+                  </Value>
+                </Eq>
+                <Eq>
+                  <FieldRef Name="ListType" />
+                  <Value Type="Choice">$Resources:core,GBW_WN_ListType_Circulation;</Value>
+                </Eq>
+              </And>
+              <Geq>
+                <FieldRef Name="Date">
+                </FieldRef>
+                <Value Type="DateTime">
+                  <Today />
+                </Value>
+              </Geq>
+            </And>
+          </Where>
+          <OrderBy>
+            <FieldRef Name="Last_x0020_Modified" Ascending="FALSE" />
+          </OrderBy>
+        </Query>
+      </View>
+      <View BaseViewID="4" Type="HTML" DisplayName="$Resources:core,GBW_WN_ListType_PhoneCallMemo;" ToolbarTemplate="GbwWhatsNewToolBar" MobileView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/gbwnew.png?rev=23" Url="PhoneCallMemo.aspx" WebPartZoneID="Main">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <RowLimit>100</RowLimit>
+        <ViewFields>
+          <FieldRef Name="RefTitle" />
+          <FieldRef Name="RefContent" />
+          <FieldRef Name="MobileContent" />
+        </ViewFields>
+        <Query>
+          <Where>
+            <And>
+              <And>
+                <Eq>
+                  <FieldRef Name="AssignedTo" />
+                  <Value Type="Integer">
+                    <UserID />
+                  </Value>
+                </Eq>
+                <Eq>
+                  <FieldRef Name="ListType" />
+                  <Value Type="Choice">$Resources:core,GBW_WN_ListType_PhoneCallMemo;</Value>
+                </Eq>
+              </And>
+              <Geq>
+                <FieldRef Name="Date">
+                </FieldRef>
+                <Value Type="DateTime">
+                  <Today />
+                </Value>
+              </Geq>
+            </And>
+          </Where>
+          <OrderBy>
+            <FieldRef Name="Last_x0020_Modified" Ascending="FALSE" />
+          </OrderBy>
+        </Query>
+      </View>
+      <View BaseViewID="5" Type="HTML" DisplayName="$Resources:core,GBW_WN_ListType_GroupSchedule;" ToolbarTemplate="GbwWhatsNewToolBar" MobileView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/gbwnew.png?rev=23" Url="GroupSchedule.aspx" WebPartZoneID="Main">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <RowLimit>100</RowLimit>
+        <ViewFields>
+          <FieldRef Name="RefTitle" />
+          <FieldRef Name="RefContent" />
+          <FieldRef Name="MobileContent" />
+        </ViewFields>
+        <Query>
+          <Where>
+            <And>
+              <And>
+                <Eq>
+                  <FieldRef Name="AssignedTo" />
+                  <Value Type="Integer">
+                    <UserID />
+                  </Value>
+                </Eq>
+                <Eq>
+                  <FieldRef Name="ListType" />
+                  <Value Type="Choice">$Resources:core,GBW_WN_ListType_GroupSchedule;</Value>
+                </Eq>
+              </And>
+              <Geq>
+                <FieldRef Name="Date">
+                </FieldRef>
+                <Value Type="DateTime">
+                  <Today />
+                </Value>
+              </Geq>
+            </And>
+          </Where>
+          <OrderBy>
+            <FieldRef Name="Last_x0020_Modified" Ascending="FALSE" />
+          </OrderBy>
+        </Query>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" ToolbarTemplate="WhatsNewDisplayFormToolBar" WebPartZoneID="Main" />
+    </Forms>
+    <DefaultDescription>
+            $Resources:core,GBW_WN_DefaultDescription;
+        </DefaultDescription>
+  </MetaData>
+</List>

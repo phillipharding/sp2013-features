@@ -1,0 +1,33 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<FeatureSiteTemplateAssociation Id="F6924D36-2FA8-4f0b-B16D-06B7250180FA" TemplateName="SPSPORTAL#0" />
+	<FeatureSiteTemplateAssociation Id="F6924D36-2FA8-4f0b-B16D-06B7250180FA" TemplateName="SPS#0" />
+	<FeatureSiteTemplateAssociation Id="F6924D36-2FA8-4f0b-B16D-06B7250180FA" TemplateName="SPSREPORTCENTER#0" />
+	<FeatureSiteTemplateAssociation Id="F6924D36-2FA8-4f0b-B16D-06B7250180FA" TemplateName="SPSTOC#0" />
+	<FeatureSiteTemplateAssociation Id="F6924D36-2FA8-4f0b-B16D-06B7250180FA" TemplateName="SPSTOPIC#0" />
+	<FeatureSiteTemplateAssociation Id="F6924D36-2FA8-4f0b-B16D-06B7250180FA" TemplateName="SPSNEWS#0" />
+	<FeatureSiteTemplateAssociation Id="F6924D36-2FA8-4f0b-B16D-06B7250180FA" TemplateName="SPSNHOME#0" />
+	<FeatureSiteTemplateAssociation Id="F6924D36-2FA8-4f0b-B16D-06B7250180FA" TemplateName="SPSSITES#0" />
+	<FeatureSiteTemplateAssociation Id="F6924D36-2FA8-4f0b-B16D-06B7250180FA" TemplateName="SRCHCEN#0" />
+
+	<FeatureSiteTemplateAssociation Id="F6924D36-2FA8-4f0b-B16D-06B7250180FA" TemplateName="CMSPUBLISHING#0" />
+	<FeatureSiteTemplateAssociation Id="F6924D36-2FA8-4f0b-B16D-06B7250180FA" TemplateName="BLANKINTERNET#0" />
+	<FeatureSiteTemplateAssociation Id="F6924D36-2FA8-4f0b-B16D-06B7250180FA" TemplateName="BLANKINTERNET#1" />
+	<FeatureSiteTemplateAssociation Id="F6924D36-2FA8-4f0b-B16D-06B7250180FA" TemplateName="BLANKINTERNET#2" />
+
+	<FeatureSiteTemplateAssociation Id="94C94CA6-B32F-4da9-A9E3-1F3D343D7ECB" TemplateName="SPSPORTAL#0" />
+	<FeatureSiteTemplateAssociation Id="94C94CA6-B32F-4da9-A9E3-1F3D343D7ECB" TemplateName="SPS#0" />
+	<FeatureSiteTemplateAssociation Id="94C94CA6-B32F-4da9-A9E3-1F3D343D7ECB" TemplateName="SPSREPORTCENTER#0" />
+	<FeatureSiteTemplateAssociation Id="94C94CA6-B32F-4da9-A9E3-1F3D343D7ECB" TemplateName="SPSTOC#0" />
+	<FeatureSiteTemplateAssociation Id="94C94CA6-B32F-4da9-A9E3-1F3D343D7ECB" TemplateName="SPSTOPIC#0" />
+	<FeatureSiteTemplateAssociation Id="94C94CA6-B32F-4da9-A9E3-1F3D343D7ECB" TemplateName="SPSNEWS#0" />
+	<FeatureSiteTemplateAssociation Id="94C94CA6-B32F-4da9-A9E3-1F3D343D7ECB" TemplateName="SPSNHOME#0" />
+	<FeatureSiteTemplateAssociation Id="94C94CA6-B32F-4da9-A9E3-1F3D343D7ECB" TemplateName="SPSSITES#0" />
+	<FeatureSiteTemplateAssociation Id="94C94CA6-B32F-4da9-A9E3-1F3D343D7ECB" TemplateName="SRCHCEN#0" />
+
+	<FeatureSiteTemplateAssociation Id="94C94CA6-B32F-4da9-A9E3-1F3D343D7ECB" TemplateName="CMSPUBLISHING#0" />
+	<FeatureSiteTemplateAssociation Id="94C94CA6-B32F-4da9-A9E3-1F3D343D7ECB" TemplateName="BLANKINTERNET#0" />
+	<FeatureSiteTemplateAssociation Id="94C94CA6-B32F-4da9-A9E3-1F3D343D7ECB" TemplateName="BLANKINTERNET#1" />
+	<FeatureSiteTemplateAssociation Id="94C94CA6-B32F-4da9-A9E3-1F3D343D7ECB" TemplateName="BLANKINTERNET#2" />
+
+</Elements>

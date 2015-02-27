@@ -1,0 +1,9 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Control Id="SuiteBarBrandingDelegate" Sequence="100"
+        ControlClass="Microsoft.SharePoint.WebControls.SuiteBarBrandingElement"
+        ControlAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Control Id="SuiteLinksDelegate" Sequence="100"
+        ControlClass="Microsoft.SharePoint.Portal.WebControls.MySuiteLinksUserControl"
+        ControlAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Control Id="AdditionalPageHead" Sequence="100" ControlSrc="~/_controltemplates/socialdata.ascx" />
+</Elements>

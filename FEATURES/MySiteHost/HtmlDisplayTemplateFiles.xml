@@ -1,0 +1,38 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="MySiteHostDisplayTemplates" Url="_catalogs/masterpage/Display Templates/System" RootWebOnly="TRUE">
+        <File Url="Control_TagFeed.html" Type="GhostableInLibrary">
+        </File>
+		<File Url="Control_TagFeed.js" Type="GhostableInLibrary">
+		    <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_TagFeed" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="DisplayTemplateContentTypeId_Control" />
+            <Property Name="DisplayTemplateLevel" Value="Control" />
+            <Property Name="TemplateHidden" Value="1" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+    </Module>
+
+    <Module Name="RelatedItemsDisplayTemplates" Url="_catalogs/masterpage/Display Templates/Content Web Parts" Path="" RootWebOnly="TRUE">
+        <File Url="Control_List.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_DefaultCBSResult" />
+            <Property Name="MasterPageDescription" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateDescription_DefaultCBSResult" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Control" />
+            <Property Name="TemplateHidden" Value="0" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Item_TwoLines.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_Item_TwoLines" />
+            <Property Name="MasterPageDescription" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateDescription_Item_TwoLines" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="0" />
+            <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+            <Property Name="ManagedPropertyMapping" Value="'Link URL'{$Resources:Microsoft.Office.Server.Search,SlotName_URL;}:'Path','Line 1'{$Resources:Microsoft.Office.Server.Search,SlotName_Line1;}:'Title','Line 2'{$Resources:Microsoft.Office.Server.Search,SlotName_Line2;}:'','FileExtension','SecondaryFileExtension'" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+    </Module>
+
+</Elements>

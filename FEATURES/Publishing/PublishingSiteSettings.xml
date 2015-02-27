@@ -1,0 +1,149 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Id="AreaChromeSettings"
+        GroupId="Customization"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ApplyThemeAndBorder,ApplyStyleSheets"
+        Sequence="10"
+        Title="$Resources:cmscore,Settings_Publishing_SiteMasterPage;"	
+        Description="$Resources:cmscore,SiteSettings_MasterPage_Tooltip;">	
+        <UrlAction
+            Url="_layouts/15/ChangeSiteMasterPage.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="AreaTemplateSettings"
+        GroupId="Customization"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb"
+        Sequence="10"
+        Title="$Resources:cmscore,Settings_Publishing_Templates;"
+        Description="$Resources:cmscore,SiteSettings_PageLayoutsAndSiteTemplates_Tooltip;">
+        <UrlAction
+            Url="_layouts/15/AreaTemplateSettings.aspx" />
+    </CustomAction>
+    <HideCustomAction
+        Id="HideMasterPageCatalog"
+        GroupId="Galleries"
+        HideActionId="MasterPageCatalog"
+        Location="Microsoft.SharePoint.SiteSettings">
+    </HideCustomAction>
+    <CustomAction
+        Id="CmsMasterPageCatalog"
+        GroupId="Galleries"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ApplyThemeAndBorder"
+        Sequence="80"
+        Title="$Resources:cmscore,Settings_Publishing_CmsMasterPageCatalog;"
+        Description="$Resources:cmscore,SiteSettings_MasterPagesAndPageLayouts_Tooltip;">
+        <UrlAction
+            Url="_layouts/15/RedirectPage.aspx?Target={SiteCollectionUrl}_catalogs/masterpage" />
+    </CustomAction>
+    <CustomAction
+        Id="AreaWelcomePage"
+        GroupId="Customization"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ApplyThemeAndBorder"
+        Sequence="10"
+        Title="$Resources:cmscore,Settings_Publishing_Welcome;"
+        Description="$Resources:cmscore,SiteSettings_WelcomePage_Tooltip;">
+        <UrlAction
+            Url="_layouts/15/AreaWelcomePage.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="AreaCacheSettings"
+        GroupId="SiteAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb"
+        Sequence="200"
+        Title="$Resources:cmscore,Settings_Publishing_Cache;"
+        Description="$Resources:cmscore,SiteSettings_SiteOutputCache_Tooltip;">
+        <UrlAction
+            Url="_layouts/15/areacachesettings.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="SiteCacheSettings"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        RequireSiteAdministrator="true"
+        Sequence="200"
+        Title="$Resources:cmscore,Settings_Publishing_SiteCollectionCache;"
+        Description="$Resources:cmscore,SiteSettings_SiteCollectionOutputCache_Tooltip;">
+		<UrlAction
+            Url="_layouts/15/sitecachesettings.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="SiteCacheProfiles"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        RequireSiteAdministrator="true"
+        Sequence="200"
+        Title="$Resources:cmscore,Settings_Publishing_SiteCollectionCacheProfile;"
+        Description="$Resources:cmscore,SiteSettings_SiteCollectionCacheProfiles_Tooltip;">
+		<UrlAction
+            Url="_layouts/15/RedirectPage.aspx?Target={SiteCollectionUrl}cache profiles" />
+    </CustomAction>
+    <CustomAction
+        Id="ObjectCacheSettings"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        RequireSiteAdministrator="true"
+        Sequence="200"
+        Title="$Resources:cmscore,Settings_Publishing_SiteCollectionObjectCache;"
+        Description="$Resources:cmscore,SiteSettings_SiteCollectionObjectCache_Tooltip;">
+		<UrlAction
+            Url="_layouts/15/objectcachesettings.aspx" />
+    </CustomAction>   
+    <!-- hide the custom action from the Publishing feature -->
+    <HideCustomAction
+        Id="HideBDRObjectCacheSettings"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        HideActionId="BDRObjectCacheSettings">
+    </HideCustomAction>
+    <CustomAction
+        Id="CreatePublishingPage"
+        GroupId="WebPages"
+        Location="Microsoft.SharePoint.Create"
+        Sequence="100"
+        Title="$Resources:cmscore,Create_WebPages_PublishedPage;"
+        Description="$Resources:cmscore,Create_WebPages_PublishedPage_Description;"
+        ImageUrl="/_layouts/15/images/ltpp.png?rev=23">
+		<UrlAction
+            Url="_layouts/15/CreatePage.aspx" />
+    </CustomAction>
+    <HideCustomAction
+        Id="HideSaveAsTemplate"
+        HideActionId="SaveAsTemplate"
+        GroupId="SiteTasks"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideEnableSearchConfigExport"
+        HideActionId="EnableSearchConfigExport"
+        GroupId="SiteTasks"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <CustomAction
+        Id="CatalogSources"
+        GroupId="SiteAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb"
+        Sequence="250"
+        Title="$Resources:cmscore,IB_CatalogDiscovery_Settings_Publishing_CatalogSources;"
+        Description="$Resources:cmscore,IB_CatalogDiscovery_Settings_Publishing_CatalogSources_Tooltip;">
+        <UrlAction
+            Url="_layouts/15/ManageCatalogSources.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="ImageRenditionSettings"
+        GroupId="Customization"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ApplyThemeAndBorder"
+        Sequence="60"
+        Title="$Resources:cmscore,Settings_Publishing_ImageRenditionSettings;"
+        Description="$Resources:cmscore,Settings_Publishing_ImageRenditionSettings_Description;">
+        <UrlAction
+            Url="_layouts/15/ImageRenditionSettings.aspx" />
+    </CustomAction>
+</Elements>

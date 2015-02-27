@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListInstance
+        FeatureId="00BFEA71-EC85-4903-972D-EBE475780106"
+        TemplateType="106"
+        Title="$Resources:core,GbwGroupCalendarListTitle;" 
+        Url="$Resources:core,lists_Folder;/$Resources:core,calendar_Folder;"
+        QuickLaunchUrl="$Resources:core,lists_Folder;/$Resources:core,calendar_Folder;/Calendar.aspx"/>
+    <ListInstance
+        FeatureId="a568770a-50ba-4052-ab48-37d8029b3f47"
+        TemplateType="405"
+        Title="$Resources:core,GbwCirculationListTitle;"
+        Url="$Resources:core,lists_Folder;/$Resources:core,circulation_Folder;"
+        QuickLaunchUrl="$Resources:core,lists_Folder;/$Resources:core,circulation_Folder;/MyUnconf.aspx" />
+</Elements>

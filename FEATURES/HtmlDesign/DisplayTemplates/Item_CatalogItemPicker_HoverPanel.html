@@ -1,0 +1,118 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_CatalogItemPickerHoverPanel</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">1</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:ManagedPropertyMapping msdt:dt="string">'Title':'Title','Author':'Author','Size':'Size','Path':'Path','owsqUSRUserEditor':'owsqUSRUserEditor','LastModifiedTime':'LastModifiedTime','CollapsingStatus':'CollapsingStatus','DocId':'DocId','HitHighlightedSummary':'HitHighlightedSummary','HitHighlightedProperties':'HitHighlightedProperties','FileExtension':'FileExtension','DocumentSummarySize':'DocumentSummarySize','ParentLink':'ParentLink'</mso:ManagedPropertyMapping>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="Item_CatalogItemPicker_HoverPanel">
+<!--#_
+        var i, size, fileType, title, body, mailto;
+        i = 0;
+        var id = ctx.CurrentItem.csr_id;
+        var moreResultsid = "more" + id;
+        var managedProperties = Srch.CU.getManagedPropertiesForCatalogItem(ctx.ClientControl);
+        var encodedId = $htmlEncode(id);
+        var innerId = encodedId + "_innerHover";
+        var hoverArrowBorderId = encodedId + "_hoverArrowBorder";
+        var hoverArrowId = encodedId + "_hoverArrow";
+        var hoverContentId = encodedId + "_hoverContent";
+        var closeId = encodedId + "_hoverClose";
+        var titleId = encodedId + "_hoverTitle";
+        var fileTypeId = encodedId + "_hoverFileType";
+        var sizeId = encodedId + "_hoverSize";
+        var authorId = encodedId + "_author";
+        var moreId = encodedId + "_more";
+        fileType = HP.GetFriendlyNameForFileType(ctx.CurrentItem);
+
+_#-->
+        <div class="ms-srch-hover-innerContainer ms-srch-hover-standardSize" id="_#= innerId =#_">
+            <div class="ms-srch-hover-arrowBorder" id="_#= hoverArrowBorderId =#_"></div>
+            <div class="ms-srch-hover-arrow" id="_#= hoverArrowId =#_"></div>
+            <div class="ms-srch-hover-content" id="_#= hoverContentId =#_" data-displaytemplate="Item_CatalogItemPicker_HoverPanel">
+                <div class="ms-srch-hover-header">
+                    <div class="ms-srch-hover-close">
+                        <a href="javascript:HP.Close()" id="_#= closeId =#_" title="_#= $htmlEncode(Srch.Res.hp_Tooltip_Close) =#_">
+                            <img src="_#= $urlHtmlEncode(SP.Utilities.VersionUtility.getImageUrl(Srch.SU.closeImage)) =#_" />
+                        </a>
+                    </div>
+                    <div class="ms-srch-hover-title">
+<!--#_                        
+                        if (!Srch.U.e(ctx.CurrentItem.Title) && !Srch.U.e(ctx.CurrentItem.Path)) {
+_#-->                        
+                            <a id="_#= titleId =#_" title="_#= $htmlEncode(ctx.CurrentItem.Title) =#_" href="_#= $urlHtmlEncode(ctx.CurrentItem.Path) =#_">
+                                _#= $htmlEncode(ctx.CurrentItem.Title) =#_
+                            </a>
+<!--#_                        
+                        }
+_#-->
+                    </div>
+                </div>
+                 <div class="ms-srch-hover-filedata ms-metadata">
+                    <div class="ms-srch-hover-filetype">
+
+<!--#_
+                        if (!Srch.U.e(fileType)) {
+_#-->                        
+                            <span id="_#= fileTypeId =#_">
+                                _#= $htmlEncode(fileType) + " " =#_
+                            </span>
+<!--#_                            
+                        }
+_#-->                        
+                    </div>
+                </div>
+<!--#_
+                if (!Srch.U.n(ctx.CurrentItem.LastModifiedTime))
+                {
+                    var encodedLastModifiedTimeId = $htmlEncode(id + HP.ids.modifiedDate);
+                    AddPostRenderCallback(ctx, function()
+                    {
+                        Srch.U.renderFriendlyTimeIntervalString(ctx.CurrentItem.LastModifiedTime, encodedLastModifiedTimeId);
+                    });
+_#-->
+                    <div class="ms-textSmall ms-uppercase ms-srch-hover-subTitle">_#= $htmlEncode(Srch.Res.hp_LastModified) =#_</div>
+                    <span class="ms-srch-hover-text ms-srch-ellipsis" id="_#= encodedLastModifiedTimeId =#_"></span>
+<!--#_
+                }
+
+                var strEditors = ctx.CurrentItem.owsqUSRUserEditor;
+                if(Srch.U.e(strEditors))
+                {
+                    strEditors = ctx.CurrentItem.Author;
+                }
+                if (!Srch.U.e(strEditors)) {
+_#-->
+                    <div class="ms-textSmall ms-uppercase ms-srch-hover-subTitle">_#= $htmlEncode(Srch.Res.hp_RecentlyEdited) =#_</div>
+<!--#_
+                    var authors = Srch.U.getArray(strEditors);
+                    for (i = 0; i < authors.length; i += 1) {
+_#-->
+                        <div class="ms-srch-hover-text ms-srch-ellipsis" id="_#= authorId + i =#_" title="_#= $htmlEncode(authors[i]) =#_">
+                            _#= $htmlEncode(authors[i]) =#_
+                        </div>
+<!--#_
+                    }
+                }
+_#-->
+                <hr class="ms-srch-hover-separator" />
+                <div class="ms-srch-hover-action" id="MoreInfoDiv">
+                    <a id="_#= moreId =#_" class="ms-calloutLink" title="_#= $htmlEncode(Srch.Res.pkr_CatalogPickerMoreLinkToolTip) =#_" onclick="Srch.CU.executeCatalogPickerQuery('_#= $scriptEncode(ctx.CurrentItem.Path) =#_', '_#=  $scriptEncode(moreResultsid) =#_', '_#=  $scriptEncode(managedProperties) =#_', this)" style="cursor:pointer">
+                      _#= $htmlEncode(Srch.Res.pkr_CatalogPickerMoreLink) =#_
+                    </a>
+                </div>
+                <div id="_#= moreResultsid =#_"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

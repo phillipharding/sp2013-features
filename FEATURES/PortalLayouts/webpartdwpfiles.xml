@@ -1,0 +1,36 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+        <Module Name="WebPartPopulation" Url="_catalogs/wp" Path="dwp" RootWebOnly="TRUE">
+            <File Url="siteFramer.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:spscore,ContentRollupWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value=";#Miscellaneous;#" />
+            </File>
+            <File Url="contactwp.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,PeopleWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value=";#Miscellaneous;#" />
+            </File>
+            <File Url="CategoryWebPart.webpart" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,ContentRollupWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value=";#Site Directory;#" />
+            </File>
+            <File Url="CategoryResultsWebPart.webpart" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,ContentRollupWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value=";#Site Directory;#" />
+            </File>
+            <File Url="RssViewer.webpart" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,ContentRollupWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value=";#Default;#"/>
+            </File>
+            <File Url="TagCloud.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,PeopleWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value=";#Default;#"/>
+            </File>
+            <File Url="SocialComment.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,PeopleWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value=";#Default;#"/>
+            </File>
+            <File Url="ProfileBrowser.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,PeopleWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value=";#Default;#"/>
+            </File>
+        </Module>
+</Elements>

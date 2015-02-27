@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="00BFEA71-2D77-4A75-9FCA-76516689E21A" 
+    Title="WorkflowProcessList Feature" 
+    Description="This feature provides the ability to create a list to support running custom form actions."
+    Version="1.0.0.0"
+    Scope="Web" 
+    Hidden="TRUE"
+    DefaultResourceFile="core"    
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\WorkflowProcess.xml" />
+    </ElementManifests>
+</Feature>

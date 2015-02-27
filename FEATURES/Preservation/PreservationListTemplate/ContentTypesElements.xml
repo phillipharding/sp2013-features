@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="15.0.4420" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ContentType ID="0x009A9EBD057E30442D99A95DCCC91EBBC6"       Name="$Resources:dlccore,EDiscoveryPreservedItemContentType_Title;"       Description="$Resources:dlccore,EDiscoveryPreservedItemContentType_Description;"          Group="_Hidden" Sealed="TRUE" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{7E858731-10CA-458a-BB20-256C57303B83}"               Name="PreservationVersion"             DisplayName="$Resources:dlccore,PreservationVersion;"                                   Required="FALSE"    />
+            <FieldRef ID="{831C7E9F-A675-4756-B79E-F3575B0129BE}"           Name="PreservationOriginalURL"         DisplayName="$Resources:dlccore,PreservationOriginalURL;"                               Required="FALSE"    />
+            <FieldRef ID="{653E258D-C9AD-483B-AD21-11BCD7EA4AD1}"        Name="PreservationOriginalListId"      DisplayName="$Resources:dlccore,PreservationOriginalListId;"                            Required="FALSE"    />
+            <FieldRef ID="{CD1F9B84-3D34-4820-AF84-8A46C1A6BF05}"      Name="PreservationOriginalMetadata"    DisplayName="$Resources:dlccore,PreservationOriginalMetadata;"                          Required="FALSE"    />
+            <FieldRef ID="{8604127E-BCE1-4d7e-B175-4BE9E7831555}"         Name="PreservationDatePreserved"       DisplayName="$Resources:dlccore,PreservationDatePreserved;"                             Required="FALSE"    />
+        </FieldRefs>
+    </ContentType>
+</Elements>

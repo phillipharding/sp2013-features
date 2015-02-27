@@ -1,0 +1,12 @@
+<Feature  Id="306936FD-9806-4478-80D1-7E397BFA6474"
+          Title="SharePoint Portal Server Redirect Page Content Type Binding Feature"
+          Description="SharePoint Portal Server Redirect Page Content Type Binding Feature"
+          Version="14.0.0.0"
+          Scope="Web"
+          DefaultResourceFile="core"
+	  Hidden="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="RedirectPageContentTypeBinding.xml"/>
+    </ElementManifests>
+</Feature>

@@ -1,0 +1,11 @@
+<Feature Id="1EB6A0C1-5F08-4672-B96F-16845C2448C6"
+    Title="$Resources:core,MruDocsFeatureTitle;"
+    Description="$Resources:core,MruDocsFeatureDesc;"
+    Version="1.0.1.0"
+    Scope="Web"
+    Hidden="True"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.SPMruDocsFeatureReceiver"
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

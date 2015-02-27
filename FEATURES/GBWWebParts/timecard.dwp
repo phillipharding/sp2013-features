@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+	<Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+	<TypeName>Microsoft.SharePoint.Applications.GroupBoard.WebPartPages.TimeCardWebPart</TypeName>
+	<Title>$Resources:core,GbwTCWebPartTitle;</Title>
+	<Description>$Resources:core,GbwTCWebPartDescription;</Description>
+</WebPart>

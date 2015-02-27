@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="$Resources:eduserver,IDS_EduSitePagesListName"
+                OnQuickLaunch="TRUE"
+                TemplateType="119"
+                FeatureId="00bfea71-c796-4402-9f2f-0eb9a6e71b18"
+                Url="SitePages"
+                Description="$Resources:eduserver,IDS_EduSitePagesListDescription">
+  </ListInstance>
+
+ <CustomAction
+    Id="AdminUX.SharePoint.Ribbon.EducationTab"
+    Location="CommandUI.Ribbon">
+      <CommandUIExtension>
+        <CommandUIDefinitions>
+          <CommandUIDefinition
+            Location="Ribbon.Tabs._children">
+            <Tab 
+              Id="AdminUX.SharePoint.Ribbon.EducationTab" 
+              Title="$Resources:eduserver,IDS_EduAdminTabTitle" 
+              Description="$Resources:eduserver,IDS_EduAdminTabDescription" 
+              Sequence="501">
+            <Scaling
+              Id="AdminUX.SharePoint.Ribbon.EducationTab.Scaling">
+              <MaxSize
+                Id="AdminUX.SharePoint.Ribbon.NewGroup.MaxSize"
+                Sequence="104" 
+                GroupId="AdminUX.SharePoint.Ribbon.EducationTab.NewGroup" 
+                Size="EducationTwoLarge"/>
+              <MaxSize
+                Id="AdminUX.SharePoint.Ribbon.EducationTab.MaxSize"
+                Sequence="105" 
+                GroupId="AdminUX.SharePoint.Ribbon.EducationTab.AdminGroup" 
+                Size="EducationThreeLarge"/>
+              <Scale 
+                Id="AdminUX.SharePoint.Ribbon.NewGroup.Scaling"
+                Sequence="204" 
+                GroupId="AdminUX.SharePoint.Ribbon.EducationTab.NewGroup" 
+                Size="EducationTwoLarge" />
+              <Scale 
+                Id="AdminUX.SharePoint.Ribbon.EducationTab.Scaling.CustomTabScaling"
+                Sequence="205" 
+                GroupId="AdminUX.SharePoint.Ribbon.EducationTab.AdminGroup" 
+                Size="EducationThreeLarge" />
+            </Scaling>
+            <Groups Id="AdminUX.SharePoint.Ribbon.EducationTab.Groups">
+              <Group
+                Id="AdminUX.SharePoint.Ribbon.EducationTab.NewGroup"
+                Description="$Resources:eduserver,IDS_EduNewGroupDescription"
+                Title="$Resources:eduserver,IDS_EduNewGroupTitle"
+                Sequence="51"
+                Template="Ribbon.Templates.EduAdminNewGroup">
+                <Controls Id="AdminUX.SharePoint.Ribbon.EducationTab.NewGroup.Controls">
+                  <Button
+                    Id="AdminUX.SharePoint.Ribbon.EducationTab.NewGroup.NewCourseButton"
+                    Command="AdminUX.EducationTab.Command.NewCourse"
+                    Sequence="11"
+					Image32by32="/_layouts/15/images/eduadmin.png?rev=23" Image32by32Top="-1" Image32by32Left="-1"
+                    Description="$Resources:eduserver,IDS_EduAdminNewCourseMenuDescription"
+                    LabelText="$Resources:eduserver,IDS_EduAdminNewCourseMenuTitle"
+                    TemplateAlias="cust4" />
+                  <Button
+                    Id="AdminUX.SharePoint.Ribbon.EducationTab.NewGroup.NewStudyGroupButton"
+                    Command="AdminUX.EducationTab.Command.NewStudyGroup"
+                    Sequence="13"
+					Image32by32="/_layouts/15/images/eduadmin.png?rev=23" Image32by32Top="-35" Image32by32Left="-35"
+                    Description="$Resources:eduserver,IDS_EduAdminNewStudyGroupMenuDescription"
+                    LabelText="$Resources:eduserver,IDS_EduAdminNewStudyGroupMenuTitle"
+                    TemplateAlias="cust5" />
+                </Controls>
+              </Group>              
+              <Group 
+                Id="AdminUX.SharePoint.Ribbon.EducationTab.AdminGroup" 
+                Description="$Resources:eduserver,IDS_EduAdminGroupDescription" 
+                Title="$Resources:eduserver,IDS_EduAdminGroupTitle" 
+                Sequence="52" 
+                Template="Ribbon.Templates.EduAdminAdminGroup">
+                <Controls Id="AdminUX.SharePoint.Ribbon.EducationTab.AdminGroup.Controls">
+                  <Button
+                    Id="AdminUX.SharePoint.Ribbon.EducationTab.AdminGroup.ExportGradesButton"
+                    Command="AdminUX.EducationTab.Command.ExportGrades"
+                    Sequence="15" 
+					Image32by32="/_layouts/15/images/eduadmin.png?rev=23" Image32by32Top="-1" Image32by32Left="-35"
+					Description="$Resources:eduserver,IDS_EduAdminExportGradesMenuDescription"
+                    LabelText="$Resources:eduserver,IDS_EduAdminExportGradesMenuTitle"
+                    TemplateAlias="cust1" />
+                  <Button
+                    Id="AdminUX.SharePoint.Ribbon.EducationTab.AdminGroup.ChangeStateButton"
+                    Command="AdminUX.EducationTab.Command.ChangeState"
+                    Sequence="17"
+					Image32by32="/_layouts/15/images/eduadmin.png?rev=23" Image32by32Top="-35" Image32by32Left="-69"
+                    Description="$Resources:eduserver,IDS_EduAdminChangeStateMenuDescription"
+                    LabelText="$Resources:eduserver,IDS_EduAdminChangeStateMenuTitle"
+                    TemplateAlias="cust2" />
+                  <Button
+                    Id="AdminUX.SharePoint.Ribbon.EducationTab.AdminGroup.DeleteCoursesButton"
+                    Command="AdminUX.EducationTab.Command.DeleteCourses"
+                    Sequence="19" 
+					Image32by32="/_layouts/15/images/eduadmin.png?rev=23" Image32by32Top="-35" Image32by32Left="-1"
+                    Description="$Resources:eduserver,IDS_EduAdminDeleteCoursesMenuDescription"
+                    LabelText="$Resources:eduserver,IDS_EduAdminDeleteCoursesMenuTitle"
+                    TemplateAlias="cust3" />
+                </Controls>
+              </Group>
+            </Groups>
+          </Tab>
+        </CommandUIDefinition>
+        <CommandUIDefinition Location="Ribbon.Templates._children">
+          <GroupTemplate Id="Ribbon.Templates.EduAdminNewGroup">
+            <Layout 
+              Title="EducationTwoLarge"
+              LayoutTitle="EducationTwoLarge">
+              <Section Alignment="Top" Type="OneRow">
+                <Row>
+                  <ControlRef DisplayMode="Large" TemplateAlias="cust4" />
+                  <ControlRef DisplayMode="Large" TemplateAlias="cust5" />
+                </Row>
+              </Section>
+            </Layout>
+          </GroupTemplate>
+        </CommandUIDefinition>
+        <CommandUIDefinition Location="Ribbon.Templates._children">
+          <GroupTemplate Id="Ribbon.Templates.EduAdminAdminGroup">
+            <Layout 
+              Title="EducationThreeLarge"
+              LayoutTitle="EducationThreeLarge">
+              <Section Alignment="Top" Type="OneRow">
+                <Row>
+                  <ControlRef DisplayMode="Large" TemplateAlias="cust1" />
+                  <ControlRef DisplayMode="Large" TemplateAlias="cust2" />
+                  <ControlRef DisplayMode="Large" TemplateAlias="cust3" />
+                </Row>
+              </Section>
+            </Layout>
+          </GroupTemplate>
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler
+          Command="AdminUX.EducationTab.Command.NewCourse"
+          CommandAction="javascript:window.location = '{SiteUrl}/_layouts/15/Edu/Pages/CommunityManagement.aspx?Create=true&amp;ComType=1';"/>
+        <CommandUIHandler
+          Command="AdminUX.EducationTab.Command.NewStudyGroup"
+          CommandAction="javascript:window.location = '{SiteUrl}/_layouts/15/Edu/Pages/CommunityManagement.aspx?Create=true&amp;ComType=2';"/>
+        <CommandUIHandler
+          Command="AdminUX.EducationTab.Command.ChangeState"
+          CommandAction="javascript:Edu.Controls.CourseListControl.postSelectedCommunities(courseListControl, 'StateChange.aspx', null);" />
+        <CommandUIHandler
+          Command="AdminUX.EducationTab.Command.ExportGrades"
+          CommandAction="javascript:exportGrades();" />
+        <CommandUIHandler
+          Command="AdminUX.EducationTab.Command.DeleteCourses"
+          CommandAction="javascript:deleteCourses();" />
+      </CommandUIHandlers>
+    </CommandUIExtension>
+</CustomAction>
+
+  <Module Name="EduPageModule" Path="Pages" Url="SitePages/Edu">
+    <File Path="EduAdmin.aspx" Url="EduAdmin.aspx" IgnoreIfAlreadyExists="TRUE" NavBarHome="False" Type="Ghostable"/>
+    <File Path="DataImport.aspx" Url="DataImport.aspx" IgnoreIfAlreadyExists="TRUE" NavBarHome="False" Type="Ghostable"/>
+    <File Path="ManageCourses.aspx" Url="ManageCourses.aspx" IgnoreIfAlreadyExists="TRUE" NavBarHome="False" Type="Ghostable"/>
+    <File Path="ManageOfficeGroupLink.aspx" Url="ManageOfficeGroupLink.aspx" IgnoreIfAlreadyExists="TRUE" NavBarHome="False" Type="Ghostable"/>
+    <File Path="ResultsAndReports.aspx" Url="ResultsAndReports.aspx" IgnoreIfAlreadyExists="TRUE" NavBarHome="False" Type="Ghostable"/>
+  </Module>
+  <Module Name="EduPageModule" Path="Pages" Url="SitePages/Edu">
+    <File Path="StateChange.aspx" Url="StateChange.aspx" IgnoreIfAlreadyExists="TRUE" NavBarHome="False" Type="Ghostable"/>
+  </Module>
+</Elements>

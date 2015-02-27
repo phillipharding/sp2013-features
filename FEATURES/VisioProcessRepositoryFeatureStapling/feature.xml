@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+    Id="7E0AABEE-B92B-4368-8742-21AB16453D00"
+    Title="$Resources:vsrv,PR_featureTitle;"
+    Description="$Resources:vsrv,PR_featureDesc;"
+    Version="1.0.0.0"
+    SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3" 
+    Scope="Farm">
+    <ElementManifests>
+      <ElementManifest Location="featurestapling.xml"/>
+    </ElementManifests>
+</Feature>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="{57311B7A-9AFD-4FF0-866E-9393AD6647B1}" 
+    Title="$Resources:Feature_Title;"
+    Description="$Resources:Feature_Description;"
+    Scope="Web"
+    Version="1.0.0.0"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="fields\fields.xml" />
+        <ElementManifest Location="contenttypes\contenttypes.xml" />
+    </ElementManifests>
+</Feature>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module
+        Name="WebPartPopulation"
+        List="113"
+        Url="_catalogs/wp"
+        RootWebOnly="TRUE">
+        <File Url="Whereabouts.dwp" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:core,PeopleWebPartGroup;"></Property>
+        </File>
+        <File Url="whatsnew.dwp" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:core,PeopleWebPartGroup;"></Property>
+        </File>
+    </Module>
+</Elements>

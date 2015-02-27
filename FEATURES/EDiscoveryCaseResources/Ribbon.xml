@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="15.0.4420" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Id="DiscoveryCloseCase"
+        GroupId="SiteActions"
+        ControlClass="Microsoft.Office.Server.Discovery.WebControls.DiscoveryCloseCaseMenu"
+        ControlAssembly="Microsoft.Office.Policy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        Location="Microsoft.SharePoint.StandardMenu"
+        Rights="ManageWeb"
+        >
+    </CustomAction>
+    <CustomAction
+        Id="Ribbon.ManagedQueries"
+        Location="CommandUI.Ribbon"
+        RegistrationType="List"
+        RegistrationId="1309"
+        Rights="EditListItems"
+        Sequence="10"
+        Title="Manage Queries"
+    >
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.ListItem.Scaling._children">
+        <MaxSize Id="Ribbon.ManageQueries.Discovery.Scaling.Query.MaxSize" Sequence="30" GroupId="Ribbon.ManageQueries.Discovery.Query" Size="ThreeIcon" />
+      </CommandUIDefinition>
+      <CommandUIDefinition Location="Ribbon.ListItem.Groups._children">
+        <Group 
+        Id="Ribbon.ManageQueries.Discovery.Query"
+        Sequence="5000"
+        Command="ManageQueries.QueryGroup"
+        Description=""
+        Title="$Resources:dlccore, Ribbon_ManageQueries_QueryGroupText"
+        Template="Ribbon.Templates.ManageQueries.L3" 
+        >
+        <Controls Id="Ribbon.ManageQuery.Discovery.Query.Controls">
+            <Button
+                Id="Ribbon.ManageQueries.Discovery.Manage.CopyQuery"
+                Sequence="30"
+                Command="ManageQueries.CopyQuery"
+                LabelText="$Resources:dlccore, Ribbon_ManageQueries_CopyQueryLabel"
+                ToolTipTitle="$Resources:dlccore,Ribbon_ManageQueries_CopyQueryToolTipTitle;"
+                ToolTipDescription="$Resources:dlccore,Ribbon_ManageQueries_CopyQueryToolTipDescription;"
+                Image16by16="/_layouts/15/images/discoveryCopyQuery_16x16.png?rev=23"
+                Image32by32="/_layouts/15/images/discoveryCopyQuery_32x32.png?rev=23"
+                TemplateAlias="l1"
+            />
+            <Button
+                Id="Ribbon.ManageQueries.Discovery.Query.UpdateStatistics"
+                Sequence="10"
+                Command="ManageQueries.UpdateStatistics"
+                Image16by16="/_layouts/15/images/discoveryUpdateStats_16x16.png?rev=23"
+                Image32by32="/_layouts/15/images/discoveryUpdateStats_32x32.png?rev=23"
+                LabelText="$Resources:dlccore, Ribbon_ManageQueries_UpdateStatisticsLabel"
+                ToolTipTitle="$Resources:dlccore,Ribbon_ManageQueries_UpdateStatisticsToolTipTitle;"
+                ToolTipDescription="$Resources:dlccore,Ribbon_ManageQueries_UpdateStatisticsToolTipDescription;"
+                TemplateAlias="l2"
+            />
+            <Button
+                Id="Ribbon.ManageQueries.Discovery.Query.Export"
+                Sequence="20"
+                Command="ManageQueries.Export"
+                Image16by16="/_layouts/15/images/discoveryExport_16x16.png?rev=23"
+                Image32by32="/_layouts/15/images/discoveryExport_32x32.png?rev=23"
+                LabelText="$Resources:dlccore, Ribbon_ManageQueries_ExportLabel"
+                ToolTipTitle="$Resources:dlccore,Ribbon_ManageQueries_ExportToolTipTitle;"
+                ToolTipDescription="$Resources:dlccore,Ribbon_ManageQueries_ExportToolTipDescription;"
+                TemplateAlias="l3"
+            />
+        </Controls>
+        </Group>
+      </CommandUIDefinition>
+      <CommandUIDefinition Location="Ribbon.Templates._children">
+       <GroupTemplate Id="Ribbon.Templates.ManageQueries.L3">
+        <Layout Title="ThreeIcon" LayoutTitle="ThreeIcon">
+         <Section Alignment="Top" Type="OneRow">
+          <Row>
+           <ControlRef DisplayMode="Large" TemplateAlias="l1" />
+           <ControlRef DisplayMode="Large" TemplateAlias="l2" />
+           <ControlRef DisplayMode="Large" TemplateAlias="l3" />
+          </Row>
+         </Section>
+        </Layout>
+       </GroupTemplate>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+     <CommandUIHandlers>
+      <CommandUIHandler
+         Command="ManageQueries.ManageGroup"
+         CommandAction="" />
+      <CommandUIHandler
+         Command="ManageQueries.CopyQuery"
+         CommandAction="javascript:
+            function onSucceedCopyQuery(result, userContext, methodName)
+            {
+                if (result)
+                {
+                    alert(result);
+                }
+                SP.UI.ModalDialog.RefreshPage(1);
+            }
+            function onFailCopyQuery(error, userContext, methodName)
+            {
+            }
+            var selectedItems = SP.ListOperation.Selection.getSelectedItems();
+            var selectedItemId = selectedItems[0].id;
+            var parameters = { selectedId: selectedItemId };
+            Sys.Net.WebServiceProxy.invoke(&quot;{SiteUrl}/_vti_bin/DiscoveryInternalService.asmx&quot;, 'CopySavedSearch', false, parameters, onSucceedCopyQuery, onFailCopyQuery, null, Sys.Net.WebRequestManager.get_defaultTimeout(), false, null);"
+         EnabledScript="javascript:
+           function enabled()
+           {
+             var items = SP.ListOperation.Selection.getSelectedItems();
+             return (items.length == 1);
+           }
+           enabled();" />
+      <CommandUIHandler
+         Command="ManageQueries.QueryGroup"
+         CommandAction="" />
+      <CommandUIHandler
+         Command="ManageQueries.UpdateStatistics"
+         CommandAction="javascript:
+            function onSucceedUpdateStatistics(result, userContext, methodName)
+            {
+                if (result)
+                {
+                    alert(result);
+                }
+                SP.UI.ModalDialog.RefreshPage(1);
+            }
+            function onFailUpdateStatistics(error, userContext, methodName)
+            {
+            }
+            var selectedItems = SP.ListOperation.Selection.getSelectedItems();
+            var selectedItemIds = '';
+            var selectedItemIndex;
+            for (selectedItemIndex in selectedItems){
+                if (selectedItemIds)
+                    selectedItemIds +='|';
+                selectedItemIds += selectedItems[selectedItemIndex].id;
+            }
+            var parameters = { selectedIds: selectedItemIds };
+            Sys.Net.WebServiceProxy.invoke(&quot;{SiteUrl}/_vti_bin/DiscoveryInternalService.asmx&quot;, 'UpdateStatistics', false, parameters, onSucceedUpdateStatistics, onFailUpdateStatistics, null, Sys.Net.WebRequestManager.get_defaultTimeout(), false, null);"
+         EnabledScript="javascript:
+         function enabled()
+         {
+             var items = SP.ListOperation.Selection.getSelectedItems();
+             return (items.length > 0);
+         }
+         enabled();" />
+      <CommandUIHandler
+         Command="ManageQueries.Export"
+         CommandAction="javascript:
+         var selectedItems = SP.ListOperation.Selection.getSelectedItems();
+         var selectedItemIds = '';
+         var selectedItemIndex;
+         for (selectedItemIndex in selectedItems){
+          if (selectedItemIds)
+            selectedItemIds +='|';
+          selectedItemIds += selectedItems[selectedItemIndex].id;
+          }
+         window.location.href = &quot;{SiteUrl}&quot; + '/_layouts/15/ExportPage.aspx' + '?selectedItems='+selectedItemIds;"
+         EnabledScript="javascript:
+         function enabled()
+         {
+           var items = SP.ListOperation.Selection.getSelectedItems();
+           return (items.length > 0);
+         }
+         enabled();" />
+     </CommandUIHandlers>
+    </CommandUIExtension>
+    </CustomAction>
+    <CustomAction
+        Id="Ribbon.ManageSources"
+        Location="CommandUI.Ribbon"
+        RegistrationType="List"
+        RegistrationId="1305"
+        Rights="EditListItems"
+        Sequence="10"
+        Title="Manage Sources"
+    >
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.ListItem.Scaling._children">
+        <MaxSize Id="Ribbon.ManageSources.Discovery.Scaling.Source.MaxSize" Sequence="30" GroupId="Ribbon.ManageSources.Discovery.Source" Size="TwoIcon" />
+      </CommandUIDefinition>
+      <CommandUIDefinition Location="Ribbon.ListItem.Groups._children">
+        <Group 
+        Id="Ribbon.ManageSources.Discovery.Source"
+        Sequence="5000"
+        Command="ManageSources.SourceGroup"
+        Description=""
+        Title="$Resources:dlccore, Ribbon_ManageSources_SourceGroupText"
+        Template="Ribbon.Templates.ManageSources.L2" 
+        >
+        <Controls Id="Ribbon.ManageSource.Discovery.Source.Controls">
+            <Button
+                Id="Ribbon.ManageSources.Discovery.Manage.UpdateSource"
+                Sequence="30"
+                Command="ManageSources.UpdateSource"
+                LabelText="$Resources:dlccore, Ribbon_ManageSources_UpdateSourcesLabel"
+                ToolTipTitle="$Resources:dlccore,Ribbon_ManageSources_UpdateSourcesToolTipTitle;"
+                ToolTipDescription="$Resources:dlccore,Ribbon_ManageSources_UpdateSourcesToolTipDescription;"
+                Image16by16="/_layouts/15/images/discoveryUpdateSources_16x16.png?rev=23"
+                Image32by32="/_layouts/15/images/discoveryUpdateSources_32x32.png?rev=23"
+                TemplateAlias="l1"
+            />
+            <Button
+                Id="Ribbon.ManageQueries.Discovery.Query.ErrorExport"
+                Sequence="20"
+                Command="ManageSources.ErrorExport"
+                Image16by16="/_layouts/15/images/discoveryErrorExport_16x16.png?rev=23"
+                Image32by32="/_layouts/15/images/discoveryErrorExport_32x32.png?rev=23"
+                LabelText="$Resources:dlccore, Ribbon_ManageSources_ErrorExportLabel"
+                ToolTipTitle="$Resources:dlccore,Ribbon_ManageSources_ErrorExportToolTipTitle;"
+                ToolTipDescription="$Resources:dlccore,Ribbon_ManageSources_ErrorExportToolTipDescription;"
+                TemplateAlias="l2"
+            />
+        </Controls>
+        </Group>
+      </CommandUIDefinition>
+      <CommandUIDefinition Location="Ribbon.Templates._children">
+       <GroupTemplate Id="Ribbon.Templates.ManageSources.L2">
+        <Layout Title="TwoIcon" LayoutTitle="TwoIcon">
+         <Section Alignment="Top" Type="OneRow">
+          <Row>
+           <ControlRef DisplayMode="Large" TemplateAlias="l1" />
+           <ControlRef DisplayMode="Large" TemplateAlias="l2" />
+          </Row>
+         </Section>
+        </Layout>
+       </GroupTemplate>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+     <CommandUIHandlers>
+      <CommandUIHandler
+         Command="ManageSources.SourceGroup"
+         CommandAction="" />
+      <CommandUIHandler
+         Command="ManageSources.UpdateSource"
+         CommandAction="javascript:
+            function onSucceedUpdateSource(result, userContext, methodName)
+            {
+                SP.UI.ModalDialog.RefreshPage(1);
+            }
+            function onFailUpdateSource(error, userContext, methodName)
+            {
+            }
+            var selectedItems = SP.ListOperation.Selection.getSelectedItems();
+            var selectedItemIds = '';
+            var selectedItemIndex;
+            for (selectedItemIndex in selectedItems){
+                if (selectedItemIds)
+                    selectedItemIds +='|';
+                selectedItemIds += selectedItems[selectedItemIndex].id;
+            }
+            var parameters = { selectedIds: selectedItemIds };
+            Sys.Net.WebServiceProxy.invoke(&quot;{SiteUrl}/_vti_bin/DiscoveryInternalService.asmx&quot;, 'UpdateSourceErrorInfo', false, parameters, onSucceedUpdateSource, onFailUpdateSource, null, Sys.Net.WebRequestManager.get_defaultTimeout(), false, null);"
+		 EnabledScript="javascript:
+           function enabled()
+           {
+             var items = SP.ListOperation.Selection.getSelectedItems();
+             return (items.length > 0);
+           }
+           enabled();" />
+      <CommandUIHandler
+         Command="ManageSources.ErrorExport"
+         CommandAction="javascript:
+         var selectedItems = SP.ListOperation.Selection.getSelectedItems();
+         var selectedItemIds = '';
+         var selectedItemIndex;
+         for (selectedItemIndex in selectedItems){
+          if (selectedItemIds)
+            selectedItemIds +='|';
+          selectedItemIds += selectedItems[selectedItemIndex].id;
+          }
+         window.location.href = &quot;{SiteUrl}&quot; + '/_layouts/15/ExportErrorDownload.aspx' + '?sourceIds='+selectedItemIds;"
+         EnabledScript="javascript:
+         function enabled()
+         {
+           var items = SP.ListOperation.Selection.getSelectedItems();
+           return (items.length > 0);
+         }
+         enabled();" />
+     </CommandUIHandlers>
+    </CommandUIExtension>
+    </CustomAction>
+</Elements>

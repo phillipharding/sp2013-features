@@ -1,0 +1,11 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListInstance
+        Title="$Resources:spscore,PersonalSiteOnet_List_FollowedContent;"
+        Description="$Resources:spscore,PersonalSiteOnet_List_FollowedContent_Description;"
+        FeatureId="A34E5458-8D20-4C0D-B137-E1390F5824A1"
+        Id="FollowedContentList"
+        OnQuickLaunch ="TRUE"
+        TemplateType="530"
+        Url="Followed Content">
+    </ListInstance>
+</Elements>

@@ -1,0 +1,42 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_CatalogDefaultItem</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">1</mso:TemplateHidden>
+<mso:ManagedPropertyMapping msdt:dt="string">'Text':'Title'</mso:ManagedPropertyMapping>
+<mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+  <div id="Item_CatalogDefault">
+    <div class='cbs-Item'>
+<!--#_
+    var dataField = $getItemValue(ctx, "Text");
+
+    if (!$isNull(dataField)) 
+    { 
+      var data = dataField.getRenderedValue();
+      if (!$isNull(data))
+      { 
+_#-->
+        <div class='article-content'>_#= data =#_</div>
+<!--#_ 
+      }
+      else
+      { 
+_#-->
+        <div class='article-content'>No data</div>
+<!--#_ 
+      }
+    } 
+_#-->
+    </div>
+  </div>
+</body>
+</html>

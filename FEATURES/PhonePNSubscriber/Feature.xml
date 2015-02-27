@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="41E1D4BF-B1A2-47F7-AB80-D5D6CBBA3092"
+    Title="$Resources:core,PhonePNSubscriberFeatureTitle;"
+    Description="$Resources:core,PhonePNSubscriberFeatureDesc;"
+    Version="1.0.1.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"
+    ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.PhoneNotificationsFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\PNSubscribers.xml" />
+        <ElementManifest Location="ListTemplates\PNSubscriberReceivers.xml" />
+        <ElementFile Location="PNSubscribers\Schema.xml" />
+        <ElementManifest Location="ListInstance.xml" />
+    </ElementManifests>
+</Feature>

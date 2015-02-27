@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <EmailTemplate
+      Id="EvalSiteRequested"
+      Title="$Resources:core,EvalSiteRequestedTemplateTitle;"
+      Description="$Resources:core,EvalSiteRequestedTemplateDesc;"
+      Sequence="100"
+      TemplateFile="EvalSiteRequested.xml" />
+  <EmailTemplate
+      Id="EvalSiteCreationWithNoUpgrade"
+      Title="$Resources:core,EvalSiteCreationWithNoUpgradeTemplateTitle;"
+      Description="$Resources:core,EvalSiteCreationWithNoUpgradeTemplateDesc;"
+      Sequence="100"
+      TemplateFile="EvalSiteCreateWithNoUpgrade.xml" />
+  <EmailTemplate 
+        Id="EvalSiteCreationWithUpgrade"
+        Title="$Resources:core,EvalSiteCreationTemplateTitle;"
+        Description="$Resources:core,EvalSiteCreationTemplateDescription;"
+        Sequence="100"
+        TemplateFile="EvalSiteCreationWithUpgrade.xml" />
+    <EmailTemplate 
+        Id="EvalSiteNearingExpiry"
+        Title="$Resources:core,EvalSiteNearingExpiryTemplateTitle;"
+        Description="$Resources:core,EvalSiteNearingExpiryTemplateDesc;"
+        Sequence="100"
+        TemplateFile="EvalSiteNearingExpiry.xml" />
+    <EmailTemplate 
+        Id="EvalSiteDeleted"
+        Title="$Resources:core,EvalSiteDeletedTemplateTitle;"
+        Description="$Resources:core,EvalSiteDeletedTemplateDesc;"
+        Sequence="100"
+        TemplateFile="EvalSiteDeleted.xml" />
+    <EmailTemplate 
+        Id="SiteUpgradeFailed"
+        Title="$Resources:core,EvalSiteUpgradedTemplateTitle;"
+        Description="$Resources:core,EvalSiteUpgradedTemplateDesc;"
+        Sequence="100"
+        TemplateFile="SiteUpgradeFailed.xml" />
+    <EmailTemplate
+        Id="UpgradeAvailable"
+        Title="$Resources:core,UpgradeAvailableTemplateTitle;"
+        Description="$Resources:core,UpgradeAvailableTemplateDesc;"
+        Sequence="100"
+        TemplateFile="UpgradeAvailable.xml" />
+    <EmailTemplate
+        Id="SiteUpgraded"
+        Title="$Resources:core,UpgradeSucceededTemplateTitle;"
+        Description="$Resources:core,UpgradeSucceededTemplateDesc;"
+        Sequence="100"
+        TemplateFile="SiteUpgraded.xml" />
+</Elements>

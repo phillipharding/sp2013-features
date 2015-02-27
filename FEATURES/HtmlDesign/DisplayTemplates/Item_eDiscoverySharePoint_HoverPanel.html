@@ -1,0 +1,89 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_DiscoverySharePointHoverPanel</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#SearchResults;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:ManagedPropertyMapping msdt:dt="string">'Title':'Title','Path':'Path','Created By':'MetadataAuthor','Created On':'Write','Author':'DisplayAuthor','Size':'Size','LastModifiedTime':'LastModifiedTime','CollapsingStatus':'CollapsingStatus','DocId':'DocId','HitHighlightedSummary':'HitHighlightedSummary','ContentClass':'ContentClass','ContentType':'ContentType','FileExtension':'FileExtension','ViewsLifeTime':'ViewsLifeTime','ParentLink':'ParentLink'</mso:ManagedPropertyMapping>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+<div id="Item_eDiscoverySharePoint_HoverPanel">
+<!--#_
+var id = ctx.CurrentItem.csr_id;
+ctx.CurrentItem.csr_ShowFollowLink = false;
+ctx.CurrentItem.csr_ShowLastModifiedTime = true;
+ctx.CurrentItem.csr_ShowAuthors = true;
+ctx.CurrentItem.csr_AuthorsLabel = $resource("hp_RecentlyEdited_eDiscovery");
+ctx.CurrentItem.csr_ShowFileIcon = true;
+
+var fileExtension = $getItemValue(ctx,"FileExtension");
+if (!fileExtension.isEmpty) 
+{
+    var prefixedFileName = Srch.U.getFriendlyNameForFileExtension(fileExtension.value);
+    if(!$isEmptyString(prefixedFileName) && !$isEmptyString(Srch.Res[prefixedFileName]))
+    {
+        ctx.CurrentItem.csr_FileType = $resource(prefixedFileName);
+    }
+}
+
+var summaryEncoded = "";
+var hhSummary = $getItemValue(ctx, "HitHighlightedSummary");
+if(!hhSummary.isEmpty)
+{
+    var su = Srch.U.processHHXML(hhSummary.value);    
+    summaryEncoded = Srch.U.getTrimmedProcessedHHXMLString(su, Srch.U.summaryTruncationLengthWithPreview);
+}
+
+var pathLength = ctx.CurrentItem.csr_PathLength;
+if(!pathLength) 
+{
+    pathLength = Srch.U.pathTruncationLength;
+}
+var displayPath = displayPath = $htmlEncode($getItemValue(ctx, "Path").value);
+var truncatedUrl = Srch.U.truncateHighlightedUrl(displayPath, pathLength);
+
+var innerContainerId = id + HP.ids.inner;
+if(!$isEmptyString(summaryEncoded)) {
+    $addRenderContextCallback(ctx, "OnPostRender", function(){
+        HP.SetWidth(id, innerContainerId, 500);
+    });
+}
+_#-->
+    <div class="ms-srch-hover-innerContainer ms-srch-hover-standardSize" id="_#= $htmlEncode(innerContainerId) =#_">
+        <div class="ms-srch-hover-arrowBorder" id="_#= $htmlEncode(id + HP.ids.arrowBorder) =#_"></div>
+        <div class="ms-srch-hover-arrow" id="_#= $htmlEncode(id + HP.ids.arrow) =#_"></div>
+        <div class="ms-srch-hover-content" id="_#= $htmlEncode(id + HP.ids.content) =#_" data-displaytemplate="DiscoverySharePointHoverPanel">
+            <div id="_#= $htmlEncode(id + HP.ids.header) =#_" class="ms-srch-hover-header">
+                _#= ctx.RenderHeader(ctx) =#_
+                <div id="_#= $htmlEncode(id + Srch.U.Ids.path) =#_" tabindex="0" class="ms-metadata" title="_#= $htmlEncode(ctx.CurrentItem.Path) =#_" 
+                        onblur="Srch.U.restoreText(this, '_#= $scriptEncode(truncatedUrl) =#_', '_#= $scriptEncode(ctx.CurrentItem.Path) =#_')" 
+                        onclick="Srch.U.selectText('_#= $scriptEncode(ctx.CurrentItem.Path) =#_', this)" >
+                    _#= truncatedUrl =#_
+                </div>
+            </div>
+            <div id="_#= $htmlEncode(id + HP.ids.body) =#_" class="ms-srch-hover-body">
+                _#= ctx.RenderBody(ctx) =#_
+<!--#_
+if(!$isEmptyString(summaryEncoded))
+{
+_#-->
+                <div class="ms-srch-hover-subTitle"><h3 class="ms-soften">_#= $htmlEncode(Srch.Res.hp_Summary) =#_</h3></div>
+                <div class="ms-srch-hover-text" id="_#= $htmlEncode(id + HP.ids.summary) =#_">
+                    _#= summaryEncoded =#_
+                </div>
+<!--#_
+}
+_#-->
+            </div>
+        </div> 
+    </div>
+</div>
+</body>
+</html>

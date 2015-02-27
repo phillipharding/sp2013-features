@@ -1,0 +1,373 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="PageUpload" Url="$Resources:osrvcore,List_Pages_UrlName;" Path="">
+        <File Url="default.aspx" Type="GhostableInLibrary">
+            <Property Name="PublishingPageLayout" Value="~SiteCollection/_catalogs/masterpage/searchmain.aspx, $Resources:Microsoft.Office.Server.Search,SearchMainTitle;" />
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,Search_MainPage_Title;" />
+            <Property Name="ContentType" Value="$Resources:Microsoft.Office.Server.Search,contenttype_welcomepage_name;" />
+            <AllUsersWebPart WebPartZoneID="MainZone" WebPartOrder="1">
+                <![CDATA[
+                    <webParts>
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                            <metaData>
+                                <type name="Microsoft.Office.Server.Search.WebControls.SearchBoxScriptWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                            </metaData>
+                            <data>	
+                                <properties>								
+                                    <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,SearchBoxWP_Title;</property>
+                                    <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,SearchBoxWP_Desc;</property>
+                                    <property name="ChromeType">None</property>
+                                    <property name="AllowMinimize" type="bool">true</property>
+                                    <property name="AllowClose" type="bool">true</property> 					
+                                    <property name="Hidden" type="bool">false</property>     
+                                    <property name="ResultsPageAddress" type="string">results.aspx</property>
+                                    <property name="SetFocusOnPageLoad" type="bool">true</property>
+                                    <property name="QuerySuggestionsSourceID" type="string">8413CD39-2156-4E00-B54D-11EFD9ABDB89</property>
+                                </properties>
+                            </data>
+                        </webPart>
+                    </webParts>
+                ]]>
+            </AllUsersWebPart>
+        </File>
+        <File Url="advanced.aspx" Type="GhostableInLibrary">
+            <Property Name="PublishingPageLayout" Value="~SiteCollection/_catalogs/masterpage/AdvancedSearchLayout.aspx, $Resources:Microsoft.Office.Server.Search,SearchCenterAdvancedSearchTitle;" />
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,Search_Advanced_Page_Title;" />
+            <Property Name="ContentType" Value="$Resources:Microsoft.Office.Server.Search,contenttype_welcomepage_name;" />
+            <AllUsersWebPart WebPartZoneID="MainZone" WebPartOrder="1">
+                <![CDATA[
+                    <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                        <Assembly>Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                        <TypeName>Microsoft.Office.Server.Search.WebControls.AdvancedSearchBox</TypeName>
+                        <Title>$Resources:Microsoft.Office.Server.Search,AdvancedSearch_Webpart_Title;</Title>
+                        <Description>$Resources:Microsoft.Office.Server.Search,AdvancedSearch_Webpart_Description;</Description>
+                        <FrameType>None</FrameType>
+                        <AllowMinimize>true</AllowMinimize>
+                        <AllowRemove>true</AllowRemove>
+                        <IsVisible>true</IsVisible>
+                        <SearchResultPageURL xmlns="urn:schemas-microsoft-com:AdvancedSearchBox">results.aspx</SearchResultPageURL>
+                        <ShowAndQueryTextBox xmlns="urn:schemas-microsoft-com:AdvancedSearchBox">true</ShowAndQueryTextBox>
+                        <ShowPhraseQueryTextBox xmlns="urn:schemas-microsoft-com:AdvancedSearchBox">true</ShowPhraseQueryTextBox>
+                        <ShowOrQueryTextBox xmlns="urn:schemas-microsoft-com:AdvancedSearchBox">true</ShowOrQueryTextBox>
+                        <ShowNotQueryTextBox xmlns="urn:schemas-microsoft-com:AdvancedSearchBox">true</ShowNotQueryTextBox>
+                        <ShowLanguageOptions xmlns="urn:schemas-microsoft-com:AdvancedSearchBox">true</ShowLanguageOptions>
+                        <ShowResultTypePicker xmlns="urn:schemas-microsoft-com:AdvancedSearchBox">true</ShowResultTypePicker>
+                        <ShowPropertiesSection xmlns="urn:schemas-microsoft-com:AdvancedSearchBox">true</ShowPropertiesSection>
+                    </WebPart>
+                ]]>
+            </AllUsersWebPart>
+        </File>
+        <File Url="results.aspx" Type="GhostableInLibrary">
+            <Property Name="PublishingPageLayout" Value="~SiteCollection/_catalogs/masterpage/searchresults.aspx, $Resources:Microsoft.Office.Server.Search,SearchResultsTitle;" />
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,Search_Results_Page_Title1;" />
+            <Property Name="ContentType" Value="$Resources:Microsoft.Office.Server.Search,contenttype_welcomepage_name;" />
+
+            <AllUsersWebPart WebPartZoneID="NavigationZone" WebPartOrder="1">
+                <![CDATA[
+                    <webParts>
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                            <metaData>
+                                <type name="Microsoft.Office.Server.Search.WebControls.RefinementScriptWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                            </metaData>
+                            <data>	
+                                <properties>
+                                    <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,RefinementScript_Title;</property>
+                                    <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,RefinementScript_Desc;</property>
+                                    <property name="ChromeType">None</property>
+                                    <property name="AllowMinimize" type="bool">true</property>
+                                    <property name="AllowClose" type="bool">true</property> 					
+                                    <property name="Hidden" type="bool">false</property>     
+                                </properties>
+                            </data>
+                        </webPart>
+                    </webParts>
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="MainZone" WebPartOrder="1">
+                <![CDATA[
+                    <webParts>
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                            <metaData>
+                                <type name="Microsoft.Office.Server.Search.WebControls.SearchBoxScriptWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                            </metaData>
+                            <data>	
+                                <properties>
+                                    <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,SearchBoxWP_Title;</property>
+                                    <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,SearchBoxWP_Desc;</property>
+                                    <property name="ChromeType">None</property>
+                                    <property name="AllowMinimize" type="bool">true</property>
+                                    <property name="AllowClose" type="bool">true</property> 					
+                                    <property name="Hidden" type="bool">false</property>     
+                                    <property name="PageTitlePrefix" type="string">$Resources:Microsoft.Office.Server.Search, SearchResultsPageTitle;</property>
+                                </properties>
+                            </data>
+                        </webPart>
+                    </webParts>
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="MainZone" WebPartOrder="2">
+                <![CDATA[
+                    <webParts>
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                            <metaData>
+                                <type name="Microsoft.Office.Server.Search.WebControls.SearchNavigationWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                            </metaData>
+                            <data>	
+                                <properties>
+                                    <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,SearchNavigation_Title;</property>
+                                    <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,SearchNavigation_Desc;</property>
+                                    <property name="ChromeType">None</property>
+                                    <property name="AllowMinimize" type="bool">true</property>
+                                    <property name="AllowClose" type="bool">true</property> 					
+                                    <property name="Hidden" type="bool">false</property>     
+                                </properties>
+                            </data>
+                        </webPart>
+                    </webParts>
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="MainZone" WebPartOrder="3">
+                <![CDATA[
+                    <webParts>
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                            <metaData>
+                                <type name="Microsoft.Office.Server.Search.WebControls.ResultScriptWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                            </metaData>
+                            <data>	
+                                <properties>
+                                    <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,ResultsScriptWP_Title;</property>
+                                    <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,ResultsScriptWP_Desc;</property>
+                                    <property name="ChromeType">None</property>
+                                    <property name="AllowMinimize" type="bool">true</property>
+                                    <property name="AllowClose" type="bool">true</property> 					
+                                    <property name="Hidden" type="bool">false</property>     
+                                    <property name="ScrollToTopOnRedraw" type="bool">true</property>
+                                    <property name="DataProviderJSON" type="string">{"IgnoreStaleServerQuery":true,"ClientType":"AllResultsQuery"}</property>
+                                    <property name="RepositionLanguageDropDown" type="bool">true</property>
+                                </properties>
+                            </data>
+                        </webPart>
+                    </webParts>
+                ]]>
+            </AllUsersWebPart>
+        </File>
+        <File Url="peopleresults.aspx" Type="GhostableInLibrary">
+            <Property Name="PublishingPageLayout" Value="~SiteCollection/_catalogs/masterpage/searchresults.aspx, $Resources:Microsoft.Office.Server.Search,SearchResultsTitle;" />
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,Search_People_Results_Page_Title;" />
+            <Property Name="ContentType" Value="$Resources:Microsoft.Office.Server.Search,contenttype_welcomepage_name;" />
+            <AllUsersWebPart WebPartZoneID="NavigationZone" WebPartOrder="1">
+                <![CDATA[
+                    <webParts>
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                            <metaData>
+                                <type name="Microsoft.Office.Server.Search.WebControls.RefinementScriptWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                            </metaData>
+                            <data>	
+                                <properties>
+                                    <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,RefinementScript_Title;</property>
+                                    <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,PeopleRefinement_Desc;</property>
+                                    <property name="ChromeType">None</property>
+                                    <property name="AllowMinimize" type="bool">true</property>
+                                    <property name="AllowClose" type="bool">true</property>
+                                    <property name="Hidden" type="bool">false</property>
+
+                                    <property name="SelectedRefinementControlsJson" type="string">[{"propertyName":"Department","spec":"(filter=7/0/*)","renderTemplateId":"~sitecollection/_catalogs/masterpage/Display Templates/Filters/Filter_Default.js","countDisplay":"Numerical"},{"propertyName":"JobTitle","spec":"(filter=7/0/*)","renderTemplateId":"~sitecollection/_catalogs/masterpage/Display Templates/Filters/Filter_Default.js","countDisplay":"Numerical"},{"propertyName":"PeopleKeywords","spec":"(filter=7/0/*)","renderTemplateId":"~sitecollection/_catalogs/masterpage/Display Templates/Filters/Filter_Default.js","countDisplay":"Numerical"},{"propertyName":"BaseOfficeLocation","spec":"(filter=7/0/*)","renderTemplateId":"~sitecollection/_catalogs/masterpage/Display Templates/Filters/Filter_Default.js","countDisplay":"Numerical"}]</property>
+                                </properties>
+                            </data>
+                        </webPart>
+                    </webParts>
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="MainZone" WebPartOrder="1">
+                <![CDATA[
+                    <webParts>
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                            <metaData>
+                                <type name="Microsoft.Office.Server.Search.WebControls.SearchBoxScriptWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                            </metaData>
+                            <data>
+                                <properties>
+                                    <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,PeopleSearchBoxTitle;</property>
+                                    <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,PeopleSearchBoxDescription;</property>
+                                    <property name="ChromeType">None</property>
+                                    <property name="AllowMinimize" type="bool">true</property>
+                                    <property name="AllowClose" type="bool">true</property>
+                                    <property name="Hidden" type="bool">false</property>
+                                    <property name="ShowPeopleNameSuggestions" type="bool">true</property>
+                                    <property name="PersonalResultCount" type="int">0</property>
+                                    <property name="QuerySuggestionMinimumPrefixLength" type="int">2</property>
+                                    <property name="PageTitlePrefix" type="string">$Resources:Microsoft.Office.Server.Search, SearchPeopleResultsPageTitle;</property>
+                                </properties>
+                            </data>
+                        </webPart>
+                    </webParts>
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="MainZone" WebPartOrder="2">
+                <![CDATA[
+                    <webParts>
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                            <metaData>
+                                <type name="Microsoft.Office.Server.Search.WebControls.SearchNavigationWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                            </metaData>
+                            <data>	
+                                <properties>
+                                    <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,SearchNavigation_Title;</property>
+                                    <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,SearchNavigation_Desc;</property>
+                                    <property name="ChromeType">None</property>
+                                    <property name="AllowMinimize" type="bool">true</property>
+                                    <property name="AllowClose" type="bool">true</property> 					
+                                    <property name="Hidden" type="bool">false</property>     
+                                </properties>
+                            </data>
+                        </webPart>
+                    </webParts>
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="MainZone" WebPartOrder="3">
+                <![CDATA[
+                    <webParts>
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                            <metaData>
+                                <type name="Microsoft.Office.Server.Search.WebControls.ResultScriptWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                            </metaData>
+                            <data>
+                                <properties>
+                                    <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,PeopleCoreResultsWP_Title;</property>
+                                    <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,PeopleCoreResultsWP_Desc;</property>
+                                    <property name="ChromeType">None</property>
+                                    <property name="AllowMinimize" type="bool">true</property>
+                                    <property name="AllowClose" type="bool">true</property>
+                                    <property name="Hidden" type="bool">false</property>
+                                    <property name="ScrollToTopOnRedraw" type="bool">true</property>
+
+                                    <property name="ShowBestBets" type="bool">true</property>
+                                    <property name="ShowPersonalFavorites" type="bool">false</property>
+                                    <property name="ShowDefinitions" type="bool">false</property>
+                                    <property name="ShowDidYouMean" type="bool">false</property>
+                                    <property name="ShowSortOptions" type="bool">false</property>
+                                    <property name="ShowAdvancedLink" type="bool">false</property>
+                                    <property name="SelectedPropertiesJson" type="string">["AboutMe","AccountName","BaseOfficeLocation","Department","HitHighlightedProperties","Interests","JobTitle","LastModifiedTime","Memberships","PastProjects","Path","PictureURL","PreferredName","RenderTemplateId","Responsibilities","ResultTypeId","ResultTypeIdList","Schools","ServiceApplicationID","SipAddress","Skills","UserProfile_GUID","WorkEmail", "WorkId","YomiDisplayName"]</property>
+                                    <property name="HitHighlightedPropertiesJson" type="string">["AboutMe","BaseOfficeLocation","Department","Interests","JobTitle","Memberships","PastProjects","PreferredName","Responsibilities","Schools","SipAddress","Skills","WorkEmail","YomiDisplayName"]</property>
+                                    <property name="DataProviderJSON" type="string">{"SourceID":"B09A7990-05EA-4AF9-81EF-EDFAB16C4E31","FallbackRankingModelID":"D9BFB1A1-9036-4627-83B2-BBD9983AC8A1","ClientType":"PeopleResultsQuery","EnablePhonetic":true,"EnableNicknames":true,"IgnoreStaleServerQuery":true,"PersonalizedQuery":true,"TrimDuplicates":false,"EnableOrderingHitHighlightedProperty":true,"HitHighlightedMultivaluePropertyLimit":5}</property>
+                                    <property name="AvailableSortsJson" type="string">[{&quot;name&quot;:&quot;$Resources:Relevance_SortBy_PropertyDisplayName&quot;,&quot;sorts&quot;:[]},{&quot;name&quot;:&quot;$Resources:FirstName_SortBy_PropertyDisplayName&quot;,&quot;sorts&quot;:[{&quot;p&quot;:&quot;FirstName&quot;,&quot;d&quot;:0}]},{&quot;name&quot;:&quot;$Resources:SocialDistance_SortBy_PropertyDisplayName&quot;,&quot;sorts&quot;:[]}]</property>
+                                    <property name="PreloadedItemTemplateIdsJson" type="string">["~sitecollection/_catalogs/masterpage/Display Templates/Search/Group_Default.js","~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_Person.js"]</property>
+                                    <property name="RepositionLanguageDropDown" type="bool">true</property>
+                                </properties>
+                            </data>
+                        </webPart>
+                    </webParts>
+                ]]>
+            </AllUsersWebPart>
+        </File>
+        <File Url="conversationresults.aspx" Type="GhostableInLibrary">
+            <Property Name="PublishingPageLayout" Value="~SiteCollection/_catalogs/masterpage/searchresults.aspx, $Resources:Microsoft.Office.Server.Search,SearchResultsTitle;" />
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,Search_Conversation_Results_Page_Title;" />
+            <Property Name="ContentType" Value="$Resources:Microsoft.Office.Server.Search,contenttype_welcomepage_name;" />
+            <AllUsersWebPart WebPartZoneID="NavigationZone" WebPartOrder="1">
+                <![CDATA[
+                    <webParts>
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                            <metaData>
+                                <type name="Microsoft.Office.Server.Search.WebControls.RefinementScriptWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                            </metaData>
+                            <data>	
+                                <properties>
+                                    <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,RefinementScript_Title;</property>
+                                    <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,RefinementScript_Desc;</property>
+                                    <property name="ChromeType">None</property>
+                                    <property name="AllowMinimize" type="bool">true</property>
+                                    <property name="AllowClose" type="bool">true</property>
+                                    <property name="Hidden" type="bool">false</property>
+
+                                    <property name="SelectedRefinementControlsJson" type="string">{"refinerConfigurations":[{"propertyName":"Tags","propertyID":null,"displayName":null,"displayTemplate":"~sitecollection/_catalogs/masterpage/Display Templates/Filters/Filter_Default.js","maxNumberRefinementOptions":7,"type":null,"description":null,"refinerSpecStringOverride":null,"useDefaultDateIntervals":false,"countDisplay":0,"isInherited":false,"sortBy":0,"sortOrder":0},{"propertyName":"DisplayAuthor","propertyID":null,"displayName":null,"displayTemplate":"~sitecollection/_catalogs/masterpage/Display Templates/Filters/Filter_Default.js","maxNumberRefinementOptions":7,"type":null,"description":null,"refinerSpecStringOverride":null,"useDefaultDateIntervals":false,"countDisplay":0,"isInherited":false,"sortBy":0,"sortOrder":0},{"propertyName":"Created","propertyID":null,"displayName":null,"displayTemplate":"~sitecollection/_catalogs/masterpage/Display Templates/Filters/Filter_SliderBarGraph.js","maxNumberRefinementOptions":0,"type":null,"description":null,"refinerSpecStringOverride":null,"useDefaultDateIntervals":true,"countDisplay":0,"isInherited":false,"sortBy":0,"sortOrder":0}]}</property>
+                                </properties>
+                            </data>
+                        </webPart>
+                    </webParts>
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="MainZone" WebPartOrder="1">
+                <![CDATA[
+                    <webParts>
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                            <metaData>
+                                <type name="Microsoft.Office.Server.Search.WebControls.SearchBoxScriptWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                            </metaData>
+                            <data>
+                                <properties>
+                                    <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,SearchBoxWP_Title;</property>
+                                    <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,SearchBoxWP_Desc;</property>
+                                    <property name="ChromeType">None</property>
+                                    <property name="AllowMinimize" type="bool">true</property>
+                                    <property name="AllowClose" type="bool">true</property>
+                                    <property name="Hidden" type="bool">false</property>
+                                    <property name="PageTitlePrefix" type="string">$Resources:Microsoft.Office.Server.Search, SearchConversationResultsPageTitle;</property>
+                                </properties>
+                            </data>
+                        </webPart>
+                    </webParts>
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="MainZone" WebPartOrder="2">
+                <![CDATA[
+                    <webParts>
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                            <metaData>
+                                <type name="Microsoft.Office.Server.Search.WebControls.SearchNavigationWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                            </metaData>
+                            <data>
+                                <properties>
+                                    <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,SearchNavigation_Title;</property>
+                                    <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,SearchNavigation_Desc;</property>
+                                    <property name="ChromeType">None</property>
+                                    <property name="AllowMinimize" type="bool">true</property>
+                                    <property name="AllowClose" type="bool">true</property>
+                                    <property name="Hidden" type="bool">false</property>
+                                </properties>
+                            </data>
+                        </webPart>
+                    </webParts>
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="MainZone" WebPartOrder="3">
+                <![CDATA[
+                    <webParts>
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                            <metaData>
+                                <type name="Microsoft.Office.Server.Search.WebControls.ResultScriptWebPart,Microsoft.Office.Server.Search,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                            </metaData>
+                            <data>
+                                <properties>
+                                    <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,ResultsScriptWP_Title;</property>
+                                    <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,ResultsScriptWP_Desc;</property>
+                                    <property name="ChromeType">None</property>
+                                    <property name="AllowMinimize" type="bool">true</property>
+                                    <property name="AllowClose" type="bool">true</property>
+                                    <property name="Hidden" type="bool">false</property>
+
+                                    <property name="DataProviderJSON" type="string">{"SourceID":"459dd1b7-216f-4386-9709-287d5d22f568","IgnoreStaleServerQuery":true,"ClientType":"AllResultsQuery"}</property>
+                                    <property name="PreloadedItemTemplateIdsJson" type="string">["~sitecollection/_catalogs/masterpage/Display Templates/Search/Group_Default.js","~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_Default.js","~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_Site.js","~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_MicroBlog.js","~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_Person.js","~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_Person_CompactHorizontal.js"]</property>
+                                    <property name="RepositionLanguageDropDown" type="bool">true</property>
+                                </properties>
+                            </data>
+                        </webPart>
+                    </webParts>
+                ]]>
+            </AllUsersWebPart>
+        </File>
+    </Module>
+</Elements>
+

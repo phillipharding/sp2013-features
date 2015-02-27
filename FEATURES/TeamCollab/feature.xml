@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature 
+        Id="00BFEA71-4EA5-48D4-A4AD-7EA5C011ABE5" 
+        Title="$Resources:core,teamcollabFeatureTitle;"
+        Version="15.0.1.0"
+        Description="$Resources:core,teamcollabFeatureDesc;"
+        ImageUrl="WssTeamCollaborationFeature.gif"
+        ImageUrlAltText=""
+        Scope="Web" 
+        DefaultResourceFile="core"
+        xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ActivationDependencies> 
+        <!-- AnnouncementsList Feature -->
+        <ActivationDependency FeatureId="00BFEA71-D1CE-42de-9C63-A44004CE0104"/>
+        <!-- ContactsList Feature -->
+        <ActivationDependency FeatureId="00BFEA71-7E6D-4186-9BA8-C047AC750105"/>
+        <!-- CustomList Feature -->
+        <ActivationDependency FeatureId="00BFEA71-DE22-43B2-A848-C05709900100"/>
+        <!-- DataSourceLibrary Feature -->
+        <ActivationDependency FeatureId="00BFEA71-F381-423D-B9D1-DA7A54C50110"/>
+        <!-- DiscussionsList Feature -->
+        <ActivationDependency FeatureId="00BFEA71-6A49-43FA-B535-D15C05500108"/>
+        <!-- DocumentLibrary Feature -->
+        <ActivationDependency FeatureId="00BFEA71-E717-4E80-AA17-D0C71B360101"/>
+        <!-- EventsList Feature -->
+        <ActivationDependency FeatureId="00BFEA71-EC85-4903-972D-EBE475780106"/>
+        <!-- ExternalList Feature -->
+        <ActivationDependency FeatureId="00BFEA71-9549-43f8-B978-E47E54A10600"/>
+        <!-- GanttTasksList Feature -->
+        <ActivationDependency FeatureId="00BFEA71-513D-4CA0-96C2-6A47775C0119"/>
+        <!-- GridList Feature -->
+        <ActivationDependency FeatureId="00BFEA71-3A1D-41D3-A0EE-651D11570120"/>
+        <!-- HierarchyTasksList Feature -->
+        <ActivationDependency FeatureId="F9CE21F8-F437-4f7e-8BC6-946378C850F0"/>
+        <!-- IssuesList Feature -->
+        <ActivationDependency FeatureId="00BFEA71-5932-4F9C-AD71-1557E5751100"/>
+        <!-- LinksList Feature -->
+        <ActivationDependency FeatureId="00BFEA71-2062-426C-90BF-714C59600103"/>
+        <!-- NoCodeWorkflowLibrary Feature -->
+        <ActivationDependency FeatureId="00BFEA71-F600-43F6-A895-40C0DE7B0117"/>
+        <!-- PictureLibrary Feature -->
+        <ActivationDependency FeatureId="00BFEA71-52D4-45B3-B544-B1C71B620109"/>
+        <!-- PromotedLinks Feature -->
+        <ActivationDependency FeatureId="192EFA95-E50C-475e-87AB-361CEDE5DD7F"/>
+        <!-- SurveysList Feature -->
+        <ActivationDependency FeatureId="00BFEA71-EB8A-40B1-80C7-506BE7590102"/>
+        <!-- TasksList Feature -->
+        <ActivationDependency FeatureId="00BFEA71-A83E-497E-9BA0-7A5C597D0107"/>
+        <!-- WebPageLibrary Feature -->
+        <ActivationDependency FeatureId="00BFEA71-C796-4402-9F2F-0EB9A6E71B18"/>
+        <!-- WorkflowProcessLibrary Feature -->
+        <ActivationDependency FeatureId="00BFEA71-2D77-4A75-9FCA-76516689E21A"/>
+        <!-- WorkflowHistoryList Feature -->
+        <ActivationDependency FeatureId="00BFEA71-4EA5-48D4-A4AD-305CF7030140"/>
+        <!-- XmlFormLibrary Feature -->
+        <ActivationDependency FeatureId="00BFEA71-1E1D-4562-B56A-F05371BB0115"/>
+    </ActivationDependencies>
+</Feature>

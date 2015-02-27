@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="links"
+        Type="103"
+        BaseType="0"
+        OnQuickLaunch="TRUE"
+        SecurityBits="11"
+        Sequence="310"
+        DisplayName="$Resources:core,linksList;"
+        Description="$Resources:core,linksList_Desc;"
+        Image="/_layouts/15/images/itlink.png?rev=23" />
+</Elements>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature  Id="aeef8777-70c0-429f-8a13-f12db47a6d47"
+          Title="Bulk workflow process button"
+          Description="Adds the process all tasks button to complete workflows in bulk"
+          Version="15.0.0.0"
+          Scope="Farm"
+          Hidden="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/"
+          DefaultResourceFile="dlccore">
+  <ElementManifests>
+    <ElementManifest Location="ProcessAllTasks.xml" />
+  </ElementManifests>
+</Feature>

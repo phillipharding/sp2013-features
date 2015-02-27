@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/"> 
+    <ContentType ID="0x0108003365C4474CAE8C42BCE396314E88E51F"
+        Name="$Resources:ContentType_Name;"
+        Group="$Resources:ContentType_Group;"
+        Description="$Resources:ContentType_Description;"
+        BaseType="0x0108"
+        Hidden="TRUE"
+        Version="0" >
+        <FieldRefs>
+            <FieldRef ID="{55B29417-1042-47F0-9DFF-CE8156667F96}" Name="TaskOutcome" />
+            <FieldRef ID="{1F30D200-0D4E-4C8A-A7EB-2E49815BF2BE}" Name="WorkflowInstanceId" />
+        </FieldRefs>
+    </ContentType>
+</Elements> 

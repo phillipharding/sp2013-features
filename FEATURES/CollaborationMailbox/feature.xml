@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="502A2D54-6102-4757-AAA0-A90586106368"
+          Title="$Resources:spscore,CollaborationMailbox_Feature_Title;"
+          Description="$Resources:spscore,CollaborationMailbox_Feature_Description;"
+          Version="15.0.2.0"
+          Scope="Web"
+          ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Portal.CollaborationMailboxFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ActivationDependencies>
+        <ActivationDependency 
+            FeatureId="3A11D8EF-641E-4C79-B4D9-BE3B17F9607C" />
+    </ActivationDependencies>
+    <AppDisplayData ThumbnailUrl="_layouts/15/images/teammailbox_appicon.png"
+    	LaunchUrl="_layouts/15/TeamMailbox/mailbox.aspx" 
+    />
+    <UpgradeActions
+        ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        ReceiverClass="Microsoft.SharePoint.Portal.CollaborationMailboxFeatureReceiver">
+        <VersionRange EndVersion="15.0.1.0">
+            <CustomUpgradeAction Name="RemoveMailboxContentDbPage" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.2.0">
+            <CustomUpgradeAction Name="AddMailboxQuickLaunch" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

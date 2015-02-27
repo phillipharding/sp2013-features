@@ -1,0 +1,15 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Feature  Id="F63B7696-9AFC-4e51-9DFD-3111015E9A60"
+          Title="V2V Published Links Upgrade"
+          Description="Add Published Links fields and content type"
+          Version="14.0.0.0"
+          Scope="Site"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="PublishedLinksColumns.xml"/>
+        <ElementManifest Location="PublishedLinksContentTypes.xml"/>
+    </ElementManifests>
+</Feature>

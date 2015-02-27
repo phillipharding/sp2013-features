@@ -1,0 +1,15 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Feature  Id="7C637B23-06C4-472d-9A9A-7C175762C5C4"
+          Title="$Resources:cmscore,Feature_LimitedAccessLockdown15_Title;"
+          Description="$Resources:cmscore,Feature_LimitedAccessLockdown15_Desc;"
+          Version="15.0.0.0"
+          Scope="Site"
+          Hidden="FALSE"
+          DefaultResourceFile="core"
+          ReceiverAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Publishing.ViewFormPagesLockDownFeatureHandler"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+    </ElementManifests>
+</Feature>

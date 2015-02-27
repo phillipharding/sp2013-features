@@ -1,0 +1,12 @@
+<Feature  Id="32FF5455-8967-469a-B486-F8EAF0D902F9"
+          Title="$Resources:spscore,tenantprofileadminFeatureTitle;"
+          Description="$Resources:spscore,tenantprofileadminFeatureDesc;"
+          Version="14.0.0.0"
+          Scope="Web"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="default.xml" />
+    </ElementManifests>
+</Feature>

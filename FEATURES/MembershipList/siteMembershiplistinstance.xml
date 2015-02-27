@@ -1,0 +1,12 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListInstance
+            Title="$Resources:spscore,SiteMembershipListInstance_Title;"
+            Description="$Resources:spscore,SiteMembershipListInstance_Desc;"
+            FeatureId="947AFD14-0EA1-46c6-BE97-DEA1BF6F5BAE"
+            Id="MembersListInstance"
+            OnQuickLaunch="FALSE"
+            TemplateType="880"
+            Url="$Resources:core,lists_Folder;/$Resources:spscore,members_Folder;">
+    </ListInstance>
+</Elements>
+

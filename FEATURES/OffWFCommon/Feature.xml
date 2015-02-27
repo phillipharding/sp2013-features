@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature  Id="C9C9515D-E4E2-4001-9050-74F980F93160"
+          Title="Microsoft Office Server workflows"
+          Description="This feature provides support for Microsoft Office Server workflows."
+          Hidden="TRUE"
+          Scope="Site"
+          Version="15.0.1.0"
+          AlwaysForceInstall="TRUE"
+          ReceiverAssembly="Microsoft.Office.Workflow.Feature, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.Office.Workflow.Feature.WorkflowFeatureReceiver"
+          DefaultResourceFile="_Res"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ctypes.xml" />
+    </ElementManifests>
+    <Properties>
+        <Property Key="EnsureRootPublicLibrary" Value="true" />
+        <Property Key="RegisterForms" Value="Forms\*.xsn" />
+        <Property Key="GloballyAvailable" Value="true" />
+    </Properties>
+    <UpgradeActions>
+        <VersionRange EndVersion="15.0.1.0">
+            <CustomUpgradeAction Name="EnsureRootPublicLibrary" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

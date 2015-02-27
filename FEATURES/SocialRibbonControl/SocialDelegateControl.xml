@@ -1,0 +1,12 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Control Id="GlobalSiteLink3" Sequence="100"
+		ControlClass="Microsoft.SharePoint.Portal.WebControls.SocialNotificationControl"
+		ControlAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+	<Control Id="GlobalSiteLink3-mini" Sequence="100"
+		ControlClass="Microsoft.SharePoint.Portal.WebControls.SocialNotificationMiniControl"
+		ControlAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+	<Control Id="GlobalSiteLink2" Sequence="100" ControlSrc="~/_controltemplates/socialdata.ascx" />
+	<Control Id="GlobalSiteLink2-mini" Sequence="100"
+		ControlClass="Microsoft.SharePoint.Portal.WebControls.SocialNavigationControl"
+		ControlAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+</Elements>

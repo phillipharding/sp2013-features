@@ -1,0 +1,75 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <!-- Top Nav -->
+    <Control 
+        Sequence="50"
+        Id="TopNavigationDataSource"
+        ControlClass="Microsoft.SharePoint.Publishing.Navigation.PortalSiteMapDataSource" 
+        ControlAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+        <Property Name="ID">topSiteMap</Property>        
+        <Property Name="SiteMapProvider">GlobalNavigationSwitchableProvider</Property>
+        <Property Name="EnableViewState">false</Property>
+        <Property Name="SwitchablePropertiesXml"><![CDATA[
+            <SwitchableProperty SiteMapProvider="GlobalNavigationTaxonomyProvider" Name="StartFromCurrentNode">false</SwitchableProperty>
+            <SwitchableProperty SiteMapProvider="GlobalNavigation"                 Name="StartFromCurrentNode">true</SwitchableProperty>
+            <SwitchableProperty SiteMapProvider="GlobalNavigationTaxonomyProvider" Name="ShowStartingNode">false</SwitchableProperty>
+            <SwitchableProperty SiteMapProvider="GlobalNavigation"                 Name="ShowStartingNode">true</SwitchableProperty>
+            <SwitchableProperty SiteMapProvider="GlobalNavigation"                 Name="TreatStartingNodeAsCurrent">true</SwitchableProperty>
+            <SwitchableProperty SiteMapProvider="GlobalNavigation"                 Name="TrimNonCurrentTypes">Heading</SwitchableProperty>
+            <SwitchableProperty SiteMapProvider="SPNavigationProvider"             Name="StartFromCurrentNode">false</SwitchableProperty>
+            <SwitchableProperty SiteMapProvider="SPNavigationProvider"             Name="ShowStartingNode">false</SwitchableProperty>
+            <SwitchableProperty SiteMapProvider="SPNavigationProvider"             Name="StartingNodeUrl">sid:1002</SwitchableProperty>
+        ]]></Property>
+    </Control>
+    <HideCustomAction
+        Id="TopNav"
+        HideActionId="TopNav"
+        GroupId="Customization"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <!-- Left Nav -->
+    <Control Id="QuickLaunchDataSource" Sequence="50" 
+        ControlClass="Microsoft.SharePoint.Publishing.Navigation.PortalSiteMapDataSource" 
+        ControlAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+        <Property Name="ID">QuickLaunchSiteMap</Property>        
+        <Property Name="SiteMapProvider">CurrentNavigationSwitchableProvider</Property>
+        <Property Name="EnableViewState">false</Property>
+        <Property Name="StartFromCurrentNode">true</Property>
+        <Property Name="ShowStartingNode">false</Property>
+        <Property Name="SwitchablePropertiesXml"><![CDATA[
+            <SwitchableProperty SiteMapProvider="CurrentNavigation"                Name="TrimNonCurrentTypes">Heading</SwitchableProperty>
+            <SwitchableProperty SiteMapProvider="CurrentNavigationTaxonomyProvider" Name="StartingNodeOffset">-1</SwitchableProperty>
+            <SwitchableProperty SiteMapProvider="SPNavigationProvider"             Name="StartFromCurrentNode">false</SwitchableProperty>
+            <SwitchableProperty SiteMapProvider="SPNavigationProvider"             Name="ShowStartingNode">false</SwitchableProperty>
+            <SwitchableProperty SiteMapProvider="SPNavigationProvider"             Name="StartingNodeUrl">sid:1025</SwitchableProperty>
+        ]]></Property>
+    </Control>
+    <HideCustomAction
+        Id="QuickLaunch"
+        HideActionId="QuickLaunch"
+        GroupId="Customization"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <CustomAction
+        Id="SiteNavigationSettings"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        RequireSiteAdministrator="true"
+        Sequence="50"
+        Title="$Resources:cmscore,Settings_Publishing_SiteCollectionNavigation;"
+        Description="$Resources:cmscore,Settings_Publishing_SiteCollectionNavigation_Tooltip;">
+		<UrlAction
+            Url="_layouts/15/SiteNavigationSettings.aspx" />
+    </CustomAction>    
+    <CustomAction
+        Id="AreaNavigationSettings"
+        GroupId="Customization"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageLists"
+        Sequence="55"
+        Title="$Resources:cmscore,Settings_Publishing_Navigation;"
+        Description="$Resources:cmscore,SiteSettings_Navigation_Tooltip;">
+        <UrlAction
+            Url="_layouts/15/AreaNavigationSettings.aspx" />
+    </CustomAction>
+</Elements>

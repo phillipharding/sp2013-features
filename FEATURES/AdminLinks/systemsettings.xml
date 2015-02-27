@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomActionGroup
+        Id="Servers"
+        Location="Microsoft.SharePoint.Administration.SystemSettings"
+        Title="$Resources:servers_title;"
+        Sequence="10"
+        ImageUrl="/_layouts/15/images/CentralAdmin_SystemSettings_Servers_32x32.png?rev=23" />
+    <CustomAction
+        Id="S_MSITF"
+        GroupId="Servers"
+        Location="Microsoft.SharePoint.Administration.SystemSettings"
+        Sequence="10"
+        Title="$Resources:manageserversinthisfarm_title"
+        Description="$Resources:manageserversinthisfarm_description">
+        <UrlAction
+            Url="/_admin/FarmServers.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="S_MSOS"
+        GroupId="Servers"
+        Location="Microsoft.SharePoint.Administration.SystemSettings"
+        RequiredAdmin="Machine"
+        Sequence="20"
+        Title="$Resources:manageservicesonserver_title"
+        Description="$Resources:manageservicesonserver_description">
+        <UrlAction
+            Url="/_admin/Server.aspx" />
+    </CustomAction>
+    <CustomActionGroup
+        Id="Email"
+        Location="Microsoft.SharePoint.Administration.SystemSettings"
+        Title="$Resources:email_title;"
+        Sequence="20"
+        ImageUrl="/_layouts/15/images/CentralAdmin_SystemSettings_Email_32x32.png?rev=23" />
+    <CustomAction
+        Id="E_COES"
+        GroupId="Email"
+        Location="Microsoft.SharePoint.Administration.SystemSettings"
+        Sequence="10"
+        Title="$Resources:configureoutgoingemailsettings_title"
+        Description="$Resources:configureoutgoingemailsettings_description">
+        <UrlAction
+            Url="/_admin/globalemailconfig.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="E_CIES"
+        GroupId="Email"
+        Location="Microsoft.SharePoint.Administration.SystemSettings"
+        RequiredAdmin="Machine"
+        Sequence="20"
+        Title="$Resources:configureincomingemailsettings_title"
+        Description="$Resources:configureincomingemailsettings_description">
+        <UrlAction
+            Url="/_admin/IncomingEmail.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="E_CMA"
+        GroupId="Email"
+        Location="Microsoft.SharePoint.Administration.SystemSettings"
+        Sequence="25"
+        Title="$Resources:configuremobileaccounts_title"
+        Description="$Resources:configuremobileaccounts_description">
+        <UrlAction
+            Url="/_admin/globalxmsconfig.aspx" />
+    </CustomAction>
+    <CustomActionGroup
+        Id="FarmManagement"
+        Location="Microsoft.SharePoint.Administration.SystemSettings"
+        Title="$Resources:farmmanagement_title;"
+        Sequence="30"
+        ImageUrl="/_layouts/15/images/CentralAdmin_SystemSettings_FarmManagement_32x32.png?rev=23" />
+    <CustomAction
+        Id="FM_SAAM"
+        GroupId="FarmManagement"
+        Location="Microsoft.SharePoint.Administration.SystemSettings"
+        Sequence="10"
+        Title="$Resources:configurealternateaccessmappings_title"
+        Description="$Resources:configurealternateaccessmappings_description">
+        <UrlAction
+            Url="/_admin/AlternateUrlCollections.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="FM_MFF"
+        GroupId="FarmManagement"
+        Location="Microsoft.SharePoint.Administration.SystemSettings"
+        Sequence="20"
+        Title="$Resources:managefarmfeatures_title"
+        Description="$Resources:managefarmfeatures_description">
+        <UrlAction
+            Url="/_admin/ManageFarmFeatures.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="FM_MFS"
+        GroupId="FarmManagement"
+        Location="Microsoft.SharePoint.Administration.SystemSettings"
+        Sequence="30"
+        Description="$Resources:managefarmsolutions_title_tooltip"
+        Title="$Resources:managefarmsolutions_title">
+        <UrlAction
+            Url="/_admin/Solutions.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="FM_MUS"
+        GroupId="FarmManagement"
+        Location="Microsoft.SharePoint.Administration.SystemSettings"
+        Sequence="40"
+        Description="$Resources:manageusersolutions_title_tooltip"
+        Title="$Resources:manageusersolutions_title">
+        <UrlAction
+            Url="/_admin/UserSolutions.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="FM_PO"
+        GroupId="FarmManagement"
+        Location="Microsoft.SharePoint.Administration.SystemSettings"
+        Sequence="50"
+        Title="$Resources:privacyoptions_pagetitle"
+        Description="$Resources:privacyoptions_description">
+f        <UrlAction
+            Url="/_admin/Privacy.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="FM_CFA"
+        GroupId="FarmManagement"
+        Location="Microsoft.SharePoint.Administration.SystemSettings"
+        Sequence="60"
+        Title="$Resources:crossfirewallaccesszone_title"
+        Description="$Resources:crossfirewallaccesszone_description">
+        <UrlAction
+            Url="/_admin/SelectCrossFirewallAccessZone.aspx" />
+    </CustomAction>
+</Elements>

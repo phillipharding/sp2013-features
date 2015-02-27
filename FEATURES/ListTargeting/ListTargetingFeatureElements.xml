@@ -1,0 +1,12 @@
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Id="EnableAudienceTargeting"
+        GroupId="GeneralSettings"
+        Location="Microsoft.SharePoint.ListEdit"
+        Sequence="10"
+        Title="$Resources:spscore,PeopleFeatures_ListTargeting_ButtonText;">	
+        <UrlAction
+            Url="_layouts/ListEnableTargeting.aspx?List={ListId}" />
+    </CustomAction>
+</Elements>

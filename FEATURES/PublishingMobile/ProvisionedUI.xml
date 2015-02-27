@@ -1,0 +1,29 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+   <CustomAction
+        Id="Ribbon.ListItem.Manage.DeviceChannelReordering"
+        Location="CommandUI.Ribbon"
+        RegistrationType="ContentType"
+        RegistrationId="0x01009AF87C5C1DF34CA38277FEABCB5018F6"
+        Sequence="25"
+        Title="Add Device channel reordering button to Manage Group">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.ListItem.Manage.Controls._children">
+              <Button
+                Id="Ribbon.ListItem.Manage.DeviceChannelReordering"
+                Alt="$Resources:sp.publishing.resources,CUI_ButDeviceChannelReorderAlt;"
+                Sequence="25"
+                Command="ReorderDeviceChannels"
+                Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-128" Image16by16Left="-256"
+                Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-96" Image32by32Left="-128"
+                LabelText="$Resources:sp.publishing.Resources,CUI_ButDeviceChannelReorder;"
+                ToolTipTitle="$Resources:sp.publishing.Resources,CUI_ButDeviceChannelReorder;"
+                ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButDeviceChannelReorderTooltip;"
+                TemplateAlias="o1" />
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+</Elements>

@@ -1,0 +1,61 @@
+/* _lcid="1033" _version="15.0.4490"
+_LocalBinding */
+/* Lagos alternate CSS - modify this file to tweak the current design
+Below are some samples to get you started - remove comments to activate the styles */
+/* HEADER BACKGROUND
+#titlerow{
+background-color:rgba(0,0,0,0.9);
+}
+*/
+/* SITE TITLE
+.ms-core-pageTitle a{
+color:white;
+font-size:40px;
+font-family:Tahoma;
+}
+*/
+/* SITE LOGO
+.ms-siteicon-img{
+height:40px;
+}
+*/
+/* CONTENT AREA
+.ms-pub-contentLayout{
+background-color:rgba(255,255,255,1.0);
+}
+*/
+/* FOOTER
+#footercontainer{
+background-color:rgba(255,255,255,1.0);
+}
+*/
+/* FULL PAGE LAYOUT
+.fullPageLayout{
+background-color:rgba(255,255,255,1.0);
+}
+*/
+/* FULL PAGE LAYOUT - TARGET INDIVIDUAL PAGE USING PAGE NAME (POSSIBLE FOR ALL LAYOUTS)
+.fullPageLayout-Home{
+background-color:rgba(255,255,255,1.0);
+}
+*/
+/* TWO-COLUMN LAYOUT
+.twoColumnLayout-left,.twoColumnLayout-right{
+background-color:rgba(255,255,255,1.0);
+}
+*/
+/* LEFT SIDEBAR LAYOUT
+.twoColumnLeftLayout-right,.twoColumnLeftLayout-left{
+background-color:rgba(255,255,255,1.0);
+}
+*/
+/* RIGHT SIDEBAR LAYOUT
+.twoColumnRightLayout-left,.twoColumnRightLayout-right{
+background-color:rgba(255,255,255,1.0);
+}
+*/
+/* TWO-COLUMN HEADER LAYOUT
+.twoRowTwoColumn-top,.twoRowTwoColumn-bottomLeft,.twoRowTwoColumn-bottomRight{
+background-color:rgba(255,255,255,1.0);
+}
+*/

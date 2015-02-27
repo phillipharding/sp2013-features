@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="events"
+        Type="106"
+        BaseType="0"
+        OnQuickLaunch="TRUE"
+        FolderCreation="FALSE"
+        SecurityBits="11"
+        Sequence="340"
+        DisplayName="$Resources:core,calendarList;"
+        Description="$Resources:core,calendarList_Desc;"
+        Image="/_layouts/15/images/itevent.png?rev=23" />
+</Elements>

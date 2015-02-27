@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="EduHomePageModule" Path="Pages" Url="SitePages/Edu">
+    <File Path="Home.aspx" Url="Home.aspx" IgnoreIfAlreadyExists="TRUE" NavBarHome="False" Type="GhostableInLibrary">
+      <AllUsersWebPart WebPartZoneID="Body" WebPartOrder="1">
+        <![CDATA[
+          <webParts>
+            <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+              <metaData>
+                <type name="Microsoft.Office.Education.WebUI.DueListWebPart" />
+                <importErrorMessage>$Resources:eduserver,IDS_WebPartLoadError;</importErrorMessage>
+              </metaData>
+              <data>
+                <properties>
+                  <property name="Title" type="string">$Resources:eduserver,IDS_DueListWebPartTitle;</property>
+                  <property name="Description" type="string">$Resources:eduserver,IDS_DueListWebPartDescription;</property>
+                  <property name="ChromeType" type="chrometype">None</property>
+                  <property name="IsSummaryState" type="bool">False</property>
+                  <property name="ShowOnlyToEducationUsers" type="bool">False</property>
+                </properties>
+              </data>
+            </webPart>
+          </webParts>
+        ]]>
+      </AllUsersWebPart>
+      <AllUsersWebPart WebPartZoneID="Body" WebPartOrder="2">
+        <![CDATA[
+          <webParts>
+            <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+              <metaData>
+                <type name="Microsoft.Office.Education.WebUI.AnnouncementsWebPart" />
+                <importErrorMessage>$Resources:eduserver,IDS_WebPartLoadError;</importErrorMessage>
+              </metaData>
+              <data>
+                <properties>
+                  <property name="Title" type="string">$Resources:eduserver,IDS_AnnouncementsWebPartTitle;</property>
+                  <property name="Description" type="string">$Resources:eduserver,IDS_AnnouncementsWebPartDescription;</property>
+                  <property name="ChromeType" type="chrometype">None</property>
+                  <property name="IsSummaryState" type="bool">False</property>
+                  <property name="ShowOnlyToEducationUsers" type="bool">False</property>
+                </properties>
+              </data>
+            </webPart>
+          </webParts>
+        ]]>
+      </AllUsersWebPart>
+      <AllUsersWebPart WebPartZoneID="RightColumn" WebPartOrder="3">
+        <![CDATA[
+          <webParts>
+            <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+              <metaData>
+                <type name="Microsoft.Office.Education.WebUI.NextUpWebPart" />
+                <importErrorMessage>$Resources:eduserver,IDS_WebPartLoadError;</importErrorMessage>
+              </metaData>
+              <data>
+                <properties>
+                  <property name="Title" type="string">$Resources:eduserver,IDS_NextUpWebPartTitle;</property>
+                  <property name="Description" type="string">$Resources:eduserver,IDS_NextUpWebPartDescription;</property>
+                  <property name="ChromeType" type="chrometype">None</property>
+                  <property name="IsSummaryState" type="bool">True</property>
+                  <property name="ShowOnlyToEducationUsers" type="bool">False</property>
+                </properties>
+              </data>
+            </webPart>
+          </webParts>
+        ]]>
+      </AllUsersWebPart>
+    </File>
+  </Module>
+</Elements>

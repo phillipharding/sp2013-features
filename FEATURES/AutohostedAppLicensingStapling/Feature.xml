@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+	Id="{013a0db9-1607-4c42-8f71-08d821d395c2}"
+	Title="$Resources:core,AutoHostedAppLicensingStaplingFeatureTitle;"
+	Description="$Resources:core,AutoHostedAppLicensingStaplingFeatureDescription;"
+	Version="15.0.0.0"
+	Hidden="TRUE"
+	ActivateOnDefault="FALSE"
+	Scope="Farm">
+	<ElementManifests>
+		<ElementManifest Location="StaplingElements.xml"/>
+	</ElementManifests>
+</Feature>

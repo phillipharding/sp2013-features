@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Microsoft.SharePoint.Portal.WebControls.BlogView,Microsoft.SharePoint.Portal,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+      <importErrorMessage>$Resources:spscore,WPImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title">$Resources:spscore,MySiteOnet_WebPart_Blog;</property>
+        <property name="Description">$Resources:spscore,MySiteOnet_WebPart_Blog_Description;</property>
+        <property name="ChromeType">TitleOnly</property>
+        <property name="XslLink" type="string">blog.xsl</property>
+        <property name="SampleData">
+&lt;dsQueryResponse&gt;
+ &lt;NewDataSet&gt;
+  &lt;Row ID="-1" PublishedDate="1/1/2006" Body="$Resources:spscore,Blog_SampleBody;" Author="$Resources:spscore,Blog_SampleAuthor;" Title="$Resources:spscore,Blog_SampleTitle;" CategoryID="-1" PostCategory="$Resources:spscore,Blog_SampleCategory;" NumComments="0"/&gt;
+ &lt;/NewDataSet&gt; 
+&lt;/dsQueryResponse&gt;</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

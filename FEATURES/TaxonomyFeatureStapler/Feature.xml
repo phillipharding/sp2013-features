@@ -1,0 +1,13 @@
+<Feature  Id="415780BF-F710-4e2c-B7B0-B463C7992EF0"
+          Title="Taxonomy feature stapler"
+          Description="Staples the Field Added feature to all sites created"
+          Version="14.0.0.0"
+          Scope="Farm"
+          Hidden="true"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/"
+	  ActivateOnDefault="true">
+    <ElementManifests>
+        <ElementManifest Location="TaxonomySitesToStaple.xml"/>
+    </ElementManifests>
+</Feature>

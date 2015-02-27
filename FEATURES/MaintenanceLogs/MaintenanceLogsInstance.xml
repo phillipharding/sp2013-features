@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="$Resources:core,MaintenanceLogsInstanceTitle;"
+                OnQuickLaunch="FALSE"
+                TemplateType="175"
+                Url="_catalogs/MaintenanceLogs"
+                Description="$Resources:core,MaintenanceLogsInstanceDescription;">
+  </ListInstance>
+</Elements>

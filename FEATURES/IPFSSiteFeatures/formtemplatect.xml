@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ContentType ID="0x010100F8EF98760CBA4a94994F13BA881038FA" 
+		Name="$Resources:ipfscore,FormTemplateContentTypeName;"
+		Group="_Hidden" 
+		Description="$Resources:ipfscore,FormTemplateContentTypeDescription;"
+		Hidden="TRUE"
+		Version="1">
+			<FieldRefs>
+				<FieldRef ID="{66B691CF-07A3-4CA6-AC6D-27FA969C8569}" Name="FormName" Required="FALSE" />
+				<FieldRef ID="{65572D4D-445A-43F1-9C77-3358222A2C93}" Name="FormCategory" Required="FALSE" />
+				<FieldRef ID="{94AD6F7C-09A1-42CA-974F-D24E080160C2}" Name="FormVersion" Required="FALSE" />
+				<FieldRef ID="{1A03FA74-8C63-40CC-BD06-73B580BD8744}" Name="FormId" Required="FALSE" />
+				<FieldRef ID="{96C27C9D-33F5-4f8e-893E-684014BC7090}" Name="FormLocale" Required="FALSE" />
+				<FieldRef ID="{1FFF255C-6C88-4a76-957B-AE24BF07B78C}" Name="FormDescription" Required="FALSE" />
+				<FieldRef ID="{58EB8694-8BD6-4f98-8097-374BD97FFEC4}" Name="CusomContentTypeId" Required="FALSE" />
+				<FieldRef ID="{4EF69CA4-4179-4d27-9E6C-F9544D45DFDC}" Name="ShowInCatalog" Required="FALSE" />
+				<FieldRef ID="{1A03FA74-8C63-40CC-BD06-73B580BD8743}" Name="LinkTemplateName" Required="FALSE"/>
+			</FieldRefs>
+			<DocumentTemplate TargetName=""/>
+	</ContentType>
+
+</Elements>

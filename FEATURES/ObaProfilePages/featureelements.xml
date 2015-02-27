@@ -1,0 +1,90 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction
+    Id="CreateProfilePageAction"
+    Location="Microsoft.SharePoint.ViewBdcApplicationPage"
+    GroupId="EntityMenu"
+    Description="$Resources:ProfilePagesFeatureMenuTitle;"
+    Title="$Resources:ProfilePagesFeatureMenuTitle;"> 
+    <UrlAction Url="javascript:CreateProfile('%Id%')"/>
+  </CustomAction>
+
+  <CustomAction
+    Id="ProfilePagesRibbonButtons"
+    Title=""
+    Sequence="45"
+    Location="CommandUI.Ribbon">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.BDCAdmin.Groups._children">
+          <Group
+            Id="Ribbon.BDCAdmin.ProfilePagesManagement"
+            Command="BDCAdminManageTabProfilePagesManagementGroup"
+            Title="$Resources:BDCProfilePagesGroup;"
+            Sequence="45"
+            Template="Ribbon.Templates.Flexible2">
+            <Controls Id="Ribbon.BDCAdmin.ProfilePagesManagement.Controls">
+              <Button
+                Id="Ribbon.BDCAdmin.ProfilePagesManagement.CreateProfile"
+                Image16by16="/_layouts/images/createprofilepages_16x16.png"
+                Image32by32="/_layouts/images/createprofilepages_32x32.png"
+                Command="BDCAdminProfilePagesTabCreate"
+                Sequence="10"
+                LabelText="$Resources:BDCCreateProfile;"
+                ToolTipTitle="$Resources:BDCCreateProfile;"
+                ToolTipDescription="$Resources:BDCCreateProfileAltText;"
+                TemplateAlias="o1"/>
+              <Button
+                Id="Ribbon.BDCAdmin.ProfilePagesManagement.SetProfileHost"
+                Image16by16="/_layouts/images/configureprofilepages_16x16.png"
+                Image32by32="/_layouts/images/configureprofilepages_32x32.png"
+                Command="BDCAdminProfilePagesTabSetHost"
+                Sequence="20"
+                LabelText="$Resources:BDCSetProfileHost;"
+                ToolTipTitle="$Resources:BDCSetProfileHost;"
+                ToolTipDescription="$Resources:BDCSetProfileHostAltText;"
+                TemplateAlias="o1"/>
+            </Controls>
+          </Group>
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+
+  <CustomAction
+    Id="ProfilePagesRibbonGroupScaling"
+    Location="CommandUI.Ribbon"
+    Sequence="15">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.BDCAdmin.Scaling._children">
+       <MaxSize
+        Id="Ribbon.BDCAdmin.Scaling.ProfilePagesManagement.MaxSize"
+        GroupId="Ribbon.BDCAdmin.ProfilePagesManagement"
+        Sequence="35"
+        Size="LargeLarge"/>
+      </CommandUIDefinition>
+      <CommandUIDefinition Location="Ribbon.BDCAdmin.Scaling._children">
+       <Scale
+        Id="Ribbon.BDCAdmin.Scaling.ProfilePagesManagement.MediumMedium"
+        GroupId="Ribbon.BDCAdmin.ProfilePagesManagement"
+        Sequence="95"
+        Size="MediumMedium"/>
+      </CommandUIDefinition>
+      <CommandUIDefinition Location="Ribbon.BDCAdmin.Scaling._children">
+       <Scale
+        Id="Ribbon.BDCAdmin.Scaling.ProfilePagesManagement.Popup"
+        GroupId="Ribbon.BDCAdmin.ProfilePagesManagement"
+        Sequence="125"
+        Size="Popup"/>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+
+  <Control
+    Id="AdditionalPageHead"
+    Sequence="130"
+    ControlAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ControlClass="Microsoft.SharePoint.Portal.WebControls.ProfilePagesControl">
+  </Control>
+</Elements>

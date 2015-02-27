@@ -1,0 +1,120 @@
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="RCConsole" Url="" Path="">
+        <File Url="RCConsole.aspx" Type="Ghostable">
+            <AllUsersWebPart WebPartZoneID="CenterColumn" WebPartOrder="1">
+                <![CDATA[
+                    <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                    	<Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                        <TypeName>Microsoft.SharePoint.WebPartPages.ContentEditorWebPart</TypeName>
+                        <Title>$Resources:dlccore, RCConsoleInitialSetupWP_Title;</Title>
+                        <Content xmlns="http://schemas.microsoft.com/WebPart/v2/ContentEditor">                            
+                            $Resources:dlccore, RCConsoleInitialSetupWP;
+                            &lt;br/&gt;
+                            &lt;br/&gt;
+                            &lt;span id="errFeatureDisabled" style="display:none"&gt;
+                              $Resources:dlccore, RCConsoleInitialSetupWPErrTitle;
+                              &lt;ul&gt;
+                                &lt;li id="featureIpr" &gt;$Resources:dlccore, RCConsoleInitialSetupWPErrIPR;&lt;/li&gt;
+                                &lt;li id="featureDoc" &gt;$Resources:dlccore, RCConsoleInitialSetupWPErrDoc;&lt;/li&gt;
+                              &lt;/ul&gt;
+                            &lt;/span&gt;
+                            $Resources:dlccore, RCConsoleInitialSetupWP2;
+                            &lt;ul&gt;
+                                &lt;li&gt;$Resources:dlccore, RCConsoleInitialSetupWP_Bullet1; &lt;a href="_layouts/15/mngctype.aspx"&gt;$Resources:dlccore, RCConsoleInitialSetupWP_CreateCT;&lt;/a&gt; - $Resources:dlccore, RCConsoleInitialSetupWP_CreateCTDesc;&lt;/li&gt;
+                                &lt;li&gt;$Resources:dlccore, RCConsoleInitialSetupWP_Bullet2; &lt;a href="_layouts/15/create.aspx"&gt;$Resources:dlccore, RCConsoleInitialSetupWP_CreateLib;&lt;/a&gt; - $Resources:dlccore, RCConsoleInitialSetupWP_CreateLibDesc;&lt;/li&gt;
+                                &lt;li&gt;$Resources:dlccore, RCConsoleInitialSetupWP_Bullet3; &lt;a href="$Resources:dlccore,RoutingRuleList_ListFolder;"&gt;$Resources:dlccore, RCConsoleInitialSetupWP_CreateRules;&lt;/a&gt; - $Resources:dlccore, RCConsoleInitialSetupWP_CreateRulesDesc;&lt;/li&gt;
+                                &lt;li&gt;$Resources:dlccore, RCConsoleInitialSetupWP_Bullet4; &lt;a href="default.aspx"&gt;$Resources:dlccore, RCConsoleInitialSetupWP_ConfigHomePage;&lt;/a&gt; - $Resources:dlccore, RCConsoleInitialSetupWP_ConfigHomePageDesc;&lt;/li&gt;
+                            &lt;/ul&gt;
+                            $Resources:dlccore, RCConsoleInitialSetupWP_Close;
+                            &lt;script language="javascript"&gt;showHideError(); &lt;/script&gt;
+                        </Content>
+                    </WebPart>        
+                ]]>
+            </AllUsersWebPart>
+            <View WebPartZoneID="CenterColumn" WebPartOrder="2" List="$Resources:dlccore,RoutingRuleList_ListFolder;" BaseViewID="0">
+                <![CDATA[
+                    <webParts>
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                            <metaData>
+                                <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart,Microsoft.SharePoint,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                            </metaData>
+                            <data>
+                                <properties>
+                                    <property name="ChromeType" type="chrometype">TitleOnly</property>
+                                </properties>
+                            </data>
+                        </webPart>
+                    </webParts>
+                ]]>
+            </View>
+            <AllUsersWebPart WebPartZoneID="RightColumn" WebPartOrder="1">
+                <![CDATA[
+                    <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                        <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                        <TypeName>Microsoft.SharePoint.WebPartPages.ContentEditorWebPart</TypeName>
+                        <Title>$Resources:dlccore, RCConsoleTasksWP_Title;</Title>
+                        <Content xmlns="http://schemas.microsoft.com/WebPart/v2/ContentEditor">
+                          &lt;ul class="rclink"&gt;                            
+                            &lt;li&gt;&lt;a href="_layouts/15/create.aspx"&gt;$Resources:dlccore, RCConsoleTasksWP_CreateLib;&lt;/a&gt; - $Resources:dlccore, RCConsoleTasksWP_CreateLibDesc;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="_layouts/15/sitemanager.aspx"&gt;$Resources:dlccore, RCConsoleTasksWP_SiteMngr;&lt;/a&gt; - $Resources:dlccore, RCConsoleTasksWP_SiteMngrDesc;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="$Resources:dlccore,RoutingRuleList_ListFolder;"&gt;$Resources:dlccore, RCConsoleTasksWP_CreateRules;&lt;/a&gt; - $Resources:dlccore, RCConsoleTasksWP_CreateRulesDesc;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="_layouts/15/searchAndAddToHold.aspx"&gt;$Resources:dlccore, RCConsoleTasksWP_Hold;&lt;/a&gt; - $Resources:dlccore, RCConsoleTasksWP_HoldDesc;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href=javascript:getFilePlanReportLink();&gt;$Resources:dlccore, RCConsoleTasksWP_FP;&lt;/a&gt; - $Resources:dlccore, RCConsoleTasksWP_FPDesc;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="javascript:STSNavigate(&amp;quot;~SiteCollection/_layouts/15/Reporting.aspx?Category=Auditing&amp;quot;);"&gt;$Resources:dlccore, RCConsoleTasksWP_Audit;&lt;/a&gt; - $Resources:dlccore, RCConsoleTasksWP_AuditDesc;&lt;/li&gt;
+                          &lt;/ul&gt;
+                        </Content>
+                    </WebPart>        
+                ]]>
+            </AllUsersWebPart>
+            <AllUsersWebPart WebPartZoneID="RightColumn" WebPartOrder="5">
+                <![CDATA[
+                    <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                        <Assembly>Microsoft.Office.DocumentManagement, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                        <TypeName>Microsoft.Office.Server.WebControls.DocIdSearchWebPart</TypeName>
+                        <Title>$Resources:dlccore,DocIdLookupWebpart_Title</Title>
+                        <FrameType>None</FrameType>
+                        <ChromeType>None</ChromeType>                            
+                        <CatalogIconImageUrl>/_layouts/15/images/msimagel.gif</CatalogIconImageUrl>
+                        <DisplayText></DisplayText>
+                    </WebPart>    
+                ]]> 
+            </AllUsersWebPart>
+        </File>
+    </Module>
+    <!-- SiteActions -->
+    <CustomAction
+        Id="RecordsManagerConsole"
+        GroupId="SiteActions"
+        Location="Microsoft.SharePoint.StandardMenu"
+        Sequence="0"
+        Title="$Resources:dlccore, PolicyLinks_SiteActions_RecordsManagerConsole;"
+        Description="$Resources:dlccore, PolicyLinks_SiteActions_RecordsManagerConsoleDescription;"
+        ImageUrl="/_layouts/15/images/rccicon.png?rev=23"
+        Rights="ManageWeb">
+        <UrlAction Url="rcconsole.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="RecordsManagerConsole2"
+        GroupId="SiteAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb"
+        Sequence="210"
+        Title="$Resources:dlccore, PolicyLinks_SiteActions_RecordsManagerConsole;"
+        Description="$Resources:dlccore, PolicyLinks_SiteActions_RecordsManagerConsoleDescription;">
+        <UrlAction Url="rcconsole.aspx" />
+    </CustomAction>
+    <HideCustomAction
+        GroupId="SiteTasks"
+        HideActionId="SaveAsTemplate"
+        Id="HideSaveAsTemplate"
+        Location="Microsoft.SharePoint.SiteSettings">
+    </HideCustomAction>
+    <HideCustomAction
+        Id="HideEnableSearchConfigExport"
+        HideActionId="EnableSearchConfigExport"
+        GroupId="SiteTasks"
+        Location="Microsoft.SharePoint.SiteSettings">
+    </HideCustomAction>
+</Elements>

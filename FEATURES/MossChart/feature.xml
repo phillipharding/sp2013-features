@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature  
+    Title="$Resources:mosschart,ChartWebPartTitle" 
+    Id="875D1044-C0CF-4244-8865-D2A0039C2A49" 
+    SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3" 
+    Description="$Resources:mosschart,ChartWebPartDesc" 
+    Version="15.0.0.0" 
+    Scope="Site" 
+    Hidden="TRUE" 
+    DefaultResourceFile="mosschart" 
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+    </ElementManifests>
+</Feature>

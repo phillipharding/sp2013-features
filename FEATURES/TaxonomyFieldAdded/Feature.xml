@@ -1,0 +1,30 @@
+<Feature  Id="73EF14B1-13A9-416b-A9B5-ECECA2B0604C"
+          Title="Register taxonomy site wide field added event receiver"
+          Description="Registers the field added event on all SPSites being created"
+          Version="15.0.1.0"
+          Scope="Site"
+          Hidden="true"
+          DefaultResourceFile="core"
+          ReceiverAssembly="Microsoft.SharePoint.Taxonomy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Taxonomy.TaxonomyFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/" 
+	  ActivateOnDefault="true">
+    <ElementManifests>
+        <ElementManifest Location="SiteSettings.xml"/>
+        <ElementManifest Location="TermPropertyWebPart.xml"/>
+    </ElementManifests>
+        <UpgradeActions ReceiverAssembly="Microsoft.SharePoint.Taxonomy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+		ReceiverClass="Microsoft.SharePoint.Taxonomy.TaxonomyFeatureReceiver">
+		<VersionRange EndVersion="14.0.0.0">
+			<ApplyElementManifests />
+		</VersionRange>
+		<VersionRange EndVersion="15.0.0.0">
+			<CustomUpgradeAction Name="UpgradeKeywordsHidden" />
+		</VersionRange>
+        <VersionRange EndVersion="15.0.1.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="TermPropertyWebPart.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+	</UpgradeActions>
+</Feature>

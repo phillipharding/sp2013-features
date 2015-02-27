@@ -1,0 +1,136 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ContentType ID="0x010100C568DB52D9D0A14D9B2FDCC96666E9F2" Name="$Resources:cmscore,contenttype_systempage_name;" Description="$Resources:cmscore,contenttype_systempage_description;" Group="_Hidden" Sealed="TRUE" Inherits="TRUE" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{9da97a8a-1da5-4a77-98d3-4bc10456e700}" Name="Comments"/>
+            <FieldRef ID="{51d39414-03dc-4bd0-b777-d3e20cb350f7}" Name="PublishingStartDate"/>
+            <FieldRef ID="{a990e64f-faa3-49c1-aafa-885fda79de62}" Name="PublishingExpirationDate"/>
+            <FieldRef ID="{aea1a4dd-0f19-417d-8721-95a1d28762ab}" Name="PublishingContact"/>
+            <FieldRef ID="{c79dba91-e60b-400e-973d-c6d06f192720}" Name="PublishingContactEmail"/>
+            <FieldRef ID="{7546ad0d-6c33-4501-b470-fb3003ca14ba}" Name="PublishingContactName"/>
+            <FieldRef ID="{dc47d55f-9bf9-494a-8d5b-e619214dd19a}" Name="PublishingContactPicture"/>
+            <FieldRef ID="{0f800910-b30d-4c8f-b011-8189b2297094}" Name="PublishingPageLayout"/>
+            <FieldRef ID="{914fdb80-7d4f-4500-bf4c-ce46ad7484a4}" Name="PublishingVariationGroupID"/>
+            <FieldRef ID="{766da693-38e5-4b1b-997f-e830b6dfcc7b}" Name="PublishingVariationRelationshipLinkFieldID"/>
+            <FieldRef ID="{543BC2CF-1F30-488e-8F25-6FE3B689D9AC}" Name="PublishingRollupImage"/>
+            <FieldRef ID="{61cbb965-1e04-4273-b658-eedaa662f48d}" Name="Audience"/>
+            <FieldRef ID="{50631C24-1371-4ECF-A5AE-ED41b03F4499}" Name="PublishingIsFurlPage"/>
+        </FieldRefs>
+    </ContentType>
+    <ContentType ID="0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39" Name="$Resources:cmscore,contenttype_page_name;" Description="$Resources:cmscore,contenttype_page_description;" Group="$Resources:cmscore,group_publishingcontenttypes;" Sealed="FALSE" Inherits="TRUE" Version="0">
+        <FieldRefs>
+        </FieldRefs>
+        <DocumentTemplate TargetName="/_layouts/15/CreatePage.aspx" />
+    </ContentType>
+    <ContentType ID="0x0101000F1C8B9E0EB4BE489F09807B2C53288F" Name="$Resources:cmscore,contenttype_systemmasterpage_name;" Description="$Resources:cmscore,contenttype_systemmasterpage_description;" Group="_Hidden" Sealed="TRUE" Inherits="TRUE" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{9da97a8a-1da5-4a77-98d3-4bc10456e700}" Name="Comments"/>
+            <FieldRef ID="{8e334549-c2bd-4110-9f61-672971be6504}" Name="UIVersion"/>
+            <FieldRef ID="{aea1a4dd-0f19-417d-8721-95a1d28762ab}" Name="PublishingContact"/>
+            <FieldRef ID="{188ce56c-61e0-4d2a-9d3e-7561390668f7}" Name="PublishingPreviewImage"/>
+            <FieldRef ID="{7581e709-5d87-42e7-9fe6-698ef5e86dd3}" Name="PublishingHidden"/>
+            <FieldRef ID="{CC10B158-50B4-4f02-8F3A-B9B6C3102628}" Name="DefaultCssFile"/>
+        </FieldRefs>
+    </ContentType>
+    <ContentType ID="0x0101000F1C8B9E0EB4BE489F09807B2C53288F0054AD6EF48B9F7B45A142F8173F171BD1" Name="$Resources:cmscore,contenttype_masterpage_name_15;" Description="$Resources:cmscore,contenttype_masterpage_description;" Group="$Resources:cmscore,group_publishingcontenttypes;" Sealed="FALSE" Inherits="TRUE" Version="0">
+        <FieldRefs>
+        </FieldRefs>
+        <DocumentTemplate TargetName="PublishingMasterTemplate.master" />
+    </ContentType>
+    <ContentType ID="0x01010007FF3E057FA8AB4AA42FCB67B453FFC1" Name="$Resources:cmscore,contenttype_systempagelayout_name;" Description="$Resources:cmscore,contenttype_systempagelayout_description;" Group="_Hidden" Sealed="TRUE" Inherits="TRUE" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{9da97a8a-1da5-4a77-98d3-4bc10456e700}" Name="Comments"/>
+            <FieldRef ID="{aea1a4dd-0f19-417d-8721-95a1d28762ab}" Name="PublishingContact"/>
+            <FieldRef ID="{188ce56c-61e0-4d2a-9d3e-7561390668f7}" Name="PublishingPreviewImage"/>
+            <FieldRef ID="{7581e709-5d87-42e7-9fe6-698ef5e86dd3}" Name="PublishingHidden"/>
+            <FieldRef ID="{75bed596-0661-4edd-9724-1d607ab8d3b5}" Name="_PublishingMigratedGuid"/>
+            <FieldRef ID="{b510aac1-bba3-4652-ab70-2d756c29540f}" Name="PublishingAssociatedContentType" />
+            <FieldRef ID="{d211d750-4fe6-4d92-90e8-eb16dff196c8}" Name="PublishingAssociatedVariations"/>
+        </FieldRefs>
+    </ContentType>
+    <ContentType ID="0x01010007FF3E057FA8AB4AA42FCB67B453FFC100E214EEE741181F4E9F7ACC43278EE811" Name="$Resources:cmscore,contenttype_pagelayout_name;" Description="$Resources:cmscore,contenttype_pagelayout_description;" Group="$Resources:cmscore,group_publishingcontenttypes;" Sealed="FALSE" Inherits="TRUE" Version="0">
+        <FieldRefs>
+        </FieldRefs>
+        <DocumentTemplate TargetName="/_layouts/15/NewPageLayout.aspx" />
+    </ContentType>
+    <ContentType ID="0x010087D89D279834C94E98E5E1B4A913C67E" Name="$Resources:cmscore,contenttype_pageoutputcache_name;" Description="$Resources:cmscore,contenttype_pageoutputcache_description;" Group="_Hidden" Sealed="TRUE" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{983f490b-fc53-4820-9354-e8de646b4b82}" Name="PublishingCacheDisplayName"/>
+            <FieldRef ID="{9550e77a-4d10-464f-bc0c-102d5b1aec42}" Name="PublishingCacheDisplayDescription"/>
+            <FieldRef ID="{db03cb99-cf1e-40b8-adc7-913f7181dac3}" Name="PublishingCachePerformACLCheck"/>
+            <FieldRef ID="{d8f18167-7cff-4c4e-bdbe-e7b0f01678f3}" Name="PublishingCacheEnabled"/>
+            <FieldRef ID="{bdd1b3c3-18db-4acf-a963-e70ef4227fbc}" Name="PublishingCacheDuration"/>
+            <FieldRef ID="{5b4d927c-d383-496b-bc79-1e61bd383019}" Name="PublishingCacheCheckForChanges"/>
+            <FieldRef ID="{4689a812-320e-4623-aab9-10ad68941126}" Name="PublishingVaryByCustom"/>
+            <FieldRef ID="{89587dfd-b9ca-4fae-8eb9-ba779e917d48}" Name="PublishingVaryByHeader"/>
+            <FieldRef ID="{b8abfc64-c2bd-4c88-8cef-b040c1b9d8c0}" Name="PublishingVaryByParam"/>
+            <FieldRef ID="{d4a6af1d-c6d7-4045-8def-cefa25b9ec30}" Name="PublishingVaryByRights"/>
+            <FieldRef ID="{18f165be-6285-4a57-b3ab-4e9f913d299f}" Name="PublishingCacheability"/>
+            <FieldRef ID="{0A90B5E8-185A-4dec-BF3C-E60AAE08373F}" Name="PublishingAuthenticatedUse"/>
+            <FieldRef ID="{773ED051-58DB-4ff2-879B-08B21AB001E0}" Name="PublishingCacheAllowWriters"/>
+        </FieldRefs>
+    </ContentType>
+    <ContentType ID="0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF390064DEA0F50FC8C147B0B6EA0636C4A7D4" Name="$Resources:cmscore,contenttype_welcomepage_name;" Description="$Resources:cmscore,contenttype_welcomepage_description;" Group="$Resources:cmscore,group_pagelayoutcontenttypes;" Sealed="FALSE" Inherits="TRUE" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{3de94b06-4120-41a5-b907-88773e493458}" Name="PublishingPageImage"/>
+            <FieldRef ID="{F55C4D88-1F2E-4ad9-AAA8-819AF4EE7EE8}" Name="PublishingPageContent"/>
+            <FieldRef ID="{B3525EFE-59B5-4f0f-B1E4-6E26CB6EF6AA}" Name="SummaryLinks"/>
+            <FieldRef ID="{27761311-936A-40ba-80CD-CA5E7A540A36}" Name="SummaryLinks2"/>
+        </FieldRefs>
+        <DocumentTemplate TargetName="/_layouts/15/CreatePage.aspx" />        
+    </ContentType>
+    <ContentType ID="0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF3900242457EFB8B24247815D688C526CD44D" Group="$Resources:cmscore,group_pagelayoutcontenttypes;" Name="$Resources:cmscore,contenttype_articlepage_name;" Description="$Resources:cmscore,contenttype_articlepage_description;" Inherits="TRUE">
+        <FieldRefs>
+            <FieldRef ID="{3de94b06-4120-41a5-b907-88773e493458}" Name="PublishingPageImage"/>
+            <FieldRef ID="{F55C4D88-1F2E-4ad9-AAA8-819AF4EE7EE8}" Name="PublishingPageContent"/>
+            <FieldRef ID="{B3525EFE-59B5-4f0f-B1E4-6E26CB6EF6AA}" Name="SummaryLinks"/>
+            <FieldRef ID="{D3429CC9-ADC4-439b-84A8-5679070F84CB}" Name="ArticleByLine"/>
+            <FieldRef ID="{71316CEA-40A0-49f3-8659-F0CEFDBDBD4F}" Name="ArticleStartDate"/>
+            <FieldRef ID="{66F500E9-7955-49ab-ABB1-663621727D10}" Name="PublishingImageCaption"/>
+            <FieldRef ID="{a932ec3f-94c1-48b1-b6dc-41aaa6eb7e54}" Name="HeaderStyleDefinitions"/>
+        </FieldRefs>
+        <DocumentTemplate TargetName="/_layouts/15/CreatePage.aspx" />
+    </ContentType>
+    <!-- Reusable Text Content Type -->
+    <ContentType ID="0x01004D5A79BAFA4A4576B79C56FF3D0D662D" Name="$Resources:cmscore,contenttype_reusabletext_name;" Description="$Resources:cmscore,contenttype_reusabletext_description;" Group="_Hidden" Sealed="TRUE" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" Name="LinkTitle"/>
+            <FieldRef ID="{9da97a8a-1da5-4a77-98d3-4bc10456e700}" Name="Comments"/>
+            <FieldRef ID="{3a4b7f98-8d14-4800-8bf5-9ad1dd6a82ee}" Name="ContentCategory"/>
+            <FieldRef ID="{e977ed93-da24-4fcc-b77d-ac34eea7288f}" Name="AutomaticUpdate"/>
+            <FieldRef ID="{32E03F99-6949-466a-A4A6-057C21D4B516}" Name="ShowInRibbon"/>
+            <FieldRef ID="{890e9d41-5a0e-4988-87bf-0fb9d80f60df}" Name="ReusableText"/>
+        </FieldRefs>
+    </ContentType>
+    <ContentType ID="0x01002CF74A4DAE39480396EEA7A4BA2BE5FB" Name="$Resources:cmscore,contenttype_reusablehtml_name;" Description="$Resources:cmscore,contenttype_reusablehtml_description;" Group="_Hidden" Sealed="TRUE" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" Name="LinkTitle" Required="TRUE"/>
+            <FieldRef ID="{9da97a8a-1da5-4a77-98d3-4bc10456e700}" Name="Comments"/>
+            <FieldRef ID="{3a4b7f98-8d14-4800-8bf5-9ad1dd6a82ee}" Name="ContentCategory"/>
+            <FieldRef ID="{e977ed93-da24-4fcc-b77d-ac34eea7288f}" Name="AutomaticUpdate"/>
+            <FieldRef ID="{32E03F99-6949-466a-A4A6-057C21D4B516}" Name="ShowInRibbon"/>
+            <FieldRef ID="{82dd22bf-433e-4260-b26e-5b8360dd9105}" Name="ReusableHTML"/>
+        </FieldRefs>
+    </ContentType>
+    <!-- END Reusable Text Content Type -->
+    <!-- Redirect Content Type -->
+    <ContentType ID= "0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF3900FD0E870BA06948879DBD5F9813CD8799" Name="$Resources:cmscore,contenttype_redirectpage_name;" Description="$Resources:cmscore,contenttype_redirectpage_description;" Group="$Resources:cmscore,group_pagelayoutcontenttypes;" Sealed="FALSE" Inherits="TRUE" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{AC57186E-E90B-4711-A038-B6C6A62A57DC}" Name="RedirectURL"/>
+            <FieldRef ID="{543BC2CF-1F30-488e-8F25-6FE3B689D9AC}" Name="PublishingRollupImage"/>
+        </FieldRefs>
+        <DocumentTemplate TargetName="/_layouts/15/CreatePage.aspx" />        
+    </ContentType>
+    <!-- END Redirect Content Type -->
+    <!-- PublishedLinks Content Type -->
+    <ContentType ID= "0x01004613D6562E4C41A7B9DADDAC1689E00D" Name="$Resources:cmscore,contenttype_publishedlink_name;" Description="$Resources:cmscore,contenttype_publishedlink_description;" Group="_Hidden" Sealed="TRUE" Version="0">
+        <FieldRefs>
+            <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" DisplayName="$Resources:cmscore,column_publishedlinksdisplayname_displayname;" Required="TRUE" />
+            <FieldRef ID="{70B38565-A310-4546-84A7-709CFDC140CF}" Name="PublishedLinksUrl" Required="TRUE" />
+            <FieldRef ID="{92BBA27E-EEF6-41aa-B728-6DD9CAF2BDE2}" Name="PublishedLinksDescription" Required="FALSE" />
+        </FieldRefs>
+    </ContentType>
+    <!-- END PublishedLinks Content Type -->
+    <ContentTypeBinding ContentTypeId="0x01010007FF3E057FA8AB4AA42FCB67B453FFC100E214EEE741181F4E9F7ACC43278EE811" ListUrl="_catalogs/masterpage" />
+</Elements>

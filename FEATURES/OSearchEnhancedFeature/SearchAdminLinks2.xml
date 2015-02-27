@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <HideCustomAction
+    GroupId="SiteCollectionAdmin"
+    HideActionId="ManageQueryRules"
+    Id="HideOldManageQueryRules"
+    Location="Microsoft.SharePoint.SiteSettings">
+  </HideCustomAction>
+  <CustomAction 
+    Id="ManageQueryRules2"
+    GroupId="SiteCollectionAdmin"
+    Location="Microsoft.SharePoint.SiteSettings"  
+    Sequence="13" 
+    RequireSiteAdministrator="TRUE"
+    Title="$Resources:Microsoft.Office.Server.Search,SiteSettings_ManageQueryRules_Title;"
+    Description="$Resources:Microsoft.Office.Server.Search,SiteSettings_ManageQueryRules_Title;" >
+    <UrlAction Url="~layouts/listqueryrules.aspx?level=sitecol"/>
+  </CustomAction>
+  <HideCustomAction
+    GroupId="SiteAdministration"
+    HideActionId="ManageQueryRulesSite"
+    Id="HideOldManageQueryRulesSite"
+    Location="Microsoft.SharePoint.SiteSettings">
+  </HideCustomAction>  
+  <CustomAction 
+    Id="ManageQueryRulesSite2"
+    GroupId="SearchAdministration"
+    Location="Microsoft.SharePoint.SiteSettings"            
+    Sequence="3" 
+    RequireSiteAdministrator="FALSE"
+    Rights="CancelCheckout"
+    Title="$Resources:Microsoft.Office.Server.Search,SiteSettings_SearchAdmin_ManageQueryRules_Title;"
+    Description="$Resources:Microsoft.Office.Server.Search,SiteSettings_ManageQueryRules_Title;" >
+      <UrlAction Url="~layouts/listqueryrules.aspx?level=site"/>
+  </CustomAction>
+</Elements>

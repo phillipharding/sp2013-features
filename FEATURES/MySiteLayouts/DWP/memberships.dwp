@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+    <Assembly>Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+    <TypeName>Microsoft.SharePoint.Portal.WebControls.MembershipsMicroView</TypeName>
+    <Title>$Resources:spscore,Membership_WebPart_Title</Title>
+    <Description>$Resources:spscore,Membership_WebPart_Description</Description>
+    <FrameType>TitleBarOnly</FrameType>
+    <AllowMinimize>true</AllowMinimize>
+    <AllowRemove>true</AllowRemove>
+    <IsVisible>true</IsVisible>
+    <DisplayColumns xmlns="urn:schemas-microsoft-com:sharepoint:portal:privacyitemviewer">1</DisplayColumns>
+    <DisplayRows xmlns="urn:schemas-microsoft-com:sharepoint:portal:privacyitemviewer">10</DisplayRows>
+</WebPart>

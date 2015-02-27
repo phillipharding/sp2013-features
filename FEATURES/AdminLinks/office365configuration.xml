@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomActionGroup
+        Id="CA_SPO"
+        Location="Microsoft.SharePoint.Administration.Office365Configuration"
+        Title="$Resources:SPO_configuration_title;"
+        Sequence="10"
+        ImageUrl="/_layouts/15/images/centraladmin_office365.32x32x24.png?rev=23" />
+</Elements>

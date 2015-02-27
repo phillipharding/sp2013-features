@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+	Id="C6AC73DE-1936-47a4-BDFF-19A6FC3BA490"
+	Title="$Resources:xlsrv,FeatureWebPartStapler-title;"
+	Description="$Resources:xlsrv,FeatureWebPartStapler-description;"
+	SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+	Version="14.0.0.0"
+	Scope="Farm">
+
+	<ElementManifests>
+		<ElementManifest Location="FeatureWebPartStapling.xml" />
+	</ElementManifests>
+</Feature>

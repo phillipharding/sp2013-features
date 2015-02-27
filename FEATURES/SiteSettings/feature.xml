@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="FEAD7313-4B9E-4632-80A2-98A2A2D83297"
+          Title="$Resources:core,sitesettingsFeatureTitle;"
+          Description="$Resources:core,sitesettingsFeatureDesc;"
+          Version="12.0.0.0"
+          Hidden="TRUE"
+          Scope="Farm"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="SiteSettings.xml" />
+    </ElementManifests>
+</Feature>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+         Id="E47705EC-268D-4C41-AA4E-0D8727985EBC"
+         Title="$Resources:Microsoft.Office.Server.Search,SearchConfigListTemplate_FeatureTitle"
+         Description="$Resources:Microsoft.Office.Server.Search,SearchConfigListTemplate_FeatureDesc"
+         Scope="Web"
+		 Hidden="FALSE"
+         Version="15.0.0.0">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplate.xml" />
+        <ElementFile Location="SearchConfigListTemplate\schema.xml" />
+    </ElementManifests>
+	<ActivationDependencies>
+      <ActivationDependency FeatureId="48A243CB-7B16-4B5A-B1B5-07B809B43F47"/>
+   </ActivationDependencies>
+</Feature>

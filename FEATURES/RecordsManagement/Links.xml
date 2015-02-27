@@ -1,0 +1,44 @@
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <!-- Auditing settings pages -->
+    <CustomAction
+        Id="AuditSettings"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        RequireSiteAdministrator="true"
+        Sequence="70"
+        Title="$Resources:Reporting_AuditSettingsFeatureTitle;"
+        Description="$Resources:SiteSettings_SiteCollectionAuditSettings_Tooltip;">
+        <UrlAction
+            Url="_layouts/15/AuditSettings.aspx" />
+    </CustomAction>    
+    <!-- Location-based metadata defaults settings pages -->
+    <CustomAction 
+        Id="MetadataDefaultsSettings"
+        GroupId="GeneralSettings"
+        Location="Microsoft.SharePoint.ListEdit.DocumentLibrary"
+        Rights="ManageLists"
+        Sequence="10"
+        Title="$Resources:dlccore,MetadataDef_SettingsPageLink">
+            <UrlAction Url="_layouts/15/ColumnDefaults.aspx?List={ListId}" />
+    </CustomAction>
+    <!-- Policy admin/operations pages -->
+    <CustomAction
+        Id="PolicyFeaturesConfig"
+        GroupId="InformationPolicy"
+        Location="Microsoft.SharePoint.Administration.Security"
+        Sequence="20"
+        Title="$Resources:dlccore, PolicyLinks_Operations_PolicyFeaturesConfig;">
+        <UrlAction
+            Url="/_admin/Policyfeatures.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="PolicyFeaturesConfig"
+        GroupId="Security"
+        Location="Microsoft.SharePoint.Administration.Operations"
+        Sequence="50"
+        Title="$Resources:dlccore, PolicyLinks_Operations_PolicyFeaturesConfig;">
+        <UrlAction
+            Url="/_admin/Policyfeatures.aspx" />
+    </CustomAction>   
+</Elements>

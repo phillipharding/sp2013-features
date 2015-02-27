@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="BD012A1F-C69B-4A13-B6A4-F8BC3E59760E"
+	Title="$Resources:eduserver,IDS_EduMembershipUIFeatureTitle"
+	Description="$Resources:eduserver,IDS_EduMembershipUIFeatureDescription"
+	Hidden="TRUE"
+	SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+	Version="15.0.2.0"
+	Scope="Web"
+	AlwaysForceInstall="FALSE"
+	ReceiverAssembly="Microsoft.Office.Education.Institution, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+	ReceiverClass="Microsoft.Office.Education.EduMembershipUIFeatureReceiver"
+	DefaultResourceFile="eduserver"
+	xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<UpgradeActions>
+		<VersionRange EndVersion="15.0.1.0">
+			<CustomUpgradeAction Name="15.0.1.0" />
+		</VersionRange>
+		<VersionRange EndVersion="15.0.2.0">
+			<CustomUpgradeAction Name="15.0.2.0" />
+		</VersionRange>
+	</UpgradeActions>
+</Feature>

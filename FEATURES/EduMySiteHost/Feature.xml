@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="932F5BB1-E815-4C14-8917-C2BAE32F70FE"
+         Title="$Resources:eduserver,IDS_EduMySiteHostFeatureTitle"
+         Description="$Resources:eduserver,IDS_EduMySiteHostFeatureDescription"
+         Hidden="FALSE"
+         SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+         Version="15.0.13.0"
+         Scope="Web"
+         AlwaysForceInstall="FALSE"
+         ReceiverAssembly="Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+         ReceiverClass="Microsoft.Office.Education.EduMySiteHostFeatureReceiver"
+         DefaultResourceFile="eduserver"
+         xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<ActivationDependencies>
+		<!-- My Site Host feature -->
+		<ActivationDependency FeatureId="49571CD1-B6A1-43a3-BF75-955ACC79C8D8" MinimumVersion="15.0.0.0"/>
+		<!-- Edu Dashboard feature -->
+		<ActivationDependency FeatureId="5025492C-DAE2-4C00-8F34-CD08F7C7C294" MinimumVersion="15.0.0.0"/>
+	</ActivationDependencies>
+
+	<ElementManifests>
+		<ElementManifest Location="DefaultPageElements.xml" />
+		<ElementManifest Location="Elements.xml" />
+		<ElementFile Location="Pages\Assignments.aspx" />
+		<ElementFile Location="Pages\Calendar.aspx" />
+		<ElementFile Location="Pages\Portal.aspx" /> 
+		<ElementFile Location="Pages\Settings.aspx" /> 
+		<ElementFile Location="profile.xml"/>
+	</ElementManifests>
+
+	<UpgradeActions>
+		<VersionRange EndVersion="15.0.0.0">
+			<ApplyElementManifests>
+				<ElementManifest Location="DefaultPageElements.xml" />
+				<ElementManifest Location="Elements.xml" />
+				<ElementFile Location="Pages\Assignments.aspx" />
+				<ElementFile Location="Pages\Calendar.aspx" />
+				<ElementFile Location="Pages\Portal.aspx" /> 
+				<ElementFile Location="Pages\Settings.aspx" /> 
+				<ElementFile Location="profile.xml"/>
+			</ApplyElementManifests>
+			<CustomUpgradeAction Name="15.0.0.0" />
+		</VersionRange>
+		<VersionRange EndVersion="15.0.9.0">
+			<CustomUpgradeAction Name="15.0.9.0" />
+		</VersionRange>
+		<VersionRange EndVersion="15.0.10.0">
+			<CustomUpgradeAction Name="15.0.10.0" />
+		</VersionRange>
+		<VersionRange EndVersion="15.0.11.0">
+			<CustomUpgradeAction Name="15.0.11.0" />
+		</VersionRange>
+		<VersionRange EndVersion="15.0.12.0">
+			<CustomUpgradeAction Name="15.0.12.0" />
+			<ApplyElementManifests>
+				<ElementManifest Location="DefaultPageElements.xml"/>
+			</ApplyElementManifests>
+		</VersionRange>
+		<VersionRange EndVersion="15.0.13.0">
+			<CustomUpgradeAction Name="15.0.13.0" />
+		</VersionRange>
+	</UpgradeActions>
+</Feature>

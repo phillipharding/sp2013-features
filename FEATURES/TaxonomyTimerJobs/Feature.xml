@@ -1,0 +1,12 @@
+<Feature  Id="48AC883D-E32E-4fd6-8499-3408ADD91B53"
+          Title="Create the taxonomy timer jobs"
+          Description="Creates the taxonomy timer jobs on all web apps being created"
+          Version="14.0.0.0"
+          Scope="WebApplication"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          ReceiverAssembly="Microsoft.SharePoint.Taxonomy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Taxonomy.TaxonomyTimerJobFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/"
+	  ActivateOnDefault="TRUE">
+</Feature>

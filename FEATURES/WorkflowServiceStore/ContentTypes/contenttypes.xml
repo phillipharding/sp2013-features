@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/"> 
+    <ContentType ID="0x01002A2479FF33DD4bc3B1533A012B653717"
+        Name="WorkflowServiceDefinition"
+        Group="_Hidden"
+        Description="WorkflowServiceDefinition"
+        BaseType="0x0101"
+        Version="0" >
+        <FieldRefs>
+            <FieldRef ID="{6391DC7E-E7F3-4FAF-9890-550FD5D3022F}" Name="WSGUID" />
+            <FieldRef ID="{40270DA4-0A34-4c14-8C30-59E065A28A4D}" Name="WSPublishState" />
+	    <FieldRef ID="{321A8C3C-0EC7-473B-BCC6-67F3C2DAE20D}" Name="WSPublishError" />
+            <FieldRef ID="{9B590294-0151-44cf-9D56-24D8BB80F802}" Name="WSDisplayName" />
+            <FieldRef ID="{F519008D-1B5B-42a8-8DAB-E1A642FE5787}" Name="WSDescription" />
+            <FieldRef ID="{78EAE64A-F5F2-49af-B416-3247B76F46A1}" Name="FormData" />
+        </FieldRefs>
+    </ContentType>
+    <ContentType ID="0x0100AA27A923036E459d9EF0D18BBD0B9587"
+        Name="WorkflowServiceSubscription"
+        Group="_Hidden"
+        Description="WorkflowServiceSubscription"
+        BaseType="0x0101"
+        Version="0" >
+        <FieldRefs>
+            <FieldRef ID="{6391DC7E-E7F3-4FAF-9890-550FD5D3022F}" Name="WSGUID" />
+            <FieldRef ID="{40270DA4-0A34-4c14-8C30-59E065A28A4D}" Name="WSPublishState" />
+	    <FieldRef ID="{321A8C3C-0EC7-473B-BCC6-67F3C2DAE20D}" Name="WSPublishError" />
+            <FieldRef ID="{4CA54AB8-9667-427E-B1EC-B1FB4A9F3E19}" Name="WSEventContextKeys" />
+            <FieldRef ID="{73D6D2B7-4FF3-46b4-95E1-0AB6C9B1EC9C}" Name="WSEventSourceGUID" />
+            <FieldRef ID="{9B590294-0151-44cf-9D56-24D8BB80F802}" Name="WSDisplayName" />
+            <FieldRef ID="{F519008D-1B5B-42a8-8DAB-E1A642FE5787}" Name="WSDescription" />
+            <FieldRef ID="{D8225D68-5DDB-4e66-8069-2694E8F628FB}" Name="WSEventSource" />
+            <FieldRef ID="{B4BA57C8-AB73-49fa-B6AF-A4F824D84C14}" Name="WSEventType" />
+            <FieldRef ID="{A569E161-E19E-4360-9AE1-20DFDA097CB3}" Name="WSEnabled" />
+            <FieldRef ID="{78EAE64A-F5F2-49af-B416-3247B76F46A1}" Name="FormData" />
+        </FieldRefs>
+    </ContentType>
+    <Receivers ListTemplateId="4501">>
+        <Receiver>
+            <Name>WorkflowServiceDefinition Added</Name>
+            <Type>ItemAdded</Type>
+            <Synchronization>Synchronous</Synchronization>						
+            <SequenceNumber>10</SequenceNumber>
+            <Assembly>Microsoft.SharePoint.WorkflowServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+            <Class>Microsoft.SharePoint.WorkflowServices.WorkflowDefinitionStorageEventReceiver</Class>
+            <Data />
+            <Filter />
+        </Receiver>
+        <Receiver>
+            <Name>WorkflowServiceDefinition Updating</Name>
+            <Type>ItemUpdating</Type>
+            <Synchronization>Synchronous</Synchronization>						
+            <SequenceNumber>10</SequenceNumber>
+            <Assembly>Microsoft.SharePoint.WorkflowServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+            <Class>Microsoft.SharePoint.WorkflowServices.WorkflowDefinitionStorageEventReceiver</Class>
+            <Data />
+            <Filter />
+        </Receiver>
+        <Receiver>
+            <Name>WorkflowServiceDefinition Updated</Name>
+            <Type>ItemUpdated</Type>
+            <Synchronization>Synchronous</Synchronization>						
+            <SequenceNumber>10</SequenceNumber>
+            <Assembly>Microsoft.SharePoint.WorkflowServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+            <Class>Microsoft.SharePoint.WorkflowServices.WorkflowDefinitionStorageEventReceiver</Class>
+            <Data />
+            <Filter />
+        </Receiver>
+        <Receiver>
+            <Name>WorkflowServiceDefinition Deleting</Name>
+            <Type>ItemDeleting</Type>
+            <Synchronization>Synchronous</Synchronization>						
+            <SequenceNumber>10</SequenceNumber>
+            <Assembly>Microsoft.SharePoint.WorkflowServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+            <Class>Microsoft.SharePoint.WorkflowServices.WorkflowDefinitionStorageEventReceiver</Class>
+            <Data />
+            <Filter />
+        </Receiver>
+        <Receiver>		
+            <Name>WorkflowServiceSubscription Added</Name>
+            <Type>ItemAdded</Type>
+            <Synchronization>Synchronous</Synchronization>
+            <SequenceNumber>10</SequenceNumber>
+            <Assembly>Microsoft.SharePoint.WorkflowServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+            <Class>Microsoft.SharePoint.WorkflowServices.WorkflowSubscriptionStorageEventReceiver</Class>
+            <Data />
+            <Filter />
+        </Receiver>
+        <Receiver>
+            <Name>WorkflowServiceSubscription Updating</Name>
+            <Type>ItemUpdating</Type>
+            <Synchronization>Synchronous</Synchronization>						
+            <SequenceNumber>10</SequenceNumber>
+            <Assembly>Microsoft.SharePoint.WorkflowServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+            <Class>Microsoft.SharePoint.WorkflowServices.WorkflowSubscriptionStorageEventReceiver</Class>
+            <Data />
+            <Filter />
+        </Receiver>
+        <Receiver>
+            <Name>WorkflowServiceSubscription Deleting</Name>
+            <Type>ItemDeleting</Type>
+            <Synchronization>Synchronous</Synchronization>						
+            <SequenceNumber>10</SequenceNumber>
+            <Assembly>Microsoft.SharePoint.WorkflowServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+            <Class>Microsoft.SharePoint.WorkflowServices.WorkflowSubscriptionStorageEventReceiver</Class>
+            <Data />
+            <Filter />
+        </Receiver>		
+    </Receivers>
+</Elements> 

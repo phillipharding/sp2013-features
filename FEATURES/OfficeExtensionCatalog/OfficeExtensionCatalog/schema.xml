@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="$Resources:core,Marketplace_OfficeExtensionCatalogInstanceTitle;" Direction="$Resources:core,Direction;" Url="OECatalog" EnableContentTypes="FALSE" BaseType="1" VersioningEnabled="TRUE" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x01010D" Name="$Resources:core,Marketplace_ModernOfficeExtensionContentTypeName;" Description="$Resources:core,Marketplace_ModernOfficeExtensionContentTypeDescription;" Sealed="TRUE" ReadOnly="TRUE">
+        <Folder TargetName="Forms/MOE" />
+        <FieldRefs>
+          <FieldRef ID="{c042a256-787d-4a6f-8a8a-cf6ab767f12d}" Name="ContentType" />
+          <FieldRef ID="{8553196d-ec8d-4564-9861-3dbe931050c8}" Name="FileLeafRef" Required="TRUE" />
+          <FieldRef ID="{6289F50C-1EED-4816-B9AB-5601CAAD92EE}" Name="OEID" />
+          <FieldRef ID="{689B2D29-49AA-4EA1-95DA-E0D5E56E05F0}" Name="OEAlternateId" />
+          <FieldRef ID="{8ED53479-3168-4765-A0EC-BCBFB28A1F96}" Name="OETitle" />
+          <FieldRef ID="{EB209499-B6EE-4B36-A19A-7D38D24A474C}" Name="OEDisplayNameXML" />
+          <FieldRef ID="{6F963638-4CCD-4BB1-BDE0-8A072234EFB5}" Name="OEType" />
+          <FieldRef ID="{DCF50572-6B8D-46AA-9741-85293E48EDF4}" Name="OEDefaultIconURL" />
+          <FieldRef ID="{75306443-3F94-4661-AEBB-AA22A5F54F6F}" Name="OEIconURLXML" />
+          <FieldRef ID="{F2AA63D6-2DBD-4E10-A823-BB657D7BE46B}" Name="OEVersion" />
+          <FieldRef ID="{9B9DBE42-E680-4703-B41C-EC50D3850F6B}" Name="OEDescription" />
+          <FieldRef ID="{45B5A52A-5BAF-439B-98FF-78482E47B1B3}" Name="OEDescriptionXML" />
+          <FieldRef ID="{C5E3FC20-AD22-4EC6-956A-431256B7A674}" Name="OEDefaultLocale" />
+          <FieldRef ID="{D660E9EA-A087-4398-8828-86185A2B0AD0}" Name="OEDefaultWidth" />
+          <FieldRef ID="{DBB1D999-4E44-471C-A5BE-CE2F6E8518A3}" Name="OEDefaultHeight" />
+          <FieldRef ID="{528E85AC-649A-41FB-9D4D-DB0D5120A60D}" Name="OECapabilitiesXML" />
+          <FieldRef ID="{9098B9D5-B0BE-4B3B-A52D-8FB20D3D4C1A}" Name="OEProductID" />
+          <FieldRef ID="{6FAE1E3B-8928-4643-A421-054E5987BA8B}" Name="OEAppInstanceID" />
+          <FieldRef ID="{F24DF71F-CC0C-4CB4-8AB7-77634355DB00}" Name="OEIsValid" />
+          <FieldRef ID="{4199E5CC-AEEF-49CA-A8D9-AE12A791A994}" Name="OERevoked" />
+          <FieldRef ID="{9A978156-1B82-4438-8ABD-190F3E612AD3}" Name="OEManifestHash" />
+        </FieldRefs>
+        <XmlDocuments>
+          <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+            <FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+              <Display>DocumentLibraryForm</Display>
+              <Edit>DocumentLibraryForm</Edit>
+              <New>DocumentLibraryForm</New>
+            </FormTemplates>
+          </XmlDocument>
+          <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
+            <spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+              <Receiver>
+                <Name>Office Extension Item Adding</Name>
+                <Type>ItemAdding</Type>
+                <Synchronization>Synchronous</Synchronization>
+                <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                <Class>Microsoft.SharePoint.Marketplace.CorporateCuratedGallery.SPOfficeExtensionCatalogEventReceiver</Class>
+              </Receiver>
+              <Receiver>
+                <Name>Office Extension Item Added</Name>
+                <Type>ItemAdded</Type>
+                <Synchronization>Synchronous</Synchronization>
+                <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                <Class>Microsoft.SharePoint.Marketplace.CorporateCuratedGallery.SPOfficeExtensionCatalogEventReceiver</Class>
+              </Receiver>
+              <Receiver>
+                <Name>Office Extension Item Updating</Name>
+                <Type>ItemUpdating</Type>
+                <Synchronization>Synchronous</Synchronization>
+                <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                <Class>Microsoft.SharePoint.Marketplace.CorporateCuratedGallery.SPOfficeExtensionCatalogEventReceiver</Class>
+              </Receiver>
+              <Receiver>
+                <Name>Office Extension Item Updated</Name>
+                <Type>ItemUpdated</Type>
+                <Synchronization>Synchronous</Synchronization>
+                <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                <Class>Microsoft.SharePoint.Marketplace.CorporateCuratedGallery.SPOfficeExtensionCatalogEventReceiver</Class>
+              </Receiver>
+            </spe:Receivers>
+          </XmlDocument>
+        </XmlDocuments>
+      </ContentType>
+      <ContentTypeRef ID="0x0120" />
+    </ContentTypes>
+    <Fields>
+      <!-- Fields defined by Office Extension Catalog-->
+      <Field Name="OETitle" ID="{8ED53479-3168-4765-A0EC-BCBFB28A1F96}" Type="Text" DisplayName="$Resources:core,Title;" Group="_Hidden" Sealed="TRUE" ReadOnly="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="TRUE" ShowInNewForm="FALSE" />
+      <Field Name="OEDisplayNameXML" ID="{EB209499-B6EE-4B36-A19A-7D38D24A474C}" Type="Note" DisplayName="$Resources:core,Marketplace_OfficeExtensionTitleXMLFieldTitle;" Group="_Hidden" Hidden="TRUE" Sealed="TRUE" ReadOnly="TRUE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInNewForm="FALSE" />
+      <Field Name="OEID" ID="{6289F50C-1EED-4816-B9AB-5601CAAD92EE}" Type="Text" DisplayName="$Resources:core,Marketplace_OfficeExtensionIDFieldTitle;" Group="_Hidden" Sealed="TRUE" ReadOnly="TRUE" ShowInEditForm="FALSE" ShowInDisplayForm="TRUE" ShowInNewForm="FALSE" />
+      <Field Name="OEVersion" ID="{F2AA63D6-2DBD-4E10-A823-BB657D7BE46B}" Type="Text" DisplayName="$Resources:core,Marketplace_OfficeExtensionVersionFieldTitle;" Group="_Hidden" Sealed="TRUE" ReadOnly="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="TRUE" ShowInNewForm="TRUE" />
+      <Field Name="OEDescription" ID="{9B9DBE42-E680-4703-B41C-EC50D3850F6B}" Type="Note" DisplayName="$Resources:core,Marketplace_DescriptionFieldTitle;" Group="_Hidden" Sealed="TRUE" ReadOnly="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="TRUE" ShowInNewForm="TRUE" />
+      <Field Name="OEDescriptionXML" ID="{45B5A52A-5BAF-439B-98FF-78482E47B1B3}" Type="Note" DisplayName="$Resources:core,Marketplace_OfficeExtensionDescriptionXMLFieldTitle;" Group="_Hidden" Hidden="TRUE" Sealed="TRUE" ReadOnly="TRUE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInNewForm="FALSE" />
+      <Field Name="OEDefaultHeight" ID="{DBB1D999-4E44-471C-A5BE-CE2F6E8518A3}" Type="Integer" DisplayName="$Resources:core,Marketplace_OfficeExtensionRequestedHeightFieldTitle;" Group="_Hidden" Sealed="TRUE" ReadOnly="FALSE" Min="1" ShowInEditForm="FALSE" ShowInDisplayForm="TRUE" ShowInNewForm="FALSE" />
+      <Field Name="OEDefaultWidth" ID="{D660E9EA-A087-4398-8828-86185A2B0AD0}" Type="Integer" DisplayName="$Resources:core,Marketplace_OfficeExtensionRequestedWidthFieldTitle;" Group="_Hidden" Sealed="TRUE" ReadOnly="FALSE" Min="1" ShowInEditForm="FALSE" ShowInDisplayForm="TRUE" ShowInNewForm="FALSE" />
+      <Field Name="OEDefaultLocale" ID="{C5E3FC20-AD22-4EC6-956A-431256B7A674}" Type="Text" DisplayName="$Resources:core,Marketplace_OfficeExtensionDefaultLocaleFieldTitle;" Group="_Hidden" Sealed="TRUE" ReadOnly="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="TRUE" ShowInNewForm="FALSE" />
+      <Field Name="OERevoked" ID="{4199E5CC-AEEF-49CA-A8D9-AE12A791A994}" Type="Boolean" DisplayName="$Resources:core,Marketplace_KillbitFieldTitle;" Group="_Hidden" Sealed="TRUE" ReadOnly="FALSE" ShowInEditForm="TRUE" ShowInDisplayForm="TRUE" ShowInNewForm="TRUE">
+        <Default>0</Default>
+      </Field>
+      <Field Name="OEAppInstanceID" ID="{6FAE1E3B-8928-4643-A421-054E5987BA8B}" Type="Guid" DisplayName="$Resources:core,Marketplace_AppInstanceIDFieldTitle;" Group="_Hidden" Sealed="TRUE" ReadOnly="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="TRUE" ShowInNewForm="FALSE" />
+      <Field Name="OECapabilitiesXML" ID="{528E85AC-649A-41FB-9D4D-DB0D5120A60D}" Type="Note" DisplayName="$Resources:core,Marketplace_OfficeExtensionCapabilitiesXMLFieldTitle;" Group="_Hidden" Hidden="TRUE" Sealed="TRUE" UnlimitedLengthInDocumentLibrary="TRUE" ReadOnly="TRUE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInNewForm="FALSE" />
+      <Field Name="OEAlternateId" ID="{689B2D29-49AA-4EA1-95DA-E0D5E56E05F0}" Type="Text" DisplayName="$Resources:core,Marketplace_OfficeExtensionAlternateIdFieldTitle;" Group="_Hidden" Sealed="TRUE" ReadOnly="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="TRUE" ShowInNewForm="FALSE" />
+      <Field Name="OEProductID" ID="{9098B9D5-B0BE-4B3B-A52D-8FB20D3D4C1A}" Type="Guid" DisplayName="$Resources:core,Marketplace_ProductIDFieldTitle;" Group="_Hidden" Sealed="TRUE" ReadOnly="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="TRUE" ShowInNewForm="FALSE" />
+      <Field Name="OEManifestHash" ID="{9A978156-1B82-4438-8ABD-190F3E612AD3}" Type="Text" DisplayName="$Resources:core,Marketplace_OfficeExtensionManifestHashFieldTitle;" Group="_Hidden" Hidden="TRUE" Sealed="TRUE" ReadOnly="TRUE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInNewForm="FALSE" />
+      <Field Name="OEIsValid" ID="{F24DF71F-CC0C-4CB4-8AB7-77634355DB00}" Type="Boolean" DisplayName="$Resources:core,Marketplace_OfficeExtensionIsValidFieldTitle;" Group="_Hidden" Sealed="TRUE" ShowInEditForm="FALSE" ShowInDisplayForm="TRUE" ShowInNewForm="FALSE">
+        <Default>0</Default>
+      </Field>
+      <Field Name="OEDefaultIconURL" ID="{DCF50572-6B8D-46AA-9741-85293E48EDF4}" Type="Note" DisplayName="$Resources:core,Marketplace_OfficeExtensionIconURLFieldTitle;" Group="_Hidden" Sealed="TRUE" ShowInEditForm="FALSE" ShowInDisplayForm="TRUE" ShowInNewForm="FALSE" />
+      <Field Name="OEIconURLXML" ID="{75306443-3F94-4661-AEBB-AA22A5F54F6F}" Type="Note" DisplayName="$Resources:core,Marketplace_OfficeExtensionIconURLXMLFieldTitle;" Group="_Hidden" Hidden="TRUE" Sealed="TRUE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInNewForm="FALSE" />
+      <Field Name="OEType" ID="{6F963638-4CCD-4BB1-BDE0-8A072234EFB5}" Type="Text" DisplayName="$Resources:core,Marketplace_OfficeExtensionTypeFieldTitle;" Group="_Hidden" Sealed="TRUE" ShowInEditForm="FALSE" ShowInDisplayForm="TRUE" ShowInNewForm="FALSE" />
+      <Field Name="OEProviderName" ID="{05A3ED72-FF97-465C-9854-306CDC63DBC9}" Type="Text" DisplayName="$Resources:core,Marketplace_OfficeExtensionProviderNameFieldTitle;" Group="_Hidden" Sealed="TRUE" ShowInEditForm="FALSE" ShowInDisplayForm="TRUE" ShowInNewForm="FALSE" />
+      <Field Name="OETargetLanguagesXML" ID="{3E24F899-477F-4452-998A-8964FDF42153}" Type="Note" DisplayName="$Resources:core,Marketplace_OfficeExtensionTargetLanguagesXMLFieldTitle;" Group="_Hidden" Hidden="TRUE" Sealed="TRUE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInNewForm="FALSE" />
+    </Fields>
+    <Views>
+      <View DisplayName="$Resources:core,Marketplace_OfficeExtensionCatalog_AllContentView;" DefaultView="TRUE" BaseViewID="1" Type="HTML" WebPartZoneID="Main" MobileView="True" MobileDefaultView="True" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/dlicon.png?rev=23" Url="Forms/AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <Query>
+          <GroupBy Collapse="FALSE" GroupLimit="30">
+            <FieldRef Name="OEType" />
+          </GroupBy>
+        </Query>
+        <ViewFields>
+          <FieldRef Name="DocIcon" />
+          <FieldRef Name="OETitle" />
+          <FieldRef Name="LinkFilename" />
+          <FieldRef Name="OEVersion" />
+          <FieldRef Name="Edit" />
+          <FieldRef Name="OEID" />
+          <FieldRef Name="OEType" />
+          <FieldRef Name="OEDefaultLocale" />
+          <FieldRef Name="OERevoked" />
+          <FieldRef Name="Modified" />
+          <FieldRef Name="OEIsValid" />
+        </ViewFields>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Aggregations Value="Off" />
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" SetupPath="pages\form.aspx" Url="DispForm.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" SetupPath="pages\form.aspx" Url="EditForm.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" SetupPath="Pages\form.aspx" Url="Upload.aspx" WebPartZoneID="Main" />
+      <Form Type="NewFormDialog" Path="EditDlg.htm">
+        <ListFormOpening><HTML><![CDATA[
+<script type="text/javascript">
+var frm = new OWSForm(]]></HTML>
+          <ScriptQuote>
+            <Switch>
+              <Expr>
+                <GetVar Name="HTMLFormName" />
+              </Expr>
+              <Case Value=""><HTML><![CDATA[OWSForm]]></HTML>
+              </Case>
+              <Default>
+                <GetVar Name="HTMLFormName" />
+              </Default>
+            </Switch>
+          </ScriptQuote><HTML><![CDATA[, false, ]]></HTML>
+          <ScriptQuote>
+            <HttpVDir /><HTML>/_layouts/</HTML>
+          </ScriptQuote><HTML><![CDATA[);
+</script>
+]]></HTML><HTML><![CDATA[
+<script type="text/javascript">]]></HTML><HTML><![CDATA[ frm.dopt.chDateSep = ]]></HTML>
+          <ScriptQuote>
+            <LocaleInfo LCTYPE="29" />
+          </ScriptQuote><HTML><![CDATA[; frm.dopt.chTimeSep = ]]></HTML>
+          <ScriptQuote>
+            <LocaleInfo LCTYPE="30" />
+          </ScriptQuote><HTML><![CDATA[; frm.dopt.SetTimeFormat(]]></HTML>
+          <ProjectProperty Select="Time24" /><HTML><![CDATA[); frm.dopt.SetDateOrder(]]></HTML>
+          <LocaleInfo LCTYPE="33" /><HTML><![CDATA[); frm.dopt.SetDOW(]]></HTML>
+          <LocaleInfo LCTYPE="4108" /><HTML><![CDATA[); frm.dopt.stAM = ]]></HTML>
+          <ScriptQuote>
+            <LocaleInfo LCTYPE="40" />
+          </ScriptQuote><HTML><![CDATA[; frm.dopt.stPM = ]]></HTML>
+          <ScriptQuote>
+            <LocaleInfo LCTYPE="41" />
+          </ScriptQuote><HTML><![CDATA[; frm.dopt.TimeMarkPosn = ]]></HTML>
+          <LocaleInfo LCTYPE="4101" /><HTML><![CDATA[; frm.dopt.webTZOffsetMin = ]]></HTML>
+          <ProjectProperty Select="TimeZoneBias" /><HTML><![CDATA[; ]]></HTML><HTML><![CDATA[ frm.nopt.chDigSep = ]]></HTML>
+          <ScriptQuote>
+            <LocaleInfo LCTYPE="15" />
+          </ScriptQuote><HTML><![CDATA[; frm.nopt.chDecimal = ]]></HTML>
+          <ScriptQuote>
+            <LocaleInfo LCTYPE="14" />
+          </ScriptQuote><HTML><![CDATA[; frm.nopt.chMinus = ]]></HTML>
+          <ScriptQuote>
+            <LocaleInfo LCTYPE="81" />
+          </ScriptQuote><HTML><![CDATA[; frm.nopt.iNegNumber = ]]></HTML>
+          <LocaleInfo LCTYPE="4112" /><HTML><![CDATA[; frm.nopt.SetGrouping(]]></HTML>
+          <ScriptQuote>
+            <LocaleInfo LCTYPE="16" />
+          </ScriptQuote><HTML><![CDATA[); ]]></HTML><HTML><![CDATA[
+frm.stFieldPrefix = ]]></HTML>
+          <ScriptQuote>
+            <FieldPrefix />
+          </ScriptQuote><HTML><![CDATA[;
+frm.stImagesPath = ]]></HTML>
+          <ScriptQuote>/_layouts/15/images/</ScriptQuote><HTML><![CDATA[;
+frm.wBaseType = ]]></HTML>
+          <ListProperty Select="BaseType" /><HTML><![CDATA[;
+</script>]]></HTML>
+          <Switch>
+            <Expr>
+              <GetVar Name="HTMLFormName" />
+            </Expr>
+            <Case Value=""><HTML><![CDATA[<form name="OWSForm" id="OWSForm" EncType="multipart/form-data" Action="]]></HTML>
+              <HttpPath /><HTML><![CDATA[" Method=POST onSubmit="return false;">]]></HTML>
+            </Case>
+          </Switch><HTML><![CDATA[
+<input type="Hidden" name="_charset_" value="utf-8">
+<input id="onetidCmd" type="Hidden" name="Cmd" value="Save">
+<input id="onetidIsFormValid" type="hidden" name="IsFormValid">
+<input id="onetidFormWasPosted" type="hidden" name="FormWasPosted">
+<input id="MustUpdateForm" type="hidden" name="MustUpdateForm" value="true">
+<input type="hidden" name="NextID" id="NextID" value="-1">
+<input type="hidden" name="NextUsing" id="NextUsing" value="]]></HTML>
+          <GetVar Name="Source" HTMLEncode="TRUE" /><HTML><![CDATA[">
+]]></HTML><HTML><![CDATA[<span id='part1'>]]></HTML>
+          <Identity />
+        </ListFormOpening>
+        <ListFormBody><HTML><![CDATA[<table border="0" cellpadding="2">
+<script type="text/javascript">var _g_tp_fNewForm = true;</script>
+]]></HTML>
+          <Fields>
+            <Switch>
+              <Expr>
+                <Property Select="Name" />
+              </Expr>
+              <Case Value="FileLeafRef">
+                <SetVar Name="ShowField" Scope="Request">0</SetVar>
+              </Case>
+              <Default>
+                <SetVar Name="ShowField" Scope="Request">1</SetVar><HTML><![CDATA[<tr style="display:none"><th nowrap="nowrap" valign="top" class="ms-formlabel"><nobr>]]></HTML>
+                <Property Select="DisplayName" HTMLEncode="TRUE" AutoNewLine="TRUE" />
+                <Switch>
+                  <Expr>
+                    <Property Select="Required" />
+                  </Expr>
+                  <Case Value="TRUE"><HTML><![CDATA[<font color=red> *</font>]]></HTML>
+                    <SetVar Scope="Request" Name="HasRequired">TRUE</SetVar>
+                  </Case>
+                  <Default><HTML><![CDATA[<font color=red></font>]]></HTML>
+                  </Default>
+                </Switch><HTML><![CDATA[</nobr></th><td class="ms-formbody">]]></HTML>
+                <Field />
+                <Switch>
+                  <Expr>
+                    <Property Select="RichText" />
+                  </Expr>
+                  <Case Value="TRUE" />
+                  <Default>
+                    <Switch>
+                      <Expr>
+                        <Property Select="Type" />
+                      </Expr>
+                      <Case Value="Choice" />
+                      <Case Value="MultiChoice" />
+                      <Default><HTML><![CDATA[&#160;]]></HTML>
+                        <Switch>
+                          <Expr>
+                            <Property Select="NoEditFormBreak" />
+                          </Expr>
+                          <Case Value="TRUE" />
+                          <Default><HTML><![CDATA[<br>]]></HTML>
+                          </Default>
+                        </Switch>
+                      </Default>
+                    </Switch>
+                  </Default>
+                </Switch><HTML><![CDATA[<span class="ms-formdescription">]]></HTML>
+                <Property Select="Description" HTMLEncode="TRUE" AutoHyperLink="TRUE" AutoNewLine="TRUE" /><HTML><![CDATA[</span></td></tr>]]></HTML>
+              </Default>
+            </Switch>
+          </Fields><HTML><![CDATA[</table>]]></HTML>
+          <Switch>
+            <Expr>
+              <GetVar Name="HasRequired" />
+            </Expr>
+            <Case Value="TRUE"><HTML><![CDATA[
+          <table border="0" cellpadding="2">
+          <tr>
+            <td id="reqdFldTxt" class="ms-descriptiontext" colspan="2" height="150px" valign="top"><br><font color=red>*</font> 
+             &#160;]]></HTML><HTML HTMLEncode="TRUE">$Resources:core,webview_editdlg_required_field;</HTML><HTML><![CDATA[
+            </td>
+          </tr>
+          </table>
+          ]]></HTML>
+            </Case>
+          </Switch>
+          <ContentTypes><HTML><![CDATA[
+    <script type = "text/javascript">
+        frmCurrent.MapCtName(]]></HTML>
+            <ScriptQuote>
+              <Property Select="Name" />
+            </ScriptQuote><HTML><![CDATA[ ,]]></HTML>
+            <ScriptQuote>
+              <Property Select="ID" />
+            </ScriptQuote><HTML><![CDATA[);
+    </script>]]></HTML>
+            <IfSubString>
+              <Expr1>0x0120</Expr1>
+              <Expr2>
+                <Property Select="ID" />
+              </Expr2>
+              <Then><HTML><![CDATA[
+            <script type="text/javascript">
+            _tp_rgctfld = new Array;
+            _g_tp_rgcts.push(_tp_rgctfld);
+            var fldct = frmCurrent.FindField("ContentType");
+            if (fldct != null)
+            	fldct.AddChoice(]]></HTML>
+                <ScriptQuote>
+                  <Property Select="Name" />
+                </ScriptQuote><HTML><![CDATA[);
+            </script>
+            ]]></HTML>
+              </Then>
+              <Else><HTML><![CDATA[
+            <script type="text/javascript">
+            var fldct = frmCurrent.FindField("ContentType");
+            if (fldct != null)
+            	fldct.AddChoice(]]></HTML>
+                <ScriptQuote>
+                  <Property Select="Name" />
+                </ScriptQuote><HTML><![CDATA[);
+            _tp_rgctfld = new Array;            
+            ]]></HTML>
+                <ForEach Select="FieldRefs/FieldRef"><HTML>
+                _tp_ctfld = new Object(null);
+                _tp_ctfld.stName=</HTML>
+                  <ScriptQuote>
+                    <Property Select="Name" />
+                  </ScriptQuote><HTML>;
+                _tp_ctfld.fRequired = BoolFromString(</HTML>
+                  <ScriptQuote>
+                    <Property Select="Required" />
+                  </ScriptQuote><HTML>);
+                _tp_ctfld.fHidden = BoolFromString(</HTML>
+                  <ScriptQuote>
+                    <Property Select="Hidden" />
+                  </ScriptQuote><HTML>);
+                _tp_ctfld.fShowInNewForm = BoolFromString2(</HTML>
+                  <ScriptQuote>
+                    <Property Select="ShowInNewForm" />
+                  </ScriptQuote><HTML>, true);
+                _tp_ctfld.fShowInEditForm = BoolFromString2(</HTML>
+                  <ScriptQuote>
+                    <Property Select="ShowInEditForm" />
+                  </ScriptQuote><HTML>, true);
+                _tp_ctfld.fShowInFileDlg = BoolFromString2(</HTML>
+                  <ScriptQuote>
+                    <Property Select="ShowInFileDlg" />
+                  </ScriptQuote><HTML>, true);                
+                _tp_ctfld.fReadOnly = BoolFromString(</HTML>
+                  <ScriptQuote>
+                    <Property Select="ReadOnly" />
+                  </ScriptQuote><HTML>);
+                _tp_ctfld.stDisplay =</HTML>
+                  <ScriptQuote>
+                    <Property Select="DisplayName" />
+                  </ScriptQuote><HTML>;</HTML>
+                  <ForEach Select="Default"><HTML>
+                    _tp_ctfld.stDefault=</HTML>
+                    <ScriptQuote>
+                      <Property Select="." />
+                    </ScriptQuote><HTML>;</HTML>
+                  </ForEach><HTML>
+                    _tp_rgctfld.push(_tp_ctfld);
+                </HTML>
+                </ForEach><HTML><![CDATA[
+            _g_tp_rgcts.push(_tp_rgctfld);
+            </script>
+            ]]></HTML>
+              </Else>
+            </IfSubString>
+          </ContentTypes><HTML><![CDATA[
+<script type="text/javascript">
+var fldct = frmCurrent.FindField("ContentType");
+if (fldct != null)
+	fldct.BuildUI();
+</script>
+]]></HTML>
+        </ListFormBody>
+        <ListFormClosing><HTML><![CDATA[
+</span>]]></HTML>
+          <Switch>
+            <Expr>
+              <GetVar Name="HTMLFormName" />
+            </Expr>
+            <Case Value=""><HTML><![CDATA[</form>]]></HTML>
+            </Case>
+          </Switch><HTML><![CDATA[
+<script type="text/javascript">
+</script>
+]]></HTML>
+        </ListFormClosing>
+      </Form>
+    </Forms>
+    <DefaultDescription>$Resources:core,camlidDc5;</DefaultDescription>
+  </MetaData>
+</List>

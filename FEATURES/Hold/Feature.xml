@@ -1,0 +1,16 @@
+<Feature  Id="9E56487C-795A-4077-9425-54A1ECB84282"
+          Title="$Resources:dlccore,Hold_ECB_Feature_Title15;"
+          Description="$Resources:dlccore,Hold_ECB_Feature_Description;"
+          Version="14.0.0.0"
+          Hidden="FALSE"
+          Scope="Web"
+          ReceiverAssembly="Microsoft.Office.Policy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.Office.RecordsManagement.Internal.HoldsFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="Links.xml" />
+    </ElementManifests>
+    <ActivationDependencies> 
+        <ActivationDependency FeatureId="5BCCB9A4-B903-4fd1-8620-B795FA33C9BA" /> 
+    </ActivationDependencies> 
+</Feature>

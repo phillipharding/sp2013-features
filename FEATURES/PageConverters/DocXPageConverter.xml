@@ -1,0 +1,13 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <DocumentConverter 
+        Id="{6dfdc5b4-2a28-4a06-b0c6-ad3901e3a807}"
+        Name="$Resources:cmscore,Converters_DocX_ConverterDisplayName"
+        App="DocXPageConverter.exe"
+        From="docx"
+        To="html"
+        ConverterUIPage="CreatePage.aspx"
+        ConverterSettingsForContentType="ConverterSettings.aspx"
+    />
+</Elements>

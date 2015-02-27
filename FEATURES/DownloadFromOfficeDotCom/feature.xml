@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="{a140a1ac-e757-465d-94d4-2ca25ab2c662}"
+        ActivateOnDefault="TRUE"
+        Title="$Resources:core,downloadFromOfficeDotComFeatureTitle;"
+        Description="$Resources:core,downloadFromOfficeDotComFeatureDesc;"
+        Version="1.0.0.0"
+        Scope="Farm"
+        Hidden="FALSE"
+        xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="Elements.xml" />
+    </ElementManifests>
+</Feature>

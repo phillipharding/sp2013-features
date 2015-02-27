@@ -1,0 +1,12 @@
+<Feature  Id="983521D7-9C04-4DB0-ABDC-F7078FC0B040"
+          Title="$Resources:TenantAdmin_SearchAdminFeature_Title;"
+          Description="$Resources:TenantAdmin_SearchAdminFeature_Description;"
+          Version="15.0.0.0"
+          Scope="Web"
+          Hidden="TRUE"
+          DefaultResourceFile="Microsoft.Office.Server.Search"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="default.xml" />
+    </ElementManifests>
+</Feature>

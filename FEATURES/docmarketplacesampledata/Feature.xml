@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="1DFD85C5-FEFF-489F-A71F-9322F8B13902"
+         Title="$Resources:dmscore,IDS_SampleDataFeatureTitle"
+         Description="$Resources:dmscore,IDS_SampleDataFeatureDescription"
+         SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+         Version="15.0.0.0"
+         Scope="Web"
+         Hidden="True"
+         AlwaysForceInstall="FALSE"
+         ReceiverAssembly="Microsoft.Office.DocMarketplace, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+         ReceiverClass="Microsoft.Office.DocMarketplace.SampleDataFeatureReceiver"
+         DefaultResourceFile="dmscore"
+         xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

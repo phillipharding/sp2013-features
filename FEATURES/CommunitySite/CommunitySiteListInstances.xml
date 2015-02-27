@@ -1,0 +1,12 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListInstance
+            Title="$Resources:spscore,CommunitySiteDiscussionsListInstance_Title;"
+            Description="$Resources:spscore,CommunitySiteDiscussionsListInstance_Desc;"
+            FeatureId="00BFEA71-6A49-43FA-B535-D15C05500108"
+            Id="DiscussionsListInstance"
+            OnQuickLaunch="FALSE"
+            TemplateType="108"
+            Url="$Resources:core,lists_Folder;/$Resources:spscore,communityDiscussions_Folder;">
+    </ListInstance>
+</Elements>
+

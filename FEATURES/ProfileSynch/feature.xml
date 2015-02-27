@@ -1,0 +1,10 @@
+<Feature Id="AF847AA9-BEB6-41d4-8306-78E41AF9CE25"
+    Title="$Resources:spscore,PeopleFeatures_ProfileSync_Text;"
+    Description="$Resources:spscore,PeopleFeatures_ProfileSync_Desc;"
+    Version="14.0.0.0"
+    Scope="Farm"
+    Hidden="TRUE"
+    ReceiverAssembly="Microsoft.Office.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.Office.Server.UserProfiles.WSSSynchSchedulerFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

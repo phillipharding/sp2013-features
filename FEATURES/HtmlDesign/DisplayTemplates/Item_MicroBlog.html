@@ -1,0 +1,315 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_MicroBlogItem</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+    <mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+    <mso:MasterPageDescription msdt:dt="string">$Resources:Microsoft.Office.Server.Search,DisplayTemplateDescription_MicroBlogItem</mso:MasterPageDescription>
+    <mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+    <mso:TargetControlType msdt:dt="string">;#SearchResults;#</mso:TargetControlType>
+    <mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+    <mso:ManagedPropertyMapping msdt:dt="string">'Title':'Title','Author':'FullPostAuthor','Path':'Path','Description':'Description','LastModifiedTime':'LastModifiedTime','CollapsingStatus':'CollapsingStatus','Created':'Created','HitHighlightedSummary':'HitHighlightedSummary','HitHighlightedProperties':'HitHighlightedProperties','ParentLink':'ParentLink','AttachmentDescription':'AttachmentDescription','AttachmentType':'AttachmentType','AttachmentURI':'AttachmentURI','RootPostID':'RootPostID','ReplyCount':'ReplyCount','LikesCount':'LikesCount','FullPostBody':'FullPostBody'</mso:ManagedPropertyMapping>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="Item_MicroBlog">
+<!--#_
+        if(!$isNull(ctx.CurrentItem) && !$isNull(ctx.ClientControl))
+        {
+            var maxBodyLengthInChars = 120;
+            var maxTitleLengthInChars = 60;
+            var maxMetadataValue = Srch.U.maximumSocialMetadataValue;
+
+            if (ctx.CurrentItem.Title.toLowerCase() === "dispform.aspx")
+            {
+                ctx.CurrentItem.Title = Srch.Res.item_DefaultTitle;
+            }
+
+            var id = ctx.ClientControl.get_nextUniqueId();
+            var itemId = id + Srch.U.Ids.item;
+            var hoverId = id + Srch.U.Ids.hover;
+            var hoverUrl = "~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_MicroBlog_HoverPanel.js";
+            $setResultItem(itemId, ctx.CurrentItem);
+
+            var title = ctx.CurrentItem.Title;
+
+            var showHoverPanelCallback = Srch.U.getShowHoverPanelCallbackWide(itemId, hoverId, hoverUrl);
+            var hideHoverPanelCallback = Srch.U.getHideHoverPanelCallback();
+
+            var path = "";
+            var threadLink = "";            
+            if(!$isNull(ctx.CurrentItem.Path))
+            {
+                path = ctx.CurrentItem.Path;
+                var idx = path.lastIndexOf("/Lists/PublishedFeed");
+                if(idx > -1)
+                {
+                    threadLink = path.substr(0, idx) + "/newsfeed.aspx?ThreadID=" + $urlKeyValueEncode(path);
+                }
+            }
+
+            var authorUsername = "";
+            if(!$isNull(ctx.CurrentItem.PostAuthor))
+            {
+                authorUsername = ctx.CurrentItem.PostAuthor;
+            }
+
+            var hasMetadata = false;
+            var bodyClass = "ms-srch-item-body";
+
+            if (!$isNull(ctx.CurrentItem.Created) ||
+                !$isNull(ctx.CurrentItem.ReplyCount) ||
+                !$isNull(ctx.CurrentItem.LikesCount))
+            {
+                hasMetadata = true;
+                bodyClass += " ms-srch-communityItem-body";
+                maxTitleLengthInChars -= 15;
+            }
+
+            var userPersonaId = id + "_peopleUserPersona";
+            var titleLinkId = id + "_titleLink";
+            var bodyElementId = id + Srch.U.Ids.body;
+
+            AddPostRenderCallback(ctx, function()
+            {
+                var personaControlElement = document.getElementById(userPersonaId);
+                if($isNull(personaControlElement))
+                {
+                    return;
+                }
+
+                Srch.U.ensureCSSClassNameExist(personaControlElement, "ms-srch-display-none");
+
+                EnsureScriptFunc("SP.runtime.js", "SP.ClientRuntimeContext", function()
+                {
+                    EnsureScriptFunc("SP.UI.MySiteCommon.js", "SP.UI.People.MySitePeopleUtilities", function()
+                    {
+                        EnsureScriptFunc("clienttemplates.js", "RenderUserFieldWorker", function()
+                        {
+                            var ctxCurrent = Srch.ScriptApplicationManager.get_clientRuntimeContext();
+
+                            var peopleManager = SP.UserProfiles.PeopleManager.newObject(ctxCurrent);
+                            var authorprops = peopleManager.getPropertiesFor(authorUsername);
+                            var propertiesToInclude = [ "DisplayName", "AccountName", "PictureUrl", "Email" ];
+                            ctxCurrent.load(authorprops, propertiesToInclude);
+
+                            var personaSuccess = function()
+                            {
+                                var authorName = "";
+                                if(authorprops.isPropertyAvailable("DisplayName"))
+                                {
+                                    authorName = authorprops.get_displayName();
+                                }
+
+                                var authorEmail = "";
+                                if(authorprops.isPropertyAvailable("Email"))
+                                {
+                                    authorEmail = authorprops.get_email();
+                                }
+
+                                var authorPicUrl = "";
+                                if(authorprops.isPropertyAvailable("PictureUrl"))
+                                {
+                                    authorPicUrl = authorprops.get_pictureUrl();
+                                }
+
+                                var renderCtx = new ContextInfo();
+                                renderCtx.Templates = {};
+                                renderCtx.Templates["Fields"] = {};
+                                var fieldSchemaData = { "PictureOnly":"1", "PictureSize": "Size_48px"};
+                                var listSchema = {"EffectivePresenceEnabled": "1", "PresenceAlt": "No presence information"};
+                                var userData = {"title": authorName, "email": authorEmail, "picture": authorPicUrl};
+
+                                personaControlElement.innerHTML = RenderUserFieldWorker(renderCtx, fieldSchemaData, userData, listSchema);
+
+                                Srch.U.ensureCSSClassNameNotExist(personaControlElement, "ms-srch-display-none");
+                                if (personaControlElement.offsetWidth < Srch.U.personaControlRenderedThreshold)
+                                {
+                                    Srch.U.ensureCSSClassNameExist(personaControlElement, "ms-srch-display-none");
+                                }
+                                else
+                                {
+                                    var bodyElement = document.getElementById(bodyElementId);
+                                    if(!$isNull(bodyElement))
+                                    {
+                                        if(hasMetadata)
+                                        {
+                                            Srch.U.ensureCSSClassNameNotExist(bodyElement, "ms-srch-communityItem-body");
+                                            Srch.U.ensureCSSClassNameExist(bodyElement, "ms-srch-microblogCommunityItem-body");
+                                        }
+                                        else
+                                        {
+                                            Srch.U.ensureCSSClassNameExist(bodyElement, "ms-srch-microblogItem-body");
+                                        }
+                                    }
+                                }
+                            };
+
+                            var personaFailure = function ()
+                            {
+                                Srch.U.trace(null, "Item_MicroBlog", String.format(
+                                    "Failed to retrieve information for user '{0}'",
+                                    authorUsername));
+                            };
+
+                            ctxCurrent.executeQueryAsync(personaSuccess, personaFailure);
+                        });
+                    });
+                });
+            });
+_#-->
+        <div id="_#= $htmlEncode(itemId) =#_" name="Item" data-displaytemplate="MicroblogItem" class="ms-srch-item" onmouseover="_#= showHoverPanelCallback =#_" onmouseout="_#= hideHoverPanelCallback =#_">
+
+            <div id="_#= $htmlEncode(userPersonaId) =#_" class="ms-srch-hover-postPersona"></div>
+
+            <div>
+                <div id="_#= $htmlEncode(bodyElementId) =#_" class="_#= $htmlEncode(bodyClass) =#_" onclick="_#= showHoverPanelCallback =#_">
+                    <div id="_#= $htmlEncode(id + Srch.U.Ids.title) =#_" class="ms-srch-item-title">
+                        <h3 class="ms-srch-ellipsis">
+                            <a clicktype="Result" id="_#= $htmlEncode(titleLinkId) =#_" href="_#= $urlHtmlEncode(threadLink) =#_" class="ms-srch-item-link" title="_#= $htmlEncode(ctx.CurrentItem.Title) =#_" onfocus="_#= showHoverPanelCallback =#_">
+                                _#= $htmlEncode(Srch.U.truncateEnd(title, maxTitleLengthInChars)) =#_
+                            </a>
+                        </h3>
+                    </div>
+<!--#_
+                if (!$isEmptyString(ctx.CurrentItem.HitHighlightedSummary) ||
+                    !$isEmptyString(ctx.CurrentItem.FullPostBody) ||
+                    !Srch.U.e(ctx.CurrentItem.AttachmentURI))
+                {
+_#-->
+                    <div id="_#= $htmlEncode(id + Srch.U.Ids.summary) =#_" class="ms-srch-communityItem-summary">
+                        <span class="ms-srchnav-quotationopenglyph-span">
+                            <img class="ms-srchnav-quotationopenglyph" src="_#= $urlHtmlEncode(GetThemedImageUrl('searchresultui.png')) =#_" />
+                        </span>
+<!--#_
+                    if (!$isEmptyString(ctx.CurrentItem.HitHighlightedSummary))
+                    {
+_#-->
+                        _#= Srch.U.processHHXML(ctx.CurrentItem.HitHighlightedSummary) =#_
+<!--#_
+                    }
+                    else if(!$isEmptyString(ctx.CurrentItem.FullPostBody))
+                    {
+_#-->
+                        _#= $htmlEncode(Srch.U.truncateEnd(ctx.CurrentItem.FullPostBody, maxBodyLengthInChars)) =#_
+<!--#_
+                    }
+
+                    if(!Srch.U.e(ctx.CurrentItem.AttachmentURI))
+                    {
+                        var pictureIconUrl = SP.Utilities.VersionUtility.getImageUrl("AddImageCamera.11x11x32.png");
+_#-->
+                        <a clicktype="Result" href="_#= $urlHtmlEncode(ctx.CurrentItem.AttachmentURI) =#_">
+                            <img src="_#= $urlHtmlEncode(pictureIconUrl) =#_" />
+                        </a>
+<!--#_
+                    }
+_#-->
+                        <span class="ms-srchnav-quotationcloseglyph-span">
+                            <img class="ms-srchnav-quotationcloseglyph" src="_#= $urlHtmlEncode(GetThemedImageUrl('searchresultui.png')) =#_" />
+                        </span>
+                    </div>
+<!--#_
+                }
+_#-->
+                </div>
+<!--#_
+            if(hasMetadata)
+            {
+_#-->
+                <div class="ms-srch-item-metadataContainer">
+                    <div class="ms-srch-item-metadataSeparator"></div>
+<!--#_
+                if (!$isNull(ctx.CurrentItem.Created))
+                {
+                    var created = ctx.CurrentItem.Created;
+                    var encodedTimeSincePostId = $htmlEncode(id + "_timeSincePost");
+                    AddPostRenderCallback(ctx, function()
+                    {
+                        Srch.U.renderFriendlyTimeIntervalString(created, encodedTimeSincePostId);
+                    });
+_#-->
+                    <div id="_#= encodedTimeSincePostId =#_" class="ms-metadata ms-srch-item-metadataText"></div>
+<!--#_
+                }
+
+                    var replyCount = 0;
+                    if (!$isNull(ctx.CurrentItem.ReplyCount))
+                    {
+                        replyCount = ctx.CurrentItem.ReplyCount;
+                    }
+
+                    var replies = replyCount.toString();
+                    if(replyCount > maxMetadataValue)
+                    {
+                        replies = String.format(Srch.Res.item_MoreThan, maxMetadataValue);
+                    }
+
+                    var encodedReplies = "<span class='ms-srch-metadataText-emphasis'>" + $htmlEncode(replies) + "</span>";
+                    if(replyCount == 1)
+                    {
+                        encodedReplies = String.format($htmlEncode(Srch.Res.item_Reply), encodedReplies);
+                    }
+                    else if(replyCount > 1)
+                    {
+                        encodedReplies = String.format($htmlEncode(Srch.Res.item_Replies), encodedReplies);
+                    }
+                    else
+                    {
+                        encodedReplies = String.format($htmlEncode(Srch.Res.item_NoReplies), encodedReplies);
+                    }
+_#-->
+                    <div id="_#= $htmlEncode(id + Srch.U.Ids.replies) =#_" class="ms-metadata ms-srch-item-metadataText">
+                        _#= encodedReplies =#_
+                    </div>
+<!--#_
+                    var likesCount = 0;
+                    if (!$isNull(ctx.CurrentItem.DiscussionLikesCount))
+                    {
+                        likesCount = ctx.CurrentItem.DiscussionLikesCount;
+                    }
+                    else if (!$isNull(ctx.CurrentItem.LikesCount))
+                    {
+                        likesCount = ctx.CurrentItem.LikesCount;
+                    }
+
+                    var likes = likesCount.toString();
+                    if(likesCount > maxMetadataValue)
+                    {
+                        likes = String.format(Srch.Res.item_MoreThan, maxMetadataValue);
+                    }
+
+                    var encodedLikes = "<span class='ms-srch-metadataText-emphasis'>" + $htmlEncode(likes) + "</span>";
+                    if(likesCount == 1)
+                    {
+                        encodedLikes = String.format($htmlEncode(Srch.Res.item_Like), encodedLikes);
+                    }
+                    else if(likesCount > 1)
+                    {
+                        encodedLikes = String.format($htmlEncode(Srch.Res.item_Likes), encodedLikes);
+                    }
+                    else
+                    {
+                        encodedLikes = String.format($htmlEncode(Srch.Res.item_NoLikes), encodedLikes);
+                    }
+_#-->
+                    <div id="_#= $htmlEncode(id + Srch.U.Ids.likes) =#_" class="ms-metadata  ms-srch-item-metadataText ms-srch-metadataText-extraVerticalPadded">
+                        _#= encodedLikes =#_
+                    </div>
+                </div>
+<!--#_
+            }
+_#-->
+            </div>
+
+            <div id="_#= $htmlEncode(hoverId) =#_" class="ms-srch-hover-outerContainer"></div>
+        </div>
+<!--#_
+        }
+_#-->
+    </div>
+
+</body>
+</html>

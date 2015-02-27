@@ -1,0 +1,32 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Feature  Id="A942A218-FA43-4d11-9D85-C01E3E3A37CB"
+          Title="$Resources:cmscore,EnterpriseWikiLayouts_Feature_Title;"
+          Description="$Resources:cmscore,EnterpriseWikiLayouts_Feature_Description;"
+          Version="15.0.1.0"
+          Scope="Site"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          ReceiverAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Publishing.EnterpriseWikiSiteFeatureHandler"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="EnterpriseWikiContentTypes.xml"/>
+        <ElementManifest Location="ProvisionedFiles.xml"/>
+        <ElementManifest Location="EnterpriseWikiContentTypes2.xml"/>
+        <ElementManifest Location="ProvisionedFiles2.xml"/>
+    </ElementManifests>
+    <UpgradeActions>
+        <VersionRange EndVersion="14.0.2.0">
+            <ApplyElementManifests>
+                <ElementManifest Location="EnterpriseWikiContentTypes2.xml"/>
+                <ElementManifest Location="ProvisionedFiles2.xml"/>
+            </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.1.0">
+            <ApplyElementManifests>
+                <ElementManifest Location="EnterpriseWikiContentTypes.xml"/>
+            </ApplyElementManifests>
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EmailContent>
+  <Subject>
+    $ResourcesNoEncode:core,UpgradeFailedSubject;
+  </Subject>
+  <Body>
+    <HTML>
+      <![CDATA[<html>
+      <body>
+      <h3>$Resources:core,UpgradeFailedH3;</h3>
+      <p>]]>
+    </HTML>
+    $ResourcesNoEncode:core,UpgradeFailedP1;
+    <HTML>
+      <![CDATA[</p>
+      <h3>$Resources:core,EvalSitesImportantTasks;</h3>
+      <p>$Resources:core,UpgradeFailedP2;</p>
+      <ol>
+      <li>$Resources:core,UpgradeFailedLi1Part1;]]>
+    </HTML>
+    $ResourcesNoEncode:core,UpgradeStatusPage;
+    <HTML>
+      <![CDATA[</li>
+      <li>$Resources:core,UpgradeFailedLi2;</li>
+      <li>$Resources:core,UpgradeFailedLi3;</li>
+      </ol>
+      </body>
+      </html>
+      ]]>
+    </HTML>
+  </Body>
+</EmailContent>

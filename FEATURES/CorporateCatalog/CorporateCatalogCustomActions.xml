@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction 
+    Id="Marketplace.CorporateCatalog.AppActions" 
+    RegistrationType="List"
+    RegistrationId="330"
+    Rights="AddAndCustomizePages,AddListItems,ApproveItems,BrowseDirectories,DeleteListItems,DeleteVersions,EditListItems,ManagePermissions,ManageSubwebs,ManageWeb,Open,ViewListItems,ViewPages"
+    Location="CommandUI.Ribbon">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.Documents.Groups._children">
+          <Group 
+            Id="Ribbon.Documents.AppActions"
+            Title="$Resources:core,cui_Marketplace_CorporateCuratedGallery_AppActions_GroupTitle;"
+            Description="$Resource:core,cui_Marketplace_CorporateCuratedGallery_AppActions_GroupDescription;"
+            Sequence="25"
+            Template="Ribbon.Templates.Flexible2">
+            <Controls Id="Ribbon.Documents.AppActions.Controls">
+              <Button 
+                Id="Ribbon.Documents.AppActions.ViewAppDetails"
+                Sequence="10"
+                Command="CorporateCuratedGallery.OEAppActions.ViewAppDetails"
+                LabelText="$Resources:core,cui_Marketplace_CorporateCuratedGallery_ViewAppDetailsButtonTitle;"
+                Image16by16="/_layouts/15/images/stsappcatalogribbon16x16.png?rev=23"
+                Image16by16Top="-1"
+                Image16by16Left="-1"
+                Image32by32="/_layouts/15/images/stsappcatalogribbon32x32.png?rev=23"
+                Image32by32Top="-1"
+                Image32by32Left="-1"
+                Alt="$Resources:core,cui_Marketplace_CorporateCuratedGallery_ViewAppDetailsButtonTitle;"
+                ToolTipTitle="$Resources:core,cui_Marketplace_CorporateCuratedGallery_ViewAppDetailsButtonToolTipTitle;"
+                ToolTipDescription="$Resources:core,cui_Marketplace_CorporateCuratedGallery_ViewAppDetailsButtonToolTipDescription;" 
+                TemplateAlias="o1"/>
+              <Button 
+                Id="Ribbon.Documents.AppActions.ManageInstalledApps"
+                Sequence="20"
+                Command="CorporateCuratedGallery.OEAppActions.ManageInstalledApps"
+                LabelText="$Resources:core,cui_Marketplace_CorporateCuratedGallery_ManageInstalledAppsButtonTitle;"
+                Image16by16="/_layouts/15/images/stsappcatalogribbon16x16.png?rev=23"
+                Image16by16Top="-1"
+                Image16by16Left="-19"
+                Image32by32="/_layouts/15/images/stsappcatalogribbon32x32.png?rev=23"
+                Image32by32Top="-1"
+                Image32by32Left="-35"
+                Alt="$Resources:core,cui_Marketplace_CorporateCuratedGallery_ManageInstalledAppsButtonTitle;"
+                ToolTipTitle="$Resources:core,cui_Marketplace_CorporateCuratedGallery_ManageInstalledAppsButtonToolTipTitle;"
+                ToolTipDescription="$Resources:core,cui_Marketplace_CorporateCuratedGallery_ManageInstalledAppsButtonToolTipDescription;" 
+                TemplateAlias="o1"/>
+            </Controls>
+          </Group>
+        </CommandUIDefinition>
+        <CommandUIDefinition Location="Ribbon.Documents.Scaling._children">
+          <MaxSize
+            Id="Ribbon.Documents.Scaling.OfficeExtensionAppActions.MaxSize"
+            GroupId="Ribbon.Documents.AppActions"
+            Sequence="25"
+            Size="LargeLarge"/>
+        </CommandUIDefinition>
+        <CommandUIDefinition Location="Ribbon.Documents.Scaling._children">
+          <Scale
+            Id="Ribbon.Documents.Scaling.OfficeExtensionAppActions.MediumMedium"
+            GroupId="Ribbon.Documents.AppActions"
+            Sequence="155"
+            Size="MediumMedium"/>
+        </CommandUIDefinition>
+        <CommandUIDefinition Location="Ribbon.Documents.Scaling._children">
+          <Scale 
+            Id="Ribbon.Documents.Scaling.OfficeExtensionAppActions.Popup" 
+            Sequence="200" 
+            GroupId="Ribbon.Documents.AppActions" 
+            Size="Popup" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+        <CommandUIHandlers>
+          <CommandUIHandler
+            Command="CorporateCuratedGallery.OEAppActions.ViewAppDetails"
+            CommandAction="javascript:
+                function OnCSOMQuerySucceeded(sender, args) {
+                    var uniqueId = listItem.get_item('UniqueId')
+                    var sourceUrl = SP.Utilities.Utility.getLayoutsPageUrl('viewlsts.aspx');
+                    var url = SP.Utilities.Utility.getLayoutsPageUrl('storefront.aspx?Source=' + sourceUrl + '#app=' + uniqueId + ',clg=1,vw=AppDetailsView');
+                    var minimalDownloadFlag = g_MinimalDownload;
+                    g_MinimalDownload = false;
+                    STSNavigate(url);
+                    g_MinimalDownload = minimalDownloadFlag;
+                }
+                function OnCSOMQueryFailed() {
+                }
+                function GetItemID() {
+                    var selectedItems = SP.ListOperation.Selection.getSelectedItems();
+                    var count = CountDictionary(selectedItems);
+                    if (count > 0) {
+                        return selectedItems[0].id;
+                    } else {
+                        return null;
+                    }
+                }
+                var id = GetItemID();
+                if (id != null) {
+                    context = SP.ClientContext.get_current();
+                    var listId = SP.ListOperation.Selection.getSelectedList();
+                    var corporateCatalog = context.get_web().get_lists().getById(listId);
+                    listItem = corporateCatalog.getItemById(id);
+                    context.load(listItem);
+                    context.executeQueryAsync(OnCSOMQuerySucceeded, OnCSOMQueryFailed);
+                }"
+            EnabledScript="javascript:
+                function OnSelectedItemQuerySucceeded(sender, args) {
+                    var isValid = listItem.get_item('IsValidAppPackage');
+                    window.itemState[listItem.get_id()] = isValid;
+                    RefreshCommandUI();
+                }
+                function OnSelectedItemQueryFailed() {
+                }
+                function checkIsEnabled() { 
+                    var selectedItems = SP.ListOperation.Selection.getSelectedItems(); 
+                    var count = CountDictionary(selectedItems); 
+                    if(count == 1) {
+                        if(IsNullOrUndefined(window.itemState[selectedItems[0].id]))
+                        {
+                            context = SP.ClientContext.get_current();
+                            var listId = SP.ListOperation.Selection.getSelectedList();
+                            var corporateCatalog = context.get_web().get_lists().getById(listId);
+                            listItem = corporateCatalog.getItemById(selectedItems[0].id);
+                            context.load(listItem);
+                            context.executeQueryAsync(OnSelectedItemQuerySucceeded, OnSelectedItemQueryFailed);
+                            return false;
+                        }
+                        else
+                        {
+                            return window.itemState[selectedItems[0].id];
+                        }
+                    }
+                }
+                if (undefined == window.itemState){
+                    window.itemState = [];
+                }
+                checkIsEnabled();" 
+          />
+          <CommandUIHandler
+            Command="CorporateCuratedGallery.OEAppActions.ManageInstalledApps" 
+            CommandAction="~layouts/viewlsts.aspx"
+          />
+        </CommandUIHandlers>
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction 
+    Id="Marketplace.CorporateCatalog.HideNewDocumentButton" 
+    RegistrationType="List"
+    RegistrationId="330"
+    Location="CommandUI.Ribbon">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.Documents.New.NewDocument" />
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <HideCustomAction
+    HideActionId="DeleteWeb"
+    GroupId="SiteTasks"
+    Location="Microsoft.SharePoint.SiteSettings" />
+  <HideCustomAction
+    HideActionId="SaveAsTemplate"
+    GroupId="SiteTasks"
+    Location="Microsoft.SharePoint.SiteSettings" />
+</Elements>

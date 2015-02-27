@@ -1,0 +1,1222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="3082" _version="14.0.4758" _dal="1" -->
+<!-- _LocalBinding -->
+<ns0:RootWorkflowActivityWithData x:Class="Microsoft.SharePoint.Workflow.ROOT" x:Name="ROOT" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow" xmlns:ns1="clr-namespace:Microsoft.Office.Workflow.Actions;Assembly=Microsoft.Office.Workflow.Actions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=null" xmlns:ns2="clr-namespace:Microsoft.SharePoint.WorkflowActions.WithKey;Assembly=Microsoft.SharePoint.WorkflowActions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=null" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:ns0="clr-namespace:Microsoft.SharePoint.WorkflowActions;Assembly=Microsoft.SharePoint.WorkflowActions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <ns0:RootWorkflowActivityWithData.WorkflowFields>
+        <ns0:WorkflowDataField Name="__list" Type="System.String" />
+        <ns0:WorkflowDataField Name="__item" Type="Microsoft.SharePoint.Workflow.SPItemKey" />
+        <ns0:WorkflowDataField Name="__context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" />
+        <ns0:WorkflowDataField Name="__initParams" Type="Microsoft.SharePoint.Workflow.SPWorkflowActivationProperties" />
+        <ns0:WorkflowDataField Name="__workflowId" Type="System.Guid" />
+        <ns0:WorkflowDataField Name="__historylist" Type="System.String" />
+        <ns0:WorkflowDataField Name="__tasklist" Type="System.String" />
+        <ns0:WorkflowDataField Name="NotificationMessage" Type="System.String" />
+        <ns0:WorkflowDataField Name="DueDateforAllTasks" Type="System.DateTime" />
+        <ns0:WorkflowDataField Name="Approvers" Type="System.String" />
+        <ns0:WorkflowDataField Name="CC" Type="System.String" />
+        <ns0:WorkflowDataField Name="DurationUnits" Type="Microsoft.Office.Workflow.Actions.DurationUnit" />
+        <ns0:WorkflowDataField Name="DurationUnitsforEmail" Type="System.String" />
+        <ns0:WorkflowDataField Name="DurationforSerialTasks" Type="System.Double, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+        <ns0:WorkflowDataField Name="ExpandGroups" Type="System.Boolean" />
+        <ns0:WorkflowDataField Name="CancelonRejection" Type="System.Boolean" />
+        <ns0:WorkflowDataField Name="EnableContentApproval" Type="System.Boolean" />
+        <ns0:WorkflowDataField Name="CancelonChange" Type="System.Boolean" />
+        <ns0:WorkflowDataField Name="InternetLink" Type="System.String" />
+        <ns0:WorkflowDataField Name="DurationDescription" Type="System.String" />
+        <ns0:WorkflowDataField Name="InitialDueDate" Type="System.String" />
+        <ns0:WorkflowDataField Name="IsItemApproved" Type="System.Boolean" />
+        <ns0:WorkflowDataField Name="IsItemDeleted" Type="System.Boolean" />
+        <ns0:WorkflowDataField Name="CompletionReason" Type="System.String" />
+        <ns0:WorkflowDataField Name="CompletionMailTitle" Type="System.String" />
+    </ns0:RootWorkflowActivityWithData.WorkflowFields>
+    <ns0:OnWorkflowActivated x:Name="ID1" WorkflowProperties="{ActivityBind ROOT,Path=__initParams}">
+        <ns0:OnWorkflowActivated.CorrelationToken>
+            <wf0:CorrelationToken OwnerActivityName="ROOT" Name="refObject" xmlns:wf0="http://schemas.microsoft.com/winfx/2006/xaml/workflow" />
+        </ns0:OnWorkflowActivated.CorrelationToken>
+    </ns0:OnWorkflowActivated>
+    <ns0:ApplyActivation x:Name="ID2" __Context="{ActivityBind ROOT,Path=__context}" __WorkflowProperties="{ActivityBind ROOT,Path=__initParams}" />
+    <SequenceActivity x:Name="ID3" Description="Step 1">
+        <ns2:LookupActivity x:Name="ID10360" __Context="{ActivityBind ROOT,Path=__context}" FieldName="ItemName" ListItem="{ActivityBind ROOT,Path=__item}" LookupFunction="WILookupString" ListId="" />
+        <ns0:CoerceStringActivity x:Name="ID10359" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+            <ns0:CoerceStringActivity.Value>
+                <ActivityBind Name="ID10360" Path="ReturnValue" />
+            </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10358" __Context="{ActivityBind ROOT,Path=__context}" Value="Apruebe [%ID10359.ReturnValue%]" />
+        <ns0:ClearArrayListActivity x:Name="ID10355" ReturnValue="{x:Null}" />
+        <ns0:CoerceStringActivity x:Name="ID10357" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="MultiEmailAddressSemicolon">
+            <ns0:CoerceStringActivity.Value>
+                <ActivityBind Name="ROOT" Path="CC" />
+            </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:AddToArrayListActivity x:Name="ID10356" ReturnValue="{ActivityBind ID10355,Path=ReturnValue}" Value="{ActivityBind ID10357,Path=ReturnValue}" />
+        <ns0:CoerceDoubleActivity x:Name="ID10361" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNDouble">
+            <ns0:CoerceDoubleActivity.Value>
+                <ActivityBind Name="ROOT" Path="DurationforSerialTasks" />
+            </ns0:CoerceDoubleActivity.Value>
+        </ns0:CoerceDoubleActivity>
+        <ns0:CoerceDateTimeActivity x:Name="ID10362" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNDateTime">
+            <ns0:CoerceDateTimeActivity.Value>
+                <ActivityBind Name="ROOT" Path="DueDateforAllTasks" />
+            </ns0:CoerceDateTimeActivity.Value>
+        </ns0:CoerceDateTimeActivity>
+        <ns1:ApprovalTaskProcess SendDefaultTaskNotifications="False" __Context="{ActivityBind ROOT,Path=__context}" Comments="{ActivityBind ROOT,Path=NotificationMessage}" DurationUnit="{ActivityBind ROOT,Path=DurationUnits}" PermissionSet="Default" __ActivationProperties="{ActivityBind ROOT,Path=__initParams}" ContentTypeId="0x01080100C9C9515DE4E24001905074F980F93160003A15057E2AF34B67B32E14B94EB70C0A" ExpandGroups="{ActivityBind ROOT,Path=ExpandGroups}" CC="{ActivityBind ID10355,Path=ReturnValue}" Description="ShapeGuid={B5AB0289-7893-488F-883A-EB70EA13067E};PageId=0;ShapeId=19;" AssignedTo="{ActivityBind ROOT,Path=Approvers}" Subject="{ActivityBind ID10358,Path=ReturnValue}" OverdueRepeatTimes="-1" DeleteTasksOnComplete="False" Outcomes="Aprobado,Aprobar;Rechazado,Rechazar" ListId="{ActivityBind ROOT,Path=__list}" AllowReassign="True" OverdueRepeat="Weekly" x:Name="ID4" TaskProcessOwner="{x:Null}" DueDate="{ActivityBind ID10362,Path=ReturnValue}" Duration="{ActivityBind ID10361,Path=ReturnValue}" TaskProcessName="Aprobación" AllowChangeRequest="True" TaskDeletedOutcome="Rechazado" ItemId="{ActivityBind ROOT,Path=__item}">
+        <ns1:OnTaskProcessStarted x:Name="ID5" Description="Cuando se inicia el proceso de tarea">
+        <IfElseActivity x:Name="ID2100">
+        <IfElseBranchActivity x:Name="ID2101">
+        <IfElseBranchActivity.Condition>
+        <RuleConditionReference ConditionName="__Rule_ID2000" />
+        </IfElseBranchActivity.Condition>
+        <ns0:SetVariableActivity x:Name="ID2102" ValueType="System.String">
+        <ns0:SetVariableActivity.Variable>
+        <ActivityBind Name="ROOT" Path="DurationUnitsforEmail" />
+        </ns0:SetVariableActivity.Variable>
+        <ns0:SetVariableActivity.Value>
+        <ns2:String xmlns:ns2="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">días</ns2:String>
+        </ns0:SetVariableActivity.Value>
+        </ns0:SetVariableActivity>
+        </IfElseBranchActivity>
+        <IfElseBranchActivity x:Name="ID2103">
+        <IfElseBranchActivity.Condition>
+        <RuleConditionReference ConditionName="__Rule_ID2001" />
+        </IfElseBranchActivity.Condition>
+        <ns0:SetVariableActivity x:Name="ID2104" ValueType="System.String">
+        <ns0:SetVariableActivity.Variable>
+        <ActivityBind Name="ROOT" Path="DurationUnitsforEmail" />
+        </ns0:SetVariableActivity.Variable>
+        <ns0:SetVariableActivity.Value>
+        <ns2:String xmlns:ns2="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">semanas</ns2:String>
+        </ns0:SetVariableActivity.Value>
+        </ns0:SetVariableActivity>
+        </IfElseBranchActivity>
+        <IfElseBranchActivity x:Name="ID2105">
+        <ns0:SetVariableActivity x:Name="ID2106" ValueType="System.String">
+        <ns0:SetVariableActivity.Variable>
+        <ActivityBind Name="ROOT" Path="DurationUnitsforEmail" />
+        </ns0:SetVariableActivity.Variable>
+        <ns0:SetVariableActivity.Value>
+        <ns2:String xmlns:ns2="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">meses</ns2:String>
+        </ns0:SetVariableActivity.Value>
+        </ns0:SetVariableActivity>
+        </IfElseBranchActivity>
+        </IfElseActivity>
+        <IfElseActivity x:Name="ID10624">
+        <IfElseBranchActivity x:Name="ID10625">
+        <IfElseBranchActivity.Condition>
+        <RuleConditionReference ConditionName="__Rule_ID10625" />
+        </IfElseBranchActivity.Condition>
+        <IfElseActivity x:Name="ID10626">
+        <IfElseBranchActivity x:Name="ID10627">
+        <IfElseBranchActivity.Condition>
+        <RuleConditionReference ConditionName="__Rule_ID10627" />
+        </IfElseBranchActivity.Condition>
+        <ns1:SetTaskProcessItemModerationStatus x:Name="ID1138" Comments="{x:Null}" __Context="{ActivityBind ROOT,Path=__context}" ModerationStatus="Pending" />
+        </IfElseBranchActivity>
+        </IfElseActivity>
+        </IfElseBranchActivity>
+        </IfElseActivity>
+        <ns0:SetVariableActivity x:Name="ID10260" ValueType="System.Boolean">
+        <ns0:SetVariableActivity.Variable>
+        <ActivityBind Name="ROOT" Path="IsItemApproved" />
+        </ns0:SetVariableActivity.Variable>
+        <ns0:SetVariableActivity.Value>
+        <ns3:Boolean xmlns:ns3="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">false</ns3:Boolean>
+        </ns0:SetVariableActivity.Value>
+        </ns0:SetVariableActivity>
+        <ns0:SetVariableActivity x:Name="ID11067" ValueType="System.Boolean">
+        <ns0:SetVariableActivity.Variable>
+        <ActivityBind Name="ROOT" Path="IsItemDeleted" />
+        </ns0:SetVariableActivity.Variable>
+        <ns0:SetVariableActivity.Value>
+        <ns3:Boolean xmlns:ns3="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">false</ns3:Boolean>
+        </ns0:SetVariableActivity.Value>
+        </ns0:SetVariableActivity>
+        <IfElseActivity x:Name="ID10589">
+        <IfElseBranchActivity x:Name="ID10590">
+        <IfElseBranchActivity.Condition>
+        <RuleConditionReference ConditionName="__Rule_ID10590" />
+        </IfElseBranchActivity.Condition>
+        <ns0:CoerceStringActivity x:Name="ID10622" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ROOT" Path="DurationforSerialTasks" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10623" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ROOT" Path="DurationUnitsforEmail" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10621" __Context="{ActivityBind ROOT,Path=__context}" Value="Cada persona obtendrá [%ID10622.ReturnValue%] [%ID10623.ReturnValue%]" />
+        <ns0:SetVariableActivity x:Name="ID10591" ValueType="System.String">
+        <ns0:SetVariableActivity.Variable>
+        <ActivityBind Name="ROOT" Path="DurationDescription" />
+        </ns0:SetVariableActivity.Variable>
+        <ns0:SetVariableActivity.Value>
+        <ActivityBind Name="ID10621" Path="ReturnValue" />
+        </ns0:SetVariableActivity.Value>
+        </ns0:SetVariableActivity>
+        </IfElseBranchActivity>
+        </IfElseActivity>
+        <IfElseActivity x:Name="ID10976">
+        <IfElseBranchActivity x:Name="ID10977">
+        <IfElseBranchActivity.Condition>
+        <RuleConditionReference ConditionName="__Rule_ID10977" />
+        </IfElseBranchActivity.Condition>
+        <ns0:SetVariableActivity x:Name="ID10983" ValueType="System.String">
+        <ns0:SetVariableActivity.Variable>
+        <ActivityBind Name="ROOT" Path="InitialDueDate" />
+        </ns0:SetVariableActivity.Variable>
+        <ns0:SetVariableActivity.Value>
+        <ns3:String xmlns:ns3="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">Ninguna</ns3:String>
+        </ns0:SetVariableActivity.Value>
+        </ns0:SetVariableActivity>
+        </IfElseBranchActivity>
+        <IfElseBranchActivity x:Name="ID10978">
+        <ns0:CoerceStringActivity x:Name="ID10981" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DateTimeToStringShortDate">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ROOT" Path="DueDateforAllTasks" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10982" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DateTimeToStringLongTime">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ROOT" Path="DueDateforAllTasks" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10980" __Context="{ActivityBind ROOT,Path=__context}" Value="[%ID10981.ReturnValue%] [%ID10982.ReturnValue%]" />
+        <ns0:SetVariableActivity x:Name="ID10979" ValueType="System.String">
+        <ns0:SetVariableActivity.Variable>
+        <ActivityBind Name="ROOT" Path="InitialDueDate" />
+        </ns0:SetVariableActivity.Variable>
+        <ns0:SetVariableActivity.Value>
+        <ActivityBind Name="ID10980" Path="ReturnValue" />
+        </ns0:SetVariableActivity.Value>
+        </ns0:SetVariableActivity>
+        </IfElseBranchActivity>
+        </IfElseActivity>
+        <ns0:ClearArrayListActivity x:Name="ID10468" ReturnValue="{x:Null}" />
+        <ns2:LookupActivity x:Name="ID10471" __Context="{ActivityBind ROOT,Path=__context}" FieldName="InitiatorUser" ListItem="{ActivityBind ROOT,Path=__item}" LookupFunction="WILookupUser" ListId="" />
+        <ns0:CoerceStringActivity x:Name="ID10470" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10471" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:AddToArrayListActivity x:Name="ID10469" ReturnValue="{ActivityBind ID10468,Path=ReturnValue}" Value="{ActivityBind ID10470,Path=ReturnValue}" />
+        <ns0:ClearArrayListActivity x:Name="ID10472" ReturnValue="{x:Null}" />
+        <ns0:CoerceStringActivity x:Name="ID10474" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="MultiEmailAddressSemicolon">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="CCList" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:AddToArrayListActivity x:Name="ID10473" ReturnValue="{ActivityBind ID10472,Path=ReturnValue}" Value="{ActivityBind ID10474,Path=ReturnValue}" />
+        <ns0:CoerceStringActivity x:Name="ID10476" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="TaskProcessName" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10478" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemTitleNotEncoded" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10475" __Context="{ActivityBind ROOT,Path=__context}" Value="Se empezó [%ID10476.ReturnValue%] en [%ID10478.ReturnValue%]." />
+        <ns0:CoerceStringActivity x:Name="ID10480" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="TaskProcessName" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10482" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="WebURL" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10483" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemURL" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10484" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemTitle" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10485" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="MultiDisplayNameSemicolon">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ParticipantList" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10486" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ROOT" Path="InitialDueDate" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10488" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ROOT" Path="DurationDescription" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10490" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="WebURL" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10491" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemURL" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10492" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemTitle" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns2:LookupActivity x:Name="ID10494" __Context="{ActivityBind ROOT,Path=__context}" FieldName="WorkflowStatusUrl" ListItem="{ActivityBind ROOT,Path=__item}" LookupFunction="WILookupString" ListId="" />
+        <ns0:CoerceStringActivity x:Name="ID10493" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10494" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10479" __Context="{ActivityBind ROOT,Path=__context}" Value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 3.2//EN&quot;&gt;&lt;HTML DIR=&quot;none&quot;&gt;&lt;HEAD&gt;&lt;META NAME=&quot;Generator&quot; CONTENT=&quot;MS Exchange Server version 08.01.0240.003&quot;&gt;&lt;TITLE&gt;&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;&lt;!-- Converted from text/rtf format --&gt;&lt;P&gt;&lt;FONT SIZE=4 FACE=&quot;Calibri&quot;&gt;&lt;B&gt;&lt;I&gt;[%ID10480.ReturnValue%]&lt;/I&gt;&lt;/B&gt; se inició en &lt;A HREF=&quot;[%ID10482.ReturnValue%]/[%ID10483.ReturnValue%]&quot;&gt;[%ID10484.ReturnValue%]&lt;/A&gt;.&lt;/P&gt;&lt;FONT SIZE=2 FACE=&quot;Calibri&quot;&gt;&lt;P&gt;Los participantes son [%ID10485.ReturnValue%]&lt;BR&gt;Vence el [%ID10486.ReturnValue%]&lt;/P&gt;&lt;P&gt;Cada persona recibirá una tarea para aprobar &lt;A HREF=&quot;[%ID10490.ReturnValue%]/[%ID10491.ReturnValue%]&quot;&gt;[%ID10492.ReturnValue%]&lt;/A&gt;. Las tareas se asignarán de una en una a los participantes que figuran arriba.&lt;/P&gt;&lt;BR&gt;&lt;P&gt;&lt;FONT COLOR=&quot;#BFBFBF&quot;&gt;__________________________________________________&lt;/FONT&gt;&lt;/P&gt;&lt;P&gt;&lt;A HREF=&quot;[%ID10493.ReturnValue%]&quot;&gt;Ver el estado de este flujo de trabajo.&lt;/A&gt;&lt;/P&gt;&lt;/FONT&gt;&lt;/BODY&gt;&lt;/HTML&gt;" />
+        <ns0:EmailActivity x:Name="ID13" __Context="{ActivityBind ROOT,Path=__context}" To="{ActivityBind ID10468,Path=ReturnValue}" Subject="{ActivityBind ID10475,Path=ReturnValue}" BCC="{x:Null}" CC="{ActivityBind ID10472,Path=ReturnValue}" Body="{ActivityBind ID10479,Path=ReturnValue}" />
+        <ns0:CoerceStringActivity x:Name="ID10496" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="TaskProcessName" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10498" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="MultiDisplayNameSemicolon">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ParticipantList" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10495" __Context="{ActivityBind ROOT,Path=__context}" Value="Se inició [%ID10496.ReturnValue%]. Participantes: [%ID10498.ReturnValue%]" />
+        <ns2:LookupActivity x:Name="ID10570" __Context="{ActivityBind ROOT,Path=__context}" FieldName="InitiatorUser" ListItem="{ActivityBind ROOT,Path=__item}" LookupFunction="WILookupUser" ListId="" />
+        <ns0:CoerceIntActivity x:Name="ID10569" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="UserIDAsInteger">
+        <ns0:CoerceIntActivity.Value>
+        <ActivityBind Name="ID10570" Path="ReturnValue" />
+        </ns0:CoerceIntActivity.Value>
+        </ns0:CoerceIntActivity>
+        <ns0:LogToHistoryListActivity x:Name="ID235" UserId="{ActivityBind ID10569,Path=ReturnValue}" Duration="00:00:00" HistoryOutcome="{x:Null}" OtherData="{x:Null}" EventId="WorkflowStarted" HistoryDescription="{ActivityBind ID10495,Path=ReturnValue}" />
+        <IfElseActivity x:Name="ID150">
+        <IfElseBranchActivity x:Name="ID151">
+        <IfElseBranchActivity.Condition>
+        <RuleConditionReference ConditionName="__Rule_ID10361" />
+        </IfElseBranchActivity.Condition>
+        <ns0:CoerceStringActivity x:Name="ID152" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemExternalURL" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID153" __Context="{ActivityBind ROOT,Path=__context}" Value="(Haga clic &lt;a href=&quot;[%ID152.ReturnValue%]&quot;&gt;aquí&lt;/a&gt; para tener acceso a este elemento desde Internet)." />
+        <ns0:SetVariableActivity x:Name="ID154" ValueType="System.String">
+        <ns0:SetVariableActivity.Variable>
+        <ActivityBind Name="ROOT" Path="InternetLink" />
+        </ns0:SetVariableActivity.Variable>
+        <ns0:SetVariableActivity.Value>
+        <ActivityBind Name="ID153" Path="ReturnValue" />
+        </ns0:SetVariableActivity.Value>
+        </ns0:SetVariableActivity>
+        </IfElseBranchActivity>
+        </IfElseActivity>
+        <ns0:CoerceStringActivity x:Name="ID11013" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="TaskProcessName" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID11014" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemTitleNotEncoded" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID11012" __Context="{ActivityBind ROOT,Path=__context}" Value="[%ID11013.ReturnValue%] se completó en [%ID11014.ReturnValue%]." />
+        <ns0:SetVariableActivity x:Name="ID11008" ValueType="System.String">
+        <ns0:SetVariableActivity.Variable>
+        <ActivityBind Name="ROOT" Path="CompletionMailTitle" />
+        </ns0:SetVariableActivity.Variable>
+        <ns0:SetVariableActivity.Value>
+        <ActivityBind Name="ID11012" Path="ReturnValue" />
+        </ns0:SetVariableActivity.Value>
+        </ns0:SetVariableActivity>
+        </ns1:OnTaskProcessStarted>
+        <ns1:OnTaskProcessPending x:Name="ID6" Description="Cuando el proceso de tarea está en ejecución">
+        <ParallelActivity x:Name="ID1144">
+        <SequenceActivity x:Name="ID1152">
+        <SequenceActivity x:Name="ID1151" Description="Cuando se elimina el elemento">
+        <ns1:WaitForItemDeleted x:Name="ID1153" __Context="{ActivityBind ROOT,Path=__context}" />
+        <ns0:CoerceStringActivity x:Name="ID11023" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="TaskProcessName" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID11022" __Context="{ActivityBind ROOT,Path=__context}" Value="[%ID11023.ReturnValue%] se completó." />
+        <ns0:SetVariableActivity x:Name="ID11021" ValueType="System.Boolean">
+        <ns0:SetVariableActivity.Variable>
+        <ActivityBind Name="ROOT" Path="IsItemDeleted" />
+        </ns0:SetVariableActivity.Variable>
+        <ns0:SetVariableActivity.Value>
+        <ns3:Boolean xmlns:ns3="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">true</ns3:Boolean>
+        </ns0:SetVariableActivity.Value>
+        </ns0:SetVariableActivity>
+        <ns0:CoerceStringActivity x:Name="ID11026" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="TaskProcessName" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID11025" __Context="{ActivityBind ROOT,Path=__context}" Value="[%ID11026.ReturnValue%] finalizó porque se eliminó el elemento en el que se está ejecutando el proceso de aprobación." />
+        <ns0:SetVariableActivity x:Name="ID11024" ValueType="System.String">
+        <ns0:SetVariableActivity.Variable>
+        <ActivityBind Name="ROOT" Path="CompletionReason" />
+        </ns0:SetVariableActivity.Variable>
+        <ns0:SetVariableActivity.Value>
+        <ActivityBind Name="ID11025" Path="ReturnValue" />
+        </ns0:SetVariableActivity.Value>
+        </ns0:SetVariableActivity>
+        <ns1:EndTaskProcess x:Name="ID10216" />
+        </SequenceActivity>
+        </SequenceActivity>
+        <SequenceActivity x:Name="ID1159">
+        <SequenceActivity x:Name="ID1158" Description="Cuando se cambia el elemento">
+        <IfElseActivity x:Name="ID1167">
+        <IfElseBranchActivity x:Name="ID1168">
+        <IfElseBranchActivity.Condition>
+        <RuleConditionReference ConditionName="__Rule_ID1168" />
+        </IfElseBranchActivity.Condition>
+        <ns1:WaitForItemChanged x:Name="ID1169" __Context="{ActivityBind ROOT,Path=__context}" />
+        <ns0:CoerceStringActivity x:Name="ID10509" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="TaskProcessName" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10511" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemTitle" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10508" __Context="{ActivityBind ROOT,Path=__context}" Value="[%ID10509.ReturnValue%] en [%ID10511.ReturnValue%] finalizó porque se modificó el elemento en el que se está ejecutando el proceso de tareas." />
+        <ns0:SetVariableActivity x:Name="ID10263" ValueType="System.String">
+        <ns0:SetVariableActivity.Variable>
+        <ActivityBind Name="ROOT" Path="CompletionReason" />
+        </ns0:SetVariableActivity.Variable>
+        <ns0:SetVariableActivity.Value>
+        <ActivityBind Name="ID10508" Path="ReturnValue" />
+        </ns0:SetVariableActivity.Value>
+        </ns0:SetVariableActivity>
+        <ns1:EndTaskProcess x:Name="ID10215" />
+        </IfElseBranchActivity>
+        </IfElseActivity>
+        </SequenceActivity>
+        </SequenceActivity>
+        </ParallelActivity>
+        </ns1:OnTaskProcessPending>
+        <ns1:OnTaskProcessCanceled x:Name="ID9999" Description="Cuando se cancela el proceso de tarea">
+        <IfElseActivity x:Name="ID11031">
+        <IfElseBranchActivity x:Name="ID11032">
+        <IfElseBranchActivity.Condition>
+        <RuleConditionReference ConditionName="__Rule_ID11032" />
+        </IfElseBranchActivity.Condition>
+        <IfElseActivity x:Name="ID11033">
+        <IfElseBranchActivity x:Name="ID11034">
+        <IfElseBranchActivity.Condition>
+        <RuleConditionReference ConditionName="__Rule_ID11034" />
+        </IfElseBranchActivity.Condition>
+        <ns1:SetTaskProcessItemModerationStatus x:Name="ID11035" Comments="{x:Null}" __Context="{ActivityBind ROOT,Path=__context}" ModerationStatus="Denied" />
+        </IfElseBranchActivity>
+        </IfElseActivity>
+        </IfElseBranchActivity>
+        </IfElseActivity>
+        <ns0:ClearArrayListActivity x:Name="ID10512" ReturnValue="{x:Null}" />
+        <ns2:LookupActivity x:Name="ID10515" __Context="{ActivityBind ROOT,Path=__context}" FieldName="InitiatorUser" ListItem="{ActivityBind ROOT,Path=__item}" LookupFunction="WILookupUser" ListId="" />
+        <ns0:CoerceStringActivity x:Name="ID10514" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10515" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:AddToArrayListActivity x:Name="ID10513" ReturnValue="{ActivityBind ID10512,Path=ReturnValue}" Value="{ActivityBind ID10514,Path=ReturnValue}" />
+        <ns0:CoerceStringActivity x:Name="ID10517" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="TaskProcessName" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10519" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemTitleNotEncoded" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10516" __Context="{ActivityBind ROOT,Path=__context}" Value="Se completó [%ID10517.ReturnValue%] en [%ID10519.ReturnValue%]." />
+        <ns0:CoerceStringActivity x:Name="ID10521" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="TaskProcessName" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10523" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="WebURL" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10524" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemURL" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10525" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemTitle" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10526" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="TaskProcessName" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10528" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemTitle" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns2:LookupActivity x:Name="ID10530" __Context="{ActivityBind ROOT,Path=__context}" FieldName="CurrentUser" ListItem="{ActivityBind ROOT,Path=__item}" LookupFunction="WILookupUser" ListId="" />
+        <ns0:CoerceStringActivity x:Name="ID10529" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DisplayNameAsText">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10530" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns2:LookupActivity x:Name="ID10532" __Context="{ActivityBind ROOT,Path=__context}" FieldName="WorkflowStatusUrl" ListItem="{ActivityBind ROOT,Path=__item}" LookupFunction="WILookupString" ListId="" />
+        <ns0:CoerceStringActivity x:Name="ID10531" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10532" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10520" __Context="{ActivityBind ROOT,Path=__context}" Value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 3.2//EN&quot;&gt;&lt;HTML DIR=&quot;none&quot;&gt;&lt;HEAD&gt;&lt;META NAME=&quot;Generator&quot; CONTENT=&quot;MS Exchange Server version 08.01.0240.003&quot;&gt;&lt;TITLE&gt;&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;&lt;!-- Converted from text/rtf format --&gt;&lt;P&gt;&lt;FONT SIZE=4 FACE=&quot;Calibri&quot;&gt;&lt;B&gt;&lt;I&gt;[%ID10521.ReturnValue%]&lt;/I&gt;&lt;/B&gt; se ha completado en &lt;A HREF=&quot;[%ID10523.ReturnValue%]/[%ID10524.ReturnValue%]&quot;&gt;[%ID10525.ReturnValue%]&lt;/A&gt;.&lt;/P&gt;&lt;FONT SIZE=2 FACE=&quot;Calibri&quot;&gt;&lt;P&gt;Finalizó [%ID10526.ReturnValue%] en[%ID10528.ReturnValue%] porque  [%ID10529.ReturnValue%] canceló el flujo de trabajo.&lt;/P&gt;&lt;BR&gt;&lt;P&gt;&lt;FONT COLOR=&quot;#BFBFBF&quot;&gt;__________________________________________________&lt;/FONT&gt;&lt;/P&gt;&lt;P&gt;&lt;A HREF=&quot;[%ID10531.ReturnValue%]&quot;&gt;Ver el historial del flujo de trabajo.&lt;/A&gt;&lt;/P&gt;&lt;/FONT&gt;&lt;/BODY&gt;&lt;/HTML&gt;" />
+        <ns0:EmailActivity x:Name="ID10022" __Context="{ActivityBind ROOT,Path=__context}" To="{ActivityBind ID10512,Path=ReturnValue}" Subject="{ActivityBind ID10516,Path=ReturnValue}" BCC="{x:Null}" CC="{x:Null}" Body="{ActivityBind ID10520,Path=ReturnValue}" />
+        <ns0:CoerceStringActivity x:Name="ID10534" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="TaskProcessName" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10536" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemTitleNotEncoded" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns2:LookupActivity x:Name="ID10538" __Context="{ActivityBind ROOT,Path=__context}" FieldName="CurrentUser" ListItem="{ActivityBind ROOT,Path=__item}" LookupFunction="WILookupUser" ListId="" />
+        <ns0:CoerceStringActivity x:Name="ID10537" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DisplayNameAsText">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10538" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10533" __Context="{ActivityBind ROOT,Path=__context}" Value="Finalizó [%ID10534.ReturnValue%] en [%ID10536.ReturnValue%] porque [%ID10537.ReturnValue%] canceló el flujo de trabajo." />
+        <ns0:LogToHistoryListActivity x:Name="ID10070" UserId="-1" Duration="00:00:00" HistoryOutcome="{x:Null}" OtherData="{x:Null}" EventId="WorkflowCancelled" HistoryDescription="{ActivityBind ID10533,Path=ReturnValue}" />
+        <ns0:SetCustomWorkflowStatus WorkflowStatus="0" x:Name="ID10217" />
+        </ns1:OnTaskProcessCanceled>
+        <ns1:OnTaskProcessCompleted x:Name="ID7" Description="Cuando se completa el proceso de tarea">
+        <IfElseActivity x:Name="ID1129">
+        <IfElseBranchActivity x:Name="ID1130">
+        <IfElseBranchActivity.Condition>
+        <RuleConditionReference ConditionName="__Rule_ID1130" />
+        </IfElseBranchActivity.Condition>
+        <ns0:SetCustomWorkflowStatus WorkflowStatus="1" x:Name="ID1381" />
+        <IfElseActivity x:Name="ID10628">
+        <IfElseBranchActivity x:Name="ID10629">
+        <IfElseBranchActivity.Condition>
+        <RuleConditionReference ConditionName="__Rule_ID10629" />
+        </IfElseBranchActivity.Condition>
+        <IfElseActivity x:Name="ID10630">
+        <IfElseBranchActivity x:Name="ID10631">
+        <IfElseBranchActivity.Condition>
+        <RuleConditionReference ConditionName="__Rule_ID10631" />
+        </IfElseBranchActivity.Condition>
+        <ns1:SetTaskProcessItemModerationStatus x:Name="ID1134" Comments="{x:Null}" __Context="{ActivityBind ROOT,Path=__context}" ModerationStatus="Approved" />
+        </IfElseBranchActivity>
+        </IfElseActivity>
+        </IfElseBranchActivity>
+        </IfElseActivity>
+        </IfElseBranchActivity>
+        <IfElseBranchActivity x:Name="ID1380">
+        <ns0:SetCustomWorkflowStatus WorkflowStatus="2" x:Name="ID1382" />
+        <IfElseActivity x:Name="ID10632">
+        <IfElseBranchActivity x:Name="ID10633">
+        <IfElseBranchActivity.Condition>
+        <RuleConditionReference ConditionName="__Rule_ID10633" />
+        </IfElseBranchActivity.Condition>
+        <IfElseActivity x:Name="ID10634">
+        <IfElseBranchActivity x:Name="ID10635">
+        <IfElseBranchActivity.Condition>
+        <RuleConditionReference ConditionName="__Rule_ID10635" />
+        </IfElseBranchActivity.Condition>
+        <ns1:SetTaskProcessItemModerationStatus x:Name="ID1385" Comments="{x:Null}" __Context="{ActivityBind ROOT,Path=__context}" ModerationStatus="Denied" />
+        </IfElseBranchActivity>
+        </IfElseActivity>
+        </IfElseBranchActivity>
+        </IfElseActivity>
+        </IfElseBranchActivity>
+        </IfElseActivity>
+        <ns0:CoerceStringActivity x:Name="ID10567" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="TaskProcessName" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10566" __Context="{ActivityBind ROOT,Path=__context}" Value="Se completó [%ID10567.ReturnValue%]." />
+        <ns2:LookupActivity x:Name="ID10576" __Context="{ActivityBind ROOT,Path=__context}" FieldName="InitiatorUser" ListItem="{ActivityBind ROOT,Path=__item}" LookupFunction="WILookupUser" ListId="" />
+        <ns0:CoerceIntActivity x:Name="ID10575" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="UserIDAsInteger">
+        <ns0:CoerceIntActivity.Value>
+        <ActivityBind Name="ID10576" Path="ReturnValue" />
+        </ns0:CoerceIntActivity.Value>
+        </ns0:CoerceIntActivity>
+        <ns0:CoerceStringActivity x:Name="ID11037" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ROOT" Path="CompletionReason" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID11036" __Context="{ActivityBind ROOT,Path=__context}" Value="[%ID11037.ReturnValue%]" />
+        <ns0:LogToHistoryListActivity x:Name="ID1229" UserId="{ActivityBind ID10575,Path=ReturnValue}" Duration="00:00:00" HistoryOutcome="{ActivityBind ID11036,Path=ReturnValue}" OtherData="{x:Null}" EventId="WorkflowCompleted" HistoryDescription="{ActivityBind ID10566,Path=ReturnValue}" />
+        <IfElseActivity x:Name="ID11068">
+        <IfElseBranchActivity x:Name="ID11069">
+        <IfElseBranchActivity.Condition>
+        <RuleConditionReference ConditionName="__Rule_ID11069" />
+        </IfElseBranchActivity.Condition>
+        <ns0:ClearArrayListActivity x:Name="ID11105" ReturnValue="{x:Null}" />
+        <ns2:LookupActivity x:Name="ID11108" __Context="{ActivityBind ROOT,Path=__context}" FieldName="InitiatorUser" ListItem="{ActivityBind ROOT,Path=__item}" LookupFunction="WILookupUser" ListId="" />
+        <ns0:CoerceStringActivity x:Name="ID11107" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID11108" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:AddToArrayListActivity x:Name="ID11106" ReturnValue="{ActivityBind ID11105,Path=ReturnValue}" Value="{ActivityBind ID11107,Path=ReturnValue}" />
+        <ns0:ClearArrayListActivity x:Name="ID11109" ReturnValue="{x:Null}" />
+        <ns0:CoerceStringActivity x:Name="ID11111" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="MultiEmailAddressSemicolon">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="CCList" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:AddToArrayListActivity x:Name="ID11110" ReturnValue="{ActivityBind ID11109,Path=ReturnValue}" Value="{ActivityBind ID11111,Path=ReturnValue}" />
+        <ns0:CoerceStringActivity x:Name="ID11112" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ROOT" Path="CompletionMailTitle" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID11118" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="TaskProcessName" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID11113" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ROOT" Path="CompletionReason" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID11114" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ConsolidatedComments" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns2:LookupActivity x:Name="ID11115" __Context="{ActivityBind ROOT,Path=__context}" FieldName="WorkflowStatusUrl" ListItem="{ActivityBind ROOT,Path=__item}" LookupFunction="WILookupString" ListId="" />
+        <ns0:CoerceStringActivity x:Name="ID11116" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID11115" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID11117" __Context="{ActivityBind ROOT,Path=__context}" Value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 3.2//EN&quot;&gt;&lt;HTML DIR=&quot;none&quot;&gt;&lt;HEAD&gt;&lt;META NAME=&quot;Generator&quot; CONTENT=&quot;MS Exchange Server version 08.01.0240.003&quot;&gt;&lt;TITLE&gt;&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;&lt;!-- Converted from text/rtf format --&gt;&lt;P&gt;&lt;FONT SIZE=4 FACE=&quot;Calibri&quot;&gt;&lt;B&gt;&lt;I&gt;[%ID11118.ReturnValue%]&lt;/I&gt;&lt;/B&gt; se completó.&lt;/FONT&gt;&lt;/P&gt;&lt;FONT SIZE=2 FACE=&quot;Calibri&quot;&gt;&lt;P&gt;[%ID11113.ReturnValue%]&lt;/P&gt;&lt;BR&gt;&lt;P&gt;[%ID11114.ReturnValue%]&lt;/P&gt;&lt;BR&gt;&lt;P&gt;&lt;FONT COLOR=&quot;#BFBFBF&quot;&gt;__________________________________________________&lt;/FONT&gt;&lt;/P&gt;&lt;P&gt;&lt;A HREF=&quot;[%ID11116.ReturnValue%]&quot;&gt;Ver el historial del flujo de trabajo.&lt;/A&gt;&lt;/P&gt;&lt;/FONT&gt;&lt;/BODY&gt;&lt;/HTML&gt;" />
+        <ns0:EmailActivity x:Name="ID11070" __Context="{ActivityBind ROOT,Path=__context}" To="{ActivityBind ID11105,Path=ReturnValue}" Subject="{ActivityBind ID11112,Path=ReturnValue}" BCC="{x:Null}" CC="{ActivityBind ID11109,Path=ReturnValue}" Body="{ActivityBind ID11117,Path=ReturnValue}" />
+        </IfElseBranchActivity>
+        <IfElseBranchActivity x:Name="ID11071">
+        <ns0:ClearArrayListActivity x:Name="ID11083" ReturnValue="{x:Null}" />
+        <ns2:LookupActivity x:Name="ID11086" __Context="{ActivityBind ROOT,Path=__context}" FieldName="InitiatorUser" ListItem="{ActivityBind ROOT,Path=__item}" LookupFunction="WILookupUser" ListId="" />
+        <ns0:CoerceStringActivity x:Name="ID11085" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID11086" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:AddToArrayListActivity x:Name="ID11084" ReturnValue="{ActivityBind ID11083,Path=ReturnValue}" Value="{ActivityBind ID11085,Path=ReturnValue}" />
+        <ns0:ClearArrayListActivity x:Name="ID11087" ReturnValue="{x:Null}" />
+        <ns0:CoerceStringActivity x:Name="ID11089" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="MultiEmailAddressSemicolon">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="CCList" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:AddToArrayListActivity x:Name="ID11088" ReturnValue="{ActivityBind ID11087,Path=ReturnValue}" Value="{ActivityBind ID11089,Path=ReturnValue}" />
+        <ns0:CoerceStringActivity x:Name="ID11090" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ROOT" Path="CompletionMailTitle" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10551" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="TaskProcessName" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10553" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="WebURL" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10554" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemURL" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10555" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemTitle" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID11093" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ROOT" Path="CompletionReason" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID11094" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ConsolidatedComments" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns2:LookupActivity x:Name="ID11096" __Context="{ActivityBind ROOT,Path=__context}" FieldName="WorkflowStatusUrl" ListItem="{ActivityBind ROOT,Path=__item}" LookupFunction="WILookupString" ListId="" />
+        <ns0:CoerceStringActivity x:Name="ID11095" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID11096" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID11091" __Context="{ActivityBind ROOT,Path=__context}" Value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 3.2//EN&quot;&gt;&lt;HTML DIR=&quot;none&quot;&gt;&lt;HEAD&gt;&lt;META NAME=&quot;Generator&quot; CONTENT=&quot;MS Exchange Server version 08.01.0240.003&quot;&gt;&lt;TITLE&gt;&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;&lt;!-- Converted from text/rtf format --&gt;&lt;P&gt;&lt;FONT SIZE=4 FACE=&quot;Calibri&quot;&gt;&lt;B&gt;&lt;I&gt;[%ID10551.ReturnValue%]&lt;/I&gt;&lt;/B&gt; se completó en &lt;A HREF=&quot;[%ID10553.ReturnValue%]/[%ID10554.ReturnValue%]&quot;&gt;[%ID10555.ReturnValue%]&lt;/A&gt;.&lt;/FONT&gt;&lt;/P&gt;&lt;FONT SIZE=2 FACE=&quot;Calibri&quot;&gt;&lt;P&gt;[%ID11093.ReturnValue%]&lt;/P&gt;&lt;BR&gt;&lt;P&gt;[%ID11094.ReturnValue%]&lt;/P&gt;&lt;BR&gt;&lt;P&gt;&lt;FONT COLOR=&quot;#BFBFBF&quot;&gt;__________________________________________________&lt;/FONT&gt;&lt;/P&gt;&lt;P&gt;&lt;A HREF=&quot;[%ID11095.ReturnValue%]&quot;&gt;Ver el historial del flujo de trabajo.&lt;/A&gt;&lt;/P&gt;&lt;/FONT&gt;&lt;/BODY&gt;&lt;/HTML&gt;" />
+        <ns0:EmailActivity x:Name="ID826" __Context="{ActivityBind ROOT,Path=__context}" To="{ActivityBind ID11083,Path=ReturnValue}" Subject="{ActivityBind ID11090,Path=ReturnValue}" BCC="{x:Null}" CC="{ActivityBind ID11087,Path=ReturnValue}" Body="{ActivityBind ID11091,Path=ReturnValue}" />
+        </IfElseBranchActivity>
+        </IfElseActivity>
+        </ns1:OnTaskProcessCompleted>
+        <ns1:OnTaskPending x:Name="ID8" Description="Cuando una tarea está pendiente">
+        <IfElseActivity x:Name="ID10990">
+        <IfElseBranchActivity x:Name="ID10991">
+        <IfElseBranchActivity.Condition>
+        <RuleConditionReference ConditionName="__Rule_ID10991" />
+        </IfElseBranchActivity.Condition>
+        <ns0:HTLookupActivity x:Name="ID10365" __Context="{ActivityBind ROOT,Path=__context}" FieldName="AssignedTo" Collection="{ActivityBind ID8,Path=TaskHashtable}" LookupFunction="HTLookupUser" />
+        <ns0:CoerceStringActivity x:Name="ID10364" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DisplayNameAsText">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10365" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:HTLookupActivity x:Name="ID10367" __Context="{ActivityBind ROOT,Path=__context}" FieldName="DueDate" Collection="{ActivityBind ID8,Path=TaskHashtable}" LookupFunction="HTLookupDateTime" />
+        <ns0:CoerceStringActivity x:Name="ID10366" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DateTimeToStringShortDate">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10367" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:HTLookupActivity x:Name="ID10369" __Context="{ActivityBind ROOT,Path=__context}" FieldName="DueDate" Collection="{ActivityBind ID8,Path=TaskHashtable}" LookupFunction="HTLookupDateTime" />
+        <ns0:CoerceStringActivity x:Name="ID10368" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DateTimeToStringLongTime">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10369" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns2:LookupActivity x:Name="ID10578" __Context="{ActivityBind ROOT,Path=__context}" FieldName="InitiatorUser" ListItem="{ActivityBind ROOT,Path=__item}" LookupFunction="WILookupUser" ListId="" />
+        <ns0:CoerceIntActivity x:Name="ID10577" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="UserIDAsInteger">
+        <ns0:CoerceIntActivity.Value>
+        <ActivityBind Name="ID10578" Path="ReturnValue" />
+        </ns0:CoerceIntActivity.Value>
+        </ns0:CoerceIntActivity>
+        <ns0:DynamicStringActivity x:Name="ID10363" __Context="{ActivityBind ROOT,Path=__context}" Value="Tarea creada para [%ID10364.ReturnValue%]. Vence el: [%ID10366.ReturnValue%] [%ID10368.ReturnValue%]" />
+        <ns0:LogToHistoryListActivity x:Name="ID1237" UserId="{ActivityBind ID10577,Path=ReturnValue}" Duration="00:00:00" HistoryOutcome="{x:Null}" OtherData="{x:Null}" EventId="TaskCreated" HistoryDescription="{ActivityBind ID10363,Path=ReturnValue}" />
+        <ns0:ClearArrayListActivity x:Name="ID10370" ReturnValue="{x:Null}" />
+        <ns0:HTLookupActivity x:Name="ID10373" __Context="{ActivityBind ROOT,Path=__context}" FieldName="AssignedTo" Collection="{ActivityBind ID8,Path=TaskHashtable}" LookupFunction="HTLookupUser" />
+        <ns0:CoerceStringActivity x:Name="ID10372" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10373" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:AddToArrayListActivity x:Name="ID10371" ReturnValue="{ActivityBind ID10370,Path=ReturnValue}" Value="{ActivityBind ID10372,Path=ReturnValue}" />
+        <ns0:HTLookupActivity x:Name="ID10376" __Context="{ActivityBind ROOT,Path=__context}" FieldName="Title" Collection="{ActivityBind ID8,Path=TaskHashtable}" LookupFunction="HTLookupString" />
+        <ns0:CoerceStringActivity x:Name="ID10375" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10376" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10374" __Context="{ActivityBind ROOT,Path=__context}" Value="Tareas: [%ID10375.ReturnValue%]" />
+        <ns2:LookupActivity x:Name="ID10379" __Context="{ActivityBind ROOT,Path=__context}" FieldName="InitiatorUser" ListItem="{ActivityBind ROOT,Path=__item}" LookupFunction="WILookupUser" ListId="" />
+        <ns0:CoerceStringActivity x:Name="ID10378" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DisplayNameAsText">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10379" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:HTLookupActivity x:Name="ID10381" __Context="{ActivityBind ROOT,Path=__context}" FieldName="StartDate" Collection="{ActivityBind ID8,Path=TaskHashtable}" LookupFunction="HTLookupDateTime" />
+        <ns0:CoerceStringActivity x:Name="ID10380" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DateTimeToStringShortDate">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10381" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:HTLookupActivity x:Name="ID10383" __Context="{ActivityBind ROOT,Path=__context}" FieldName="DueDate" Collection="{ActivityBind ID8,Path=TaskHashtable}" LookupFunction="HTLookupDateTime" />
+        <ns0:CoerceStringActivity x:Name="ID10382" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DateTimeToStringShortDate">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10383" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10385" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ConsolidatedComments" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10386" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="WebURL" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10387" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemURL" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10388" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemTitle" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10377" __Context="{ActivityBind ROOT,Path=__context}" Value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 3.2//EN&quot;&gt;&lt;HTML DIR=&quot;none&quot;&gt;&lt;HEAD&gt;&lt;META NAME=&quot;Generator&quot; CONTENT=&quot;MS Exchange Server version 08.01.0240.003&quot;&gt;&lt;TITLE&gt;&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;&lt;!-- Converted from text/rtf format --&gt;&lt;P&gt;&lt;FONT SIZE=4 FACE=&quot;Calibri&quot;&gt;Tarea asignada por [%ID10378.ReturnValue%] el [%ID10380.ReturnValue%].&lt;/FONT&gt;&lt;/P&gt;&lt;FONT SIZE=2 FACE=&quot;Calibri&quot;&gt;&lt;P&gt;Vence el [%ID10382.ReturnValue%].&lt;/P&gt;&lt;P&gt;[%ID10385.ReturnValue%]&lt;/P&gt;&lt;BR&gt;&lt;P&gt;&lt;FONT COLOR=&quot;#BFBFBF&quot;&gt;__________________________________________________&lt;/FONT&gt;&lt;/P&gt;&lt;P&gt;Para completar esta tarea:&lt;BR&gt;1. Revisar &lt;A HREF=&quot;[%ID10386.ReturnValue%]/[%ID10387.ReturnValue%]&quot;&gt;[%ID10388.ReturnValue%]&lt;/A&gt;. [%InternetLink%]&lt;BR&gt;2. Realice las tareas específicas requeridas para esta tarea.&lt;BR&gt;3. Use el botón &lt;B&gt;Abrir esta tarea&lt;/B&gt; para marcar la tarea como completada. (Si no puede actualizar esta tarea, es posible que no tenga acceso a ella).&lt;/P&gt;&lt;/FONT&gt;&lt;/BODY&gt;&lt;/HTML&gt;" />
+        <ns1:SendTaskEmail x:Name="ID3071" __Context="{ActivityBind ROOT,Path=__context}" To="{ActivityBind ID10370,Path=ReturnValue}" Subject="{ActivityBind ID10374,Path=ReturnValue}" BCC="{x:Null}" CC="{x:Null}" Body="{ActivityBind ID10377,Path=ReturnValue}" __ActivationProperties="{ActivityBind ROOT,Path=__initParams}" />
+        </IfElseBranchActivity>
+        <IfElseBranchActivity x:Name="ID10992">
+        <ns2:LookupActivity x:Name="ID10997" __Context="{ActivityBind ROOT,Path=__context}" FieldName="InitiatorUser" ListItem="{ActivityBind ROOT,Path=__item}" LookupFunction="WILookupUser" ListId="" />
+        <ns0:CoerceIntActivity x:Name="ID10996" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="UserIDAsInteger">
+        <ns0:CoerceIntActivity.Value>
+        <ActivityBind Name="ID10997" Path="ReturnValue" />
+        </ns0:CoerceIntActivity.Value>
+        </ns0:CoerceIntActivity>
+        <ns0:HTLookupActivity x:Name="ID11000" __Context="{ActivityBind ROOT,Path=__context}" FieldName="AssignedTo" Collection="{ActivityBind ID8,Path=TaskHashtable}" LookupFunction="HTLookupUser" />
+        <ns0:CoerceStringActivity x:Name="ID10999" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DisplayNameAsText">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID11000" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:HTLookupActivity x:Name="ID11002" __Context="{ActivityBind ROOT,Path=__context}" FieldName="OffsiteParticipant" Collection="{ActivityBind ID8,Path=TaskHashtable}" LookupFunction="HTLookupString" />
+        <ns0:CoerceStringActivity x:Name="ID11001" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID11002" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:HTLookupActivity x:Name="ID11004" __Context="{ActivityBind ROOT,Path=__context}" FieldName="DueDate" Collection="{ActivityBind ID8,Path=TaskHashtable}" LookupFunction="HTLookupDateTime" />
+        <ns0:CoerceStringActivity x:Name="ID11003" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DateTimeToStringShortDate">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID11004" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:HTLookupActivity x:Name="ID11006" __Context="{ActivityBind ROOT,Path=__context}" FieldName="DueDate" Collection="{ActivityBind ID8,Path=TaskHashtable}" LookupFunction="HTLookupDateTime" />
+        <ns0:CoerceStringActivity x:Name="ID11005" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DateTimeToStringLongTime">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID11006" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10998" __Context="{ActivityBind ROOT,Path=__context}" Value="Tarea creada para [%ID10999.ReturnValue%] en nombre de [%ID11001.ReturnValue%]. Vence el: [%ID11003.ReturnValue%] [%ID11005.ReturnValue%]" />
+        <ns0:LogToHistoryListActivity x:Name="ID10993" UserId="{ActivityBind ID10996,Path=ReturnValue}" Duration="00:00:00" HistoryOutcome="{x:Null}" OtherData="{x:Null}" EventId="TaskCreated" HistoryDescription="{ActivityBind ID10998,Path=ReturnValue}" />
+        <ns0:ClearArrayListActivity x:Name="ID11358" ReturnValue="{x:Null}" />
+        <ns2:LookupActivity x:Name="ID11361" __Context="{ActivityBind ROOT,Path=__context}" FieldName="InitiatorUser" ListItem="{ActivityBind ROOT,Path=__item}" LookupFunction="WILookupUser" ListId="" />
+        <ns0:CoerceStringActivity x:Name="ID11360" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID11361" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:AddToArrayListActivity x:Name="ID11359" ReturnValue="{ActivityBind ID11358,Path=ReturnValue}" Value="{ActivityBind ID11360,Path=ReturnValue}" />
+        <ns0:ClearArrayListActivity x:Name="ID11362" ReturnValue="{x:Null}" />
+        <ns0:HTLookupActivity x:Name="ID11365" __Context="{ActivityBind ROOT,Path=__context}" FieldName="OffsiteParticipant" Collection="{ActivityBind ID8,Path=TaskHashtable}" LookupFunction="HTLookupString" />
+        <ns0:CoerceStringActivity x:Name="ID11364" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID11365" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:AddToArrayListActivity x:Name="ID11363" ReturnValue="{ActivityBind ID11362,Path=ReturnValue}" Value="{ActivityBind ID11364,Path=ReturnValue}" />
+        <ns0:HTLookupActivity x:Name="ID11368" __Context="{ActivityBind ROOT,Path=__context}" FieldName="Title" Collection="{ActivityBind ID8,Path=TaskHashtable}" LookupFunction="HTLookupString" />
+        <ns0:CoerceStringActivity x:Name="ID11367" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID11368" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID11366" __Context="{ActivityBind ROOT,Path=__context}" Value="Tareas - [%ID11367.ReturnValue%]" />
+        <ns0:HTLookupActivity x:Name="ID11371" __Context="{ActivityBind ROOT,Path=__context}" FieldName="OffsiteParticipant" Collection="{ActivityBind ID8,Path=TaskHashtable}" LookupFunction="HTLookupString" />
+        <ns0:CoerceStringActivity x:Name="ID11370" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID11371" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:HTLookupActivity x:Name="ID11373" __Context="{ActivityBind ROOT,Path=__context}" FieldName="StartDate" Collection="{ActivityBind ID8,Path=TaskHashtable}" LookupFunction="HTLookupDateTime" />
+        <ns0:CoerceStringActivity x:Name="ID11372" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DateTimeToStringShortDate">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID11373" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:HTLookupActivity x:Name="ID11375" __Context="{ActivityBind ROOT,Path=__context}" FieldName="DueDate" Collection="{ActivityBind ID8,Path=TaskHashtable}" LookupFunction="HTLookupDateTime" />
+        <ns0:CoerceStringActivity x:Name="ID11374" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DateTimeToStringShortDate">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID11375" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:HTLookupActivity x:Name="ID11377" __Context="{ActivityBind ROOT,Path=__context}" FieldName="OffsiteParticipant" Collection="{ActivityBind ID8,Path=TaskHashtable}" LookupFunction="HTLookupString" />
+        <ns0:CoerceStringActivity x:Name="ID11376" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID11377" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns2:LookupActivity x:Name="ID11379" __Context="{ActivityBind ROOT,Path=__context}" FieldName="CurrentWebUrl" ListItem="{ActivityBind ROOT,Path=__item}" LookupFunction="WILookupString" ListId="" />
+        <ns0:CoerceStringActivity x:Name="ID11378" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID11379" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID11380" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ConsolidatedComments" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:HTLookupActivity x:Name="ID11382" __Context="{ActivityBind ROOT,Path=__context}" FieldName="OffsiteParticipant" Collection="{ActivityBind ID8,Path=TaskHashtable}" LookupFunction="HTLookupString" />
+        <ns0:CoerceStringActivity x:Name="ID11381" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID11382" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID11383" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="WebURL" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID11384" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemURL" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID11385" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemTitle" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:HTLookupActivity x:Name="ID11387" __Context="{ActivityBind ROOT,Path=__context}" FieldName="OffsiteParticipant" Collection="{ActivityBind ID8,Path=TaskHashtable}" LookupFunction="HTLookupString" />
+        <ns0:CoerceStringActivity x:Name="ID11386" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID11387" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID11369" __Context="{ActivityBind ROOT,Path=__context}" Value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 3.2//EN&quot;&gt;&lt;HTML DIR=&quot;none&quot;&gt;&lt;HEAD&gt;&lt;META NAME=&quot;Generator&quot; CONTENT=&quot;MS Exchange Server version 08.01.0240.003&quot;&gt;&lt;TITLE&gt;&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;&lt;!-- Converted from text/rtf format --&gt;&lt;FONT SIZE=4 FACE=&quot;Calibri&quot;&gt;&lt;P&gt;Tarea para [%ID11370.ReturnValue%] que se le asignó el [%ID11372.ReturnValue%].&lt;/P&gt;&lt;/FONT&gt;&lt;FONT SIZE=2 FACE=&quot;Calibri&quot;&gt;&lt;P&gt;Vence el [%ID11374.ReturnValue%]&lt;/P&gt;&lt;P&gt;Esta tarea se le asignó porque [%ID11376.ReturnValue%] no tiene acceso a [%ID11378.ReturnValue%].&lt;/P&gt;&lt;P&gt;[%ID11380.ReturnValue%]&lt;/P&gt;&lt;BR&gt;&lt;P&gt;&lt;FONT COLOR=&quot;#BFBFBF&quot;&gt;__________________________________________________&lt;/FONT&gt;&lt;/P&gt;&lt;P&gt;Para completar esta tarea:&lt;BR&gt;&lt;BR&gt;1. Envíe a [%ID11381.ReturnValue%] una copia de &lt;A HREF=&quot;[%ID11383.ReturnValue%]/[%ID11384.ReturnValue%]&quot;&gt;[%ID11385.ReturnValue%]&lt;/A&gt;.&lt;BR&gt;2. Solicite a [%ID11386.ReturnValue%] que realice las actividades específicas necesarias para esta tarea y que le notifique cuando se haya finalizado la tarea.&lt;BR&gt;3. Use el botón &lt;B&gt;Abrir esta tarea&lt;/B&gt; para marcarla como completada.&lt;/P&gt;&lt;/FONT&gt;&lt;/BODY&gt;&lt;/HTML&gt;" />
+        <ns1:SendTaskEmail x:Name="ID11231" __Context="{ActivityBind ROOT,Path=__context}" __ActivationProperties="{ActivityBind ROOT,Path=__initParams}" To="{ActivityBind ID11358,Path=ReturnValue}" Subject="{ActivityBind ID11366,Path=ReturnValue}" BCC="{x:Null}" CC="{ActivityBind ID11362,Path=ReturnValue}" Body="{ActivityBind ID11369,Path=ReturnValue}" />
+        </IfElseBranchActivity>
+        </IfElseActivity>
+        </ns1:OnTaskPending>
+        <ns1:OnTaskExpired x:Name="ID9" Description="Al caducar una tarea">
+        <ns0:ClearArrayListActivity x:Name="ID10393" ReturnValue="{x:Null}" />
+        <ns0:HTLookupActivity x:Name="ID10396" __Context="{ActivityBind ROOT,Path=__context}" FieldName="AssignedTo" Collection="{ActivityBind ID9,Path=TaskHashtable}" LookupFunction="HTLookupUser" />
+        <ns0:CoerceStringActivity x:Name="ID10395" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10396" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:AddToArrayListActivity x:Name="ID10394" ReturnValue="{ActivityBind ID10393,Path=ReturnValue}" Value="{ActivityBind ID10395,Path=ReturnValue}" />
+        <ns0:ClearArrayListActivity x:Name="ID10397" ReturnValue="{x:Null}" />
+        <ns2:LookupActivity x:Name="ID10400" __Context="{ActivityBind ROOT,Path=__context}" FieldName="InitiatorUser" ListItem="{ActivityBind ROOT,Path=__item}" LookupFunction="WILookupUser" ListId="" />
+        <ns0:CoerceStringActivity x:Name="ID10399" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10400" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:AddToArrayListActivity x:Name="ID10398" ReturnValue="{ActivityBind ID10397,Path=ReturnValue}" Value="{ActivityBind ID10399,Path=ReturnValue}" />
+        <ns0:HTLookupActivity x:Name="ID10403" __Context="{ActivityBind ROOT,Path=__context}" FieldName="AssignedTo" Collection="{ActivityBind ID9,Path=TaskHashtable}" LookupFunction="HTLookupUser" />
+        <ns0:CoerceStringActivity x:Name="ID10402" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DisplayNameAsText">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10403" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:HTLookupActivity x:Name="ID10405" __Context="{ActivityBind ROOT,Path=__context}" FieldName="StartDate" Collection="{ActivityBind ID9,Path=TaskHashtable}" LookupFunction="HTLookupDateTime" />
+        <ns0:CoerceStringActivity x:Name="ID10404" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DateTimeToStringShortDate">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10405" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10401" __Context="{ActivityBind ROOT,Path=__context}" Value="La tarea asignada a [%ID10402.ReturnValue%] el [%ID10404.ReturnValue%] está vencida." />
+        <ns0:HTLookupActivity x:Name="ID10408" __Context="{ActivityBind ROOT,Path=__context}" FieldName="AssignedTo" Collection="{ActivityBind ID9,Path=TaskHashtable}" LookupFunction="HTLookupUser" />
+        <ns0:CoerceStringActivity x:Name="ID10407" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DisplayNameAsText">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10408" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:HTLookupActivity x:Name="ID10410" __Context="{ActivityBind ROOT,Path=__context}" FieldName="StartDate" Collection="{ActivityBind ID9,Path=TaskHashtable}" LookupFunction="HTLookupDateTime" />
+        <ns0:CoerceStringActivity x:Name="ID10409" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DateTimeToStringShortDate">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10410" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:HTLookupActivity x:Name="ID10412" __Context="{ActivityBind ROOT,Path=__context}" FieldName="DueDate" Collection="{ActivityBind ID9,Path=TaskHashtable}" LookupFunction="HTLookupDateTime" />
+        <ns0:CoerceStringActivity x:Name="ID10411" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DateTimeToStringShortDate">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10412" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10414" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ConsolidatedComments" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10415" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="WebURL" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10416" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemURL" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10417" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemTitle" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10406" __Context="{ActivityBind ROOT,Path=__context}" Value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 3.2//EN&quot;&gt;&lt;HTML DIR=&quot;none&quot;&gt;&lt;HEAD&gt;&lt;META NAME=&quot;Generator&quot; CONTENT=&quot;MS Exchange Server version 08.01.0240.003&quot;&gt;&lt;TITLE&gt;&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;&lt;!-- Converted from text/rtf format --&gt;&lt;P&gt;&lt;FONT SIZE=4 FACE=&quot;Calibri&quot;&gt;La tarea asignada a [%ID10407.ReturnValue%] el [%ID10409.ReturnValue%] está vencida.&lt;/FONT&gt;&lt;/P&gt;&lt;FONT SIZE=2 FACE=&quot;Calibri&quot;&gt;&lt;P&gt;Vence el [%ID10411.ReturnValue%].&lt;/P&gt;&lt;P&gt;[%ID10414.ReturnValue%]&lt;/P&gt;&lt;BR&gt;&lt;P&gt;&lt;FONT COLOR=&quot;#BFBFBF&quot;&gt;__________________________________________________&lt;/FONT&gt;&lt;/P&gt;&lt;P&gt;Para completar esta tarea:&lt;BR&gt;1. Revisar &lt;A HREF=&quot;[%ID10415.ReturnValue%]/[%ID10416.ReturnValue%]&quot;&gt;[%ID10417.ReturnValue%]&lt;/A&gt;. [%InternetLink%]&lt;BR&gt;2. Realice las tareas específicas requeridas para esta tarea.&lt;BR&gt;3. Use el botón &lt;B&gt;Abrir esta tarea&lt;/B&gt; para marcar la tarea como completada. (Si no puede actualizar esta tarea, es posible que no tenga acceso a ella).&lt;/P&gt;&lt;/FONT&gt;&lt;/BODY&gt;&lt;/HTML&gt;" />
+        <ns1:SendTaskEmail x:Name="ID436" __Context="{ActivityBind ROOT,Path=__context}" To="{ActivityBind ID10393,Path=ReturnValue}" Subject="{ActivityBind ID10401,Path=ReturnValue}" BCC="{x:Null}" CC="{ActivityBind ID10397,Path=ReturnValue}" Body="{ActivityBind ID10406,Path=ReturnValue}" __ActivationProperties="{ActivityBind ROOT,Path=__initParams}" />
+        </ns1:OnTaskExpired>
+        <ns1:OnTaskDeleted x:Name="ID10" Description="Cuando se elimina una tarea">
+        <ns0:HTLookupActivity x:Name="ID10424" __Context="{ActivityBind ROOT,Path=__context}" FieldName="AssignedTo" Collection="{ActivityBind ID10,Path=TaskHashtable}" LookupFunction="HTLookupUser" />
+        <ns0:CoerceStringActivity x:Name="ID10423" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DisplayNameAsText">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10424" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:HTLookupActivity x:Name="ID10426" __Context="{ActivityBind ROOT,Path=__context}" FieldName="Editor" Collection="{ActivityBind ID10,Path=TaskHashtable}" LookupFunction="HTLookupUser" />
+        <ns0:CoerceStringActivity x:Name="ID10425" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DisplayNameAsText">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10426" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10422" __Context="{ActivityBind ROOT,Path=__context}" Value="[%ID10425.ReturnValue%] eliminó la tarea asignada a [%ID10423.ReturnValue%]." />
+        <ns0:HTLookupActivity x:Name="ID10584" __Context="{ActivityBind ROOT,Path=__context}" FieldName="AssignedTo" Collection="{ActivityBind ID10,Path=TaskHashtable}" LookupFunction="HTLookupUser" />
+        <ns0:CoerceIntActivity x:Name="ID10583" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="UserIDAsInteger">
+        <ns0:CoerceIntActivity.Value>
+        <ActivityBind Name="ID10584" Path="ReturnValue" />
+        </ns0:CoerceIntActivity.Value>
+        </ns0:CoerceIntActivity>
+        <ns0:LogToHistoryListActivity x:Name="ID1186" UserId="{ActivityBind ID10583,Path=ReturnValue}" Duration="00:00:00" HistoryOutcome="{x:Null}" OtherData="{x:Null}" EventId="TaskDeleted" HistoryDescription="{ActivityBind ID10422,Path=ReturnValue}" />
+        <ns0:HTLookupActivity x:Name="ID10429" __Context="{ActivityBind ROOT,Path=__context}" FieldName="AssignedTo" Collection="{ActivityBind ID10,Path=TaskHashtable}" LookupFunction="HTLookupUser" />
+        <ns0:CoerceStringActivity x:Name="ID10428" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DisplayNameAsText">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10429" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:HTLookupActivity x:Name="ID10431" __Context="{ActivityBind ROOT,Path=__context}" FieldName="Editor" Collection="{ActivityBind ID10,Path=TaskHashtable}" LookupFunction="HTLookupUser" />
+        <ns0:CoerceStringActivity x:Name="ID10430" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DisplayNameAsText">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10431" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10427" __Context="{ActivityBind ROOT,Path=__context}" Value="La tarea asignada a [%ID10428.ReturnValue%] se rechazó automáticamente porque [%ID10430.ReturnValue%] la eliminó." />
+        <ns0:HTLookupActivity x:Name="ID10434" __Context="{ActivityBind ROOT,Path=__context}" FieldName="Editor" Collection="{ActivityBind ID10,Path=TaskHashtable}" LookupFunction="HTLookupUser" />
+        <ns0:CoerceStringActivity x:Name="ID10433" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DisplayNameAsText">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10434" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10432" __Context="{ActivityBind ROOT,Path=__context}" Value="Rechazada por [%ID10433.ReturnValue%]" />
+        <ns0:HTLookupActivity x:Name="ID10586" __Context="{ActivityBind ROOT,Path=__context}" FieldName="AssignedTo" Collection="{ActivityBind ID10,Path=TaskHashtable}" LookupFunction="HTLookupUser" />
+        <ns0:CoerceIntActivity x:Name="ID10585" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="UserIDAsInteger">
+        <ns0:CoerceIntActivity.Value>
+        <ActivityBind Name="ID10586" Path="ReturnValue" />
+        </ns0:CoerceIntActivity.Value>
+        </ns0:CoerceIntActivity>
+        <ns0:LogToHistoryListActivity x:Name="ID1192" UserId="{ActivityBind ID10585,Path=ReturnValue}" Duration="00:00:00" HistoryOutcome="{ActivityBind ID10432,Path=ReturnValue}" OtherData="{x:Null}" EventId="TaskCompleted" HistoryDescription="{ActivityBind ID10427,Path=ReturnValue}" />
+        <ns0:ClearArrayListActivity x:Name="ID10435" ReturnValue="{x:Null}" />
+        <ns0:HTLookupActivity x:Name="ID10438" __Context="{ActivityBind ROOT,Path=__context}" FieldName="AssignedTo" Collection="{ActivityBind ID10,Path=TaskHashtable}" LookupFunction="HTLookupUser" />
+        <ns0:CoerceStringActivity x:Name="ID10437" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10438" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:AddToArrayListActivity x:Name="ID10436" ReturnValue="{ActivityBind ID10435,Path=ReturnValue}" Value="{ActivityBind ID10437,Path=ReturnValue}" />
+        <ns0:HTLookupActivity x:Name="ID10441" __Context="{ActivityBind ROOT,Path=__context}" FieldName="Title" Collection="{ActivityBind ID10,Path=TaskHashtable}" LookupFunction="HTLookupString" />
+        <ns0:CoerceStringActivity x:Name="ID10440" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10441" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10439" __Context="{ActivityBind ROOT,Path=__context}" Value="Tareas - Se eliminó [%ID10440.ReturnValue%]." />
+        <ns0:HTLookupActivity x:Name="ID10444" __Context="{ActivityBind ROOT,Path=__context}" FieldName="Editor" Collection="{ActivityBind ID10,Path=TaskHashtable}" LookupFunction="HTLookupUser" />
+        <ns0:CoerceStringActivity x:Name="ID10443" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DisplayNameAsText">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10444" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:HTLookupActivity x:Name="ID10446" __Context="{ActivityBind ROOT,Path=__context}" FieldName="Modified" Collection="{ActivityBind ID10,Path=TaskHashtable}" LookupFunction="HTLookupDateTime" />
+        <ns0:CoerceStringActivity x:Name="ID10445" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DateTimeToStringShortDate">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10446" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10447" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="WebURL" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10448" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemURL" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID10449" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemTitle" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns2:LookupActivity x:Name="ID10451" __Context="{ActivityBind ROOT,Path=__context}" FieldName="InitiatorUser" ListItem="{ActivityBind ROOT,Path=__item}" LookupFunction="WILookupUser" ListId="" />
+        <ns0:CoerceStringActivity x:Name="ID10450" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DisplayNameAsText">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10451" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10442" __Context="{ActivityBind ROOT,Path=__context}" Value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 3.2//EN&quot;&gt;&lt;HTML DIR=&quot;none&quot;&gt;&lt;HEAD&gt;&lt;META NAME=&quot;Generator&quot; CONTENT=&quot;MS Exchange Server version 08.01.0240.003&quot;&gt;&lt;TITLE&gt;&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;&lt;!-- Converted from text/rtf format --&gt;&lt;P&gt;&lt;FONT SIZE=4 FACE=&quot;Calibri&quot;&gt;Tarea eliminada por [%ID10443.ReturnValue%] el [%ID10445.ReturnValue%].&lt;/FONT&gt;&lt;/P&gt;&lt;FONT SIZE=2 FACE=&quot;Calibri&quot;&gt;&lt;P&gt;Se eliminó su tarea para &lt;A HREF=&quot;[%ID10447.ReturnValue%]/[%ID10448.ReturnValue%]&quot;&gt;[%ID10449.ReturnValue%]&lt;/A&gt;&lt;/P&gt;&lt;BR&gt;&lt;P&gt;&lt;FONT COLOR=&quot;#BFBFBF&quot;&gt;__________________________________________________&lt;/FONT&gt;&lt;/P&gt;&lt;P&gt;Si no está seguro de que sea necesario ejecutar otra acción, póngase en contacto con la persona que inició este flujo de trabajo: [%ID10450.ReturnValue%]&lt;/P&gt;&lt;/FONT&gt;&lt;/BODY&gt;&lt;/HTML&gt;" />
+        <ns0:EmailActivity x:Name="ID10324" __Context="{ActivityBind ROOT,Path=__context}" To="{ActivityBind ID10435,Path=ReturnValue}" Subject="{ActivityBind ID10439,Path=ReturnValue}" BCC="{x:Null}" CC="{x:Null}" Body="{ActivityBind ID10442,Path=ReturnValue}" />
+        </ns1:OnTaskDeleted>
+        <ns1:OnTaskCompleted x:Name="ID11" Description="Cuando se completa una tarea">
+        <IfElseActivity x:Name="ID526">
+        <IfElseBranchActivity x:Name="ID527">
+        <IfElseBranchActivity.Condition>
+        <RuleConditionReference ConditionName="__Rule_ID527" />
+        </IfElseBranchActivity.Condition>
+        <ns0:HTLookupActivity x:Name="ID10454" __Context="{ActivityBind ROOT,Path=__context}" FieldName="AssignedTo" Collection="{ActivityBind ID11,Path=TaskHashtable}" LookupFunction="HTLookupUser" />
+        <ns0:CoerceStringActivity x:Name="ID10453" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DisplayNameAsText">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10454" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:HTLookupActivity x:Name="ID10456" __Context="{ActivityBind ROOT,Path=__context}" FieldName="Editor" Collection="{ActivityBind ID11,Path=TaskHashtable}" LookupFunction="HTLookupUser" />
+        <ns0:CoerceStringActivity x:Name="ID10455" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DisplayNameAsText">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10456" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:HTLookupActivity x:Name="ID1104" __Context="{ActivityBind ROOT,Path=__context}" FieldName="FieldName_Comments" Collection="{ActivityBind ID11,Path=TaskHashtable}" LookupFunction="HTLookupString" />
+        <ns0:CoerceStringActivity x:Name="ID1105" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID1104" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10452" __Context="{ActivityBind ROOT,Path=__context}" Value="[%ID10455.ReturnValue%] aprobó la tarea asignada a [%ID10453.ReturnValue%]. Comentarios: [%ID1105.ReturnValue%]" />
+        <ns0:HTLookupActivity x:Name="ID10459" __Context="{ActivityBind ROOT,Path=__context}" FieldName="Editor" Collection="{ActivityBind ID11,Path=TaskHashtable}" LookupFunction="HTLookupUser" />
+        <ns0:CoerceStringActivity x:Name="ID10458" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DisplayNameAsText">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10459" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10457" __Context="{ActivityBind ROOT,Path=__context}" Value="Aprobada por [%ID10458.ReturnValue%]" />
+        <ns0:HTLookupActivity x:Name="ID10580" __Context="{ActivityBind ROOT,Path=__context}" FieldName="AssignedTo" Collection="{ActivityBind ID11,Path=TaskHashtable}" LookupFunction="HTLookupUser" />
+        <ns0:CoerceIntActivity x:Name="ID10579" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="UserIDAsInteger">
+        <ns0:CoerceIntActivity.Value>
+        <ActivityBind Name="ID10580" Path="ReturnValue" />
+        </ns0:CoerceIntActivity.Value>
+        </ns0:CoerceIntActivity>
+        <ns0:LogToHistoryListActivity x:Name="ID291" UserId="{ActivityBind ID10579,Path=ReturnValue}" Duration="00:00:00" HistoryOutcome="{ActivityBind ID10457,Path=ReturnValue}" OtherData="{x:Null}" EventId="TaskCompleted" HistoryDescription="{ActivityBind ID10452,Path=ReturnValue}" />
+        </IfElseBranchActivity>
+        <IfElseBranchActivity x:Name="ID528">
+        <IfElseBranchActivity.Condition>
+        <RuleConditionReference ConditionName="__Rule_ID528" />
+        </IfElseBranchActivity.Condition>
+        <ns0:HTLookupActivity x:Name="ID10462" __Context="{ActivityBind ROOT,Path=__context}" FieldName="AssignedTo" Collection="{ActivityBind ID11,Path=TaskHashtable}" LookupFunction="HTLookupUser" />
+        <ns0:CoerceStringActivity x:Name="ID10461" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DisplayNameAsText">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10462" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:HTLookupActivity x:Name="ID10464" __Context="{ActivityBind ROOT,Path=__context}" FieldName="Editor" Collection="{ActivityBind ID11,Path=TaskHashtable}" LookupFunction="HTLookupUser" />
+        <ns0:CoerceStringActivity x:Name="ID10463" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DisplayNameAsText">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10464" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:HTLookupActivity x:Name="ID1106" __Context="{ActivityBind ROOT,Path=__context}" FieldName="FieldName_Comments" Collection="{ActivityBind ID11,Path=TaskHashtable}" LookupFunction="HTLookupString" />
+        <ns0:CoerceStringActivity x:Name="ID1107" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID1106" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10460" __Context="{ActivityBind ROOT,Path=__context}" Value="La tarea asignada a [%ID10461.ReturnValue%] fue rechazada por [%ID10463.ReturnValue%]. Comentarios: [%ID1107.ReturnValue%]" />
+        <ns0:HTLookupActivity x:Name="ID10467" __Context="{ActivityBind ROOT,Path=__context}" FieldName="Editor" Collection="{ActivityBind ID11,Path=TaskHashtable}" LookupFunction="HTLookupUser" />
+        <ns0:CoerceStringActivity x:Name="ID10466" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DisplayNameAsText">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID10467" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID10465" __Context="{ActivityBind ROOT,Path=__context}" Value="Rechazada por [%ID10466.ReturnValue%]" />
+        <ns0:HTLookupActivity x:Name="ID10582" __Context="{ActivityBind ROOT,Path=__context}" FieldName="AssignedTo" Collection="{ActivityBind ID11,Path=TaskHashtable}" LookupFunction="HTLookupUser" />
+        <ns0:CoerceIntActivity x:Name="ID10581" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="UserIDAsInteger">
+        <ns0:CoerceIntActivity.Value>
+        <ActivityBind Name="ID10582" Path="ReturnValue" />
+        </ns0:CoerceIntActivity.Value>
+        </ns0:CoerceIntActivity>
+        <ns0:LogToHistoryListActivity x:Name="ID534" UserId="{ActivityBind ID10581,Path=ReturnValue}" Duration="00:00:00" HistoryOutcome="{ActivityBind ID10465,Path=ReturnValue}" OtherData="{x:Null}" EventId="TaskCompleted" HistoryDescription="{ActivityBind ID10460,Path=ReturnValue}" />
+        <IfElseActivity x:Name="ID10986">
+        <IfElseBranchActivity x:Name="ID10987">
+        <IfElseBranchActivity.Condition>
+        <RuleConditionReference ConditionName="__Rule_ID10987" />
+        </IfElseBranchActivity.Condition>
+        <ns0:CoerceStringActivity x:Name="ID11053" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="TaskProcessName" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID11054" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemTitle" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:HTLookupActivity x:Name="ID11056" __Context="{ActivityBind ROOT,Path=__context}" FieldName="Editor" Collection="{ActivityBind ID11,Path=TaskHashtable}" LookupFunction="HTLookupUser" />
+        <ns0:CoerceStringActivity x:Name="ID11055" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="DisplayNameAsText">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID11056" Path="ReturnValue" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID11052" __Context="{ActivityBind ROOT,Path=__context}" Value="[%ID11053.ReturnValue%] en [%ID11054.ReturnValue%] finalizó porque [%ID11055.ReturnValue%] rechazó el documento." />
+        <ns0:SetVariableActivity x:Name="ID10989" ValueType="System.String">
+        <ns0:SetVariableActivity.Variable>
+        <ActivityBind Name="ROOT" Path="CompletionReason" />
+        </ns0:SetVariableActivity.Variable>
+        <ns0:SetVariableActivity.Value>
+        <ActivityBind Name="ID11052" Path="ReturnValue" />
+        </ns0:SetVariableActivity.Value>
+        </ns0:SetVariableActivity>
+        <ns1:EndTaskProcess x:Name="ID10988" />
+        </IfElseBranchActivity>
+        </IfElseActivity>
+        </IfElseBranchActivity>
+        </IfElseActivity>
+        </ns1:OnTaskCompleted>
+        <ns1:OnTaskAssigning x:Name="ID12" Description="Antes de que se asigne una tarea">
+        </ns1:OnTaskAssigning>
+        <ns1:CheckExitConditions x:Name="ID981" Description="Comprobar las condiciones de finalización">
+        <IfElseActivity x:Name="ID11057">
+        <IfElseBranchActivity x:Name="ID11058">
+        <IfElseBranchActivity.Condition>
+        <RuleConditionReference ConditionName="__Rule_ID11058" />
+        </IfElseBranchActivity.Condition>
+        <IfElseActivity x:Name="ID11059">
+        <IfElseBranchActivity x:Name="ID11060">
+        <IfElseBranchActivity.Condition>
+        <RuleConditionReference ConditionName="__Rule_ID11060" />
+        </IfElseBranchActivity.Condition>
+        <ns0:SetVariableActivity x:Name="ID11061" ValueType="System.Boolean">
+        <ns0:SetVariableActivity.Variable>
+        <ActivityBind Name="ROOT" Path="IsItemApproved" />
+        </ns0:SetVariableActivity.Variable>
+        <ns0:SetVariableActivity.Value>
+        <ns3:Boolean xmlns:ns3="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">true</ns3:Boolean>
+        </ns0:SetVariableActivity.Value>
+        </ns0:SetVariableActivity>
+        </IfElseBranchActivity>
+        </IfElseActivity>
+        <ns0:CoerceStringActivity x:Name="ID11064" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="TaskProcessName" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:CoerceStringActivity x:Name="ID11065" __Context="{ActivityBind ROOT,Path=__context}" CoercionFunction="AsDNString">
+        <ns0:CoerceStringActivity.Value>
+        <ActivityBind Name="ID4" Path="ItemTitle" />
+        </ns0:CoerceStringActivity.Value>
+        </ns0:CoerceStringActivity>
+        <ns0:DynamicStringActivity x:Name="ID11063" __Context="{ActivityBind ROOT,Path=__context}" Value="[%ID11064.ReturnValue%] en [%ID11065.ReturnValue%] se completó correctamente. Todos los participantes finalizaron sus tareas." />
+        <ns0:SetVariableActivity x:Name="ID11062" ValueType="System.String">
+        <ns0:SetVariableActivity.Variable>
+        <ActivityBind Name="ROOT" Path="CompletionReason" />
+        </ns0:SetVariableActivity.Variable>
+        <ns0:SetVariableActivity.Value>
+        <ActivityBind Name="ID11063" Path="ReturnValue" />
+        </ns0:SetVariableActivity.Value>
+        </ns0:SetVariableActivity>
+        <ns1:EndTaskProcess x:Name="ID11066" />
+        </IfElseBranchActivity>
+        </IfElseActivity>
+        </ns1:CheckExitConditions>
+        </ns1:ApprovalTaskProcess>
+    </SequenceActivity>
+</ns0:RootWorkflowActivityWithData>

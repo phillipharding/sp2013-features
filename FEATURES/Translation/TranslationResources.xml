@@ -1,0 +1,1178 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <!-- Translation Columns -->
+
+    <Field
+        ID="{ab2c8d67-b3a0-4c17-b013-feecb0c47294}"
+        Name="TranslationLanguage"
+        StaticName="TranslationLanguage"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:smscore,group_translationcolumns;"
+        DisplayName="$Resources:smscore,column_translationlanguage_displayname;"
+        Type="Text"
+        ShowInDisplayForm="FALSE"
+        ShowInEditForm="FALSE"
+        ShowInFileDlg="FALSE"
+        ShowInListSettings="TRUE"
+        ShowInNewForm="FALSE"
+        Required="FALSE"
+        Sealed="TRUE"
+        MaxLength="255"
+    />
+
+    <Field
+        ID="{ac8d46df-a9f0-47f2-930f-952fa7a01ef8}"
+        Name="TranslationStatus"
+        StaticName="TranslationStatus"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:smscore,group_translationcolumns;"
+        DisplayName="$Resources:smscore,column_translationstatus_displayname;"
+        Type="Choice"
+        ShowInDisplayForm="TRUE"
+        ShowInEditForm="TRUE"
+        ShowInFileDlg="FALSE"
+        ShowInListSettings="TRUE"
+        ShowInNewForm="FALSE"
+        Required="FALSE"
+        Sealed="TRUE"
+        Format="Dropdown"
+        FillInChoice="FALSE"
+        Indexed="TRUE"
+    >
+        <CHOICES>
+            <CHOICE>$Resources:smscore,column_translationstatus_choice_required;</CHOICE>
+            <CHOICE>$Resources:smscore,column_translationstatus_choice_pending;</CHOICE>
+            <CHOICE>$Resources:smscore,column_translationstatus_choice_completed;</CHOICE>
+        </CHOICES>
+        <Default>$Resources:smscore,column_translationstatus_choice_completed;</Default>
+    </Field>
+
+    <Field
+        ID="{0e403258-0ae7-4322-b168-e06fe3193288}"
+        Name="TranslatorName"
+        StaticName="TranslatorName"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:smscore,group_translationcolumns;"
+        DisplayName="$Resources:smscore,column_translatorname_displayname;"
+        Type="Text"
+        ShowInDisplayForm="TRUE"
+        ShowInEditForm="TRUE"
+        ShowInFileDlg="FALSE"
+        ShowInListSettings="TRUE"
+        ShowInNewForm="FALSE"
+        Required="FALSE"
+        Sealed="TRUE"
+        MaxLength="255"
+    />
+
+    <!-- END Translation Columns -->
+
+    <!-- Variations Label List Columns -->
+    <Field
+        ID="{8484dbaf-e6d2-4f98-9aa7-e19f89260224}"
+        Name="IsMachineTranslationEnabledFieldName"
+        StaticName="IsMachineTranslationEnabledStaticName"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="_Hidden"
+        DisplayName="$Resources:smscore,column_ismachinetranslationenabled_displayname;"
+        Type="Boolean"
+        ShowInDisplayForm="TRUE"
+        ShowInEditForm="TRUE"
+        ShowInFileDlg="FALSE"
+        ShowInListSettings="TRUE"
+        ShowInNewForm="FALSE"
+        Required="FALSE"
+        Sealed="TRUE"
+        MaxLength="255"
+    />
+    <Field
+        ID="{d0f68163-2e6d-471B-b219-21022388fca6}"
+        Name="IsHumanTranslationEnabledFieldName"
+        StaticName="IsHumanTranslationEnabledStaticName"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="_Hidden"
+        DisplayName="$Resources:smscore,column_ishumantranslationenabled_displayname;"
+        Type="Boolean"
+        ShowInDisplayForm="TRUE"
+        ShowInEditForm="TRUE"
+        ShowInFileDlg="FALSE"
+        ShowInListSettings="TRUE"
+        ShowInNewForm="FALSE"
+        Required="FALSE"
+        Sealed="TRUE"
+        MaxLength="255"
+    />
+    <Field
+        ID="{46a0375f-5bef-45ed-80de-40c57b6fe146}"
+        Name="MachineTranslationLanguageFieldName"
+        StaticName="MachineTranslationLanguageFieldStaticName"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="_Hidden"
+        DisplayName="$Resources:smscore,column_machinetranslation_displayname;"
+        Type="Text"
+        ShowInDisplayForm="TRUE"
+        ShowInEditForm="TRUE"
+        ShowInFileDlg="FALSE"
+        ShowInListSettings="TRUE"
+        ShowInNewForm="FALSE"
+        Required="FALSE"
+        Sealed="TRUE"
+        MaxLength="255"
+    />
+    <Field
+        ID="{1bcf39d2-94ad-4e70-a992-af2c51310918}"
+        Name="HumanTranslationLanguageFieldName"
+        StaticName="HumanTranslationLanguageFieldStaticName"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="_Hidden"
+        DisplayName="$Resources:smscore,column_humantranslation_displayname;"
+        Type="Text"
+        ShowInDisplayForm="TRUE"
+        ShowInEditForm="TRUE"
+        ShowInFileDlg="FALSE"
+        ShowInListSettings="TRUE"
+        ShowInNewForm="FALSE"
+        Required="FALSE"
+        Sealed="TRUE"
+        MaxLength="255"
+    />
+    <!-- END Variations Label List Columns -->
+
+    <!-- Translation Package Content Type -->
+
+    <Field
+        ID="{88fd7ffb-523d-4758-b624-02eaceee1a5d}"
+        Name="TranslationPackageGroupId"
+        StaticName="TranslationPackageGroupId"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="_Hidden"
+        DisplayName="$Resources:smscore,column_translationpackagegroupid_displayname;"
+        Type="Guid"
+        Required="TRUE"
+        Sealed="TRUE"
+        Hidden="TRUE"
+        Indexed="TRUE"
+    />
+
+    <ContentType
+        ID= "0x010100E8711F0F931646FA949751442A907B22"
+        Name="$Resources:smscore,contenttype_translationpackage_name;"
+        Description="$Resources:smscore,contenttype_translationpackage_description;"
+        Group="_Hidden"
+        Sealed="FALSE"
+        Version="0"
+    >
+        <FieldRefs>
+            <FieldRef ID="{88fd7ffb-523d-4758-b624-02eaceee1a5d}" />
+        </FieldRefs>
+    </ContentType>
+    <!-- END Translation Package Content Type -->
+
+    <!-- Translation State Content Type -->
+    <Field
+        ID="{d5e67c73-de1d-484e-8463-61a1f35d56f2}"
+        Name="TranslationStateJobId"
+        StaticName="TranslationStateJobId"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:smscore,group_translationcolumns;"
+        DisplayName="$Resources:smscore,column_translationstatejobid_displayname;"
+        Type="Guid"
+        Required="TRUE"
+        Sealed="TRUE"
+        Hidden="FALSE"
+        Indexed="TRUE"
+    />
+
+    <Field
+        ID="{9945a424-9a0f-46df-a39e-58d10f8135c1}"
+        Name="TranslationStateStartTime"
+        StaticName="TranslationStateStartTime"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:smscore,group_translationcolumns;"
+        DisplayName="$Resources:smscore,column_translationstatestarttime_displayname;"
+        Type="DateTime"
+        Required="FALSE"
+        Sealed="TRUE"
+        Hidden="FALSE"
+        Indexed="TRUE"
+    />
+
+    <Control 
+        Sequence="50"
+        Id="ListTranslatableColumns"
+        ControlSrc="~/_controltemplates/15/ListTranslatableColumnsControl.ascx">
+    </Control>
+
+    <Field
+        ID="{06c9d16f-9b21-4b11-bc5e-710078bd8c37}"
+        Name="TranslationStateEndTime"
+        StaticName="TranslationStateEndTime"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:smscore,group_translationcolumns;"
+        DisplayName="$Resources:smscore,column_translationstateendtime_displayname;"
+        Type="DateTime"
+        Required="FALSE"
+        Sealed="TRUE"
+        Hidden="FALSE"
+        Indexed="TRUE"
+    />
+
+    <Field
+        ID="{ba67333c-6b3d-4221-a8d7-c9cf6ef85010}"
+        Name="TranslationStateExportTime"
+        StaticName="TranslationStateExportTime"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:smscore,group_translationcolumns;"
+        DisplayName="$Resources:smscore,column_translationstateexporttime_displayname;"
+        Type="DateTime"
+        Required="FALSE"
+        Sealed="TRUE"
+        Hidden="FALSE"
+        Indexed="TRUE"
+    />
+
+    <Field
+        ID="{fc75d934-8851-4ab2-8513-562b7f4d223e}"
+        Name="TranslationStateUploadTime"
+        StaticName="TranslationStateUploadTime"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:smscore,group_translationcolumns;"
+        DisplayName="$Resources:smscore,column_translationstateuploadtime_displayname;"
+        Type="DateTime"
+        Required="FALSE"
+        Sealed="TRUE"
+        Hidden="FALSE"
+        Indexed="TRUE"
+    />
+
+    <Field
+        ID="{8ee7c246-ccc6-4dd1-899b-76d954fb760c}"
+        Name="TranslationStateTranslationType"
+        StaticName="TranslationStateTranslationType"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:smscore,group_translationcolumns;"
+        DisplayName="$Resources:smscore,column_translationstatetranslationtype_displayname;"
+        Type="Choice"
+        Required="FALSE"
+        Sealed="TRUE"
+        Hidden="FALSE"
+        Indexed="FALSE"
+      >
+      <CHOICES>
+        <CHOICE>$Resources:smscore,column_translationstatetranslationtype_choice_machine;</CHOICE>
+        <CHOICE>$Resources:smscore,column_translationstatetranslationtype_choice_vendor;</CHOICE>
+      </CHOICES>
+      <Default>$Resources:smscore,column_translationstatetranslationtype_choice_vendor;</Default>
+    </Field>
+
+    <Field
+        ID="{c0c07065-b67a-4be6-b748-a488fa47aa2d}"
+        Name="TranslationStateTranslatorName"
+        StaticName="TranslationStateTranslatorName"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:smscore,group_translationcolumns;"
+        DisplayName="$Resources:smscore,column_translationstatetranslatorname_displayname;"
+        Type="Text"
+        Required="FALSE"
+        Sealed="TRUE"
+        Hidden="FALSE"
+        Indexed="FALSE"
+    />
+
+    <Field
+        ID="{9227689d-eb22-4289-8b41-95989fc01114}"
+        Name="TranslationStateExportRequestingUser"
+        StaticName="TranslationStateExportRequestingUser"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:smscore,group_translationcolumns;"
+        DisplayName="$Resources:smscore,column_translationstateexportrequestinguser_displayname;"
+        Type="User"
+        List="UserInfo"
+        Required="FALSE"
+        Sealed="TRUE"
+        Hidden="FALSE"
+        Indexed="FALSE"
+    />
+
+    <Field
+        ID="{1f8b0dc9-386a-4000-8f7a-26ef0bd40b16}"
+        Name="TranslationStateImportRequestingUser"
+        StaticName="TranslationStateImportRequestingUser"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:smscore,group_translationcolumns;"
+        DisplayName="$Resources:smscore,column_translationstateimportrequestinguser_displayname;"
+        Type="User"
+        List="UserInfo"
+        Required="FALSE"
+        Sealed="TRUE"
+        Hidden="FALSE"
+        Indexed="FALSE"
+    />
+
+    <Field
+        ID="{c208e2fb-4118-4071-8578-7e4c3f54ef62}"
+        Name="TranslationStateListId"
+        StaticName="TranslationStateListId"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:smscore,group_translationcolumns;"
+        DisplayName="$Resources:smscore,column_translationstatelistid_displayname;"
+        Type="Text"
+        Required="FALSE"
+        Sealed="TRUE"
+        Hidden="FALSE"
+        Indexed="FALSE"
+    />
+
+    <Field
+        ID="{646812d3-77e7-4f5d-81cc-639724ee605f}"
+        Name="TranslationStateWebId"
+        StaticName="TranslationStateWebId"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:smscore,group_translationcolumns;"
+        DisplayName="$Resources:smscore,column_translationstatewebid_displayname;"
+        Type="Text"
+        Required="FALSE"
+        Sealed="TRUE"
+        Hidden="FALSE"
+        Indexed="FALSE"
+    />
+
+    <Field
+        ID="{a4e65742-4a94-4190-99f9-676eec30f436}"
+        Name="TranslationStateListUrl"
+        StaticName="TranslationStateListUrl"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:smscore,group_translationcolumns;"
+        DisplayName="$Resources:smscore,column_translationstatelisturl_displayname;"
+        Type="URL"
+        Required="FALSE"
+        Sealed="TRUE"
+        Hidden="FALSE"
+    />
+
+    <Field
+        ID="{65c899fb-85d9-4b80-922e-eae197f942fa}"
+        Name="TranslationStateItemInformation"
+        StaticName="TranslationStateItemInformation"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:smscore,group_translationcolumns;"
+        DisplayName="$Resources:smscore,column_translationstateiteminformation_displayname;"
+        Type="Note"
+        Required="FALSE"
+        Sealed="TRUE"
+        Hidden="FALSE"
+    />
+
+    <Field
+        ID="{29245799-3020-4559-b74d-847b7bc8508f}"
+        Name="TranslationStateExportJobSize"
+        StaticName="TranslationStateExportJobSize"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:smscore,group_translationcolumns;"
+        DisplayName="$Resources:smscore,column_translationstateexportjobsize_displayname;"
+        Type="Number"
+        Required="FALSE"
+        Sealed="TRUE"
+        Hidden="FALSE"
+        Indexed="TRUE"
+    />
+
+    <Field
+        ID="{87dd98b3-9580-4f52-bba5-a4c6ac94bf02}"
+        Name="TranslationStateImportJobSize"
+        StaticName="TranslationStateImportJobSize"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:smscore,group_translationcolumns;"
+        DisplayName="$Resources:smscore,column_translationstateimportjobsize_displayname;"
+        Type="Number"
+        Required="FALSE"
+        Sealed="TRUE"
+        Hidden="FALSE"
+        Indexed="TRUE"
+    />
+
+    <Field
+        ID="{633c23a4-1c00-4934-8850-04394ec25420}"
+        Name="TranslationStateErrors"
+        StaticName="TranslationStateErrors"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:smscore,group_translationcolumns;"
+        DisplayName="$Resources:smscore,column_translationstateerrors_displayname;"
+        Type="Note"
+        Required="FALSE"
+        Sealed="TRUE"
+        Hidden="FALSE"
+    />
+
+    <Field
+        ID="{fe49a826-cdda-496a-91af-a820814383ec}"
+        Name="TranslationStateDownloadLink"
+        StaticName="TranslationStateDownloadLink"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:smscore,group_translationcolumns;"
+        DisplayName="$Resources:smscore,column_translationstatedownloadlink_displayname;"
+        Type="URL"
+        Required="FALSE"
+        Sealed="TRUE"
+        Hidden="FALSE"
+    />
+
+    <Field
+        ID="{6b9b4f94-88e9-4f5d-b05b-0afb8f6a0b2c}"
+        Name="TranslationStateNumberOfItems"
+        StaticName="TranslationStateNumberOfItems"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:smscore,group_translationcolumns;"
+        DisplayName="$Resources:smscore,column_translationstatenumberofitems_displayname;"
+        Type="Number"
+        Required="FALSE"
+        Sealed="TRUE"
+        Hidden="FALSE"
+        Indexed="TRUE"
+    />
+
+    <Field
+        ID="{cca3f38b-47d8-484f-8467-5d810006bff5}"
+        Name="TranslationStateTermInformation"
+        StaticName="TranslationStateTermInformation"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:smscore,group_translationcolumns;"
+        DisplayName="$Resources:smscore,column_translationstateterminformation_displayname;"
+        Type="Note"
+        Required="FALSE"
+        Sealed="TRUE"
+        Hidden="FALSE"
+    />
+
+    <Field
+        ID="{c3c9851e-6139-479b-b3d2-2c7fb6f3bd29}"
+        Name="TranslationStateStatus"
+        StaticName="TranslationStateStatus"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:smscore,group_translationcolumns;"
+        DisplayName="$Resources:smscore,column_translationstatestatus_displayname;"
+        Type="Choice"
+        Required="TRUE"
+        Sealed="TRUE"
+        Hidden="FALSE"
+        Indexed="FALSE"
+    >
+      <CHOICES>
+        <CHOICE>$Resources:smscore,column_translationstatestatus_choice_queued;</CHOICE>
+        <CHOICE>$Resources:smscore,column_translationstatestatus_choice_completed;</CHOICE>
+        <CHOICE>$Resources:smscore,column_translationstatestatus_choice_inprogress;</CHOICE>
+        <CHOICE>$Resources:smscore,column_translationstatestatus_choice_withvendor;</CHOICE>
+        <CHOICE>$Resources:smscore,column_translationstatestatus_choice_throttled;</CHOICE>
+        <CHOICE>$Resources:smscore,column_translationstatestatus_choice_error;</CHOICE>
+      </CHOICES>
+      <Default>$Resources:smscore,column_translationstatestatus_choice_queued;</Default>
+    </Field>
+
+    <ContentType
+        ID="0x01010000DEC92EFE5D445789D9FE4A3225A381"
+        Name="$Resources:smscore,contenttype_translationstate_name;"
+        Description="$Resources:smscore,contenttype_translationstate_description;"
+        Group="_Hidden"
+        Sealed="FALSE"
+        Version="0"
+    >
+      <FieldRefs>
+        <FieldRef ID="{d5e67c73-de1d-484e-8463-61a1f35d56f2}" />
+        <FieldRef ID="{9945a424-9a0f-46df-a39e-58d10f8135c1}" />
+        <FieldRef ID="{06c9d16f-9b21-4b11-bc5e-710078bd8c37}" />
+        <FieldRef ID="{ba67333c-6b3d-4221-a8d7-c9cf6ef85010}" />
+        <FieldRef ID="{fc75d934-8851-4ab2-8513-562b7f4d223e}" />
+        <FieldRef ID="{8ee7c246-ccc6-4dd1-899b-76d954fb760c}" />
+        <FieldRef ID="{c0c07065-b67a-4be6-b748-a488fa47aa2d}" />
+        <FieldRef ID="{9227689d-eb22-4289-8b41-95989fc01114}" />
+        <FieldRef ID="{1f8b0dc9-386a-4000-8f7a-26ef0bd40b16}" />
+        <FieldRef ID="{c208e2fb-4118-4071-8578-7e4c3f54ef62}" />
+        <FieldRef ID="{646812d3-77e7-4f5d-81cc-639724ee605f}" />
+        <FieldRef ID="{a4e65742-4a94-4190-99f9-676eec30f436}" />
+        <FieldRef ID="{65c899fb-85d9-4b80-922e-eae197f942fa}" />
+        <FieldRef ID="{29245799-3020-4559-b74d-847b7bc8508f}" />
+        <FieldRef ID="{87dd98b3-9580-4f52-bba5-a4c6ac94bf02}" />
+        <FieldRef ID="{fe49a826-cdda-496a-91af-a820814383ec}" />
+        <FieldRef ID="{c3c9851e-6139-479b-b3d2-2c7fb6f3bd29}" />
+        <FieldRef ID="{6b9b4f94-88e9-4f5d-b05b-0afb8f6a0b2c}" />
+        <FieldRef ID="{633c23a4-1c00-4934-8850-04394ec25420}" />
+        <FieldRef ID="{cca3f38b-47d8-484f-8467-5d810006bff5}" />
+      </FieldRefs>
+    </ContentType>
+    <!-- END Translation State Content Type -->
+
+    <!-- Translation Ribbon UI Elements -->
+    <!-- Pages List Ribbon Elemnts-->
+    <CustomAction
+        Id="Ribbon.TranslationRibbonList"
+        Title="TranslationUI"
+        Location="CommandUI.Ribbon"
+        RegistrationType="List"
+        RegistrationId="850"
+    >
+        <CommandUIExtension>
+            <CommandUIDefinitions>
+                <CommandUIDefinition Location="Ribbon.VariationsTabGroup.VariationsDoclibTab.Groups._children">
+                    <Group
+                        Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation"
+                        Description="SharePoint Translation UI Controls"
+                        Title="$Resources:smscore,translationribbon_groupname;"
+                        Sequence="90"
+                        Template="Ribbon.Templates.Flexible2"
+                    >
+                        <Controls Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation.Controls">
+                            <FlyoutAnchor
+                                Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation.VendorFlyout"
+                                Sequence="10"
+                                Command="IsVendorTranslationEnabled"
+                                Image32by32="/_layouts/15/$Resources:core,Language;/images/sms.png" 
+                                Image32by32Top="-0" 
+                                Image32by32Left="-0"
+                                LabelText="$Resources:smscore,translationribbon_documents_export;"
+                                ToolTipTitle="$Resources:smscore,translationribbon_flyout_translatetitle;"
+                                ToolTipDescription="$Resources:smscore,translationribbon_vendor_dropdown_tooltip;"
+                                TemplateAlias="o2"
+                            >
+                                <Menu Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation.VendorFlyout.Menu">
+                                    <MenuSection Id="Ribbon.VariationsDoclibTab.Translation.VendorFlyout.Menu.Export">
+                                        <Controls Id="Ribbon.VariationsDoclibTab.Translation.VendorFlyout.Menu.Export.Controls">
+                                            <Button
+                                                MenuItemId="Explicit"
+                                                Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation.VendorFlyout.Menu.ImportExport.Explicit"
+                                                Sequence="10"
+                                                Command="TranslationExportExplicit"
+                                                LabelText="$Resources:smscore,translationribbon_explicit_export_button_title;"
+                                                ToolTipTitle="$Resources:smscore,translationribbon_explicit_export_button_title;"
+                                                ToolTipDescription="$Resources:smscore,translationribbon_documents_tooltip_export_explicit_description;"
+                                                TemplateAlias="o2"
+                                            />
+                                            <Button
+                                                MenuItemId="Infer"
+                                                Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation.VendorFlyout.Menu.ImportExport.Infer"
+                                                Sequence="20"
+                                                Command="TranslationExportInfer"
+                                                LabelText="$Resources:smscore,translationribbon_infer_export_button_title;"
+                                                ToolTipTitle="$Resources:smscore,translationribbon_infer_export_button_title;"
+                                                ToolTipDescription="$Resources:smscore,translationribbon_documents_tooltip_export_infer_description;"
+                                                TemplateAlias="o2"
+                                            />
+                                        </Controls>
+                                    </MenuSection>
+                                </Menu>
+                            </FlyoutAnchor>
+                            <Button
+                                MenuItemId="Import"
+                                Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation.Import"
+                                Sequence="20"
+                                Command="TranslationImport"
+                                Image32by32="/_layouts/15/$Resources:core,Language;/images/sms.png"
+                                Image32by32Top="-32"
+                                Image32by32Left="-0"
+                                LabelText="$Resources:smscore,translationribbon_documents_import;"
+                                ToolTipTitle="$Resources:smscore,translationribbon_documents_import;"
+                                ToolTipDescription="$Resources:smscore,translationribbon_documents_tooltip_import_description;"
+                                TemplateAlias="o2"
+                            />
+                            <FlyoutAnchor
+                                Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation.MachineFlyout"
+                                Sequence="30"
+                                Command="IsMachineTranslationEnabled"
+                                Image32by32="/_layouts/15/$Resources:core,Language;/images/sms.png" 
+                                Image32by32Top="-32" 
+                                Image32by32Left="-32"
+                                LabelText="$Resources:smscore,translationribbon_documents_machinetranslate;"
+                                ToolTipTitle="$Resources:smscore,translationribbon_flyout_translatetitle;"
+                                ToolTipDescription="$Resources:smscore,translationribbon_dropdown_tooltip;"
+                                TemplateAlias="o2"
+                            >
+                                <Menu Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation.MachineFlyout.Menu">
+                                    <MenuSection Id="Ribbon.VariationsDoclibTab.Translation.MachineFlyout.Menu.MachineTranslation">
+                                        <Controls Id="Ribbon.VariationsDoclibTab.Translation.MachineFlyout.Menu.MachineTranslation.Controls">
+                                            <Button
+                                                MenuItemId="Explicit"
+                                                Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation.MachineFlyout.Menu.MachineTranslation.Explicit"
+                                                Sequence="10"
+                                                Command="TranslationMachineTranslate"
+                                                LabelText="$Resources:smscore,translationribbon_explicit_export_button_title;"
+                                                ToolTipTitle="$Resources:smscore,translationribbon_explicit_export_button_title;"
+                                                ToolTipDescription="$Resources:smscore,translationribbon_documents_tooltip_machinetranslate_explicit_description;"
+                                                TemplateAlias="o2"
+                                            />
+                                            <Button
+                                                MenuItemId="Infer"
+                                                Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation.MachineFlyout.Menu.MachineTranslation.Infer"
+                                                Sequence="20"
+                                                Command="TranslationMachineTranslateInfer"
+                                                LabelText="$Resources:smscore,translationribbon_infer_export_button_title;"
+                                                ToolTipTitle="$Resources:smscore,translationribbon_infer_export_button_title;"
+                                                ToolTipDescription="$Resources:smscore,translationribbon_documents_tooltip_machinetranslate_infer_description;"
+                                                TemplateAlias="o2"
+                                            />
+                                        </Controls>
+                                    </MenuSection>
+                                </Menu>
+                            </FlyoutAnchor>
+                            <Button
+                                MenuItemId="TranslationStatus"
+                                Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation.TranslationStatus"
+                                Sequence="40"
+                                Command="TranslationStatusDisplay"
+                                Image32by32="/_layouts/15/$Resources:core,Language;/images/sms.png" 
+                                Image32by32Top="-0" 
+                                Image32by32Left="-32"
+                                LabelText="$Resources:smscore,translationribbon_publishing_translation_status;"
+                                ToolTipTitle="$Resources:smscore,translationribbon_publishing_translation_status;"
+                                ToolTipDescription="$Resources:smscore,translationribbon_publishing_tooltip_translation_status_description;"
+                                TemplateAlias="o2"
+                            />
+                        </Controls>
+                    </Group>
+                </CommandUIDefinition>
+                <CommandUIDefinition
+                  Location="Ribbon.VariationsTabGroup.VariationsDoclibTab.Scaling._children">
+                    <MaxSize
+                      Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Scaling.Translation.MaxSize"
+                      Sequence="15"
+                      GroupId="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation"
+                      Size="LargeLarge" />
+                </CommandUIDefinition>
+            </CommandUIDefinitions>
+        </CommandUIExtension>
+    </CustomAction>
+    <!-- END Pages List Ribbon Elemnts-->
+    <!-- Generic Library Ribbon Buttons -->
+    <CustomAction
+        Id="Ribbon.TranslationRibbonGenericLibrary"
+        Title="TranslationUI"
+        Location="CommandUI.Ribbon"
+        RegistrationType="List"
+        RegistrationId="101"
+    >
+        <CommandUIExtension>
+            <CommandUIDefinitions>
+                <CommandUIDefinition Location="Ribbon.VariationsTabGroup.VariationsDoclibTab.Groups._children">
+                    <Group
+                        Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation"
+                        Description="SharePoint Translation UI Controls"
+                        Title="$Resources:smscore,translationribbon_groupname;"
+                        Sequence="90"
+                        Template="Ribbon.Templates.Flexible2"
+                    >
+                        <Controls Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation.Controls">
+                            <FlyoutAnchor
+                                Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation.VendorFlyout"
+                                Sequence="10"
+                                Command="IsVendorTranslationEnabled"
+                                Image32by32="/_layouts/15/$Resources:core,Language;/images/sms.png" 
+                                Image32by32Top="-0" 
+                                Image32by32Left="-0"
+                                LabelText="$Resources:smscore,translationribbon_documents_export;"
+                                ToolTipTitle="$Resources:smscore,translationribbon_flyout_translatetitle;"
+                                ToolTipDescription="$Resources:smscore,translationribbon_vendor_dropdown_tooltip;"
+                                TemplateAlias="o2"
+                            >
+                                <Menu Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation.VendorFlyout.Menu">
+                                    <MenuSection Id="Ribbon.VariationsDoclibTab.Translation.VendorFlyout.Menu.Export">
+                                        <Controls Id="Ribbon.VariationsDoclibTab.Translation.VendorFlyout.Menu.Export.Controls">
+                                            <Button
+                                                MenuItemId="Explicit"
+                                                Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation.VendorFlyout.Menu.ImportExport.Explicit"
+                                                Sequence="10"
+                                                Command="TranslationExportExplicit"
+                                                LabelText="$Resources:smscore,translationribbon_explicit_export_button_title;"
+                                                ToolTipTitle="$Resources:smscore,translationribbon_explicit_export_button_title;"
+                                                ToolTipDescription="$Resources:smscore,translationribbon_documents_tooltip_export_explicit_description;"
+                                                TemplateAlias="o2"
+                                            />
+                                            <Button
+                                                MenuItemId="Infer"
+                                                Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation.VendorFlyout.Menu.ImportExport.Infer"
+                                                Sequence="20"
+                                                Command="TranslationExportInfer"
+                                                LabelText="$Resources:smscore,translationribbon_infer_export_button_title;"
+                                                ToolTipTitle="$Resources:smscore,translationribbon_infer_export_button_title;"
+                                                ToolTipDescription="$Resources:smscore,translationribbon_documents_tooltip_export_infer_description;"
+                                                TemplateAlias="o2"
+                                            />
+                                        </Controls>
+                                    </MenuSection>
+                                </Menu>
+                            </FlyoutAnchor>
+                            <Button
+                                MenuItemId="Import"
+                                Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation.Import"
+                                Sequence="20"
+                                Command="TranslationImport"
+                                Image32by32="/_layouts/15/$Resources:core,Language;/images/sms.png"
+                                Image32by32Top="-32"
+                                Image32by32Left="-0"
+                                LabelText="$Resources:smscore,translationribbon_documents_import;"
+                                ToolTipTitle="$Resources:smscore,translationribbon_documents_import;"
+                                ToolTipDescription="$Resources:smscore,translationribbon_documents_tooltip_import_description;"
+                                TemplateAlias="o2"
+                            />
+                            <FlyoutAnchor
+                                Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation.MachineFlyout"
+                                Sequence="30"
+                                Command="IsMachineTranslationEnabled"
+                                Image32by32="/_layouts/15/$Resources:core,Language;/images/sms.png" 
+                                Image32by32Top="-32" 
+                                Image32by32Left="-32"
+                                LabelText="$Resources:smscore,translationribbon_documents_machinetranslate;"
+                                ToolTipTitle="$Resources:smscore,translationribbon_flyout_translatetitle;"
+                                ToolTipDescription="$Resources:smscore,translationribbon_dropdown_tooltip;"
+                                TemplateAlias="o2"
+                            >
+                                <Menu Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation.MachineFlyout.Menu">
+                                    <MenuSection Id="Ribbon.VariationsDoclibTab.Translation.MachineFlyout.Menu.MachineTranslation">
+                                        <Controls Id="Ribbon.VariationsDoclibTab.Translation.MachineFlyout.Menu.MachineTranslation.Controls">
+                                            <Button
+                                                MenuItemId="Explicit"
+                                                Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation.MachineFlyout.Menu.MachineTranslation.Explicit"
+                                                Sequence="10"
+                                                Command="TranslationMachineTranslate"
+                                                LabelText="$Resources:smscore,translationribbon_explicit_export_button_title;"
+                                                ToolTipTitle="$Resources:smscore,translationribbon_explicit_export_button_title;"
+                                                ToolTipDescription="$Resources:smscore,translationribbon_documents_tooltip_machinetranslate_explicit_description;"
+                                                TemplateAlias="o2"
+                                            />
+                                            <Button
+                                                MenuItemId="Infer"
+                                                Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation.MachineFlyout.Menu.MachineTranslation.Infer"
+                                                Sequence="20"
+                                                Command="TranslationMachineTranslateInfer"
+                                                LabelText="$Resources:smscore,translationribbon_infer_export_button_title;"
+                                                ToolTipTitle="$Resources:smscore,translationribbon_infer_export_button_title;"
+                                                ToolTipDescription="$Resources:smscore,translationribbon_documents_tooltip_machinetranslate_infer_description;"
+                                                TemplateAlias="o2"
+                                            />
+                                        </Controls>
+                                    </MenuSection>
+                                </Menu>
+                            </FlyoutAnchor>
+                            <Button
+                                MenuItemId="TranslationStatus"
+                                Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation.TranslationStatus"
+                                Sequence="40"
+                                Command="TranslationStatusDisplay"
+                                Image32by32="/_layouts/15/$Resources:core,Language;/images/sms.png" 
+                                Image32by32Top="-0" 
+                                Image32by32Left="-32"
+                                LabelText="$Resources:smscore,translationribbon_publishing_translation_status;"
+                                ToolTipTitle="$Resources:smscore,translationribbon_publishing_translation_status;"
+                                ToolTipDescription="$Resources:smscore,translationribbon_publishing_tooltip_translation_status_description;"
+                                TemplateAlias="o2"
+                            />
+                        </Controls>
+                    </Group>
+                </CommandUIDefinition>
+                <CommandUIDefinition
+                  Location="Ribbon.VariationsTabGroup.VariationsDoclibTab.Scaling._children">
+                    <MaxSize
+                      Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Scaling.Translation.MaxSize"
+                      Sequence="15"
+                      GroupId="Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation"
+                      Size="LargeLarge" />
+                </CommandUIDefinition>
+            </CommandUIDefinitions>
+        </CommandUIExtension>
+    </CustomAction>
+    <!-- END Generic Library Ribbon Buttons -->
+    <!-- Generic List Ribbon Buttons -->
+    <CustomAction
+        Id="Ribbon.TranslationRibbonGenericList"
+        Title="TranslationUI"
+        Location="CommandUI.Ribbon"
+        RegistrationType="List"
+        RegistrationId="100"
+    >
+        <CommandUIExtension>
+            <CommandUIDefinitions>
+                <CommandUIDefinition Location="Ribbon.VariationsListTabGroup.VariationsListTab.Groups._children">
+                    <Group
+                        Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation"
+                        Description="SharePoint Translation UI Controls"
+                        Title="$Resources:smscore,translationribbon_groupname;"
+                        Sequence="90"
+                        Template="Ribbon.Templates.Flexible2"
+                    >
+                        <Controls Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.Controls">
+                            <FlyoutAnchor
+                                Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.VendorFlyout"
+                                Sequence="10"
+                                Command="IsVendorTranslationEnabled"
+                                Image32by32="/_layouts/15/$Resources:core,Language;/images/sms.png" 
+                                Image32by32Top="-0" 
+                                Image32by32Left="-0"
+                                LabelText="$Resources:smscore,translationribbon_documents_export;"
+                                ToolTipTitle="$Resources:smscore,translationribbon_flyout_translatetitle;"
+                                ToolTipDescription="$Resources:smscore,translationribbon_vendor_dropdown_tooltip;"
+                                TemplateAlias="o2"
+                            >
+                                <Menu Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.VendorFlyout.Menu">
+                                    <MenuSection Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.VendorFlyout.Menu.Export">
+                                        <Controls Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.VendorFlyout.Menu.Export.Controls">
+                                            <Button
+                                                MenuItemId="Explicit"
+                                                Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.VendorFlyout.Menu.ImportExport.Explicit"
+                                                Sequence="10"
+                                                Command="TranslationExportExplicit"
+                                                LabelText="$Resources:smscore,translationribbon_explicit_export_button_title;"
+                                                ToolTipTitle="$Resources:smscore,translationribbon_explicit_export_button_title;"
+                                                ToolTipDescription="$Resources:smscore,translationribbon_documents_tooltip_export_explicit_description;"
+                                                TemplateAlias="o2"
+                                            />
+                                            <Button
+                                                MenuItemId="Infer"
+                                                Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.VendorFlyout.Menu.ImportExport.Infer"
+                                                Sequence="20"
+                                                Command="TranslationExportInfer"
+                                                LabelText="$Resources:smscore,translationribbon_infer_export_button_title;"
+                                                ToolTipTitle="$Resources:smscore,translationribbon_infer_export_button_title;"
+                                                ToolTipDescription="$Resources:smscore,translationribbon_documents_tooltip_export_infer_description;"
+                                                TemplateAlias="o2"
+                                            />
+                                        </Controls>
+                                    </MenuSection>
+                                </Menu>
+                            </FlyoutAnchor>
+                            <Button
+                                MenuItemId="Import"
+                                Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.Import"
+                                Sequence="20"
+                                Command="TranslationImport"
+                                Image32by32="/_layouts/15/$Resources:core,Language;/images/sms.png"
+                                Image32by32Top="-32"
+                                Image32by32Left="-0"
+                                LabelText="$Resources:smscore,translationribbon_documents_import;"
+                                ToolTipTitle="$Resources:smscore,translationribbon_documents_import;"
+                                ToolTipDescription="$Resources:smscore,translationribbon_documents_tooltip_import_description;"
+                                TemplateAlias="o2"
+                            />
+                            <FlyoutAnchor
+                                Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.MachineFlyout"
+                                Sequence="30"
+                                Command="IsMachineTranslationEnabled"
+                                Image32by32="/_layouts/15/$Resources:core,Language;/images/sms.png" 
+                                Image32by32Top="-32" 
+                                Image32by32Left="-32"
+                                LabelText="$Resources:smscore,translationribbon_documents_machinetranslate;"
+                                ToolTipTitle="$Resources:smscore,translationribbon_flyout_translatetitle;"
+                                ToolTipDescription="$Resources:smscore,translationribbon_dropdown_tooltip;"
+                                TemplateAlias="o2"
+                            >
+                                <Menu Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.MachineFlyout.Menu">
+                                    <MenuSection Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.MachineFlyout.Menu.MachineTranslation">
+                                        <Controls Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.MachineFlyout.Menu.MachineTranslation.Controls">
+                                            <Button
+                                                MenuItemId="Explicit"
+                                                Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.MachineFlyout.Menu.MachineTranslation.Explicit"
+                                                Sequence="10"
+                                                Command="TranslationMachineTranslate"
+                                                LabelText="$Resources:smscore,translationribbon_explicit_export_button_title;"
+                                                ToolTipTitle="$Resources:smscore,translationribbon_explicit_export_button_title;"
+                                                ToolTipDescription="$Resources:smscore,translationribbon_documents_tooltip_machinetranslate_explicit_description;"
+                                                TemplateAlias="o2"
+                                            />
+                                            <Button
+                                                MenuItemId="Infer"
+                                                Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.MachineFlyout.Menu.MachineTranslation.Infer"
+                                                Sequence="20"
+                                                Command="TranslationMachineTranslateInfer"
+                                                LabelText="$Resources:smscore,translationribbon_infer_export_button_title;"
+                                                ToolTipTitle="$Resources:smscore,translationribbon_infer_export_button_title;"
+                                                ToolTipDescription="$Resources:smscore,translationribbon_documents_tooltip_machinetranslate_infer_description;"
+                                                TemplateAlias="o2"
+                                            />
+                                        </Controls>
+                                    </MenuSection>
+                                </Menu>
+                            </FlyoutAnchor>
+                            <Button
+                                MenuItemId="TranslationStatus"
+                                Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.TranslationStatus"
+                                Sequence="40"
+                                Command="TranslationStatusDisplay"
+                                Image32by32="/_layouts/15/$Resources:core,Language;/images/sms.png" 
+                                Image32by32Top="-0" 
+                                Image32by32Left="-32"
+                                LabelText="$Resources:smscore,translationribbon_publishing_translation_status;"
+                                ToolTipTitle="$Resources:smscore,translationribbon_publishing_translation_status;"
+                                ToolTipDescription="$Resources:smscore,translationribbon_publishing_tooltip_translation_status_description;"
+                                TemplateAlias="o2"
+                            />
+                        </Controls>
+                    </Group>
+                </CommandUIDefinition>
+                <CommandUIDefinition
+                  Location="Ribbon.VariationsListTabGroup.VariationsListTab.Scaling._children">
+                    <MaxSize
+                      Id="Ribbon.VariationsListTabGroup.VariationsListTab.Scaling.Translation.MaxSize"
+                      Sequence="15"
+                      GroupId="Ribbon.VariationsListTabGroup.VariationsListTab.Translation"
+                      Size="LargeLarge" />
+                </CommandUIDefinition>
+            </CommandUIDefinitions>
+        </CommandUIExtension>
+    </CustomAction>
+    <!-- END Generic List Ribbon Buttons -->
+    <!-- Announcement List Ribbon Buttons -->
+    <CustomAction
+        Id="Ribbon.TranslationRibbonAnnouncements"
+        Title="TranslationUI"
+        Location="CommandUI.Ribbon"
+        RegistrationType="List"
+        RegistrationId="104"
+    >
+        <CommandUIExtension>
+            <CommandUIDefinitions>
+                <CommandUIDefinition Location="Ribbon.VariationsListTabGroup.VariationsListTab.Groups._children">
+                    <Group
+                        Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation"
+                        Description="SharePoint Translation UI Controls"
+                        Title="$Resources:smscore,translationribbon_groupname;"
+                        Sequence="90"
+                        Template="Ribbon.Templates.Flexible2"
+                    >
+                        <Controls Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.Controls">
+                            <FlyoutAnchor
+                                Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.VendorFlyout"
+                                Sequence="10"
+                                Command="IsVendorTranslationEnabled"
+                                Image32by32="/_layouts/15/$Resources:core,Language;/images/sms.png" 
+                                Image32by32Top="-0" 
+                                Image32by32Left="-0"
+                                LabelText="$Resources:smscore,translationribbon_documents_export;"
+                                ToolTipTitle="$Resources:smscore,translationribbon_flyout_translatetitle;"
+                                ToolTipDescription="$Resources:smscore,translationribbon_vendor_dropdown_tooltip;"
+                                TemplateAlias="o2"
+                            >
+                                <Menu Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.VendorFlyout.Menu">
+                                    <MenuSection Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.VendorFlyout.Menu.Export">
+                                        <Controls Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.VendorFlyout.Menu.Export.Controls">
+                                            <Button
+                                                MenuItemId="Explicit"
+                                                Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.VendorFlyout.Menu.ImportExport.Explicit"
+                                                Sequence="10"
+                                                Command="TranslationExportExplicit"
+                                                LabelText="$Resources:smscore,translationribbon_explicit_export_button_title;"
+                                                ToolTipTitle="$Resources:smscore,translationribbon_explicit_export_button_title;"
+                                                ToolTipDescription="$Resources:smscore,translationribbon_documents_tooltip_export_explicit_description;"
+                                                TemplateAlias="o2"
+                                            />
+                                            <Button
+                                                MenuItemId="Infer"
+                                                Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.VendorFlyout.Menu.ImportExport.Infer"
+                                                Sequence="20"
+                                                Command="TranslationExportInfer"
+                                                LabelText="$Resources:smscore,translationribbon_infer_export_button_title;"
+                                                ToolTipTitle="$Resources:smscore,translationribbon_infer_export_button_title;"
+                                                ToolTipDescription="$Resources:smscore,translationribbon_documents_tooltip_export_infer_description;"
+                                                TemplateAlias="o2"
+                                            />
+                                        </Controls>
+                                    </MenuSection>
+                                </Menu>
+                            </FlyoutAnchor>
+                            <Button
+                                MenuItemId="Import"
+                                Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.Import"
+                                Sequence="20"
+                                Command="TranslationImport"
+                                Image32by32="/_layouts/15/$Resources:core,Language;/images/sms.png"
+                                Image32by32Top="-32"
+                                Image32by32Left="-0"
+                                LabelText="$Resources:smscore,translationribbon_documents_import;"
+                                ToolTipTitle="$Resources:smscore,translationribbon_documents_import;"
+                                ToolTipDescription="$Resources:smscore,translationribbon_documents_tooltip_import_description;"
+                                TemplateAlias="o2"
+                            />
+                            <FlyoutAnchor
+                                Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.MachineFlyout"
+                                Sequence="30"
+                                Command="IsMachineTranslationEnabled"
+                                LabelText="$Resources:smscore,translationribbon_documents_machinetranslate;"
+                                Image32by32="/_layouts/15/$Resources:core,Language;/images/sms.png" 
+                                Image32by32Top="-32"
+                                Image32by32Left="-32"
+                                ToolTipTitle="$Resources:smscore,translationribbon_flyout_translatetitle;"
+                                ToolTipDescription="$Resources:smscore,translationribbon_dropdown_tooltip;"
+                                TemplateAlias="o2"
+                            >
+                                <Menu Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.MachineFlyout.Menu">
+                                    <MenuSection Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.MachineFlyout.Menu.MachineTranslation">
+                                        <Controls Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.MachineFlyout.Menu.MachineTranslation.Controls">
+                                            <Button
+                                                MenuItemId="Explicit"
+                                                Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.MachineFlyout.Menu.MachineTranslation.Explicit"
+                                                Sequence="10"
+                                                Command="TranslationMachineTranslate"
+                                                LabelText="$Resources:smscore,translationribbon_explicit_export_button_title;"
+                                                ToolTipTitle="$Resources:smscore,translationribbon_explicit_export_button_title;"
+                                                ToolTipDescription="$Resources:smscore,translationribbon_documents_tooltip_machinetranslate_explicit_description;"
+                                                TemplateAlias="o2"
+                                            />
+                                            <Button
+                                                MenuItemId="Infer"
+                                                Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.MachineFlyout.Menu.MachineTranslation.Infer"
+                                                Sequence="20"
+                                                Command="TranslationMachineTranslateInfer"
+                                                LabelText="$Resources:smscore,translationribbon_infer_export_button_title;"
+                                                ToolTipTitle="$Resources:smscore,translationribbon_infer_export_button_title;"
+                                                ToolTipDescription="$Resources:smscore,translationribbon_documents_tooltip_machinetranslate_infer_description;"
+                                                TemplateAlias="o2"
+                                            />
+                                        </Controls>
+                                    </MenuSection>
+                                </Menu>
+                            </FlyoutAnchor>
+                            <Button
+                                MenuItemId="TranslationStatus"
+                                Id="Ribbon.VariationsListTabGroup.VariationsListTab.Translation.TranslationStatus"
+                                Sequence="40"
+                                Command="TranslationStatusDisplay"
+                                Image32by32="/_layouts/15/$Resources:core,Language;/images/sms.png" 
+                                Image32by32Top="-0" 
+                                Image32by32Left="-32"
+                                LabelText="$Resources:smscore,translationribbon_publishing_translation_status;"
+                                ToolTipTitle="$Resources:smscore,translationribbon_publishing_translation_status;"
+                                ToolTipDescription="$Resources:smscore,translationribbon_publishing_tooltip_translation_status_description;"
+                                TemplateAlias="o2"
+                            />
+                        </Controls>
+                    </Group>
+                </CommandUIDefinition>
+                <CommandUIDefinition
+                  Location="Ribbon.VariationsListTabGroup.VariationsListTab.Scaling._children">
+                    <MaxSize
+                      Id="Ribbon.VariationsListTabGroup.VariationsListTab.Scaling.Translation.MaxSize"
+                      Sequence="15"
+                      GroupId="Ribbon.VariationsListTabGroup.VariationsListTab.Translation"
+                      Size="LargeLarge" />
+                </CommandUIDefinition>
+            </CommandUIDefinitions>
+        </CommandUIExtension>
+    </CustomAction>
+    <!-- END Announcements List Ribbon Buttons -->
+    <CustomAction
+      Id="Ribbon.VariationsTab.Translation.Group"
+      Location="CommandUI.Ribbon"
+      Title="Add Translation group to variations Tab">
+        <CommandUIExtension>
+            <CommandUIDefinitions>
+                <!-- Individual Page Page Tab -->
+                <CommandUIDefinition Location="Ribbon.VariationsTab.Groups._children">
+                    <Group Id="Ribbon.VariationsTab.Translation"
+                        Sequence="40"
+                        Description=""
+                        Title="$Resources:smscore,translationribbon_groupname;"
+                        Template="Ribbon.Templates.Flexible2" >
+                        <Controls Id="Ribbon.VariationsTab.Translation.Controls">
+                            <Button
+                                Id="Ribbon.VariationsTab.Translation.ExportExplicit"
+                                Alt=""
+                                Sequence="10"
+                                Command="TranslationExportExplicit"
+                                Image32by32="/_layouts/15/$Resources:core,Language;/images/sms.png" 
+                                Image32by32Top="-0" 
+                                Image32by32Left="-0"
+                                LabelText="$Resources:smscore,translationribbon_publishing_export;"
+                                ToolTipTitle="$Resources:smscore,translationribbon_publishing_export;"
+                                ToolTipDescription="$Resources:smscore,translationribbon_publishing_tooltip_export_explicit_description;"
+                                TemplateAlias="o1" />
+                            <Button
+                                Id="Ribbon.VariationsTab.Translation.Import"
+                                Alt=""
+                                Sequence="20"
+                                Command="TranslationImport"
+                                Image32by32="/_layouts/15/$Resources:core,Language;/images/sms.png"
+                                Image32by32Top="-32"
+                                Image32by32Left="-0"
+                                LabelText="$Resources:smscore,translationribbon_publishing_import;"
+                                ToolTipTitle="$Resources:smscore,translationribbon_publishing_import;"
+                                ToolTipDescription="$Resources:smscore,translationribbon_publishing_tooltip_import_description;"
+                                TemplateAlias="o1" />
+                            <Button
+                                Id="Ribbon.VariationsTab.Translation.MachineTranslate"
+                                Alt=""
+                                Sequence="30"
+                                Command="TranslationMachineTranslate"
+                                Image32by32="/_layouts/15/$Resources:core,Language;/images/sms.png" 
+                                Image32by32Top="-32"
+                                Image32by32Left="-32"
+                                LabelText="$Resources:smscore,translationribbon_publishing_machinetranslate;"
+                                ToolTipTitle="$Resources:smscore,translationribbon_publishing_machinetranslate;"
+                                ToolTipDescription="$Resources:smscore,translationribbon_publishing_tooltip_machinetranslate_explicit_description;"
+                                TemplateAlias="o1" />
+                            <Button
+                                Id="Ribbon.VariationsTab.Translation.TranslationStatus"
+                                Alt=""
+                                Sequence="40"
+                                Command="TranslationStatusDisplay"
+                                Image32by32="/_layouts/15/$Resources:core,Language;/images/sms.png" 
+                                Image32by32Top="-0" 
+                                Image32by32Left="-32"
+                                LabelText="$Resources:smscore,translationribbon_publishing_translation_status;"
+                                ToolTipTitle="$Resources:smscore,translationribbon_publishing_translation_status;"
+                                ToolTipDescription="$Resources:smscore,translationribbon_publishing_tooltip_translation_status_description;"
+                                TemplateAlias="o1" />
+                        </Controls>
+                    </Group>
+                </CommandUIDefinition>
+                <!-- END Individual Page Page Tab -->
+            </CommandUIDefinitions>
+        </CommandUIExtension>
+    </CustomAction>
+    <CustomAction
+        Id="Ribbon.VariationsTab.Translation.Scaling.MaxSize.Definition"
+        Location="CommandUI.Ribbon"
+        Title="Add Translation scaling to variationsTab">
+        <CommandUIExtension>
+            <CommandUIDefinitions>
+                <CommandUIDefinition Location="Ribbon.VariationsTab.Scaling._children">
+                    <MaxSize Id="Ribbon.VariationsTab.Scaling.Translation.MaxSize" Sequence="30" GroupId="Ribbon.VariationsTab.Translation" Size="LargeMedium"/>
+                </CommandUIDefinition>
+            </CommandUIDefinitions>
+        </CommandUIExtension>
+    </CustomAction>
+    <CustomAction
+        Id="Ribbon.VariationsTab.Translation.Scaling.Scale.Popup.Definition"
+        Location="CommandUI.Ribbon"
+        Title="Add Translation scaling to variations Tab">
+        <CommandUIExtension>
+            <CommandUIDefinitions>
+                <CommandUIDefinition Location="Ribbon.VariationsTab.Scaling._children">
+                    <Scale Id="Ribbon.VariationsTab.Scaling.Translation.Popup" Sequence="40" GroupId="Ribbon.VariationsTab.Translation" Size="Popup" />
+                </CommandUIDefinition>
+            </CommandUIDefinitions>
+        </CommandUIExtension>
+    </CustomAction>  
+
+    <!-- Translation Columns UI Elements -->
+    <CustomAction
+        Id="TranslatableColumnsPage"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        RequireSiteAdministrator="true"
+        Sequence="230"
+        Title="$Resources:cmscore,Settings_Publishing_Translatable;"
+        Description="$Resources:cmscore,Settings_Publishing_Translatable_Tooltip;">
+        <UrlAction
+            Url="_layouts/15/SiteTranslatableColumns.aspx" />
+    </CustomAction>
+
+    <!-- END Translation UI Elements -->
+
+    <CustomAction
+        Id="TranslationStatusListLink"
+        GroupId="SiteAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb"
+        Sequence="510"
+        Title="$Resources:cmscore,Settings_Publishing_Translation_Status;"
+        Description="$Resources:cmscore,SiteSettings_VariationLogs_Tooltip;">
+      <UrlAction
+          Url="_layouts/15/RedirectPage.aspx?Target={SiteCollectionUrl}Translation Status" />
+    </CustomAction>
+
+</Elements>

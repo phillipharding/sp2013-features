@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+        <CustomAction 
+            Id="ChangeNameDescription"
+            GroupId="General"
+            Location="Microsoft.SharePoint.ContentTypeSettings"
+            Sequence="10" 
+            Title="$Resources:ChangeNameDescription;">
+                <UrlAction Url="_layouts/15/ctypedit.aspx"/>
+        </CustomAction>
+        <CustomAction 
+            Id="ChangeOptionalSettings"
+            GroupId="General"
+            Location="Microsoft.SharePoint.ContentTypeSettings"
+            Sequence="20" 
+            Title="$Resources:ChangeOptionalSettings;" 
+            ShowInReadOnlyContentTypes="TRUE">
+                <UrlAction Url="_layouts/15/ChangeContentTypeOptionalSettings.aspx"/>
+        </CustomAction>
+        <CustomAction 
+            Id="ChangeWorkflowSettings"
+            GroupId="General"
+            Location="Microsoft.SharePoint.ContentTypeSettings"
+            Sequence="30" 
+            Title="$Resources:ChangeWorkflowSettings;">
+                <UrlAction Url="_layouts/15/WrkSetng.aspx"/>
+        </CustomAction>
+        <CustomAction 
+            Id="RemoveContentType"
+            GroupId="General"
+            Location="Microsoft.SharePoint.ContentTypeSettings"
+            Sequence="100" 
+            Title="$Resources:RemoveContentType;"
+            ShowInReadOnlyContentTypes="TRUE" 
+            ShowInSealedContentTypes="TRUE">
+                <UrlAction Url="_layouts/15/delete.aspx"/>
+        </CustomAction>
+        <CustomAction 
+            Id="AddField"
+            GroupId="Fields"
+            Location="Microsoft.SharePoint.ContentTypeSettings"
+            Sequence="10" 
+            Title="$Resources:AddFieldToContentType;" >
+                <UrlAction Url="_layouts/15/fldpick.aspx"/>
+        </CustomAction>
+        <CustomAction 
+            Id="ReorderFields"
+            GroupId="Fields"
+            Location="Microsoft.SharePoint.ContentTypeSettings"
+            Sequence="20" 
+            Title="$Resources:ReorderFields;" >
+                <UrlAction Url="_layouts/15/ChangeFieldOrder.aspx"/>
+        </CustomAction>
+        <CustomAction 
+            Id="ChangeNameDescriptionGroup"
+            GroupId="General"
+            Location="Microsoft.SharePoint.ContentTypeTemplateSettings"
+            Sequence="10" 
+            Title="$Resources:ChangeNameDescriptionGroup;" >
+                <UrlAction Url="_layouts/15/ctypedit.aspx"/>
+        </CustomAction>
+        <CustomAction 
+            Id="ChangeOptionalSettings"
+            GroupId="General"
+            Location="Microsoft.SharePoint.ContentTypeTemplateSettings"
+            Sequence="20" 
+            Title="$Resources:ChangeOptionalTemplateSettings;" 
+            ShowInReadOnlyContentTypes="TRUE">
+                <UrlAction Url="_layouts/15/ChangeContentTypeOptionalSettings.aspx"/>
+        </CustomAction>
+        <CustomAction 
+            Id="ChangeWorkflowSettings"
+            GroupId="General"
+            Location="Microsoft.SharePoint.ContentTypeTemplateSettings"
+            Sequence="40" 
+            Title="$Resources:ChangeWorkflowSettings;">
+                <UrlAction Url="_layouts/15/WrkSetng.aspx"/>
+        </CustomAction>
+        <CustomAction 
+            Id="RemoveContentType"
+            GroupId="General"
+            Location="Microsoft.SharePoint.ContentTypeTemplateSettings"
+            Sequence="100" 
+            Title="$Resources:RemoveContentTypeTemplate;" >
+                <UrlAction Url="_layouts/15/delete.aspx"/>
+        </CustomAction>
+        <CustomAction 
+            Id="AddField"
+            GroupId="Fields"
+            Location="Microsoft.SharePoint.ContentTypeTemplateSettings"
+            Sequence="10" 
+            Title="$Resources:AddFieldToContentTypeTemplate;" >
+                <UrlAction Url="_layouts/15/fldpick.aspx"/>
+        </CustomAction>
+        <CustomAction
+            Id=""
+            GroupId="Fields"
+            Location="Microsoft.SharePoint.ContentTypeTemplateSettings"
+            Sequence="15"
+            Title="$Resources:CreateAndAddFieldToContentType;" >
+                <UrlAction Url="_layouts/15/fldnew.aspx"/>
+        </CustomAction>
+        <CustomAction 
+            Id="ReorderFields"
+            GroupId="Fields"
+            Location="Microsoft.SharePoint.ContentTypeTemplateSettings"
+            Sequence="20" 
+            Title="$Resources:ReorderFields;" >
+                <UrlAction Url="_layouts/15/ChangeFieldOrder.aspx"/>
+        </CustomAction>
+</Elements>

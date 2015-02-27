@@ -1,0 +1,13 @@
+<Feature Id="C59DBAA9-FA01-495d-AAA3-3C02CC2EE8FF"
+    Title="Manage Profile Service Application"
+    Description="Manage Profile Service Application."
+    Hidden="true"
+    Version="14.0.0.0"
+    Scope="Farm"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ManageUserProfileServiceApplication.xml"/>
+        <ElementManifest Location="ManageUserProfileServiceApplicationHoster.xml"/>
+        <ElementManifest Location="ManageUserProfileServiceApplicationTenant.xml"/>
+    </ElementManifests>
+</Feature>

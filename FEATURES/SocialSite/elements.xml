@@ -1,0 +1,27 @@
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <Module Name="WebPartPopulation" Url="_catalogs/wp" Path="dwp" RootWebOnly="TRUE">
+        <File Url="AboutUs.webpart" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:spscore,CommunityWebPartGroup;"></Property>
+            <Property Name="QuickAddGroups" Value="COMMUNITY" />
+        </File>
+        <File Url="Dashboard.webpart" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:spscore,CommunityWebPartGroup;"></Property>
+            <Property Name="QuickAddGroups" Value="COMMUNITY" />
+        </File>
+        <File Url="MyMembership.webpart" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:spscore,CommunityWebPartGroup;"></Property>
+            <Property Name="QuickAddGroups" Value="COMMUNITY" />
+        </File>
+        <File Url="CommunityAdmin.webpart" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:spscore,CommunityWebPartGroup;"></Property>
+            <Property Name="QuickAddGroups" Value="COMMUNITY" />
+        </File>
+        <File Url="CommunityJoin.webpart" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:spscore,CommunityWebPartGroup;"></Property>
+            <Property Name="QuickAddGroups" Value="COMMUNITY" />
+        </File>
+    </Module>
+
+</Elements>

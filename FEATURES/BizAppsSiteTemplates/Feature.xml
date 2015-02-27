@@ -1,0 +1,85 @@
+<Feature Id="4248E21F-A816-4c88-8CAB-79D82201DA7B"
+    Title="BizApps Site Templates"
+    Description="SharePoint Portal site templates and web parts"
+    Version="15.0.3.0"
+    Scope="Site"
+    SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.ModuleDeleteOnDeactivateFeatureReceiver"
+    Hidden="TRUE"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="WebParts.xml"/>
+        <ElementManifest Location="WebParts15.xml"/>
+    </ElementManifests>
+    <UpgradeActions
+    	ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+	ReceiverClass="Microsoft.SharePoint.Portal.ModuleDeleteOnDeactivateFeatureReceiver">
+        <VersionRange EndVersion="14.0.1.0">
+            <CustomUpgradeAction Name="SetGroupNames">
+                <Parameters>
+                    <Parameter Name="FileNames">
+			KpiListWebPart.dwp|
+			IndicatorWebPart.dwp|
+                        BusinessDataFilter.dwp|
+			WSRPConsumerWebPart.dwp
+ 		    </Parameter>
+                    <Parameter Name="GroupNames">
+			$Resources:spscore,BusinessDataWebPartGroup;|
+			$Resources:spscore,BusinessDataWebPartGroup;|
+			$Resources:spscore,BusinessDataWebPartGroup;|
+			$Resources:spscore,ContentRollupWebPartGroup;
+		   </Parameter>
+                    <Parameter Name="Titles">
+			$Resources:spscore,DwpKpiListTitle;|
+			$Resources:spscore,DwpKpiTitle;|
+			$Resources:spscore,DwpBdcFilterTitle;|
+			$Resources:spscore,WSRPConsumerWebPart_Title;
+		   </Parameter>
+                    <Parameter Name="Descriptions">
+			$Resources:spscore,KPIListWebPart_Description;|
+			$Resources:spscore,IndicatorWebPart_Description;|
+			$Resources:spscore,DwpBdcFilterDescription;|
+			$Resources:spscore,WSRPConsumerWebPart_Description;
+		   </Parameter>
+
+                </Parameters>
+            </CustomUpgradeAction>
+        </VersionRange>
+        <VersionRange EndVersion="14.0.3.0">
+            <ApplyElementManifests>
+                <ElementManifest Location="WebParts15.xml"/>
+            </ApplyElementManifests>
+	</VersionRange>
+
+        <VersionRange EndVersion="15.0.0.0">
+            <CustomUpgradeAction Name="DeleteFiles">
+                <Parameters>
+                    <Parameter Name="FileNames">
+			_catalogs/wp/StaticTimeline.webpart
+ 		    </Parameter>
+                </Parameters>
+            </CustomUpgradeAction>
+        </VersionRange>
+	<VersionRange EndVersion="15.0.2.0">
+            <CustomUpgradeAction Name="RemoveBIWebparts">
+                <Parameters>
+                    <Parameter Name="WebPartNames">
+                        KpiListWebPart.dwp|
+                        IndicatorWebPart.dwp|
+                        MossChartWebPart.webpart
+                    </Parameter>
+                </Parameters>
+            </CustomUpgradeAction>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.3.0">
+            <CustomUpgradeAction Name="RemoveBIWebparts">
+                <Parameters>
+                    <Parameter Name="WebPartNames">
+			TeamWorkCenter.webpart
+ 		    </Parameter>
+                </Parameters>
+            </CustomUpgradeAction>
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

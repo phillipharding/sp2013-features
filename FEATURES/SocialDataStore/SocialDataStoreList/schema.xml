@@ -1,0 +1,117 @@
+<List xmlns:ows="Microsoft SharePoint" Title="$Resources:spscore,SocialDataStoreList_List_Title;" EnableContentTypes="TRUE" Direction="Resources:$core,Direction;" BaseType="0" Type="550" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      <ContentTypeRef ID="0x01200029E1F7200C2F49D9A9C5FA014063F220">
+      </ContentTypeRef>
+      <ContentTypeRef ID="0x0120001F6E5E1DE9E5447195CFF4F4FC5DDF5B">
+      </ContentTypeRef>
+      <ContentTypeRef ID="0x0100415C46DF0F4B45939BDEC96C5014A10E">
+      </ContentTypeRef>
+      <ContentTypeRef ID="0x01FC">
+      </ContentTypeRef>
+      <ContentTypeRef ID="0x01FC00533CDB8F4EAE447D941948EFAE32BFD5">
+      </ContentTypeRef>
+      <ContentTypeRef ID="0x01FC00A1B06EC3D1F64BC6A842CF614178A523">
+      </ContentTypeRef>
+    </ContentTypes>
+    <Fields>
+    </Fields>
+    <Views>
+      <View DisplayName="$Resources:spscore,ContentFollowingOnet_Views_FollowedDocumentsDisplayName"
+        DefaultView="TRUE"
+        BaseViewID="1"
+        Type="HTML"
+        MobileView="TRUE"
+        MobileDefaultView="TRUE"
+        ImageUrl="/_layouts/images/generic.png"
+        WebPartZoneID="LeftZone"
+        WebPartOrder="1"
+        Url="FollowedContent.aspx"
+        List="Social"
+        CssStyleSheet="contentfollowing.css"
+        Scope="Recursive">
+
+        <JSLink>mquery.js|contentfollowing.js</JSLink>
+        <XslLink>main.xsl</XslLink>
+
+        <Query>
+          <Where>
+            <BeginsWith>
+              <FieldRef Name="ContentTypeId" />
+              <Value Type="ContentTypeId">0x01FC00A1B06EC3D1F64BC6A842CF614178A523</Value>
+            </BeginsWith>
+          </Where>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+
+        <ViewFields>
+          <FieldRef Name="DocIcon" />
+          <FieldRef Name="Title"></FieldRef>
+          <FieldRef Name="Modified"></FieldRef>
+          <FieldRef Name="ContentTypeId"></FieldRef>
+          <FieldRef Name="Url"></FieldRef>
+          <FieldRef Name="IconUrl"></FieldRef>
+          <FieldRef Name="FileTypeProgid"></FieldRef>
+          <FieldRef Name="ServerUrlProgid"></FieldRef>
+        </ViewFields>
+
+        <RowLimit Paged="TRUE">30</RowLimit>
+
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(spscore,FollowedDocuments_View_NoAnnouncements)" />
+        </ParameterBindings>
+      </View>
+      <View DisplayName="$Resources:spscore,ContentFollowingOnet_Views_FollowedSitesDisplayName"
+        DefaultView="FALSE"
+        BaseViewID="2"
+        Type="HTML"
+        MobileView="TRUE"
+        MobileDefaultView="FALSE"
+        ImageUrl="/_layouts/images/generic.png"
+        WebPartZoneID="LeftZone"
+        WebPartOrder="1"
+        Url="Sites.aspx"
+        List="Social"
+        CssStyleSheet="contentfollowing.css"
+        Scope="Recursive">
+
+        <JSLink>mquery.js|contentfollowing.js</JSLink>
+        <XslLink>main.xsl</XslLink>
+
+        <Query>
+          <Where>
+            <BeginsWith>
+              <FieldRef Name="ContentTypeId" />
+              <Value Type="ContentTypeId">0x01FC00533CDB8F4EAE447D941948EFAE32BFD5</Value>
+            </BeginsWith>
+          </Where>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+
+        <ViewFields>
+          <FieldRef Name="Subtype"></FieldRef>
+          <FieldRef Name="Title"></FieldRef>
+          <FieldRef Name="Modified"></FieldRef>
+          <FieldRef Name="ContentTypeId"></FieldRef>
+          <FieldRef Name="Url"></FieldRef>
+          <FieldRef Name="IconUrl"></FieldRef>
+        </ViewFields>
+
+        <RowLimit Paged="TRUE">20</RowLimit>
+
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(spscore,FollowedSites_View_NoAnnouncements)" />
+        </ParameterBindings>
+      </View>
+
+    </Views>
+    <Forms>
+
+    </Forms>
+    <DefaultDescription></DefaultDescription>
+  </MetaData>
+</List>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+	This are templates for IPFS lists on the root Web.
+	-->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<CustomAction
+		Id="FormServerEcbItemOpenXsn"
+		Location="EditControlBlock"
+		RegistrationType="FileType" 
+		RegistrationId="xsn"
+		ImageUrl="/_layouts/15/images/icxddoc.gif?rev=23"
+		Sequence="255"
+		Title="$Resources:SupportFeatureEcbActionTitle;"
+		Rights="ViewListItems"
+		>
+		<UrlAction Url="~site/_layouts/15/formserver.aspx?XsnLocation={ItemUrl}&amp;OpenIn=Browser&amp;Source={Source}"/>
+	</CustomAction>
+	<CustomAction
+		Id="FormServerEcbItemOpenInfoPathDocument"
+		Location="EditControlBlock"
+		RegistrationType="ProgId"
+		RegistrationId="InfoPath.Document"
+		ImageUrl="/_layouts/15/images/icxddoc.gif?rev=23"
+		Sequence="255"
+		Title="$Resources:SupportFeatureEcbActionTitle;"
+		Rights="ViewListItems"
+		>
+		<UrlAction Url="~site/_layouts/15/formserver.aspx?XmlLocation={ItemUrl}&amp;OpenIn=Browser&amp;Source={Source}"/>
+	</CustomAction>
+	<CustomAction
+		Id="FormServerEcbItemOpenInfoPathDocument2"
+		Location="EditControlBlock"
+		RegistrationType="ProgId"
+		RegistrationId="InfoPath.Document.2"
+		ImageUrl="/_layouts/15/images/icxddoc.gif?rev=23"
+		Sequence="255"
+		Title="$Resources:SupportFeatureEcbActionTitle;"
+		Rights="ViewListItems"
+		>
+		<UrlAction Url="~site/_layouts/15/formserver.aspx?XmlLocation={ItemUrl}&amp;OpenIn=Browser&amp;Source={Source}"/>
+	</CustomAction>
+	<CustomAction
+		Id="FormServerEcbItemOpenInfoPathDocument3"
+		Location="EditControlBlock"
+		RegistrationType="ProgId"
+		RegistrationId="InfoPath.Document.3"
+		ImageUrl="/_layouts/15/images/icxddoc.gif?rev=23"
+		Sequence="255"
+		Title="$Resources:SupportFeatureEcbActionTitle;"
+		Rights="ViewListItems"
+		>
+		<UrlAction Url="~site/_layouts/15/formserver.aspx?XmlLocation={ItemUrl}&amp;OpenIn=Browser&amp;Source={Source}"/>
+	</CustomAction>
+	<CustomAction
+		Id="FormServerEcbItemOpenInfoPathDocument4"
+		Location="EditControlBlock"
+		RegistrationType="ProgId"
+		RegistrationId="InfoPath.Document.4"
+		ImageUrl="/_layouts/15/images/icxddoc.gif?rev=23"
+		Sequence="255" 
+		Title="$Resources:SupportFeatureEcbActionTitle;"
+		Rights="ViewListItems"
+		>
+		<UrlAction Url="~site/_layouts/15/formserver.aspx?XmlLocation={ItemUrl}&amp;OpenIn=Browser&amp;Source={Source}"/>
+	</CustomAction>
+</Elements>

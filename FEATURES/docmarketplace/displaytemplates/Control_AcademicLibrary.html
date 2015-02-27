@@ -1,0 +1,151 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:dmscore,IDS_CBSControlTitle</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentType msdt:dt="string">Control Display Template</mso:ContentType>
+<mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="DMSCBSControl">
+<!--#_ 
+        Srch.U.hideElement(ctx.ClientControl.get_element());
+        ctx.OnPostRender = function(){ Srch.U.animateResults(ctx.ClientControl, ctx.DataProvider.get_userAction()); };
+_#--> 
+        <div class="ms-srch-result dms-cbs-result" id="DMSCBSResult" name="Control">
+<!--#_
+            if(!$isNull(ctx.ScriptApplicationManager) && !$isNull(ctx.DataProvider) && !$isNull(ctx.ClientControl))
+            {
+                if(ctx.DataProvider.get_rowCount() > 0)
+                {
+_#-->
+                    <div class="ms-metadata dms-cbs-result"><span>_#= $htmlEncode(dms.res.homePage_HeaderLabel) =#_</span></div>
+                    <div id="ResultHeader" class="ms-metadata dms-cbs-result">
+                        <div id="Stats">
+<!--#_
+                            var start = ctx.DataProvider.get_currentQueryState().s;
+
+                            if(start == 0)
+                            {
+                                start = 1;
+                            }
+
+                            var end = start + ctx.DataProvider.get_resultsPerPage() - 1;
+                            if (end > ctx.DataProvider.get_totalRows()) 
+                            {
+                                end = ctx.DataProvider.get_totalRows();
+                            }
+_#-->
+                            <span id="ResultCount">
+                                _#= String.format($htmlEncode(dms.res.results_Label), $htmlEncode(start + "-" + end), $htmlEncode(ctx.DataProvider.get_totalRows())) =#_
+                            </span>
+                        </div>
+                        <ul id="Actions">
+<!--#_
+                            var availableSorts = ctx.DataProvider.get_availableSorts();
+                            if(!$isEmptyArray(availableSorts))
+                            {
+_#-->
+                                <li id="Sortby">
+                                    <span>_#= $htmlEncode(dms.res.sortBy_Label) =#_:</span> 
+                                    <select id="SortbySel" onchange="$getClientControl(this).sort(this.value);">
+<!--#_
+                                    for (var i = 0; i < availableSorts.length; i++) 
+                                    {
+                                        var cplxsort = availableSorts[i];
+                                        if(!$isNull(cplxsort))
+                                        {
+                                            if(ctx.DataProvider.getSortName() == cplxsort.name) 
+                                            {
+_#-->
+                                                <option selected="selected" value="_#= $htmlEncode(cplxsort.name) =#_">_#= $htmlEncode(cplxsort.name) =#_</option>
+<!--#_
+                                            } 
+                                            else
+                                            {
+_#-->
+                                                <option value="_#= $htmlEncode(cplxsort.name) =#_">_#= $htmlEncode(cplxsort.name) =#_</option>
+<!--#_
+                                            }
+                                        }
+                                    }
+_#-->
+                                    </select>
+                                </li>
+<!--#_
+                            }
+_#-->
+                        </ul>
+                    </div>
+<!--#_
+                }
+                ctx.ListDataJSONGroupsKey = "ResultTables"; 
+_#-->
+                _#= ctx.RenderGroups(ctx) =#_
+<!--#_ 
+                if(ctx.ClientControl.get_shouldShowNoResultMessage()){ 
+_#-->
+                    <div id="homePage_WelcomeLabel" class="ms-sectionheader">_#= $htmlEncode(dms.res.homePage_WelcomeLabel) =#_</div>
+                    <p id="homePage_EmptyLibaryLabel">_#= $htmlEncode(dms.res.homePage_EmptyLibaryLabel) =#_</p>
+<!--#_ 
+                } 
+
+                var pagingInfo = ctx.ClientControl.get_pagingInfo();
+                if(!$isEmptyArray(pagingInfo))
+                {
+_#-->
+                        <ul id="Paging" class="ms-srch-Paging dms-cbs-paging">
+<!--#_ 
+                        for (var i = 0; i < pagingInfo.length; i++) {
+                            var pl = pagingInfo[i];
+                            if(!$isNull(pl)) {
+                                var imagesUrl = GetThemedImageUrl('searchresultui.png');
+                                if(pl.startItem == -1) { 
+                                    var selfLinkId = "SelfLink_" + pl.pageNumber;
+_#-->
+                                    <li id="PagingSelf"><a id="_#= $htmlEncode(selfLinkId) =#_">_#= $htmlEncode(pl.pageNumber) =#_</a></li>
+<!--#_ 
+                                } else if(pl.pageNumber == -1) { 
+                                    var iconClass = Srch.U.isRTL() ? "ms-srch-pagingNext" : "ms-srch-pagingPrev";                                    
+_#-->
+                                    <li id="PagingImageLink"><a id="PageLinkPrev" href="#" class="ms-commandLink ms-promlink-button ms-promlink-button-enabled ms-verticalAlignMiddle" title="_#= $htmlEncode(pl.title) =#_" onclick="$getClientControl(this).page(_#= $htmlEncode(pl.startItem) =#_);return Srch.U.cancelEvent(event);">
+                                        <span class="ms-promlink-button-image">
+                                            <img src="_#= $urlHtmlEncode(imagesUrl) =#_" class="_#= $htmlEncode(iconClass) =#_" alt="_#= $htmlEncode(pl.title) =#_" />
+                                        </span>
+                                    </a></li>
+<!--#_ 
+                                } else if(pl.pageNumber == -2) { 
+                                    var iconClass = Srch.U.isRTL() ? "ms-srch-pagingPrev" : "ms-srch-pagingNext";
+_#-->
+                                    <li id="PagingImageLink"><a id="PageLinkNext" href="#" class="ms-commandLink ms-promlink-button ms-promlink-button-enabled ms-verticalAlignMiddle" title="_#= $htmlEncode(pl.title) =#_" onclick="$getClientControl(this).page(_#= $htmlEncode(pl.startItem) =#_);return Srch.U.cancelEvent(event);">
+                                        <span class="ms-promlink-button-image">
+                                            <img src="_#= $urlHtmlEncode(imagesUrl) =#_" class="_#= $htmlEncode(iconClass) =#_" alt="_#= $htmlEncode(pl.title) =#_" />
+                                        </span>
+                                    </a></li>
+<!--#_ 
+                                } else { 
+                                    var pageLinkId = "PageLink_" + pl.pageNumber;
+_#-->
+                                    <li id="PagingLink"><a id="_#= $htmlEncode(pageLinkId) =#_" href="#" title="_#= $htmlEncode(pl.title) =#_" onclick="$getClientControl(this).page(_#= $htmlEncode(pl.startItem) =#_);return Srch.U.cancelEvent(event);">_#= $htmlEncode(pl.pageNumber) =#_</a></li>
+<!--#_ 
+                                }
+                            }
+                        } 
+_#-->
+                        </ul>
+<!--#_
+                }
+_#-->
+<!--#_
+            }
+_#-->
+        </div>
+    </div>
+</body>
+</html>

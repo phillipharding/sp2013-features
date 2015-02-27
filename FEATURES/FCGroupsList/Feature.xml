@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="08386d3d-7cc0-486b-a730-3b4cfe1b5509"
+    Title="$Resources:core,GbwFeatureFcGroupsTitle;"
+    Description="$Resources:core,GbwFeatureFcGroupsDescription;"
+    Version="1.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\fcgroupslist.xml" />
+        <ElementFile Location="fcgroups\schema.xml" />
+    </ElementManifests>
+</Feature>

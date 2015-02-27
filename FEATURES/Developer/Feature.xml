@@ -1,0 +1,23 @@
+<Feature  Id="E374875E-06B6-11E0-B0FA-57F5DFD72085"
+          Title="$Resources:AppDevelopmentCore, DeveloperFeatureTitle"
+          Description="$Resources:AppDevelopmentCore, DeveloperFeatureDesc"
+          Version="15.0.1.0"
+          Scope="Site"
+          Hidden="TRUE"
+	      ReceiverAssembly="Microsoft.SharePoint.AppDevelopment, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.AppDevelopment.DeveloperFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml" />
+    <ElementManifest Location="DeveloperListTemplates.xml" />
+    <ElementFile Location="DraftAppsListTemplate\schema.xml" />	
+    <ElementManifest Location="ListInstances.xml"/>
+  </ElementManifests>
+  <UpgradeActions
+    ReceiverAssembly="Microsoft.SharePoint.AppDevelopment, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.AppDevelopment.DeveloperFeatureReceiver">
+    <VersionRange EndVersion="15.0.1.0">
+      <CustomUpgradeAction Name="UpdateGettingStartedLink"/>
+    </VersionRange>
+  </UpgradeActions>
+</Feature>

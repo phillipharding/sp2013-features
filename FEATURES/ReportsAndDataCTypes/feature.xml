@@ -1,0 +1,12 @@
+<Feature  Id="E0A9F213-54F5-4A5A-81D5-F5F3DBE48977"
+          Title="SharePoint Portal Server Reports And Data Content Type Definition"
+          Description="SharePoint Portal Server Reports and Data content type definitions"
+          Version="15.0.0.0"
+          Scope="Site"
+          SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+          Hidden="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ctypes_reportsanddata.xml"/>
+    </ElementManifests>
+</Feature>

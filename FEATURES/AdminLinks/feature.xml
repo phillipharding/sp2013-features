@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="FEAD7313-AE6D-45DD-8260-13B563CB4C71"
+          Title="$Resources:core,adminlinksFeatureTitle;"
+          Description="$Resources:core,adminlinksFeatureDesc;"
+          Version="15.0.0.0"
+          Scope="Web"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.AdminLinksFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="default.xml" />
+        <ElementManifest Location="applications.xml" />
+        <ElementManifest Location="apps.xml" />
+        <ElementManifest Location="backups.xml" />
+        <ElementManifest Location="configurationwizards.xml" />
+        <ElementManifest Location="generalapplicationsettings.xml" />
+        <ElementManifest Location="monitoring.xml" />
+        <ElementManifest Location="security.xml" />
+        <ElementManifest Location="systemsettings.xml" />
+        <ElementManifest Location="upgradeandmigration.xml" />
+        <ElementManifest Location="quicklaunch.xml"/>
+        <ElementManifest Location="office365configuration.xml"/>
+    </ElementManifests>
+    <UpgradeActions
+        ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        ReceiverClass="Microsoft.SharePoint.AdminLinksFeatureReceiver">
+        <VersionRange EndVersion="15.0.0.0">
+            <CustomUpgradeAction Name="AddAdminLinkFiles" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

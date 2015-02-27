@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- _version="15.0.4442.1000" -->
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter</value>
+  </resheader>
+  <data name="Feature_Title">
+    <value>Flujos de trabajo de distribución</value>
+  </data>
+  <data name="Feature_Description">
+    <value>Flujos de trabajo que envían un documento para la revisión y aprobación.</value>
+  </data>
+  <data name="ReviewFeedback_Title">
+    <value>Recopilar comentarios</value>
+  </data>
+  <data name="ReviewWorkflow_UpdateTasks">
+    <value>Actualizar las tareas activas</value>
+  </data>
+  <data name="ReviewFeedback_Description">
+    <value>Redistribuye un documento para que se revise. Los revisores pueden proporcionar información, que se compila y envía al propietario del documento cuando se completa el flujo de trabajo.</value>
+  </data>
+  <data name="ReviewFeedback_AddReviewer">
+    <value>Agregar o actualizar revisores</value>
+  </data>
+  <data name="ReviewApproval_Title">
+    <value>Aprobación</value>
+  </data>
+  <data name="ReviewApproval_Description">
+    <value>Redistribuye un documento para que se apruebe. Los aprobadores pueden aprobar o rechazar el documento, reasignar la tarea de aprobación o solicitar cambios en el documento.</value>
+  </data>
+  <data name="ReviewApproval_AddApprover">
+    <value>Agregar o actualizar aprobadores</value>
+  </data>
+  <data name="ReviewWorkflow_WrapItUp">
+    <value>Cancelar este flujo de trabajo</value>
+  </data>
+  <data name="ReviewFeedback_CanceledStatus">
+    <value>Cancelado</value>
+  </data>
+  <data name="ReviewFeedback_ApprovedStatus">
+    <value>Aprobado</value>
+  </data>
+  <data name="ReviewFeedback_RejectedStatus">
+    <value>Rechazado</value>
+  </data>
+</root>

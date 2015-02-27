@@ -1,0 +1,67 @@
+<Feature Id="FA8379C9-791A-4FB0-812E-D0CFCAC809C8"
+    Title="$Resources:spscore,SocialDataStoreList_Feature_Title;"
+    Description="$Resources:spscore,SocialDataStoreList_Feature_Description;"
+    Version="15.0.11.0"
+    Hidden="TRUE"
+    Scope="Site"
+    DefaultResourceFile="core"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.SocialDataStoreFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <ElementManifests>
+        <ElementManifest Location="SocialDataStoreList\SocialDataStoreListCtypes.xml" />
+        <ElementManifest Location="SocialDataStoreList\SocialDataStoreListFlds.xml" />
+        <ElementManifest Location="ListTemplates\SocialDataStoreList.xml" />
+    </ElementManifests>
+
+    <UpgradeActions>
+        <VersionRange EndVersion="15.0.1.0">
+          <CustomUpgradeAction Name="UnGhostAndAddProjectDiscoveryWebPart" />
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.1.0" EndVersion="15.0.4.0">
+          <CustomUpgradeAction Name="ReAddProjectDiscoveryWebPartToFixMode" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.2.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="SocialDataStoreList\SocialDataStoreListFlds.xml" />
+          </ApplyElementManifests>
+          <AddContentTypeField ContentTypeId="0x01FC" FieldId="{fc9a41a3-8d8f-4fde-a872-3e4a2647f09e}" PushDown="TRUE" />
+          <AddContentTypeField ContentTypeId="0x0100415C46DF0F4B45939BDEC96C5014A10E" FieldId="{6e447d4c-adf2-4a7e-8a02-03a905b140e9}" PushDown="TRUE" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.3.0">
+          <CustomUpgradeAction Name="UpdateListSchema" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.5.0">
+          <CustomUpgradeAction Name="UpdateFollowedSitesPage" />
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.5.0" EndVersion="15.0.8.0">
+          <CustomUpgradeAction Name="RemovePromotedSitesList" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.7.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="SocialDataStoreList\SocialDataStoreListFlds.xml" />
+            <ElementManifest Location="SocialDataStoreList\SocialDataStoreListCtypes.xml" />
+          </ApplyElementManifests>
+          <AddContentTypeField ContentTypeId="0x01FC" FieldId="{fc25e913-3a66-45b3-80e4-18d9f9e4e6c7}" PushDown="TRUE" />
+          <AddContentTypeField ContentTypeId="0x01FC" FieldId="{fc90b917-d5e7-495f-bb4d-bd5667b3469e}" PushDown="TRUE" />
+          <CustomUpgradeAction Name="SiteFeedUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.9.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="SocialDataStoreList\SocialDataStoreListFlds.xml" />
+            <ElementManifest Location="SocialDataStoreList\SocialDataStoreListCtypes.xml" />
+          </ApplyElementManifests>
+          <AddContentTypeField ContentTypeId="0x01FC" FieldId="{fcbd47bc-7f79-4add-bf00-5fb607325b5b}" PushDown="TRUE" />
+          <AddContentTypeField ContentTypeId="0x01FC" FieldId="{fc83e784-e169-445c-9234-9838ace39c32}" PushDown="TRUE" />
+          <CustomUpgradeAction Name="DocLaunchUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.10.0">
+          <CustomUpgradeAction Name="RemoveNoCrawl" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.11.0">
+          <CustomUpgradeAction Name="UpdateImageAndPreventListDeletion" />
+        </VersionRange>
+    </UpgradeActions>
+
+</Feature>

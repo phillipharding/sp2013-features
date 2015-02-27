@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/"> 
+    <ListTemplate
+        Name="wfsvc"
+        Type="4501"
+        BaseType="1"
+        Hidden="TRUE"
+        HiddenList="TRUE"
+        VersioningEnabled="TRUE"
+        OnQuickLaunch="FALSE"
+        SecurityBits="11"
+        DisplayName=""
+        Description=""
+        Unique="TRUE"
+        AlwaysIncludeContent="FALSE"
+        />
+</Elements>

@@ -1,0 +1,113 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_DiscoveryResultItemExchange</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">1</mso:TemplateHidden>
+<mso:ManagedPropertyMapping msdt:dt="string">'Subject':'Subject','To':'ToRecipients','Sender':'Sender','Sent Time':'SentTime','BccRecipients':'BccRecipients','CcRecipients':'CcRecipients','CreatedTime':'CreatedTime','HasAttachment':'HasAttachment','Importance':'Importance','Preview':'Preview','OwaLink':'OwaLink','Size':'Size','ExchangeType':'Kind'</mso:ManagedPropertyMapping>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="DiscoveryResultItems">
+<!--#_
+var subject = $getItemValue(ctx,"Subject");
+var subjectRenderer = function(valueInfo)
+{
+    var subjectValue = $resource("edisc_NoSubject");
+    if(!valueInfo.isEmpty)
+    {
+        subjectValue = valueInfo.value;
+    }
+    return $htmlEncode(subjectValue);
+}
+subject.overrideValueRenderer(subjectRenderer);
+
+var owaLink = $getItemValue(ctx,"OwaLink");
+owaLink.overrideValueRenderer($urlHtmlEncode);
+
+var sender = $getItemValue(ctx,"Sender");
+
+var multiValueEncode = function(valueInfo)
+{
+    var returnValue = "";
+    if (!valueInfo.isNull && Srch.U.isArray(valueInfo.value) && !$isEmptyArray(valueInfo.value))
+    {
+        for (var i = 0; i < valueInfo.value.length; i++)
+        {
+            var currentItemValue = valueInfo.value[i].value;
+            if(i == 0)
+            {
+                returnValue += currentItemValue;
+            }
+            else
+            {
+                returnValue += String.format(Srch.Res.edisc_MultiValueFormat, currentItemValue);
+            }
+        }
+    }
+    return $htmlEncode(returnValue);
+}
+
+var recipients = $getItemValue(ctx,"To");
+recipients.overrideValueRenderer(multiValueEncode);
+
+var sentTime = $getItemValue(ctx,"Sent Time");
+var dateFormat = function(date)
+{
+    if(!(date.isNull) && !$isNull(date.value.format)) 
+    {
+        return $htmlEncode(date.value.localeFormat(Sys.CultureInfo.CurrentCulture.dateTimeFormat.ShortDatePattern));
+    }
+    else 
+    {
+        return "";
+    }
+};
+sentTime.overrideValueRenderer(dateFormat);
+
+window.eDiscIsDialog = function()
+{
+    return !$isNull(window.top.g_childDialog);
+}
+
+var id = ctx.ClientControl.get_nextUniqueId();
+$setResultItem(id, ctx.CurrentItem);
+var hoverUrl = "~sitecollection/_catalogs/masterpage/Display Templates/System/Item_eDiscoveryExchange_HoverPanel.js";
+var hover_id = id + "_hover";
+_#-->
+        <tr class="edisc-SearchResultItemContainer">
+            <td>
+                <div class="edisc-SearchResultItem" id="_#= $htmlEncode(id) =#_" name='Item' onmouseover="if (!eDiscIsDialog()) EnsureScriptParams('SearchUI.js', 'HP.Init', event, '_#= $scriptEncode(id) =#_', '_#= $scriptEncode(hover_id) =#_', '_#= $scriptEncode(hoverUrl)=#_');" onmouseout="if (!eDiscIsDialog()) EnsureScriptParams('SearchUI.js', 'HP.Hide');">
+                    <div id='_#= hover_id =#_' class='ms-srch-hover-outerContainer'></div>
+                        <div class='edisc-SubjectContainer'>
+                            <a href='_#= owaLink =#_' TARGET='_blank'>
+                                _#= subject =#_
+                            </a>
+                        </div>
+                </div>
+            </td>
+            <td>
+                <div class='edisc-PeopleContainer'>
+                    _#= recipients =#_
+                </div>
+            </td>
+            <td>
+                <div class='edisc-PeopleContainer'>
+                    _#= sender =#_
+                </div>
+            </td>
+            <td>
+                <div class='edisc-DateContainer'>
+                    _#= sentTime =#_
+                </div>
+            </td>
+        </tr>
+    </div>
+</body>
+</html>

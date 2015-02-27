@@ -1,0 +1,14 @@
+<Feature Id="C6A92DBF-6441-4b8b-882F-8D97CB12C83A"
+    Title="$Resources:spscore,AbuseReportsListFeature_Text;"
+    Description="$Resources:spscore,AbuseReportsListFeature_Desc;"
+    Version="15.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="spscore"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="abuseReportsListTemplate.xml"/>
+        <ElementManifest Location="abuseReportsListInstance.xml"/>
+        <ElementManifest Location="elements.xml"/>
+    </ElementManifests>
+</Feature>

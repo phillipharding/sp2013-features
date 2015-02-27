@@ -1,0 +1,97 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_Item_PictureOnTop</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:ManagedPropertyMapping msdt:dt="string">'Picture URL'{$Resources:Microsoft.Office.Server.Search,SlotName_ImageURL;}:'PublishingImage;PictureURL;PictureThumbnailURL','Link URL'{$Resources:Microsoft.Office.Server.Search,SlotName_URL;}:'Path','Line 1'{$Resources:Microsoft.Office.Server.Search,SlotName_Line1;}:'Title','Line 2'{$Resources:Microsoft.Office.Server.Search,SlotName_Line2;}:'Description','Line 3'{$Resources:Microsoft.Office.Server.Search,SlotName_Line3;}:'','SecondaryFileExtension','ContentTypeId'</mso:ManagedPropertyMapping>
+<mso:MasterPageDescription msdt:dt="string">$Resources:Microsoft.Office.Server.Search,DisplayTemplateDescription_Item_PictureOnTop</mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+
+    <!--
+            Warning: Do not try to add HTML to this section. Only the contents of the first <div>
+            inside the <body> tag will be used while executing Display Template code. Any HTML that
+            you add to this section will NOT become part of your Display Template.
+    -->
+    <script>
+        $includeLanguageScript(this.url, "~sitecollection/_catalogs/masterpage/Display Templates/Language Files/{Locale}/CustomStrings.js");
+    </script>
+
+    <!--
+        Use the div below to author your Display Template. Here are some things to keep in mind:
+        * Surround any JavaScript logic as shown below using a "pound underscore" (#_ ... _#) token
+        inside a comment.
+
+        * Use the values assigned to your variables using an "underscore pound equals"
+        (_#= ... =#_) token.
+    -->
+
+    <div id="Item_PictureOnTop">
+<!--#_
+var encodedId = $htmlEncode(ctx.ClientControl.get_nextUniqueId() + "_pictureOnTop_");
+
+var linkURL = $getItemValue(ctx, "Link URL");
+linkURL.overrideValueRenderer($urlHtmlEncode);
+
+var line1 = $getItemValue(ctx, "Line 1");
+var setLineHeightRenderer = function(valueInfoObj)
+{
+    if(!$isNull(valueInfoObj) && !valueInfoObj.isEmpty)
+    {
+        if(!$isNull(valueInfoObj.defaultValueRenderer))
+        {
+            return valueInfoObj.defaultValueRenderer(valueInfoObj);
+        }
+        else
+        {
+            return valueInfoObj.toString();
+        }
+    }
+    else
+    {
+        return "&nbsp;";
+    }
+}
+var line2 = $getItemValue(ctx, "Line 2");
+line2.overrideValueRenderer(setLineHeightRenderer);
+var line3 = $getItemValue(ctx, "Line 3");
+line3.overrideValueRenderer(setLineHeightRenderer);
+
+var pictureURL = $getItemValue(ctx, "Picture URL");
+var pictureId = encodedId + "picture";
+var pictureMarkup = Srch.ContentBySearch.getPictureMarkup(pictureURL, 304, 100, ctx.CurrentItem, "cbs-pictureOnTopImg", line1, pictureId);
+
+var containerId = encodedId + "container";
+var pictureLinkId = encodedId + "pictureLink";
+var pictureContainerId = encodedId + "pictureContainer";
+var dataContainerId = encodedId + "dataContainer";
+var line1LinkId = encodedId + "line1Link";
+var line1Id = encodedId + "line1";
+var line2Id = encodedId + "line2";
+var line3Id = encodedId + "line3";
+ _#-->
+        <div class="cbs-pictureOnTopContainer" id="_#= containerId =#_" data-displaytemplate="ItemPictureOnTop">
+            <div class="cbs-pictureOnTopImageContainer" id="_#= pictureContainerId =#_">
+                <a class="cbs-pictureImgLink" href="_#= linkURL =#_" title="_#= $htmlEncode(line1) =#_" id="_#= pictureLinkId =#_">
+                    _#= pictureMarkup =#_
+                </a>
+            </div>
+            <div class="cbs-pictureOnTopDataContainer" id="_#= dataContainerId =#_">
+                <a class="cbs-pictureOnTopLine1Link" href="_#= linkURL =#_" title="_#= $htmlEncode(line1) =#_" id="_#= line1LinkId =#_">
+                    <h2 class="cbs-pictureOnTopLine1 ms-accentText2 ms-noWrap" id="_#= line1Id =#_"> _#= line1 =#_</h2>
+                </a>
+                <div class="cbs-pictureOnTopLine2 ms-noWrap" title="_#= $htmlEncode(line2) =#_" id="_#= line2Id =#_" > _#= line2 =#_</div>
+                <div class="cbs-pictureLine3 ms-textSmall ms-noWrap" id="_#= line3Id =#_" title="_#= $htmlEncode(line3) =#_">_#= line3 =#_</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="extlist"
+        Type="600"
+        BaseType="0"
+        OnQuickLaunch="TRUE"
+        SecurityBits="11"
+        Sequence="430"
+        DisplayName="$Resources:core,extList;"
+        Description="$Resources:core,extList_Desc;"
+        Image="/_layouts/15/images/itebl.png?rev=23"/>
+</Elements>

@@ -1,0 +1,215 @@
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomActionGroup
+        Id="PE"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Title="$Resources:spscore,ManageProfileService_People_Title;"
+        Sequence="10"
+        ImageUrl="/_layouts/images/peopletitle.png" />
+    <CustomAction
+        Id="PE_MUP"
+        GroupId="PE"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Sequence="10"
+        Title="$Resources:spscore,ManageProfileService_People_UserProperties_Title;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('/_layouts/MgrProperty.aspx?ProfileType=User&amp;')" />
+    </CustomAction>
+    <CustomAction
+        Id="PE_MUPR"
+        GroupId="PE"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Sequence="20"
+        Title="$Resources:spscore,ManageProfileService_People_UserProfiles_Title;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('/_layouts/ProfMngr.aspx?ConsoleView=Active&amp;ProfileType=User&amp;')" />
+    </CustomAction>
+    <CustomAction
+        Id="PE_UST"
+        GroupId="PE"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Sequence="30"
+        Title="$Resources:spscore,ManageProfileService_People_UserSubtypes_Title;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('/_layouts/ManageSubTypes.aspx?ProfileType=User&amp;')" />
+    </CustomAction>
+    <CustomAction
+        Id="PE_AUD"
+        GroupId="PE"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Sequence="40"
+        Title="$Resources:spscore,ManageProfileService_People_Audiences_Title;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('/_layouts/Audience_List.aspx?')" />
+    </CustomAction>
+    <CustomAction
+        Id="PE_SAC"
+        GroupId="PE"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Sequence="50"
+        Title="$Resources:spscore,ManageProfileService_People_ScheduleAudience_Comp_Title;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('/_layouts/Audience_Sched.aspx?')" />
+    </CustomAction>
+    <CustomAction
+        Id="PE_CA"
+        GroupId="PE"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Sequence="60"
+        Title="$Resources:spscore,ManageProfileService_People_CompileAudience_Title;">
+        <UrlAction
+            Url="javascript:PostWithAction('Audience_Sched.aspx?','START');" />
+    </CustomAction>
+    <CustomAction
+        Id="PE_MP"
+        GroupId="PE"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Sequence="60"
+        Title="$Resources:spscore,ManageProfileService_People_ManageUserPermissions_Title;">
+        <UrlAction
+            Url="javascript:DoSetPermissions('/_layouts/UserProfileApplicationPermissions.aspx?')" />
+    </CustomAction>
+    <CustomAction
+        Id="PE_MPP"
+        GroupId="PE"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Sequence="70"
+        Title="$Resources:spscore,ManageProfileService_ManagePolicies_Title;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('/_layouts/ManagePrivacyPolicy.aspx?')" />
+    </CustomAction>
+
+    <CustomActionGroup
+        Id="SY"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Title="$Resources:spscore,ManageProfileService_Synchronization_Title;"
+        Sequence="20"
+        ImageUrl="/_layouts/images/synchronizationtitle.png" />
+    <CustomAction
+        Id="SY_CC"
+        GroupId="SY"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Sequence="10"
+        Title="$Resources:spscore,ManageProfileService_Synchronization_ConfigConnection_Title;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('/_layouts/mgrdsserver.aspx?')" />
+    </CustomAction>
+    <CustomAction
+        Id="SY_CS"
+        GroupId="SY"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Sequence="20"
+        Title="$Resources:spscore,ManageProfileService_Synchronization_ConfigSchedule_Title;">
+        <UrlAction
+            Url="javascript:AppendJobIdAndNavigateToJobScheduler('/_admin/jobedit.aspx?')" />
+    </CustomAction>
+    <CustomAction
+        Id="SY_SE"
+        GroupId="SY"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Sequence="30"
+        Title="$Resources:spscore,ManageProfileService_Synchronization_ConfigSettings_Title;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('/_layouts/synchronizationsetting.aspx?')" />
+    </CustomAction>
+    <CustomAction
+        Id="SY_SN"
+        GroupId="SY"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Sequence="40"
+        Title="$Resources:spscore,ManageProfileService_Synchronization_SyncNow_Title;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('/_layouts/syncnow.aspx?')" />
+    </CustomAction>
+
+    <CustomActionGroup
+        Id="OR"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Title="$Resources:spscore,ManageProfileService__Organization_Title;"
+        Sequence="30"
+        ImageUrl="/_layouts/images/organizationtitle.png" />
+    <CustomAction
+        Id="OR_MP"
+        GroupId="OR"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Sequence="10"
+        Title="$Resources:spscore,ManageProfileService_Organization_Properties;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('/_layouts/MgrProperty.aspx?ProfileType=Organization&amp;')" />
+    </CustomAction>
+    <CustomAction
+        Id="OR_MPR"
+        GroupId="OR"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Sequence="30"
+        Title="$Resources:spscore,ManageProfileService_Organization_Profiles;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('/_layouts/ProfMngr.aspx?ConsoleView=Active&amp;ProfileType=Organization&amp;')" />
+    </CustomAction>
+    <CustomAction
+        Id="OR_ST"
+        GroupId="OR"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Sequence="40"
+        Title="$Resources:spscore,ManageProfileService_Organization_Subtypes;">
+        <UrlAction
+            Url="javascript:AppendApplicationIdAndNavigate('/_layouts/ManageSubTypes.aspx?ProfileType=Organization&amp;')" />
+    </CustomAction>
+
+    <CustomActionGroup
+        Id="MS"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Title="$Resources:spscore,ManageProfileService_Mysite;"
+        Sequence="40"
+        ImageUrl="/_layouts/images/mysitetitle.png" />
+    <CustomAction
+        Id="MS_S"
+        GroupId="MS"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Sequence="10"
+        Title="$Resources:spscore,ManageProfileService_Mysite_Setup;">
+        <UrlAction Url="javascript:AppendApplicationIdAndNavigate('/_layouts/PersonalSites.aspx?')" />
+    </CustomAction>
+    <CustomAction
+        Id="MS_H"
+        GroupId="MS"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Sequence="20"
+        Title="$Resources:spscore,ManageProfileService_Mysite_Host;">
+        <UrlAction Url="javascript:AppendApplicationIdAndNavigate('/_layouts/ManageLinks.aspx?LinksType=0&amp;')" />
+    </CustomAction>
+    <CustomAction
+        Id="MS_P"
+        GroupId="MS"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Sequence="30"
+        Title="$Resources:spscore,ManageProfileService_MySite_PromotedSites;">
+        <UrlAction Url="javascript:AppendApplicationIdAndNavigate('/_layouts/ManageLinks.aspx?LinksType=1&amp;')" />
+    </CustomAction>
+
+    <CustomAction
+        Id="MS_PU"
+        GroupId="MS"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Sequence="50"
+        Title="$Resources:spscore,ManageProfileService_Mysite_Publish;">
+        <UrlAction Url="javascript:AppendApplicationIdAndNavigate('/_layouts/ManageLinks.aspx?LinksType=2&amp;')" />
+    </CustomAction>
+    <CustomAction
+        Id="MS_MS"
+        GroupId="MS"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Sequence="60"
+        Title="$Resources:spscore,ManageProfileService_Mysite_ManageSocial;">
+        <UrlAction Url="javascript:AppendApplicationIdAndNavigate('/_layouts/ManageSocialItems.aspx?')" />
+    </CustomAction>
+    <CustomAction
+        Id="MS_F"
+        GroupId="MS"
+        Location="Microsoft.SharePoint.ManageUserProfileServiceApplication.ManageUserProfileServiceApplication"
+        Sequence="70"
+        Title="$Resources:spscore,ManageProfileService_Mysite_ManageFollowing;">
+        <UrlAction Url="javascript:AppendApplicationIdAndNavigate('/_layouts/15/ManageFollowing.aspx?')" />
+    </CustomAction>
+
+</Elements>

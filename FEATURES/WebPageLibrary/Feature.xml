@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="00BFEA71-C796-4402-9F2F-0EB9A6E71B18" 
+    Title="$Resources:core,webpagelibList;"
+    Description="$Resources:core,webpagelibList_Desc;"
+    Version="1.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"    
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\WebPageLibrary.xml" />
+    </ElementManifests>
+</Feature>

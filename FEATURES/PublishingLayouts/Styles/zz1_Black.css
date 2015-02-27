@@ -1,0 +1,251 @@
+.body
+{
+background-color:#000000;
+}
+.master
+{
+background-color:#FFFFFF;
+}
+.topArea
+{
+background-image:url("images/blk_band.jpg");
+}
+.breadcrumb,.breadcrumb a,.breadcrumb:active,.breadcrumb a:active
+{
+color:#3B3B3B;
+}
+.logo a
+{
+background-image:url("images/blk_logo.jpg");
+color:#3B3B3B;
+}
+.search .ms-sbcell
+{
+color:#000000;
+}
+.shadowRight
+{
+background-image:url('images/blk_Shadow_Right.jpg');
+}
+.shadowLeft
+{
+background-image:url('images/blk_Shadow_Left.jpg');
+}
+.topNavContainer
+{
+background-image:url("images/blk_Navbar_Gd_Default.jpg");
+}
+.topNavItem
+{
+color:#3B3B3B;
+}
+.topNavItem a
+{
+background-image:url('images/blk_Navbar_Splitter.jpg');
+}
+.topNavSelected a
+{
+background-image:url('images/blk_Navbar_Gd_Hover.jpg');
+color:#EFEFEF;
+}
+.topNavHover a
+{
+background-image:url('images/blk_Navbar_Gd_Hover.jpg');
+color:#F9F9F9;
+}
+.topNavFlyOuts
+{
+border-right-color:#DBDBDB;
+}
+.topNavFlyOutsItem
+{
+background-color:#EFEFEF;
+border-color:#DBDBDB;
+border-bottom-color:#DBDBDB;
+background-color:#F1F1F1;
+color:#3B3B3B;
+}
+.topNavFlyOutsItem a
+{
+color:#3B3B3B;
+}
+.topNavFlyOutsHover
+{
+background-color:#CACACA;
+}
+.topNavFlyOutsHover a
+{
+color:#3B3B3B;
+}
+.leftNav
+{
+border-color:#DBDBDB;
+background-color:#F1F1F1;
+}
+.leftNavSelected
+{
+background-color:#CACACA;
+color:#F5F5F5;
+border-top-color:#8A8A8A;
+border-bottom-color:#8A8A8A;
+}
+.leftNav1,.leftNav2
+{
+color:#424242;
+}
+.leftNavHover
+{
+background-color:#8A8A8A;
+color:#F9F9F9;
+}
+.leftNavFlyOuts
+{
+background-color:#EFEFEF;
+border-color:#DBDBDB;
+}
+.leftNavFlyOuts a
+{
+color:#424242;
+}
+.leftNavFlyOutsHover
+{
+background-color:#CACACA;
+}
+.Line
+{
+background-color:#F5F5F5;
+}
+.pageTitle
+{
+color:# 3B3B3B;
+}
+.topBorder
+{
+border-top-color:#DBDBDB;
+}
+.ms-WPHeader td
+{
+border-bottom-color:#333333;
+}
+.BottomLinkBar
+{
+color:#999999;
+}
+.link-item,.link-item a,.link-item a:link
+{
+color:#5D5D5D;
+}
+.link-item a:visited,.link-item a:active
+{
+color:#787878;
+}
+.link-item a:hover
+{
+color:#3b3b3b;
+}
+.link-item-large,.link-item-large a,.link-item-large a:link
+{
+color:#5D5D5D;
+}
+.link-item-large a:visited,.link-item-large a:active
+{
+color:#787878;
+}
+.link-item-large a:hover
+{
+color:#3B3B3B;
+}
+.description{
+color:#4C4C4C;
+}
+.bullet{
+background-image:url("images/blk_lstbulet.gif");
+}
+.groupheader
+{
+color:#424242;
+}
+.band{
+background-color:#595959;
+color:#FFFFFF;
+}
+.separator
+{
+border-color:#CACACA;
+}
+.level-band
+{
+background-color:#8A8A8A;
+}
+.level-description
+{
+Color:#4C4C4C
+}
+.level-item,.level-item a,.level-item a:link
+{
+color:#5D5D5D;
+}
+.level-item a:visited,.level-item a:active
+{
+color:#787878;
+}
+.level-item a:hover
+{
+color:#3B3B3B;
+}
+.level-bullet
+{
+background-image:url("images/blk_lstbulet.gif");
+}
+.headertitle,.headertitle a,.headertitle a:link
+{
+color:#5D5D5D;
+}
+.headertitle a:visited,.headertitle a:active
+{
+color:#787878;
+}
+.headertitle a:hover
+{
+color:#3b3b3b;
+}
+.headertitle-large,.headertitle-large a,.headertitle-large a:link
+{
+color:#5D5D5D;
+}
+.headertitle-large a:visited,.headertitle-large a:active
+{
+color:#787878;
+}
+.headertitle-large a:hover
+{
+color:#3B3B3B;
+}
+.headertitle-small,.headertitle-small a,.headertitle-small a:link
+{
+color:#5D5D5D;
+}
+.headertitle-small a:visited,.headertitle-small a:active
+{
+color:#787878;
+}
+.headertitle-small a:hover
+{
+color:#3b3b3b;
+}
+.headertitle-band,.headertitle-band a,.headertitle-band a:link
+{
+color:#EFEFEF;
+}
+.headertitle-band a:visited,.headertitle-band a:active
+{
+color:#EFEFEF;
+}
+.headertitle-band a:hover
+{
+color:#EFEFEF;
+}
+.title-With-Background
+{
+background-color:#545454;
+}

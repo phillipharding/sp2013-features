@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Name="PromotedLinks" Title="Discussions" Direction="$Resources:Direction;" Url="Lists/PromotedLinks" BaseType="0" EnableContentTypes="FALSE" FolderCreation="FALSE" DisableAttachments="TRUE">
+  <MetaData>
+    <Fields>
+      <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="$Resources:core,Title;" FromBaseType="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title">
+      </Field>
+      <Field ID="{A0FC423E-0808-490e-905E-260ABD3D6511}" Type="URL" Name="BackgroundImageLocation" DisplayName="$Resources:core,PL_BackgroundImageLocation;" Required="FALSE" SEALED="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="BackgroundImageLocation">
+      </Field>
+      <Field ID="{BCED0253-A215-49a2-BCD9-5025AD49560D}" Type="Note" Name="Description" DisplayName="$Resources:core,PL_Description;" Required="FALSE" SEALED="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Description">
+      </Field>
+      <Field ID="{FDA2F5E5-8253-4b10-8876-A42268D758E0}" Type="URL" Name="LinkLocation" DisplayName="$Resources:core,PL_LinkLocation;" Required="TRUE" SEALED="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkLocation">
+      </Field>
+      <Field ID="{B2424958-FE1E-4227-AF83-954985029AAC}" Type="Choice" Name="LaunchBehavior" DisplayName="$Resources:core,PL_LaunchBehavior;" Required="TRUE" Format="Dropdown" SEALED="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LaunchBehavior">
+        <CHOICES><CHOICE>$Resources:core,PL_InPageNavigation;</CHOICE><CHOICE>$Resources:core,PL_Dialog;</CHOICE><CHOICE>$Resources:core,PL_NewTab;</CHOICE>
+        </CHOICES>
+        <Default>$Resources:core,PL_InPageNavigation;</Default>
+      </Field>
+      <Field ID="{722B3E6D-EBB5-4b1c-8DDE-8936E53A40C3}" Type="Number" Name="TileOrder" DisplayName="$Resources:core,PL_Order;" Required="FALSE" SEALED="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="TileOrder">
+      </Field>
+      <Field ID="{2A54FEE9-AD68-454b-905B-F92CCEE343D3}" Type="Number" Name="BackgroundImageClusterX" DisplayName="$Resources:core,PL_BackgroundImageClusterX;" Required="FALSE" SEALED="TRUE" ShowInDisplayForm="FALSE" ShowInEditForm="FALSE" ShowInNewForm="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="BackgroundImageClusterX">
+      </Field>
+      <Field ID="{2976FC30-0BBE-4671-BCF1-87679B512E9B}" Type="Number" Name="BackgroundImageClusterY" DisplayName="$Resources:core,PL_BackgroundImageClusterY;" Required="FALSE" SEALED="TRUE" ShowInDisplayForm="FALSE" ShowInEditForm="FALSE" ShowInNewForm="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="BackgroundImageClusterY">
+      </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="1" Type="HTML" OrderedView="TRUE" WebPartZoneID="Main" DisplayName="$Resources:core,Tile_PromotedLinks;" ReadOnly="TRUE" DefaultView="TRUE" MobileView="FALSE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" Url="Tiles.aspx">
+        <JSLink>sp.ui.tileview.js</JSLink>
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+        <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        <ViewFields>
+          <FieldRef Name="Title">
+          </FieldRef>
+          <FieldRef Name="BackgroundImageLocation">
+          </FieldRef>
+          <FieldRef Name="Description">
+          </FieldRef>
+          <FieldRef Name="LinkLocation">
+          </FieldRef>
+          <FieldRef Name="LaunchBehavior">
+          </FieldRef>
+          <FieldRef Name="BackgroundImageClusterX">
+          </FieldRef>
+          <FieldRef Name="BackgroundImageClusterY">
+          </FieldRef>
+        </ViewFields>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="TileOrder" Ascending="TRUE">
+            </FieldRef>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+      <View BaseViewID="2" Type="HTML" OrderedView="TRUE" WebPartZoneID="Main" DisplayName="$Resources:core,GettingStartedListTitle;" ReadOnly="TRUE" MobileView="FALSE" SetupPath="pages\viewpage.aspx" Url="GettingStartedTiles.aspx" Hidden="TRUE">
+        <JSLink>sp.ui.tileview.js</JSLink>
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+        <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        <ViewFields>
+          <FieldRef Name="Title">
+          </FieldRef>
+          <FieldRef Name="BackgroundImageLocation">
+          </FieldRef>
+          <FieldRef Name="Description">
+          </FieldRef>
+          <FieldRef Name="LinkLocation">
+          </FieldRef>
+          <FieldRef Name="LaunchBehavior">
+          </FieldRef>
+          <FieldRef Name="TileOrder">
+          </FieldRef>
+          <FieldRef Name="BackgroundImageClusterX">
+          </FieldRef>
+          <FieldRef Name="BackgroundImageClusterY">
+          </FieldRef>
+        </ViewFields>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="TileOrder" Ascending="TRUE">
+            </FieldRef>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+      <View BaseViewID="3" Type="HTML" OrderedView="TRUE" WebPartZoneID="Main" DisplayName="$Resources:core,All_PromotedLinks;" MobileView="FALSE" SetupPath="pages\viewpage.aspx" Url="AllItems.aspx">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+        <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        <ViewFields>
+          <FieldRef Name="Title">
+          </FieldRef>
+          <FieldRef Name="BackgroundImageLocation">
+          </FieldRef>
+          <FieldRef Name="Description">
+          </FieldRef>
+          <FieldRef Name="LinkLocation">
+          </FieldRef>
+          <FieldRef Name="LaunchBehavior">
+          </FieldRef>
+          <FieldRef Name="TileOrder">
+          </FieldRef>
+        </ViewFields>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="TileOrder" Ascending="TRUE">
+            </FieldRef>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

@@ -1,0 +1,12 @@
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Id="TenantAdmin_Sites_SearchAdministration"
+        GroupId="TenantAdmin_Settings"
+        Location="Microsoft.SharePoint.TenantAdministration"
+        Sequence="50"
+        Title="$Resources:TenantAdmin_SearchAdministration_link;">
+        <UrlAction
+            Url="_layouts/searchadmin/TA_SearchAdministration.aspx" />
+    </CustomAction>
+</Elements>

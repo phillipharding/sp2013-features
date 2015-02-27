@@ -1,0 +1,15 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Feature  Id="541F5F57-C847-4e16-B59A-B31E90E6F9EA"
+          Title="Portal Navigation Properties"
+          Description="Set per-site navigation properties."
+          Version="14.0.0.0"
+          Scope="Web"
+          Hidden="TRUE"
+          ReceiverAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Publishing.NavigationFeatureHandler"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="NavigationSiteSettings.xml"/>
+    </ElementManifests>
+</Feature>

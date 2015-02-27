@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+	Id="5A020A4F-C449-4a65-B07D-F2CC2D8778DD"
+	Title="$Resources:mewa,FeatureFarmMobileEwa-title;"
+	Description="$Resources:mewa,FeatureFarmMobileEwa-description;"
+	SolutionId="A992B0F0-7B6B-4315-B687-649DCAEEF726"
+	Version="15.0.0.0"
+	Hidden="TRUE"
+	Scope="Farm">
+
+	<ElementManifests>
+		<ElementManifest Location="featurestaplingmobileewa.xml" />
+	</ElementManifests>
+</Feature>

@@ -1,0 +1,16 @@
+<Feature  Id="15845762-4EC4-4606-8993-1C0512A98680"
+		Title="$Resources:TenantFormsConfigFeatureTitle;"
+		Description="$Resources:TenantFormsConfigFeatureDescription;"
+		Version="15.0.0.0"
+		Hidden="TRUE"
+		Scope="Web"
+		DefaultResourceFile="ipfscore"
+		ReceiverClass="Microsoft.Office.InfoPath.Server.Administration.TenantFormsFeatureReceiver"
+		ReceiverAssembly="Microsoft.Office.InfoPath.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+		xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<ElementManifests>
+		<ElementManifest Location="tenantLink.xml"/>
+	</ElementManifests>
+
+</Feature>

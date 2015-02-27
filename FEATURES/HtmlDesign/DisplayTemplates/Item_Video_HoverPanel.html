@@ -1,0 +1,304 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_VideoHoverPanel</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:ManagedPropertyMapping msdt:dt="string">'Image Url'{$Resources:Microsoft.Office.Server.Search,SlotName_ImageURL;}:'PictureThumbnailURL;PictureURL;','Title','Title Link Url'{$Resources:Microsoft.Office.Server.Search,SlotName_URL;}:'Path','Summary'{$Resources:Microsoft.Office.Server.Search,SlotName_Line2;}:'Description','HitHighlightedProperties','HitHighlightedSummary','FileExtension'{$Resources:Microsoft.Office.Server.Search,SlotName_FileExtension;}:'SecondaryFileExtension','Author','ContentTypeId','Created','PeopleInMedia','MediaDuration','VideoFileURL'{$Resources:Microsoft.Office.Server.Search,SlotName_VideoFileURL;}:'UserEncodingURL;ExternalMediaURL;DefaultEncodingURL;'</mso:ManagedPropertyMapping>
+<mso:MasterPageDescription msdt:dt="string">$Resources:Microsoft.Office.Server.Search,DisplayTemplateDescription_VideoHoverPanel</mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#SearchHoverPanel;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <script>
+        RegisterSod("mediaplayer.js", Srch.U.urlTokenExpansion("/_layouts/15/mediaplayer.js"));
+        RegisterSod("sp.publishing.resources.resx", Srch.U.urlTokenExpansion("/_layouts/15/ScriptResx.ashx?name=sp.publishing.resources&culture={Locale}"));
+        RegisterSodDep("mediaplayer.js", "sp.publishing.resources.resx");
+    </script>
+
+    <div id="Item_Video_HoverPanel">
+<!--#_
+var itemTitle = $getItemValue(ctx, "Title");
+var itemPath = $getItemValue(ctx, "Path");
+itemPath.overrideValueRenderer($urlHtmlEncode);
+
+var viewCountData = $getItemValue(ctx, "ViewCount");
+if (!viewCountData.isNull)
+{
+    var viewCountFormat = function(viewCount)
+    {
+        return $htmlEncode(String.format($resource("hp_ViewsLifeTime"), Srch.U.toFriendlyNumber(viewCount.value)));
+    };
+    viewCountData.overrideValueRenderer(viewCountFormat);
+}
+
+var peopleInMedia = $getItemValue(ctx, "PeopleInMedia");
+var peopleInMediaArray = !$isNull(ctx.CurrentItem.PeopleInMedia) ? Srch.U.getArray(ctx.CurrentItem.PeopleInMedia) : [];
+var authors = !$isNull(ctx.CurrentItem.Author) ? Srch.U.getArray(ctx.CurrentItem.Author) : [];
+
+var mediaDuration = $getItemValue(ctx, "MediaDuration");
+if (!mediaDuration.isNull)
+{
+    var durationFormat = function(duration)
+    {
+        return $htmlEncode(String.format($resource("hp_Duration"), Srch.U.getFormattedTimeFromSeconds(duration.value)));
+    };
+    mediaDuration.overrideValueRenderer(durationFormat);
+}
+
+var created = $getItemValue(ctx, "Created");
+if (!created.isNull)
+{
+    var createdFormat = function(createdDate)
+    {
+        return $htmlEncode(HP.GetNowDateTimeDifference(createdDate.value));
+    };
+    created.overrideValueRenderer(createdFormat);
+}
+
+var itemDescription = $getItemValue(ctx, "Summary");
+if (!itemDescription.isNull)
+{
+    var truncatedFormat = function(description)
+    {
+        return $htmlEncode(Srch.U.truncateEnd(description.value, 140));
+    };
+    itemDescription.overrideValueRenderer(truncatedFormat);
+}
+
+var showDuplicatesLink = ctx.ClientControl.get_showViewDuplicates() && !Srch.U.n(ctx.CurrentItem.CollapsingStatus) && 
+    !Srch.U.n(ctx.CurrentItem.DocId) && 
+    ctx.CurrentItem.CollapsingStatus === 1;
+
+var emailLink = HP.GetEmailLink(itemTitle.value, itemPath.value, null, $getItemValue(ctx, "ServerRedirectedURL").value);
+var fileExtensionInfo = $getItemValue(ctx, "FileExtension");
+var isRendition = !fileExtensionInfo.isEmpty;
+var videoFileUrl = $getItemValue(ctx, "VideoFileURL");
+
+var encodedId = $getItemValue(ctx, "csr_id");
+var innerId = encodedId + "_innerHover";
+var hoverArrowBorderId = encodedId + "_hoverArrowBorder";
+var hoverArrowId = encodedId + "_hoverArrow";
+var hoverContentId = encodedId + "_hoverContent";
+var closeId = encodedId + "_hoverClose";
+var viewDuplicatesId = encodedId + $htmlEncode(HP.ids.viewDuplicates);
+var durationId = encodedId + "_hoverDuration";
+var viewsId = encodedId + "_hoverViewsLifeTime";
+var peopleInVideoId = encodedId + "_hoverPeopleInVideo";
+var postedById = encodedId + "_hoverPostedBy";
+var createdId = encodedId + "_hoverCreated";
+var videoDescriptionId = encodedId + "_hoverVideoDescription";
+var sendId = encodedId + $htmlEncode(HP.ids.send);
+var followId = encodedId + $htmlEncode(HP.ids.follow);
+var goToVideoPageId = encodedId + "_hoverGoToVideoPage";
+var videoPreviewContainerId = encodedId + "_hoverVideoPreviewContainer";
+var videoPreviewImageId = encodedId + "_hoverVideoPreviewImg";
+var videoPlayerId = encodedId + "_hoverVideoPlayerId";
+var actionsId = encodedId + HP.ids.actions;
+var bodyId = encodedId + HP.ids.body;
+var headerId = encodedId + HP.ids.header;
+
+var mediaSource = videoFileUrl.toString();
+var fileExtension;
+
+var canRenderVideoPreview = false;
+if(!videoFileUrl.isEmpty)
+{
+    if(!fileExtensionInfo.isEmpty)
+    {
+        fileExtension = fileExtensionInfo.toString();
+    }
+    else if(!videoFileUrl.isEmpty)
+    {
+        fileExtension =  mediaSource.substr(mediaSource.lastIndexOf(".") + 1);
+    }
+
+    var isFireFoxOrChrome = !$isNull(browseris) && (browseris.firefox || browseris.chrome);
+    var isOGGorOGVorWEBM = fileExtension == "ogg" || fileExtension == "ogv" || fileExtension == "webm";
+    canRenderVideoPreview = isFireFoxOrChrome || !isOGGorOGVorWEBM; 
+}
+
+window.ShowVideoHoverPanelMediaPlayer = function(
+    previewContainerId, videoPlayerId, playerParams)
+{
+    var containingElement = document.getElementById(previewContainerId);
+    if($isNull(containingElement) || $isNull(containingElement.parentNode)) return;
+
+    EnsureScript("mediaplayer.js", typeof (mediaPlayer), function () {
+        var mimeType = mediaPlayer.tryGetMimeTypeFromFileExtension(playerParams.mediaFileExtension);
+
+        var showThumbnailInChrome = !$isNull(browseris) && browseris.chrome && document.createElement("VIDEO").canPlayType(mimeType) == '';
+        if(showThumbnailInChrome)
+        {
+            ShowVideoThumbnail(videoPreviewImageId, playerParams.previewImageSource);
+        }
+        else
+        {
+            containingElement.innerHTML = '';
+            mediaPlayer.ensureCssIsIncluded();
+            mediaPlayer.createMediaPlayer(containingElement, videoPlayerId, 
+                containingElement.style.width, containingElement.style.height, 
+                playerParams, null);
+        }
+    });
+};
+
+window.ShowVideoThumbnail = function(videoPreviewImageId, previewImgSrc)
+{
+    var videoPreviewImageEl = document.getElementById(videoPreviewImageId);
+    if($isNull(videoPreviewImageEl) || $isEmptyString(previewImgSrc)) return;
+
+    videoPreviewImageEl.src = previewImgSrc;
+    videoPreviewImageEl.style.maxWidth = videoPreviewImageEl.parentNode.style.width;
+    videoPreviewImageEl.style.maxHeight = videoPreviewImageEl.parentNode.style.height;
+};
+
+var imageUrlInfo = $getItemValue(ctx, "Image Url");
+var previewImage = !imageUrlInfo.isEmpty ?
+    $imgSrcUrl(imageUrlInfo) : SP.Utilities.VersionUtility.getImageUrl("videopreview.png");
+var autoPlay = ctx.ClientControl.get_itemTemplateId().toUpperCase().indexOf("ITEM_VIDEOVERTICAL") != -1;
+
+$addRenderContextCallback(ctx, "OnPostRender", function()
+{
+    HP.SetWidth(ctx.CurrentItem.id, innerId, 390);
+    var containingElement = document.getElementById(videoPreviewContainerId);
+    if($isNull(containingElement) || $isNull(containingElement.parentNode)) return;
+
+    containingElement.style.width = "350px";
+    containingElement.style.height = "197px";
+    containingElement.style.marginTop = "11px";
+
+    if(canRenderVideoPreview)
+    {
+        HP.SetPreviewOnHideCallback(function() {
+        EnsureScript("mediaplayer.js", typeof mediaPlayer, function() {
+            mediaPlayer.performPlayBackAction(document.getElementById(videoPlayerId), mediaPlayer.playBackActionNames.Pause);
+            });
+        });
+
+        var playerParams = {
+            mediaSource: mediaSource,
+            previewImageSource: previewImage,
+            mediaFileExtension: fileExtension,
+            autoPlay: autoPlay,
+            embedModePreview: true
+        };
+        ShowVideoHoverPanelMediaPlayer(videoPreviewContainerId, videoPlayerId, playerParams);
+    }
+    else
+    {
+        ShowVideoThumbnail(videoPreviewImageId, previewImage);
+    }
+});
+_#-->
+        <div class="ms-srch-hover-innerContainer ms-srch-hover-wacSize" id="_#= innerId =#_">
+            <div class="ms-srch-hover-arrowBorder" id="_#= hoverArrowBorderId =#_"></div>
+            <div class="ms-srch-hover-arrow" id="_#= hoverArrowId =#_"></div>
+            <div class="ms-srch-hover-content" id="_#= hoverContentId =#_" data-displaytemplate="VideoHoverPanel">
+                <div id="_#= headerId =#_" class="ms-srch-hover-header">
+                    _#= ctx.RenderHeader(ctx) =#_
+                    <div class="ms-metadata">
+<!--#_
+if (!mediaDuration.isNull) 
+{
+_#-->
+                        <div class="ms-srch-hover-filetype" id="_#= durationId =#_">
+                            _#=  mediaDuration =#_
+                        </div>
+<!--#_
+}
+_#-->
+                    </div>
+                </div>
+                <div id="_#= bodyId =#_" class="ms-srch-hover-body">
+                    <div id="_#= videoPreviewContainerId =#_">
+                        <img src="_#= SP.Utilities.VersionUtility.getImageUrl('loading.gif') =#_" alt="_#= $htmlEncode($resource('hp_Preview_LoadingImgAlt')) =#_"
+                            id="_#= videoPreviewImageId =#_"/>
+                    </div>
+<!--#_
+if (peopleInMediaArray.length > 0) 
+{
+_#-->
+                    <div class="ms-srch-hover-subTitle">
+                        <h3 class="ms-soften">_#= $htmlEncode($resource("hp_PeopleInVideo")) =#_</h3>
+                    </div>
+                    <div class="ms-srch-hover-text">
+                        _#= HP.GetAuthorsHtml(peopleInVideoId, peopleInMediaArray) =#_
+                    </div>
+<!--#_
+}
+
+if (authors.length > 0) 
+{
+_#-->
+                    <div class="ms-srch-hover-subTitle">
+                        <h3 class="ms-soften">_#= $htmlEncode($resource("hp_PostedBy")) =#_</h3>
+                    </div>
+                    <span class="ms-srch-hover-text" id="_#= postedById =#_" title="_#= $htmlEncode(ctx.CurrentItem.Author) =#_">
+                        _#= HP.GetAuthorsHtml(encodedId, authors) =#_
+                    </span>
+<!--#_
+    if (!created.isNull) 
+    {
+_#-->
+, _#= created =#_
+<!--#_
+    }
+_#-->
+                    </span>
+<!--#_
+}
+
+if (!itemDescription.isEmpty) 
+{
+_#-->
+                    <div class="ms-srch-hover-subTitle">
+                        <h3 class="ms-soften">_#= $htmlEncode($resource("hp_VideoDescription")) =#_</h3>
+                    </div>
+                    <div class="ms-srch-hover-text ms-forceWrap" id="_#= videoDescriptionId =#_" title="_#= $htmlEncode(itemDescription.value) =#_">
+                        _#= itemDescription =#_
+                    </div>
+<!--#_
+}
+_#-->
+                </div>
+                <div id="_#= actionsId =#_" class="ms-srch-hover-actions">
+<!--#_
+if (!itemPath.isEmpty && !isRendition)
+{
+_#-->
+                    <div class="ms-srch-hover-action">
+                        <a clicktype="Result" id="_#= goToVideoPageId =#_" class="ms-calloutLink ms-uppercase"  href="_#= itemPath =#_" title="_#= $htmlEncode($resource('hp_GoToVideoPage')) =#_">
+                            _#= $htmlEncode($resource("hp_GoToVideoPage")) =#_
+                        </a>
+                    </div>
+<!--#_
+}
+_#-->
+                    <div class="ms-srch-hover-action">
+                        <a clicktype="ActionSend" id="_#= sendId =#_" class="ms-calloutLink ms-uppercase" title="_#= $htmlEncode($resource('hp_Tooltip_Send')) =#_" href="_#= $htmlEncode(emailLink) =#_">
+                            _#= $htmlEncode($resource("hp_Send")) =#_
+                        </a>
+                    </div>
+<!--#_
+if(showDuplicatesLink)
+{
+_#-->
+                    <div class="ms-srch-hover-action">
+                        <a id="_#= viewDuplicatesId =#_" class="ms-calloutLink ms-uppercase" title="_#= $htmlEncode($resource('hp_Tooltip_ViewDuplicates')) =#_" href="javascript:HP.ViewDuplicates('_#= $scriptEncode(ctx.CurrentItem.id) =#_',_#= $scriptEncode(ctx.CurrentItem.DocId) =#_)">
+                            _#= $htmlEncode($resource("hp_ViewDuplicates")) =#_
+                        </a>
+                    </div>
+<!--#_
+}
+_#-->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

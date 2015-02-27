@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature 
+  xmlns="http://schemas.microsoft.com/sharepoint/" 
+  Title="$Resources:core,Marketplace_OfficeExtensionCatalogFeatureTitle;"
+  Description="$Resources:core,Marketplace_OfficeExtensionCatalogFeatureDescription;" 
+  Id="61E874CD-3AC3-4531-8628-28C3ACB78279"
+  Hidden="TRUE"
+  Version="15.0.4.0"
+  Scope="Web"
+  ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+  ReceiverClass="Microsoft.SharePoint.Marketplace.CorporateCuratedGallery.SPOfficeExtensionCatalogFeatureReceiver">
+  <ElementManifests>
+    <ElementManifest Location="OECatalogFields.xml" />
+    <ElementManifest Location="OECatalogTemplate.xml" />
+    <ElementManifest Location="OECatalogInstance.xml" />
+    <ElementFile Location="OfficeExtensionCatalog\Schema.xml" />
+  </ElementManifests>
+  <UpgradeActions
+    ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Marketplace.CorporateCuratedGallery.SPOfficeExtensionCatalogFeatureReceiver">
+    <VersionRange EndVersion="15.0.0.2">
+        <ApplyElementManifests>
+            <ElementManifest Location="OECatalogFields.xml" />
+        </ApplyElementManifests>
+    </VersionRange>
+    <VersionRange EndVersion="15.0.1.0">
+      <CustomUpgradeAction Name="EnsureFieldsAndViewsInOfficeExtensionCatalog" />
+    </VersionRange>
+    <VersionRange EndVersion="15.0.3.0">
+      <CustomUpgradeAction Name="UpdateOECatalogInstanceIcon" />
+      <CustomUpgradeAction Name="EnsureIsValidFieldInViewsOfOfficeExtensionCatalog" />
+    </VersionRange>
+    <VersionRange EndVersion="15.0.4.0">
+      <CustomUpgradeAction Name="AddListToQuickLaunch" />
+    </VersionRange>
+  </UpgradeActions>
+</Feature>

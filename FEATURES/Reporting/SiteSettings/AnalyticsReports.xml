@@ -1,0 +1,53 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Id="SiteAnalyticsReports"
+        GroupId="SiteAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"
+        UIVersion=">=15"    
+        Rights="ManageWeb"
+        Sequence="200"
+        Title="$Resources:Reporting_AnalyticsSiteReportingFeatureTitle;"
+        Description="$Resources:SiteSettings_AnalyticsReports_Tooltip;">
+        <UrlAction
+            Url="_layouts/15/Reporting.aspx?Category=AnalyticsSite" />
+    </CustomAction>
+    <CustomAction
+        Id="SiteCollectionAnalyticsReports"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        UIVersion=">=15"    
+        RequireSiteAdministrator="true"
+        Sequence="200"
+        Title="$Resources:Reporting_AnalyticsSiteCollectionReportingFeatureTitle;"
+        Description="$Resources:SiteSettings_AnalyticsReports_Tooltip;">
+        <UrlAction
+            Url="_layouts/15/Reporting.aspx?Category=AnalyticsSiteCollection" />
+    </CustomAction>
+    <CustomAction
+        Id="Ribbon.Documents.Share.Analytics" 
+        Location="CommandUI.Ribbon"
+        UIVersion=">=15">
+        <CommandUIExtension>
+            <CommandUIDefinitions>
+                <CommandUIDefinition Location="Ribbon.WikiPageTab.Share.Controls._children"> <Button Id="Ribbon.WikiPageTab.Share.ViewAnalyticsReport" Sequence="55" Command="viewAnalyticsReportForPage" Image16by16="/_layouts/15/images/analyticsreport16x16.png?rev=23" Image32by32="/_layouts/15/images/analyticsreport32x32.png?rev=23" LabelText="$Resources:dlccore,Reporting_AnalyticsReportingFeatureTitle;" ToolTipTitle="$Resources:dlccore,Reporting_AnalyticsReportingFeatureTitle;" ToolTipDescription="$Resources:dlccore,SiteSettings_AnalyticsReports_Tooltip;" TemplateAlias="o1"/> </CommandUIDefinition>
+                <CommandUIDefinition Location="Ribbon.WebPartPage.Share.Controls._children"> <Button Id="Ribbon.WebPartPage.Share.ViewAnalyticsReport" Sequence="55" Command="viewAnalyticsReportForPage" Image16by16="/_layouts/15/images/analyticsreport16x16.png?rev=23" Image32by32="/_layouts/15/images/analyticsreport32x32.png?rev=23" LabelText="$Resources:dlccore,Reporting_AnalyticsReportingFeatureTitle;" ToolTipTitle="$Resources:dlccore,Reporting_AnalyticsReportingFeatureTitle;" ToolTipDescription="$Resources:dlccore,SiteSettings_AnalyticsReports_Tooltip;" TemplateAlias="o1"/> </CommandUIDefinition>
+				<CommandUIDefinition Location="Ribbon.Documents.Share.Controls._children"> <Button Id="Ribbon.Documents.Share.ViewAnalyticsReport" Sequence="55" Command="viewAnalyticsReport" Image16by16="/_layouts/15/images/analyticsreport16x16.png?rev=23" Image32by32="/_layouts/15/images/analyticsreport32x32.png?rev=23" LabelText="$Resources:dlccore,Reporting_AnalyticsReportingFeatureTitle;" ToolTipTitle="$Resources:dlccore,Reporting_AnalyticsReportingFeatureTitle;" ToolTipDescription="$Resources:dlccore,SiteSettings_AnalyticsReports_Tooltip;" TemplateAlias="o1"/> </CommandUIDefinition>
+            </CommandUIDefinitions>
+            <CommandUIHandlers>
+                <CommandUIHandler Command="viewAnalyticsReport" CommandAction="javascript: function getItemIds() { var itemIds = ''; var items = SP.ListOperation.Selection.getSelectedItems(); var item; for (var i in items) { item = items[i]; if(itemIds != '') { itemIds = itemIds + ','; } itemIds = itemIds + item.id; } return itemIds; } function invokeViewAnalyticsReport() { window.location = '{SiteUrl}' + '/_layouts/15/reporting.aspx' + '?Category=Analytics&amp;List=' + encodeURIComponent(ctx.listName) + '&amp;ID=' + getItemIds(); } invokeViewAnalyticsReport();" EnabledScript="javascript: function enableViewAnalyticsReport() {     var items = SP.ListOperation.Selection.getSelectedItems();     return (items.length > 0); } enableViewAnalyticsReport();" />
+                <CommandUIHandler Command="viewAnalyticsReportForPage" CommandAction="javascript: function invokeViewAnalyticsReportForPage() { var reportUrl = '{SiteUrl}' + '/_layouts/15/reporting.aspx' + '?Category=Analytics&amp;List=' + encodeURIComponent(SP.PageContextInfo.get_pageListId()) + '&amp;ID=' + SP.PageContextInfo.get_pageItemId(); if (typeof(ajaxNavigate) != 'undefined') reportUrl = reportUrl + '&amp;ItemUrl=' + encodeURIComponent(ajaxNavigate.get_href()); STSNavigate(reportUrl); } invokeViewAnalyticsReportForPage();" EnabledScript="javascript: function enableViewAnalyticsReportForPage() {     return ((typeof(SP.PageContextInfo.get_pageItemId()) != 'undefined') &amp;&amp; (typeof(SP.PageContextInfo.get_pageItemId()) != 'undefined')); } enableViewAnalyticsReportForPage();" />
+            </CommandUIHandlers>
+        </CommandUIExtension>
+    </CustomAction>
+    <!-- Moved from APAnalytics WAReporting feature -->
+    <HideCustomAction
+        Id="RemoveSiteCollectionUsage"
+        HideActionId="SiteCollectionUsage"
+        GroupId="SiteTasks"
+        Location="Microsoft.SharePoint.SiteSettings"/>
+    <HideCustomAction
+        Id="RemoveWebUsage"
+        HideActionId="WebUsage"
+        GroupId="SiteTasks"
+        Location="Microsoft.SharePoint.SiteSettings"/>
+</Elements>

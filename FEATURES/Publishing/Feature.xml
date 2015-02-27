@@ -1,0 +1,56 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Feature  Id="22A9EF51-737B-4ff2-9346-694633FE4416"
+          Title="Publishing"
+          Description="Enable Publishing in a web."
+          Version="15.0.14.0"
+          Scope="Web"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          ReceiverAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Publishing.PublishingFeatureHandler"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ContentTypeConverterSettings.xml"/>
+        <ElementManifest Location="DocumentLibrarySettings.xml"/>
+        <ElementManifest Location="EditingMenu.xml"/>
+        <ElementManifest Location="PagesListTemplate.xml" />
+        <ElementManifest Location="PublishingSiteSettings.xml"/>
+        <ElementManifest Location="RegionalSettingsExtensions.xml"/>
+        <ElementManifest Location="SiteActionMenuCustomization.xml" />
+        <ElementManifest Location="VariationsFlagControl.xml"/>
+        <ElementManifest Location="ProvisionedUI.xml"/>
+        <ElementManifest Location="ProvisionedUI2.xml"/>
+        <ElementManifest Location="ProvisionedUI3.xml"/>
+        <ElementManifest Location="VariationsNomination.xml"/>
+    </ElementManifests>
+    <UpgradeActions>
+        <VersionRange EndVersion="15.0.1.0">
+            <CustomUpgradeAction Name="EnsureVariationsInfrastructure" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.2.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="ProvisionedUI2.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.5.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="VariationsNomination.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+		<VersionRange EndVersion="15.0.9.0">
+            <CustomUpgradeAction Name="DisableMinimalDownload" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.12.0">
+            <CustomUpgradeAction Name="Activate404ErrorPage" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.13.0">
+            <CustomUpgradeAction Name="DisableSaveSiteAsTemplate" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.14.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="ProvisionedUI3.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

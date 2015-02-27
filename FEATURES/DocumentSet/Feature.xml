@@ -1,0 +1,18 @@
+<Feature  Id="3BAE86A2-776D-499d-9DB8-FA4CDC7884F8"
+        Title="$Resources:dlccore,DocSet_Feature_Title;"
+        Description="$Resources:dlccore,DocSet_Feature_Description;"
+        Version="14.0.0.0"
+        Hidden="FALSE"
+        Scope="Site"
+        UIVersion="4"
+        ReceiverAssembly="Microsoft.Office.DocumentManagement, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        ReceiverClass="Microsoft.Office.DocumentManagement.Internal.DocumentSetFeatureReceiver"        
+        xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="Elements.xml" />
+        <ElementManifest Location="Ribbon.xml" />
+    </ElementManifests>
+    <ActivationDependencies>
+        <ActivationDependency FeatureId="3A4CE811-6FE0-4e97-A6AE-675470282CF2" />
+    </ActivationDependencies>    
+</Feature>

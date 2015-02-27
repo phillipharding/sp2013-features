@@ -1,0 +1,99 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_MultiVaueRefinementItem</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:CompatibleManagedProperties msdt:dt="string"></mso:CompatibleManagedProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:CompatibleSearchDataTypes msdt:dt="string"></mso:CompatibleSearchDataTypes>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106604</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#Refinement;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+</mso:CustomDocumentProperties></xml><![endif]-->
+</head>
+<body>
+<script>
+    $includeScript("", "~sitecollection/_catalogs/masterpage/Display Templates/Filters/Filter_MultiValue_Body.js");
+</script>
+<div id="Filter_MultiValue">
+<!--#_
+var Options = {
+    ShowCounts: false
+};
+
+var listData = ctx.ListData;
+var hasControl = !$isNull(ctx.RefinementControl) && !$isNull(ctx.ClientControl);
+
+if(hasControl) {
+    var hasNoListData = ($isEmptyArray(listData));
+
+    var propertyName = ctx.RefinementControl.propertyName;
+    var displayTitle = Srch.Refinement.getRefinementTitle(ctx.RefinementControl);
+    var isExpanded = Srch.Refinement.getExpanded(ctx.RefinementControl.propertyName);
+    var useContains = false;
+    var useKQL = false;
+    var refiners = [];
+
+    var currentRefinementCategory = ctx.ClientControl.getCurrentRefinementCategory(ctx.RefinementControl.propertyName);
+    var hasAnyFilterTokens = (!$isNull(currentRefinementCategory) && currentRefinementCategory.get_tokenCount() > 0);
+    var renderEmptyContainer = hasControl && (hasNoListData && !hasAnyFilterTokens);
+    if(!renderEmptyContainer) {
+        var listDataTokenToDisplayMap = {};
+        var listDataTokenToCountMap = {};
+        if(!hasNoListData) {
+            for (var i = 0; i < listData.length; i++) {
+                var filter = listData[i];
+                if(!$isNull(filter)) {
+                    listDataTokenToDisplayMap[filter.RefinementToken] = filter.RefinementName;
+                    listDataTokenToCountMap[filter.RefinementToken] = filter.RefinementCount;
+                    if(!hasAnyFilterTokens && !$isEmptyString(filter.RefinementName) && !$isEmptyString(filter.RefinementToken)) {
+                        refiners.push(
+                        {   
+                            RefinementName: filter.RefinementName,
+                            RefinementToken: filter.RefinementToken,
+                            RefinementCount: filter.RefinementCount,
+                            IsSelected: false
+                        });
+                    }
+                }
+            }
+        }
+        if(hasAnyFilterTokens) {
+            for(var j = 0; j < currentRefinementCategory.get_tokenCount(); j++) {
+                var token = currentRefinementCategory.t[j];
+                var displayValue = listDataTokenToDisplayMap[token];
+                if($isEmptyString(displayValue) && !$isNull(currentRefinementCategory.m)) {
+                    displayValue = currentRefinementCategory.m[token];
+                }
+                if(!$isEmptyString(displayValue) && !$isEmptyString(token))
+                {
+                    refiners.push(
+                    {   
+                        RefinementName: displayValue,
+                        RefinementToken: token,
+                        RefinementCount: !$isNull(listDataTokenToCountMap[token]) ? listDataTokenToCountMap[token] : 0,
+                        IsSelected: true
+                    });
+                }
+            }
+        }
+    }
+    ctx["DisplayTemplateData"]["BodyTemplateId"] = "~sitecollection/_catalogs/masterpage/Display Templates/Filters/Filter_MultiValue_Body.js";
+    ctx.RefinementControl["csr_propertyName"] = propertyName;
+    ctx.RefinementControl["csr_displayTitle"] = displayTitle;
+    ctx.RefinementControl["csr_filters"] = refiners;
+    ctx.RefinementControl["csr_isExpanded"] = isExpanded;
+    ctx.RefinementControl["csr_renderEmptyContainer"] = renderEmptyContainer;
+    ctx.RefinementControl["csr_useContains"] = useContains;
+    ctx.RefinementControl["csr_useKQL"] = useKQL;
+    ctx.RefinementControl["csr_showCounts"] = Options.ShowCounts;
+_#-->
+        _#= ctx.RenderBody(ctx) =#_
+<!--#_
+}
+_#-->
+    </div>
+</body>
+</html>

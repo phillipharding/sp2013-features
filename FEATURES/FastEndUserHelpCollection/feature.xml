@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature  Id="6E8F2B8D-D765-4e69-84EA-5702574C11D6"
+          Title="$Resources:FastEndUser_Feature_Title;"
+          Description="$Resources:FastEndUser_Feature_Description;"
+          SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+          DefaultResourceFile="Microsoft.Office.Server.Search"
+          Version="14.0.0.0"
+          Scope="Site"
+          Hidden="TRUE"
+          ReceiverAssembly="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.Office.Server.Search.Administration.FastEndUserFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

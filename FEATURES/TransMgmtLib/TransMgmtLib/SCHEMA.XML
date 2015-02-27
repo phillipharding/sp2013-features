@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="15.0.4420" _dal="1" -->
+<!-- _LocalBinding -->
+            <List xmlns:ows="Microsoft SharePoint" Name="Documents" Title="Shared Documents" Direction="0" Url="Shared Documents" 
+                    EnableContentTypes="TRUE" BaseType="1" >
+               <MetaData>
+                  <ContentTypes>
+                     <ContentTypeRef ID="0x010100E4FE8612EC394E3690F102C0A1A07563">
+                         <Folder TargetName="Forms/TranslationDoc" />
+                     </ContentTypeRef>
+                     <ContentTypeRef ID="0x0120" />
+                  </ContentTypes>
+                  <Fields>
+                   <Field ID="{8553196d-ec8d-4564-9861-3dbe931050c8}" Type="File" Name="FileLeafRef" Group="_Hidden" ShowInFileDlg="FALSE" DisplayName="$Resources:core,Name" 
+                       ShowField="LeafName" JoinColName="DoclibRowId" JoinRowOrdinal="0" JoinType="INNER" Sealed="TRUE"></Field>
+                   <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" ShowInNewForm="FALSE" ShowInFileDlg="FALSE" DisplayName="$Resources:core,Title" Sealed="TRUE"></Field>
+                   <Field ID="{64fa0111-f9e3-405a-94e1-4f06822dbeb9}" Type="Text" Name="TranslationBaseDocument" DisplayName="$Resources:dlccore,DM_MLangSchema_BaseDocFieldName"></Field>
+                   <Field ID="{d3f79d8e-b515-464e-8f28-f8f9b63cce05}" Type="Text" Name="TranslationBaseDocumentVersion" DisplayName="$Resources:dlccore,DM_MLangSchema_BaseDocVerFieldName"
+                       Description="$Resources:dlccore,DM_MLangSchema_TransDocBaseDocVerDescription">
+                   </Field>
+                   <Field ID="{a3f608ad-8328-40eb-a477-3a4148de8472}" Type="Choice" Name="Translation_x0020_Status" ShowInNewForm="FALSE" ShowInFileDlg="FALSE" 
+                       DisplayName="$Resources:dlccore,DM_MLangSchema_TranslationStatusFieldName" Description="$Resources:dlccore,DM_MLangSchema_TransDocTransStatusDescription">
+                       <CHOICES>
+                           <CHOICE>$Resources:dlccore,DM_MLangSchema_TransStatusNotStarted</CHOICE>
+                           <CHOICE>$Resources:dlccore,DM_MLangSchema_TransStatusInProgress</CHOICE>
+                           <CHOICE>$Resources:dlccore,DM_MLangSchema_TransStatusCompleted</CHOICE>
+                           <CHOICE>$Resources:dlccore,DM_MLangSchema_TransStatusCancelled</CHOICE>
+                           <CHOICE>$Resources:dlccore,DM_MLangSchema_TransStatusReqUpdates</CHOICE>
+                       </CHOICES>
+                   </Field>
+                   <Field ID="{ee692a0c-bc4b-4ee2-9aca-39dd63884c35}" Type="Choice" Name="Language" DisplayName="$Resources:core,LanguageName" FillInChoice="TRUE">
+                       <CHOICES> <CHOICE>$Resources:core,Lang_Arabic_SaudiArabia</CHOICE> <CHOICE>$Resources:core,Lang_Bulgarian_Bulgaria</CHOICE> <CHOICE>$Resources:core,Lang_Chinese_HongKong</CHOICE> <CHOICE>$Resources:core,Lang_Chinese_PRC</CHOICE> <CHOICE>$Resources:core,Lang_Chinese_Taiwan</CHOICE> <CHOICE>$Resources:core,Lang_Croatian_Croatia</CHOICE> <CHOICE>$Resources:core,Lang_Czech_CzechRepublic</CHOICE> <CHOICE>$Resources:core,Lang_Danish_Denmark</CHOICE> <CHOICE>$Resources:core,Lang_Dutch_Netherlands</CHOICE> <CHOICE>$Resources:core,Lang_English</CHOICE> <CHOICE>$Resources:core,Lang_Estonian_Estonia</CHOICE> <CHOICE>$Resources:core,Lang_Finnish_Finland</CHOICE> <CHOICE>$Resources:core,Lang_French_France</CHOICE> <CHOICE>$Resources:core,Lang_German_Germany</CHOICE> <CHOICE>$Resources:core,Lang_Greek_Greece</CHOICE> <CHOICE>$Resources:core,Lang_Hebrew_Israel</CHOICE> <CHOICE>$Resources:core,Lang_Hindi_India</CHOICE> <CHOICE>$Resources:core,Lang_Hungarian_Hungary</CHOICE> <CHOICE>$Resources:core,Lang_Indonesian_Indonesia</CHOICE> <CHOICE>$Resources:core,Lang_Italian_Italy</CHOICE> <CHOICE>$Resources:core,Lang_Japanese_Japan</CHOICE> <CHOICE>$Resources:core,Lang_Korean_Korea</CHOICE> <CHOICE>$Resources:core,Lang_Latvian_Latvia</CHOICE> <CHOICE>$Resources:core,Lang_Lithuanian_Lithuania</CHOICE> <CHOICE>$Resources:core,Lang_Malay_Malaysia</CHOICE> <CHOICE>$Resources:core,Lang_Norwegian_BokmalNorway</CHOICE> <CHOICE>$Resources:core,Lang_Polish_Poland</CHOICE> <CHOICE>$Resources:core,Lang_Portuguese_Brazil</CHOICE> <CHOICE>$Resources:core,Lang_Portuguese_Portugal</CHOICE> <CHOICE>$Resources:core,Lang_Romanian_Romania</CHOICE> <CHOICE>$Resources:core,Lang_Russian_Russia</CHOICE> <CHOICE>$Resources:core,Lang_Serbian_LatinSerbia</CHOICE> <CHOICE>$Resources:core,Lang_Slovak_Slovakia</CHOICE> <CHOICE>$Resources:core,Lang_Slovenian_Slovenia</CHOICE> <CHOICE>$Resources:core,Lang_Spanish_Spain</CHOICE> <CHOICE>$Resources:core,Lang_Swedish_Sweden</CHOICE> <CHOICE>$Resources:core,Lang_Thai_Thailand</CHOICE> <CHOICE>$Resources:core,Lang_Turkish_Turkey</CHOICE> <CHOICE>$Resources:core,Lang_Ukrainian_Ukraine</CHOICE> <CHOICE>$Resources:core,Lang_Urdu_Pakistan</CHOICE> <CHOICE>$Resources:core,Lang_Vietnamese_Vietnam</CHOICE> </CHOICES>
+                   </Field>
+                  </Fields>
+                  <Views>
+                    <View BaseViewID="0" Type="HTML" MobileView="TRUE">
+<XslLink Default="TRUE">main.xsl</XslLink>
+<RowLimit Paged="TRUE">30</RowLimit>
+<Toolbar Position="After" Type="Freeform"> <IfHasRights> <RightsChoices><RightsGroup PermAddListItems="required" /></RightsChoices> <Then> <HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idAddNewDoc" href="]]></HTML><HttpVDir/><HTML><![CDATA[/_layouts/15/Upload.aspx?List=]]></HTML><ListProperty Select="Name" /><HTML><![CDATA[&RootFolder=]]></HTML><GetVar Name="RootFolder" URLEncode="TRUE"/><HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML><ScriptQuote NotAddingQuote="TRUE"><HttpVDir/></ScriptQuote><HTML><![CDATA[/_layouts/15/Upload.aspx?List=]]></HTML><ListProperty Select="Name" /><HTML><![CDATA[&RootFolder=]]></HTML><GetVar Name="RootFolder" URLEncode="TRUE"/><HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML> <HTML>$Resources:core,Add_New_Document;</HTML><HTML><![CDATA[</a></div>]]></HTML> </Then> </IfHasRights> </Toolbar>
+                <RowLimit>20</RowLimit>
+                <ViewFields>
+                    <FieldRef Name="DocIcon"></FieldRef>
+                    <FieldRef Name="LinkFilenameNoMenu"></FieldRef>
+                    <FieldRef Name="Editor"></FieldRef>
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="Last_x0020_Modified" Ascending="FALSE"></FieldRef>
+                    </OrderBy>
+                </Query>
+            </View>
+                     <View BaseViewID="1" Type="HTML" MobileView="TRUE" MobileDefaultView="TRUE" WebPartZoneID="Main" DisplayName="$Resources:core,All_Documents" Url="Forms/AllItems.aspx">
+<XslLink Default="TRUE">main.xsl</XslLink>
+<JSLink>clienttemplates.js</JSLink>
+<RowLimit Paged="TRUE">30</RowLimit>
+<Toolbar Type="Standard">
+</Toolbar>
+                        <ViewFields>
+                           <FieldRef Name="DocIcon"></FieldRef>
+                           <FieldRef Name="LinkFilename"></FieldRef>
+                           <FieldRef Name="Language"></FieldRef>
+                           <FieldRef Name="Last_x0020_Modified"></FieldRef>
+                           <FieldRef Name="Editor"></FieldRef>
+                           <FieldRef Name="LinkCheckedOutTitle"></FieldRef>
+                        </ViewFields>
+                        <Query>
+                           <OrderBy>
+                              <FieldRef Name="FileLeafRef"/>
+                              <FieldRef Name="Language"/>
+                           </OrderBy>
+                        </Query>
+                     </View>
+<View BaseViewID="2" Type="HTML" FileDialog="TRUE" TabularView="FALSE" DisplayName="$Resources:core,File_Dialog_View;" Hidden="TRUE" Path="filedlg.htm" ModerationType="Moderator">
+    <ViewHeader>
+        <SetVar Name="FileDialog">1</SetVar>
+        <HTML><![CDATA[
+            <table id="FileDialogViewTable" width="100%" style="cursor: default;" border="0" rules="rows" cellspacing="0" cellpadding="2">
+                <tr>
+        ]]></HTML>
+        <Fields>
+            <HTML><![CDATA[<th class="ms-vh2-nofilter">]]></HTML>
+            <Field/>
+            <HTML><![CDATA[</th>]]></HTML>
+        </Fields>
+        <HTML><![CDATA[</tr>]]></HTML>
+    </ViewHeader>
+    <ViewBody>
+       <SetVar Name="FileDialog">1</SetVar>
+       <IfEqual>
+          <Expr1>
+             <GetVar Name="AlternateStyle" />
+          </Expr1>
+             <Expr2>ms-alternating</Expr2>
+          <Then>
+             <SetVar Scope="Request" Name="AlternateStyle">
+             </SetVar>
+          </Then>
+          <Else>
+              <SetVar Scope="Request" Name="AlternateStyle">ms-alternating</SetVar>
+          </Else>
+        </IfEqual>
+        <Switch>
+            <Expr><LookupColumn Name="FSObjType"/></Expr>
+            <Case Value="1">
+                <HTML>&lt;TR fileattribute=folder ID="</HTML>
+            </Case>
+            <Default>
+                <HTML>&lt;TR fileattribute=file ID="</HTML>
+            </Default>
+        </Switch>
+        <Field Name="EncodedAbsUrl"/>
+        <HTML><![CDATA[" class="]]></HTML><GetVar Name="AlternateStyle" /><HTML><![CDATA[" onmousedown="selectrow()" onclick="selectrow()">]]></HTML>
+        <Fields>
+            <HTML><![CDATA[<td class="ms-vb" style="padding-left: 4px">]]></HTML>
+             <FieldSwitch>
+              <Expr><Property Select="Type"/></Expr>
+              <Case Value="User"><LookupColumn HTMLEncode="TRUE"/></Case>
+              <Default>
+               <FieldSwitch>
+                <Expr><Property Select="Name"/></Expr>
+                <Case Value="CheckoutUser"><Field HTMLEncode="TRUE"/></Case>
+                <Default><Field/></Default>
+               </FieldSwitch>
+              </Default>
+             </FieldSwitch>
+            <HTML><![CDATA[</td>]]></HTML>
+        </Fields>
+        <HTML><![CDATA[</tr>]]></HTML>
+    </ViewBody>
+    <ViewFooter>
+        <HTML><![CDATA[</table>]]></HTML>
+    </ViewFooter>
+    <ViewEmpty>
+        <SetVar Name="FileDialog">1</SetVar>
+        <HTML><![CDATA[
+            <table id="FileDialogViewTable" width="100%" style="cursor: default;" border="0" rules="rows" cellspacing="0" cellpadding="2">
+                <tr>
+        ]]></HTML>
+        <Fields>
+            <Switch>
+                <Expr><Property Select="Name"/></Expr>
+                <Case Value="FileLeafRef"></Case>
+                <Default>
+                    <HTML><![CDATA[<th class="ms-vh2-nofilter">]]></HTML>
+                    <Field/>
+                    <HTML><![CDATA[</th>]]></HTML>
+                </Default>
+            </Switch>
+        </Fields>
+        <HTML><![CDATA[</tr></table>]]></HTML>
+        <HTML><![CDATA[<table width="100%" border="0" rules="rows"><tr>]]></HTML>
+        <HTML><![CDATA[<td class="ms-vb">]]></HTML>
+        <HTML>$Resources:core,noDocOfSpecType;</HTML>
+        <HTML><![CDATA[</td></tr></table>]]></HTML>
+    </ViewEmpty>
+    <ViewFields>
+        <FieldRef Name="DocIcon"></FieldRef>
+        <FieldRef Name="BaseName"></FieldRef>
+        <FieldRef Name="Editor" TextOnly="TRUE"></FieldRef>
+        <FieldRef Name="Modified" TextOnly="TRUE"></FieldRef>
+        <FieldRef Name="CheckoutUser" TextOnly="TRUE"></FieldRef>
+    </ViewFields>
+    <Query>
+        <OrderBy>
+            <FieldRef Name="FSObjType" Key="Primary"/>
+            <FieldRef Name="FileLeafRef"/>
+        </OrderBy>
+    </Query>
+</View>
+                            <View BaseViewID="3" Type="HTML" MobileView="TRUE" WebPartZoneID="Main" DisplayName="$Resources:core,Explorer_View" RequiresClientIntegration="TRUE" Url="Forms/WebFldr.aspx" SetupPath="pages\webfldr.aspx" ReadOnly="TRUE">
+<Toolbar Type="Standard">
+</Toolbar>
+<XslLink>main.xsl</XslLink>
+                            <ViewEmpty>
+<HTML><![CDATA[
+        <iframe id="expFrame" width="100%" height="500px" name="expFrame" src="/_layouts/blank.htm"></iframe>
+        <script type="text/javascript">
+        function navtoframe()
+        {
+        }
+        function navtoframe2()
+        {
+            NavigateHttpFolderIfSupported(
+                ]]></HTML><ScriptQuote><Switch><Expr><GetVar Name="RootFolder"/></Expr><Case Value=""><ListUrlDir ForInstance="TRUE"/></Case><Default><GetVar Name="RootFolder"/></Default></Switch></ScriptQuote><HTML><![CDATA[, "expFrame");
+        }
+        var _spBodyOnLoadFunctionNames;
+        if (_spBodyOnLoadFunctionNames == null)
+        { 
+            _spBodyOnLoadFunctionNames = new Array();
+        }
+        _spBodyOnLoadFunctionNames.push("navtoframe2");
+        </script>]]>
+        </HTML>
+                            </ViewEmpty>
+                            <ViewFields/>
+                            </View>
+                    <View BaseViewID="6" Type="HTML" MobileView="TRUE">
+<XslLink Default="TRUE">main.xsl</XslLink>
+<RowLimit Paged="TRUE">30</RowLimit>
+<Toolbar Position="After" Type="Freeform"> <IfHasRights> <RightsChoices><RightsGroup PermAddListItems="required" /></RightsChoices> <Then> <HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idAddNewDoc" href="]]></HTML><HttpVDir/><HTML><![CDATA[/_layouts/15/Upload.aspx?List=]]></HTML><ListProperty Select="Name" /><HTML><![CDATA[&RootFolder=]]></HTML><GetVar Name="RootFolder" URLEncode="TRUE"/><HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML><ScriptQuote NotAddingQuote="TRUE"><HttpVDir/></ScriptQuote><HTML><![CDATA[/_layouts/15/Upload.aspx?List=]]></HTML><ListProperty Select="Name" /><HTML><![CDATA[&RootFolder=]]></HTML><GetVar Name="RootFolder" URLEncode="TRUE"/><HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML> <HTML>$Resources:core,Add_New_Document;</HTML><HTML><![CDATA[</a></div>]]></HTML> </Then> </IfHasRights> </Toolbar>
+                <RowLimit>12</RowLimit>
+                <ViewFields>
+                    <FieldRef Name="DocIcon"></FieldRef>
+                    <FieldRef Name="LinkFilename"></FieldRef>
+                    <FieldRef Name="Editor"></FieldRef>
+                </ViewFields>
+                <Query>
+                    <OrderBy>
+                        <FieldRef Name="Last_x0020_Modified" Ascending="FALSE"></FieldRef>
+                    </OrderBy>
+                </Query>
+            </View>
+                     <View BaseViewID="7" Type="HTML" MobileView="TRUE" WebPartZoneID="Main" DisplayName="$Resources:dlccore,DM_MLangSchema_BaseDocsViewName" DefaultView="TRUE" Url="Forms/BaseItems.aspx">
+<XslLink Default="TRUE">main.xsl</XslLink>
+<JSLink>clienttemplates.js</JSLink>
+<RowLimit Paged="TRUE">30</RowLimit>
+<Toolbar Type="Standard">
+</Toolbar>
+                        <ViewFields>
+                           <FieldRef Name="DocIcon"></FieldRef>
+                           <FieldRef Name="LinkFilename"></FieldRef>
+                           <FieldRef Name="Language"></FieldRef>
+                           <FieldRef Name="Editor"></FieldRef>
+                           <FieldRef Name="LinkCheckedOutTitle"></FieldRef>
+                           <FieldRef Name="TranslationBaseDocumentVersion"></FieldRef>
+                           <FieldRef Name="Translation_x0020_Status"></FieldRef>
+                        </ViewFields>
+                        <Query>
+                           <GroupBy Collapse="FALSE">
+                              <FieldRef Name="TranslationBaseDocument" />
+                           </GroupBy>
+                           <OrderBy>
+                              <FieldRef Name="Language" />
+                              <FieldRef Name="LinkFilename" />
+                           </OrderBy>
+                        </Query>
+                     </View>
+                  </Views>
+                  <Forms>
+                     <Form Type="DisplayForm" Url="Forms/DispForm.aspx" Template="DocumentLibraryForm" WebPartZoneID="Main"/>
+                     <Form Type="EditForm" Url="Forms/EditForm.aspx" Template="MultiLangLibraryForm" WebPartZoneID="Main"/>                    
+                     <Form Type="NewForm" Url="Forms/Upload.aspx" Template="MultiLangLibraryForm" WebPartZoneID="Main"/>
+                     <Form Type="NewFormDialog" Path="EditDlg.htm">
+<ListFormOpening><HTML><![CDATA[
+<script type="text/javascript">
+var frm = new OWSForm(]]></HTML><ScriptQuote><Switch><Expr><GetVar Name="HTMLFormName"/></Expr><Case Value=""><HTML><![CDATA[OWSForm]]></HTML></Case><Default><GetVar Name="HTMLFormName"/></Default></Switch></ScriptQuote><HTML><![CDATA[, false, ]]></HTML><ScriptQuote><HttpVDir/><HTML>/_layouts/</HTML></ScriptQuote><HTML><![CDATA[);
+</script>
+]]></HTML>
+<HTML><![CDATA[
+<script type="text/javascript">]]></HTML>
+<HTML><![CDATA[ frm.dopt.chDateSep = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="29"/></ScriptQuote><HTML><![CDATA[; frm.dopt.chTimeSep = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="30"/></ScriptQuote><HTML><![CDATA[; frm.dopt.SetTimeFormat(]]></HTML><ProjectProperty Select="Time24"/><HTML><![CDATA[); frm.dopt.SetDateOrder(]]></HTML><LocaleInfo LCTYPE="33"/><HTML><![CDATA[); frm.dopt.SetDOW(]]></HTML><LocaleInfo LCTYPE="4108"/> <HTML><![CDATA[); frm.dopt.stAM = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="40"/></ScriptQuote><HTML><![CDATA[; frm.dopt.stPM = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="41"/></ScriptQuote><HTML><![CDATA[; frm.dopt.TimeMarkPosn = ]]></HTML><LocaleInfo LCTYPE="4101"/><HTML><![CDATA[; frm.dopt.webTZOffsetMin = ]]></HTML><ProjectProperty Select="TimeZoneBias"/><HTML><![CDATA[; ]]></HTML>
+<HTML><![CDATA[ frm.nopt.chDigSep = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="15"/></ScriptQuote><HTML><![CDATA[; frm.nopt.chDecimal = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="14"/></ScriptQuote><HTML><![CDATA[; frm.nopt.chMinus = ]]></HTML><ScriptQuote><LocaleInfo LCTYPE="81"/></ScriptQuote><HTML><![CDATA[; frm.nopt.iNegNumber = ]]></HTML><LocaleInfo LCTYPE="4112"/><HTML><![CDATA[; frm.nopt.SetGrouping(]]></HTML><ScriptQuote><LocaleInfo LCTYPE="16"/></ScriptQuote><HTML><![CDATA[); ]]></HTML>
+<HTML><![CDATA[
+frm.stFieldPrefix = ]]></HTML><ScriptQuote><FieldPrefix/></ScriptQuote><HTML><![CDATA[;
+frm.stImagesPath = ]]></HTML><ScriptQuote>/_layouts/15/images/</ScriptQuote><HTML><![CDATA[;
+frm.wBaseType = ]]></HTML><ListProperty Select="BaseType"/><HTML><![CDATA[;
+</script>]]></HTML>
+<Switch><Expr><GetVar Name="HTMLFormName"/></Expr><Case Value=""><HTML><![CDATA[<form name="OWSForm" id="OWSForm" EncType="multipart/form-data" Action="]]></HTML><HttpPath/><HTML><![CDATA[" Method=POST onSubmit="return false;">]]></HTML></Case></Switch>
+<HTML><![CDATA[
+<input type="Hidden" name="_charset_" value="utf-8">
+<input id="onetidCmd" type="Hidden" name="Cmd" value="Save">
+<input id="onetidIsFormValid" type="hidden" name="IsFormValid">
+<input id="onetidFormWasPosted" type="hidden" name="FormWasPosted">
+<input id="MustUpdateForm" type="hidden" name="MustUpdateForm" value="true">
+<input type="hidden" name="NextID" id="NextID" value="-1">
+<input type="hidden" name="NextUsing" id="NextUsing" value="]]></HTML><GetVar Name="Source" HTMLEncode="TRUE"/><HTML><![CDATA[">
+]]></HTML>
+<HTML><![CDATA[<span id='part1'>]]></HTML>
+<Identity/>
+</ListFormOpening>
+<ListFormBody>
+<HTML><![CDATA[<table border="0" cellpadding="2">
+<script type="text/javascript">var _g_tp_fNewForm = true;</script>
+]]></HTML>
+      <Fields>
+         <Switch><Expr><Property Select="Name"/></Expr>
+          <Case Value="FileLeafRef">
+           <SetVar Name="ShowField" Scope="Request">0</SetVar>
+          </Case>
+          <Default>
+           <SetVar Name="ShowField" Scope="Request">1</SetVar>
+    <HTML><![CDATA[<tr style="display:none"><th nowrap="nowrap" valign="top" class="ms-formlabel"><nobr>]]></HTML>
+    <Property Select="DisplayName" HTMLEncode="TRUE" AutoNewLine="TRUE"/>
+    <Switch>
+      <Expr><Property Select="Required"/></Expr>
+      <Case Value="TRUE">
+        <HTML><![CDATA[<font color=red> *</font>]]></HTML>
+        <SetVar Scope="Request" Name="HasRequired">TRUE</SetVar>
+      </Case>
+      <Default>
+        <HTML><![CDATA[<font color=red></font>]]></HTML>
+      </Default>
+    </Switch>
+    <HTML><![CDATA[</nobr></th><td class="ms-formbody">]]></HTML>
+    <Field/>
+    <Switch>
+      <Expr><Property Select="RichText"/></Expr>
+      <Case Value="TRUE"/>
+      <Default>
+        <Switch>
+          <Expr><Property Select="Type"/></Expr>
+          <Case Value="Choice"/>
+          <Case Value="MultiChoice"/>
+          <Default>
+            <HTML><![CDATA[&#160;]]></HTML>
+            <Switch>
+              <Expr><Property Select="NoEditFormBreak"/></Expr>
+              <Case Value="TRUE"/>
+              <Default>
+                <HTML><![CDATA[<br>]]></HTML>
+              </Default>
+            </Switch>
+          </Default>
+        </Switch>
+      </Default>
+    </Switch>
+    <HTML><![CDATA[<span class="ms-formdescription">]]></HTML>
+    <Property Select="Description" HTMLEncode="TRUE" AutoHyperLink="TRUE" AutoNewLine="TRUE"/>
+    <HTML><![CDATA[</span></td></tr>]]></HTML>
+        </Default>
+       </Switch>
+      </Fields>
+<HTML><![CDATA[</table>]]></HTML>
+      <Switch>
+        <Expr><GetVar Name="HasRequired"/></Expr>
+        <Case Value="TRUE"><HTML><![CDATA[
+          <table border="0" cellpadding="2">
+          <tr>
+            <td id="reqdFldTxt" class="ms-descriptiontext" colspan="2" height="150px" valign="top"><br><font color=red>*</font> 
+             &#160;]]></HTML><HTML HTMLEncode="TRUE">$Resources:core,webview_editdlg_required_field;</HTML><HTML><![CDATA[
+            </td>
+          </tr>
+          </table>
+          ]]></HTML>
+        </Case>
+      </Switch>
+<ContentTypes>
+    <HTML><![CDATA[
+    <script type = "text/javascript">
+        frmCurrent.MapCtName(]]></HTML>
+    <ScriptQuote>
+      <Property Select="Name" />
+    </ScriptQuote>
+    <HTML><![CDATA[ ,]]></HTML>
+    <ScriptQuote>
+      <Property Select="ID" />
+    </ScriptQuote>
+    <HTML><![CDATA[);
+    </script>]]></HTML>
+    <IfSubString>
+        <Expr1>0x0120</Expr1>
+        <Expr2><Property Select="ID"/></Expr2>
+        <Then>
+            <HTML><![CDATA[
+            <script type="text/javascript">
+            _tp_rgctfld = new Array;
+            _g_tp_rgcts.push(_tp_rgctfld);
+            var fldct = frmCurrent.FindField("ContentType");
+            if (fldct != null)
+            	fldct.AddChoice(]]></HTML>
+            <ScriptQuote><Property Select="Name"/></ScriptQuote>
+            <HTML><![CDATA[);
+            </script>
+            ]]></HTML>
+        </Then>
+        <Else>
+            <HTML><![CDATA[
+            <script type="text/javascript">
+            var fldct = frmCurrent.FindField("ContentType");
+            if (fldct != null)
+            	fldct.AddChoice(]]></HTML>
+            <ScriptQuote><Property Select="Name"/></ScriptQuote>
+            <HTML><![CDATA[);
+            _tp_rgctfld = new Array;            
+            ]]></HTML>
+            <ForEach Select="FieldRefs/FieldRef">
+                <HTML>
+                _tp_ctfld = new Object(null);
+                _tp_ctfld.stName=</HTML>
+                <ScriptQuote><Property Select="Name"/></ScriptQuote>
+                <HTML>;
+                _tp_ctfld.fRequired = BoolFromString(</HTML>
+                <ScriptQuote><Property Select="Required"/></ScriptQuote>
+                <HTML>);
+                _tp_ctfld.fHidden = BoolFromString(</HTML>
+                <ScriptQuote><Property Select="Hidden"/></ScriptQuote>
+                <HTML>);
+                _tp_ctfld.fShowInNewForm = BoolFromString2(</HTML>
+                <ScriptQuote><Property Select="ShowInNewForm"/></ScriptQuote>
+                <HTML>, true);
+                _tp_ctfld.fShowInEditForm = BoolFromString2(</HTML>
+                <ScriptQuote><Property Select="ShowInEditForm"/></ScriptQuote>
+                <HTML>, true);
+                _tp_ctfld.fShowInFileDlg = BoolFromString2(</HTML>
+                <ScriptQuote><Property Select="ShowInFileDlg"/></ScriptQuote>
+                <HTML>, true);                
+                _tp_ctfld.fReadOnly = BoolFromString(</HTML>
+                <ScriptQuote><Property Select="ReadOnly"/></ScriptQuote>
+                <HTML>);
+                _tp_ctfld.stDisplay =</HTML>
+                <ScriptQuote><Property Select="DisplayName"/></ScriptQuote>
+                <HTML>;</HTML>
+                <ForEach Select="Default">
+                    <HTML>
+                    _tp_ctfld.stDefault=</HTML>
+                    <ScriptQuote><Property Select="."/></ScriptQuote>
+                    <HTML>;</HTML>            
+                </ForEach>
+                <HTML>
+                    _tp_rgctfld.push(_tp_ctfld);
+                </HTML>
+            </ForEach>
+            <HTML><![CDATA[
+            _g_tp_rgcts.push(_tp_rgctfld);
+            </script>
+            ]]></HTML>
+        </Else>
+    </IfSubString>
+</ContentTypes>
+<HTML><![CDATA[
+<script type="text/javascript">
+var fldct = frmCurrent.FindField("ContentType");
+if (fldct != null)
+	fldct.BuildUI();
+</script>
+]]></HTML>
+</ListFormBody>
+<ListFormClosing>
+<HTML><![CDATA[
+</span>]]></HTML>
+<Switch><Expr><GetVar Name="HTMLFormName"/></Expr>
+<Case Value=""><HTML><![CDATA[</form>]]></HTML></Case>
+</Switch>
+<HTML><![CDATA[
+<script type="text/javascript">
+</script>
+]]></HTML>
+</ListFormClosing>
+                     </Form>
+                   </Forms>
+                   <DefaultDescription>
+		                $Resources:core,camlidDc5;
+                   </DefaultDescription>
+               </MetaData>
+            </List>

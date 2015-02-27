@@ -1,0 +1,13 @@
+<Feature Id="FB01CA75-B306-4fc2-AB27-B4814BF823D1"
+    Title="$Resources:spscore,PeopleFeatures_MySiteMaster_Text;"
+    Description="$Resources:spscore,PeopleFeatures_MySiteMaster_Desc;"
+    Version="15.0.0.0"
+    Hidden="TRUE"
+    Scope="Site"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.UserProfiles.MySiteMasterFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="MasterFiles.xml"/>
+    </ElementManifests>
+</Feature>

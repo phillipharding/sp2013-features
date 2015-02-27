@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">    
+
+	<Receivers ListUrl="$Resources:core,lists_Folder;/$Resources:spscore,members_Folder;">
+		<Receiver>
+			<Name>MembersListItemAdding</Name>
+			<Type>ItemAdding</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.CommunityMembershipEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>MembersListItemUpdating</Name>
+			<Type>ItemUpdating</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.CommunityMembershipEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>MembersListItemDeleting</Name>
+			<Type>ItemDeleting</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.CommunityMembershipEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+	</Receivers>
+
+</Elements>

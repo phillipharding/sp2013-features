@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+         Id="F9C216AD-35C7-4538-ABB8-8EC631A5DFF7"
+         Title="$Resources:ppsma,BICenterPPSWorkspaceListInstance_Title"
+         Description="$Resources:ppsma,BICenterPPSWorkspaceListInstance_Description"
+         Version="15.0.0.0"
+         Hidden="TRUE"
+         Scope="Web"
+         SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3">
+  <ElementManifests>
+    <ElementManifest Location="listinstance.xml"/>
+  </ElementManifests>  
+</Feature>

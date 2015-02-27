@@ -1,0 +1,11 @@
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+	Id="6D503BB6-027E-44ea-B54C-A53EAC3DFED8"
+	Title="$Resources:spscore,SPSBlogStaplingFeature_Title;"
+	Description="$Resources:spscore,SPSBlogStaplingFeature_Desc;"
+	Version="15.0.0.0"
+	Hidden="TRUE"
+	Scope="Farm">
+	<ElementManifests>
+		<ElementManifest Location="featurestapling.xml"/>
+	</ElementManifests>
+</Feature>

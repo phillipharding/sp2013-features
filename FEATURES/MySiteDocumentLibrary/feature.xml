@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Feature Id="E9C0FF81-D821-4771-8B4C-246AA7E5E9EB"
+    Title="$Resources:spscore,PeopleFeatures_MySiteDocumentLibrary_Text;"
+    Description="$Resources:spscore,PeopleFeatures_MySiteDocumentLibrary_Desc;"
+    Version="15.0.18.0"
+    Hidden="TRUE"
+    Scope="Site"
+    DefaultResourceFile="core"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.UserProfiles.MySiteDocumentLibraryFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplate.xml" />
+        <ElementManifest Location="MyDocLibHomePage.xml" />
+    </ElementManifests>
+    <UpgradeActions
+            ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+            ReceiverClass="Microsoft.SharePoint.Portal.UserProfiles.MySiteDocumentLibraryUpgrader" >
+        <VersionRange EndVersion="15.0.3.0">
+            <ApplyElementManifests>
+                <ElementManifest Location="ListTemplate.xml"/>
+            </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.0.0" EndVersion="15.0.3.0">
+            <CustomUpgradeAction Name="MySiteDocumentLibrary_ListTemplateUpgrade"/>
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.3.0" EndVersion="15.0.4.0">
+            <CustomUpgradeAction Name="MySiteDocumentLibrary_DeactivateSharedWithMeFeature"/>
+            <CustomUpgradeAction Name="MySiteDocumentLibrary_ResetDocumentsBackupPermissions"/>
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.3.0" EndVersion="15.0.6.0">
+            <CustomUpgradeAction Name="MySiteDocumentLibrary_SetKeepMyLastEditsCustomActionName"/>
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.3.0" EndVersion="15.0.7.0">
+            <CustomUpgradeAction Name="MySiteDocumentLibrary_ChangeJSLinkForViews"/>
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.3.0" EndVersion="15.0.10.0">
+            <CustomUpgradeAction Name="MySiteDocumentLibrary_ConvertSharedWithMeView"/>
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.0.0" EndVersion="15.0.11.0">
+            <CustomUpgradeAction Name="MySiteDocumentLibrary_CleanupLegacyLibraryLinks"/>
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.10.0" EndVersion="15.0.12.0">
+            <CustomUpgradeAction Name="MySiteDocumentLibrary_ChangeSharedWithMeColumnOrder"/>
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.4.0" EndVersion="15.0.13.0">
+            <CustomUpgradeAction Name="MySiteDocumentLibrary_CleanUpCustomRoles"/>
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.3.0" EndVersion="15.0.14.0">
+            <CustomUpgradeAction Name="MySiteDocumentLibrary_UpdateSharingHintColumnToUsePrincipalCount"/>
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.0.0" EndVersion="15.0.15.0">
+            <CustomUpgradeAction Name="MySiteDocumentLibrary_CreateSharedWithEveryoneFolder"/>
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.0.0" EndVersion="15.0.16.0">
+            <CustomUpgradeAction Name="MySiteDocumentLibrary_RemoveSharedWithMeView"/>
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.15.0" EndVersion="15.0.18.0">
+            <CustomUpgradeAction Name="MySiteDocumentLibrary_RepermissionSharedWithEveryoneFolder"/>
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="15.0.4420" _dal="1" -->
+<!-- _LocalBinding -->
+<Feature  Id="5BCCB9A4-B903-4fd1-8620-B795FA33C9BA"
+          Title="$Resources:RecordResourcesFeatureTitle"	
+          Description="$Resources:RecordResourcesFeatureDescription"
+          DefaultResourceFile="dlccore"
+          Version="14.0.1.0"
+          Hidden="TRUE"
+          Scope="Site"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="RecordResources.xml" />
+    </ElementManifests>
+    <UpgradeActions> 
+        <VersionRange EndVersion="14.0.1.0">
+            <ApplyElementManifests>
+                <ElementManifest Location="RecordResources.xml" />
+            </ApplyElementManifests>
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

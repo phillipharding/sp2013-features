@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature  Id="8D75610E-5FF9-4CD1-AEFC-8B926F2AF771"
+          Title="$Resources:eduserver,IDS_EduSearchDisplayTemplateFeatureTitle"
+          Description="$Resources:eduserver,IDS_EduSearchDisplayTemplateFeatureDescription"
+          SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"          
+          Version="15.0.0.0"
+          Scope="Site"
+          Hidden="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="elements.xml"/>
+    </ElementManifests>
+    <UpgradeActions>
+        <VersionRange EndVersion="15.0.0.0">
+            <ApplyElementManifests>
+                <ElementManifest Location="elements.xml" />
+            </ApplyElementManifests>
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

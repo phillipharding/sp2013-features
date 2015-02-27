@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="$Resources:dmscore, IDS_AcquisitionHistoryListTitle"
+                TemplateType="10099"
+                FeatureId="184C82E7-7EB1-4384-8E8C-62720EF397A0"
+                Url="$Resources:core,lists_Folder;/$Resources:dmscore, IDS_AcquisitionHistoryListUrl"
+                Description="$Resources:dmscore, IDS_AcquisitionHistoryListInstanceDescription"
+                RootWebOnly="false">
+  </ListInstance>
+
+  <ListInstance Title="$Resources:dmscore,IDS_LicenseLibraryTitle"
+                OnQuickLaunch="TRUE"
+                TemplateType="101"
+                FeatureId="00BFEA71-E717-4E80-AA17-D0C71B360101"
+                Url="$Resources:dmscore, IDS_LicenseLibraryUrl"
+                Description="$Resources:dmscore,IDS_LicenseLibraryDescription">
+  </ListInstance>
+
+  <Module Name="DMSLayoutPages" Url="_catalogs/masterpage" RootWebOnly="TRUE">
+    <File Path="layoutpages\basic.aspx" Url="basic.aspx" Type="GhostableInLibrary" >
+        <Property Name="Title" Value="$Resources:dmscore, IDS_DBSBasicPublishingLayoutPageTitle;" />
+        <Property Name="MasterPageDescription" Value="$Resources:dmscore, IDS_DBSBasicPublishingLayoutPageDescription;" />
+        <Property Name="ContentType" Value="$Resources:cmscore, contenttype_pagelayout_name;" />
+    </File>
+    <File Path="layoutpages\details.aspx" Url="details.aspx" Type="GhostableInLibrary" >
+      <Property Name="Title" Value="$Resources:dmscore, IDS_DetailsPageTitle;" />
+      <Property Name="MasterPageDescription" Value="$Resources:dmscore, IDS_DetailsPageDescription;" />
+      <Property Name="ContentType" Value="$Resources:cmscore, contenttype_pagelayout_name;" />
+      <Property Name="PublishingAssociatedContentType" Value=";#$Resources:dmscore,IDS_DMSDetailsPageContentTypeName;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF3900abd371128a994a0b98e7e888866b392f" />
+    </File>
+    <File Path="pages\default.aspx" Url="defaultlayout.aspx" Type="GhostableInLibrary" >
+      <Property Name="Title" Value="academic library layout page" />
+      <Property Name="MasterPageDescription" Value="academic library master page" />
+      <Property Name="ContentType" Value="$Resources:cmscore, contenttype_pagelayout_name;" />
+    </File>
+  </Module>
+
+  <Module Name="DMSDisplayTemplatesNonEditable" Url="_catalogs/masterpage/Display Templates/Content Web Parts" Path="DisplayTemplates" RootWebOnly="TRUE">
+    <File Url="Control_AcademicLibrary.js" Type="GhostableInLibrary" >
+        <Property Name="Title" Value="$Resources:dmscore,IDS_CBSControlTitle" />
+        <Property Name="MasterPageDescription" Value="" />
+        <Property Name="ContentType" Value="$Resources:Microsoft.Office.Server.Search, TemplateContentType_Code_Name;" />
+        <Property Name="DisplayTemplateLevel" Value="Control" />
+        <Property Name="HtmlDesignAssociated" Value="1" />
+        <Property Name="TemplateHidden" Value="0" />
+        <Property Name="TargetControlType" Value=";#Content Web Parts;#" />
+        <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+    </File>
+    <File Url="Item_EducationBookThumbnail.js" Type="GhostableInLibrary" >
+        <Property Name="Title" Value="$Resources:dmscore,IDS_CBSItemTitle" />
+        <Property Name="MasterPageDescription" Value="" />
+        <Property Name="ContentType" Value="$Resources:Microsoft.Office.Server.Search, TemplateContentType_Code_Name;" />
+        <Property Name="DisplayTemplateLevel" Value="Item" />
+        <Property Name="HtmlDesignAssociated" Value="1" />
+        <Property Name="TemplateHidden" Value="0" />
+        <Property Name="TargetControlType" Value=";#Content Web Parts;#" /> 
+        <Property Name="ManagedPropertyMapping" Value="&quot;Image Url&quot;:&quot;PictureThumbnailURL&quot;,&quot;Line 1&quot;:&quot;DMSDocTitle&quot;,&quot;Line 1 Link Url&quot;:&quot;Path&quot;,&quot;Line 2&quot;:&quot;DMSDocAuthor&quot;,&quot;Line 2 Link Url&quot;:&quot;url&quot;,&quot;Line 3&quot;:&quot;LastModifiedTime&quot;,&quot;FileExtension&quot;,&quot;Description&quot;,&quot;owstaxidmetadataalltagsinfo&quot;,&quot;DMSDocAccessRight&quot;,&quot;DMSLeaseTerm&quot;" />
+        <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+    </File>
+    <File Url="Item_EducationBookThumbnail_HoverPanel.js" Type="GhostableInLibrary" >
+        <Property Name="Title" Value="$Resources:dmscore,IDS_CBSHoverpanelTitle" />
+        <Property Name="MasterPageDescription" Value="" />
+        <Property Name="ContentType" Value="$Resources:Microsoft.Office.Server.Search, TemplateContentType_Code_Name;" />
+        <Property Name="DisplayTemplateLevel" Value="Item" />
+        <Property Name="TemplateHidden" Value="0" />
+        <Property Name="TargetControlType" Value=";#Content Web Parts;#" /> 
+        <Property Name="ManagedPropertyMapping" Value="&quot;Image Url&quot;:&quot;PictureThumbnailURL&quot;,&quot;Line 1&quot;:&quot;DMSDocTitle&quot;,&quot;Line 1 Link Url&quot;:&quot;Path&quot;,&quot;Line 2&quot;:&quot;DMSDocAuthor&quot;,&quot;Line 2 Link Url&quot;:&quot;url&quot;,&quot;Line 3&quot;:&quot;LastModifiedTime&quot;,&quot;FileExtension&quot;,&quot;Description&quot;,&quot;owstaxidmetadataalltagsinfo&quot;,&quot;DMSDocAccessRight&quot;,&quot;DMSLeaseTerm&quot;" />
+        <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+    </File>
+  </Module>
+
+  <Module Name="DMSDisplayTemplatesEditable" Url="_catalogs/masterpage/Display Templates/Content Web Parts" Path="DisplayTemplates" RootWebOnly="TRUE">
+    <File Url="Control_AcademicLibrary.html" Type="GhostableInLibrary" >
+    </File>
+    <File Url="Item_EducationBookThumbnail.html" Type="GhostableInLibrary" >
+    </File>
+    <File Url="Item_EducationBookThumbnail_HoverPanel.html" Type="GhostableInLibrary" >
+    </File>
+  </Module>
+
+  <CustomAction
+          Id="dmsSetting"
+          GroupId="SiteAdministration"
+          Location="Microsoft.SharePoint.SiteSettings"
+          Sequence="19"
+          RequireSiteAdministrator="TRUE"
+          Title="$Resources:dmscore,IDS_SiteSettings_DMSSetting_Title;"
+          Description="$Resources:dmscore,IDS_SiteSettings_DMSSetting_Tooltip;">
+    <UrlAction Url="_layouts/15/dmssettings.aspx"/>
+  </CustomAction>
+
+  <Receivers ListUrl="Documents">
+   <Receiver>
+      <Name>PublishDocItemEventReceiverItemAdded</Name>
+      <Type>ItemAdded</Type>
+      <Assembly>Microsoft.Office.DocMarketplace, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+      <Class>Microsoft.Office.DocMarketplace.PublishDocItemEventReceiver</Class>
+      <SequenceNumber>10000</SequenceNumber>
+      <Synchronization>Synchronous</Synchronization> 
+    </Receiver>
+    <Receiver>
+      <Name>PublishDocItemEventReceiverItemUpdating</Name>
+      <Type>ItemUpdating</Type>
+      <Assembly>Microsoft.Office.DocMarketplace, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+      <Class>Microsoft.Office.DocMarketplace.PublishDocItemEventReceiver</Class>
+      <SequenceNumber>10000</SequenceNumber>
+      <Synchronization>Synchronous</Synchronization> 
+    </Receiver>
+    <Receiver>
+      <Name>PublishDocItemEventReceiverItemUpdated</Name>
+      <Type>ItemUpdated</Type>
+      <Assembly>Microsoft.Office.DocMarketplace, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+      <Class>Microsoft.Office.DocMarketplace.PublishDocItemEventReceiver</Class>
+      <SequenceNumber>10000</SequenceNumber>
+      <Synchronization>Synchronous</Synchronization> 
+    </Receiver>
+    <Receiver>
+      <Name>PublishDocItemEventReceiverItemDeleting</Name>
+      <Type>ItemDeleting</Type>
+      <Assembly>Microsoft.Office.DocMarketplace, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+      <Class>Microsoft.Office.DocMarketplace.PublishDocItemEventReceiver</Class>
+      <SequenceNumber>10000</SequenceNumber>
+      <Synchronization>Synchronous</Synchronization> 
+    </Receiver>
+  </Receivers >
+  <Control
+    Id="AdditionalPageHead"
+    Sequence="25"
+    ControlSrc="~/_controltemplates/15/Edu/Common/EduTopNav.ascx">
+  </Control>
+</Elements>

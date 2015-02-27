@@ -1,0 +1,11 @@
+<Feature  Id="A311BF68-C990-4da3-89B3-88989A3D7721"
+          Title="Sites List creation feature"
+          Description="Feature that creates sites list and registers event recievers"
+          Version="14.0.0.0"
+          Scope="Web"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Portal.SitesListFeatureHandler"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

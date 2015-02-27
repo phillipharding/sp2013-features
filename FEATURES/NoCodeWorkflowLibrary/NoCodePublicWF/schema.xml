@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="No Code Public Workflows" Direction="$Resources:Direction;" Url="No Code Public Workflows" BaseType="1" Default="UNIQUE" Catalog="TRUE" VersioningEnabled="TRUE" AllowEveryoneViewItems="TRUE" RootWebOnly="TRUE">
+  <MetaData>
+    <ContentTypes>
+      <ContentTypeRef ID="0x010107">
+      </ContentTypeRef>
+      <ContentTypeRef ID="0x0120" />
+    </ContentTypes>
+    <Fields>
+      <Field ID="{e9359d15-261b-48f6-a302-01419a68d4de}" Name="BaseAssociationGuid" maxLength="40" DisplayName="BaseAssociationGuid" Type="Text" Hidden="TRUE" ReadOnly="TRUE" node="WorkflowConfig/Template/@BaseID" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="BaseAssociationGuid" />
+      <Field ID="{566da236-762b-4a76-ad1f-b08b3c703fce}" Name="XomlUrl" maxLength="255" Sortable="FALSE" DisplayName="XomlUrl" Type="Text" Hidden="TRUE" ReadOnly="TRUE" node="WorkflowConfig/Template/@XomlHref" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="XomlUrl" />
+      <Field ID="{ad97fbac-70af-4860-a078-5ee704946f93}" Name="RulesUrl" maxLength="255" DisplayName="RulesUrl" Type="Text" Hidden="TRUE" ReadOnly="TRUE" node="WorkflowConfig/Template/@RulesHref" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RulesUrl" />
+      <Field ID="{a05a8639-088a-4aea-b8a9-afc888971c81}" Name="NoCodeVisibility" maxLength="255" DisplayName="Visibility" Type="Text" Hidden="TRUE" ReadOnly="FALSE" node="WorkflowConfig/Template/@Visibility" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="NoCodeVisibility" />
+      <Field ID="{b75067a2-e23b-499f-aa07-4ceb6c79e0b3}" Name="AssociatedListId" maxLength="40" DisplayName="AssociatedListId" Type="Text" Hidden="TRUE" ReadOnly="TRUE" node="WorkflowConfig/Association/@ListID" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="AssociatedListId" />
+      <Field ID="{8b02a33c-accd-4b73-bcae-6932c7aab812}" Name="RestrictContentTypeId" maxLength="255" DisplayName="$Resources:core,RestrictContentTypeId;" Type="Text" Hidden="TRUE" ReadOnly="TRUE" node="WorkflowConfig/Template/@ContentTypeID" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="RestrictContentTypeId" />
+      <Field ID="{5263cd09-a770-4549-b012-d9f3df3d8df6}" Name="WorkflowDisplayName" maxLength="127" DisplayName="$Resources:WorkflowDisplayName" Type="Text" Hidden="TRUE" ReadOnly="TRUE" node="WorkflowConfig/Template/@Name" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="WorkflowDisplayName" />
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" TabularView="FALSE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Position="After" Type="Freeform">
+          <IfHasRights>
+            <RightsChoices>
+              <RightsGroup PermAddListItems="required" />
+            </RightsChoices>
+            <Then><HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idAddNewDataSrc" href="]]></HTML>
+              <HttpVDir /><HTML><![CDATA[/_layouts/15/Upload.aspx?List=]]></HTML>
+              <ListProperty Select="Name" /><HTML><![CDATA[&RootFolder=]]></HTML>
+              <GetVar Name="RootFolder" URLEncode="TRUE" /><HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <HttpVDir />
+              </ScriptQuote><HTML><![CDATA[/_layouts/15/Upload.aspx?List=]]></HTML>
+              <ListProperty Select="Name" /><HTML><![CDATA[&RootFolder=]]></HTML>
+              <GetVar Name="RootFolder" URLEncode="TRUE" /><HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML><HTML>$Resources:core,Add_New_Document;</HTML><HTML><![CDATA[</a></div>]]></HTML>
+            </Then>
+          </IfHasRights>
+        </Toolbar>
+        <RowLimit>20</RowLimit>
+        <ViewFields>
+          <FieldRef Name="DocIcon">
+          </FieldRef>
+          <FieldRef Name="LinkFilenameNoMenu">
+          </FieldRef>
+          <FieldRef Name="Editor">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+    </Views>
+    <Forms>
+    </Forms>
+    <DefaultDescription>
+    </DefaultDescription>
+  </MetaData>
+</List>

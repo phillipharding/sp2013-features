@@ -1,0 +1,25 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+        <CustomAction 
+            Id="FeaturePushdown"
+            GroupId="Patch"
+            Location="Microsoft.SharePoint.Administration.UpgradeAndMigration"
+            Sequence="8" 
+            Title="$Resources:spscore,FeaturePushdownLink;"> 
+                <UrlAction Url="/_admin/enablefeatures.aspx"/>
+        </CustomAction>
+        <CustomActionGroup
+            Id="FCW_UpgradeLinks"
+            Location="Microsoft.SharePoint.Administration.FCWUpgradeLinks"
+            Title="$Resources:spscore,FCW_FeaturePushdownGroupTitle;"
+            Sequence="10"
+            ImageUrl="/_layouts/15/images/CentralAdmin_UpgradeAndMigration_UpgradeAndPatchManagement_32x32.png?rev=23" />
+        <CustomAction 
+            Id="FeaturePushdown"
+            GroupId="FCW_UpgradeLinks"
+            Location="Microsoft.SharePoint.Administration.FCWUpgradeLinks"
+            Sequence="10" 
+            Title="$Resources:spscore,FCW_FeaturePushdownLinkTitle;"
+            Description="$Resources:spscore,FCW_FeaturePushdownLinkDescription;" >
+                <UrlAction Url="/_admin/EnableFeatures.aspx"/>
+        </CustomAction>
+</Elements>

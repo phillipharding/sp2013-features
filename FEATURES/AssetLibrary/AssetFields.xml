@@ -1,0 +1,34 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Field ID="{DE38F937-8578-435e-8CD3-50BE3EA59253}"
+        Name="MediaLengthInSeconds"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        StaticName="MediaLengthInSeconds"
+        Group="_Hidden"
+        Type="Integer"
+        DisplayName="$Resources:cmscore,column_medialenghtinseconds_displayname;"
+        ShowInNewForm="FALSE"
+        ShowInEditForm="FALSE">
+    </Field>
+    <Field ID="{59CD571E-E2D9-485d-BB5D-E70D12F8D0B7}"
+        Name="VideoWidthInPixels"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        StaticName="VideoWidthInPixels"
+        Group="_Hidden"
+        Type="Integer"
+        DisplayName="$Resources:cmscore,column_videowidthinpixels_displayname;"
+        ShowInNewForm="TRUE"
+        ShowInEditForm="TRUE">
+    </Field>
+    <Field ID="{84CD09BD-85A9-461f-86E3-4C3C1738AD6B}"
+        Name="VideoHeightInPixels"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        StaticName="VideoHeightInPixels"
+        Group="_Hidden"
+        Type="Integer"
+        DisplayName="$Resources:cmscore,column_videoheightinpixels_displayname;"
+        ShowInNewForm="TRUE"
+        ShowInEditForm="TRUE">
+    </Field>
+</Elements>

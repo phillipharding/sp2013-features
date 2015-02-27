@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="B3DA33D0-5E51-4694-99CE-705A3AC80DC5"
+    Title="$Resources:core,DeprecatedWcserverFeatureTitle;"
+    Description="$Resources:core,DeprecatedWcserverFeatureDescription;"
+    Version="15.0.0.0"
+    Scope="Site"
+    Hidden="TRUE"
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <UpgradeActions
+        ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        ReceiverClass="Microsoft.SharePoint.WacDeprecatedFeatureReceiver">
+        <VersionRange EndVersion="15.0.0.0">
+            <CustomUpgradeAction Name="V2VUpgrade" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

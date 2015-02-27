@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="whatsnew"
+        Type="425"
+        BaseType="0"
+        Unique="TRUE"
+        OnQuickLaunch="FALSE"
+        FolderCreation="FALSE"
+        SecurityBits="11"
+        DisplayName="$Resources:core,GbwListTemplateWhatsNewDisplay;"
+        Description="$Resources:core,GbwListTemplateWhatsNewDescription;"
+        Image="/_layouts/15/images/itgbwnew.gif?rev=23"/>
+</Elements>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Receivers ListTemplateId="2000">
+    <Receiver>
+      <Name>PNStoreItemAddingEvent</Name>
+      <Type>ItemAdding</Type>
+      <SequenceNumber>10000</SequenceNumber>
+      <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+      <Class>Microsoft.SharePoint.PhoneNotificationStoreEventReceiver</Class>
+    </Receiver>
+  </Receivers>
+</Elements>

@@ -1,0 +1,65 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_QueryBuilderItem</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#SearchResults;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:ManagedPropertyMapping msdt:dt="string">'Title':'Title','Author':'Author','Size':'Size','Path':'Path','Description':'Description','LastModifiedTime':'LastModifiedTime','CollapsingStatus':'CollapsingStatus','DocId':'DocId','HitHighlightedSummary':'HitHighlightedSummary','HitHighlightedProperties':'HitHighlightedProperties','FileExtension':'FileExtension','ViewsLifeTime':'ViewsLifeTime','ParentLink':'ParentLink'</mso:ManagedPropertyMapping>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="Item_QBPreview">
+<!--#_ 
+        if(!$isNull(ctx.CurrentItem) && !$isNull(ctx.ClientControl)){
+            var id = ctx.ClientControl.get_nextUniqueId();
+			var urlChars = 52; 
+			var titleChars = 57;
+_#-->
+            <div id="_#= $htmlEncode(id) =#_" name="Item">
+<!--#_ 
+                var title = '';
+                var url = '';
+                if(ctx.CurrentItem.Title)
+                {
+                    title = ctx.CurrentItem.Title;
+                }
+                else
+                {
+                    title = Srch.Res.qb_FallbackResultTitle;
+                }
+
+                if(ctx.CurrentItem.Path)
+                {
+                    url = ctx.CurrentItem.Path; 
+                }
+                else if (ctx.CurrentItem.Url)
+                {
+                    url = ctx.CurrentItem.Url; 
+                }
+                else 
+                {
+                    url = ""; 
+                }
+_#-->
+                <h3 class="qb-resultTitle ms-textSmall ms-accentText">
+                    _#= $htmlEncode(Srch.U.getTrimmedString(title, titleChars)) =#_
+                </h3>
+
+                <div id="Footer">
+                    <div class="qb-resultPath ms-textSmall" title="_#= $htmlEncode(url) =#_">
+                        _#= $htmlEncode(Srch.U.truncateUrl(url, urlChars)) =#_
+                    </div>
+                </div>
+            </div>
+<!--#_ 
+        } 
+_#-->
+    </div>
+</body>
+</html>

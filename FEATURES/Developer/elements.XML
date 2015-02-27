@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction
+    Id="RemoveRibbonButton"
+    Location="CommandUI.Ribbon" RegistrationId="1230" RegistrationType="List">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition
+          Location="Ribbon.ListItem.New.NewListItem" />
+        <CommandUIDefinition
+              Location="Ribbon.ListItem.New.NewFolder" />
+        <CommandUIDefinition
+              Location="Ribbon.ListItem.Manage.ViewProperties" />
+        <CommandUIDefinition
+              Location="Ribbon.ListItem.Manage.EditProperties" />
+        <CommandUIDefinition
+              Location="Ribbon.ListItem.Manage.Delete" />
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+
+  <CustomAction
+      Id="Ribbon.AddDevTenantButtons"
+      Location="CommandUI.Ribbon"
+      RegistrationId="1230" RegistrationType="List">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.List.Scaling._children">
+            <MaxSize Id="Ribbon.List.Scaling.AppDev.MaxSize" Sequence="0" GroupId="Ribbon.List.AppDev" Size="LargeLarge" />
+        </CommandUIDefinition>
+        <CommandUIDefinition Location="Ribbon.List.Groups._children">
+            <Group Id="Ribbon.List.AppDev"
+                Sequence="0"
+                Command="EnableCustomGroup"
+                Description=""
+                Title="$Resources:AppDevelopmentCore, cui_GrpAppDev;"
+                Image32by32Popup="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32PopupTop="-511" Image32by32PopupLeft="-103"
+                Template="Ribbon.Templates.Flexible2">
+                <Controls Id="Ribbon.List.AppDev.Controls">
+                    <Button
+                        Id="Ribbon.List.AppDev.AppDeploy"
+                        Sequence="1"
+                        Command="Ribbon.List.AppDev.Command.AppDeploy"
+                        Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-217" Image16by16Left="-91"
+                        Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-103" Image32by32Left="-375"
+                        LabelText="$Resources:AppDevelopmentCore, cui_ButDeployApp;"
+                        ToolTipTitle="$Resources:AppDevelopmentCore,cui_ButDeployApp;"
+                        ToolTipDescription="$Resources:AppDevelopmentCore,cui_STT_ButDeployApp;"
+                        TemplateAlias="o1" />
+                    <Button
+                        Id="Ribbon.List.AppDev.UpgardeTest"
+                        Sequence="2"
+                        Command="Ribbon.List.AppDev.Command.UpgardeTest"
+                        Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-217" Image16by16Left="-73"
+                        Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-137" Image32by32Left="-375"
+                        LabelText="$Resources:AppDevelopmentCore, cui_ButTestUpgrade;"
+                        ToolTipTitle="$Resources:AppDevelopmentCore, cui_ButTestUpgrade;"
+                        ToolTipDescription="$Resources:AppDevelopmentCore,cui_STT_ButTestUpgrade;"
+                        TemplateAlias="o1" />
+                </Controls>
+            </Group>
+      </CommandUIDefinition>
+        <CommandUIDefinition
+          Location="Ribbon.ListItem.Manage.Controls._children">
+          <Button
+            Id="Ribbon.ListItem.Manage.AppLaunch"
+            Command="Ribbon.ListItem.Manage.Command.AppLaunch"
+            Sequence="0"
+            Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-223" Image16by16Left="-1"
+            Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-239" Image32by32Left="-375"
+            LabelText="$Resources:AppDevelopmentCore, cui_ButLaunchApp;"
+            ToolTipTitle="$Resources:AppDevelopmentCore,cui_ButLaunchApp;"
+            ToolTipDescription="$Resources:AppDevelopmentCore,cui_STT_ButLaunchApp;"
+            TemplateAlias="o1" />
+        </CommandUIDefinition>
+        <CommandUIDefinition
+          Location="Ribbon.ListItem.Manage.Controls._children">
+          <Button
+            Id="Ribbon.ListItem.Manage.AppDelete"
+            Command="Ribbon.ListItem.Manage.Command.AppDelete"
+            Sequence="50"
+            Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-271" Image16by16Left="-271"
+            Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-69" Image32by32Left="-511"
+            LabelText="$Resources:core,cui_ButDeleteItem;"
+            ToolTipTitle="$Resources:core,cui_ButDeleteItem;"
+            ToolTipDescription="$Resources:core,cui_STT_ButDeleteItem;"
+            TemplateAlias="o2" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler 
+          Command="EnableCustomGroup"
+          CommandAction="javascript:return true;" />
+        <CommandUIHandler
+          Command="Ribbon.List.AppDev.Command.AppDeploy"
+          CommandAction="javascript:ExecuteButtonClick('AppDeploy');"  />
+        <CommandUIHandler
+          Command="Ribbon.List.AppDev.Command.UpgardeTest"
+          CommandAction="javascript:ExecuteButtonClick('UpgradeTest');"  />
+        <CommandUIHandler
+          Command="Ribbon.ListItem.Manage.Command.AppLaunch"
+          EnabledScript="javascript:EnableLaunch();"
+          CommandAction="javascript:ExecuteButtonClick('AppLaunch');"  />
+        <CommandUIHandler
+          Command="Ribbon.ListItem.Manage.Command.AppDelete"
+          EnabledScript="javascript:EnableDelete();"
+          CommandAction="javascript:ExecuteButtonClick('AppDelete');" />
+        </CommandUIHandlers>
+      </CommandUIExtension>
+    </CustomAction>
+
+    <CustomAction Id="Ribbon.AddDevTenantButtons.Script"
+        Location="ScriptLink"
+        ScriptBlock="
+        function EnableLaunch()
+        {
+            if (listCtx.CurrentSelectedItems!=1)
+            {
+                return false;
+            }
+
+            var items = SP.ListOperation.Selection.getSelectedItems();
+            var currItem = GetDraftAppListItemByID(listCtx, items[0].id);
+
+            if(currItem.AppLaunchUrl == null)
+            {
+                return false;
+            }
+
+            return true;
+        }
+        function EnableDelete()
+        {
+            return (listCtx != null &amp;&amp; listCtx.CurrentSelectedItems != null &amp;&amp; listCtx.CurrentSelectedItems > 0);
+        }
+        "
+    />
+  <HideCustomAction
+        Id="HideSaveAsTemplate"
+        HideActionId="SaveAsTemplate"
+        GroupId="SiteTasks"
+        Location="Microsoft.SharePoint.SiteSettings" />
+  <HideCustomAction
+    Id="HideGettingStarted"
+    HideActionId="GettingStarted"
+    GroupId="SiteActions"
+    Location="Microsoft.SharePoint.StandardMenu" />
+  <CustomAction
+    Id="DevSiteGettingStarted"
+    GroupId="SiteActions"
+    Location="Microsoft.SharePoint.StandardMenu"
+    Rights="ManageLists"
+    Sequence="340"
+    Title="$Resources:core,siteactions_gettingstarted;"
+    Description="$Resources:core,siteactions_gettingstarteddescription;">
+    <UrlAction Url="javascript:GoToPage(SP.PageContextInfo.get_siteAbsoluteUrl() + '/' + Strings.STS.L_ListsFolder + '/GettingStarted');" />
+  </CustomAction>
+
+</Elements>

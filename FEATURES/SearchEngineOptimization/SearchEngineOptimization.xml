@@ -1,0 +1,65 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <!-- SEO Site collection administration menu -->
+    <CustomAction
+        Id="SEOSettings"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Sequence="50"
+        Title="$Resources:cmscore,Settings_Publishing_SearchEngineOptimization_Settings;"
+        Description="$Resources:cmscore,Settings_Publishing_SearchEngineOptimization_Settings_Tooltip;">
+        <UrlAction
+            Url="_layouts/15/SEOSettings.aspx" />
+    </CustomAction>
+   <!-- START Edit SEO Properties ribbon button -->
+   <CustomAction
+        Id="Ribbon.WikiPageTab.Manage.PubSEOPropertiesGroup"
+        Location="CommandUI.Ribbon"
+        Sequence="10"
+        Title="Add Search Engine Optimization properties to List Item Tab">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.WikiPageTab.Manage.PageProperties.Menu.PageProperties.Controls._children">
+        <Button
+            Id="Ribbon.WikiPageTab.Manage.PageProperties.Menu.PageProperties.SEOProperties"
+            Sequence="15"
+            Command="SEOPropertiesUsingDefault"
+            Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-240" Image16by16Left="-96"
+            Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-64" Image32by32Left="-128"
+            LabelText="$Resources:cmscore,SearchEngineOptimization_Properties_ButtonLabel;"
+            TemplateAlias="o1"
+            ToolTipTitle="$Resources:cmscore,SearchEngineOptimization_Properties_TooltipTitle;"
+            ToolTipDescription="$Resources:cmscore,SearchEngineOptimization_Properties_TooltipDescription;"/>
+     </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <!-- END Edit SEO Properties ribbon button -->
+  <!-- START SEO Properties web controls -->
+  <Control 
+    Id="AdditionalPageHead"
+    ControlClass="Microsoft.SharePoint.Publishing.WebControls.SeoMetaDescription" 
+    ControlAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+  <Control 
+    Id="AdditionalPageHead"
+    ControlClass="Microsoft.SharePoint.Publishing.WebControls.SeoKeywords" 
+    ControlAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+  <Control 
+    Id="AdditionalPageHead"
+    ControlClass="Microsoft.SharePoint.Publishing.WebControls.SeoNoIndex" 
+    ControlAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+  <Control 
+    Id="AdditionalPageHead"
+    ControlClass="Microsoft.SharePoint.Publishing.WebControls.SeoCanonicalLink" 
+    ControlAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+  <Control 
+    Id="AdditionalPageHead"
+    ControlClass="Microsoft.SharePoint.Publishing.WebControls.SeoCustomMeta" 
+    ControlAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+  <Control 
+    Id="AdditionalPageHead"
+    ControlClass="Microsoft.SharePoint.Publishing.WebControls.SeoBrowserTitle" 
+    ControlAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+  <!-- END SEO Properties web controls -->
+</Elements>

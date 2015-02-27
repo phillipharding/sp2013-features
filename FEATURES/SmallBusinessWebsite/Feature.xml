@@ -1,0 +1,137 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Feature
+    xmlns="http://schemas.microsoft.com/sharepoint/"
+    Id="48C33D5D-ACFF-4400-A684-351C2BEDA865"
+    Title="Small Business Website"
+    Description="Create a Small Business Website."
+    Version="15.0.28.0"
+    Scope="Site"
+    Hidden="true"
+    DefaultResourceFile="core"
+    ReceiverAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Publishing.SmallBusinessWebsiteFeatureHandler" >
+    <ElementManifests>
+        <ElementManifest Location="AdditionalThemes.xml"/>
+        <ElementManifest Location="ColorPalette.xml"/>
+        <ElementManifest Location="ConsoleAction.xml"/>
+        <ElementManifest Location="ContentTypes.xml"/>
+        <ElementManifest Location="CustomerList.xml"/>
+        <ElementManifest Location="DisableSystemMasterpageTheming.xml"/>
+        <ElementManifest Location="DesignBuilderAction.xml"/>
+        <ElementManifest Location="DesignEditorAction.xml"/>
+        <ElementManifest Location="DesignPackageActions.xml"/>
+        <ElementManifest Location="DesignPreviewAction.xml"/>
+        <ElementManifest Location="InstalledDesigns.xml"/>
+        <ElementManifest Location="MobileChannel.xml"/>
+        <ElementManifest Location="PageLayouts.xml"/>
+        <ElementManifest Location="Pages.xml"/>
+        <ElementManifest Location="PublishingBlogWebParts.xml"/>
+        <ElementManifest Location="QuickLaunchDataSource.xml"/>
+        <ElementManifest Location="Ribbon.xml"/>
+        <ElementManifest Location="Search.xml"/>
+        <ElementManifest Location="SiteColumns.xml"/>
+        <ElementManifest Location="SiteElementControls.xml"/>
+        <ElementManifest Location="SiteSettings.xml"/>
+        <ElementManifest Location="Styles.xml"/>
+    </ElementManifests>
+    <UpgradeActions>
+        <VersionRange EndVersion="15.0.1.0">
+          <CustomUpgradeAction Name="DeactivateFeatures" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.2.0">
+          <CustomUpgradeAction Name="DeleteWebParts" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.3.0">
+          <CustomUpgradeAction Name="DeletePageLayouts" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.4.0">
+          <CustomUpgradeAction Name="ReplaceCustomSiteActionFile" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.5.0">
+          <CustomUpgradeAction Name="EnsureSiteAssetLibraryAndDeleteEmptyGuidFolder"    />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.6.0">
+          <CustomUpgradeAction Name="UpdateComposedLooksIncludeInPackageField" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.7.0">
+           <CustomUpgradeAction Name="ActivateContactsList" />
+           <CustomUpgradeAction Name="AddDefaultSiteElements" />
+           <ApplyElementManifests>
+            <ElementManifest Location="CustomerList.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.8.0">
+          <CustomUpgradeAction Name="SetFriendlyUrlFlagOnPages" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.9.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="Styles.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.11.0">
+           <CustomUpgradeAction Name="EnableBlog" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.12.0">
+          <CustomUpgradeAction Name="AddSearchResultsFriendlyUrl" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.13.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="AdditionalThemes.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.14.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="AdditionalThemes.xml"/>
+             <ElementManifest Location="ColorPalette.xml"/>
+          </ApplyElementManifests>
+          <CustomUpgradeAction Name="UpgradeDesigns" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.15.0">
+          <CustomUpgradeAction Name="FixPermissionsOnCustomSiteActionFile" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.17.0">
+           <ApplyElementManifests>
+             <ElementManifest Location="PageLayouts.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.18.0">
+          <CustomUpgradeAction Name="ReplaceCustomSiteActionFile" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.20.0">
+            <CustomUpgradeAction Name="RemoveSearchResultsFriendlyUrl" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.21.0">
+          <CustomUpgradeAction Name="ReplaceCustomSiteActionFile" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.22.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="WebParts.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.23.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="PublishingBlogWebParts.xml"/>
+             <ElementManifest Location="Pages.xml"/>
+          </ApplyElementManifests>
+          <CustomUpgradeAction Name="UpgradeBlogToPublishing" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.24.0">
+          <CustomUpgradeAction Name="UseRemoteAPIsPermissionSetting" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.25.0">
+          <CustomUpgradeAction Name="DeleteWebParts" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.26.0">
+          <CustomUpgradeAction Name="ReplaceCustomSiteActionFile" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.27.0">
+          <CustomUpgradeAction Name="SetFriendlyUrlFlagOnPages" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.28.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="AdditionalThemes.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

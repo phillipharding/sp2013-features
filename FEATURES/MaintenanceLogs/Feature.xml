@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature
+	Id="8c6f9096-388d-4eed-96ff-698b3ec46fc4"
+    Title="$Resources:core,MaintenanceLogsFeatureTitle;"
+    Description="$Resources:core,MaintenanceLogsFeatureDesc;"
+    Version="15.0.1.0"
+    Scope="Web"
+    Hidden="TRUE"
+	ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.SPMaintenanceLogsFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+		<ElementManifest Location="MaintenanceLogsTemplate.xml" />
+        <ElementManifest Location="MaintenanceLogsInstance.xml" />
+    </ElementManifests>
+</Feature>

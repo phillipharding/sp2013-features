@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="239650e3-ee0b-44a0-a22a-48292402b8d8"
+    Title="Phone Call Memo List"
+    Description="$Resources:core,GbwFeatureCallTrackingDescription;"
+    Version="4.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\calltracklist.xml" />
+        <ElementFile Location="calltrack\schema.xml" />
+    </ElementManifests>
+    <UpgradeActions
+        ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        ReceiverClass="Microsoft.SharePoint.SPCallTrackListUpgradeFeatureReceiver">
+        <VersionRange EndVersion="1.0.0.0">
+            <CustomUpgradeAction Name="V2VUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="3.0.0.0">
+            <CustomUpgradeAction Name="UpdateConfirmationFields" />
+        </VersionRange>
+        <VersionRange EndVersion="4.0.0.0">
+            <CustomUpgradeAction Name="FixupFormTemplateName" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

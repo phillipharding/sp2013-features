@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Microsoft.SharePoint.Portal.WebControls.ProjectSearchBrowseWebpart,Microsoft.SharePoint.Portal,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+      <importErrorMessage>$Resources:spscore,ProjectSearchBrowse_ProjectSearchBrowseWebPart_ImportErrorMessage</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">$Resources:spscore,ProjectDiscovery_WebPart_AllRecommendations_Document_Title</property>
+        <property name="Description" type="string">$Resources:spscore,ProjectDiscovery_WebPart_AllRecommendations_Document_Description</property>
+        <property name="Mode">AllRecommendations</property>
+        <property name="CategoryString" type="string">Documents</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

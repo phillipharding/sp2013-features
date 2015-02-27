@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="937F97E9-D7B4-473D-AF17-B03951B2C66B"
+          Title="Sku Upgrade Links"
+          Description="Link to display the portal to office server sku upgrade page"
+          Version="14.0.0.0"
+          Scope="Farm"
+          Hidden="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <ElementManifests>
+        <ElementManifest Location="SkuUpgradeLinks.xml"/>
+    </ElementManifests>
+
+</Feature>

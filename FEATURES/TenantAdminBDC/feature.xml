@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="0A0B2E8F-E48E-4367-923B-33BB86C1B398"
+          Title="$Resources:core,tenantadminbdcFeatureTitle;"
+          Description="$Resources:core,tenantadminbdcFeatureDesc;"
+          Version="14.0.0.0"
+          Scope="Web"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="default.xml" />
+    </ElementManifests>
+</Feature>

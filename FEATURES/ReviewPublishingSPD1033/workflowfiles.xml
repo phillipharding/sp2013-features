@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="15.0.4420" _dal="1" -->
+<!-- _LocalBinding -->
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <!-- ReviewPublishing -->
+    <Module
+        Name="Publishing Approval"
+        Url="_catalogs/wfpub/Publishing Approval"
+        RootWebOnly="TRUE" >
+        <File Url="ReviewPublishing_1033.xoml" Type="GhostableInLibrary" />
+        <File Url="ReviewPublishing_1033.xoml.rules" Type="GhostableInLibrary" />
+        <File Url="ReviewPublishing_1033.xoml.wfconfig.xml" Type="GhostableInLibrary">
+            <Property Name="NoCodeVisibility" Value="RootPublic" />
+        </File>
+        <File Url="ReviewPublishing_1033.xsn" Type="GhostableInLibrary" />
+        <File Url="ReviewPublishing_Task_1033.xsn" Type="GhostableInLibrary" />
+        <File Url="ReviewPublishing_1033.vdw" Type="GhostableInLibrary" />
+    </Module>
+</Elements>

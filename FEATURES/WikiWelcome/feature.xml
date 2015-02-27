@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="8C6A6980-C3D9-440E-944C-77F93BC65A7E"
+          Title="$Resources:core,WikiWelcome;"
+          Description="$Resources:core,WikiWelcome_Desc;"
+          Version="1.0.0.0"
+          Scope="Web"
+          Hidden="TRUE"
+          ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.SPWikiWelcomeFeatureReceiver"
+          DefaultResourceFile="core"          
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

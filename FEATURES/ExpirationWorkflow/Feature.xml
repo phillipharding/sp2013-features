@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature  Id="C85E5759-F323-4EFB-B548-443D2216EFB5"
+          Title="$Resources:Feature_Title;"
+          Description="$Resources:Expiration_Description;"
+          ImageUrl="WorkflowSolutionFeature.gif"
+          Version="15.0.0.0"
+          Scope="Site"
+          AlwaysForceInstall="TRUE"
+          ReceiverAssembly="Microsoft.Office.Workflow.Feature, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.Office.Workflow.Feature.WorkflowFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/"
+          DefaultResourceFile="_Res">
+  <ElementManifests>
+    <ElementManifest Location="Expiration.xml" />
+  </ElementManifests>
+  <ActivationDependencies> 
+    <ActivationDependency FeatureId="C9C9515D-E4E2-4001-9050-74F980F93160" />
+  </ActivationDependencies> 
+  <Properties>
+    <Property Key="RegisterForms" Value="Forms\*.xsn" />
+    <Property Key="GloballyAvailable" Value="true" />
+  </Properties>  
+</Feature>

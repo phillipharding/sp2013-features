@@ -1,0 +1,5 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Field ID="{B98612E2-3BDA-4485-A510-2CFC4CBB99C8}" Name="HtmlDesignPreviewUrl" StaticName="HtmlDesigPreviewUrl" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" DisplayName="$Resources:cmscore,column_htmldesignpreviewurl_displayname;"  Description="$Resources:cmscore,column_htmldesignpreviewurl_description;" Type="URL" Required="FALSE" Hidden="FALSE" Sealed="TRUE" ShowInNewForm="TRUE" ShowInEditForm="TRUE"></Field>
+</Elements>

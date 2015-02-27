@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<Field ID="{10F55423-5E62-4335-A5B0-5917F9D27631}"
+		Name="EduUserId"
+		DisplayName="EduUserId"
+		Group="Education"
+		Indexed="TRUE"
+		EnforceUniqueValues="TRUE"
+		Type="Text" />
+
+	<Field ID="{7FB3B48E-2E4F-49A3-B4FA-69BB390747CC}"
+		Name="EduRoles"
+		DisplayName="EduRoles"
+		Group="Education"
+		Type="Integer" />
+
+	<Field ID="{62975ECA-638C-4EAA-880D-5B983D05D802}"
+		Name="EduOAuthProviders"
+		DisplayName="EduOAuthProviders"
+		Group="Education"
+		Type="Note" />
+
+	<ContentType ID="0x0100973478FBE1A74F9DAE12289830CF3E5E"
+		Name="EduUserDataContentType"
+		Group="Education">
+		<FieldRefs>
+			<FieldRef ID="{10F55423-5E62-4335-A5B0-5917F9D27631}" Name="OAuthUser"/>
+			<FieldRef ID="{7FB3B48E-2E4F-49A3-B4FA-69BB390747CC}" Name="EduRoles"/>
+			<FieldRef ID="{62975ECA-638C-4EAA-880D-5B983D05D802}" Name="EduOAuthProviders"/>
+		</FieldRefs>
+	</ContentType>
+
+	<ListInstance Title="EduUserDataList"
+		Description="List of user data"
+		FeatureId="00BFEA71-DE22-43B2-A848-C05709900100"
+		TemplateType="100"
+		Id="ACC42976-F0BF-454F-A74D-67C4C816173B"
+		Url="$Resources:core,lists_Folder;/EduUserDataList"
+		OnQuickLaunch="FALSE"
+		Hidden="TRUE"
+		RootWebOnly="TRUE" />
+
+	<ContentTypeBinding ContentTypeId="0x0100973478FBE1A74F9DAE12289830CF3E5E"
+		ListUrl="$Resources:core,lists_Folder;/EduUserDataList"
+		RootWebOnly="TRUE" />
+
+</Elements>

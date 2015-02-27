@@ -1,0 +1,184 @@
+<head>
+<style>
+<!--
+.headertop1 {
+  width: 100%;
+}
+.headercontent {
+  color: #000000;
+  font-family: $Resources:core,Alert_headercontent_font;;
+  font-size: $Resources:core,Alert_headercontent_fontsize;;
+}
+.headercontent em {
+  font-weight:bold;
+}
+.breadcrumb td {
+  padding-left: $Resources:core,Alert_breadcrumb_padding_left;;
+  padding-right: $Resources:core,Alert_breadcrumb_padding_right;;
+}
+.breadcrumb a{
+  font-family: $Resources:core,Alert_breadcrumb_font;;
+  font-size: $Resources:core,Alert_breadcrumb_fontsize;;
+}
+.content {
+  margin-top:6px;
+  width: 100%;
+  border-bottom:solid 1px #9ca3ad;
+}
+.toolbar {
+  border: $Resources:core,Alert_toolbar_border; solid #e8eaec;
+  background-color: #f8f8f9;
+  padding-top:3px;
+  padding-bottom:6px;
+  padding-right:$Resources:core,Alert_toolbar_padding_right;;
+  padding-left:$Resources:core,Alert_toolbar_padding_left;;
+}
+.toolbarbutton a, .toolbarsep {
+  font-family: $Resources:core,Alert_toolbarbutton_font;;
+  font-size: $Resources:core,Alert_toolbarbutton_fontsize;;
+  padding-left: $Resources:core,Alert_toolbarbutton_padding_left;;
+  padding-right: $Resources:core,Alert_toolbarbutton_padding_right;;
+}
+.toolbarbutton a{
+  text-decoration: none;
+}
+.toolbarsep {
+  color:#c7cbd1;
+}
+.spacer {  
+  height: 10px;
+  font-size: $Resources:core,Alert_spacer_fontsize;;
+  line-height: 1px;
+}
+.formline,  .noheight {
+  height: 1px;
+  font-size: $Resources:core,Alert_formline_fontsize;;
+  line-height: 1px;
+}
+.formlabel, .formbody, .digestlabel, .altdigestlabel, .deletedlabel, .altdeletedlabel  {
+  font-family: $Resources:core,Alert_formbody_font;; 
+  font-size:$Resources:core,Alert_formbody_fontsize;; 
+  padding: $Resources:core,Alert_formbody_padding_top; $Resources:core,Alert_formbody_padding_right; $Resources:core,Alert_formbody_padding_top; $Resources:core,Alert_formbody_padding_right;;
+  vertical-align: top;
+}
+.formlabel, .digestlabel, .altdigestlabel, .deletedlabel, .altdeletedlabel  {
+  color: #616a76;
+  font-weight: bold; 
+}
+.rulerow  {
+  border-bottom:solid 1px #9ca3ad;
+  height:0px;
+  font-size:1px;
+  line-height:0px;
+}
+.digestlabel a, .altdigestlabel a {
+}
+.digestlabel a:hover, .altdigestlabel a:hover {
+}
+.formbody {
+  color: #000000;
+}
+.edited{
+  text-decoration:line-through;
+  color:#9ca3ad;
+}
+.descriptiontext {
+  color: #9ca3ad;
+  font-family: $Resources:core,Alert_descriptiontext_font;; 
+  font-size: $Resources:core,Alert_descriptiontext_fontsize;; 
+  padding-top:5px;
+  padding-bottom:7px;
+}
+.formline {
+  border-bottom: 1px solid #D7DEAC;
+}
+.editedicon, .newicon, .deletedicon {
+  color:#000000;
+  font-family: Small Fonts,  Tahoma, Verdana, Sans Serif;
+  font-size: 7pt;
+  padding-top:0px;
+  padding-right:$Resources:core,Alert_icon_padding_right;;
+  padding-bottom:1px;
+  padding-leftt:$Resources:core,Alert_icon_padding_left;;
+  position: relative;
+  top:2px;
+  margin-right:$Resources:core,Alert_icon_margin_right;;
+  margin-left:$Resources:core,Alert_icon_margin_left;;
+  font-weight:normal;
+}
+.editedicon {
+  background-color:#ffffcc;
+}
+.newicon {
+  background-color:#b1faa2;
+}
+.deletedIcon {
+  background-color:#ffcccc;
+ }
+.messagespace {
+  color: #5D6437;
+  font-family: tahoma; 
+  font-size: 8pt; 
+  padding-top:5px;
+  padding-bottom:7px;
+}
+.editedexample {
+  background: #FFFFBF;
+  padding:1px;
+}
+.vh, .vb, .altvb, .deleted, .altdeleted{
+  font-weight: normal;
+  text-align: $Resources:core,Alert_itemdeleted_text_align;; 
+  text-decoration: none; 
+  vertical-align: top;
+  font-size: $Resources:core,Alert_itemdeleted_fontsize;;  
+  font-family: $Resources:core,Alert_itemdeleted_font;;
+  padding-left:  $Resources:core,Alert_itemdeleted_padding_left;; 
+  padding-right: $Resources:core,Alert_itemdeleted_padding_right;;
+}
+.vb, .altvb, .deleted, .altdeleted, .digestlabel, .altdigestlabel, .formlabel, .formbody {
+  border-bottom:solid 1px #e8eaec;
+  padding-top:2px;
+  padding-bottom:5px;
+}
+.vb div.nobr, .altvb div.nobr {
+  white-space:nowrap;
+}
+.vh {
+  color:#76808e;
+  font-weight:bold;
+  padding-top:7px;
+  padding-bottom:6px;
+  white-space:nowrap;
+}
+.vb, .altvb {
+  color:#616a76;
+}
+.altvb, .altdigestlabel, .altdeleted, .altdeletedlabel, .formlabel, .formbody {
+  background: #f8f8f9; 
+}
+.digesttext {
+  color: #000000;
+}
+.deleted, .deletedlabel, .altdeleted, .altdeletedlabel {
+  text-decoration: line-through;
+  color:#9ca3ad;
+}
+.deleted a, .altdeleted a {
+  color:#9ca3ad;
+  text-decoration:line-through;
+}
+-->
+</style>
+  <Style>
+    .toolbarplain{
+    font-family: verdana;
+    font-size: .68em;
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-bottom: 2px;
+    padding-right: 5px;
+    vertical-align: middle;
+  }
+  </Style>
+</head>

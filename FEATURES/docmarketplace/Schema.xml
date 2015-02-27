@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Field ID="{A8DE6DC3-9C6F-466A-95AB-40F956449BA0}" Name="DMSDocTitle" Type="Text" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSDocTitleFieldTitle"/>
+    <Field ID="{0BAB0AFC-F9EB-4CC2-B580-6F06DCEB1963}" Name="DMSDocAuthor" Type="Text" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSDocAuthorFieldTitle"/>
+    <Field ID="{5112F84A-09D7-47BB-A8D7-86109949D827}" Name="DMSDocAuthorURL" Type="URL" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSDocAuthorURLFieldTitle"/>
+    <Field ID="{E4632C52-AA49-49F7-8010-65BCB113572F}" Name="DMSReleaseDate" Type="DateTime" Format="DateOnly" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSReleaseDateFieldTitle"/>
+    <Field ID="{32DCCBCD-63C1-45C6-BFF5-5226A9AA85D9}" Name="DMSAbstract" Type="Note" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSAbstractFieldTitle"/>
+    <Field ID="{0A65A60A-98F6-40F9-B69F-94DEE2AE8069}" Name="DMSDocId" Type="Number" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSDocIdFieldTitle"/>
+    <Field ID="{48D700F0-2FAC-422F-8AB8-627879652704}" Name="DMSDocUrl" Type="URL" Group="Academic Library" DisplayName="$Resources:dmscore, IDS_DMSDocUrlFieldTitle"/>
+    <Field ID="{1C892345-9F61-4412-AB54-44B1F95563DA}" Name="DMSLicense" Type="URL" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSLicenseFieldTitle"/>
+    <Field ID="{7215BC49-795F-44D0-8A9A-78C3A676EDEC}" Name="DMSCoverImage" Type="URL" Format="Image" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSCoverImageFieldTitle"/>
+    <Field ID="{B5032FC9-5BE8-4C60-A399-ADEF42636133}" Name="DMSLeaseTerm" Type="Number" Min="0" Decimals="0" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSLeaseTermFieldTitle"/>
+    <Field ID="{B5FC7284-7A18-448C-83F7-E5F763EF08CE}" Name="DMSTags" Type="Text" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSTagsFieldTitle"/>
+    <Field ID="{6C46B22F-375B-4DF1-839B-D1A30D11BED6}" Name="DMSDocAccessRight" Type="Text" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSDocAccessRightFieldTitle"/>
+    <Field ID="{57F75BA1-080C-44E1-81C2-504632C01062}" Name="DMSAllowGroupAcquisition" Type="Boolean" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSAllowGroupAcquisitionFieldTitle"/>
+    <Field ID="{7A062595-5DA6-4D82-AFB2-680A32DC7161}" Name="DMSTeaser" Type="Note" RichTextMode="FullHtml" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSTeaserFieldTitle"/>
+    <Field ID="{BFD4479F-BDD0-4042-8C2C-721D8A4E909C}" Name="DMSAcquisitions" Type="Number" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSAcquisitionsFieldTitle"/>
+    <Field ID="{9537DA52-76E0-4C14-A67A-FEF01A5AC0A8}" Name="DMSDownloads" Type="Number" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSDownloadsFieldTitle"/>
+    <Field ID="{9F8E34A0-BC68-4BE3-A765-3A7E9687E43F}" Name="DMSOnlineViews" Type="Number" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSOnlineViewsFieldTitle"/>
+    <Field ID="{42607D57-CC58-45F3-AEA7-0B8A7260BFCF}" Name="DMSDocPublisher" Type="User" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSDocPublisherFieldTitle"/>
+
+    <Field ID="{2083A4F1-9350-478B-9D0C-DC3165FD56AE}" Name="DMSStatus" Type="Choice" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSStatusFieldTitle">
+        <CHOICES>
+            <CHOICE>0</CHOICE>
+            <CHOICE>1</CHOICE>
+            <CHOICE>2</CHOICE>
+            <CHOICE>3</CHOICE>
+            <CHOICE>4</CHOICE>
+        </CHOICES>
+    </Field>
+    <Field ID="{46C0AD4D-F3A4-46B5-A270-6672B394B4BC}" Name="DMSTransactionDate" Type="DateTime" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSTransactionDateFieldTitle"/>
+    <Field ID="{63CF2EDF-435F-4AC4-BC4B-82A69B31195B}" Name="DMSGroupId" Type="Text" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSGroupIdFieldTitle"/>
+    <Field ID="{0AD991A1-8DF3-4256-AA29-B277E7370DF4}" Name="DMSGroupEmail" Type="Text" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSGroupEmailFieldTitle"/>
+    <Field ID="{FE36C811-7F7F-46A6-94B9-738E224AD5CE}" Name="DMSTransactionReference" Type="Text" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSTransactionReferenceFieldTitle"/>
+    <Field ID="{635678D4-2853-48D5-B752-60B20AB006F1}" Name="DMSExpirationDate" Type="DateTime" Format="DateOnly" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSExpirationDateFieldTitle"/>
+    <Field ID="{F5210F50-9B9E-4F05-B091-B90FA951C903}" Name="DMSExpirationDateJSMillisec" Type="Text" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSExpirationDateJSMillisec"/>
+    <Field ID="{5C6B87E4-A8A6-4377-84B5-172DABFB72CA}" Name="DMSDetailsPageUrl" Type="URL" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_DMSDetailsPageUrlFieldTitle"/>
+    <Field ID="{FD1583ED-38BE-45AB-B54A-4DD91EE97A6C}" Name="EntitySourceListId" Type="Text" Group="Academic Library" DisplayName="$Resources:dmscore,IDS_EntitySourceListIdFieldTitle" />
+
+    <!-- Parent ContentType: Page (0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39) -->
+    <ContentType ID="0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF3900abd371128a994a0b98e7e888866b392f"
+                 Name="$Resources:dmscore,IDS_DMSDetailsPageContentTypeName"
+                 Group="Academic Library"
+                 Inherits="TRUE"
+                 Version="0">
+        <FieldRefs>
+            <FieldRef ID="{A8DE6DC3-9C6F-466A-95AB-40F956449BA0}" Name="DMSDocTitle" Required="TRUE"/>
+            <FieldRef ID="{0BAB0AFC-F9EB-4CC2-B580-6F06DCEB1963}" Name="DMSDocAuthor" Required="TRUE"/>
+            <FieldRef ID="{5112F84A-09D7-47BB-A8D7-86109949D827}" Name="DMSDocAuthorURL" Required="FALSE"/>
+            <FieldRef ID="{E4632C52-AA49-49F7-8010-65BCB113572F}" Name="DMSReleaseDate" Required="TRUE"/>
+            <FieldRef ID="{32DCCBCD-63C1-45C6-BFF5-5226A9AA85D9}" Name="DMSAbstract" Required="TRUE"/>
+            <FieldRef ID="{d81529e8-384c-4ca6-9c43-c86a256e6a44}" Name="Language" Required="TRUE"/>
+            <FieldRef ID="{0A65A60A-98F6-40F9-B69F-94DEE2AE8069}" Name="DMSDocId" Required="TRUE"/>
+            <FieldRef ID="{48D700F0-2FAC-422F-8AB8-627879652704}" Name="DMSDocUrl" Required="TRUE"/>
+            <FieldRef ID="{1C892345-9F61-4412-AB54-44B1F95563DA}" Name="DMSLicense" Required="FALSE"/>
+            <FieldRef ID="{7215BC49-795F-44D0-8A9A-78C3A676EDEC}" Name="DMSCoverImage" Required="TRUE"/>
+            <FieldRef ID="{B5032FC9-5BE8-4C60-A399-ADEF42636133}" Name="DMSLeaseTerm" Required="FALSE"/>
+            <FieldRef ID="{B5FC7284-7A18-448C-83F7-E5F763EF08CE}" Name="DMSTags" Required="FALSE"/>
+            <FieldRef ID="{6C46B22F-375B-4DF1-839B-D1A30D11BED6}" Name="DMSDocAccessRight" Required="FALSE"/>
+            <FieldRef ID="{57F75BA1-080C-44E1-81C2-504632C01062}" Name="DMSAllowGroupAcquisition" Required="FALSE"/>
+            <FieldRef ID="{63CF2EDF-435F-4AC4-BC4B-82A69B31195B}" Name="DMSGroupId" Required="FALSE"/>
+            <FieldRef ID="{0AD991A1-8DF3-4256-AA29-B277E7370DF4}" Name="DMSGroupEmail" Required="FALSE"/>
+            <FieldRef ID="{7A062595-5DA6-4D82-AFB2-680A32DC7161}" Name="DMSTeaser" Required="FALSE"/>
+            <FieldRef ID="{BFD4479F-BDD0-4042-8C2C-721D8A4E909C}" Name="DMSAcquisitions" Required="FALSE"/>
+            <FieldRef ID="{9537DA52-76E0-4C14-A67A-FEF01A5AC0A8}" Name="DMSDownloads" Required="FALSE"/>
+            <FieldRef ID="{9F8E34A0-BC68-4BE3-A765-3A7E9687E43F}" Name="DMSOnlineViews" Required="FALSE"/>
+            <FieldRef ID="{5a14d1ab-1513-48c7-97b3-657a5ba6c742}" Name="AverageRating" Required="FALSE"/>
+            <FieldRef ID="{b1996002-9167-45e5-a4df-b2c41c6723c7}" Name="RatingCount" Required="FALSE"/>
+            <FieldRef ID="{4D64B067-08C3-43DC-A87B-8B8E01673313}" Name="RatedBy" Required="FALSE"/>
+            <FieldRef ID="{434F51FB-FFD2-4A0E-A03B-CA3131AC67BA}" Name="Ratings" Required="FALSE"/>
+            <FieldRef ID="{6E4D832B-F610-41a8-B3E0-239608EFDA41}" Name="LikesCount" Required="FALSE"/>
+            <FieldRef ID="{2CDCD5EB-846D-4f4d-9AAF-73E8E73C7312}" Name="LikedBy" Required="FALSE"/>
+            <FieldRef ID="{42607D57-CC58-45F3-AEA7-0B8A7260BFCF}" Name="DMSDocPublisher" Required="FALSE"/>
+            <FieldRef ID="{FD1583ED-38BE-45AB-B54A-4DD91EE97A6C}" Name="EntitySourceListId" Required="FALSE"/>
+        </FieldRefs>
+    </ContentType>
+
+    <!-- Parent ContentType: Item (0x01) -->
+    <ContentType ID="0x0100d8e3f2cec5264ee08d4c7db74f989900"
+               Name="$Resources:dmscore,IDS_DMSAcquisitionHistoryContentTypeName"
+               Group="Academic Library"
+               Inherits="TRUE"
+               Version="0">
+        <FieldRefs>
+            <FieldRef ID="{A8DE6DC3-9C6F-466A-95AB-40F956449BA0}" Name="DMSDocTitle" Required="TRUE"/>
+            <FieldRef ID="{0BAB0AFC-F9EB-4CC2-B580-6F06DCEB1963}" Name="DMSDocAuthor" Required="TRUE"/>
+            <FieldRef ID="{5112F84A-09D7-47BB-A8D7-86109949D827}" Name="DMSDocAuthorURL" Required="FALSE"/>
+            <FieldRef ID="{5C6B87E4-A8A6-4377-84B5-172DABFB72CA}" Name="DMSDetailsPageUrl" Required="TRUE"/>
+            <FieldRef ID="{7215BC49-795F-44D0-8A9A-78C3A676EDEC}" Name="DMSCoverImage" Required="TRUE"/>
+            <FieldRef ID="{0A65A60A-98F6-40F9-B69F-94DEE2AE8069}" Name="DMSDocId" Required="TRUE"/>
+            <FieldRef ID="{48D700F0-2FAC-422F-8AB8-627879652704}" Name="DMSDocUrl" Required="TRUE"/>
+            <FieldRef ID="{2083A4F1-9350-478B-9D0C-DC3165FD56AE}" Name="DMSStatus" Required="TRUE"/>
+            <FieldRef ID="{46C0AD4D-F3A4-46B5-A270-6672B394B4BC}" Name="DMSTransactionDate" Required="TRUE"/>
+            <FieldRef ID="{63CF2EDF-435F-4AC4-BC4B-82A69B31195B}" Name="DMSGroupId" Required="FALSE"/>
+            <FieldRef ID="{0AD991A1-8DF3-4256-AA29-B277E7370DF4}" Name="DMSGroupEmail" Required="FALSE"/>
+            <FieldRef ID="{FE36C811-7F7F-46A6-94B9-738E224AD5CE}" Name="DMSTransactionReference" Required="FALSE"/>
+            <FieldRef ID="{635678D4-2853-48D5-B752-60B20AB006F1}" Name="DMSExpirationDate" Required="FALSE"/>
+            <FieldRef ID="{F5210F50-9B9E-4F05-B091-B90FA951C903}" Name="DMSExpirationDateJSMillisec" Required="FALSE"/>
+            <FieldRef ID="{E4632C52-AA49-49F7-8010-65BCB113572F}" Name="DMSReleaseDate" Required="TRUE"/>
+            <FieldRef ID="{d81529e8-384c-4ca6-9c43-c86a256e6a44}" Name="Language" Required="TRUE"/>
+            <FieldRef ID="{6C46B22F-375B-4DF1-839B-D1A30D11BED6}" Name="DMSDocAccessRight" Required="FALSE"/>
+            <FieldRef ID="{32DCCBCD-63C1-45C6-BFF5-5226A9AA85D9}" Name="DMSAbstract" Required="TRUE"/>
+            <FieldRef ID="{FD1583ED-38BE-45AB-B54A-4DD91EE97A6C}" Name="EntitySourceListId" Required="FALSE"/>
+        </FieldRefs>
+    </ContentType>
+
+    <!-- Parent ContentType: Document (0x0101) -->
+    <ContentType ID="0x010100B417938270464F5A9A3D682E7DCBCB1E"
+               Name="$Resources:dmscore,IDS_DMSDocumentMetadataContentTypeName"
+               Group="Academic Library"
+               Inherits="TRUE"
+               Version="0">
+        <FieldRefs>
+            <FieldRef ID="{A8DE6DC3-9C6F-466A-95AB-40F956449BA0}" Name="DMSDocTitle" Required="TRUE"/>
+            <FieldRef ID="{0BAB0AFC-F9EB-4CC2-B580-6F06DCEB1963}" Name="DMSDocAuthor" Required="TRUE"/>
+            <FieldRef ID="{5112F84A-09D7-47BB-A8D7-86109949D827}" Name="DMSDocAuthorURL" Required="FALSE"/>
+            <FieldRef ID="{E4632C52-AA49-49F7-8010-65BCB113572F}" Name="DMSReleaseDate" Required="TRUE"/>
+            <FieldRef ID="{32DCCBCD-63C1-45C6-BFF5-5226A9AA85D9}" Name="DMSAbstract" Required="TRUE"/>
+            <FieldRef ID="{d81529e8-384c-4ca6-9c43-c86a256e6a44}" Name="Language" Required="TRUE"/>
+            <FieldRef ID="{1C892345-9F61-4412-AB54-44B1F95563DA}" Name="DMSLicense" Required="FALSE"/>
+            <FieldRef ID="{7215BC49-795F-44D0-8A9A-78C3A676EDEC}" Name="DMSCoverImage" Required="FALSE"/>
+            <FieldRef ID="{B5032FC9-5BE8-4C60-A399-ADEF42636133}" Name="DMSLeaseTerm" Required="FALSE"/>
+            <FieldRef ID="{B5FC7284-7A18-448C-83F7-E5F763EF08CE}" Name="DMSTags" Required="FALSE"/>
+            <FieldRef ID="{6C46B22F-375B-4DF1-839B-D1A30D11BED6}" Name="DMSDocAccessRight" Required="FALSE"/>
+            <FieldRef ID="{57F75BA1-080C-44E1-81C2-504632C01062}" Name="DMSAllowGroupAcquisition" Required="FALSE"/>
+            <FieldRef ID="{63CF2EDF-435F-4AC4-BC4B-82A69B31195B}" Name="DMSGroupId" Required="FALSE"/>
+            <FieldRef ID="{0AD991A1-8DF3-4256-AA29-B277E7370DF4}" Name="DMSGroupEmail" Required="FALSE"/>
+            <FieldRef ID="{42607D57-CC58-45F3-AEA7-0B8A7260BFCF}" Name="DMSDocPublisher" Required="FALSE"/>
+        </FieldRefs>
+    </ContentType>
+
+</Elements>

@@ -1,0 +1,33 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="WebPartPopulation" Url="_catalogs/wp" Path="" RootWebOnly="TRUE">
+        <File Url="TaxonomyRefinementScript.webpart" Type="GhostableInLibrary">
+            <Property Name="Group" Value="$Resources:Microsoft.Office.Server.Search,SearchWebPartGroup;"></Property>
+            <Property Name="QuickAddGroups" Value=";#Search;#" />
+        </File>
+    </Module>
+
+    <Module Name="FilterDisplayTemplates" Url="_catalogs/masterpage/Display Templates/Filters" Path="DisplayTemplates" RootWebOnly="TRUE">
+        <File Url="Control_TaxonomyRefinement.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_DefaultTaxonomyRefinement" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Control" />
+            <Property Name="TemplateHidden" Value="0" />
+            <Property Name="TargetControlType" Value=";#TaxonomyRefinement;#" />
+            <Property Name="CompatibleSearchDataTypes" Value="" />	
+            <Property Name="CompatibleManagedProperties" Value="" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Filter_TaxonomyRefinement.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_TaxonomyRefinementItem" />
+            <Property Name="MasterPageDescription" Value="" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Filter" />
+            <Property Name="TemplateHidden" Value="0" />
+            <Property Name="TargetControlType" Value=";#TaxonomyRefinement;#" />
+            <Property Name="CompatibleSearchDataTypes" Value="" />
+            <Property Name="CompatibleManagedProperties" Value="" />
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+    </Module>
+</Elements>

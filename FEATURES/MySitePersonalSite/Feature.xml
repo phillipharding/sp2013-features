@@ -1,0 +1,65 @@
+<Feature Id="F661430E-C155-438e-A7C6-C68648F1B119"
+    Title="$Resources:spscore,PeopleFeatures_MySitePersonalSite_Text;"
+    Description="$Resources:spscore,PeopleFeatures_MySitePersonalSite_Desc;"
+    Version="15.0.25.0"
+    Hidden="TRUE"
+    Scope="Site"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.UserProfiles.MySitePersonalSiteFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="Pages.xml"/>
+    </ElementManifests>
+    <UpgradeActions
+        ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        ReceiverClass="Microsoft.SharePoint.Portal.UserProfiles.MySitePersonalSiteUpgrader" >
+        <VersionRange EndVersion="15.0.3.0">
+          <CustomUpgradeAction Name="MySite_ContentFollowingUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.4.0">
+          <CustomUpgradeAction Name="MySite_MicroBlogCtrlUpgrade" />
+          <CustomUpgradeAction Name="MySite_MicroBlogListUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.8.0">
+          <CustomUpgradeAction Name="MySite_ContentFollowingListUpgrade"/>
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.8.0" EndVersion="15.0.9.0">
+          <CustomUpgradeAction Name="MySite_ContentFollowingListMigrate"/>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.11.0">
+          <CustomUpgradeAction Name="MySite_DeactivateFeaturesUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.12.0">
+          <CustomUpgradeAction Name="MySite_SearchResultsUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.16.0">
+          <CustomUpgradeAction Name="MySite_DeactivateFeaturesUpgrade" />
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.11.0" EndVersion="15.0.18.0">
+          <CustomUpgradeAction Name="MySite_ReactivateUnifiedNavigationUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.19.0">
+            <CustomUpgradeAction Name="MySite_EnableShareByLink" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.20.0">
+            <CustomUpgradeAction Name="MySite_MyTasksDashboardUpgrade" />
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.4.0" EndVersion="15.0.21.0">
+            <CustomUpgradeAction Name="MySite_MicroBlogListScopeUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.22.0">
+          <CustomUpgradeAction Name="MySite_LogoUpgrade" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.23.0">
+            <ApplyElementManifests>
+                <ElementManifest Location="Pages.xml" />
+            </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.24.0">
+          <CustomUpgradeAction Name="MySite_DeleteOrMoveRecentNode" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.25.0">
+          <CustomUpgradeAction Name="MySite_PersonalDoclibPermissionReset" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

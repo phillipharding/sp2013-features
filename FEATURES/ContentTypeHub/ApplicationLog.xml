@@ -1,0 +1,11 @@
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction 
+        Id="ContentTypeAppLog"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Sequence="200" 
+        Title="$Resources:osrvcore,ContentTypeApplicationErrorLog;">
+            <UrlAction Url="~sitecollection/Lists/ContentTypeAppLog"/>
+    </CustomAction>
+</Elements>

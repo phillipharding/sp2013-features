@@ -1,0 +1,13 @@
+<Feature Id="683DF0C0-20B7-4852-87A3-378945158FAB"
+   Title="$Resources:ProfilePagesFeatureTitle;"
+   Description="$Resources:ProfilePagesFeatureDescription;"
+   Version="14.0.0.0"
+   DefaultResourceFile="obacore"
+   Scope="Web"
+   Hidden="TRUE"
+   AutoActivateInCentralAdmin="TRUE"
+   xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="FeatureElements.xml" />
+  </ElementManifests>
+</Feature>

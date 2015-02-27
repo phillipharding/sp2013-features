@@ -1,0 +1,11 @@
+<Feature Id="4CC8AAB8-5AF0-45D7-A170-169EA583866E"
+    Title="$Resources:wmafeatures,MyTasksDashboardFeatureStaplingTitle;"
+    Description="$Resources:wmafeatures,MyTasksDashboardFeatureStaplingDescription;"
+    Hidden="TRUE"
+    Version="15.0.0.0"
+    Scope="Farm"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="elements.xml"/>
+    </ElementManifests>
+</Feature>

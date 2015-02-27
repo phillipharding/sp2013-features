@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+         Id="ACB15743-F07B-4C83-8AF3-FFCFDF354965"
+         Title="$Resources:Microsoft.Office.Server.Search,SearchConfigList_FeatureTitle"
+         Description="$Resources:Microsoft.Office.Server.Search,SearchConfigList_FeatureDesc"
+         Scope="Web"
+		     Hidden="FALSE"
+         Version="15.0.0.0">
+    <ElementManifests>
+        <ElementManifest Location="ListInstance.xml" />
+    </ElementManifests>
+</Feature>

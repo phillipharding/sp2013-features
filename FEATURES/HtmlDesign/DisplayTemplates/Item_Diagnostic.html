@@ -1,0 +1,199 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_Item_Diagnostic</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:ManagedPropertyMapping msdt:dt="string">'Picture URL'{$Resources:Microsoft.Office.Server.Search,SlotName_ImageURL;}:'PublishingImage;PictureURL;PictureThumbnailURL','Path','SecondaryFileExtension','ContentTypeId','Line 1'{$Resources:Microsoft.Office.Server.Search,SlotName_Line1;}:'Title','Line 2'{$Resources:Microsoft.Office.Server.Search,SlotName_Line2;}:'Description','Line 3'{$Resources:Microsoft.Office.Server.Search,SlotName_Line3;}:'','Line 4'{$Resources:Microsoft.Office.Server.Search,SlotName_Line4;}:'','Line 5'{$Resources:Microsoft.Office.Server.Search,SlotName_Line5;}:'','Line 6'{$Resources:Microsoft.Office.Server.Search,SlotName_Line6;}:'','Line 7'{$Resources:Microsoft.Office.Server.Search,SlotName_Line7;}:'','Line 8'{$Resources:Microsoft.Office.Server.Search,SlotName_Line8;}:'','Line 9'{$Resources:Microsoft.Office.Server.Search,SlotName_Line9;}:'','Line 10'{$Resources:Microsoft.Office.Server.Search,SlotName_Line10;}:''</mso:ManagedPropertyMapping>
+<mso:MasterPageDescription msdt:dt="string">$Resources:Microsoft.Office.Server.Search,DisplayTemplateDescription_Item_Diagnostic</mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+
+    <!--
+            Warning: Do not try to add HTML to this section. Only the contents of the first <div>
+            inside the <body> tag will be used while executing Display Template code. Any HTML that
+            you add to this section will NOT become part of your Display Template.
+    -->
+    <script>
+        $includeLanguageScript(this.url, "~sitecollection/_catalogs/masterpage/Display Templates/Language Files/{Locale}/CustomStrings.js");
+    </script>
+
+    <!--
+        Use the div below to author your Display Template. Here are some things to keep in mind:
+        * Surround any JavaScript logic as shown below using a "pound underscore" (#_ ... _#) token
+        inside a comment.
+
+        * Use the values assigned to your variables using an "underscore pound equals"
+        (_#= ... =#_) token.
+    -->
+
+        <div id="Item_Diagnostic">
+<!--#_
+var encodedId = $htmlEncode(ctx.ClientControl.get_nextUniqueId() + "_Diagnostic_");
+
+var linkURL = $getItemValue(ctx, "Path");
+linkURL.overrideValueRenderer($urlHtmlEncode);
+
+var line1 = $getItemValue(ctx, "Line 1");
+var pictureURL = $getItemValue(ctx, "Picture URL");
+pictureURL.overrideValueRenderer($urlHtmlEncode);
+var pictureId = encodedId + "picture";
+var pictureMarkup = Srch.ContentBySearch.getPictureMarkup(pictureURL, 100, 100, ctx.CurrentItem, "cbs-picture3LinesImg", line1, pictureId);
+
+window.cbsDiagnostic_RenderPropertyMappings = function(valueInfoObj)
+{
+    var combinedManagedPropertiesMapping = "";
+    if(!$isNull(valueInfoObj) && !$isNull(valueInfoObj.propertyMappings) && !$isNull(valueInfoObj.propertyMappings.length))
+    {
+        for (var i = 0; i < valueInfoObj.propertyMappings.length; i++)
+        {
+            var managedPropertyName = valueInfoObj.propertyMappings[i];
+            combinedManagedPropertiesMapping += i == 0 ? managedPropertyName : String.format(Srch.Res.edisc_MultiValueFormat, managedPropertyName);
+        }
+    }
+    return $htmlEncode(combinedManagedPropertiesMapping);
+}
+
+var itemContainerTitle = null;
+var canBuildItemContainerTitle = !$isNull(ctx.CurrentItemIdx) && !$isNull(ctx.CurrentGroup) && 
+    !$isNull(ctx.CurrentGroup.ResultRows) && !$isNull(ctx.CurrentGroup.ResultRows.length) &&
+    !isNaN(ctx.CurrentGroup.ResultRows.length) && !isNaN(ctx.CurrentItemIdx);
+if(canBuildItemContainerTitle)
+{
+    itemContainerTitle = String.format($resource("item_Diagnostic_ItemTitleFormat"), ctx.CurrentItemIdx + 1, ctx.CurrentGroup.ResultRows.length);
+}
+
+var containerId = encodedId + "container";
+var pictureSlotContainerId = encodedId + "pictureSlotContainer";
+var pictureContainerId = encodedId + "pictureContainer";
+var pictureLinkId = encodedId + "pictureLink";
+var pathContainerId = encodedId + "pathContainer";
+_#-->
+        <ul class="cbs-diagnostic-Container" id="_#= containerId =#_" data-displaytemplate="ItemDiagnostic">
+            <li>
+<!--#_
+if(!$isEmptyString(itemContainerTitle))
+{
+_#-->
+                <h3 class="cbs-diagnostic-ContainerTitle">_#= $htmlEncode(itemContainerTitle) =#_</h3>
+<!--#_
+}
+_#-->
+                <ul id="_#= pictureSlotContainerId =#_" class="cbs-diagnosticSlot" >
+                    <li class="cbs-diagnosticSlotName">_#= $htmlEncode($resource("item_Diagnostic_PictureSlot")) =#_</li>
+                    <li class="cbs-diagnosticItemProperty">
+                        <ul class="cbs-diagnosticItemContainer">
+                            <li class="cbs-diagnosticItemName">_#= $htmlEncode($resource("item_Diagnostic_Value")) =#_</li>
+<!--#_
+if(pictureURL.isEmpty)
+{
+_#-->
+                            <li class="cbs-diagnosticItemValue">&nbsp;</li>
+<!--#_
+}
+else
+{
+_#-->
+                            <li class="cbs-diagnosticItemValue">_#= $htmlEncode(pictureURL.value) =#_</li>
+<!--#_
+}
+_#-->
+                        </ul>
+                    </li>
+                    <li class="cbs-diagnosticItemProperty">
+                        <ul class="cbs-diagnosticItemContainer">
+                            <li class="cbs-diagnosticItemName">_#= $htmlEncode($resource("item_Diagnostic_Preview")) =#_</li>
+                            <li class="cbs-diagnosticItemValue">
+                                <div class="cbs-picture3LinesImageContainer" id="_#= pictureContainerId =#_">
+                                    <a class="cbs-pictureImgLink" href="_#= linkURL =#_" title="_#= line1 =#_" id="_#= pictureLinkId =#_">
+                                        _#= pictureMarkup =#_
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="cbs-diagnosticItemProperty">
+                        <ul class="cbs-diagnosticItemContainer">
+                            <li class="cbs-diagnosticItemName">_#= $htmlEncode($resource("item_Diagnostic_MappedManagedProperty")) =#_</li>
+                            <li class="cbs-diagnosticItemValue">_#= $htmlEncode(pictureURL.managedPropertyName) =#_</li>
+                        </ul>
+                    </li>
+                    <li class="cbs-diagnosticItemProperty">
+                        <ul class="cbs-diagnosticItemContainer">
+                            <li class="cbs-diagnosticItemName">_#= $htmlEncode($resource("item_Diagnostic_PropertyMappings")) =#_</li>
+                            <li class="cbs-diagnosticItemValue">_#= cbsDiagnostic_RenderPropertyMappings(pictureURL)  =#_</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul id="_#= pathContainerId =#_" class="cbs-diagnosticSlot" >
+                    <li class="cbs-diagnosticSlotName">_#= $htmlEncode($resource("item_Diagnostic_PathSlot")) =#_</li>
+                    <li class="cbs-diagnosticItemProperty">
+                        <ul class="cbs-diagnosticItemContainer">
+                            <li class="cbs-diagnosticItemName">_#= $htmlEncode($resource("item_Diagnostic_Value")) =#_</li>
+                            <li class="cbs-diagnosticItemValue">_#= $htmlEncode(linkURL.value) =#_</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+<!--#_
+for(var lineNum = 1; lineNum <= 10; lineNum++)
+{
+    var lineValueInfo = $getItemValue(ctx, String.format("Line {0}", lineNum));
+    if(!$isNull(lineValueInfo) && !$isEmptyString(cbsDiagnostic_RenderPropertyMappings(lineValueInfo)))
+    {
+        var lineId = String.format("{0}line{1}", encodedId, lineNum);
+        var slotName = String.format($resource("item_Diagnostic_SlotNameFormat"), lineNum);
+_#-->
+            <li>
+                <ul id="_#= lineId =#_" class="cbs-diagnosticSlot" >
+                    <li class="cbs-diagnosticSlotName">_#= $htmlEncode(slotName) =#_</li>
+                    <li class="cbs-diagnosticItemProperty">
+                        <ul class="cbs-diagnosticItemContainer">
+                            <li class="cbs-diagnosticItemName">_#= $htmlEncode($resource("item_Diagnostic_Value")) =#_</li>
+<!--#_
+        if(lineValueInfo.isEmpty)
+        {
+_#-->
+                            <li class="cbs-diagnosticItemValue">&nbsp;</li>
+<!--#_
+        }
+        else
+        {
+_#-->
+                            <li class="cbs-diagnosticItemValue">_#= lineValueInfo =#_</li>
+<!--#_
+        }
+_#-->
+                        </ul>
+                    </li>
+                    <li class="cbs-diagnosticItemProperty">
+                        <ul class="cbs-diagnosticItemContainer">
+                            <li class="cbs-diagnosticItemName">_#= $htmlEncode($resource("item_Diagnostic_MappedManagedProperty")) =#_</li>
+                            <li class="cbs-diagnosticItemValue">_#= $htmlEncode(lineValueInfo.managedPropertyName) =#_</li>
+                        </ul>
+                    </li>
+                    <li class="cbs-diagnosticItemProperty">
+                        <ul class="cbs-diagnosticItemContainer">
+                            <li class="cbs-diagnosticItemName">_#= $htmlEncode($resource("item_Diagnostic_PropertyMappings")) =#_</li>
+                            <li class="cbs-diagnosticItemValue">_#= cbsDiagnostic_RenderPropertyMappings(lineValueInfo)  =#_</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+<!--#_
+    }
+}
+_#-->
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Module Name="WebParts" List="113" Url="_catalogs/wp">
+		<File Url="ReportViewWebPart.webpart" Type="GhostableInLibrary">
+			<Property Name="Group" Value="$Resources:ppsma,WebPart_Group" />
+		</File>
+		<File Url="FilterWebPart.webpart" Type="GhostableInLibrary">
+			<Property Name="Group" Value="$Resources:ppsma,WebPart_Group" />
+		</File>
+		<File Url="ScorecardWebPart.webpart" Type="GhostableInLibrary">
+			<Property Name="Group" Value="$Resources:ppsma,WebPart_Group" />
+		</File>
+    <File Url="StackWebPart.webpart" Type="GhostableInLibrary">
+      <Property Name="Group" Value="$Resources:ppsma,WebPart_Group" />
+    </File>
+	</Module>
+</Elements>

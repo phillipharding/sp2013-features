@@ -1,0 +1,3 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Control Id="CreateSiteCollectionPanel1" Sequence="100" ControlSrc="~/_controltemplates/CreateSiteCollectionPanel1.ascx" />
+</Elements>

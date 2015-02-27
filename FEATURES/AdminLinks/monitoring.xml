@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomActionGroup
+        Id="HealthStatus"
+        Location="Microsoft.SharePoint.Administration.Monitoring"
+        Title="$Resources:healthstatus_title;"
+        Sequence="10"
+        ImageUrl="/_layouts/15/images/CentralAdmin_Monitoring_HealthStatus_32x32.png?rev=23" />
+    <CustomActionGroup
+        Id="TimerJobs"
+        Location="Microsoft.SharePoint.Administration.Monitoring"
+        Title="$Resources:timerjobs_title;"
+        Sequence="20"
+        ImageUrl="/_layouts/15/images/CentralAdmin_Monitoring_TimerJobs_32x32.png?rev=23" />
+    <CustomAction
+        Id="HS_ViewProblems"
+        GroupId="HealthStatus"
+        Location="Microsoft.SharePoint.Administration.Monitoring"
+        Sequence="10"
+        Title="$Resources:HealthReports_NavLink;"
+        Description="$Resources:HealthReports_NavLink_description;">
+        <UrlAction
+            Url="/$Resources:core,lists_Folder;/$Resources:core,HealthReports_Folder;" />
+    </CustomAction>
+    <CustomAction
+        Id="HS_ManageRules"
+        GroupId="HealthStatus"
+        Location="Microsoft.SharePoint.Administration.Monitoring"
+        Sequence="20"
+        Title="$Resources:HealthRules_NavLink;"
+        Description="$Resources:HealthRules_NavLink_description;">
+        <UrlAction
+            Url="/$Resources:core,lists_Folder;/$Resources:core,HealthRules_Folder;" />
+    </CustomAction>
+    <CustomAction
+        Id="TJ_Review"
+        GroupId="TimerJobs"
+        Location="Microsoft.SharePoint.Administration.Monitoring"
+        Sequence="10"
+        Title="$Resources:reviewscheduledtimerjobs_title;"
+        Description="$Resources:reviewscheduledtimerjobs_description;">
+        <UrlAction
+            Url="/_admin/ServiceJobDefinitions.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="TJ_CheckJobStatus"
+        GroupId="TimerJobs"
+        Location="Microsoft.SharePoint.Administration.Monitoring"
+        Sequence="20"
+        Title="$Resources:checkjobstatus_title;"
+        Description="$Resources:checkjobstatus_description;">
+        <UrlAction
+            Url="/_admin/Timer.aspx" />
+    </CustomAction>
+    <CustomActionGroup
+        Id="Reporting"
+        Location="Microsoft.SharePoint.Administration.Monitoring"
+        Title="$Resources:reporting_title;"
+        Sequence="30"
+        ImageUrl="/_layouts/15/images/CentralAdmin_Monitoring_Reporting_32x32.png?rev=23" />
+    <CustomAction
+        Id="Rep_CDL"
+        GroupId="Reporting"
+        Location="Microsoft.SharePoint.Administration.Monitoring"
+        Sequence="30"
+        Title="$Resources:configurediagnosticlogging_title;"
+        Description="$Resources:configurediagnosticlogging_description;">
+        <UrlAction
+            Url="/_admin/metrics.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="Rep_SUAP"
+        GroupId="Reporting"
+        Location="Microsoft.SharePoint.Administration.Monitoring"
+        RequiredAdmin="Machine"
+        Sequence="50"
+        Title="$Resources:setupusageanalysisprocessing_title;"
+        Description="$Resources:setupusageanalysisprocessing_description;">
+        <UrlAction
+            Url="/_admin/LogUsage.aspx" />
+    </CustomAction>
+     <CustomAction
+        Id="Rep_RequestReport"
+        GroupId="Reporting"
+        Location="Microsoft.SharePoint.Administration.Monitoring"
+        Sequence="50"
+        Title="$Resources:farmhealthreport_title;"
+        Description="$Resources:farmhealthreport_description;">
+        <UrlAction
+            Url="/_admin/HealthReport.aspx" />
+    </CustomAction>
+</Elements>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="15.0.4420" _dal="1" -->
+<!-- _LocalBinding -->
+<List xmlns:ows="Microsoft SharePoint" Title="$Resources:dlccore,EDiscoverySourceGroupsListTitle;" FolderCreation="FALSE" Direction="$Resources:core,Direction;" Url="$Resources:core,lists_Folder;/$Resources:dlccore,SourceGroupsListUrl;" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="FALSE" DisableAttachments="TRUE" DisableGridEditing="TRUE" NavigateForFormsPages="TRUE">
+  <MetaData>
+    <ContentTypes>
+      <ContentTypeRef ID="0x01000B9E164436BF45B4961077F66DA14B80">
+      </ContentTypeRef>
+    </ContentTypes>
+    <Fields>
+        <Field ID="{82642EC8-EF9B-478F-ACF9-31F7D45FBC31}"                      Name="LinkTitle"                         DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryName;" Type="Computed" />
+        <Field ID="{BC91A437-52E7-49E1-8C4E-4698904B2B6D}"                Name="LinkTitleNoMenu"                   DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryName;" Type="Computed" />
+        <Field ID="{FA564E0F-0C70-4AB9-B863-0177E6DDD247}"                          Name="Title"                             DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryName;" Type="Text" Required="TRUE" />
+        <Field ID="{28CF69C5-FA48-462A-B5CD-27B6F9D2BD5F}"                       Name="Modified" FriendlyDisplayFormat="Disabled" />
+        <Field ID="{A3BDC3A8-B98B-4E68-B1B8-D3AF8C434774}"                Name="DiscoveryQuery"                   StaticName="DiscoveryQuery"                 SourceID="http://schemas.microsoft.com/sharepoint/v3"   Group="_Hidden"  DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryQuery;"               Type="Note"         Required="FALSE"    CanToggleHidden="TRUE"  Sealed="TRUE" RichText="FALSE"  ></Field>
+        <Field ID="{E639C972-1391-456B-984F-D8CC27F3F379}"             Name="DiscoveryAuthorMult"                  StaticName="DiscoveryAuthorMult"                SourceID="http://schemas.microsoft.com/sharepoint/v3"   Group="_Hidden"  DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryAuthor;"              Type="UserMulti"    Required="FALSE"    CanToggleHidden="TRUE"  Sealed="TRUE" Mult="TRUE" List="UserInfo" ShowField="ImnName" UserSelectionMode="PeopleAndGroups" UserSelectionScope="0"></Field>
+        <Field ID="{6917E0A9-D12F-4842-B15B-697578FCBADF}"                     Name="DiscoveryStartDate"               StaticName="DiscoveryStartDate"             SourceID="http://schemas.microsoft.com/sharepoint/v3"   Group="_Hidden"  DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryStartDate;"           Type="DateTime"         Required="FALSE"    CanToggleHidden="TRUE"  Sealed="TRUE" ></Field>
+        <Field ID="{C93F9BB3-79D1-4546-97D3-422185F8E65F}"                       Name="DiscoveryEndDate"                 StaticName="DiscoveryEndDate"               SourceID="http://schemas.microsoft.com/sharepoint/v3"   Group="_Hidden"  DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryEndDate;"             Type="DateTime"         Required="FALSE"    CanToggleHidden="TRUE"  Sealed="TRUE" ></Field>
+        <Field ID="{94D41036-023A-40AD-B2C1-573BC8000C03}"       Name="DiscoveryDomainFilter"            StaticName="DiscoveryDomainFilter"          SourceID="http://schemas.microsoft.com/sharepoint/v3"   Group="_Hidden"  DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryDomainFilter;"        Type="Text"         Required="FALSE"    CanToggleHidden="TRUE"  Sealed="TRUE" ></Field>
+        <Field ID="{26A86748-E2BA-40E4-AF4A-1CB304A972AA}"               Name="DiscoveryHoldId"                  StaticName="DiscoveryHoldId"                SourceID="http://schemas.microsoft.com/sharepoint/v3"   Group="_Hidden"  DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryHoldId;"              Type="Guid"         Required="TRUE"     CanToggleHidden="TRUE"  Sealed="TRUE" RichText="FALSE"  Hidden="TRUE"></Field>
+        <Field ID="{2A91EB10-B686-4175-AD05-B443FCE9BFD7}"             Name="DiscoveryPreserve"                StaticName="DiscoveryPreserve"              SourceID="http://schemas.microsoft.com/sharepoint/v3"   Group="_Hidden"  DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryPreserve;"            Type="Boolean"      Required="FALSE"    CanToggleHidden="TRUE"  Sealed="TRUE"                   ></Field>
+        <Field ID="{580BD1C1-2326-4C58-AC67-DADF20FD1985}"         Name="DiscoverySourceLookup"            StaticName="DiscoverySourceLookup"          SourceID="http://schemas.microsoft.com/sharepoint/v3"   Group="_Hidden"  DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoverySourceLookup"         Type="LookupMulti"  Required="FALSE"    CanToggleHidden="TRUE"  Sealed="TRUE" List="$Resources:core,lists_Folder;/$Resources:dlccore,SourcesListUrl;" ShowField="Title" Mult="TRUE" ></Field>
+        <Field ID="{C964B640-43D0-4BCA-AEFA-884378AAA7A0}"                Name="DiscoveryIntItems"                   StaticName="DiscoveryIntItems"                 SourceID="http://schemas.microsoft.com/sharepoint/v3"   Group="_Hidden"  DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoveryItems;"               Type="Number"      Required="FALSE"    CanToggleHidden="TRUE"  Sealed="TRUE" ReadOnly="TRUE"></Field>
+        <Field ID="{E3CCEF67-BC67-44D5-A8F2-85718F389E5C}"                 Name="DiscoveryIntSize"                    StaticName="DiscoveryIntSize"                  SourceID="http://schemas.microsoft.com/sharepoint/v3"   Group="_Hidden"  DisplayName="$Resources:dlccore,DlcFieldDisplayName_EDiscoverySize;"                Type="Number"      Required="FALSE"    CanToggleHidden="TRUE"  Sealed="TRUE" ReadOnly="TRUE" Decimals="2"></Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="2" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">5</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu"></FieldRef>
+          <FieldRef Name="Modified"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitle"></FieldRef>
+          <FieldRef Name="DiscoveryPreserve"></FieldRef>
+          <FieldRef Name="DiscoveryIntItems"></FieldRef>
+          <FieldRef Name="DiscoveryIntSize"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

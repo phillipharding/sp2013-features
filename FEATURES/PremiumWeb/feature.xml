@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="0806D127-06E6-447a-980E-2E90B03101B8"
+          Title="$Resources:osrvcore,PremiumWebFeatureTitle;"
+          Description="$Resources:osrvcore,PremiumFeatureDescription;"
+          Version="15.0.0.0"
+          SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+          Scope="Web"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ActivationDependencies>
+
+      <ActivationDependency FeatureId="FF13819A-A9AC-46FB-8163-9D53357EF98D" /> 
+
+        <ActivationDependency FeatureId="065C78BE-5231-477e-A972-14177CC5B3C7" /> 
+        <ActivationDependency FeatureId="2510D73F-7109-4ccc-8A1C-314894DEEB3A" /> 
+        <ActivationDependency FeatureId="00BFEA71-DBD7-4F72-B8CB-DA7AC0440130" /> 
+    </ActivationDependencies>
+    <UpgradeActions
+        ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        ReceiverClass="Microsoft.SharePoint.Portal.SPBaseWebUpgradeFeatureReceiver">
+        <VersionRange EndVersion="15.0.0.0">
+            <CustomUpgradeAction Name="ActivateTaskListNewsFeed" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

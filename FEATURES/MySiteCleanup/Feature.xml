@@ -1,0 +1,10 @@
+<Feature Id="0FAF7D1B-95B1-4053-B4E2-19FD5C9BBC88"
+    Title="My Site Cleanup Feature"
+    Description="Installs and uninstalls Farm-level job for My Site Cleanup."
+    Version="14.0.0.0"
+    Scope="Farm"
+    Hidden="TRUE"
+    ReceiverAssembly="Microsoft.Office.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.Office.Server.UserProfiles.MySiteCleanupFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature 
+
+    Id="7E0AABEE-B92B-4368-8742-21AB16453D02"
+
+    Title="$Resources:vsrv,PR_featureTitle;"
+    Description="$Resources:vsrv,PR_featureDesc;"
+    Version="1.0.1.0"
+    Scope="Web"
+    Hidden="TRUE"
+    SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3" 
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+      <ElementManifest Location="doclib.xml"/>
+    </ElementManifests>
+</Feature>
+

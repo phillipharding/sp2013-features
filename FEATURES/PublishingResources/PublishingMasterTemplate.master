@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<%@ Master language="C#" %>
+<%@ Import Namespace="Microsoft.SharePoint" %>
+<%@ Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="wssuc" TagName="Welcome" src="~/_controltemplates/15/Welcome.ascx" %>
+<%@ Register TagPrefix="wssuc" TagName="DesignModeConsole" src="~/_controltemplates/15/DesignModeConsole.ascx" %>
+<%@ Register TagPrefix="wssuc" TagName="MUISelector" src="~/_controltemplates/15/MUISelector.ascx" %>
+<%@ Register Tagprefix="PublishingWebControls" Namespace="Microsoft.SharePoint.Publishing.WebControls" Assembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register Tagprefix="PublishingNavigation" Namespace="Microsoft.SharePoint.Publishing.Navigation" Assembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="PublishingVariations" TagName="VariationsLabelMenu" src="~/_controltemplates/15/VariationsLabelMenu.ascx" %>
+<%@ Register TagPrefix="PublishingConsole" TagName="Console" src="~/_controltemplates/15/PublishingConsole.ascx" %>
+<%@ Register TagPrefix="PublishingSiteAction" TagName="SiteActionMenu" src="~/_controltemplates/15/PublishingActionMenu.ascx" %>
+<%@ Assembly Name="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register Tagprefix="MSSWC" Namespace="Microsoft.SharePoint.Portal.WebControls" Assembly="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="<%$Resources:wss, multipages_direction_dir_value %>" __expr-val-dir="ltr" runat="server">
+<head runat="server">
+	<meta name="GENERATOR" content="Microsoft SharePoint"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="Expires" content="0"/>
+	<SharePoint:RobotsMetaTag runat="server"/>
+	<title id="onetidTitle">
+		<asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server"/>
+	</title>
+	<Sharepoint:CssLink runat="server"/>
+	<SharePoint:CssRegistration Name="cui.css" Version="4" runat="server"/>
+	<SharePoint:CssRegistration name="<% $SPUrl:~sitecollection/Style Library/~language/Core Styles/controls.css %>" runat="server"/>
+	<SharePoint:CssRegistration name="<% $SPUrl:~SiteCollection/Style Library/~language/Themable/Core Styles/band-21.css %>" runat="server"/>
+	<SharePoint:ScriptLink name="init.js" localizable="false" runat="server"/>
+	<SharePoint:ScriptLink name="sp.js" loadafterui="true" Defer="false" localizable="false" runat="server"/>
+	<!--Placeholder for additional overrides-->
+	<asp:ContentPlaceHolder id="PlaceHolderAdditionalPageHead" runat="server"/>
+<script type="text/javascript">
+function extendBody()
+{
+	var current = document.getElementById("pageRoot");
+	while (current)
+	{
+		var shadowLeft, shadowRight;
+		if (current.nodeType != 1)
+		{
+			current = current.nextSibling;
+		}
+		else if (current.className.indexOf("shadow-left") != -1)
+		{
+			shadowLeft = current;
+			current = current.firstChild;
+		}
+		else if (current.className.indexOf("shadow-right") != -1)
+		{
+			shadowRight = current;
+			current = current.firstChild;
+		}
+		else if (current.className.indexOf("center") != -1 && shadowLeft && shadowRight)
+		{
+			if (document.body.clientHeight < current.clientHeight)
+			{
+				shadowLeft.style.height = "auto";
+				shadowRight.style.height = "auto";
+				shadowLeft.parentNode.style.height = "auto";
+			}
+			else
+			{
+				shadowLeft.style.height = "100%";
+				shadowRight.style.height = "100%";
+				shadowLeft.parentNode.style.height = "100%";
+			}
+			break;
+		}
+		else
+		{
+			current = current.nextSibling;
+		}
+	}
+}
+_spBodyOnLoadFunctionNames.push('extendBody');
+</script>
+</head>
+<body onload="javascript:_spBodyOnLoadWrapper();">
+	<WebPartPages:SPWebPartManager runat="server"/>
+	<form runat="server" onsubmit="return _spFormOnSubmitWrapper();">
+	<asp:ScriptManager id="ScriptManager" runat="server" EnablePageMethods="false" EnablePartialRendering="true" EnableScriptGlobalization="false" EnableScriptLocalization="true" />
+	<div id="pageRoot" class="band-master shadow-left"><div class="shadow-right">
+		<div class="center">
+			<div id="DeveloperDashboard" class="ms-developerdashboard"></div>
+			<wssuc:DesignModeConsole id="IdDesignModeConsole" runat="server"/>
+			<div class="authoring-region">
+				<div class="site-action-menu">
+					<PublishingSiteAction:SiteActionMenu runat="server"/>
+				</div>
+				<Sharepoint:DeveloperDashboardLauncher
+					ID="DeveloperDashboardLauncher"
+					CssClass="dashboard-launcher"
+					NavigateUrl="javascript:ToggleDeveloperDashboard()"
+					runat="server"
+					ImageUrl="/_layouts/images/star.gif"
+					Text="Launch the Developer Dashboard"/>
+				<div class="sharepoint-login ms-globallinks">
+					<!--Authentication for Authors only-->
+					<SharePoint:DelegateControl ControlId="GlobalSiteLink1" Scope="Farm" runat="server"/>
+					<SharePoint:DelegateControl ControlId="GlobalSiteLink2" Scope="Farm" runat="server"/>
+					<wssuc:Welcome id="explitLogout" runat="server"/>
+				</div>
+				<wssuc:MUISelector runat="server"/>
+				<div class="console">
+					<PublishingConsole:Console runat="server"/>
+				</div>
+			</div>
+			<div class="title-area">
+				<SharePoint:AspMenu ID="logoLinkId" runat="server" DataSourceID="SiteMapDataSourceRoot"
+					UseSimpleRendering="true" Orientation="Horizontal" EncodeTitle="false"
+					StaticDisplayLevels="1" MaximumDynamicDisplayLevels="0"
+					AccessKey="1" CssClass="logo"/>
+				<PublishingNavigation:PortalSiteMapDataSource ID="SiteMapDataSourceRoot" Runat="server"
+					SiteMapProvider="GlobalNavigation" EnableViewState="true"
+					StartFromCurrentNode="true" StartingNodeOffset="0" ShowStartingNode="true"/>
+				<div class="topLinkBar">
+					<div class="topLink">
+						<PublishingVariations:VariationsLabelMenu id="labelmenu1" runat="server"/>
+					</div>
+				</div>
+			</div>
+			<div class="nav-bar-wrapper-left"><div class="nav-bar-wrapper-right">
+			<div class="top-nav-bar">
+			<div class="fluid-content-wrapper">
+				<SharePoint:AspMenu ID="GlobalNav" runat="server" DataSourceID="SiteMapDataSource1"
+					UseSimpleRendering="true" Orientation="Horizontal" EncodeTitle="false"
+					StaticDisplayLevels="1" MaximumDynamicDisplayLevels="1"
+					CssClass="top-nav-menu band-menu" SkipLinkText="<%$Resources:cms,masterpages_skiplinktext%>"/>
+				<PublishingNavigation:PortalSiteMapDataSource ID="siteMapDataSource1" runat="server"
+					SiteMapProvider="GlobalNavigation" EnableViewState="true"
+					StartFromCurrentNode="true" StartingNodeOffset="0" ShowStartingNode="false"
+					TreatStartingNodeAsCurrent="true" TrimNonCurrentTypes="Heading"/>
+				</div>
+				<div class="search">
+					<asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server">
+						<MSSWC:SearchBoxEx id="SearchBox" RegisterStyles="false" TextBeforeDropDown="" TextBeforeTextBox="<%$Resources:cms,masterpages_searchbox_label%>" TextBoxWidth="100"
+							UseSiteDefaults="true" DropDownMode = "HideScopeDD" SuppressWebPartChrome="true" runat="server" WebPart="true" __WebPartId="{E64E624F-A80F-42F5-BBF7-A39640EE915F}"
+							GoImageUrl="<% $SPUrl:~sitecollection/Style Library/Images/Search_Arrow.jpg %>" GoImageActiveUrl="<% $SPUrl:~sitecollection/Style Library/Images/Search_Arrow.jpg %>"
+							GoImageUrlRTL="<% $SPUrl:~sitecollection/Style Library/Images/Search_Arrow_RTL.jpg %>" GoImageActiveUrlRTL="<% $SPUrl:~sitecollection/Style Library/Images/Search_Arrow_RTL.jpg %>" />
+					</asp:ContentPlaceHolder>
+				</div>
+				<div class="clearer"></div>
+			</div>
+			</div></div>
+			<asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" runat="server">
+				<div class="breadcrumb">
+					<asp:SiteMapPath ID="siteMapPath" Runat="server" SiteMapProvider="CurrentNavigation"
+						RenderCurrentNodeAsLink="false" CurrentNodeStyle-CssClass="current" NodeStyle-CssClass="ms-sitemapdirectional"/>
+				</div>
+			</asp:ContentPlaceHolder>
+			<asp:ContentPlaceHolder ID="PlaceHolderMiniConsole" runat="server" />
+			<div class="left-nav-bar">
+				<asp:ContentPlaceHolder id="PlaceHolderCalendarNavigator" runat="server" />
+				<asp:ContentPlaceHolder id="PlaceHolderLeftNavBarTop" runat="server" />
+				<asp:ContentPlaceHolder id="PlaceHolderLeftNavBar" runat="server">
+					<SharePoint:AspMenu ID="CurrentNav" runat="server" DataSourceID="SiteMapDS"
+						UseSimpleRendering="true" Orientation="Vertical" EncodeTitle="false"
+						StaticDisplayLevels="2" MaximumDynamicDisplayLevels="1"
+						CssClass="band-menu" SkipLinkText="<%$Resources:cms,masterpages_skiplinktext%>"/>
+					<PublishingNavigation:PortalSiteMapDataSource ID="SiteMapDS" runat="server"
+						SiteMapProvider="CurrentNavigation" EnableViewState="true"
+						StartFromCurrentNode="true" StartingNodeOffset="0" ShowStartingNode="false"
+						TreatStartingNodeAsCurrent="true" TrimNonCurrentTypes="Heading"/>
+				</asp:ContentPlaceHolder>
+				<asp:ContentPlaceHolder id="PlaceHolderLeftActions" runat ="server" />
+				<asp:ContentPlaceHolder id="PlaceHolderNavSpacer" runat="server" />
+			</div>
+			<div class="main-container" id="MSO_ContentDiv" runat="server">
+				<div class="page-title">
+					<asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" runat="server" />
+				</div>
+				<div class="main-content">
+					<asp:ContentPlaceHolder id="PlaceHolderMain" runat="server" />
+				</div>
+			</div>
+			<div class="footer clearer"></div>
+		</div>
+	</div></div>
+	<asp:Panel Visible="false" runat="server">
+		<asp:ContentPlaceHolder ID="PlaceHolderPageImage" runat="server" />
+		<asp:ContentPlaceHolder ID="PlaceHolderBodyLeftBorder" runat="server" />
+		<asp:ContentPlaceHolder ID="PlaceHolderTitleLeftBorder" runat="server" />
+		<asp:ContentPlaceHolder ID="PlaceHolderTitleAreaSeparator" runat="server" />
+		<asp:ContentPlaceHolder ID="OSSConsole" runat="server" />
+		<asp:ContentPlaceHolder ID="PlaceHolderTitleRightMargin" runat="server" />
+		<asp:ContentPlaceHolder id="PlaceHolderPageDescription" runat ="server" />
+		<asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" runat ="server" />
+		<asp:ContentPlaceHolder id="PlaceHolderTitleAreaClass" runat ="server" />
+		<asp:ContentPlaceHolder id="PlaceHolderBodyRightMargin" runat="server" />
+	</asp:Panel>
+	</form>
+	<SharePoint:DeveloperDashboard runat="server" />
+</body>
+</html>

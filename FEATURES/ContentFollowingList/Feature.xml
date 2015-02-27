@@ -1,0 +1,25 @@
+<Feature Id="A34E5458-8D20-4C0D-B137-E1390F5824A1"
+    Title="$Resources:spscore,ContentFollowingList_Feature_Title;"
+    Description="$Resources:spscore,ContentFollowingList_Feature_Description;"
+    Version="15.0.2.0"
+    Hidden="TRUE"
+    Scope="Site"
+    DefaultResourceFile="spscore"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.ContentFollowingListFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\ContentFollowingList.xml"/>
+        <ElementManifest Location="ContentFollowingList\FollowedContentListInstance.xml"/>
+    </ElementManifests>
+    <UpgradeActions>
+        <VersionRange EndVersion="15.0.1.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="ListTemplates\ContentFollowingList.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.2.0">
+          <CustomUpgradeAction Name="UnGhostAndAddProjectDiscoveryWebPart" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

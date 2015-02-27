@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<!-- REGION Forms Services Ribbon -->
+	<!-- Non-Contextual form library mode tab -->
+
+	<CustomAction
+	Id="Ribbon.Tabs.InfoPathHomeTab"
+	Location="CommandUI.Ribbon"
+	GroupId=""
+	Sequence="10"
+	Title="InfoPath Server Home Tab">
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.Tabs._children">
+
+			<Tab Id="Ribbon.Tabs.InfoPathHomeTab" Command="InfoPathHomeTab" Description="" Title="$Resources:core,cui_TabListFormEditTitle">
+				<Scaling Id="Ribbon.Tabs.InfoPathHomeTab.Scaling">
+					<MaxSize Id="Ribbon.Tabs.InfoPathHomeTab.Views.maxsize"
+							GroupId="Ribbon.Tabs.InfoPathHomeTab.Views" Sequence="10" Size="LargeMedium" />
+					<MaxSize Id="Ribbon.Tabs.InfoPathHomeTab.Clipboard.maxsize"
+							 GroupId="Ribbon.Tabs.InfoPathHomeTab.Clipboard" Sequence="20" Size="LargeMedium" />
+					<MaxSize Id="Ribbon.Tabs.InfoPathHomeTab.FormActions.maxsize"
+							GroupId="Ribbon.Tabs.InfoPathHomeTab.FormActions" Sequence="30" Size="LargeLarge" />
+					<MaxSize Id="Ribbon.Tabs.InfoPathHomeTab.Update.maxsize"
+							GroupId="Ribbon.Tabs.InfoPathHomeTab.Update" Sequence="40" Size="LargeLarge" />
+					<MaxSize Id="Ribbon.Tabs.InfoPathHomeTab.Survey.maxsize"
+							GroupId="Ribbon.Tabs.InfoPathHomeTab.Survey" Sequence="50" Size="LargeLarge" />
+					<Scale Id="Ribbon.Tabs.InfoPathHomeTab.Clipboard.Scaling.LargeSmall"
+							GroupId="Ribbon.Tabs.InfoPathHomeTab.Clipboard" Sequence="60" Size="LargeSmall" />
+					<Scale Id="Ribbon.Tabs.InfoPathHomeTab.FormActions.Scaling.LargeMedium"
+							GroupId="Ribbon.Tabs.InfoPathHomeTab.FormActions" Sequence="70" Size="LargeMedium" />
+					<Scale Id="Ribbon.Tabs.InfoPathHomeTab.Views.Scaling.Popup"
+							GroupId="Ribbon.Tabs.InfoPathHomeTab.Views" Sequence="80" Size="Popup" />
+					<Scale Id="Ribbon.Tabs.InfoPathHomeTab.Clipboard.Scaling.Popup"
+							GroupId="Ribbon.Tabs.InfoPathHomeTab.Clipboard" Sequence="90" Size="Popup" />
+					<Scale Id="Ribbon.Tabs.InfoPathHomeTab.FormActions.Scaling.Popup"
+							GroupId="Ribbon.Tabs.InfoPathHomeTab.FormActions" Sequence="100" Size="Popup" />
+					<Scale Id="Ribbon.Tabs.InfoPathHomeTab.Survey.Scaling.Popup"
+							GroupId="Ribbon.Tabs.InfoPathHomeTab.Survey" Sequence="110" Size="Popup" />
+				</Scaling>
+				<Groups Id="Ribbon.Tabs.InfoPathHomeTab.Groups">
+					<Group Id="Ribbon.Tabs.InfoPathHomeTab.FormActions" Command="InfoPathHomeTabFormActions" 
+						   Sequence="10"
+						   Description="" Title="$Resources:core,cui_GrpListFormCommitGroup;" Template="Ribbon.Templates.Flexible2">
+						<Controls Id="Ribbon.Tabs.InfoPathHomeTab.FormActions.Controls">
+							<Button Id="Ribbon.Tabs.InfoPathHomeTab.FormActions.Controls.btnSubmit"
+									Command="InfoPathFormSubmit"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-96" Image16by16Left="-16"
+									Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="-32" Image32by32Left="-64"
+									LabelText="$Resources:ipfscore,cui_RibbonSubmitButtonTitle;"
+									ToolTipTitle="$Resources:ipfscore,cui_RibbonSubmitButtonTitle;"
+									ToolTipDescription="$Resources:ipfscore,cui_RibbonSubmitButtonTooltip;"																																				
+									Sequence="10"
+									TemplateAlias="o1"
+							/>
+							<Button Id="Ribbon.Tabs.InfoPathHomeTab.FormActions.Controls.btnSave"
+									Command="InfoPathFormSave"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-96" Image16by16Left="-64"
+									Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="0" Image32by32Left="-32"
+									LabelText="$Resources:ipfscore,cui_RibbonSaveButtonTitle;"
+									ToolTipTitle="$Resources:ipfscore,cui_RibbonSaveButtonTitle;"
+									ToolTipDescription="$Resources:ipfscore,cui_RibbonSaveButtonTooltip;"																																															
+									Sequence="20"
+									TemplateAlias="o2"
+							/>
+							<Button Id="Ribbon.Tabs.InfoPathHomeTab.FormActions.Controls.btnSaveAs"
+									Command="InfoPathFormSaveAs"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-96" Image16by16Left="0"
+									Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="-64" Image32by32Left="0"
+									LabelText="$Resources:ipfscore,cui_RibbonSaveAsButtonTitle;"
+									ToolTipTitle="$Resources:ipfscore,cui_RibbonSaveAsButtonTitle;"
+									ToolTipDescription="$Resources:ipfscore,cui_RibbonSaveAsButtonTooltip;"																																															
+									Sequence="30"
+									TemplateAlias="o2"
+							/>
+							<Button Id="Ribbon.Tabs.InfoPathHomeTab.FormActions.Controls.btnClose"
+									Command="InfoPathFormClose"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-95" Image16by16Left="-96"
+									Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="-64" Image32by32Left="-32"
+									LabelText="$Resources:ipfscore,cui_RibbonCloseButtonTitle;"
+									ToolTipTitle="$Resources:ipfscore,cui_RibbonCloseButtonTitle;"
+									ToolTipDescription="$Resources:ipfscore,cui_RibbonCloseButtonTooltip;"																									
+									Sequence="40"
+									TemplateAlias="o2"
+							/>
+						</Controls>
+					</Group>
+					<Group Id="Ribbon.Tabs.InfoPathHomeTab.Clipboard"
+						Sequence="20"
+						Command="InfoPathClipboard"
+						Description=""
+						Title="$Resources:core,core,cui_GrpListFormClipboardGroup;"
+						Template="Ribbon.Templates.Flexible2" >
+						<Controls Id="Ribbon.Tabs.InfoPathHomeTab.Clipboard.Controls">
+							<Button
+								Id="Ribbon.Tabs.InfoPathHomeTab.Clipboard.Paste"
+								Command="InfoPathPaste"
+								Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-47" Image16by16Left="-96"
+								Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="0" Image32by32Left="-64"
+								LabelText="$Resources:core,cui_ButListFormPaste;"
+								ToolTipTitle="$Resources:core,ButPasteMenu;"
+								ToolTipDescription="$Resources:core,cui_STT_ButPasteMenu;"								
+								Sequence="10"
+								TemplateAlias="o1"/>
+							<Button
+								Id="Ribbon.Tabs.InfoPathHomeTab.Clipboard.Copy"
+								Command="InfoPathCopy"
+								Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-16" Image16by16Left="-112"
+								LabelText="$Resources:core,cui_ButListFormCopy;"
+								ToolTipTitle="$Resources:core,ButCopy;"
+								ToolTipDescription="$Resources:core,cui_STT_ButCopy;"						
+								Sequence="20"
+								TemplateAlias="o2"/>
+							<Button
+								Id="Ribbon.Tabs.InfoPathHomeTab.Clipboard.Cut"
+								Command="InfoPathCut"
+								Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="0" Image16by16Left="-112"
+								LabelText="$Resources:core,cui_ButListFormCut;"
+								ToolTipTitle="$Resources:core,ButCut;"
+								ToolTipDescription="$Resources:core,cui_STT_ButCut;"								
+								Sequence="30"
+								TemplateAlias="o2"/>
+						</Controls>
+					</Group>					
+					<Group Id="Ribbon.Tabs.InfoPathHomeTab.Views" Command="InfoPathHomeTabViews"
+						   Sequence="30"
+						   Description="" Title="$Resources:ipfscore,cui_RibbonViewGroupTitle;" Template="Ribbon.Templates.Flexible2">
+						<Controls Id="Ribbon.Tabs.InfoPathHomeTab.Views.Controls">
+
+							<Button Id="Ribbon.Tabs.InfoPathHomeTab.Views.Controls.btnPrintView"
+									Command="InfoPathFormPrintView"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-79" Image16by16Left="-96"
+									Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="0" Image32by32Left="0"
+									LabelText="$Resources:ipfscore,cui_RibbonPrintViewButtonTitle;"
+									Sequence="10"
+									ToolTipTitle="$Resources:ipfscore,cui_RibbonPrintViewButtonTitle;"
+									ToolTipDescription="$Resources:ipfscore,cui_RibbonPrintViewButtonTooltip;"											
+									TemplateAlias="o1"
+							/>
+
+							<Button Id="Ribbon.Tabs.InfoPathHomeTab.Views.Controls.btnPrintViewSmall"
+									Command="InfoPathFormPrintView"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-79" Image16by16Left="-96"
+									Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="0" Image32by32Left="0"
+									LabelText="$Resources:ipfscore,cui_RibbonPrintViewButtonTitle;"
+									ToolTipTitle="$Resources:ipfscore,cui_RibbonPrintViewButtonTitle;"
+									ToolTipDescription="$Resources:ipfscore,cui_RibbonPrintViewButtonTooltip;"
+									Sequence="10"
+									TemplateAlias="o2"
+							/>
+							<Label	Id="Ribbon.Tabs.InfoPathHomeTab.Views.labelCurrentView"
+									Command="InfoPathCurrentView"
+									QueryCommand=""
+									LabelText="$Resources:core,cui_ButCurrentView;"
+									Sequence="20"
+									TemplateAlias="o2"
+							/>
+							<DropDown Id="Ribbon.Tabs.InfoPathHomeTab.Views.ddViews"
+									Command="InfoPathFormViews"
+									PopulateDynamically="true"	
+									PopulateOnlyOnce="true"
+									PopulateQueryCommand="InfoPathPopulateViews"
+									QueryCommand="InfoPathQuerySelectedView"
+									Width="100px"
+									TemplateAlias="o2"
+									Sequence="30"
+									ToolTipTitle="$Resources:ipfscore,cui_RibbonViewGroupTitle;"
+									ToolTipDescription="$Resources:ipfscore,cui_stt_ViewsDropdown;"
+							/>
+						</Controls>
+					</Group>
+					<Group Id="Ribbon.Tabs.InfoPathHomeTab.Update" Command="InfoPathHomeTabUpdate"
+						   Sequence="40"
+						   Description="" Title="$Resources:ipfscore,cui_RibbonUpdateGroupTitle;" Template="Ribbon.Templates.Flexible2">
+						<Controls Id="Ribbon.Tabs.InfoPathHomeTab.Update.Controls">
+							<Button Id="Ribbon.Tabs.InfoPathHomeTab.Update.Controls.btnUpdate"
+									Command="InfoPathFormUpdate"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-96" Image16by16Left="-32"
+									Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="-32" Image32by32Left="0"
+									LabelText="$Resources:ipfscore,cui_RibbonUpdateButtonTitle;"
+									ToolTipTitle="$Resources:ipfscore,cui_RibbonUpdateButtonTitle;"
+									ToolTipDescription="$Resources:ipfscore,cui_RibbonUpdateButtonTooltip;"																						
+									Sequence="10"
+									TemplateAlias="o1"
+							/>
+						</Controls>
+					</Group>
+				</Groups>
+			</Tab>
+
+				</CommandUIDefinition>
+			</CommandUIDefinitions>
+		</CommandUIExtension>
+	</CustomAction>
+
+	<!-- Contextual form library mode tab (webpart scenario) -->
+
+	<CustomAction
+	Id="Ribbon.ContextualTabs.InfoPathHomeTab"
+	Location="CommandUI.Ribbon"
+	GroupId=""
+	Sequence="10"
+	Title="InfoPath Server Home Tab">
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.ContextualTabs._children">
+					<ContextualGroup 
+					Id="Ribbon.ContextualTabs.InfoPathHomeTab.CtxGroup" 
+					Sequence="90"
+					Command="InfoPathHomeTabCtxGroup" 
+					Title="$Resources:ipfscore,cui_RibbonInfoPathTabTitle" 
+					ContextualGroupId="ctxInfoPathHome"
+					Color="Purple"
+					>
+
+			<Tab Id="Ribbon.ContextualTabs.InfoPathHomeTab" Command="InfoPathHomeTab" Description="" Title="$Resources:core,cui_TabListFormEditTitle">
+				<Scaling Id="Ribbon.ContextualTabs.InfoPathHomeTab.Scaling">
+					<MaxSize Id="Ribbon.ContextualTabs.InfoPathHomeTab.Views.maxsize"
+							GroupId="Ribbon.ContextualTabs.InfoPathHomeTab.Views" Sequence="10" Size="LargeMedium" />
+					<MaxSize Id="Ribbon.ContextualTabs.InfoPathHomeTab.Clipboard.maxsize"
+							 GroupId="Ribbon.ContextualTabs.InfoPathHomeTab.Clipboard" Sequence="20" Size="LargeMedium" />
+					<MaxSize Id="Ribbon.ContextualTabs.InfoPathHomeTab.FormActions.maxsize"
+							GroupId="Ribbon.ContextualTabs.InfoPathHomeTab.FormActions" Sequence="30" Size="LargeLarge" />
+					<MaxSize Id="Ribbon.ContextualTabs.InfoPathHomeTab.Update.maxsize"
+							GroupId="Ribbon.ContextualTabs.InfoPathHomeTab.Update" Sequence="40" Size="LargeLarge" />
+					<MaxSize Id="Ribbon.ContextualTabs.InfoPathHomeTab.Survey.maxsize"
+							GroupId="Ribbon.ContextualTabs.InfoPathHomeTab.Survey" Sequence="50" Size="LargeLarge" />
+					<Scale Id="Ribbon.ContextualTabs.InfoPathHomeTab.Clipboard.Scaling.LargeSmall"
+							GroupId="Ribbon.ContextualTabs.InfoPathHomeTab.Clipboard" Sequence="60" Size="LargeSmall" />
+					<Scale Id="Ribbon.ContextualTabs.InfoPathHomeTab.FormActions.Scaling.LargeMedium"
+							GroupId="Ribbon.ContextualTabs.InfoPathHomeTab.FormActions" Sequence="70" Size="LargeMedium" />
+					<Scale Id="Ribbon.ContextualTabs.InfoPathHomeTab.Views.Scaling.Popup"
+							GroupId="Ribbon.ContextualTabs.InfoPathHomeTab.Views" Sequence="80" Size="Popup" />
+					<Scale Id="Ribbon.ContextualTabs.InfoPathHomeTab.Clipboard.Scaling.Popup"
+							GroupId="Ribbon.ContextualTabs.InfoPathHomeTab.Clipboard" Sequence="90" Size="Popup" />
+					<Scale Id="Ribbon.ContextualTabs.InfoPathHomeTab.FormActions.Scaling.Popup"
+							GroupId="Ribbon.ContextualTabs.InfoPathHomeTab.FormActions" Sequence="100" Size="Popup" />
+					<Scale Id="Ribbon.ContextualTabs.InfoPathHomeTab.Survey.Scaling.Popup"
+							GroupId="Ribbon.ContextualTabs.InfoPathHomeTab.Survey" Sequence="110" Size="Popup" />
+				</Scaling>
+				<Groups Id="Ribbon.ContextualTabs.InfoPathHomeTab.Groups">
+					<Group Id="Ribbon.ContextualTabs.InfoPathHomeTab.FormActions" Command="InfoPathHomeTabFormActions" 
+						   Sequence="10"
+						   Description="" Title="$Resources:core,cui_GrpListFormCommitGroup;" Template="Ribbon.Templates.Flexible2">
+						<Controls Id="Ribbon.ContextualTabs.InfoPathHomeTab.FormActions.Controls">
+							<Button Id="Ribbon.ContextualTabs.InfoPathHomeTab.FormActions.Controls.btnSubmit"
+									Command="InfoPathFormSubmit"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-96" Image16by16Left="-16"
+									Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="-32" Image32by32Left="-64"
+									LabelText="$Resources:ipfscore,cui_RibbonSubmitButtonTitle;"
+									ToolTipTitle="$Resources:ipfscore,cui_RibbonSubmitButtonTitle;"
+									ToolTipDescription="$Resources:ipfscore,cui_RibbonSubmitButtonTooltip;"																																				
+									Sequence="10"
+									TemplateAlias="o1"
+							/>
+							<Button Id="Ribbon.ContextualTabs.InfoPathHomeTab.FormActions.Controls.btnSave"
+									Command="InfoPathFormSave"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-96" Image16by16Left="-64"
+									Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="0" Image32by32Left="-32"
+									LabelText="$Resources:ipfscore,cui_RibbonSaveButtonTitle;"
+									ToolTipTitle="$Resources:ipfscore,cui_RibbonSaveButtonTitle;"
+									ToolTipDescription="$Resources:ipfscore,cui_RibbonSaveButtonTooltip;"																																															
+									Sequence="20"
+									TemplateAlias="o2"
+							/>
+							<Button Id="Ribbon.ContextualTabs.InfoPathHomeTab.FormActions.Controls.btnSaveAs"
+									Command="InfoPathFormSaveAs"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-96" Image16by16Left="0"
+									Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="-64" Image32by32Left="0"
+									LabelText="$Resources:ipfscore,cui_RibbonSaveAsButtonTitle;"
+									ToolTipTitle="$Resources:ipfscore,cui_RibbonSaveAsButtonTitle;"
+									ToolTipDescription="$Resources:ipfscore,cui_RibbonSaveAsButtonTooltip;"																																															
+									Sequence="30"
+									TemplateAlias="o2"
+							/>
+							<Button Id="Ribbon.ContextualTabs.InfoPathHomeTab.FormActions.Controls.btnClose"
+									Command="InfoPathFormClose"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-95" Image16by16Left="-96"
+									Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="-64" Image32by32Left="-32"
+									LabelText="$Resources:ipfscore,cui_RibbonCloseButtonTitle;"
+									ToolTipTitle="$Resources:ipfscore,cui_RibbonCloseButtonTitle;"
+									ToolTipDescription="$Resources:ipfscore,cui_RibbonCloseButtonTooltip;"																									
+									Sequence="40"
+									TemplateAlias="o2"
+							/>
+						</Controls>
+					</Group>
+					<Group Id="Ribbon.ContextualTabs.InfoPathHomeTab.Clipboard"
+						Sequence="20"
+						Command="InfoPathClipboard"
+						Description=""
+						Title="$Resources:core,core,cui_GrpListFormClipboardGroup;"
+						Template="Ribbon.Templates.Flexible2" >
+						<Controls Id="Ribbon.ContextualTabs.InfoPathHomeTab.Clipboard.Controls">
+							<Button
+								Id="Ribbon.ContextualTabs.InfoPathHomeTab.Clipboard.Paste"
+								Command="InfoPathPaste"
+								Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-47" Image16by16Left="-96"
+								Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="0" Image32by32Left="-64"
+								LabelText="$Resources:core,cui_ButListFormPaste;"
+								ToolTipTitle="$Resources:core,ButPasteMenu;"
+								ToolTipDescription="$Resources:core,cui_STT_ButPasteMenu;"								
+								Sequence="10"
+								TemplateAlias="o1"/>
+							<Button
+								Id="Ribbon.ContextualTabs.InfoPathHomeTab.Clipboard.Copy"
+								Command="InfoPathCopy"
+								Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-16" Image16by16Left="-112"
+								LabelText="$Resources:core,cui_ButListFormCopy;"
+								ToolTipTitle="$Resources:core,ButCopy;"
+								ToolTipDescription="$Resources:core,cui_STT_ButCopy;"						
+								Sequence="20"
+								TemplateAlias="o2"/>
+							<Button
+								Id="Ribbon.ContextualTabs.InfoPathHomeTab.Clipboard.Cut"
+								Command="InfoPathCut"
+								Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="0" Image16by16Left="-112"
+								LabelText="$Resources:core,cui_ButListFormCut;"
+								ToolTipTitle="$Resources:core,ButCut;"
+								ToolTipDescription="$Resources:core,cui_STT_ButCut;"								
+								Sequence="30"
+								TemplateAlias="o2"/>
+						</Controls>
+					</Group>					
+					<Group Id="Ribbon.ContextualTabs.InfoPathHomeTab.Views" Command="InfoPathHomeTabViews"
+						   Sequence="30"
+						   Description="" Title="$Resources:ipfscore,cui_RibbonViewGroupTitle;" Template="Ribbon.Templates.Flexible2">
+						<Controls Id="Ribbon.ContextualTabs.InfoPathHomeTab.Views.Controls">
+
+							<Button Id="Ribbon.ContextualTabs.InfoPathHomeTab.Views.Controls.btnPrintViewSmall"
+									Command="InfoPathFormPrintView"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-79" Image16by16Left="-96"
+									Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="0" Image32by32Left="0"
+									LabelText="$Resources:ipfscore,cui_RibbonPrintViewButtonTitle;"
+									ToolTipTitle="$Resources:ipfscore,cui_RibbonPrintViewButtonTitle;"
+									ToolTipDescription="$Resources:ipfscore,cui_RibbonPrintViewButtonTooltip;"
+									Sequence="10"
+									TemplateAlias="o2"
+							/>
+							<Label	Id="Ribbon.ContextualTabs.InfoPathHomeTab.Views.labelCurrentView"
+									Command="InfoPathCurrentView"
+									QueryCommand=""
+									LabelText="$Resources:core,cui_ButCurrentView;"
+									Sequence="20"
+									TemplateAlias="o2"
+							/>
+							<DropDown Id="Ribbon.ContextualTabs.InfoPathHomeTab.Views.ddViews"
+									Command="InfoPathFormViews"
+									PopulateDynamically="true"	
+									PopulateOnlyOnce="true"
+									PopulateQueryCommand="InfoPathPopulateViews"
+									QueryCommand="InfoPathQuerySelectedView"
+									Width="100px"
+									TemplateAlias="o2"
+									Sequence="30"
+									ToolTipTitle="$Resources:ipfscore,cui_RibbonViewGroupTitle;"
+									ToolTipDescription="$Resources:ipfscore,cui_stt_ViewsDropdown;"
+							/>
+						</Controls>
+					</Group>
+					<Group Id="Ribbon.ContextualTabs.InfoPathHomeTab.Update" Command="InfoPathHomeTabUpdate"
+						   Sequence="40"
+						   Description="" Title="$Resources:ipfscore,cui_RibbonUpdateGroupTitle;" Template="Ribbon.Templates.Flexible2">
+						<Controls Id="Ribbon.ContextualTabs.InfoPathHomeTab.Update.Controls">
+							<Button Id="Ribbon.ContextualTabs.InfoPathHomeTab.Update.Controls.btnUpdate"
+									Command="InfoPathFormUpdate"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-96" Image16by16Left="-32"
+									Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="-32" Image32by32Left="0"
+									LabelText="$Resources:ipfscore,cui_RibbonUpdateButtonTitle;"
+									ToolTipTitle="$Resources:ipfscore,cui_RibbonUpdateButtonTitle;"
+									ToolTipDescription="$Resources:ipfscore,cui_RibbonUpdateButtonTooltip;"																						
+									Sequence="10"
+									TemplateAlias="o1"
+							/>
+						</Controls>
+					</Group>
+				</Groups>
+			</Tab>
+
+					</ContextualGroup>
+				</CommandUIDefinition>
+			</CommandUIDefinitions>
+		</CommandUIExtension>
+	</CustomAction>
+
+	<!-- Non-Contextual list mode tab -->
+
+	<CustomAction
+			Id="Ribbon.Tabs.InfoPathListTab"
+			Location="CommandUI.Ribbon"
+			GroupId=""
+			Sequence="20"
+			Title="InfoPath Server List Forms Tab">
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.Tabs._children">
+
+				<Tab Id="Ribbon.Tabs.InfoPathListTab" Command="InfoPathListTab" Description="" Title="$Resources:core,cui_TabListFormEditTitle">
+					<Scaling Id="Ribbon.Tabs.InfoPathListTab.Scaling">
+						<MaxSize Id="Ribbon.Tabs.InfoPathListTab.Views.maxsize"
+								GroupId="Ribbon.Tabs.InfoPathListTab.Views" Sequence="10" Size="MediumMedium" />
+						<MaxSize Id="Ribbon.Tabs.InfoPathListTab.Clipboard.maxsize"
+								 GroupId="Ribbon.Tabs.InfoPathListTab.Clipboard" Sequence="20" Size="LargeMedium" />
+						<MaxSize Id="Ribbon.Tabs.InfoPathListTab.Actions.maxsize"
+								GroupId="Ribbon.Tabs.InfoPathListTab.Actions" Sequence="30" Size="LargeLarge" />
+						<MaxSize Id="Ribbon.Tabs.InfoPathListTab.Actions.maxsize"
+								GroupId="Ribbon.Tabs.InfoPathListTab.Commit" Sequence="40" Size="LargeLarge" />
+						<MaxSize Id="Ribbon.Tabs.InfoPathListTab.Survey.maxsize"
+								GroupId="Ribbon.Tabs.InfoPathListTab.Survey" Sequence="50" Size="LargeLarge" />
+						<Scale Id="Ribbon.Tabs.InfoPathListTab.Views.Scaling.Popup"
+								GroupId="Ribbon.Tabs.InfoPathListTab.Views" Sequence="60" Size="Popup" />
+						<Scale Id="Ribbon.Tabs.InfoPathListTab.Clipboard.Scaling.Popup"
+								GroupId="Ribbon.Tabs.InfoPathListTab.Clipboard" Sequence="70" Size="Popup" />
+						<Scale Id="Ribbon.Tabs.InfoPathListTab.Actions.Scaling.Popup"
+								GroupId="Ribbon.Tabs.InfoPathListTab.Actions" Sequence="80" Size="Popup" />
+						<Scale Id="Ribbon.Tabs.InfoPathListTab.Commit.Scaling.Popup"
+								GroupId="Ribbon.Tabs.InfoPathListTab.Commit" Sequence="90" Size="Popup" />
+						<Scale Id="Ribbon.Tabs.InfoPathListTab.Clipboard.Scaling.Popup"
+								GroupId="Ribbon.Tabs.InfoPathListTab.Clipboard" Sequence="100" Size="Popup" />
+          </Scaling>
+					<Groups Id="Ribbon.Tabs.InfoPathListTab.Groups">
+						<Group Id="Ribbon.Tabs.InfoPathListTab.Clipboard"
+							Sequence="20"
+							Command="InfoPathClipboard"
+							Description=""
+							Title="$Resources:core,core,cui_GrpListFormClipboardGroup;"
+							Template="Ribbon.Templates.Flexible2" >
+							<Controls Id="Ribbon.Tabs.InfoPathListTab.Clipboard.Controls">
+								<Button
+									Id="Ribbon.Tabs.InfoPathListTab.Clipboard.Paste"
+									Command="InfoPathPaste"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-47" Image16by16Left="-96"
+									Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="0" Image32by32Left="-64"
+									LabelText="$Resources:core,cui_ButListFormPaste;"
+									ToolTipTitle="$Resources:core,ButPasteMenu;"
+									ToolTipDescription="$Resources:core,cui_STT_ButPasteMenu;"
+									Sequence="10"
+									TemplateAlias="o1"/>
+								<Button
+									Id="Ribbon.Tabs.InfoPathListTab.Clipboard.Copy"
+									Command="InfoPathCopy"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-16" Image16by16Left="-112"
+									LabelText="$Resources:core,cui_ButListFormCopy;"
+									ToolTipTitle="$Resources:core,ButCopy;"
+									ToolTipDescription="$Resources:core,cui_STT_ButCopy;"
+									Sequence="20"
+									TemplateAlias="o2"/>
+								<Button
+									Id="Ribbon.Tabs.InfoPathListTab.Clipboard.Cut"
+									Command="InfoPathCut"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="0" Image16by16Left="-112"
+									LabelText="$Resources:core,cui_ButListFormCut;"
+									ToolTipTitle="$Resources:core,ButCut;"
+									ToolTipDescription="$Resources:core,cui_STT_ButCut;"
+									Sequence="30"
+									TemplateAlias="o2"/>
+							</Controls>
+						</Group>
+						<Group Id="Ribbon.Tabs.InfoPathListTab.Views" 
+							   Command="InfoPathListTabViews"
+							   Description="" 
+							   Sequence="40"
+							   Title="$Resources:ipfscore,cui_RibbonViewGroupTitle;" 
+							   Template="Ribbon.Templates.Flexible2">
+							<Controls Id="Ribbon.Tabs.InfoPathListTab.Views.Controls">
+								<Label	Id="Ribbon.Tabs.InfoPathListTab.Views.labelCurrentView"
+										Command="InfoPathCurrentView"
+										QueryCommand=""
+										LabelText="$Resources:core,cui_ButCurrentView;"
+										Sequence="10"
+										TemplateAlias="o2"
+								/>
+								<DropDown Id="Ribbon.Tabs.InfoPathListTab.Views.ddViews"
+										Command="InfoPathFormViews"
+										PopulateDynamically="true"
+										PopulateOnlyOnce="true"
+										PopulateQueryCommand="InfoPathPopulateViews"
+										QueryCommand="InfoPathQuerySelectedView"
+										Width="100px"
+										Sequence="20"
+										TemplateAlias="o2"
+										ToolTipTitle="$Resources:ipfscore,cui_RibbonViewGroupTitle;"
+										ToolTipDescription="$Resources:ipfscore,cui_stt_ViewsDropdown;"													
+								/>
+							</Controls>
+						</Group>
+						<Group Id="Ribbon.Tabs.InfoPathListTab.Commit" 
+								Command="InfoPathListTabCommit" 
+								Description="" 
+								Sequence="10"
+								Title="$Resources:core,cui_GrpListFormCommitGroup;" 
+								Template="Ribbon.Templates.Flexible2">
+							<Controls Id="Ribbon.Tabs.InfoPathListTab.Commit.Controls">
+								<Button Id="Ribbon.Tabs.InfoPathListTab.Commit.Controls.btnSubmit"
+										Command="InfoPathFormSubmit"
+										Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-96" Image16by16Left="-64"
+										Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="0" Image32by32Left="-32"
+										LabelText="$Resources:ipfscore,cui_RibbonSaveButtonTitle;"
+										ToolTipTitle="$Resources:core,cui_ButListFormSave;"
+										ToolTipDescription="$Resources:ipfscore,cui_RibbonSaveButtonTooltip;"		
+										Sequence="10"
+										TemplateAlias="o1"
+								/>
+								<Button Id="Ribbon.Tabs.InfoPathListTab.Commit.Controls.btnClose"
+										Command="InfoPathFormClose"
+										Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-95" Image16by16Left="-96"
+										Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="-64" Image32by32Left="-32"
+										LabelText="$Resources:ipfscore,cui_RibbonCloseButtonTitle;"
+										ToolTipTitle="$Resources:ipfscore,cui_RibbonCloseButtonTitle;"
+										ToolTipDescription="$Resources:ipfscore,cui_RibbonCloseButtonTooltip;"														
+										Sequence="20"
+										TemplateAlias="o1"
+							/>
+							</Controls>
+						</Group>
+						<Group Id="Ribbon.Tabs.InfoPathListTab.Actions" 
+								Command="InfoPathListTabActions"
+								Description=""
+								Sequence="30"
+								Title="$Resources:core,cui_GrpActions;"
+								Template="Ribbon.Templates.Flexible2" >
+							<Controls Id="Ribbon.Tabs.InfoPathListTab.Actions.Controls">
+								<Button Id="Ribbon.Tabs.InfoPathListTab.Actions.Controls.btnDelete"
+									Command="InfoPathListDeleteItem"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-96" Image16by16Left="-80"
+									Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="-64" Image32by32Left="-64"
+									LabelText="$Resources:core,cui_ButDeleteItem;"
+									ToolTipTitle="$Resources:core,cui_ButDeleteItem;"
+									ToolTipDescription="$Resources:core,cui_STT_ButListFormDeleteItem;"
+									Sequence="10"
+									TemplateAlias="o1"
+								/>						
+							</Controls>
+						</Group>
+					</Groups>
+				</Tab>
+
+				</CommandUIDefinition>
+			</CommandUIDefinitions>
+		</CommandUIExtension>
+	</CustomAction>
+
+	<!-- Contextual list mode tab (webpart scenario) -->
+
+	<CustomAction
+	Id="Ribbon.ContextualTabs.InfoPathListTab"
+	Location="CommandUI.Ribbon"
+	GroupId=""
+	Sequence="10"
+	Title="InfoPath Server List Forms Tab">
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.ContextualTabs._children">
+					<ContextualGroup 
+					Id="Ribbon.ContextualTabs.InfoPathListTab.CtxGroup" 
+					Sequence="80"
+					Command="InfoPathListTabCtxGroup" 
+					Title="$Resources:ipfscore,cui_RibbonInfoPathTabTitle" 
+					ContextualGroupId="ctxInfoPathList"
+					Color="Purple"
+					>
+
+				<Tab Id="Ribbon.ContextualTabs.InfoPathListTab" Command="InfoPathListTab" Description="" Title="$Resources:core,cui_TabListFormEditTitle">
+					<Scaling Id="Ribbon.ContextualTabs.InfoPathListTab.Scaling">
+						<MaxSize Id="Ribbon.ContextualTabs.InfoPathListTab.Views.maxsize"
+								GroupId="Ribbon.ContextualTabs.InfoPathListTab.Views" Sequence="10" Size="MediumMedium" />
+						<MaxSize Id="Ribbon.ContextualTabs.InfoPathListTab.Clipboard.maxsize"
+								 GroupId="Ribbon.ContextualTabs.InfoPathListTab.Clipboard" Sequence="20" Size="LargeMedium" />
+						<MaxSize Id="Ribbon.ContextualTabs.InfoPathListTab.Actions.maxsize"
+								GroupId="Ribbon.ContextualTabs.InfoPathListTab.Actions" Sequence="30" Size="LargeLarge" />
+						<MaxSize Id="Ribbon.ContextualTabs.InfoPathListTab.Actions.maxsize"
+								GroupId="Ribbon.ContextualTabs.InfoPathListTab.Commit" Sequence="40" Size="LargeLarge" />
+						<MaxSize Id="Ribbon.ContextualTabs.InfoPathListTab.Survey.maxsize"
+								GroupId="Ribbon.ContextualTabs.InfoPathListTab.Survey" Sequence="50" Size="LargeLarge" />
+						<Scale Id="Ribbon.ContextualTabs.InfoPathListTab.Views.Scaling.Popup"
+								GroupId="Ribbon.ContextualTabs.InfoPathListTab.Views" Sequence="60" Size="Popup" />
+						<Scale Id="Ribbon.ContextualTabs.InfoPathListTab.Clipboard.Scaling.Popup"
+								GroupId="Ribbon.ContextualTabs.InfoPathListTab.Clipboard" Sequence="70" Size="Popup" />
+						<Scale Id="Ribbon.ContextualTabs.InfoPathListTab.Actions.Scaling.Popup"
+								GroupId="Ribbon.ContextualTabs.InfoPathListTab.Actions" Sequence="80" Size="Popup" />
+						<Scale Id="Ribbon.ContextualTabs.InfoPathListTab.Commit.Scaling.Popup"
+								GroupId="Ribbon.ContextualTabs.InfoPathListTab.Commit" Sequence="90" Size="Popup" />
+						<Scale Id="Ribbon.ContextualTabs.InfoPathListTab.Clipboard.Scaling.Popup"
+								GroupId="Ribbon.ContextualTabs.InfoPathListTab.Clipboard" Sequence="100" Size="Popup" />
+          </Scaling>
+					<Groups Id="Ribbon.ContextualTabs.InfoPathListTab.Groups">
+						<Group Id="Ribbon.ContextualTabs.InfoPathListTab.Clipboard"
+							Sequence="20"
+							Command="InfoPathClipboard"
+							Description=""
+							Title="$Resources:core,core,cui_GrpListFormClipboardGroup;"
+							Template="Ribbon.Templates.Flexible2" >
+							<Controls Id="Ribbon.ContextualTabs.InfoPathListTab.Clipboard.Controls">
+								<Button
+									Id="Ribbon.ContextualTabs.InfoPathListTab.Clipboard.Paste"
+									Command="InfoPathPaste"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-47" Image16by16Left="-96"
+									Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="0" Image32by32Left="-64"
+									LabelText="$Resources:core,cui_ButListFormPaste;"
+									ToolTipTitle="$Resources:core,ButPasteMenu;"
+									ToolTipDescription="$Resources:core,cui_STT_ButPasteMenu;"
+									Sequence="10"
+									TemplateAlias="o1"/>
+								<Button
+									Id="Ribbon.ContextualTabs.InfoPathListTab.Clipboard.Copy"
+									Command="InfoPathCopy"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-16" Image16by16Left="-112"
+									LabelText="$Resources:core,cui_ButListFormCopy;"
+									ToolTipTitle="$Resources:core,ButCopy;"
+									ToolTipDescription="$Resources:core,cui_STT_ButCopy;"
+									Sequence="20"
+									TemplateAlias="o2"/>
+								<Button
+									Id="Ribbon.ContextualTabs.InfoPathListTab.Clipboard.Cut"
+									Command="InfoPathCut"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="0" Image16by16Left="-112"
+									LabelText="$Resources:core,cui_ButListFormCut;"
+									ToolTipTitle="$Resources:core,ButCut;"
+									ToolTipDescription="$Resources:core,cui_STT_ButCut;"
+									Sequence="30"
+									TemplateAlias="o2"/>
+							</Controls>
+						</Group>
+						<Group Id="Ribbon.ContextualTabs.InfoPathListTab.Views" 
+							   Command="InfoPathListTabViews"
+							   Description="" 
+							   Sequence="40"
+							   Title="$Resources:ipfscore,cui_RibbonViewGroupTitle;" 
+							   Template="Ribbon.Templates.Flexible2">
+							<Controls Id="Ribbon.ContextualTabs.InfoPathListTab.Views.Controls">
+								<Label	Id="Ribbon.ContextualTabs.InfoPathListTab.Views.labelCurrentView"
+										Command="InfoPathCurrentView"
+										QueryCommand=""
+										LabelText="$Resources:core,cui_ButCurrentView;"
+										Sequence="10"
+										TemplateAlias="o2"
+								/>
+								<DropDown Id="Ribbon.ContextualTabs.InfoPathListTab.Views.ddViews"
+										Command="InfoPathFormViews"
+										PopulateDynamically="true"
+										PopulateOnlyOnce="true"
+										PopulateQueryCommand="InfoPathPopulateViews"
+										QueryCommand="InfoPathQuerySelectedView"
+										Width="100px"
+										Sequence="20"
+										TemplateAlias="o2"
+										ToolTipTitle="$Resources:ipfscore,cui_RibbonViewGroupTitle;"
+										ToolTipDescription="$Resources:ipfscore,cui_stt_ViewsDropdown;"													
+								/>
+							</Controls>
+						</Group>
+						<Group Id="Ribbon.ContextualTabs.InfoPathListTab.Commit" 
+								Command="InfoPathListTabCommit" 
+								Description="" 
+								Sequence="10"
+								Title="$Resources:core,cui_GrpListFormCommitGroup;" 
+								Template="Ribbon.Templates.Flexible2">
+							<Controls Id="Ribbon.ContextualTabs.InfoPathListTab.Commit.Controls">
+								<Button Id="Ribbon.ContextualTabs.InfoPathListTab.Commit.Controls.btnSubmit"
+										Command="InfoPathFormSubmit"
+										Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-96" Image16by16Left="-64"
+										Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="0" Image32by32Left="-32"
+										LabelText="$Resources:ipfscore,cui_RibbonSaveButtonTitle;"
+										ToolTipTitle="$Resources:core,cui_ButListFormSave;"
+										ToolTipDescription="$Resources:ipfscore,cui_RibbonSaveButtonTooltip;"		
+										Sequence="10"
+										TemplateAlias="o1"
+								/>
+								<Button Id="Ribbon.ContextualTabs.InfoPathListTab.Commit.Controls.btnClose"
+										Command="InfoPathFormClose"
+										Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-95" Image16by16Left="-96"
+										Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="-64" Image32by32Left="-32"
+										LabelText="$Resources:ipfscore,cui_RibbonCloseButtonTitle;"
+										ToolTipTitle="$Resources:ipfscore,cui_RibbonCloseButtonTitle;"
+										ToolTipDescription="$Resources:ipfscore,cui_RibbonCloseButtonTooltip;"														
+										Sequence="20"
+										TemplateAlias="o1"
+							/>
+							</Controls>
+						</Group>
+						<Group Id="Ribbon.ContextualTabs.InfoPathListTab.Actions" 
+								Command="InfoPathListTabActions"
+								Description=""
+								Sequence="30"
+								Title="$Resources:core,cui_GrpActions;"
+								Template="Ribbon.Templates.Flexible2" >
+							<Controls Id="Ribbon.ContextualTabs.InfoPathListTab.Actions.Controls">
+								<Button Id="Ribbon.ContextualTabs.InfoPathListTab.Actions.Controls.btnDelete"
+									Command="InfoPathListDeleteItem"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-96" Image16by16Left="-80"
+									Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="-64" Image32by32Left="-64"
+									LabelText="$Resources:core,cui_ButDeleteItem;"
+									ToolTipTitle="$Resources:core,cui_ButDeleteItem;"
+									ToolTipDescription="$Resources:core,cui_STT_ButListFormDeleteItem;"
+									Sequence="10"
+									TemplateAlias="o1"
+								/>						
+							</Controls>
+						</Group>
+					</Groups>
+				</Tab>
+
+					</ContextualGroup>
+				</CommandUIDefinition>
+			</CommandUIDefinitions>
+		</CommandUIExtension>
+	</CustomAction>
+
+	<!-- Non-Contextual list display mode tab -->
+
+	<CustomAction
+			Id="Ribbon.Tabs.InfoPathListDisplayTab"
+			Location="CommandUI.Ribbon"
+			GroupId=""
+			Sequence="10"
+			Title="InfoPath Server List Forms Display Tab">
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.Tabs._children">
+
+				<Tab Id="Ribbon.Tabs.InfoPathListDisplayTab" Command="InfoPathListDisplayTab" Description="" Title="$Resources:core,cui_TabListFormDisplayTitle">
+					<Scaling Id="Ribbon.Tabs.InfoPathListDisplayTab.Scaling">
+						<MaxSize Id="Ribbon.Tabs.InfoPathListDisplayTab.Manage.maxsize"
+								GroupId="Ribbon.Tabs.InfoPathListDisplayTab.Manage" Sequence="10" Size="LargeMedium" />
+						<MaxSize Id="Ribbon.Tabs.InfoPathListDisplayTab.Close.maxsize"
+								 GroupId="Ribbon.Tabs.InfoPathListDisplayTab.Close" Sequence="20" Size="LargeLarge" />
+						<Scale Id="Ribbon.Tabs.InfoPathListDisplayTab.Manage.Scaling.LargeSmall"
+								GroupId="Ribbon.Tabs.InfoPathListDisplayTab.Manage" Sequence="30" Size="LargeSmall" />
+						<Scale Id="Ribbon.Tabs.InfoPathListDisplayTab.Close.Scaling.Group"
+								GroupId="Ribbon.Tabs.InfoPathListDisplayTab.Close" Sequence="40" Size="Group" />
+					</Scaling>
+					<Groups Id="Ribbon.Tabs.InfoPathListDisplayTab.Groups">
+						<Group Id="Ribbon.Tabs.InfoPathListDisplayTab.Manage"
+							Sequence="10"
+							Command="InfoPathListDisplayTabManage"
+							Description=""
+							Title="$Resources:core,core,cui_GrpListFormManageGroup;"
+							Template="Ribbon.Templates.Flexible2" >
+							<Controls Id="Ribbon.Tabs.InfoPathListDisplayTab.Manage.Controls">
+								<Button
+									Id="Ribbon.Tabs.InfoPathListDisplayTab.Manage.Controls.btnEdit"
+									Command="InfoPathListDisplayEdit"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-63" Image16by16Left="-96"
+									Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="-32" Image32by32Left="-32"
+									LabelText="$Resources:core,cui_ButEditItem;"
+									ToolTipTitle="$Resources:core,cui_ButEditItem;"
+									ToolTipDescription="$Resources:core,cui_STT_ButEditItem;"
+									Sequence="10"
+									TemplateAlias="o1"/>
+								<Button
+									Id="Ribbon.Tabs.InfoPathListDisplayTab.Manage.Controls.btnAlertMe"
+									Command="InfoPathListDisplayAlertMe"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-96" Image16by16Left="-48"
+									LabelText="$Resources:core,cui_ButListFormDisplayAlert;"
+									ToolTipTitle="$Resources:core,cui_ButListFormDisplayAlert;"
+									ToolTipDescription="$Resources:core,cui_STT_ButAlertMe;"
+									Sequence="20"
+									TemplateAlias="o2"/>
+								<Button
+									Id="Ribbon.Tabs.InfoPathListDisplayTab.Manage.Controls.btnDelete"
+									Command="InfoPathListDisplayDelete"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-96" Image16by16Left="-80"
+									LabelText="$Resources:core,cui_ButDeleteItem;"
+									ToolTipTitle="$Resources:core,cui_ButDeleteItem;"
+									ToolTipDescription="$Resources:core,cui_STT_ButDeleteItem;"
+									Sequence="30"
+									TemplateAlias="o2"/>
+							</Controls>
+						</Group>
+						<Group Id="Ribbon.Tabs.InfoPathListDisplayTab.Close" 
+							Command="InfoPathListDisplayTabClose"
+							Description=""
+							Sequence="20"
+							Title="$Resources:core,core,cui_GrpListFormCloseGroup;" 
+							Template="Ribbon.Templates.Flexible2">
+							<Controls Id="Ribbon.Tabs.InfoPathListDisplayTab.Close.Controls">
+								<Button
+									Id="Ribbon.Tabs.InfoPathListDisplayTab.Close.Controls.btnClose"
+									Command="InfoPathListDisplayClose"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-95" Image16by16Left="-96"
+									Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="-64" Image32by32Left="-32"
+									LabelText="$Resources:ipfscore,cui_RibbonCloseButtonTitle;"
+									ToolTipTitle="$Resources:ipfscore,cui_RibbonCloseButtonTitle;"
+									ToolTipDescription="$Resources:ipfscore,cui_RibbonCloseButtonTooltip;"
+									Sequence="10"
+									TemplateAlias="o1"/>
+							</Controls>
+						</Group>
+					</Groups>
+				</Tab>
+
+				</CommandUIDefinition>
+			</CommandUIDefinitions>
+		</CommandUIExtension>
+	</CustomAction>
+
+	<!-- Contextual list display mode tab (webpart scenario) -->
+
+	<CustomAction
+			Id="Ribbon.ContextualTabs.InfoPathListDisplayTab"
+			Location="CommandUI.Ribbon"
+			GroupId=""
+			Sequence="20"
+			Title="InfoPath Server List Forms Tab">
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition Location="Ribbon.ContextualTabs._children">
+					<ContextualGroup 
+					Id="Ribbon.ContextualTabs.InfoPathListDisplayTab.CtxGroup" 
+					Sequence="70"
+					Command="InfoPathListDisplayTabCtxGroup" 
+					Title="$Resources:ipfscore,cui_RibbonInfoPathTabTitle" 
+					ContextualGroupId="ctxInfoPathListDisplay"
+					Color="Purple"
+					>
+
+				<Tab Id="Ribbon.ContextualTabs.InfoPathListDisplayTab" Command="InfoPathListDisplayTab" Description="" Title="$Resources:core,cui_TabListFormDisplayTitle">
+					<Scaling Id="Ribbon.ContextualTabs.InfoPathListDisplayTab.Scaling">
+						<MaxSize Id="Ribbon.ContextualTabs.InfoPathListDisplayTab.Manage.maxsize"
+								GroupId="Ribbon.ContextualTabs.InfoPathListDisplayTab.Manage" Sequence="10" Size="LargeMedium" />
+						<MaxSize Id="Ribbon.ContextualTabs.InfoPathListDisplayTab.Close.maxsize"
+								 GroupId="Ribbon.ContextualTabs.InfoPathListDisplayTab.Close" Sequence="20" Size="LargeLarge" />
+						<Scale Id="Ribbon.ContextualTabs.InfoPathListDisplayTab.Manage.Scaling.LargeSmall"
+								GroupId="Ribbon.ContextualTabs.InfoPathListDisplayTab.Manage" Sequence="30" Size="LargeSmall" />
+						<Scale Id="Ribbon.ContextualTabs.InfoPathListDisplayTab.Close.Scaling.Group"
+								GroupId="Ribbon.ContextualTabs.InfoPathListDisplayTab.Close" Sequence="40" Size="Group" />
+					</Scaling>
+					<Groups Id="Ribbon.ContextualTabs.InfoPathListDisplayTab.Groups">
+						<Group Id="Ribbon.ContextualTabs.InfoPathListDisplayTab.Manage"
+							Sequence="10"
+							Command="InfoPathListDisplayTabManage"
+							Description=""
+							Title="$Resources:core,core,cui_GrpListFormManageGroup;"
+							Template="Ribbon.Templates.Flexible2" >
+							<Controls Id="Ribbon.ContextualTabs.InfoPathListDisplayTab.Manage.Controls">
+								<Button
+									Id="Ribbon.ContextualTabs.InfoPathListDisplayTab.Manage.Controls.btnEdit"
+									Command="InfoPathListDisplayEdit"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-63" Image16by16Left="-96"
+									Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="-32" Image32by32Left="-32"
+									LabelText="$Resources:core,cui_ButEditItem;"
+									ToolTipTitle="$Resources:core,cui_ButEditItem;"
+									ToolTipDescription="$Resources:core,cui_STT_ButEditItem;"
+									Sequence="10"
+									TemplateAlias="o1"/>
+								<Button
+									Id="Ribbon.ContextualTabs.InfoPathListDisplayTab.Manage.Controls.btnAlertMe"
+									Command="InfoPathListDisplayAlertMe"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-96" Image16by16Left="-48"
+									LabelText="$Resources:core,cui_ButListFormDisplayAlert;"
+									ToolTipTitle="$Resources:core,cui_ButListFormDisplayAlert;"
+									ToolTipDescription="$Resources:core,cui_STT_ButAlertMe;"
+									Sequence="20"
+									TemplateAlias="o2"/>
+								<Button
+									Id="Ribbon.ContextualTabs.InfoPathListDisplayTab.Manage.Controls.btnDelete"
+									Command="InfoPathListDisplayDelete"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-96" Image16by16Left="-80"
+									LabelText="$Resources:core,cui_ButDeleteItem;"
+									ToolTipTitle="$Resources:core,cui_ButDeleteItem;"
+									ToolTipDescription="$Resources:core,cui_STT_ButDeleteItem;"
+									Sequence="30"
+									TemplateAlias="o2"/>
+							</Controls>
+						</Group>
+						<Group Id="Ribbon.ContextualTabs.InfoPathListDisplayTab.Close" 
+							Command="InfoPathListDisplayTabClose"
+							Description=""
+							Sequence="20"
+							Title="$Resources:core,core,cui_GrpListFormCloseGroup;" 
+							Template="Ribbon.Templates.Flexible2">
+							<Controls Id="Ribbon.ContextualTabs.InfoPathListDisplayTab.Close.Controls">
+								<Button
+									Id="Ribbon.ContextualTabs.InfoPathListDisplayTab.Close.Controls.btnClose"
+									Command="InfoPathListDisplayClose"
+									Image16by16="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image16by16Top="-95" Image16by16Left="-96"
+									Image32by32="/_layouts/15/inc/$Resources:core,Language;/ipfsimages.png?rev=23" Image32by32Top="-64" Image32by32Left="-32"
+									LabelText="$Resources:ipfscore,cui_RibbonCloseButtonTitle;"
+									ToolTipTitle="$Resources:ipfscore,cui_RibbonCloseButtonTitle;"
+									ToolTipDescription="$Resources:ipfscore,cui_RibbonCloseButtonTooltip;"
+									Sequence="10"
+									TemplateAlias="o1"/>
+							</Controls>
+						</Group>
+					</Groups>
+				</Tab>
+
+					</ContextualGroup>
+				</CommandUIDefinition>
+			</CommandUIDefinitions>
+		</CommandUIExtension>
+	</CustomAction>
+
+</Elements>

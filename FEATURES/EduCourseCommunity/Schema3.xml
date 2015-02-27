@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">    
+
+	<ListTemplate Name="eduentity"
+		Type="10001"
+		BaseType="0"
+		Hidden="TRUE"
+		OnQuickLaunch="TRUE"
+		SecurityBits="11"
+		DisplayName="Entities"
+		Description="Entities"
+		Image="/_layouts/15/images/itgen.png?rev=23" />
+
+	<ListInstance Title="$Resources:eduserver,IDS_EduEntitiesListName"
+		Description="$Resources:eduserver,IDS_EduEntitiesListDescription"
+		TemplateType="10001"
+		Id="6F34EEBC-72E3-11E0-B241-8AB74824019B"
+		Url="$Resources:core,lists_Folder;/$Resources:eduserver,IDS_EduEntitiesListName"
+		OnQuickLaunch="FALSE"
+		RootWebOnly="FALSE" />
+
+	<ListTemplate Name="eduexternalsyncsetting"
+		Type="10061"
+		BaseType="0"
+		Hidden="TRUE"
+		OnQuickLaunch="FALSE"
+		SecurityBits="11"
+		DisplayName="External Sync Settings"
+		Description="External Sync Settings"
+		Image="/_layouts/15/images/itgen.png?rev=23" />
+
+	<ListInstance Title="External Sync Settings"
+		Description="External Sync Settings"
+		TemplateType="10061"
+		Id="55C7ECF3-BB99-4ADB-9C59-CAEB2FC17369"
+		Url="$Resources:core,lists_Folder;/External Sync Settings"
+		OnQuickLaunch="FALSE"
+		Hidden="TRUE"
+		VersioningEnabled = "TRUE"
+		RootWebOnly="FALSE">
+		<Data>
+			<Rows>
+				<Row>
+					<Field Name="Title">Exchange</Field>
+					<Field Name="EduIsSyncing">FALSE</Field>
+					<Field Name="EduSyncId">microsoft.exchange</Field>
+				</Row>
+				<Row>
+					<Field Name="Title">Lync</Field>
+					<Field Name="EduIsSyncing">FALSE</Field>
+					<Field Name="EduSyncId">microsoft.lync</Field>
+				</Row>
+			</Rows>
+		</Data>
+	</ListInstance>
+
+	<ListInstance Title="$Resources:eduserver,IDS_EduAssetLibraryName"
+		Description="$Resources:eduserver,IDS_EduAssetLibraryDescription"
+		TemplateType="851"
+		Id="4741FDB8-4477-4FC8-A09C-618B94C527E7"
+		FeatureId="4BCCCD62-DCAF-46DC-A7D4-E38277EF33F4"
+		Url="$Resources:core,lists_Folder;/$Resources:eduserver,IDS_EduAssetLibraryName"
+		OnQuickLaunch="TRUE"
+		RootWebOnly="FALSE" />
+
+	<ListInstance Title="$Resources:eduserver,IDS_EduCalendarListName"
+		Description="$Resources:eduserver,IDS_EduCalendarListDescription"
+		FeatureId="00BFEA71-EC85-4903-972D-EBE475780106"
+		TemplateType="106"
+		Id="FAC0A282-72E3-11E0-ACCE-02B84824019B"
+		Url="$Resources:core,lists_Folder;/$Resources:eduserver,IDS_EduCalendarListName"
+		OnQuickLaunch="FALSE"
+		Hidden="TRUE"
+		VersioningEnabled = "TRUE"
+		RootWebOnly="FALSE" />
+
+	<ContentTypeBinding ContentTypeId="0x0102001E41EAB6184B11E0AE8631B7DFD72085" 
+		ListUrl="$Resources:core,lists_Folder;/$Resources:eduserver,IDS_EduCalendarListName"
+		RootWebOnly="FALSE" />
+
+	<ContentTypeBinding ContentTypeId="0x0102001E41EAB6184B11E0AE8631B7DFD7208553" 
+		ListUrl="$Resources:core,lists_Folder;/$Resources:eduserver,IDS_EduCalendarListName"
+		RootWebOnly="FALSE" />
+
+	<ContentTypeBinding ContentTypeId="0x0102001E41EAB6184B11E0AE8631B7DFD7208554" 
+		ListUrl="$Resources:core,lists_Folder;/$Resources:eduserver,IDS_EduCalendarListName"
+		RootWebOnly="FALSE" />
+
+	<ContentTypeBinding ContentTypeId="0x0102001E41EAB6184B11E0AE8631B7DFD720855351" 
+		ListUrl="$Resources:core,lists_Folder;/$Resources:eduserver,IDS_EduCalendarListName"
+		RootWebOnly="FALSE" />
+
+	<ContentTypeBinding ContentTypeId="0x0102001E41EAB6184B11E0AE8631B7DFD720855451" 
+		ListUrl="$Resources:core,lists_Folder;/$Resources:eduserver,IDS_EduCalendarListName"
+		RootWebOnly="FALSE" />
+
+	<ListTemplate Name="edudocument"
+		Type="10101"
+		BaseType="1"
+		Hidden="TRUE"
+		OnQuickLaunch="TRUE"
+		SecurityBits="11"
+		DisplayName="Documents"
+		Description="Documents"
+		Image="/_layouts/15/images/itdl.png?rev=23"
+		DocumentTemplate="121"/>
+
+	<ListInstance Title="$Resources:eduserver,IDS_EduDocumentsListName"
+		Description="$Resources:eduserver,IDS_EduDocumentsListDescription"
+		TemplateType="10101"
+		Id="2E160FC8-72E4-11E0-B0A2-2CB84824019B"
+		Url="$Resources:eduserver,IDS_EduDocumentsListName"
+		OnQuickLaunch="TRUE"
+		RootWebOnly="FALSE" />
+
+	<ListTemplate Name="eduannouncement"
+		Type="10401"
+		BaseType="0"
+		OnQuickLaunch="FALSE"
+		SecurityBits="11"
+		DisplayName="Announcements"
+		Description="Announcements"
+		Image="/_layouts/15/images/itann.png?rev=23" />
+
+	<ListInstance Title="$Resources:eduserver,IDS_EduAnnouncementsListName"
+		Description="$Resources:eduserver,IDS_EduAnnouncementsListDescription"
+		TemplateType="10401"
+		Id="73166ADA-7184-41A3-9CCA-AD63E8543C2A"
+		Url="$Resources:core,lists_Folder;/$Resources:eduserver,IDS_EduAnnouncementsListName"
+		OnQuickLaunch="FALSE"
+		RootWebOnly="FALSE" />
+
+	<ListTemplate Name="EduWorkItem"
+		Type="10007"
+		BaseType="0"
+		OnQuickLaunch="FALSE"
+        Hidden="TRUE"
+		SecurityBits="11"
+		DisplayName="WorkItems"
+		Description="[EDU Internal] Keeps track of work items related to EDU features."
+		Image="/_layouts/15/images/itissue.png?rev=23" />
+
+    <!-- Not localizing title, description or URL as list will be hidden -->
+	<ListInstance Title="WorkItems"
+		Description="[EDU Internal] Keeps track of work items related to EDU features."
+		TemplateType="10007"
+		Id="C0EFE350-7D10-44EB-8DB7-92EA5084B6CA"
+		Url="$Resources:core,lists_Folder;/WorkItems"
+		OnQuickLaunch="FALSE"
+		Hidden="TRUE"
+		RootWebOnly="FALSE" />
+
+	<ListTemplate Name="EduQuiz"
+		Type="10008"
+		BaseType="0"
+		OnQuickLaunch="FALSE"
+		Hidden="TRUE"
+		SecurityBits="11"
+		DisplayName="Quiz"
+		Description="Quiz ListTemplate"
+		DisableAttachments="TRUE"
+		NoCrawl="TRUE"
+		Image="/_layouts/15/images/itgen.png?rev=23" />
+
+	<Receivers ListUrl="$Resources:core,lists_Folder;/$Resources:eduserver,IDS_EduEntitiesListName">
+		<Receiver>
+			<Name>EntityListItemAdding</Name>
+			<Type>ItemAdding</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.CourseEntityEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>EntityListItemAdded</Name>
+			<Type>ItemAdded</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.CourseEntityEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>EntityListItemUpdating</Name>
+			<Type>ItemUpdating</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.CourseEntityEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>EntityListItemUpdated</Name>
+			<Type>ItemUpdated</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.CourseEntityEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>EntityListItemDeleting</Name>
+			<Type>ItemDeleting</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.CourseEntityEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>EntityListItemAddedAsync</Name>
+			<Type>ItemAdded</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.CourseEntityAsyncEventReceiver</Class>
+			<Synchronization>Asynchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>EntityListItemUpdatedAsync</Name>
+			<Type>ItemUpdated</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.CourseEntityAsyncEventReceiver</Class>
+			<Synchronization>Asynchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>EntityListItemDeletedAsync</Name>
+			<Type>ItemDeleted</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.CourseEntityAsyncEventReceiver</Class>
+			<Synchronization>Asynchronous</Synchronization>
+		</Receiver>
+	</Receivers>
+
+	<Receivers ListUrl="$Resources:core,lists_Folder;/$Resources:eduserver,IDS_EduAnnouncementsListName">
+		<Receiver>
+			<Name>AnnouncementListItemAdding</Name>
+			<Type>ItemAdding</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.EntityEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>AnnouncementListItemUpdating</Name>
+			<Type>ItemUpdating</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.EntityEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+	</Receivers>
+
+	<Receivers ListUrl="$Resources:core,lists_Folder;/$Resources:eduserver,IDS_EduCalendarListName">
+		<Receiver>
+			<Name>CalendarListItemAdding</Name>
+			<Type>ItemAdding</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.CourseCalendarEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>CalendarListItemAdded</Name>
+			<Type>ItemAdded</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.CourseCalendarEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>CalendarListItemUpdating</Name>
+			<Type>ItemUpdating</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.CourseCalendarEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>CalendarListItemUpdated</Name>
+			<Type>ItemUpdated</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.CourseCalendarEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>CalendarListItemDeleting</Name>
+			<Type>ItemDeleting</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.CourseCalendarEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>CalendarListItemAddedAsync</Name>
+			<Type>ItemAdded</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.CalendarAsyncEventReceiver</Class>
+			<Synchronization>Asynchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>CalendarListItemUpdatedAsync</Name>
+			<Type>ItemUpdated</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.CalendarAsyncEventReceiver</Class>
+			<Synchronization>Asynchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>CalendarListItemDeletedAsync</Name>
+			<Type>ItemDeleted</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.CalendarAsyncEventReceiver</Class>
+			<Synchronization>Asynchronous</Synchronization>
+		</Receiver>
+	</Receivers>
+
+	<Receivers ListUrl="$Resources:eduserver,IDS_EduDocumentsListName">
+		<Receiver>
+			<Name>DocumentsListItemAdding</Name>
+			<Type>ItemAdding</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.DocumentEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>DocumentsListItemUpdating</Name>
+			<Type>ItemUpdating</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.DocumentEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>DocumentsListItemUpdated</Name>
+			<Type>ItemUpdated</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.DocumentEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>DocumentsListItemDeleting</Name>
+			<Type>ItemDeleting</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.DocumentEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>DocumentsListItemAdded</Name>
+			<Type>ItemAdded</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.DocumentEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>DocumentsListItemDeleted</Name>
+			<Type>ItemDeleted</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.DocumentEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+	</Receivers>
+
+  	<Receivers ListUrl="$Resources:core,lists_Folder;/WorkItems">
+		<Receiver>
+			<Name>WorkItemsListItemAdding</Name>
+			<Type>ItemAdding</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.EntityEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>WorkItemsListItemUpdating</Name>
+			<Type>ItemUpdating</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.EntityEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+	</Receivers>
+
+  	<Receivers ListUrl="$Resources:core,lists_Folder;/$Resources:spscore,members_Folder;">
+		<Receiver>
+			<Name>MemberAddedAsync</Name>
+			<Type>ItemAdded</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.CourseMembershipAsyncEventReceiver</Class>
+			<Synchronization>Asynchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>MemberDeletedAsync</Name>
+			<Type>ItemDeleted</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.CourseMembershipAsyncEventReceiver</Class>
+			<Synchronization>Asynchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>MemberUpdatedAsync</Name>
+			<Type>ItemUpdated</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.CourseMembershipAsyncEventReceiver</Class>
+			<Synchronization>Asynchronous</Synchronization>
+		</Receiver>
+	</Receivers>
+
+	<Receivers ListTemplateId="10008" ListTemplateOwner="A16E895C-E61A-11DF-8F6E-103EDFD72085">
+		<Receiver>
+			<Name>QuizItemAddedEventReceiver</Name>
+			<Type>ItemAdded</Type>
+			<SequenceNumber>10000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.QuizItemEventReceiver</Class>
+			<Synchronization>Asynchronous</Synchronization>
+		</Receiver>
+		<Receiver>
+			<Name>QuizItemUpdatingEventReceiver</Name>
+			<Type>ItemUpdating</Type>
+			<SequenceNumber>15000</SequenceNumber>
+			<Assembly>Microsoft.Office.Education.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+			<Class>Microsoft.Office.Education.EventReceivers.QuizItemEventReceiver</Class>
+			<Synchronization>Synchronous</Synchronization>
+		</Receiver>
+	</Receivers> 
+
+</Elements>

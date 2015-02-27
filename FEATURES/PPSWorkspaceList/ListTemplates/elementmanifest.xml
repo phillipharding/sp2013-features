@@ -1,0 +1,12 @@
+<Elements  xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListTemplate  Name="PPSWorkspaceLists" 
+                 Type="450" 
+                 BaseType="0" 
+                 OnQuickLaunch="TRUE"
+                 FolderCreation="FALSE"
+                 VersioningEnabled="TRUE"
+                 SecurityBits="11" 
+                 DisplayName="$Resources:ppsma,ContentList_Workspace_DisplayName" 
+                 Description="$Resources:ppsma,ContentList_Workspace_Description" 
+                 Image="/_layouts/15/images/ippscontentlist.png?rev=23" />
+</Elements>

@@ -1,0 +1,653 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+   <CustomAction
+        Id="Ribbon.EditingTools.CPInsert.PubContentGroup"
+        Location="CommandUI.Ribbon"
+        Sequence="35"
+        Title="Add reusable content to Insert Tab">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.EditingTools.CPInsert.Groups._children">
+          <Group Id="Ribbon.EditingTools.CPInsert.Content"
+                 Sequence="35"
+                 Command="ContentGroup"
+                 Description=""
+                 Title="$Resources:sp.publishing.resources,GrpInsertContent;"
+                 Image32by32Popup="/_layouts/15/images/publishing.png?rev=23" Image32by32PopupTop="-64" Image32by32PopupLeft="-32"
+                 Template="Ribbon.Templates.Flexible2" >
+            <Controls Id="Ribbon.EditingTools.CPInsert.Content.Controls">
+              <FlyoutAnchor
+                Id="Ribbon.EditingTools.CPInsert.Content.ReusableContent"
+                Alt="$Resources:sp.publishing.resources,cui_stt_ButContentMenuReusableContentAlt;"
+                Command="ReusableMenu"
+                CommandMenuClose="ReusableMenuClose"
+                Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-240" Image16by16Left="-256"
+                Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-64" Image32by32Left="-32"
+                LabelText="$Resources:sp.publishing.Resources,ReusableContent;"
+                ToolTipTitle="$Resources:sp.publishing.Resources,ReusableContent;"
+                ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButContentMenuReusableContentTooltip;"
+                PopulateDynamically="true"
+                PopulateOnlyOnce="true"
+                PopulateQueryCommand="GetReusableContentMenuXml"
+                Sequence="10"
+                TemplateAlias="o1">
+              </FlyoutAnchor>
+            </Controls>
+          </Group>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+   <CustomAction
+        Id="Ribbon.EditingTools.CPInsert.PubContentGroup.Scaling"
+        Location="CommandUI.Ribbon"
+        Title="Add reusable content scaling to Insert Tab">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.EditingTools.CPInsert.Scaling._children">
+          <MaxSize Id="Ribbon.EditingTools.CPInsert.Scaling.Content.MaxSize" Sequence="10" GroupId="Ribbon.EditingTools.CPInsert.Content" Size="LargeMedium"/>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+    <CustomAction
+        Id="Ribbon.PublishTab.Workflow.StartWorkflowCustomAction"
+        Location="CommandUI.Ribbon"
+        Sequence="40"
+        Title="Add Start a Workflow button to Publish Tab">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.PublishTab.Workflow.Controls._children">
+          <Button
+            Id="Ribbon.PublishTab.Workflow.StartWorkflow"
+            Alt="$Resources:sp.publishing.resources,CUI_ButStartWorkflowAlt;"
+            Command="StartWorkflow"
+            Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-55" Image16by16Left="-295"
+            Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-341" Image32by32Left="-477"
+            LabelText="$Resources:sp.publishing.resources,CUI_ButStartWorkflow;"
+            ToolTipTitle="$Resources:sp.publishing.Resources,CUI_ButStartWorkflow;"
+            ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButWorkflowMenuStartAWorkflowTooltip;"
+            TemplateAlias="o1"/>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+    <CustomAction
+        Id="Ribbon.PublishTab.Workflow.ViewTasksCustomAction"
+        Location="CommandUI.Ribbon"
+        Sequence="42"
+        Title="Add View Tasks button to Publish Tab">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.PublishTab.Workflow.Controls._children">
+          <Button
+            Id="Ribbon.PublishTab.Workflow.ViewTasks"
+            Alt="$Resources:sp.publishing.resources,CUI_ButViewTasksAlt;"
+            Command="WorkflowTasks"
+            Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-192" Image16by16Left="-256"
+            Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-192" Image32by32Left="-160"
+            LabelText="$Resources:sp.publishing.resources,CUI_ButViewTasks;"
+            ToolTipTitle="$Resources:sp.publishing.Resources,CUI_ButViewTasks;"
+            ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButWorkflowMenuViewTasksTooltip;"
+            TemplateAlias="o2"/>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+    <CustomAction
+        Id="Ribbon.PublishTab.Workflow.WorkflowStatusCustomAction"
+        Location="CommandUI.Ribbon"
+        Sequence="44"
+        Title="Add Workflow Status button to Publish Tab">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.PublishTab.Workflow.Controls._children">
+          <Button
+            Id="Ribbon.PublishTab.Workflow.WorkflowStatus"
+            Alt="$Resources:sp.publishing.resources,CUI_ButWorkflowStatusAlt;"
+            Command="WorkflowStatus"
+            Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-199" Image16by16Left="-73"
+            Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-239" Image32by32Left="-341"
+            LabelText="$Resources:sp.publishing.resources,CUI_ButWorkflowStatus;"
+            ToolTipTitle="$Resources:sp.publishing.Resources,CUI_ButWorkflowStatus;"
+            ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButWorkflowMenuStatusTooltip;"
+            TemplateAlias="o2"/>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+   <CustomAction
+        Id="Ribbon.PublishTab.Publishing.QuickDeploy.Button"
+        Location="CommandUI.Ribbon"
+        Sequence="40"
+        Title="Add QuickDeploy button to Publishing Group">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.PublishTab.Publishing.Controls._children">
+              <Button
+                Id="Ribbon.PublishTab.Publishing.QuickDeploy"
+                Alt="$Resources:sp.publishing.resources,CUI_ButQuickDeployAlt;"
+                Sequence="40"
+                Command="QuickDeploy"
+                Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-256" Image16by16Left="0"
+                Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-32" Image32by32Left="-96"
+                LabelText="$Resources:sp.publishing.Resources,CUI_ButQuickDeploy;"
+                ToolTipTitle="$Resources:sp.publishing.Resources,CUI_ButQuickDeploy;"
+                ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButPublishingMenuQuickDeployTooltip;"
+                TemplateAlias="o2" />
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+   <CustomAction
+        Id="Ribbon.PublishTab.Variations.Group"
+        Location="CommandUI.Ribbon"
+        Sequence="110"
+        Title="Add Variations group to the variations source Publish Tab">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.PublishTab.Groups._children">
+            <Group Id="Ribbon.PublishTab.Variations"
+                    Sequence="30"
+                    Command="VariationsGroup"
+                    Description=""
+                    Image32by32Popup="/_layouts/15/images/publishing.png"
+                    Image32by32PopupClass="publishing_VariationsCreateHH"
+                    Title="$Resources:sp.publishing.Resources,CUI_GrpVariations;"
+                    Template="Ribbon.Templates.Flexible2" >
+                <Controls Id="Ribbon.PublishTab.Variations.Controls">
+                    <Button
+                        Id="Ribbon.PublishTab.Variations.Create"
+                        Alt="$Resources:sp.publishing.resources,CUI_ButVariationsCreateAlt15;"
+                        Sequence="10"
+                        Command="VariationsCreate"
+                        Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-224" Image16by16Left="-32"
+                        Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="0" Image32by32Left="-64"
+                        LabelText="$Resources:sp.publishing.Resources,CUI_ButVariationsCreate15;"
+                        ToolTipTitle="$Resources:sp.publishing.Resources,CUI_ButVariationsCreate15;"
+                        ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButVariationsMenuCreateTooltip15;"
+                        TemplateAlias="o1" />
+                    <Button
+                        Id="Ribbon.PublishTab.Variations.Update"
+                        Alt="$Resources:sp.publishing.resources,CUI_ButVariationsUpdateAlt;"
+                        Sequence="20"
+                        Command="VariationsUpdate"
+                        Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-256" Image16by16Left="-32"
+                        Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-96" Image32by32Left="-32"
+                        LabelText="$Resources:sp.publishing.Resources,CUI_ButVariationsUpdate;"
+                        ToolTipTitle="$Resources:sp.publishing.Resources,CUI_ButVariationsUpdate;"
+                        ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButVariationsMenuUpdateTooltip15;"
+                        TemplateAlias="o1" />   
+             </Controls>
+         </Group>
+     </CommandUIDefinition>
+     <CommandUIDefinition Location="Ribbon.Tabs._children">
+          <Tab Id="Ribbon.VariationsTab" Command="VariationsTab" Description="" Title="$Resources:sp.publishing.Resources,CUI_GrpVariations;" Sequence="3000" >
+            <Scaling Id="Ribbon.VariationsTab.Scaling">
+              <MaxSize Id="Ribbon.VariationsTab.Scaling.VariationsGroup.MaxSize" Sequence="10" GroupId="Ribbon.VariationsTab.VariationsGroup" Size="LargeLarge"/>
+              <Scale Id="Ribbon.VariationsTab.Scaling.VariationsGroup.MediumMedium" Sequence="20" GroupId="Ribbon.VariationsTab.VariationsGroup" Size="MediumMedium" />
+            </Scaling>
+            <Groups Id="Ribbon.VariationsTab.Groups">
+              <Group Id="Ribbon.VariationsTab.VariationsGroup"
+                 Sequence="30"
+                 Command="VariationsGroup"
+                 Description=""
+                 Image32by32Popup="/_layouts/15/images/publishing.png"
+                 Image32by32PopupClass="publishing_VariationsCreateHH"
+                 Title="$Resources:sp.publishing.Resources,CUI_GrpVariations;"
+                 Template="Ribbon.Templates.Flexible2" >
+                <Controls Id="Ribbon.VariationsTab.Variations.Controls">
+                    <Button
+                        Id="Ribbon.VariationsTab.Variations.ViewChanges"
+                        Sequence="10"
+                        Alt="$Resources:sp.publishing.resources,CUI_ButVariationsViewChangesAlt;"
+                        Command="VariationsViewChanges"
+                        Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-240" Image16by16Left="-32"
+                        Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-32" Image32by32Left="-64"
+                        LabelText="$Resources:sp.publishing.Resources,CUI_ButVariationsViewChanges;"
+                        ToolTipTitle="$Resources:sp.publishing.Resources,CUI_ButVariationsViewChanges;"
+                        ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButVariationsMenuViewChangesTooltip;"
+                        TemplateAlias="o1" />  
+                    <SplitButton
+                        Id="Ribbon.VariationsTab.Variations"
+                        Sequence="20"
+                        Alt="$Resources:sp.publishing.resources,CUI_ButVariationsPullPageAlt;"
+                        Command="VariationsPullPage"
+                        Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-256" Image16by16Left="-16"
+                        Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-96" Image32by32Left="0"
+                        LabelText="$Resources:sp.publishing.Resources,CUI_ButVariationsPullChanges;"
+                        MenuAlt="$Resources:sp.publishing.resources,CUI_ButVariationsPullPageAlt;"
+                        TemplateAlias="o1"
+                        ToolTipTitle="$Resources:sp.publishing.Resources,CUI_ButVariationsPullChanges;"
+                        ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButVariationsMenuPullChangesTooltip;">
+                        <Menu Id="RibbonVariationsTab.Variations.Menu">
+                            <MenuSection Id="RibbonVariationsTab.Variations.Menu.PullChanges" Sequence="10" DisplayMode="Menu16">
+                                <Controls Id="RibbonVariationsTab.Variations.Menu.PullChanges.Controls">
+                                    <Button
+                                        Id="Ribbon.PublishTab.Variations.PullChanges"
+                                        Alt="$Resources:sp.publishing.resources,CUI_ButVariationsPullPageAlt;"
+                                        Sequence="10"
+                                        Command="VariationsPullPage"
+                                        Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-256" Image16by16Left="-16"
+                                        Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-96" Image32by32Left="0"
+                                        LabelText="$Resources:sp.publishing.Resources,CUI_ButVariationsPullChanges;"
+                                        ToolTipTitle="$Resources:sp.publishing.Resources,CUI_ButVariationsPullChanges;"
+                                        ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButVariationsMenuPullChangesTooltip;"
+                                        TemplateAlias="o1" />
+                                    <Button
+                                        Id="Ribbon.PublishTab.Variations.ReconcileChanges"
+                                        Alt="$Resources:sp.publishing.resources,CUI_ButVariationsReconcileChangesAlt;"
+                                        Sequence="20"
+                                        Command="VariationsReconcileChanges"
+                                        Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-224" Image16by16Left="-64"
+                                        Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-64" Image32by32Left="-96"
+                                        LabelText="$Resources:sp.publishing.Resources,CUI_ButVariationsReconcileChanges;"
+                                        ToolTipTitle="$Resources:sp.publishing.Resources,CUI_ButVariationsReconcileChanges;"
+                                        ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButVariationsMenuReconcileChangesTooltip;"
+                                        TemplateAlias="o1" />
+                                </Controls>
+                            </MenuSection>
+                        </Menu>
+                    </SplitButton>
+                 </Controls>
+              </Group>
+            </Groups>
+          </Tab>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction
+        Id="Ribbon.PublishTab.Variations.Scaling.MaxSize.Definition"
+        Location="CommandUI.Ribbon"
+        Sequence="112"
+        Title="Add Variations scaling to publish Tab">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.PublishTab.Scaling._children">
+          <MaxSize Id="Ribbon.PublishTab.Scaling.Variations.MaxSize" Sequence="30" GroupId="Ribbon.PublishTab.Variations" Size="LargeMedium"/>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+    <CustomAction
+        Id="Ribbon.PublishTab.Variations.Scaling.Scale.Popup.Definition"
+        Location="CommandUI.Ribbon"
+        Sequence="114"
+        Title="Add Variations scaling to publish Tab">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.PublishTab.Scaling._children">
+          <Scale Id="Ribbon.PublishTab.Scaling.Variations.Popup" Sequence="40" GroupId="Ribbon.PublishTab.Variations" Size="Popup" />
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction
+        Id="CommandUI.Ribbon.WikiPageTab.PubPageActions.Group"
+        Location="CommandUI.Ribbon"
+        Sequence="50"
+        Title="Add Publishing Page Actions Group to WikiPageTab">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.WikiPageTab.Groups._children">
+          <Group
+            Id="Ribbon.WikiPageTab.PubPageActions"
+            Sequence="50"
+            Command="PubPageActionsGroup"
+            Description=""
+            Title="$Resources:core,GrpPageActions;"
+            Template="Ribbon.Templates.Flexible2"
+          >
+          <Controls Id="Ribbon.WikiPageTab.PubPageActions.Controls">
+       <Button
+        Id="Ribbon.WikiPageTab.PubPageActions.Preview"
+        Sequence="10"
+        Alt="$Resources:sp.publishing.resources,CUI_ButPreviewAlt;"
+        Command="Preview"
+        Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-256" Image16by16Left="-80"
+        Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-224" Image32by32Left="0"
+        LabelText="$Resources:sp.publishing.Resources,CUI_ButPreview;"
+        ToolTipTitle="$Resources:sp.publishing.Resources,CUI_ButPreview;"
+        ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButReviewMenuPreviewTooltip;"
+        TemplateAlias="o1" />
+       <FlyoutAnchor
+        Id="Ribbon.WikiPageTab.PubPageActions.ChangePageLayout"
+        Sequence="20"
+        Command="ChangePageLayoutMenu"
+        Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-64" Image32by32Left="-64"
+        LabelText="$Resources:sp.publishing.resources,CUI_ButChangePageLayout;"
+        ToolTipTitle="$Resources:sp.publishing.Resources,CUI_ButChangePageLayout;"
+        ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButPageActionsMenuPageLayoutTooltip;"
+        Alt="$Resources:sp.publishing.resources,CUI_ButChangePageLayoutAlt;"
+        TemplateAlias="o1"
+        PopulateDynamically="true"
+        PopulateOnlyOnce="true"
+        PopulateQueryCommand="GetPageLayoutsXml"
+       >
+       </FlyoutAnchor>
+      <Button
+        Id="Ribbon.WikiPageTab.PubPageActions.SetHomePage"
+        Sequence="10"
+        Alt="$Resources:core,ButSetHomePage;"
+        Command="SetHomePage"
+        Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-145" Image16by16Left="-109"
+        Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-171" Image32by32Left="-239"
+        LabelText="$Resources:core,ButSetHomePage;"
+        TemplateAlias="o2"
+        ToolTipTitle="$Resources:core,ButSetHomePage;"
+        ToolTipDescription="$Resources:core,cui_STT_ButSetHomePage;"/>
+      <Button
+        Id="Ribbon.WikiPageTab.PubPageActions.IncomingLinks"
+        Sequence="20"
+        Alt="$Resources:core,cui_ButIncomingLinks;"
+        Command="IncomingLinks"
+        Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-109" Image16by16Left="-127"
+        Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-477" Image32by32Left="-1"
+        LabelText="$Resources:core,cui_ButIncomingLinks;"
+        TemplateAlias="o2"
+        ToolTipTitle="$Resources:core,cui_ButIncomingLinks;"
+        ToolTipDescription="$Resources:core,cui_STT_ButIncomingLinks;"/>
+       <ToggleButton
+        Id="Ribbon.WikiPageTab.PubPageActions.CheckForDraft"
+        Sequence="30"
+        Alt="$Resources:sp.publishing.resources,CUI_ButCheckForDraftAlt;"
+        Command="CheckForDraft"
+        QueryCommand="QueryCheckForDraft"
+        Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-256" Image16by16Left="-64"
+        Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="0" Image32by32Left="0"
+        LabelText="$Resources:sp.publishing.Resources,CUI_ButCheckForDraft;"
+        ToolTipTitle="$Resources:sp.publishing.Resources,CUI_ButCheckForDraft;"
+        ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButReviewMenuCheckForDraftsTooltip;"
+        TemplateAlias="o2" />
+        </Controls>
+    </Group>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+   </CustomAction>
+  <CustomAction
+        Id="Ribbon.WikiPageTab.PubPageActions.Scaling.MaxSize.Definition"
+        Location="CommandUI.Ribbon"
+        Sequence="50"
+        Title="Add PubPageActions scaling to publish Tab">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.WikiPageTab.Scaling._children">
+          <MaxSize Id="Ribbon.WikiPageTab.Scaling.PubPageActions.MaxSize" Sequence="50" GroupId="Ribbon.WikiPageTab.PubPageActions" Size="LargeMedium"/>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+    <CustomAction
+        Id="Ribbon.WikiPageTab.PubPageActions.Scaling.Scale.Medium.Definition"
+        Location="CommandUI.Ribbon"
+        Sequence="80"
+        Title="Add PubPageActions scaling to publish Tab">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.WikiPageTab.Scaling._children">
+          <Scale Id="Ribbon.WikiPageTab.Scaling.PubPageActions.Medium" Sequence="80" GroupId="Ribbon.WikiPageTab.PubPageActions" Size="LargeSmall" />
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction
+        Id="Ribbon.WikiPageTab.PubPageActions.Scaling.Scale.Popup.Definition"
+        Location="CommandUI.Ribbon"
+        Sequence="120"
+        Title="Add PubPageActions scaling to publish Tab">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.WikiPageTab.Scaling._children">
+          <Scale Id="Ribbon.WikiPageTab.Scaling.PubPageActions.Popup" Sequence="120" GroupId="Ribbon.WikiPageTab.PubPageActions" Size="Popup" />
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+   <CustomAction
+        Id="Ribbon.PublishTab.Publishing.Scheduling"
+        Location="CommandUI.Ribbon"
+        Sequence="30"
+        Title="Add Scheduling button to Publishing Group">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.PublishTab.Publishing.Controls._children">
+              <Button
+                Id="Ribbon.PublishTab.Publishing.Schedule"
+                Alt="$Resources:sp.publishing.resources,CUI_ButScheduleAlt;"
+                Sequence="30"
+                Command="Schedule"
+                Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-240" Image16by16Left="-48"
+                Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="0" Image32by32Left="-96"
+                LabelText="$Resources:sp.publishing.Resources,CUI_ButSchedule;"
+                ToolTipTitle="$Resources:sp.publishing.Resources,CUI_ButSchedule;"
+                ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButPublishingMenuScheduleTooltip;"
+                TemplateAlias="o1" />
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction
+        Id="Ribbon.Rca"
+        Location="CommandUI.Ribbon"
+        Sequence="30"
+        Title="Add Rca Tab">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.ContextualTabs._children">
+      <ContextualGroup Id="Ribbon.RcaTabGroup" Color="DarkBlue" Command="RcaContextualGroup" ContextualGroupId="Rca" Title="$Resources:sp.publishing.Resources,CUI_TabGroupRca;">
+      <Tab Id="Ribbon.RcaTabGroup.Rca" Command="RcaTab" Description="" Title="$Resources:sp.publishing.Resources,CUI_TabRcaTitle;">
+        <Scaling Id="Ribbon.RcaTabGroup.Rca.Scaling">
+          <MaxSize Id="Ribbon.RcaTabGroup.Rca.Scaling.ViewUpdateGroup.MaxSize" Sequence="10" GroupId="Ribbon.RcaTabGroup.Rca.ViewUpdateGroup" Size="Large"/>
+          <Scale Id="Ribbon.RcaTabGroup.Rca.Scaling.ViewUpdateGroup.Medium" Sequence="20" GroupId="Ribbon.RcaTabGroup.Rca.ViewUpdateGroup" Size="Medium"/>
+        </Scaling>
+        <Groups Id="Ribbon.RcaTabGroup.Rca.Groups">
+          <Group Id="Ribbon.RcaTabGroup.Rca.ViewUpdateGroup"
+                 Sequence="10"
+                 Command="RcaViewUpdateGroup"
+                 Description=""
+                 Title="$Resources:sp.publishing.Resources,CUI_GrpViewUpdateGroup;"
+                 Template="Ribbon.Templates.TwoLargeControls" >
+            <Controls Id="Ribbon.RcaTabGroup.Rca.ViewUpdateGroup.Controls">
+                  <Button
+                        Id="Ribbon.RcaTabGroup.Rca.ViewUpdateGroup.OpenSource"
+                        Alt="$Resources:sp.publishing.Resources,CUI_ButRcaOpenSourceAlt;"
+                        Command="RcaOpenSource"
+                        Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-240" Image16by16Left="-64"
+                        Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-64" Image32by32Left="0"
+                        TemplateAlias="c1"
+                        ToolTipTitle="$Resources:sp.publishing.Resources,CUI_ButRcaOpenSource;"
+                        ToolTipDescription="$Resources:sp.publishing.Resources,CUI_ButRcaOpenSourceTooltip;"
+                        LabelText="$Resources:sp.publishing.Resources,CUI_ButRcaOpenSource;"/>
+                  <Button
+                        Id="Ribbon.RcaTabGroup.Rca.ViewUpdateGroup.UpdateDocument"
+                        Alt="$Resources:sp.publishing.Resources,CUI_ButRcaUpdateDocumentAlt;"
+                        Command="RcaUpdateDocument"
+                        Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-208" Image16by16Left="-256"
+                        Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-96" Image32by32Left="-64"
+                        TemplateAlias="c2"
+                        ToolTipTitle="$Resources:sp.publishing.Resources,CUI_ButRcaUpdateDocument;"
+                        ToolTipDescription="$Resources:sp.publishing.Resources,CUI_ButRcaUpdateDocumentTooltip;"
+                        LabelText="$Resources:sp.publishing.Resources,CUI_ButRcaUpdateDocument;"/>
+            </Controls>
+          </Group>
+        </Groups>
+      </Tab>
+      </ContextualGroup>
+     </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+    <CustomAction
+        Id="Ribbon.VariationsLibrary"
+        Title="VariationsLibraryUI"
+        Location="CommandUI.Ribbon"
+        Rights="EditListItems"
+    >
+        <CommandUIExtension>
+            <CommandUIDefinitions>
+             <CommandUIDefinition Location="Ribbon.ContextualTabs._children">
+                  <ContextualGroup Id="Ribbon.VariationsTabGroup" Color="Purple" Command="VariationsContextualGroup" ContextualGroupId="Variations" Title="$Resources:sp.publishing.Resources,CUI_GrpVariations;">
+                      <Tab Id="Ribbon.VariationsTabGroup.VariationsDoclibTab" Command="VariationsTab" Description="" Title="$Resources:sp.publishing.Resources,CUI_GrpVariations;" Sequence="8000" >
+                        <Scaling Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Scaling">
+                            <MaxSize Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Scaling.Variations.MaxSize" Sequence="10" GroupId="Ribbon.VariationsTabGroup.VariationsDoclibTab.Variations" Size="LargeLarge"/>
+                        </Scaling>
+                        <Groups Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Groups">
+                            <Group Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Variations"
+                                    Sequence="80"
+                                    Title="$Resources:sp.publishing.Resources,CUI_GrpVariations;"
+                                    Command="VariationsListGroup"
+                                    Image32by32Popup="/_layouts/15/images/publishing.png?rev=23" Image32by32PopupTop="-224" Image32by32PopupLeft="-48"
+                                    Template="Ribbon.Templates.Flexible2" >
+                                <Controls Id="Ribbon.VariationsTabGroup.VariationsDoclibTab.Variations.Controls">
+                                    <Button
+                                      Id="Ribbon.VariationsDoclibTab.Variations.Settings"
+                                      Alt="$Resources:sp.publishing.resources,CUI_ButVariationsListSettings15;"
+                                      Command="VariationsListSettingsView"
+                                      Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-256" Image16by16Left="-48"
+                                      Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-32" Image32by32Left="-32"
+                                      LabelText="$Resources:sp.publishing.Resources,CUI_ButVariationsListSettings15;"
+                                      ToolTipTitle="$Resources:sp.publishing.Resources,CUI_ButVariationsListSettings15;"
+                                      ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButVariationsMenuListSettingsTooltip15;"
+                                      TemplateAlias="o1" />
+                                    <Button
+                                    Id="Ribbon.VariationsDoclibTab.Variations.Update"
+                                    Alt="$Resources:sp.publishing.resources,CUI_ButVariationsUpdateAlt;"
+                                    Command="VariationsListUpdate"
+                                    Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-224" Image16by16Left="-48"
+                                    Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-32" Image32by32Left="0"
+                                    LabelText="$Resources:sp.publishing.Resources,CUI_ButVariationsUpdate;"
+                                    ToolTipTitle="$Resources:sp.publishing.Resources,CUI_ButVariationsUpdate;"
+                                    ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButVariationsMenuUpdateTooltip15;"
+                                    TemplateAlias="o1" />
+                                </Controls>
+                            </Group>
+                         </Groups>
+                      </Tab>
+                    </ContextualGroup>
+               </CommandUIDefinition>
+            </CommandUIDefinitions>
+        </CommandUIExtension>
+    </CustomAction>
+    <CustomAction
+        Id="Ribbon.VariationsList"
+        Title="VariationsListUI"
+        Location="CommandUI.Ribbon"
+        Rights="EditListItems"
+    >
+        <CommandUIExtension>
+           <CommandUIDefinitions>
+             <CommandUIDefinition Location="Ribbon.ContextualTabs._children">
+               <ContextualGroup Id="Ribbon.VariationsListTabGroup" Color="Purple" Command="VariationsContextualGroup" ContextualGroupId="Variations" Title="$Resources:sp.publishing.Resources,CUI_GrpVariations;">
+                  <Tab Id="Ribbon.VariationsListTabGroup.VariationsListTab" Command="VariationsTab" Description="" Title="$Resources:sp.publishing.Resources,CUI_GrpVariations;" Sequence="500" >
+                    <Scaling Id="Ribbon.VariationsListTabGroup.VariationsListTab.Scaling">
+                      <MaxSize Id="Ribbon.VariationsListTabGroup.VariationsListTab.Scaling.Variations.MaxSize" Sequence="10" GroupId="Ribbon.VariationsListTabGroup.VariationsListTab.Variations" Size="LargeLarge"/>
+                    </Scaling>
+                    <Groups Id="Ribbon.VariationsListTabGroup.VariationsListTab.Groups">
+                        <Group
+                            Id="Ribbon.VariationsListTabGroup.VariationsListTab.Variations"
+                            Title="$Resources:sp.publishing.Resources,CUI_GrpVariations;"
+                            Sequence="80"
+                            Command="VariationsListGroup"
+                            Template="Ribbon.Templates.Flexible2">
+                          <Controls Id="Ribbon.VariationsListTabGroup.VariationsListTab.Variations.Controls">
+                              <Button
+                                Id="Ribbon.VariationsListTab.Variations.Settings"
+                                Alt="$Resources:sp.publishing.resources,CUI_ButVariationsListSettings15;"
+                                Command="VariationsListSettingsView"
+                                Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-256" Image16by16Left="-48"
+                                Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-32" Image32by32Left="-32"
+                                LabelText="$Resources:sp.publishing.Resources,CUI_ButVariationsListSettings15;"
+                                ToolTipTitle="$Resources:sp.publishing.Resources,CUI_ButVariationsListSettings15;"
+                                ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButVariationsMenuListSettingsTooltip15;"
+                                TemplateAlias="o1" />
+                              <Button
+                                Id="Ribbon.VariationsListTab.Variations.Update"
+                                Alt="$Resources:sp.publishing.resources,CUI_ButVariationsUpdateAlt;"
+                                Command="VariationsListUpdate"
+                                Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-224" Image16by16Left="-48"
+                                Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-32" Image32by32Left="0"
+                                LabelText="$Resources:sp.publishing.Resources,CUI_ButVariationsUpdate;"
+                                ToolTipTitle="$Resources:sp.publishing.Resources,CUI_ButVariationsUpdate;"
+                                ToolTipDescription="$Resources:sp.publishing.Resources,cui_stt_ButVariationsMenuUpdateTooltip15;"
+                                TemplateAlias="o1" />
+                          </Controls>
+                        </Group>
+                    </Groups>
+                  </Tab>
+               </ContextualGroup>
+             </CommandUIDefinition>
+           </CommandUIDefinitions>
+        </CommandUIExtension>
+    </CustomAction>
+  <CustomAction
+        Id="Ribbon.DocLibImage.PubImageRenditionActions"
+        Location="CommandUI.Ribbon"
+        Sequence="140"
+        Title="Add Publishing Image Renditions">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.ContextualTabs._children">
+        <ContextualGroup Id="Ribbon.DocLibImage" Sequence="400" Color="Magenta" Command="DocLibImageContextualGroup" ContextualGroupId="DocLibImage" Title="$Resources:core,TabGroupImage;">
+          <Tab Id="Ribbon.DocLibImage.Image" Sequence="100" Command="DocLibImageTab" Description="" Title="$Resources:core,TabImageTitle;">
+            <Scaling Id="Ribbon.DocLibImage.Image.Scaling">
+               <MaxSize Id="Ribbon.DocLibImage.Image.Scaling.RenditionsGroup.MaxSize" Sequence="10" GroupId="Ribbon.DocLibImage.Image.RenditionsGroup" Size="LargeLarge"/>
+               <Scale Id="Ribbon.DocLibImage.Image.Scaling.RenditionsGroup.Scale" Sequence="20" GroupId="Ribbon.DocLibImage.Image.RenditionsGroup" Size="Large"/>
+            </Scaling>
+            <Groups Id="Ribbon.DocLibImage.Image.Groups">
+              <Group Id="Ribbon.DocLibImage.Image.RenditionsGroup"
+                    Sequence="10"
+                    Command="ImageRenditionsGroup"
+                    Description=""
+                    Title="$Resources:sp.publishing.Resources,CUI_GrpImageRenditionsGroup;"
+                    Template="Ribbon.Templates.Flexible2" >
+                <Controls Id="Ribbon.DocLibImage.Image.RenditionsGroup.Controls">
+                  <Button
+                       Id="Ribbon.DocLibImage.Image.Renditions.ManageImageRenditions"
+                       Alt="$Resources:sp.publishing.Resources,CUI_ButManageImageRenditionsAlt;"
+                       Command="ManageImageRenditions"
+                       Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-240" Image16by16Left="-112"
+                       Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-32" Image32by32Left="-128"
+                       TemplateAlias="o1"
+                       ToolTipTitle="$Resources:sp.publishing.Resources,CUI_ButManageImageRenditions;"
+                       ToolTipDescription="$Resources:sp.publishing.Resources,CUI_ButManageImageRenditionsTooltip;"
+                       LabelText="$Resources:sp.publishing.Resources,CUI_ButManageImageRenditions;"/>
+               </Controls>
+             </Group>
+           </Groups>
+         </Tab>
+       </ContextualGroup>
+     </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction
+        Id="Ribbon.Image.Image.Edit.PubImageRenditionActions"
+        Location="CommandUI.Ribbon"
+        Sequence="140"
+        Title="Add Publishing Image Renditions to the picture tools">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.Image.Image.Edit.Controls._children">
+        <FlyoutAnchor
+            Id="Ribbon.Image.Image.Renditions.PickRendition"
+            Alt="$Resources:sp.publishing.Resources,CUI_ButPickImageRenditionAlt;"
+            Command="PickImageRendition"
+            Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-224" Image16by16Left="-128"
+            Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-128" Image32by32Left="-192"
+            ToolTipTitle="$Resources:sp.publishing.Resources,CUI_ButPickImageRendition;"
+            ToolTipDescription="$Resources:sp.publishing.Resources,CUI_ButPickImageRenditionTooltip;"
+            LabelText="$Resources:sp.publishing.Resources,CUI_ButPickImageRendition;"
+            PopulateDynamically="true"
+            PopulateOnlyOnce="false"
+            PopulateQueryCommand="GetImageRenditionsMenuXml"
+            Sequence="20" 
+            TemplateAlias="o1">
+        </FlyoutAnchor>
+     </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+</Elements>

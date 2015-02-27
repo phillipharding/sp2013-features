@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="3D25BD73-7CD4-4425-B8FB-8899977F73DE"
+        Title="GroupBoardWebParts"
+        Scope="Web" 
+        Hidden="TRUE"
+        xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="elements.xml" />
+    </ElementManifests>
+</Feature>

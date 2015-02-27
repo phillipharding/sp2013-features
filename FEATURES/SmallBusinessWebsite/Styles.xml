@@ -1,0 +1,20 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">        
+    <Module Name="OsloAltCss" Url="_catalogs/masterpage" IncludeFolders="??*-??*" Path="" RootWebOnly="TRUE">
+        <File Url="berlin-alternate.css" IgnoreIfAlreadyExists="TRUE" Type="GhostableInLibrary">
+        </File>
+        <File Url="dubai-alternate.css" IgnoreIfAlreadyExists="TRUE" Type="GhostableInLibrary">
+        </File>
+        <File Url="lagos-alternate.css" IgnoreIfAlreadyExists="TRUE" Type="GhostableInLibrary">
+        </File>
+        <File Url="lyon-alternate.css" IgnoreIfAlreadyExists="TRUE" Type="GhostableInLibrary">
+        </File>
+        <File Url="oslo-alternate.css" IgnoreIfAlreadyExists="TRUE" Type="GhostableInLibrary">
+        </File>
+        <File Url="santiago-alternate.css" IgnoreIfAlreadyExists="TRUE" Type="GhostableInLibrary">
+        </File>
+        <File Url="tokyo-alternate.css" IgnoreIfAlreadyExists="TRUE" Type="GhostableInLibrary">
+        </File>
+    </Module>
+</Elements>

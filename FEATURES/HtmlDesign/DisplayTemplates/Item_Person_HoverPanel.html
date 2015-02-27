@@ -1,0 +1,244 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_PeopleHoverPanel</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string">$Resources:Microsoft.Office.Server.Search,DisplayTemplateDescription_PeopleHoverPanel</mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#SearchHoverPanel;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:CrawlerXSLFile msdt:dt="string"></mso:CrawlerXSLFile>
+<mso:ManagedPropertyMapping msdt:dt="string">'AboutMe':'AboutMe','AccountName':'AccountName','BaseOfficeLocation':'BaseOfficeLocation','Department':'Department','HitHighlightedProperties':'HitHighlightedProperties','Interests':'Interests','JobTitle':'JobTitle','LastModifiedTime':'LastModifiedTime','Memberships':'Memberships','PastProjects':'PastProjects','Path':'Path','PictureURL':'PictureURL','PreferredName':'PreferredName','Responsibilities':'Responsibilities','Schools':'Schools','ServiceApplicationID':'ServiceApplicationID','SipAddress':'SipAddress','Skills':'Skills','UserProfile_GUID':'UserProfile_GUID','WorkEmail':'WorkEmail','WorkId':'WorkId','YomiDisplayName':'YomiDisplayName'</mso:ManagedPropertyMapping>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="Item_Person_HoverPanel">
+<!--#_
+        if(!$isNull(ctx.CurrentItem)){
+            var id = ctx.CurrentItem.id;
+            var encodedId = $htmlEncode(ctx.CurrentItem.csr_id);
+            var followId = encodedId + "_hoverFollow";
+            var dynTagId = encodedId + "_hoverDynTag";
+            var dynTagIdRel = encodedId + "_hoverDynTagRel";
+            var visitId = encodedId + "_hoverVisit";
+            var hhProps = Srch.U.createXMLDocument("<root>" + ctx.CurrentItem.HitHighlightedProperties + "</root>");
+            var has_acc = !$isEmptyString(ctx.CurrentItem.AccountName); 
+            var has_abme = !$isEmptyString(ctx.CurrentItem.AboutMe);
+            var has_resp = !$isEmptyString(ctx.CurrentItem.Responsibilities);
+            var has_ski = !$isEmptyString(ctx.CurrentItem.Skills);
+            var has_pp = !$isEmptyString(ctx.CurrentItem.PastProjects);
+            var has_sch = !$isEmptyString(ctx.CurrentItem.Schools);
+            var has_memb = !$isEmptyString(ctx.CurrentItem.Memberships);
+            var has_int = !$isEmptyString(ctx.CurrentItem.Interests);
+            var has_vlm = !$isEmptyString(ctx.CurrentItem.ProfileViewsLastMonth);
+            var has_vlw = !$isEmptyString(ctx.CurrentItem.ProfileViewsLastWeek);
+            var has_query = !$isEmptyString(ctx.CurrentItem.ProfileQueriesFoundYou); 
+            var isSelfSrch = (has_vlm == true || has_vlw == true || has_query == true);
+            var infoAvailable = false;
+            var delimiter = "";
+            var uname = ctx.CurrentItem.PreferredName;
+            var aname = ctx.CurrentItem.AccountName;
+            var isExpResult = false;
+            if (!$isNull(ctx.CurrentItem.ParentTableReference) && !$isNull(ctx.CurrentItem.ParentTableReference.QueryRuleId))
+            {
+              var orQRId  = new SP.Guid(ctx.CurrentItem.ParentTableReference.QueryRuleId);
+              var exQRId = new SP.Guid("915bafaa-12da-492c-89b3-516f811dbf8c");
+              if (!$isNull(orQRId) && !$isNull(exQRId) && orQRId.equals(exQRId))
+              {
+                isExpResult =  true;
+              }
+            }
+            if ($isEmptyString(uname)) { uname = ctx.CurrentItem.YomiDisplayName }
+_#-->
+            <div class="ms-srch-hover-innerContainer ms-srch-hover-standardSize" id="_#= $htmlEncode(id + HP.ids.inner) =#_">
+                <div class="ms-srch-hover-arrowBorder" id="_#= $htmlEncode(id + HP.ids.arrowBorder) =#_"></div>
+                <div class="ms-srch-hover-arrow" id="_#= $htmlEncode(id + HP.ids.arrow) =#_"></div>
+                <div class="ms-srch-hover-content" id="_#= $htmlEncode(id + HP.ids.content) =#_" data-displaytemplate="PeopleHoverPanel">
+                    <div id="_#= $htmlEncode(id + HP.ids.header) =#_" class="ms-srch-hover-header">
+                        <div class="ms-srch-hover-close">
+                            <a href="javascript:HP.Close()" id="_#= $htmlEncode(id + HP.ids.close) =#_" title="_#= $htmlEncode(Srch.Res.hp_Tooltip_Close) =#_">
+                                <img src="_#= $urlHtmlEncode(SP.Utilities.VersionUtility.getImageUrl(Srch.SU.closeImage)) =#_" alt="_#= $htmlEncode(Srch.Res.hp_Tooltip_Close) =#_" />
+                            </a>
+                        </div>
+                        <div class="ms-srch-hover-title">
+<!--#_                        
+                            if (!Srch.U.e(uname) && !Srch.U.e(ctx.CurrentItem.Path)) {
+                                var encodedName = $htmlEncode(uname);
+                                var displayName = Srch.U.getSingleHHXMLNodeValue(hhProps, "preferredname");
+                                if ($isEmptyString(displayName)) { displayName = encodedName }
+_#-->                        
+                                <h2 class="ms-dlg-heading ms-srch-ellipsis">_#= displayName =#_</h2>
+<!--#_                        
+                            }
+_#--> 
+                        </div>
+                    </div>
+                    <div id="_#= $htmlEncode(id + HP.ids.body) =#_" class="ms-srch-hover-body ms-srch-people-hover-categories">
+                        <ul id="Categories">
+<!--#_                    
+                            if(isExpResult == true) {
+_#-->                        
+                              <div id="_#= dynTagId =#_"></div>
+<!--#_                                                                            
+                            }                
+_#-->   
+<!--#_                    
+                            if(has_ski == true && has_resp == true && has_abme == true) {
+                                var encodedVal = Srch.U.getTrimmedProcessedHHXMLString(Srch.U.getMultipleHHXMLNodeValues(hhProps, "skills", 5, delimiter), 145);
+                                if (Srch.U.e(encodedVal)) { encodedVal = $htmlEncode(Srch.U.getTrimmedString(Srch.U.getUnEncodedMultiValuedResults(ctx.CurrentItem.Skills, 5, delimiter), 145)) }
+                                if (!Srch.U.e(encodedVal)) {
+                                    infoAvailable = true;
+_#-->                        
+                                    <li id="SkillsField">
+                                        <div class="ms-srch-hover-subTitle"><h3 class="ms-soften">_#= $htmlEncode(Srch.Res.hp_PeopleItem_Skills) =#_</h3></div>
+                                        <div class="ms-srch-hover-text" id="_#= $htmlEncode(id + HP.ids.peopleSkills) =#_">
+                                            _#= encodedVal =#_
+                                        </div>
+                                    </li>
+<!--#_ 
+                                } 
+_#-->
+<!--#_                                                                            
+                            }                
+_#-->                                
+<!--#_                    
+                            if(has_pp == true && (has_resp == true  || has_ski == true) && (has_abme == true || (has_resp == true && has_ski == true))) {
+                                var encodedVal = Srch.U.getTrimmedProcessedHHXMLString(Srch.U.getMultipleHHXMLNodeValues(hhProps, "pastprojects", 5, delimiter), 145);
+                                if (Srch.U.e(encodedVal)) { encodedVal = $htmlEncode(Srch.U.getTrimmedString(Srch.U.getUnEncodedMultiValuedResults(ctx.CurrentItem.PastProjects, 5, delimiter), 145)) }
+                                if (!Srch.U.e(encodedVal)) {
+                                    infoAvailable = true;
+_#-->                        
+                                    <li id="PastProjectsField">
+                                        <div class="ms-srch-hover-subTitle"><h3 class="ms-soften">_#= $htmlEncode(Srch.Res.hp_PeopleItem_PastProjects) =#_</h3></div>
+                                        <div class="ms-srch-hover-text" id="_#= $htmlEncode(id + HP.ids.peoplePastProjects) =#_">
+                                            _#= encodedVal =#_
+                                        </div>
+                                    </li>
+<!--#_ 
+                                } 
+_#-->
+<!--#_                                                                            
+                            }                
+_#-->                                                        
+<!--#_                    
+                            if(has_int == true && (has_resp == true  || has_ski == true || has_pp == true) && (has_abme == true || (has_resp == true && (has_ski == true || has_pp == true)) || (has_ski == true && has_pp == true))) {
+                                var encodedVal = Srch.U.getTrimmedProcessedHHXMLString(Srch.U.getMultipleHHXMLNodeValues(hhProps, "interests", 5, delimiter), 145);
+                                if (Srch.U.e(encodedVal)) { encodedVal = $htmlEncode(Srch.U.getTrimmedString(Srch.U.getUnEncodedMultiValuedResults(ctx.CurrentItem.Interests, 5, delimiter), 145)) }
+                                if (!Srch.U.e(encodedVal)) {
+                                    infoAvailable = true;
+_#-->                        
+                                    <li id="InterestsField">
+
+                                        <div class="ms-srch-hover-subTitle"><h3 class="ms-soften">_#= $htmlEncode(Srch.Res.hp_PeopleItem_Interests) =#_</h3></div>
+                                        <div class="ms-srch-hover-text" id="_#= $htmlEncode(id + HP.ids.peopleInterests) =#_">
+                                            _#= encodedVal =#_
+                                        </div>
+                                    </li>
+<!--#_ 
+                                } 
+_#-->
+<!--#_                                                                            
+                            }                
+_#-->                        
+<!--#_                    
+                            if(has_sch == true && (has_resp == true  || has_ski == true || has_pp == true || has_int == true)) {
+                                var encodedVal = Srch.U.getTrimmedProcessedHHXMLString(Srch.U.getMultipleHHXMLNodeValues(hhProps, "schools", 5, delimiter), 145);
+                                if (Srch.U.e(encodedVal)) { encodedVal = $htmlEncode(Srch.U.getTrimmedString(Srch.U.getUnEncodedMultiValuedResults(ctx.CurrentItem.Schools, 5, delimiter), 145)) }
+                                if (!Srch.U.e(encodedVal)) {
+                                    infoAvailable = true;
+_#-->                        
+                                    <li id="SchoolsField">
+                                        <div class="ms-srch-hover-subTitle"><h3 class="ms-soften">_#= $htmlEncode(Srch.Res.hp_PeopleItem_Schools) =#_</h3></div>
+                                        <div class="ms-srch-hover-text" id="_#= $htmlEncode(id + HP.ids.peopleSchools) =#_">
+                                            _#= encodedVal =#_
+                                        </div>
+                                    </li>
+<!--#_ 
+                                } 
+_#-->
+<!--#_                                                                            
+                            }                
+_#-->                        
+<!--#_                    
+                            if(has_memb == true) {
+                                var encodedVal = Srch.U.getTrimmedProcessedHHXMLString(Srch.U.getMultipleHHXMLNodeValues(hhProps, "memberships", 5, delimiter), 145);
+                                if (Srch.U.e(encodedVal)) { encodedVal = $htmlEncode(Srch.U.getTrimmedString(Srch.U.getUnEncodedMultiValuedResults(ctx.CurrentItem.Memberships, 5, delimiter), 145)) }
+                                if (!Srch.U.e(encodedVal)) {
+                                    infoAvailable = true;
+                                    if(isExpResult == false) {
+_#-->                        
+                                        <li id="MembershipsField">
+                                            <div class="ms-srch-hover-subTitle"><h3 class="ms-soften">_#= $htmlEncode(Srch.Res.hp_PeopleItem_Memberships) =#_</h3></div>
+                                            <div class="ms-srch-hover-text" id="_#= $htmlEncode(id + HP.ids.peopleMemberships) =#_">
+                                                _#= encodedVal =#_
+                                            </div>
+                                        </li>
+<!--#_ 
+                                    } 
+_#-->
+<!--#_ 
+                                } 
+_#-->
+<!--#_                                                                            
+                            }                
+_#-->   
+<!--#_                    
+                            if(isExpResult == false) {
+_#-->                        
+                              <div id="_#= dynTagId =#_"></div>
+<!--#_                                                                            
+                            }                
+_#-->   
+                            <div id="_#= dynTagIdRel =#_"></div>
+                        </ul>
+                    </div>
+                    <div id="_#= $htmlEncode(id + HP.ids.actions) =#_" class="ms-srch-hover-actions">
+                        <div class="ms-srch-hover-action">
+                            <a id="_#= visitId =#_" class="ms-calloutLink ms-uppercase" href="_#= $urlHtmlEncode(ctx.CurrentItem.Path) =#_" title="_#= $htmlEncode(Srch.Res.hp_PeopleItem_ViewProfile) =#_">
+                                _#= $htmlEncode(Srch.Res.hp_PeopleItem_ViewProfile) =#_ 
+                            </a>
+                        </div>
+<!--#_                    
+                        if(has_acc == true && isSelfSrch == false) {
+_#-->                    
+                        <div class="ms-srch-hover-action">
+                            <div class="ms-calloutLink ms-uppercase" id="_#= followId =#_"></div>
+<!--#_
+                            AddPostRenderCallback(ctx, function(){
+                                HP.GetPeopleFollowingControl(aname, uname, followId, null);
+                            });
+_#-->
+                        </div>
+<!--#_                        
+                        }
+_#-->                        
+                    </div>
+<!--#_
+                    AddPostRenderCallback(ctx, function(){
+                        var docCtrlElem = document.getElementById(dynTagId);
+                        Srch.PSU.documentsByQuery(ctx.ClientControl, uname, docCtrlElem, infoAvailable, isExpResult);
+                    });
+_#-->
+<!--#_
+                    var queryUserId = null;  
+                    if(ctx.ScriptApplicationManager && ctx.ScriptApplicationManager.states){
+                         queryUserId = ctx.ScriptApplicationManager.states.currentUserProfileId;
+					}
+                    var userId = ctx.CurrentItem.UserProfile_GUID;
+
+                    AddPostRenderCallback(ctx, function(){
+                        Srch.PSU.relatedThroughByQuery(ctx.ClientControl, userId, queryUserId, dynTagIdRel, infoAvailable);
+                    });
+_#-->
+
+                </div>
+            </div>
+<!--#_                        
+        }
+_#-->            
+    </div>
+</body>
+</html>

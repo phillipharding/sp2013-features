@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="d7670c9c-1c29-4f44-8691-584001968a74"
+    Title="What's New List"
+    Description="$Resources:core,GbwFeatureWhatsNewDescription;"
+    Version="1.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\whatsnewlist.xml" />
+        <ElementFile Location="whatsnew\schema.xml" />
+    </ElementManifests>
+</Feature>

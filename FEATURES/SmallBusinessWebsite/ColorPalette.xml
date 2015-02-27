@@ -1,0 +1,36 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="OOBThemesV15" List="123" Url="_catalogs/theme" RootWebOnly="TRUE">
+            <File Url="15/palette_pub001.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub001.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub002.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub002.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub003.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub003.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub004.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub004.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub005.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub005.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub006.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub006.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub007.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub007.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub008.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub008.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub009.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub009.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub010.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub010.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub011.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub011.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub012.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub012.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub013.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub013.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub014.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub014.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub015.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub015.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub016.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub016.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub017.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub017.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub018.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub018.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub019.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub019.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub020.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub020.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub021.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub021.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub022.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub022.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub023.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub023.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub024.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub024.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub025.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub025.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub026.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub026.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub027.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub027.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub028.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub028.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub029.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub029.spcolor" IgnoreIfAlreadyExists="TRUE" />
+            <File Url="15/palette_pub030.spcolor" Type="GhostableInLibrary" Path="lists/themes/palette_pub030.spcolor" IgnoreIfAlreadyExists="TRUE" />
+    </Module>
+</Elements>

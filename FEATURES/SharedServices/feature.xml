@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="F324259D-393D-4305-AA48-36E8D9A7A0D6"
+          Title="Shared Services Infrastructure"
+          Description="Shared Services Infrastructure"
+          Version="14.0.0.0"
+          Scope="Farm"
+          ReceiverAssembly="Microsoft.Office.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.Office.Server.Administration.SharedServicesFeature"
+          Hidden="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

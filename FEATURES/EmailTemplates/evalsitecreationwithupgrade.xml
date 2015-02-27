@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EmailContent>
+  <Subject>
+    $ResourcesNoEncode:core,CreatePreviewSiteMailSubject;
+  </Subject>
+  <Body>
+    <HTML>
+      <![CDATA[<html>
+      <body>
+      <h3>$Resources:core,UpgradeEvaluationH3;</h3>
+      <p>]]>
+    </HTML>
+    $ResourcesNoEncode:core,CreateEvalSiteWithNoUpgradeP1;
+    <HTML>
+      <![CDATA[</p>
+        <h3>$Resources:core,EvalSitesImportantTasks;</h3>
+        <p>$Resources:core,CreateEvalSiteWithNoUpgradeP2;</p>
+        <ol>
+        <li>$Resources:core,CreateEvalSiteWithUpgradeLi1;</li>
+        <ul>
+        <li>]]>
+    </HTML>
+    $ResourcesNoEncode:core,CreateEvalSiteWithUpgradeLi2part1;
+    <HTML>
+    <![CDATA[ $Resources:core,CreateEvalSiteWithUpgradeLi2part2;</li>
+    <li>$Resources:core,CreateEvalSiteWithUpgradeLi3;</li>
+    </ul></li>
+    <li>$Resources:core,CreateEvalSiteWithUpgradeULLi1;</li>
+    </ol>
+    <h3>$Resources:core,EvalSitesTerms;</h3>
+    <p>]]>
+    </HTML>
+    $ResourcesNoEncode:core,EvalSitesTermsH3Ppart1;
+    <HTML>
+      <![CDATA[$Resources:core,EvalSitesTermsH3Ppart2;</p>
+      </body>
+      </html>]]>
+    </HTML>
+  </Body>
+</EmailContent>

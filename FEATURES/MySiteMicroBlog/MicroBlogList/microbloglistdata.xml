@@ -1,0 +1,25 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance
+      Id="MicroBlogList"
+      Title="$Resources:spscore,MicroFeed_ListTitle;"
+      Description="$Resources:spscore,MicroFeed_ListDescription;"
+      TemplateType="544"
+      Url="Lists/PublishedFeed">
+    <Data>
+      <Rows>
+        <Row>
+            <Field Name="ID">1</Field>
+			<Field Name="ContentTypeId">0x0120</Field>
+            <Field Name="FSObjType">1</Field>
+            <Field Name="Title">FEB96200-6E92-41DB-856B-E8702BCDF33A</Field>
+        </Row>
+        <Row>
+            <Field Name="ID">2</Field>
+			<Field Name="ContentTypeId">0x0120</Field>
+            <Field Name="FSObjType">1</Field>
+            <Field Name="Title">AB922B82-8406-4E49-B17B-9057BDF09503</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

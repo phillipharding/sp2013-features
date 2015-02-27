@@ -1,0 +1,10 @@
+<Feature Id="9B0293A7-8942-46b0-8B78-49D29A9EDD53"
+    Title="$Resources:spscore,ClaimHierarchyProvider_Organization_Text;"
+    Description="$Resources:spscore,ClaimHierarchyProvider_Organization_Desc;"
+    Version="14.0.0.0"
+    Hidden="TRUE"
+    Scope="Farm"
+    ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Portal.UserProfiles.OrganizationClaimHierarchyProviderFeatureReceiver"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature  Id="7ACFCB9D-8E8F-4979-AF7E-8AED7E95245E"
+          Title="$Resources:SearchCenterUrl_Feature_Title;"
+          Description="$Resources:SearchCenterUrl_Feature_Description;"
+          DefaultResourceFile="Microsoft.Office.Server.Search"
+          Version="15.0.0.0"
+          Scope="Web"
+          Hidden="TRUE"
+          ReceiverAssembly="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.Office.Server.Search.Administration.SearchCenterUrlFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <UpgradeActions>
+    </UpgradeActions>
+</Feature>

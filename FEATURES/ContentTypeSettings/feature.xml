@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="FEAD7313-4B9E-4632-80A2-FF00A2D83297"
+          Title="$Resources:core,contenttypesettingsFeatureTitle;"
+          Description="$Resources:core,contenttypesettingsFeatureDesc;"
+          Version="12.0.0.0"
+          Scope="Farm"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ContentTypeSettings.xml" />
+    </ElementManifests>
+</Feature>

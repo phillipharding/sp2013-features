@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="$Resources:core,Marketplace_CorporateCatalogInstanceTitle;"
+                OnQuickLaunch="TRUE"
+                TemplateType="330"
+                Url="App Catalog"
+                Description="$Resources:core,Marketplace_CorporateCatalogInstanceDescription;">
+  </ListInstance>
+</Elements>

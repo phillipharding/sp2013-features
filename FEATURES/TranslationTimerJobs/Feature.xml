@@ -1,0 +1,11 @@
+<Feature  Id="D085B8DC-9205-48A4-96EA-B40782ABBA02"
+          Title="Translation Timer Jobs"
+          Description="Creates timer jobs in the web application to support translation import and export."
+          Version="15.0.0.0"
+          Scope="WebApplication"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          ReceiverAssembly="Microsoft.SharePoint.Translation, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Translation.TranslationTimerJobsFeatureHandler" 
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

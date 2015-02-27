@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomActionGroup
+        Id="UsersAndPermissions"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:core,SiteSettings_UsersAndPermissions_Title;"
+        Sequence="10"
+        Description="" 
+        ImageUrl="/_layouts/15/images/SiteSettings_UsersAndPermissions_48x48.png?rev=23" />
+    <CustomAction
+        Id="PeopleAndGroups"
+        GroupId="UsersAndPermissions"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="EnumeratePermissions,BrowseUserInfo"
+        Sequence="10"
+        Title="$Resources:core,SiteSettings_PeopleAndGroups_Title;"
+        Description="$Resources:core,SiteSettings_PeopleAndGroups_Tooltip;">
+        <UrlAction
+            Url="~layouts/people.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="User"
+        GroupId="UsersAndPermissions"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="EnumeratePermissions"
+        Sequence="20"
+        Title="$Resources:core,SiteSettings_AdvancedPermissions_Title;"
+        Description="$Resources:core,SiteSettings_AdvancedPermissions_Tooltip;">
+        <UrlAction
+            Url="~layouts/user.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="AccessRequests"
+        GroupId="UsersAndPermissions"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManagePermissions,BrowseUserInfo"
+        Sequence="30"
+	    UIVersion=">=15"    
+        Title="$Resources:core,SiteSettingPendingReqPageTitle;"
+        Description="$Resources:core,SiteSettingPendingReqPageTitle;">
+    </CustomAction>
+    <CustomAction
+        Id="SiteCollectionAdministrators"
+        GroupId="UsersAndPermissions"
+        Location="Microsoft.SharePoint.SiteSettings"
+        RequireSiteAdministrator="TRUE"
+        Sequence="40"
+        Title="$Resources:core,SiteSettings_SiteCollectionAdministrators_Title;"
+        Description="$Resources:core,SiteSettings_SiteCollectionAdministrators_Tooltip;">
+        <UrlAction
+            Url="~layouts/mngsiteadmin.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="SiteAppPrincipals"
+        GroupId="UsersAndPermissions"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManagePermissions,BrowseUserInfo"
+        Sequence="100"
+        Title="$Resources:core,SiteSettings_SiteAppPrincipals_Title;"
+        Description="$Resources:core,SiteSettings_SiteAppPrincipals_Tooltip;">
+        <UrlAction
+            Url="~layouts/appprincipals.aspx?Scope=Web" />
+    </CustomAction>
+    <CustomAction
+        Id="SiteCollectionAppPrincipals"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManagePermissions,BrowseUserInfo"
+        RequireSiteAdministrator="TRUE"
+        Sequence="100"
+        Title="$Resources:core,SiteSettings_SiteCollectionAppPrincipals_Title;"
+        Description="$Resources:core,SiteSettings_SiteCollectionAppPrincipals_Tooltip;">
+        <UrlAction
+            Url="~layouts/appprincipals.aspx" />
+    </CustomAction>
+    <CustomActionGroup
+        Id="Customization"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:core,SiteSettings_Customization_Title;"
+        Sequence="20"
+        Description=""
+        ImageUrl="/_layouts/15/images/SiteSettings_LookAndFeel_48x48.png?rev=23" />
+    <CustomAction
+        Id="ProjectSettings"
+        GroupId="Customization"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb"
+        Sequence="10"
+        Title="$Resources:core,SiteSettings_ProjectSettings_Title_15;"
+        Description="$Resources:core,SiteSettings_TitleDescriptionAndIcon_Tooltip_15;">
+        <UrlAction
+            Url="~layouts/prjsetng.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="QuickLaunch"
+        GroupId="Customization"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageLists"
+        Sequence="20"
+        Title="$Resources:core,SiteSettings_QuickLaunch_Title;"
+        Description="$Resources:core,SiteSettings_QuickLaunch_Tooltip;">
+        <UrlAction
+            Url="~layouts/quiklnch.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="TopNav"
+        GroupId="Customization"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageLists"
+        Sequence="30"
+        Title="$Resources:core,SiteSettings_TopNav_Title;"
+        Description="$Resources:core,SiteSettings_TopLinkBar_Tooltip;">
+        <UrlAction
+            Url="~layouts/topnav.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="NavOptions"
+        GroupId="Customization"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb"
+        Sequence="40"
+        Title="$Resources:core,SiteSettings_NavOptions_Title;"
+        Description="$Resources:core,SiteSettings_TreeView_Tooltip;">
+        <UrlAction
+            Url="~layouts/navoptions.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="Theme"
+        GroupId="Customization"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ApplyThemeAndBorder,ApplyStyleSheets,Open,ViewPages,OpenItems,ViewListItems"
+        Sequence="50"
+        Title="$Resources:core,SiteSettings_ThemeNew_Title;"
+        Description="$Resources:core,SiteSettings_SiteTheme_Tooltip;">
+        <UrlAction
+            Url="~layouts/designgallery.aspx" />
+    </CustomAction>
+    <CustomActionGroup
+        Id="Galleries"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:core,SiteSettings_GalleriesNew_Title;"
+        Sequence="30"
+        Description=""
+        ImageUrl="/_layouts/15/images/SiteSettings_Galleries_48x48.png?rev=23" />
+    <CustomAction
+        Id="ManageField"
+        GroupId="Galleries"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="AddAndCustomizePages"
+        Sequence="10"
+        Title="$Resources:core,SiteSettings_ManageField_Title;"
+        Description="$Resources:core,SiteSettings_SiteColumns_Tooltip;">
+        <UrlAction
+            Url="~layouts/mngfield.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="ManageCType"
+        GroupId="Galleries"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="AddAndCustomizePages"
+        Sequence="20"
+        Title="$Resources:core,SiteSettings_ManageCType_Title;"
+        Description="$Resources:core,SiteSettings_SiteContentTypes_Tooltip;">
+        <UrlAction
+            Url="~layouts/mngctype.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="WebParts"
+        GroupId="Galleries"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="AddAndCustomizePages"
+        Sequence="30"
+        Title="$Resources:core,SiteSettings_WebParts_Title;"
+        Description="$Resources:core,SiteSettings_WebParts_Tooltip;">
+        <UrlAction
+            Url="" />
+    </CustomAction>
+    <CustomAction
+        Id="ListTemplates"
+        GroupId="Galleries"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb,AddAndCustomizePages"
+        Sequence="40"
+        Title="$Resources:core,SiteSettings_ListTemplates_Title;"
+        Description="$Resources:core,SiteSettings_ListTemplates_Tooltip;">
+        <UrlAction
+            Url="" />
+    </CustomAction>
+    <CustomAction
+        Id="SiteTemplates"
+        GroupId="Galleries"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb,AddAndCustomizePages"
+        Sequence="50"
+        UIVersion="3"    
+        Title="$Resources:core,SiteSettings_SiteTemplates_Title;"
+        Description="$Resources:core,SiteSettings_SiteTemplates_Tooltip;">
+        <UrlAction
+            Url="" />
+    </CustomAction>
+    <CustomAction
+        Id="MasterPageCatalog"
+        GroupId="Galleries"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb,AddAndCustomizePages"
+        Sequence="60"
+        Title="$Resources:core,SiteSettings_MasterPageCatalog_Title;"
+        Description="$Resources:core,SiteSettings_MasterPages_Tooltip;">
+        <UrlAction
+            Url="" />
+    </CustomAction>
+    <CustomAction
+        Id="Solutions"
+        GroupId="Galleries"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="AddAndCustomizePages"
+        Sequence="1000"
+        Title="$Resources:core,SiteSettings_Solutions_Title;"
+        Description="$Resources:core,SiteSettings_SolutionsGallery_Tooltip;">
+        <UrlAction
+            Url="" />
+    </CustomAction>
+    <CustomAction
+        Id="Themes"
+        GroupId="Galleries"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="AddAndCustomizePages"
+        Sequence="1000"
+        Title="$Resources:core,SiteSettings_ThemeGallery_Title;"
+        Description="$Resources:core,SiteSettings_SiteTheme_Tooltip;">
+        <UrlAction
+            Url="" />
+    </CustomAction> 
+    <CustomAction
+        Id="Designs"
+        GroupId="Galleries"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="AddAndCustomizePages"
+        Sequence="1100"
+        Title="$Resources:core,SiteSettings_DesignGallery_Title;"
+        Description="$Resources:core,SiteSettings_SiteTheme_Tooltip;">
+        <UrlAction
+            Url="" />
+    </CustomAction>
+    <CustomActionGroup
+        Id="SiteTasks"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:core,SiteSettings_SiteActions;"
+        Sequence="40"
+        Description=""
+        ImageUrl="/_layouts/15/images/SiteSettings_SiteActions_48x48.png?rev=23" />
+    <CustomAction
+        Id="ManageSiteFeatures"
+        GroupId="SiteTasks"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb"
+        Sequence="10"
+        Title="$Resources:core,SiteSettings_ManageSiteFeatures_Title;"
+        Description="$Resources:core,SiteSettings_ManageSiteFeatures_Tooltip;">
+        <UrlAction
+            Url="~layouts/ManageFeatures.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="SaveAsTemplate"
+        GroupId="SiteTasks"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="AddAndCustomizePages,BrowseDirectories,ManagePermissions,ManageSubwebs,ManageWeb,UseRemoteAPIs,ViewFormPages"
+        Sequence="20"
+        Title="$Resources:core,SiteSettings_SaveAsTemplate_Title;"
+        Description="$Resources:core,SiteSettings_SaveSiteAsTemplate_Tooltip;">
+        <UrlAction
+            Url="~layouts/savetmpl.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="SiteCollectionUsage"
+        GroupId="SiteTasks"
+        Location="Microsoft.SharePoint.SiteSettings"
+        RequireSiteAdministrator="TRUE"
+        Sequence="23"
+        Title="$Resources:core,SiteSettings_SiteCollectionUsage_Title;"
+        Description="$Resources:core,SiteSettings_SiteCollectionUsageReports_Tooltip;"
+        UIVersion="4" >
+       <UrlAction
+            Url="~layouts/usage.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="WebUsage"
+        GroupId="SiteTasks"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ViewUsageData"
+        Sequence="26"
+        Title="$Resources:core,SiteSettings_WebUsage_Title;"
+        Description="$Resources:core,SiteSettings_SiteUsageReports_Tooltip;"
+        UIVersion="4" >
+        <UrlAction
+            Url="~layouts/usageDetails.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="ReGhost"
+        GroupId="SiteTasks"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb"
+        Sequence="30"
+        Title="$Resources:core,SiteSettings_ReGhost_Title;"
+        Description="$Resources:core,SiteSettings_ResetToSiteDefinition_Tooltip;">
+        <UrlAction
+            Url="~layouts/reghost.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="DeleteWeb"
+        GroupId="SiteTasks"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb,BrowseUserInfo"
+        Sequence="40"
+        Title="$Resources:core,SiteSettings_DeleteWeb_Title;"
+        Description="$Resources:core,SiteSettings_DeleteThisSite_Tooltip;">
+        <UrlAction
+            Url="~layouts/deleteweb.aspx" />
+    </CustomAction> 
+    <CustomActionGroup
+        Id="SiteAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:core,SiteSettings_Administration_Title;"
+        Sequence="50"
+        Description=""
+        ImageUrl="/_layouts/15/images/SiteSettings_SiteAdmin_48x48.png?rev=23" />
+    <CustomAction
+        Id="RegionalSettings"
+        GroupId="SiteAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Sequence="10"
+        Title="$Resources:core,SiteSettings_RegionalSettings_Title;"
+        Description="$Resources:core,SiteSettings_RegionalSettings_Tooltip;">
+        <UrlAction
+            Url="~layouts/regionalsetng.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="LanguageSettings"
+        GroupId="SiteAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Sequence="12"
+        Rights="ManageWeb"
+        Title="$Resources:core,SiteSettings_LanguageSettings_Title;"
+        Description="$Resources:core,SiteSettings_LanguageSettings_Tooltip;">
+        <UrlAction
+            Url="~layouts/muisetng.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="ExportTranslations"
+        GroupId="SiteAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Sequence="14"
+        Rights="ManageWeb"
+        Title="$Resources:core,SiteSettings_TranslationsExport_Title;"
+        Description="$Resources:core,SiteSettings_TranslationsExport_Tooltip;">
+        <UrlAction
+            Url="~layouts/exporttranslations.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="ImportTranslations"
+        GroupId="SiteAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Sequence="16"
+        Rights="ManageWeb"
+        Title="$Resources:core,SiteSettings_TranslationsImport_Title;"
+        Description="$Resources:core,SiteSettings_TranslationsImport_Tooltip;">
+        <UrlAction
+            Url="~layouts/importtranslations.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="LibrariesAndLists"
+        GroupId="SiteAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageLists"
+        Sequence="20"
+        Title="$Resources:core,SiteSettings_LibrariesAndLists_Title;"
+        Description="$Resources:core,SiteSettings_SiteLibrariesAndLists_Tooltip;">
+        <UrlAction
+            Url="~layouts/mcontent.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="UserAlerts"
+        GroupId="SiteAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ViewListItems"
+        Sequence="40"
+        Title="$Resources:core,SiteSettings_UserAlerts_Title;"
+        Description="$Resources:core,SiteSettings_UserAlerts_Tooltip;">
+        <UrlAction
+            Url="~layouts/sitesubs.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="RSS"
+        GroupId="SiteAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb,AddAndCustomizePages"
+        Sequence="60"
+        Title="$Resources:core,SiteSettings_RSS_Title;"
+        Description="$Resources:core,SiteSettings_RSS_Tooltip;">
+        <UrlAction
+            Url="~layouts/siterss.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="SrchVis"
+        GroupId="SearchAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb,AddAndCustomizePages"
+        Sequence="7"
+        Title="$Resources:core,SiteSettings_SrchVis_Title;"
+        Description="$Resources:core,SiteSettings_SearchVisibility_Tooltip;">
+        <UrlAction
+            Url="~layouts/srchvis.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="ManageSubWebs"
+        GroupId="SiteAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageSubwebs"
+        Sequence="70"
+        Title="$Resources:core,SiteSettings_ManageSubWebs_Title;"
+        Description="$Resources:core,SiteSettings_SitesAndWorkspaces_Tooltip;">
+        <UrlAction
+            Url="~layouts/mngsubwebs.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="WorkflowSettings"
+        GroupId="SiteAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb"
+        Sequence="90"
+        Title="$Resources:SiteSettings_WorkflowSettings_Title;"
+        Description="$Resources:core,SiteSettings_WorkflowSettings_Tooltip;">
+        <UrlAction
+            Url="~layouts/wrksetng.aspx" />
+    </CustomAction>    
+    <CustomActionGroup
+        Id="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:core,SiteSettings_SiteCollectionAdmin_Title;"
+        Sequence="60"
+        Description=""
+        ImageUrl="/_layouts/15/images/SiteSettings_SiteCollectionAdmin_48x48.png?rev=23" />
+    <CustomAction
+        Id="DeletedItems"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        RequireSiteAdministrator="TRUE"
+        Sequence="10"
+        Title="$Resources:core,SiteSettings_DeletedItems_Title;"
+        Description="$Resources:core,SiteSettings_RecycleBin_Tooltip;">
+        <UrlAction
+            Url="~layouts/AdminRecycleBin.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="ManageSiteCollectionFeatures"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        RequireSiteAdministrator="TRUE"
+        Sequence="20"
+        Title="$Resources:core,SiteSettings_SiteCollectionFeatures_Title;"
+        Description="$Resources:core,SiteSettings_SiteCollectionFeatures_Tooltip;">
+        <UrlAction
+            Url="~layouts/ManageFeatures.aspx?Scope=Site" />
+    </CustomAction>
+    <CustomAction
+        Id="Hierarchy"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        RequireSiteAdministrator="TRUE"
+        Sequence="40"
+        Title="$Resources:core,SiteSettings_Hierarchy_Title;"
+        Description="$Resources:core,SiteSettings_SiteCollectionHierarchy_Tooltip;">
+        <UrlAction
+            Url="~layouts/vsubwebs.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="Portal"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        RequireSiteAdministrator="TRUE"
+        Sequence="80"
+        Title="$Resources:core,SiteSettings_Portal_Title;"
+        Description="$Resources:core,SiteSettings_PortalSiteConnection_Tooltip;">
+        <UrlAction
+            Url="~layouts/portal.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="StorageMetrics"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        RequireSiteAdministrator="TRUE"
+        Sequence="100"
+        Title="$Resources:core,SiteSettings_StorageMetrics_Title;"
+        Description="$Resources:core,SiteSettings_StorageMetrics_Tooltip;">
+        <UrlAction 
+            Url="~layouts/storman.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="ManageSiteHelpRendering"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="AddAndCustomizePages"
+        RequireSiteAdministrator="TRUE"
+        Sequence="1000"
+        Title="$Resources:core,SiteSettings_ManageSiteHelpRendering_Title;">
+        <UrlAction
+            Url="~layouts/HelpSettings.aspx" />
+    </CustomAction>
+    <CustomAction
+          Id="HtmlFieldSecurity"
+          GroupId="SiteCollectionAdmin"
+          Location="Microsoft.SharePoint.SiteSettings"
+          Rights="AddAndCustomizePages"
+          RequireSiteAdministrator="TRUE"
+          Sequence="1000"
+          Title="$Resources:core,SiteSettings_HtmlFieldSecurity_Title;"
+          Description="$Resources:core,SiteSettings_HtmlFieldSecurity_Tooltip;">
+      <UrlAction
+          Url="~layouts/HtmlFieldSecurity.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="SharePointDesignerSettings"
+        GroupId="SiteCollectionAdmin"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="AddAndCustomizePages"
+        RequireSiteAdministrator="TRUE"
+        Sequence="1000"
+        Title="$Resources:core,SiteSettings_SharePointDesignerSettings_Title;">
+        <UrlAction
+            Url="~layouts/SharePointDesignerSettings.aspx" />
+    </CustomAction>
+	<CustomActionGroup
+        Id="SearchAdministration"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:Microsoft.Office.Server.Search,SiteSettings_SearchAdministration_Title;"
+        Sequence="70"
+        Description="" 
+        ImageUrl="/_layouts/15/images/placeholder48x48.png?rev=23" />
+</Elements>

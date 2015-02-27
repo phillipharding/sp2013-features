@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="CA7BD552-10B1-4563-85B9-5ED1D39C962A"
+          Title="$Resources:core,fieldsFeatureTitle;"
+          Description="$Resources:core,fieldsFeatureDesc;"
+          Version="15.0.12.0"
+          Hidden="TRUE"
+          Scope="Site"
+          DefaultResourceFile="core"          
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="fieldswss.xml"/>
+        <ElementManifest Location="fieldswss2.xml"/>
+        <ElementManifest Location="fieldswss3.xml"/>
+        <ElementManifest Location="fieldswss4.xml"/>
+    </ElementManifests>
+    <UpgradeActions>
+        <VersionRange EndVersion="12.1.0.0">
+            <ApplyElementManifests>
+                <ElementManifest Location="fieldswss2.xml"/>
+            </ApplyElementManifests>
+        </VersionRange>   
+        <VersionRange EndVersion="14.0.1.0">
+            <ApplyElementManifests>
+                <ElementManifest Location="fieldswss3.xml"/>
+            </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.12.0">
+            <ApplyElementManifests>
+                <ElementManifest Location="fieldswss4.xml"/>
+            </ApplyElementManifests>
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

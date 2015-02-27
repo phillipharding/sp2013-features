@@ -1,0 +1,16 @@
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Microsoft.SharePoint.Portal.WebControls.MruDocsWebPart, Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">$Resources:core,MruDocsWebPartTitle;</property>
+        <property name="Description" type="string">$Resources:core,MruDocsWebPartDescription;</property>
+        <property name="ChromeType" type="chrometype">None</property>
+        <property name="BaseViewID" type="string">2</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

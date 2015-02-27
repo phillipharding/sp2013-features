@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Control 
+        Id="SmallSearchInputBox" 
+        Sequence="25"
+        ControlClass="Microsoft.Office.Server.Search.WebControls.SearchBoxScriptWebPart" ControlAssembly="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+        <Property Name="UseSharedSettings">true</Property>
+        <Property Name="RenderTemplateId">~sitecollection/_catalogs/masterpage/Display Templates/Search/Control_SearchBox_Compact.js</Property>
+        <Property Name="EmitStyleReference">false</Property>
+        <Property Name="ServerInitialRender">true</Property>
+        <Property Name="TryInplaceQuery">false</Property>
+        <Property Name="QueryGroupNamesJson">[&quot;MasterPage&quot;]</Property>
+        <Property Name="ChromeType">None</Property>
+        <Property Name="ID">SmallSearchInputBox1</Property>
+    </Control>    
+</Elements>

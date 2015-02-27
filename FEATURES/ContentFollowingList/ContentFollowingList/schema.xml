@@ -1,0 +1,204 @@
+<List xmlns:ows="Microsoft SharePoint"
+      Title="$Resources:spscore,ContentFollowingOnet_ListTitle;"
+      Description="$Resources:spscore,ContentFollowingOnet_ListDescription;"
+      EnableContentTypes="TRUE"
+      FolderCreation="FALSE"
+      Direction="$Resources:core,Direction;"
+      BaseType="0"
+      Type="530"
+      xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x0100533CDB8F4EAE447D941948EFAE32BFD5"
+                   Name="$Resources:spscore,ContentFollowingOnet_ContentTypeTitle;"
+                   Group="$Resources:spscore,ContentFollowingOnet_ContentTypeGroup;"
+                   Description="$Resources:spscore,ContentFollowingOnet_ContentTypeDescription;"
+                   Hidden="TRUE">
+        <FieldRefs>
+          <FieldRef ID="{5a7162e7-898c-4b14-9495-933795262aeb}" Name="SiteId" />
+          <FieldRef ID="{2fddf21b-346a-428a-8597-9162469759f9}" Name="WebId" />
+          <FieldRef ID="{0045ee7f-e6e6-4f80-97f7-e15b007eec5f}" Name="ListId" />
+          <FieldRef ID="{4b2b227c-0143-42b8-b9e7-b112f703a695}" Name="ItemUniqueId" />
+          <FieldRef ID="{de42ba64-4aac-45ac-86c1-d86648f473c5}" Name="ItemId" />
+          <FieldRef ID="{cee72098-de5a-4282-8cfe-6cd0bd940af3}" Name="Url" />
+          <FieldRef ID="{0F0550BD-04A2-43D9-9133-46BCBF33B031}" Name="ParentUrl" />
+          <FieldRef ID="{7afe2362-2cce-4474-8015-6c510426cfdc}" Name="Type" />
+          <FieldRef ID="{04D29051-73F3-4D1E-9FCB-71B1C50C9F85}" Name="Subtype" />
+          <FieldRef ID="{52EFE6CA-A624-4873-93D2-F096B7AD5E90}" Name="IconUrl" />
+          <FieldRef ID="{cf24ae67-e34e-41cb-9a98-d337bb806788}" Name="Hidden" />
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+      <Field Type="Guid"
+             Name="SiteId"
+             ShowInDisplayForm="FALSE"
+             ShowInNewForm="FALSE"
+             ShowInEditForm="FALSE"
+             DisplayName="$Resources:spscore,ContentFollowingOnet_Fields_SiteIdDisplayName;"
+             ID="{5a7162e7-898c-4b14-9495-933795262aeb}" />
+      <Field Type="Guid"
+             Name="WebId"
+             ShowInDisplayForm="FALSE"
+             ShowInNewForm="FALSE"
+             ShowInEditForm="FALSE"
+             DisplayName="$Resources:spscore,ContentFollowingOnet_Fields_WebIdDisplayName;"
+             ID="{2fddf21b-346a-428a-8597-9162469759f9}" />
+      <Field Type="Guid"
+             Name="ListId"
+             ShowInDisplayForm="TRUE"
+             ShowInNewForm="FALSE"
+             ShowInEditForm="FALSE"
+             Indexed="TRUE"
+             DisplayName="$Resources:spscore,ContentFollowingOnet_Fields_ListIdDisplayName;"
+             ID="{0045ee7f-e6e6-4f80-97f7-e15b007eec5f}" />
+      <Field Type="Guid"
+             Name="ItemUniqueId"
+             ShowInDisplayForm="FALSE"
+             ShowInNewForm="FALSE"
+             ShowInEditForm="FALSE"
+             DisplayName="$Resources:spscore,ContentFollowingOnet_Fields_UniqueIdDisplayName;"
+             ID="{4b2b227c-0143-42b8-b9e7-b112f703a695}" />
+      <Field Type="Integer"
+             Name="ItemId"
+             ShowInDisplayForm="FALSE"
+             ShowInNewForm="FALSE"
+             ShowInEditForm="FALSE"
+             Indexed="TRUE"
+             DisplayName="$Resources:spscore,ContentFollowingOnet_Fields_ItemIdDisplayName;"
+             ID="{de42ba64-4aac-45ac-86c1-d86648f473c5}" />
+      <Field Type="Text"
+             Name="Url"
+             ShowInDisplayForm="FALSE"
+             ShowInNewForm="FALSE"
+             ShowInEditForm="FALSE"
+             Indexed="TRUE"
+             DisplayName="$Resources:spscore,ContentFollowingOnet_Fields_UrlDisplayName;"
+             ID="{cee72098-de5a-4282-8cfe-6cd0bd940af3}" />
+      <Field Type="Text"
+             Name="ParentUrl"
+             ShowInDisplayForm="FALSE"
+             ShowInNewForm="FALSE"
+             ShowInEditForm="FALSE"
+             DisplayName="$Resources:spscore,ContentFollowingOnet_Fields_ParentUrlDisplayName;"
+             ID="{0F0550BD-04A2-43D9-9133-46BCBF33B031}" />
+      <Field Type="Integer"
+             Name="Type"
+             ShowInDisplayForm="FALSE"
+             ShowInNewForm="FALSE"
+             ShowInEditForm="FALSE"
+             Indexed="TRUE"
+             DisplayName="$Resources:spscore,ContentFollowingOnet_Fields_TypeDisplayName;"
+             ID="{7afe2362-2cce-4474-8015-6c510426cfdc}" />
+      <Field Type="Integer"
+             Name="Subtype"
+             ShowInDisplayForm="FALSE"
+             ShowInNewForm="FALSE"
+             ShowInEditForm="FALSE"
+             Indexed="TRUE"
+             DisplayName="$Resources:spscore,ContentFollowingOnet_Fields_SubtypeDisplayName;"
+             ID="{04D29051-73F3-4D1E-9FCB-71B1C50C9F85}" />
+      <Field Type="Text"
+             Name="IconUrl"
+             ShowInDisplayForm="FALSE"
+             ShowInNewForm="FALSE"
+             ShowInEditForm="FALSE"
+             DisplayName="$Resources:spscore,ContentFollowingOnet_Fields_IconUrlDisplayName;"
+             ID="{52EFE6CA-A624-4873-93D2-F096B7AD5E90}" />
+      <Field Type="Boolean"
+             Name="Hidden"
+             ShowInDisplayForm="FALSE"
+             ShowInNewForm="FALSE"
+             ShowInEditForm="FALSE"
+             DisplayName="$Resources:spscore,ContentFollowingOnet_Fields_HiddenDisplayName;"
+             ID="{cf24ae67-e34e-41cb-9a98-d337bb806788}" />
+    </Fields>
+
+    <Views>
+      <View DisplayName="$Resources:spscore,ContentFollowingOnet_Views_FollowedDocumentsDisplayName"
+        DefaultView="TRUE"
+        BaseViewID="1"
+        Type="HTML"
+        ImageUrl="/_layouts/images/generic.png"
+        WebPartZoneID="LeftZone"
+        WebPartOrder="1"
+        Url="FollowedContent.aspx"
+        CssStyleSheet="contentfollowing.css">
+
+        <JSLink>mquery.js|contentfollowing.js</JSLink>
+
+        <Query>
+          <Where>
+            <Eq>
+              <FieldRef Name="Type" />
+              <Value Type="Integer">1</Value>
+            </Eq>
+          </Where>
+          <OrderBy>
+            <FieldRef Name="Created_x0020_Date" Ascending="FALSE" />
+          </OrderBy>
+        </Query>
+
+        <ViewFields>
+          <FieldRef Name="DocIcon" />
+          <FieldRef Name="Title" />
+          <FieldRef Name="Created_x0020_Date" />
+          <FieldRef Name="Type" />
+          <FieldRef Name="Url" />
+          <FieldRef Name="IconUrl" />
+        </ViewFields>
+
+        <RowLimit Paged="TRUE">30</RowLimit>
+
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(spscore,ContentFollowingOnet_Views_NoAnnouncements)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(spscore,ContentFollowingOnet_Views_NoAnnouncementsHowTo)" />
+        </ParameterBindings>
+
+      </View>
+
+      <View DisplayName="$Resources:spscore,ContentFollowingOnet_Views_FollowedSitesDisplayName"
+        BaseViewID="2"
+        Type="HTML"
+        ImageUrl="/_layouts/images/generic.png"
+        WebPartZoneID="LeftZone"
+        WebPartOrder="1"
+        Url="FollowedSites.aspx"
+        CssStyleSheet="contentfollowing.css">
+
+        <JSLink>mquery.js|contentfollowing.js</JSLink>
+
+        <Query>
+          <Where>
+            <Eq>
+              <FieldRef Name="Type" />
+              <Value Type="Integer">2</Value>
+            </Eq>
+          </Where>
+          <OrderBy>
+            <FieldRef Name="Created_x0020_Date" Ascending="FALSE" />
+          </OrderBy>
+        </Query>
+
+        <ViewFields>
+          <FieldRef Name="Subtype" />
+          <FieldRef Name="Title" />
+          <FieldRef Name="Created_x0020_Date" />
+          <FieldRef Name="Type" />
+          <FieldRef Name="Url" />
+          <FieldRef Name="IconUrl" />
+        </ViewFields>
+
+        <RowLimit Paged="TRUE">30</RowLimit>
+
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(spscore,ContentFollowingOnet_Views_NoAnnouncements)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(spscore,ContentFollowingOnet_Views_NoAnnouncementsHowTo)" />
+        </ParameterBindings>
+
+      </View>
+    </Views>
+    <Forms></Forms>
+    <DefaultDescription></DefaultDescription>
+  </MetaData>
+</List>

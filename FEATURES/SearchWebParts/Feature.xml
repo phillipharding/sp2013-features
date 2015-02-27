@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature  Id="EAF6A128-0482-4F71-9A2F-B1C650680E77"
+          Title="$Resources:SearchWebParts_Feature_Title_15;"
+          Description="$Resources:SearchWebParts_Feature_Description_15;"
+          DefaultResourceFile="Microsoft.Office.Server.Search"
+          Version="15.0.0.34"
+          Scope="Site"
+          Hidden="TRUE"
+          ReceiverAssembly="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.Office.Server.Search.Administration.SearchWebPartsFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="DisplayTemplateColumns.xml"/>
+        <ElementManifest Location="DisplayTemplateContentTypes.xml"/>
+        <ElementManifest Location="webPartDWPFiles.xml"/>
+    </ElementManifests>
+    <UpgradeActions>
+        <VersionRange EndVersion="15.0.0.2">
+            <ApplyElementManifests>
+                <ElementManifest Location="DisplayTemplateColumns.xml"/>
+                <ElementManifest Location="DisplayTemplateContentTypes.xml"/>
+                <ElementManifest Location="webPartDWPFiles.xml"/>
+            </ApplyElementManifests>
+            <CustomUpgradeAction Name="RemoveOldWebparts"/>
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.0.24" EndVersion="15.0.0.25">
+            <ApplyElementManifests>
+                <ElementManifest Location="webPartDWPFiles11.xml"/>
+            </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.0.24" EndVersion="15.0.0.34">
+            <CustomUpgradeAction Name="SyncTemplates">
+                <Parameters>
+                    <Parameter Name="FileNames">
+                        _catalogs/masterpage/Display Templates/Search/Item_CommonItem_Body |
+                        _catalogs/masterpage/Display Templates/Search/Item_Community |
+                        _catalogs/masterpage/Display Templates/Search/Item_Default |
+                        _catalogs/masterpage/Display Templates/Search/Item_Discussion |              
+                        _catalogs/masterpage/Display Templates/Search/Item_Excel |
+                        _catalogs/masterpage/Display Templates/Search/Item_Microblog |
+                        _catalogs/masterpage/Display Templates/Search/Item_OfficeDocument |
+                        _catalogs/masterpage/Display Templates/Search/Item_OneNote |
+                        _catalogs/masterpage/Display Templates/Search/Item_PDF |
+                        _catalogs/masterpage/Display Templates/Search/Item_Person |
+                        _catalogs/masterpage/Display Templates/Search/Item_Person_CompactHorizontal |
+                        _catalogs/masterpage/Display Templates/Search/Item_Picture |
+                        _catalogs/masterpage/Display Templates/Search/Item_PowerPoint |
+                        _catalogs/masterpage/Display Templates/Search/Item_Reply |                   
+                        _catalogs/masterpage/Display Templates/Search/Item_Site |
+                        _catalogs/masterpage/Display Templates/Search/Item_Video |
+                        _catalogs/masterpage/Display Templates/Search/Item_Video_CompactHorizontal |
+                        _catalogs/masterpage/Display Templates/Search/Item_WebPage |
+                        _catalogs/masterpage/Display Templates/Search/Item_Word |
+                        _catalogs/masterpage/Display Templates/Search/Item_CommonHoverPanel_Actions |
+                        _catalogs/masterpage/Display Templates/Search/Item_CommonHoverPanel_Body |
+                        _catalogs/masterpage/Display Templates/Search/Item_Community_HoverPanel |
+                        _catalogs/masterpage/Display Templates/Search/Item_Default_HoverPanel |
+                        _catalogs/masterpage/Display Templates/Search/Item_Discussion_HoverPanel |
+                        _catalogs/masterpage/Display Templates/Search/Item_Excel_HoverPanel |
+                        _catalogs/masterpage/Display Templates/Search/Item_MicroBlog_HoverPanel |
+                        _catalogs/masterpage/Display Templates/Search/Item_OfficeDocument_HoverPanel |
+                        _catalogs/masterpage/Display Templates/Search/Item_OneNote_HoverPanel |
+                        _catalogs/masterpage/Display Templates/Search/Item_PDF_HoverPanel |
+                        _catalogs/masterpage/Display Templates/Search/Item_Picture_HoverPanel |
+                        _catalogs/masterpage/Display Templates/Search/Item_PowerPoint_HoverPanel |
+                        _catalogs/masterpage/Display Templates/Search/Item_Reply_HoverPanel |
+                        _catalogs/masterpage/Display Templates/Search/Item_Site_HoverPanel |
+                        _catalogs/masterpage/Display Templates/Search/Item_WebPage_HoverPanel |
+                        _catalogs/masterpage/Display Templates/Search/Item_Word_HoverPanel |
+                        _catalogs/masterpage/Display Templates/System/Item_CommunityPortal
+                    </Parameter>
+                </Parameters>
+            </CustomUpgradeAction>
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

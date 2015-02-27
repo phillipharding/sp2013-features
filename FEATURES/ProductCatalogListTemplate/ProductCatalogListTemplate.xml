@@ -1,0 +1,21 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListTemplate
+    Name="ProductCatalogListTemplate"
+    DisplayName="$Resources:cmscore,IB_PC_ProductCatalog_ListTemplate_DisplayName"
+    Description="$Resources:cmscore,IB_PC_ProductCatalog_ListTemplate_Description"
+    FeatureId="DD926489-FC66-47A6-BA00-CE0E959C9B41"
+    Image="/_layouts/15/images/itpcicn.png?rev=23"
+    AllowDeletion="TRUE"
+    BaseType="0"
+    Category="Custom Lists"
+    EnableModeration="True"
+    OnQuickLaunch="TRUE"
+    FolderCreation="TRUE"
+    RootWebOnly="TRUE"
+    SecurityBits="11"
+    Sequence="411"
+    Type="751"
+    VersioningEnabled="TRUE" />
+</Elements>

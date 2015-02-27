@@ -1,0 +1,11 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ListInstance
+            Title="$Resources:spscore,MySiteHostOnet_List_ProfilePictures;"
+            Description="$Resources:spscore,MySiteHostOnet_List_ProfilePictures_Description;"
+            FeatureId="00BFEA71-52D4-45B3-B544-B1C71B620109"
+            Id="UserPhotos"
+            OnQuickLaunch ="FALSE"
+            TemplateType="109"
+            Url="User Photos">
+	</ListInstance>
+</Elements>

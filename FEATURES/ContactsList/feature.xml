@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="00BFEA71-7E6D-4186-9BA8-C047AC750105"
+    Title="$Resources:core,contactslistFeatureTitle;"
+    Description="$Resources:core,contactslistFeatureDesc;"
+    Version="1.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\Contacts.xml"/>
+    </ElementManifests>
+</Feature>

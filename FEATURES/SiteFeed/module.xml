@@ -1,0 +1,21 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="Newsfeed" RootWebOnly="FALSE">
+        <File Url="newsfeed.aspx" Type="Ghostable">
+          <AllUsersWebPart WebPartZoneID="MiddleLeftZone" WebPartOrder="1">
+            <![CDATA[
+                <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                    <Assembly>Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                    <TypeName>Microsoft.SharePoint.Portal.WebControls.SiteFeedWebPart</TypeName>
+                    <Title>$Resources:spscore,SiteFeed_WebPart_Title</Title>
+                    <Description>$Resources:spscore,SiteFeed_WebPart_Description</Description>
+                    <PartOrder>1</PartOrder>
+                    <FrameType>None</FrameType>
+                    <AllowMinimize>true</AllowMinimize>
+                    <AllowRemove>true</AllowRemove>
+                    <IsVisible>true</IsVisible>
+                </WebPart>
+                ]]>
+          </AllUsersWebPart>
+        </File>
+    </Module>
+</Elements>

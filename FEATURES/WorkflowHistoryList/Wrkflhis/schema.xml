@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="WorkflowHistory" Direction="0" Url="Lists/WorkflowHistory" BaseType="0" DisableAttachments="TRUE">
+  <MetaData>
+    <ContentTypes>
+      <ContentTypeRef ID="0x0109">
+        <Folder TargetName="WorkflowHistory" />
+      </ContentTypeRef>
+    </ContentTypes>
+    <Fields>
+      <Field Name="LinkTitle" ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" Sealed="TRUE" Required="FALSE" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkTitle">
+      </Field>
+      <Field Name="Title" ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Sealed="TRUE" Required="FALSE" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title">
+      </Field>
+      <Field Name="Event" ID="{20a1a5b1-fddf-4420-ac68-9701490e09af}" DisplayName="$Resources:core,Event_Type;" Required="TRUE" Sealed="TRUE" Type="WorkflowEventType" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Event">
+      </Field>
+      <Field Name="WorkflowInstance" ID="{de21c770-a12b-4f88-af4b-aeebd897c8c2}" DisplayName="$Resources:core,Workflow_Instance_ID;" Required="TRUE" Sealed="TRUE" Type="Text" Indexed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="WorkflowInstance">
+      </Field>
+      <Field Name="WorkflowAssociation" ID="{8d426880-8d96-459b-ae48-e8b3836d8b9d}" DisplayName="$Resources:core,Workflow_Association_ID;" Required="TRUE" Sealed="TRUE" Type="Text" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="WorkflowAssociation">
+      </Field>
+      <Field Name="WorkflowTemplate" ID="{bfb1589e-2016-4b98-ae62-e91979c3224f}" DisplayName="$Resources:core,Workflow_Template_ID;" Required="TRUE" Sealed="TRUE" Type="Text" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="WorkflowTemplate">
+      </Field>
+      <Field Name="List" ID="{f44e428b-61c8-4100-a911-a3a635f43bb5}" DisplayName="$Resources:core,List_ID;" Required="TRUE" Sealed="TRUE" Type="Text" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="List">
+      </Field>
+      <Field Name="Item" ID="{92b8e9d0-a11b-418f-bf1c-c44aaa73075d}" DisplayName="$Resources:core,Primary_Item_ID;" Required="FALSE" Sealed="TRUE" Type="Integer" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Item">
+      </Field>
+      <Field Name="User" ID="{5928ff1f-daa1-406c-b4a9-190485a448cb}" DisplayName="$Resources:core,User_ID;" Required="TRUE" Sealed="TRUE" Type="User" List="UserInfo" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="User">
+      </Field>
+      <Field Name="Occurred" ID="{5602dc33-a60a-4dec-bd23-d18dfcef861d}" DisplayName="$Resources:core,Date_Occurred;" Required="TRUE" Sealed="TRUE" Type="DateTime" StorageTZ="UTC" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Occurred">
+      </Field>
+      <Field Name="Group" ID="{c86a2f7f-7680-4a0b-8907-39c4f4855a35}" DisplayName="$Resources:core,Group_Type;" Required="FALSE" Sealed="TRUE" Type="Integer" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Group">
+      </Field>
+      <Field Name="Outcome" ID="{dcde7b1f-918b-4ed5-819f-9798f8abac37}" DisplayName="$Resources:core,Outcome;" Required="FALSE" Sealed="TRUE" Type="Text" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Outcome">
+      </Field>
+      <Field Name="Duration" ID="{4d54445d-1c84-4a6d-b8db-a51ded4e1acc}" DisplayName="$Resources:core,Duration;" Required="FALSE" Sealed="TRUE" Type="Number" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Duration">
+      </Field>
+      <Field Name="Description" ID="{2fd53156-ff9d-4cc3-b0ac-fe8a7bc82283}" DisplayName="$Resources:core,Description;" Required="FALSE" Sealed="TRUE" Type="Text" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Description">
+      </Field>
+      <Field Name="Data" ID="{38269294-165e-448a-a6b9-f0e09688f3f9}" DisplayName="$Resources:core,Data;" Required="FALSE" Sealed="TRUE" Type="Note" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Data">
+      </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" TabularView="FALSE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Position="After" Type="Freeform">
+          <IfHasRights>
+            <RightsChoices>
+              <RightsGroup PermAddListItems="required" />
+            </RightsChoices>
+            <Then><HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idAddNewItem" href="]]></HTML>
+              <URL Cmd="New" /><HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <URL Cmd="New" />
+              </ScriptQuote><HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML><HTML>$Resources:core,addnewitem;</HTML><HTML><![CDATA[</a></div>]]></HTML>
+            </Then>
+          </IfHasRights>
+        </Toolbar>
+        <ViewFields>
+          <FieldRef Name="WorkflowInstance">
+          </FieldRef>
+          <FieldRef Name="WorkflowAssociation">
+          </FieldRef>
+          <FieldRef Name="WorkflowTemplate">
+          </FieldRef>
+          <FieldRef Name="List">
+          </FieldRef>
+          <FieldRef Name="Item">
+          </FieldRef>
+          <FieldRef Name="User">
+          </FieldRef>
+          <FieldRef Name="Occurred">
+          </FieldRef>
+          <FieldRef Name="Event">
+          </FieldRef>
+          <FieldRef Name="Group">
+          </FieldRef>
+          <FieldRef Name="Outcome">
+          </FieldRef>
+          <FieldRef Name="Duration">
+          </FieldRef>
+          <FieldRef Name="Description">
+          </FieldRef>
+          <FieldRef Name="Data">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Occurred">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,All_History;" DefaultView="TRUE" Url="AllItems.aspx" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="WorkflowInstance">
+          </FieldRef>
+          <FieldRef Name="WorkflowAssociation">
+          </FieldRef>
+          <FieldRef Name="WorkflowTemplate">
+          </FieldRef>
+          <FieldRef Name="List">
+          </FieldRef>
+          <FieldRef Name="Item">
+          </FieldRef>
+          <FieldRef Name="User">
+          </FieldRef>
+          <FieldRef Name="Occurred">
+          </FieldRef>
+          <FieldRef Name="Event">
+          </FieldRef>
+          <FieldRef Name="Group">
+          </FieldRef>
+          <FieldRef Name="Outcome">
+          </FieldRef>
+          <FieldRef Name="Duration">
+          </FieldRef>
+          <FieldRef Name="Description">
+          </FieldRef>
+          <FieldRef Name="Data">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Occurred">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+    <DefaultDescription>
+            $Resources:core,workflow_desc;
+        </DefaultDescription>
+  </MetaData>
+</List>

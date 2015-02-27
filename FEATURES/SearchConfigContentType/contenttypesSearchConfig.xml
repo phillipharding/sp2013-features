@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ContentType ID="0x010080060E093E2F463EBA41A5F044428F32"
+        Name="$Resources:Microsoft.Office.Server.Search,SearchConfigContentType_Name"
+        Group="$Resources:Microsoft.Office.Server.Search,SearchConfigField_GroupName"
+        Description="$Resources:Microsoft.Office.Server.Search,SearchConfigContentType_Desc"
+        Version="0">
+        <FieldRefs>
+		<FieldRef ID="{D26B5F0C-27CF-46D0-984C-A0C2EA81CB10}" Name="Status" />
+		<FieldRef ID="{F2630201-2B18-4F74-867B-18551759B437}" Name="Scope" />
+		<FieldRef ID="{DF38FC53-0740-4846-80B2-CD5C4CF6B5D7}" Name="ConfigNotes" />
+        </FieldRefs>
+		<XmlDocuments>
+			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
+				<Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events" ListTemplateId="101">>
+					<Receiver>       
+						<Name>$Resources:Microsoft.Office.Server.Search,SearchConfigContentType_AddReceiver</Name>       
+						<Type>ItemAdded</Type>       
+						<SequenceNumber>1</SequenceNumber>       
+						<Assembly>Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>      
+						<Class>Microsoft.Office.Server.Search.Portability.SearchConfigurationEventReceiver</Class>    
+						<Data></Data>
+						<Filter></Filter>
+					</Receiver>
+					<Receiver>
+						<Name>$Resources:Microsoft.Office.Server.Search,SearchConfigContentType_UpdateReceiver</Name>       
+						<Type>ItemUpdated</Type>       
+						<SequenceNumber>2</SequenceNumber>       
+						<Assembly>Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>      
+						<Class>Microsoft.Office.Server.Search.Portability.SearchConfigurationEventReceiver</Class>    
+						<Data></Data>
+						<Filter></Filter>
+					</Receiver>  
+				</Receivers>
+		  </XmlDocument>
+		</XmlDocuments>
+    </ContentType>
+</Elements>
+

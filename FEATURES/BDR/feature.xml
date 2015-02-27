@@ -1,0 +1,13 @@
+<Feature  Id="3F59333F-4CE1-406d-8A97-9ECB0FF0337F"
+          Title="$Resources:dlccore,BDRFeatTitle;"
+          Description="$Resources:dlccore,BDRFeatDesc;"
+          Version="14.0.0.0"
+          Scope="Web"
+          Hidden="TRUE"
+          ReceiverAssembly="Microsoft.Office.DocumentManagement, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.Office.DocumentManagement.DocSite.SetupDocSiteFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="DocumentsList.xml" />
+    </ElementManifests>
+</Feature>

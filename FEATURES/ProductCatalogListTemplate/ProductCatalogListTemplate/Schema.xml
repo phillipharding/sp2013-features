@@ -1,0 +1,57 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<List xmlns:ows="Microsoft SharePoint"
+  BaseType="0"
+  Direction="$Resources:Direction;"
+  DraftVersionVisibility="2"
+  EnableContentTypes="TRUE"
+  FolderCreation="TRUE"
+  ModeratedList="TRUE"
+  ModerationType="TRUE"
+  Title="Products"
+  Url="$Resources:core,lists_Folder;/Products"
+  VersioningEnabled = "TRUE">
+  <MetaData>
+    <ContentTypes>
+      <ContentTypeRef ID="0x0100660cf76371114f2ab72bd63111d9045801" />
+	  <ContentTypeRef ID="0x0120" /> <!-- Folder ContentType -->
+    </ContentTypes>
+    <Fields>
+    </Fields>
+    <Views>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" TabularView="TRUE" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;"
+  DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+<XslLink Default="TRUE">main.xsl</XslLink>
+<JSLink>clienttemplates.js</JSLink>
+<RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="Attachments"></FieldRef>
+		  <FieldRef Name="DocIcon"></FieldRef>
+		  <FieldRef Name="LinkTitle"></FieldRef>
+		  <FieldRef Name="ProductCatalogItemNumber" />
+		  <FieldRef Name="ProductCatalogGroupNumber" />
+		  <FieldRef Name="ProductCatalogLanguageTag" />
+		  <FieldRef Name="ProductCatalogItemCategory" />
+          <FieldRef Name="PublishingRollupImage" />
+		  <FieldRef Name="_ModerationStatus" /> 
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+	<ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+	<ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />   
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

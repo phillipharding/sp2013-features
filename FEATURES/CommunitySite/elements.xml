@@ -1,0 +1,69 @@
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomActionGroup
+        Id="CommunitySettings"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:spscore,SiteSettings_CommunitySettingsGroup_Title;"
+        Sequence="200"
+        Description="" 
+        ImageUrl="/_layouts/15/images/SiteSettings_UsersAndPermissions_48x48.png?rev=23" />
+    <CustomAction
+        Id="CommunityManageDiscussions"
+        GroupId="CommunitySettings"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb"
+        Sequence="2"
+        Title="$Resources:spscore,SiteSettings_CommunityManageDiscussions_Title;"
+        Description="$Resources:spscore,SiteSettings_CommunityManageDiscussions_Tooltip;">
+        <UrlAction
+            Url="~site/$Resources:core,lists_Folder;/$Resources:spscore,communityDiscussions_Folder;/Management.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="CommunityManageCategories"
+        GroupId="CommunitySettings"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb"
+        Sequence="4"
+        Title="$Resources:spscore,SiteSettings_CommunityManageCategories_Title;"
+        Description="$Resources:spscore,SiteSettings_CommunityManageCategories_Tooltip;">
+        <UrlAction
+            Url="~site/$Resources:core,lists_Folder;/$Resources:spscore,categories_Folder;/AdminView.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="CommunityManageMembers"
+        GroupId="CommunitySettings"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb"
+        Sequence="6"
+        Title="$Resources:spscore,SiteSettings_CommunityManageMembers_Title;"
+        Description="$Resources:spscore,SiteSettings_CommunityManageMembers_Tooltip;">
+        <UrlAction
+            Url="~site/$Resources:core,lists_Folder;/$Resources:spscore,members_Folder;/AdminView.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="CommunityGeneralSettings"
+        GroupId="CommunitySettings"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb"
+        Sequence="10"
+        Title="$Resources:spscore,SiteSettings_CommunitySettings_Title;"
+        Description="$Resources:spscore,SiteSettings_CommunitySettings_Tooltip;">
+        <UrlAction
+            Url="_layouts/15/CommunitySettings.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="CommunityReputationSettings"
+        GroupId="CommunitySettings"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Rights="ManageWeb"
+        Sequence="11"
+        Title="$Resources:spscore,SiteSettings_CommunityReputationSettings_Title;"
+        Description="$Resources:spscore,SiteSettings_CommunityReputationSettings_Tooltip;">
+        <UrlAction
+            Url="_layouts/15/CommunityReputationSettings.aspx" />
+    </CustomAction>
+    <Control 
+	Id="AdditionalPageHead"
+	ControlClass="Microsoft.SharePoint.Portal.WebControls.CommunityFeedControl" 
+	ControlAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+</Elements>

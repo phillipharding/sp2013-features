@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="gantt"
+        Type="150"
+        BaseType="0"
+        Hidden="TRUE"
+        FolderCreation="TRUE"
+        OnQuickLaunch="TRUE"
+        SecurityBits="11"
+        Sequence="370"
+        DisplayName="$Resources:core,ganttList;"
+        Description="$Resources:core,ganttList_Desc;"
+        Image="/_layouts/15/images/itgantt.png?rev=23" />
+</Elements>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Name="fcgroups" Title="$Resources:core,FacilityGroupListTitle;" Direction="0" Url="Lists/Groups of Users and Facilities" EnableContentTypes="TRUE" MultipleTypes="FALSE" FolderCreation="FALSE" BaseType="0">
+  <MetaData>
+    <ContentTypes>
+      <ContentType Name="$Resources:core,GbwFGCTName;" Description="$Resources:core,GbwFGCTDescription;" ID="0x0100f52944aa7e22473886d490a6a15ff59e05">
+        <FieldRefs>
+          <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" Required="TRUE" MaxLength="20" Sealed="TRUE" />
+          <FieldRef ID="{a4e7b3e1-1b0a-4ffa-8426-c94d4cb8cc57}" Required="TRUE" Name="Facilities" />
+          <!-- GB Field -->
+          <FieldRef ID="{361ff304-4a5e-4f33-95c3-9d4b9914e9da}" Name="Comment" />
+          <!-- GB Field -->
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+      <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" DisplayName="$Resources:core,GbwFGTitleDisplayName;" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" />
+      <Field ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" Name="LinkTitle" DisplayName="$Resources:core,GbwFGLinkTitleDisplayName;" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkTitle" />
+      <Field ID="{bc91a437-52e7-49e1-8c4e-4698904b2b6d}" Name="LinkTitleNoMenu" DisplayName="$Resources:core,GbwFGLinkTitleDisplayName;" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkTitleNoMenu" />
+      <Field ID="{a4e7b3e1-1b0a-4ffa-8426-c94d4cb8cc57}" Name="Facilities" DisplayName="$Resources:core,GBW_FG_Facilities_Field;" Type="LookupMulti" Mult="TRUE" ShowField="Title" Sortable="FALSE" CanToggleHidden="TRUE" Sealed="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Facilities">
+      </Field>
+      <Field ID="{7e75b01e-f315-4c7f-87fa-05a323f0b7c5}" Name="GroupType" DisplayName="Group Type" Type="Choice" Format="RadioButtons" Hidden="TRUE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="GroupType" />
+      <!-- For Migration -->
+      <Field ID="{25811362-1f72-40d9-8199-0592d34270c1}" Name="Members" DisplayName="Users / Facilities" Type="Note" Hidden="TRUE" Sortable="FALSE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Members" />
+      <!-- For Migration -->
+      <Field ID="{361ff304-4a5e-4f33-95c3-9d4b9914e9da}" Name="Comment" DisplayName="$Resources:core,GBW_FG_Comment_Field;" Type="Note" Sealed="TRUE" Required="FALSE" Hidden="FALSE" Sortable="FALSE" Filterable="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Comment">
+      </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" TabularView="FALSE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Position="After" Type="Freeform">
+          <IfHasRights>
+            <RightsChoices>
+              <RightsGroup PermAddListItems="required" />
+            </RightsChoices>
+            <Then><HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idAddNewItem" href="]]></HTML>
+              <URL Cmd="New" /><HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <URL Cmd="New" />
+              </ScriptQuote><HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML><HTML>$Resources:core,GbwFGNewItemOnWebParts;</HTML><HTML><![CDATA[</a></div>]]></HTML>
+            </Then>
+          </IfHasRights>
+        </Toolbar>
+        <RowLimit>20</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Title" Ascending="TRUE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,FcGroupsAllItemsDisplayName;" DefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/gbfagp.png?rev=23" Url="AllItems.aspx">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="LinkTitle">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Title" Ascending="TRUE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+    <DefaultDescription>$Resources:core,GBW_FG_DefaultDescription;</DefaultDescription>
+  </MetaData>
+</List>

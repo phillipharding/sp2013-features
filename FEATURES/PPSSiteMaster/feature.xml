@@ -1,0 +1,27 @@
+<Feature Id="0B07A7F4-8BB8-4ec0-A31B-115732B9584D" 
+         Title="$Resources:ppsma,SiteMaster_ContentType_Title"
+         Description="$Resources:ppsma,SiteMaster_ContentType_Description" 
+         Version="15.0.0.0"
+         Scope="Web" 
+         SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+         Hidden="FALSE" 
+         DefaultResourceFile="core" 
+         xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests/>
+  <ActivationDependencies>
+    <!-- PPS Site Collection Feature -->
+    <ActivationDependency FeatureId="A1CB5B7F-E5E9-421B-915F-BF519B0760EF" />
+    <!--  PPS content List -->
+    <ActivationDependency FeatureId="481333E1-A246-4D89-AFAB-D18C6FE344CE" />
+    <!-- Bi Center DataConnections library template -->
+    <ActivationDependency FeatureId="26676156-91A0-49F7-87AA-37B1D5F0C4D0" />
+    <!-- Bi Center Dashboards library template -->
+    <ActivationDependency FeatureId="F979E4DC-1852-4F26-AB92-D1B2A190AFC9" />
+    <!-- Status Lists template -->
+    <!-- <ActivationDependency FeatureId="065C78BE-5231-477e-A972-14177CC5B3C7" /> -->
+    <!-- DocumentLibrary Feature -->
+    <ActivationDependency FeatureId="00BFEA71-E717-4E80-AA17-D0C71B360101"/>
+    <!-- CustomList Feature -->
+    <ActivationDependency FeatureId="00BFEA71-DE22-43B2-A848-C05709900100"/>
+  </ActivationDependencies>
+</Feature>

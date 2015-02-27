@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Workflow
+        Name="$Resources:Expiration_Title;"
+        Description="$Resources:Expiration_Description;"
+        Id="DD19A800-37C1-43C0-816D-F8EB5F4A4145"
+        CodeBesideClass="Microsoft.Office.Workflow.Expiration"
+        CodeBesideAssembly="Microsoft.Office.Workflow.Routing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        TaskListContentTypeId="0x01080100C9C9515DE4E24001905074F980F93160"
+    >
+        <Categories/>
+        <MetaData>
+           <InitiationCategories>WebClientInit</InitiationCategories>
+           <Task0_FormURN>urn:schemas-microsoft-com:office:infopath:workflow:Expiration-Complete:$Subst:LCID;</Task0_FormURN>
+           <Task0_IsBulkActionable>true</Task0_IsBulkActionable>
+           <Task0_BulkActionableFormName>$Resources:Expiration_Title;</Task0_BulkActionableFormName>
+           <StatusPageUrl>~layouts/WrkStat.aspx</StatusPageUrl>
+        </MetaData>
+     </Workflow>
+</Elements>

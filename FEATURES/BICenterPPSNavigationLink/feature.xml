@@ -1,0 +1,14 @@
+<Feature Id="FAF31B50-880A-4E4F-A21B-597F6B4D6478"
+         Title="$Resources:ppsma,BICenterPPSNavigationLink_Title"
+         Description="$Resources:ppsma,BICenterPPSNavigationLink_Description"
+         Version="15.0.0.0"
+         Scope="Web"
+         Hidden="TRUE"
+         DefaultResourceFile="core"
+         xmlns="http://schemas.microsoft.com/sharepoint/"
+         ReceiverAssembly="Microsoft.PerformancePoint.Scorecards.BIMonitoringService, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+         ReceiverClass="Microsoft.PerformancePoint.Scorecards.BICenterNavigationLinkFeatureReceiver">
+  <Properties>
+    <Property Key="NavigationStructure" Value="NavBars.xml" />
+  </Properties>
+</Feature>

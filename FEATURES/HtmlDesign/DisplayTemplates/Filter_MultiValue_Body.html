@@ -1,0 +1,111 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_MultiVaueBodyRefinementItem</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:CompatibleManagedProperties msdt:dt="string"></mso:CompatibleManagedProperties>
+<mso:TemplateHidden msdt:dt="string">1</mso:TemplateHidden>
+<mso:CompatibleSearchDataTypes msdt:dt="string"></mso:CompatibleSearchDataTypes>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106604</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#Refinement;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+</mso:CustomDocumentProperties></xml><![endif]-->
+</head>
+<body>
+<div id="Filter_MultiValue_Body">
+<!--#_
+var propertyName = ctx.RefinementControl["csr_propertyName"];
+var displayTitle = ctx.RefinementControl["csr_displayTitle"];
+var filters = ctx.RefinementControl["csr_filters"];
+var isExpanded = Boolean(ctx.RefinementControl["csr_isExpanded"]);
+var renderEmptyContainer = Boolean(ctx.RefinementControl["csr_renderEmptyContainer"]);
+var useContains = Boolean(ctx.RefinementControl["csr_useContains"]);
+var useKQL = Boolean(ctx.RefinementControl["csr_useKQL"]);
+var showCounts = Boolean(ctx.RefinementControl["csr_showCounts"]);
+
+if($isEmptyString(propertyName) || (!$isNull(renderEmptyContainer) && renderEmptyContainer))
+{ 
+_#-->
+        <div id="EmptyContainer"></div>
+<!--#_
+} 
+else if(!$isNull(filters) && Srch.U.isArray(filters) && !$isEmptyArray(filters))
+{ 
+    var expandedStatus = !$isNull(isExpanded) ? isExpanded : true;
+    var iconClass = "ms-core-listMenu-item ";
+    iconClass += expandedStatus ? "ms-ref-uparrow" : "ms-ref-downarrow";
+_#-->
+        <div id="Container">
+            _#= Srch.U.collapsibleRefinerTitle(propertyName, ctx.ClientControl.get_id(), displayTitle, iconClass) =#_
+            <div class="ms-ref-unselSec" id="UnselectedSection">
+                <div id="unselShortList" class="ms-ref-unsel-shortList">
+
+<!--#_ 
+    for (var i = 0; i < filters.length; i++){
+        var filter = filters[i];
+        if(!$isNull(filter)){
+            var isSelected = Boolean(filter.IsSelected);
+            var inputName = propertyName + '_ChkGroup';
+            var inputId = inputName + "_" + filter.RefinementName;
+			var nameClass = "ms-ref-name " + (showCounts ? "ms-displayInline" : "ms-displayInlineBlock ms-ref-ellipsis");
+_#-->
+                    <div id="Value">
+<!--#_
+            if(isSelected) {
+_#-->
+                        <input type="checkbox" class="ms-padding0 ms-margin0 ms-verticalAlignMiddle" id="_#= $htmlEncode(inputId) =#_" name="_#= $htmlEncode(inputName) =#_" data-displayValue="_#= $htmlEncode(filter.RefinementName) =#_" value="_#= $htmlEncode(filter.RefinementToken) =#_" checked="" />
+<!--#_
+            } else {
+_#-->
+                        <input type="checkbox" class="ms-padding0 ms-margin0 ms-verticalAlignMiddle" id="_#= $htmlEncode(inputId) =#_" name="_#= $htmlEncode(inputName) =#_" data-displayValue="_#= $htmlEncode(filter.RefinementName) =#_" value="_#= $htmlEncode(filter.RefinementToken) =#_" />
+<!--#_
+            }
+_#-->
+                            <label for="_#= $htmlEncode(inputId) =#_" class='_#= nameClass =#_'>
+                            _#= $htmlEncode(filter.RefinementName) =#_
+
+<!--#_
+              if (showCounts) {
+_#-->
+                            <span id='RefinementCount' class='ms-ref-count ms-textSmall'> (_#= $htmlEncode(Srch.U.toFormattedNumber(filter.RefinementCount)) =#_) </span>
+<!--#_
+              }
+_#-->
+                            </label>
+                    </div>
+<!--#_
+        }
+    }
+_#-->
+                    <div id="OtherValue">
+                        <div id="_#= $htmlEncode(propertyName + '_SpecifiedValue') =#_">
+                            <a onclick="Srch.Refinement.multiRefinerSpecifyOtherFilterValue('_#= $scriptEncode(propertyName) =#_', $getClientControl(this), _#= $htmlEncode(useContains) =#_, _#= $htmlEncode(useKQL) =#_);"
+                                href="javascript:{}">
+                                _#= $htmlEncode($resource("rf_OtherValue")) =#_
+                            </a>
+                        </div>
+                    </div>
+                    <div id="SubmitValue">
+                        <div id="submit">
+                            <a onclick="Srch.Refinement.submitMultiRefinement('_#= $scriptEncode(propertyName) =#_', $getClientControl(this), _#= $htmlEncode(useContains) =#_, _#= $htmlEncode(useKQL) =#_);"
+                                href="javascript:{}">
+                                _#= $htmlEncode($resource('rf_Apply')) =#_
+                            </a>
+                             | 
+                            <a onclick="$getClientControl(this).updateRefinementFilters('_#= $scriptEncode(propertyName) =#_', null);"
+                                href="javascript:{}">
+                                _#= $htmlEncode($resource('rf_ClearAll')) =#_
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--#_
+}
+_#-->
+    </div>
+</div>
+</body>
+</html>

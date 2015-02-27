@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="192EFA95-E50C-475e-87AB-361CEDE5DD7F"
+    Title="$Resources:core,promotedlinkslistFeatureTitle;"
+    Description="$Resources:core,promotedlinkslistFeatureDesc;"
+    Version="15.0.0.0"
+    Hidden="TRUE"
+    Scope="Web"
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\PromotedLinks.xml" />
+    </ElementManifests>
+</Feature>

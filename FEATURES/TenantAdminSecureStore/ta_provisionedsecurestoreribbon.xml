@@ -1,0 +1,150 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+         Id="Ribbon.SSSvcAdmin"
+         Location="CommandUI.Ribbon"
+         Sequence="1200"
+         Title="Add SSSvcAdmin tab">
+      <CommandUIExtension>
+       <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.Tabs._children">
+            <Tab Id="Ribbon.SSSvcAdmin" 
+                Command="SSSvcAdminTab" 
+                Description="" 
+                Title="$Resources:obacore,cui_SSSAdmin_HomeTabTitle">
+                <Scaling Id="Ribbon.SSSvcAdmin.Scaling">
+                    <MaxSize Id="Ribbon.SSSvcAdmin.Scaling.ApplicationManagement.MaxSize" 
+                        Sequence="10" GroupId="Ribbon.SSSvcAdmin.ApplicationManagement" Size="LargeLarge"/>
+                    <MaxSize Id="Ribbon.SSSvcAdmin.Scaling.KeyManagement.MaxSize" 
+                        Sequence="20" GroupId="Ribbon.SSSvcAdmin.KeyManagement" Size="LargeLarge"/>
+                    <MaxSize Id="Ribbon.SSSvcAdmin.Scaling.CredentialManagement.MaxSize" 
+                        Sequence="30" GroupId="Ribbon.SSSvcAdmin.CredentialManagement" Size="LargeLarge"/>
+                    <MaxSize Id="Ribbon.SSSvcAdmin.Scaling.PermissionManagement.MaxSize" 
+                        Sequence="40" GroupId="Ribbon.SSSvcAdmin.PermissionManagement" Size="LargeLarge"/>
+                    <Scale Id="Ribbon.SSSvcAdmin.Scaling.ApplicationManagement.MediumMedium" 
+                        Sequence="50" GroupId="Ribbon.SSSvcAdmin.ApplicationManagement" Size="MediumMedium" />
+                    <Scale Id="Ribbon.SSSvcAdmin.Scaling.KeyManagement.MediumMedium" 
+                        Sequence="60" GroupId="Ribbon.SSSvcAdmin.KeyManagement" Size="MediumMedium" />
+                    <Scale Id="Ribbon.SSSvcAdmin.Scaling.CredentialManagement.MediumMedium" 
+                        Sequence="70" GroupId="Ribbon.SSSvcAdmin.CredentialManagement" Size="MediumMedium" />
+                    <Scale Id="Ribbon.SSSvcAdmin.Scaling.PermissionManagement.MediumMedium" 
+                        Sequence="80" GroupId="Ribbon.SSSvcAdmin.PermissionManagement" Size="MediumMedium" />
+                    <Scale Id="Ribbon.SSSvcAdmin.Scaling.ApplicationManagement.Popup" 
+                        Sequence="90" GroupId="Ribbon.SSSvcAdmin.ApplicationManagement" Size="Popup" />
+                    <Scale Id="Ribbon.SSSvcAdmin.Scaling.KeyManagement.Popup" 
+                        Sequence="100" GroupId="Ribbon.SSSvcAdmin.KeyManagement" Size="Popup" />
+                </Scaling>
+                <Groups Id="Ribbon.SSSvcAdmin.Groups">
+                    <Group Id="Ribbon.SSSvcAdmin.ApplicationManagement"
+                           Sequence="10"
+                           Command="SSSvcManageApplications"
+                           Description=""
+                           Title="$Resources:obacore,cui_SSSAdmin_ApplicationManagementGroupTitle"
+                           Template="Ribbon.Templates.Flexible2" >
+                        <Controls Id="Ribbon.SSSvcAdmin.ApplicationManagement.Controls">
+                            <Button
+                              Id="Ribbon.SSSvcAdmin.ApplicationManagement.NewApplication"
+                              Command="SSSvcNewApplication"
+                              Sequence="10"
+                              Image16by16="/_layouts/images/newtargetapp16.png"
+                              Image32by32="/_layouts/images/newtargetapp32.png"
+                              LabelText="$Resources:obacore,cui_SSSAdmin_NewApplicationRibbonButtonLabel"
+                              ToolTipTitle="$Resources:obacore,cui_SSSAdmin_NewApplicationRibbonButtonLabel"
+                              ToolTipDescription="$Resources:obacore,cui_SSSAdmin_NewApplicationRibbonButtonAltText"
+                              TemplateAlias="o1"/>
+                            <Button
+                              Id="Ribbon.SSSvcAdmin.ApplicationManagement.DeleteApplication"
+                              Command="SSSvcDeleteApplication"
+                              Sequence="20"
+                              Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-271" Image16by16Left="-271"
+                              Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-69" Image32by32Left="-511"
+                              LabelText="$Resources:obacore,cui_SSSAdmin_DeleteApplicationRibbonButtonLabel"
+                              ToolTipTitle="$Resources:obacore,cui_SSSAdmin_DeleteApplicationRibbonButtonLabel"
+                              ToolTipDescription="$Resources:obacore,cui_SSSAdmin_DeleteApplicationRibbonButtonAltText"
+                              TemplateAlias="o1"/>
+                            <Button
+                              Id="Ribbon.SSSvcAdmin.ApplicationManagement.EditApplication"
+                              Command="SSSvcEditApplication"
+                              Sequence="30"
+                              Image16by16="/_layouts/images/edittargetapp16.png"
+                              Image32by32="/_layouts/images/edittargetapp32.png"
+                              LabelText="$Resources:obacore,cui_SSSAdmin_EditApplicationRibbonButtonLabel"
+                              ToolTipTitle="$Resources:obacore,cui_SSSAdmin_EditApplicationRibbonButtonLabel"
+                              ToolTipDescription="$Resources:obacore,cui_SSSAdmin_EditApplicationRibbonButtonAltText"
+                              TemplateAlias="o1"/>
+                        </Controls>
+                    </Group>
+                    <Group Id="Ribbon.SSSvcAdmin.KeyManagement"
+                           Sequence="20"
+                           Command="SSSvcManageKey"
+                           Description=""
+                           Title="$Resources:obacore,cui_SSSAdmin_KeyManagementGroupTitle"
+                           Template="Ribbon.Templates.Flexible2" >
+                        <Controls Id="Ribbon.SSSvcAdmin.KeyManagement.Controls">
+                            <Button
+                              Id="Ribbon.SSSvcAdmin.KeyManagement.ChangeKey"
+                              Command="SSSvcChangeKey"
+                              Sequence="10"
+                              Image16by16="/_layouts/images/docencryption.png"
+                              Image32by32="/_layouts/images/docencryptionhh.png"
+                              LabelText="$Resources:obacore,cui_SSSAdmin_GenerateKeyRibbonButtonLabel"
+                              ToolTipTitle="$Resources:obacore,cui_SSSAdmin_GenerateKeyRibbonButtonLabel"
+                              ToolTipDescription="$Resources:obacore,cui_SSSAdmin_GenerateKeyRibbonButtonAltText"
+                              TemplateAlias="o1"/>
+                            <Button
+                              Id="Ribbon.SSSvcAdmin.KeyManagement.RefreshKey"
+                              Command="SSSvcRefreshKey"
+                              Sequence="20"
+                              Image16by16="/_layouts/images/refreshkey_16x16.png"
+                              Image32by32="/_layouts/images/refreshkey_32x32.png"
+                              LabelText="$Resources:obacore,cui_SSSAdmin_RefreshKeyRibbonButtonLabel"
+                              ToolTipTitle="$Resources:obacore,cui_SSSAdmin_RefreshKeyRibbonButtonLabel"
+                              ToolTipDescription="$Resources:obacore,cui_SSSAdmin_RefreshKeyRibbonButtonAltText"
+                              TemplateAlias="o1"/>
+                        </Controls>
+                    </Group>
+                    <Group Id="Ribbon.SSSvcAdmin.CredentialManagement"
+                           Sequence="30"
+                           Command="SSSvcManageCredentials"
+                           Description=""
+                           Title="$Resources:obacore,cui_SSSAdmin_CredentialsGroupTitle"
+                           Template="Ribbon.Templates.Flexible2" >
+                        <Controls Id="Ribbon.SSSvcAdmin.CredentialManagement.Controls">
+                            <Button
+                              Id="Ribbon.SSSvcAdmin.CredentialManagement.SetCredentials"
+                              Command="SSSvcSetCredentials"
+                              Sequence="10"
+                              Image16by16="/_layouts/images/setcredentials_16x16.png"
+                              Image32by32="/_layouts/images/setcredentials_32x32.png"
+                              LabelText="$Resources:obacore,cui_SSSAdmin_SetCredentialsRibbonButtonLabel"
+                              ToolTipTitle="$Resources:obacore,cui_SSSAdmin_SetCredentialsRibbonButtonLabel"
+                              ToolTipDescription="$Resources:obacore,cui_SSSAdmin_SetCredentialsRibbonButtonAltText"
+                              TemplateAlias="o1"/>
+                        </Controls>
+                    </Group>
+                    <Group Id="Ribbon.SSSvcAdmin.PermissionManagement"
+                           Sequence="40"
+                           Command="SSSvcManagePermissions"
+                           Description=""
+                           Title="$Resources:obacore,cui_SSSAdmin_PermissionManagementGroupTitle"
+                           Template="Ribbon.Templates.Flexible2" >
+                        <Controls Id="Ribbon.SSSvcAdmin.PermissionManagement.Controls">
+                            <Button
+                              Id="Ribbon.SSSvcAdmin.PermissionManagement.SetPermissions"
+                              Command="SSSvcSetPermissions"
+                              Sequence="10"
+                              Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-145" Image16by16Left="-73"
+                              Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-137" Image32by32Left="-477"
+                              LabelText="$Resources:obacore,cui_SSSAdmin_SetPermissionsRibbonButtonLabel"
+                              ToolTipTitle="$Resources:obacore,cui_SSSAdmin_SetPermissionsRibbonButtonLabel"
+                              ToolTipDescription="$Resources:obacore,cui_SSSAdmin_SetPermissionsRibbonButtonAltText"
+                              TemplateAlias="o1"/>
+                        </Controls>
+                    </Group>
+                </Groups>
+            </Tab>
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+     </CommandUIExtension>
+    </CustomAction>
+</Elements>
+

@@ -1,0 +1,47 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_CatalogItemPickerHoverPanel</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">1</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:ManagedPropertyMapping msdt:dt="string">'Title':'Title','Author':'Author','Size':'Size','Path':'Path','Description':'Description','LastModifiedTime':'LastModifiedTime','CollapsingStatus':'CollapsingStatus','DocId':'DocId','HitHighlightedSummary':'HitHighlightedSummary','HitHighlightedProperties':'HitHighlightedProperties','FileExtension':'FileExtension','DocumentSummarySize':'DocumentSummarySize','ViewsLifeTime':'ViewsLifeTime','ParentLink':'ParentLink'</mso:ManagedPropertyMapping>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="Item_CatalogItemPicker">
+<!--#_
+        if(!$isNull(ctx.CurrentItem) && !$isNull(ctx.ClientControl))
+        {
+            var id = ctx.ClientControl.get_nextUniqueId();
+            $setResultItem(id, ctx.CurrentItem);
+            var urlChars = Srch.U.pathTruncationLength;
+            var titleChars = Srch.U.titleTruncationLength;
+            var title = $htmlEncode(ctx.CurrentItem.Title);
+            var hoverUrl = "~sitecollection/_catalogs/masterpage/Display Templates/System/Item_CatalogItemPicker_HoverPanel.js";
+            var hover_id = id + "_hover"; 
+            var header_id = id + "_header";
+            var footer_id = id + "_footer";
+            var templateDiv_id = id + "_templateDiv";
+        }
+_#-->
+        <div id="_#= $htmlEncode(id) =#_" data-displaytemplate="Item_CatalogItemPicker" class="ms-srch-item" onclick="Search.Configuration.CatalogItemPicker.setCatalogItemPath('_#= $scriptEncode(ctx.CurrentItem.Path) =#_')" onmouseover="EnsureScriptParams('SearchUI.js', 'HP.Init', event, '_#= $scriptEncode(id) =#_', '_#= $scriptEncode(hover_id) =#_', '_#= $scriptEncode(hoverUrl)=#_');" onmouseout="EnsureScriptParams('SearchUI.js', 'HP.Hide');">
+
+          <div id="_#= hover_id =#_" class="ms-srch-hover-outerContainer"></div>
+            <div id="_#= templateDiv_id =#_">
+              <div class="cbs-Detail" id="_#= header_id =#_">
+                <a title="_#= $htmlEncode(Srch.Res.pkr_CatalogPickerSelectLinkToolTip) =#_" href="javascript:{}" onclick="Search.Configuration.CatalogItemPicker.setCatalogItemPath('_#= $scriptEncode(ctx.CurrentItem.Path) =#_')" style="cursor:pointer">_#= Srch.U.getTrimmedProcessedHHXMLString(title, titleChars) =#_</a>
+              </div>            
+               <div id="_#= footer_id =#_">
+                 _#= $htmlEncode(Srch.U.truncateUrl(ctx.CurrentItem.Path, urlChars)) =#_
+               </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

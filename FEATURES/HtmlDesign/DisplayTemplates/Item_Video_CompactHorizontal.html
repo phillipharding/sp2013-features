@@ -1,0 +1,110 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_VideoIntentItem</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:ManagedPropertyMapping msdt:dt="string">'Picture URL'{$Resources:Microsoft.Office.Server.Search,SlotName_ImageURL;}:'PublishingImage;PictureURL;PictureThumbnailURL;','Line 1'{$Resources:Microsoft.Office.Server.Search,SlotName_Line1;}:'Title','Link URL'{$Resources:Microsoft.Office.Server.Search,SlotName_URL;}:'Path','FileExtension'{$Resources:Microsoft.Office.Server.Search,SlotName_FileExtension;}:'SecondaryFileExtension','MediaDuration','ViewCount'{$Resources:Microsoft.Office.Server.Search,SlotName_ViewCount;}:'','ContentTypeId','VideoFileURL'{$Resources:Microsoft.Office.Server.Search,SlotName_VideoFileURL;}:'UserEncodingURL;ExternalMediaURL;DefaultEncodingURL;'</mso:ManagedPropertyMapping>
+<mso:MasterPageDescription msdt:dt="string">$Resources:Microsoft.Office.Server.Search,DisplayTemplateDescription_Item_Video_CompactHorizontal</mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#SearchResults;#;#Content Web Parts;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+
+    <div id="Item_Video_CompactHorizontal">
+<!--#_
+var encodedId = $htmlEncode(ctx.ClientControl.get_nextUniqueId());
+var containerId = encodedId + "_videoIntentContainer";
+var viewsId = encodedId + "_videoIntentViewsLifeTime";
+var pathId = encodedId + "_videoIntentPath";
+var line1Id = encodedId + "_videoIntentLine1";
+
+var imageURL = $getItemValue(ctx, "Picture URL");
+var imageMarkup = Srch.U.getVideoImageWithFallbackSource(imageURL, 120, 68);
+
+var line1 = $getItemValue(ctx, "Line 1");
+if (!line1.isNull)
+{
+    var truncatedFormat = function(line1)
+    {
+        return $htmlEncode(Srch.U.truncateEnd(line1.value, 30));
+    };
+    line1.overrideValueRenderer(truncatedFormat);
+}
+
+var linkUrl = $getItemValue(ctx, "Link URL");
+var videoFileURL = $getItemValue(ctx, "VideoFileURL");
+var isRendition = !$getItemValue(ctx, "FileExtension").isEmpty;
+if(isRendition && !videoFileURL.isEmpty)
+{
+    linkUrl = videoFileURL;
+    videoFileURL.value = unescape(videoFileURL.value);
+}
+linkUrl.overrideValueRenderer($urlHtmlEncode);
+
+var viewCount = $getItemValue(ctx,"ViewCount");
+if (!viewCount.isNull)
+{
+    var viewCountFormat = function(viewCount)
+    {
+        return $htmlEncode(Srch.U.toFriendlyNumber(viewCount.value));
+    };
+    viewCount.overrideValueRenderer(viewCountFormat);
+}
+
+var mediaDuration = $getItemValue(ctx,"MediaDuration");
+var formatTimeFromSeconds = function(secondsValue)
+{
+    return $htmlEncode(Srch.U.getFormattedTimeFromSeconds(secondsValue.value));
+};
+mediaDuration.overrideValueRenderer(formatTimeFromSeconds);
+_#-->
+        <div class="ms-srch-video-intent ms-srch-video-intent-container" id="_#= containerId =#_" data-displaytemplate="VideoIntentItem">
+            <div class="ms-srch-video-results-centered ms-srch-video-intent">
+                <a clicktype="Result" href="_#= linkUrl =#_" title="_#= $htmlEncode(line1.value) =#_" id="_#= pathId =#_">
+                    _#= imageMarkup =#_
+                </a>
+            </div>
+            <div class="ms-srch-video-intent-data">
+                <h3>
+                    <a clicktype="Result" href="_#= linkUrl =#_" title="_#= $htmlEncode(line1.value) =#_" class="ms-srch-video-intent ms-srch-video-results ms-srch-item-link ms-noWrap" id="_#= line1Id =#_">
+                        _#= line1 =#_
+                    </a>
+                </h3>
+<!--#_
+if (!mediaDuration.isNull)
+{ 
+_#-->
+                        _#= mediaDuration =#_
+<!--#_
+}
+if (!mediaDuration.isNull && !viewCount.isNull)
+{
+_#-->
+                        &nbsp;<span class="ms-soften">|</span>&nbsp;
+<!--#_
+}
+if (!viewCount.isNull)
+{ 
+_#-->
+                        _#= viewCount =#_ 
+<!--#_
+} 
+if (mediaDuration.isEmpty && viewCount.isEmpty)
+{
+_#-->
+                       &nbsp;
+<!--#_
+}
+_#--> 
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

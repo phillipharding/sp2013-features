@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="0D1C50F7-0309-431c-ADFB-B777D5473A65"
+        Title="$Resources:core,blogContentFeatureTitle;" 
+        Description="$Resources:core,blogContentFeatureDesc;" 
+        Version="15.0.0.0"
+        ImageUrl=""
+        Scope="Web"
+        Hidden="TRUE"
+        DefaultResourceFile="core"
+        xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="Elements.xml" />
+    </ElementManifests>
+</Feature>

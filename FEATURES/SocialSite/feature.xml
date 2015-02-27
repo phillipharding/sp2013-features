@@ -1,0 +1,22 @@
+<Feature Id="4326E7FC-F35A-4b0f-927C-36264B0A4CF0"
+    Title="$Resources:spscore,SocialSite_Feature_Title;"
+    Description="$Resources:spscore,SocialSite_Feature_Desc;"
+    Version="15.0.5.0"
+    Scope="Site"
+    Hidden="TRUE"
+    DefaultResourceFile="spscore"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="Fields.xml" />
+        <ElementManifest Location="ContentTypes.xml" />
+        <ElementManifest Location="Elements.xml" />
+    </ElementManifests>
+    <UpgradeActions>
+        <VersionRange EndVersion="15.0.5.0">
+            <ApplyElementManifests>
+                <ElementManifest Location="Fields.xml" />
+                <ElementManifest Location="ContentTypes.xml" />
+            </ApplyElementManifests>
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

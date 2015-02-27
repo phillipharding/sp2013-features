@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="facility"
+        Type="402"
+        BaseType="0"
+        Category="Tracking"
+        OnQuickLaunch="FALSE"
+        FolderCreation="FALSE"
+        Unique="TRUE"
+        SecurityBits="11"
+        DisplayName="$Resources:core,GbwListTemplateFacilitiesDisplay;"
+        Description="$Resources:core,GbwListTemplateFacilitiesDescription;"
+        Image="/_layouts/15/images/itgbfaci.gif?rev=23" />
+</Elements>

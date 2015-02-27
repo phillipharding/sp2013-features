@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="00BFEA71-4EA5-48D4-A4AD-305CF7030140" 
+    Title="$Resources:core,workflowhistorylistFeatureTitle;"
+    Description="$Resources:core,workflowhistorylistFeatureDesc;"
+    Scope="Web" 
+    Hidden="TRUE" 
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\WorkflowHistory.xml" />
+    </ElementManifests>
+</Feature>

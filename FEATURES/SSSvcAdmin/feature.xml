@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="35F680D4-B0DE-4818-8373-EE0FCA092526"
+          Title="Secure Store Service Admin"
+          Description="Secure Store Service Admin Ribbon"
+          Version="14.0.0.0"
+          Scope="Web"
+          Hidden="TRUE"
+          AutoActivateInCentralAdmin="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ProvisionedRibbonUI.xml"/>
+    </ElementManifests>
+</Feature>

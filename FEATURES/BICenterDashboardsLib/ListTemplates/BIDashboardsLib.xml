@@ -1,0 +1,13 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="BIDashboardsLib"
+        DisplayName="$Resources:ppsma,ContentLib_BIDashboards_DisplayName" 
+	      Description="$Resources:ppsma,ContentLib_BIDashboards_Description" 
+        Type="480"
+        BaseType="1"
+        OnQuickLaunch="TRUE"
+        SecurityBits="11"
+        Sequence="110"
+        Image="/_layouts/15/images/iBICenterDashboardsLib.png?rev=23"
+        DocumentTemplate="100"/>
+</Elements>

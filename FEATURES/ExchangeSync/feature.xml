@@ -1,0 +1,14 @@
+<Feature Id="5F68444A-0131-4BB0-B013-454D925681A2"
+    Title="$Resources:wmafeatures,ExchangeSyncFeatureTitle;"
+    Description="$Resources:wmafeatures,ExchangeSyncFeatureDescription;"
+    ReceiverAssembly="Microsoft.Office.Server.WorkManagement.UI, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.Office.Server.WorkManagement.UI.ExchangeSyncFeatureReceiver"
+    Hidden="False"
+    Version="15.0.0.0"
+    Scope="Farm"
+    ActivateOnDefault="False"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="Ribbon.xml"/>
+    </ElementManifests>
+</Feature>

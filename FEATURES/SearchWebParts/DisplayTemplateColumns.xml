@@ -1,0 +1,130 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <Field
+        ID="{0A9EC8F0-0340-4E24-9B35-CA86A6DED5AB}"
+        Name="TemplateHidden" 
+        StaticName="TemplateHidden"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:Microsoft.Office.Server.Search,TemplateColumnsGroup;"
+        DisplayName="$Resources:Microsoft.Office.Server.Search,TemplateCol_Hidden_Name;"
+        Description="$Resources:Microsoft.Office.Server.Search,TemplateCol_Hidden_Desc;"
+        Type="Boolean"
+        Required="FALSE"
+        CanToggleHidden="TRUE" 
+        Sealed="TRUE">
+    </Field>
+
+    <Field
+        ID="{CAB85295-B195-4AC2-8323-87C602E6AC9D}"
+        Name="TargetControlType" 
+        StaticName="TargetControlType"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:Microsoft.Office.Server.Search,TemplateColumnsGroup;"
+        DisplayName="$Resources:Microsoft.Office.Server.Search,TemplateCol_TargetControlType_Name;"
+        Description="$Resources:Microsoft.Office.Server.Search,TemplateCol_TargetControlType_Desc;"
+        Type="MultiChoice"
+        Required="FALSE"    
+        CanToggleHidden="TRUE" 
+        Sealed="TRUE">
+<!-- Options are based on scenarios where the template will be used and the tool pane and admin UIs that would filter or show the display templates -->
+        <CHOICES>
+            <CHOICE>SearchResults</CHOICE>
+            <CHOICE>SearchHoverPanel</CHOICE>
+            <CHOICE>Content Web Parts</CHOICE>
+            <CHOICE>Refinement</CHOICE>
+            <CHOICE>SearchBox</CHOICE>
+            <CHOICE>Custom</CHOICE>
+        </CHOICES>
+    </Field>
+
+    <Field
+        ID="{3C318A40-0D51-408D-BA71-16FA845B9FE5}"
+        Name="CrawlerXSLFile" 
+        StaticName="CrawlerXSLFile"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:Microsoft.Office.Server.Search,TemplateColumnsGroup;"
+        DisplayName="$Resources:Microsoft.Office.Server.Search,TemplateCol_CrawlerXSL_Name;"
+        Description="$Resources:Microsoft.Office.Server.Search,TemplateCol_CrawlerXSL_Desc;"
+        Type="URL"
+        Required="FALSE"
+        CanToggleHidden="TRUE"
+        Sealed="TRUE">
+    </Field>
+
+    <Field 
+        ID="{A0DD6C22-0988-453E-B3E2-77479DC9F014}"
+        Name="ManagedPropertyMapping"
+        StaticName="ManagedPropertyMapping"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:Microsoft.Office.Server.Search,TemplateColumnsGroup;"
+        DisplayName="$Resources:Microsoft.Office.Server.Search,TemplateCol_ManagedPropertyMapping_Name;"
+        Description="$Resources:Microsoft.Office.Server.Search,TemplateCol_ManagedPropertyMappin_Desc;"
+        Type="Note"
+        UnlimitedLengthInDocumentLibrary="TRUE"
+        Required="FALSE"
+        CanToggleHidden="TRUE"
+        Sealed="TRUE"
+        RichText="FALSE">
+     </Field>
+
+    <Field
+        ID="{DCB8E2A9-42D1-495F-9FDA-4BF9C706BC46}"
+        Name="CompatibleSearchDataTypes"
+        StaticName="CompatibleSearchDataTypes"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:Microsoft.Office.Server.Search,TemplateColumnsGroup;"
+        DisplayName="$Resources:Microsoft.Office.Server.Search,TemplateCol_CompatibleSearchDataTypes_Name;"
+        Description="$Resources:Microsoft.Office.Server.Search,TemplateCol_CompatibleSearchDataTypes_Desc;"
+        Type="MultiChoice"
+        Required="FALSE" 
+        CanToggleHidden="TRUE"
+        Sealed="TRUE">
+<!-- Options are from Microsoft.Office.Server.Search.Administration.ManagedDataType (excluding Unsupported and Binary) -->
+        <CHOICES>
+            <CHOICE>Text</CHOICE>
+            <CHOICE>Integer</CHOICE>
+            <CHOICE>Decimal</CHOICE>
+            <CHOICE>DateTime</CHOICE>
+            <CHOICE>YesNo</CHOICE>
+        </CHOICES>
+    </Field>
+
+    <Field 
+        ID="{BAB0A619-D1EC-40D7-847B-3E4408080C17}"
+        Name="CompatibleManagedProperties"
+        StaticName="CompatibleManagedProperties"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:Microsoft.Office.Server.Search,TemplateColumnsGroup;"
+        DisplayName="$Resources:Microsoft.Office.Server.Search,TemplateCol_CompatibleManagedProperties_Name;"
+        Description="$Resources:Microsoft.Office.Server.Search,TemplateCol_CompatibleManagedProperties_Desc;"
+        Type="Note"
+        Required="FALSE"
+        CanToggleHidden="TRUE"
+        Sealed="TRUE"
+        RichText="FALSE">
+     </Field>
+
+    <Field
+        ID="{FA181E85-8465-42fd-BD81-4AFEA427D3FE}"
+        Name="DisplayTemplateLevel"
+        StaticName="DisplayTemplateLevel"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        Group="$Resources:Microsoft.Office.Server.Search,TemplateColumnsGroup;"
+        DisplayName="$Resources:Microsoft.Office.Server.Search,TemplateCol_DisplayTemplateLevel_Name;"
+        Description="$Resources:Microsoft.Office.Server.Search,TemplateCol_DisplayTemplateLevel_Desc;"
+        Type="Choice"
+        Required="FALSE" 
+        CanToggleHidden="TRUE"
+        Sealed="TRUE">
+<!-- Options are from DisplayTemplateDesignFile.DisplayTemplateType enum and match the supported search template content types.
+This controls selectability of code templates in the search web part toolpanes and admin UIs -->
+        <CHOICES>
+            <CHOICE>Item</CHOICE>
+            <CHOICE>Control</CHOICE>
+            <CHOICE>Filter</CHOICE>
+            <CHOICE>Group</CHOICE>
+            <CHOICE>Base</CHOICE>
+        </CHOICES>
+    </Field>
+
+</Elements>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+	Id="2DD8788B-0E6B-4893-B4C0-73523AC261B1"
+	Title="$Resources:core,mbrowserredirectstaplingFeatureTitle;"
+	Description="$Resources:core,mbrowserredirectstaplingFeatureDesc;"
+	Version="15.0.0.0"
+	Hidden="TRUE"
+	Scope="Farm">
+	<ElementManifests>
+		<ElementManifest Location="featurestapling.xml"/>
+	</ElementManifests>
+</Feature>

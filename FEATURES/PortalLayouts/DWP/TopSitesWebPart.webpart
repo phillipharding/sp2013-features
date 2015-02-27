@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Microsoft.SharePoint.Publishing.WebControls.ContentByQueryWebPart,Microsoft.SharePoint.Publishing,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+      <importErrorMessage>$Resources:spscore,WPImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+		<property name="Title" type="string">$Resources:spscore,TopSitesWebpartTitle;</property>
+		<property name="Description" type="string">$Resources:spscore,TopSitesWebpartDescription;</property>
+        <property name="ChromeType">None</property>
+        <property name="ListsOverride" type="string"><![CDATA[<Lists ServerTemplate="300"><List Id="{0}" /></Lists>]]></property>
+        <property name="ItemStyle" type="string">Bullets</property>
+        <property name="XslLink" type="string">/Style Library/XSL Style Sheets/ContentQueryMain.xsl</property>
+        <property name="CommonViewFields" type="string">URL,URL;Description,Note</property>        
+        <property name="DataColumnRenames" type="string">URL,LinkUrl;Description,LinkToolTip</property>
+        <property name="QueryOverride" type="string"><![CDATA[<Where><And><Eq><FieldRef Name="{fdc3b2ed-5bf2-4835-a4bc-b885f3396a61}" /><Value Type="ModStat">$Resources:core,402;</Value></Eq><Eq><FieldRef Name="TopSite" /><Value Type="Boolean">1</Value></Eq></And></Where>]]></property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

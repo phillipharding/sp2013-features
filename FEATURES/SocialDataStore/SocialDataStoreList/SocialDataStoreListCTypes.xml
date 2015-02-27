@@ -1,0 +1,80 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ContentType ID="0x01200029E1F7200C2F49D9A9C5FA014063F220" Name="Scope" Group="$Resources:Folder_Content_Types" Inherits="TRUE" Description="$Resources:spscore,InternalUseOnly;">
+  </ContentType>
+  <ContentType ID="0x0120001F6E5E1DE9E5447195CFF4F4FC5DDF5B" Name="Namespace" Group="$Resources:Folder_Content_Types" Inherits="TRUE" Description="$Resources:spscore,InternalUseOnly;">
+  </ContentType>
+  <ContentType ID="0x0100415C46DF0F4B45939BDEC96C5014A10E"
+               Name="$Resources:spscore,MicrobloggingOnet_CTMBInfoTitle;"
+               Group="$Resources:spscore,SocialCTGroup;"
+               Description="$Resources:spscore,InternalUseOnly;"
+               Hidden="TRUE"
+               Inherits="TRUE">
+    <FieldRefs>
+      <FieldRef Name="UnreadMentions"
+                ID="{32ad5f2d-de5a-4282-8cfe-6cd0bd940af3}" />
+      <FieldRef Name="LastPostId"
+                ID="{6e447d4c-adf2-4a7e-8a02-03a905b140e9}" />
+      <FieldRef Name="SocialProperties"
+                ID="{2ba26235-131f-4577-bbd7-daf2d6957036}" />
+    </FieldRefs>
+  </ContentType>
+  <ContentType ID="0x01FC"
+               Name="$Resources:spscore,ContentFollowingOnet_CTBaseTitle;"
+               Group="$Resources:spscore,SocialCTGroup;"
+               Description="$Resources:spscore,InternalUseOnly;"
+               Hidden="TRUE"
+               Inherits="TRUE">
+    <FieldRefs>
+      <FieldRef Name="Url"
+                ID="{fce72098-de5a-4282-8cfe-6cd0bd940af3}" />
+      <FieldRef Name="FarmId"
+                ID="{fc9a41a3-8d8f-4fde-a872-3e4a2647f09e}" />
+      <FieldRef Name="SiteId"
+                ID="{fc7162e7-898c-4b14-9495-933795262aeb}" />
+      <FieldRef Name="WebId"
+                ID="{fcddf21b-346a-428a-8597-9162469759f9}" />
+      <FieldRef Name="ParentUrl"
+                ID="{fccf0a11-eda8-4427-9e20-8ba423428947}" />
+      <FieldRef Name="IconUrl"
+                ID="{fc303261-ddfb-4fee-945c-cf5471527324}" />
+      <FieldRef Name="Hidden"
+                ID="{fc24ae67-e34e-41cb-9a98-d337bb806788}" />
+      <FieldRef Name="HasFeed"
+                ID="{fc25e913-3a66-45b3-80e4-18d9f9e4e6c7}" />
+      <FieldRef Name="Flags"
+                ID="{fc90b917-d5e7-495f-bb4d-bd5667b3469e}" />
+    </FieldRefs>
+  </ContentType>
+  <ContentType ID="0x01FC00533CDB8F4EAE447D941948EFAE32BFD5"
+               Name="$Resources:spscore,ContentFollowingOnet_CTFollowedSiteTitle;"
+               Group="$Resources:spscore,SocialCTGroup;"
+               Description="$Resources:spscore,InternalUseOnly;"
+               Hidden="TRUE"
+               Inherits="TRUE">
+    <FieldRefs>
+    </FieldRefs>
+  </ContentType>
+  <ContentType ID="0x01FC00A1B06EC3D1F64BC6A842CF614178A523"
+               Name="$Resources:spscore,ContentFollowingOnet_CTFollowedDocTitle;"
+               Group="$Resources:spscore,SocialCTGroup;"
+               Description="$Resources:spscore,InternalUseOnly;"
+               Hidden="TRUE"
+               Inherits="TRUE">
+    <FieldRefs>
+      <FieldRef Name="ListId"
+                ID="{fc45ee7f-e6e6-4f80-97f7-e15b007eec5f}" />
+      <FieldRef Name="ItemUniqueId"
+                ID="{fc2b227c-0143-42b8-b9e7-b112f703a695}" />
+      <FieldRef Name="ItemId"
+                ID="{fc42ba64-4aac-45ac-86c1-d86648f473c5}" />
+      <FieldRef Name="ParentUrl"
+                ID="{fccf0a11-eda8-4427-9e20-8ba423428947}" />
+      <FieldRef Name="Subtype"
+                ID="{fcce1976-9eff-4d57-9f28-8035a610191d}" />
+      <FieldRef Name="FileTypeProgid"
+                ID="{fcbd47bc-7f79-4add-bf00-5fb607325b5b}" />
+      <FieldRef Name="ServerUrlProgid"
+                ID="{fc83e784-e169-445c-9234-9838ace39c32}" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

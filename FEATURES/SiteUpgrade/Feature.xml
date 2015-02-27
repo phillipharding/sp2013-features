@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="B63EF52C-1E99-455F-8511-6A706567740F"
+          Title="$Resources:core,siteUpgradeFeatureTitle;"
+          Description="$Resources:core,siteUpgradeFeatureDesc;"
+          Version="14.0.0.0"
+          Hidden="TRUE"
+          Scope="WebApplication"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="SiteUpgradeLinks.xml" />
+    </ElementManifests>
+</Feature>

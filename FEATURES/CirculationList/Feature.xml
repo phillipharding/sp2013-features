@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="a568770a-50ba-4052-ab48-37d8029b3f47"
+    Title="Circulation List"
+    Description="$Resources:core,GbwFeatureCirculationDescription;"
+    Version="4.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\circulationlist.xml" />
+        <ElementFile Location="circulation\schema.xml" />
+    </ElementManifests>
+    <UpgradeActions
+        ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        ReceiverClass="Microsoft.SharePoint.SPCirculationListUpgradeFeatureReceiver">
+        <VersionRange EndVersion="2.0.0.0">
+            <CustomUpgradeAction Name="UpdateConfirmationFields" />
+        </VersionRange>
+        <VersionRange EndVersion="3.0.0.0">
+            <CustomUpgradeAction Name="FixupFormTemplateName" />
+        </VersionRange>
+        <VersionRange EndVersion="4.0.0.0">
+            <CustomUpgradeAction Name="FixupCirculationContentType" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

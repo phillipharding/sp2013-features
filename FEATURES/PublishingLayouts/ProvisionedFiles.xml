@@ -1,0 +1,77 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="OSGPageLayouts" Url="_catalogs/masterpage" Path="PageLayouts" RootWebOnly="TRUE">
+        <File Url="ArticleLeft.aspx" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:cmscore,PageLayout_ArticleLeft_Title;" />
+            <Property Name="MasterPageDescription" Value="$Resources:cmscore,PageLayout_ArticleLeft_Description;" />
+            <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+            <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/ArticleLeft.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/ArticleLeft.png" /> 
+            <Property Name="PublishingAssociatedContentType" Value=";#$Resources:cmscore,contenttype_articlepage_name;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF3900242457EFB8B24247815D688C526CD44D;#"/>
+        </File>
+        <File Url="ArticleLinks.aspx" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:cmscore,PageLayout_ArticleLinks_Title;" />
+            <Property Name="MasterPageDescription" Value="$Resources:cmscore,PageLayout_ArticleLinks_Description;" />
+            <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+            <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/ArticleLinks.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/ArticleLinks.png" /> 
+            <Property Name="PublishingAssociatedContentType" Value=";#$Resources:cmscore,contenttype_articlepage_name;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF3900242457EFB8B24247815D688C526CD44D;#" />
+        </File>
+        <File Url="ArticleRight.aspx" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:cmscore,PageLayout_ArticleRight_Title;" />
+            <Property Name="MasterPageDescription" Value="$Resources:cmscore,PageLayout_ArticleRight_Description;" />
+            <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+            <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/ArticleRight.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/ArticleRight.png" /> 
+            <Property Name="PublishingAssociatedContentType" Value=";#$Resources:cmscore,contenttype_articlepage_name;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF3900242457EFB8B24247815D688C526CD44D;#" />
+        </File>
+        <File Url="PageFromDocLayout.aspx" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:cmscore,PageLayout_PageFromDoc_Title;" />
+            <Property Name="MasterPageDescription" Value="$Resources:cmscore,PageLayout_PageFromDocLayout_Description;" />
+            <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+            <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/ArticleBodyOnly.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/ArticleBodyOnly.png" /> 
+            <Property Name="PublishingAssociatedContentType" Value=";#$Resources:cmscore,contenttype_articlepage_name;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF3900242457EFB8B24247815D688C526CD44D;#" />
+        </File>
+        <File Url="WelcomeSplash.aspx" Type="GhostableInLibrary"> 
+            <Property Name="Title" Value="$Resources:cmscore,PageLayout_WelcomeSplash_Title;" /> 
+            <Property Name="MasterPageDescription" Value="$Resources:cmscore,PageLayout_WelcomeSplash_Description15;" />
+            <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" /> 
+            <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/WelcomeSplash.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/WelcomeSplash.png" /> 
+            <Property Name="PublishingAssociatedContentType" Value=";#$Resources:cmscore,contenttype_welcomepage_name;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF390064DEA0F50FC8C147B0B6EA0636C4A7D4;#" /> 
+        </File> 
+        <File Url="RedirectPageLayout.aspx" Type="GhostableInLibrary">
+            <Property Name="Title" Value="$Resources:cmscore,PageLayout_RedirectPage_Title;" />
+            <Property Name="MasterPageDescription" Value="$Resources:cmscore,PageLayout_RedirectPage_Description;" />
+            <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+            <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/RedirectPage.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/RedirectPage.png" /> 
+            <Property Name="PublishingAssociatedContentType" Value=";#$Resources:cmscore,contenttype_redirectpage_name;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF3900FD0E870BA06948879DBD5F9813CD8799;#"/>
+        </File>
+        <File Url="BlankWebPartPage.aspx" Type="GhostableInLibrary"> 
+            <Property Name="Title" Value="$Resources:cmscore,PageLayout_BlankWebPartPage_Title;" /> 
+            <Property Name="MasterPageDescription" Value="$Resources:cmscore,PageLayout_BlankWebPartPage_Description;" />
+            <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" /> 
+            <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/BlankWebPartPage.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/BlankWebPartPage.png" /> 
+            <Property Name="PublishingAssociatedContentType" Value=";#$Resources:cmscore,contenttype_welcomepage_name;;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF390064DEA0F50FC8C147B0B6EA0636C4A7D4;#" /> 
+        </File> 
+    </Module>
+    <Module Name="PublishingLayoutsPreviewImages" Url="_catalogs/masterpage" IncludeFolders="??*-??*" Path="" RootWebOnly="TRUE">
+        <File Url="ArticleLinks.png" Name="Preview Images/ArticleLinks.png" Type="GhostableInLibrary">
+        </File>
+        <File Url="ArticleLeft.png" Name="Preview Images/ArticleLeft.png" Type="GhostableInLibrary">
+        </File>
+        <File Url="BlankWebPartPage.png" Name="Preview Images/BlankWebPartPage.png" Type="GhostableInLibrary">
+        </File>
+        <File Url="ArticleRight.png" Name="Preview Images/ArticleRight.png" Type="GhostableInLibrary">
+        </File>
+        <File Url="ArticleBodyOnly.png" Name="Preview Images/ArticleBodyOnly.png" Type="GhostableInLibrary">
+        </File>
+        <File Url="RedirectPage.png" Name="Preview Images/RedirectPage.png" Type="GhostableInLibrary">
+        </File>
+        <File Url="WelcomeTOC.png" Name="Preview Images/WelcomeTOC.png" Type="GhostableInLibrary">
+        </File>
+        <File Url="WelcomeSplash.png" Name="Preview Images/WelcomeSplash.png" Type="GhostableInLibrary">
+        </File>
+    </Module>
+    <Module Name="Images" Url="Style Library/Images" Path="Images" RootWebOnly="TRUE">
+        <File Url="Search_Arrow.jpg" Name="Search_Arrow.jpg" Type="GhostableInLibrary" />
+        <File Url="Search_Arrow_RTL.jpg" Name="Search_Arrow_RTL.jpg" Type="GhostableInLibrary" />
+	</Module>
+</Elements>

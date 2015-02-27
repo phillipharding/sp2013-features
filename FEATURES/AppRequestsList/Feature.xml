@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature 
+    xmlns="http://schemas.microsoft.com/sharepoint/" 
+    Title="$Resources:core,Marketplace_AppRequestsListFeatureTitle;"
+    Description="$Resources:core,Marketplace_AppRequestsListFeatureDescription;" 
+    Id="334DFC83-8655-48A1-B79D-68B7F6C63222"
+    Hidden="TRUE"
+    Version="15.0.2.0"
+    Scope="Web"
+    ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.Marketplace.CorporateCuratedGallery.SPAppRequestsFeatureReceiver">
+    <ElementManifests>
+        <ElementManifest Location="AppRequestsFields.xml" />
+        <ElementManifest Location="AppRequestsContentTypes.xml" />
+        <ElementManifest Location="AppRequestsListTemplate.xml" />
+        <ElementManifest Location="AppRequestsListInstance.xml" />
+        <ElementFile Location="AppRequests\Schema.xml" />
+    </ElementManifests>
+    <UpgradeActions
+        ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        ReceiverClass="Microsoft.SharePoint.Marketplace.CorporateCuratedGallery.SPAppRequestsFeatureReceiver">
+        <VersionRange EndVersion="15.0.1.0">
+            <CustomUpgradeAction Name="AddListToQuickLaunch" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.2.0">
+            <CustomUpgradeAction Name="UpdateInstanceIcon" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

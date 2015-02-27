@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- _version="15.0.4442.1000" -->
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter</value>
+  </resheader>
+  <data name="Feature_Title">
+    <value>Flux de travail de routage</value>
+  </data>
+  <data name="Feature_Description">
+    <value>Flux de travail d'envoi d'un document pour commentaires ou approbation.</value>
+  </data>
+  <data name="ReviewFeedback_Title">
+    <value>Recueillir les commentaires</value>
+  </data>
+  <data name="ReviewWorkflow_UpdateTasks">
+    <value>Mettre à jour les tâches actives</value>
+  </data>
+  <data name="ReviewFeedback_Description">
+    <value>Envoie un document en révision. Les réviseurs peuvent insérer des commentaires qui seront compilés et envoyés au propriétaire du document à la fin du flux de travail.</value>
+  </data>
+  <data name="ReviewFeedback_AddReviewer">
+    <value>Ajouter ou mettre à jour les réviseurs</value>
+  </data>
+  <data name="ReviewApproval_Title">
+    <value>Approbation</value>
+  </data>
+  <data name="ReviewApproval_Description">
+    <value>Envoie un document pour approbation. Les approbateurs peuvent approuver ou rejeter le document, réattribuer la tâche d'approbation, ou requérir la modification du document.</value>
+  </data>
+  <data name="ReviewApproval_AddApprover">
+    <value>Ajouter ou mettre à jour les approbateurs</value>
+  </data>
+  <data name="ReviewWorkflow_WrapItUp">
+    <value>Annuler le flux de travail</value>
+  </data>
+  <data name="ReviewFeedback_CanceledStatus">
+    <value>Annulé</value>
+  </data>
+  <data name="ReviewFeedback_ApprovedStatus">
+    <value>Approuvé</value>
+  </data>
+  <data name="ReviewFeedback_RejectedStatus">
+    <value>Refusé</value>
+  </data>
+</root>

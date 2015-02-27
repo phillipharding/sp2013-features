@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="00BFEA71-F600-43F6-A895-40C0DE7B0117"
+    Title="$Resources:core,nocodeworkflowlibraryFeatureTitle;"
+    Description="$Resources:core,nocodeworkflowlibraryFeatureDesc;"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="core"    
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\NoCodeWorkflowLibrary.xml" />
+    </ElementManifests>
+</Feature>

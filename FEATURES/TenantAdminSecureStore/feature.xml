@@ -1,0 +1,13 @@
+<Feature  Id="B738400A-F08A-443d-96FA-A852D0356BBA"
+          Title="$Resources:obacore,tenantadminbdcFeatureTitle;"
+          Description="$Resources:obacore,tenantadminbdcFeatureDesc;"
+          Version="14.0.0.0"
+          Scope="Web"
+          Hidden="TRUE"
+          DefaultResourceFile="obacore"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="default.xml" />
+        <ElementManifest Location="ta_provisionedsecurestoreribbon.xml" />
+    </ElementManifests>
+</Feature>

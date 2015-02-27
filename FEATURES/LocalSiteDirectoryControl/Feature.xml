@@ -1,0 +1,11 @@
+<Feature  Id="14AAFD3A-FCB9-4bb7-9AD7-D8E36B663BBD"
+          Title="SharePoint Portal Server Local Site Directory Capture Control"
+          Description="SharePoint Portal Server Local Site Directory Capture Control"
+          Version="14.0.0.0"
+          Scope="Site"
+          Hidden="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="SiteControlPanel.xml"/>
+    </ElementManifests>
+</Feature>

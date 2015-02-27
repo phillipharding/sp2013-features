@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="STS#0" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="STS#1" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="STS#2" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="MPS#0" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="MPS#1" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="MPS#2" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="MPS#3" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="MPS#4" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="WIKI#0" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="BLOG#0" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="SGS#0" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="BDR#0" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="OFFILE#0" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="OFFILE#1" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="EDISC#0" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="EDISC#1" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="SPS#0" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="SPSPERS#0" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="SPSMSITE#0" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="SPSNEWS#0" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="SPSNHOME#0" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="SPSSITES#0" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="SPSREPORTCENTER#0" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="SPSPORTAL#0" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="SRCHCEN#0" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="PROFILES#0" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="PROJECTSITE#0" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="CMSPUBLISHING#0" />
+	<FeatureSiteTemplateAssociation Id="C85E5759-F323-4EFB-B548-443D2216EFB5" TemplateName="DEV#0" />
+	<FeatureSiteTemplateAssociation Id="A44D2AA3-AFFC-4d58-8DB4-F4A3AF053188" TemplateName="SPSPORTAL#0" />
+	<FeatureSiteTemplateAssociation Id="A44D2AA3-AFFC-4d58-8DB4-F4A3AF053188" TemplateName="SPS#0" />
+	<FeatureSiteTemplateAssociation Id="A44D2AA3-AFFC-4d58-8DB4-F4A3AF053188" TemplateName="SPSREPORTCENTER#0" />
+	<FeatureSiteTemplateAssociation Id="A44D2AA3-AFFC-4d58-8DB4-F4A3AF053188" TemplateName="SPSTOC#0" />
+	<FeatureSiteTemplateAssociation Id="A44D2AA3-AFFC-4d58-8DB4-F4A3AF053188" TemplateName="SPSTOPIC#0" />
+	<FeatureSiteTemplateAssociation Id="A44D2AA3-AFFC-4d58-8DB4-F4A3AF053188" TemplateName="SPSNEWS#0" />
+	<FeatureSiteTemplateAssociation Id="A44D2AA3-AFFC-4d58-8DB4-F4A3AF053188" TemplateName="SPSNHOME#0" />
+	<FeatureSiteTemplateAssociation Id="A44D2AA3-AFFC-4d58-8DB4-F4A3AF053188" TemplateName="SPSSITES#0" />
+	<FeatureSiteTemplateAssociation Id="A44D2AA3-AFFC-4d58-8DB4-F4A3AF053188" TemplateName="SRCHCEN#0" />
+	<FeatureSiteTemplateAssociation Id="A44D2AA3-AFFC-4d58-8DB4-F4A3AF053188" TemplateName="CMSPUBLISHING#0" />
+	<FeatureSiteTemplateAssociation Id="A44D2AA3-AFFC-4d58-8DB4-F4A3AF053188" TemplateName="BLANKINTERNET#0" />
+	<FeatureSiteTemplateAssociation Id="A44D2AA3-AFFC-4d58-8DB4-F4A3AF053188" TemplateName="BLANKINTERNET#1" />
+	<FeatureSiteTemplateAssociation Id="A44D2AA3-AFFC-4d58-8DB4-F4A3AF053188" TemplateName="BLANKINTERNET#2" />
+	<FeatureSiteTemplateAssociation Id="A44D2AA3-AFFC-4d58-8DB4-F4A3AF053188" TemplateName="ENTERWIKI#0" />
+<FeatureSiteTemplateAssociation Id="A44D2AA3-AFFC-4d58-8DB4-F4A3AF053188" TemplateName="VISPR#0" />
+<FeatureSiteTemplateAssociation Id="A44D2AA3-AFFC-4d58-8DB4-F4A3AF053188" TemplateName="VISPRUS#0" />
+<FeatureSiteTemplateAssociation Id="A44D2AA3-AFFC-4d58-8DB4-F4A3AF053188" TemplateName="BICenterSite#0" />
+</Elements>

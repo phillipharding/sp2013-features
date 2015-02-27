@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EmailContent>
+  <Subject>
+    $ResourcesNoEncode:core,UpgradeAvailableSubject;
+  </Subject>
+  <Body>
+    <HTML>
+      <![CDATA[<html>
+      <body>
+      <h3>$Resources:core,UpgradeAvailableH31;</h3>
+      <p>$Resources:core,UpgradeAvailableP1;</p>
+      <p>$Resources:core,UpgradeAvailableP2;</p>
+      <ol>
+        <li>$Resources:core,UpgradeAvailableLi1;</li>
+        <div>$Resources:core,UpgradeAvailableDiv1Part1;
+        ]]>
+    </HTML>
+    $ResourcesNoEncode:core,UpgradeAvailableDiv1Part2;
+    <HTML>
+      <![CDATA[</div>
+      <li>$Resources:core,UpgradeAvailableLi2;</li>
+      <div>$Resources:core,UpgradeAvailableDiv2Part1;]]>
+    </HTML>
+    $ResourcesNoEncode:core,UpgradeAvailableDiv2Part2;
+    <HTML>
+      <![CDATA[</div>
+      <li></li>
+      <div>$Resources:core,UpgradeAvailableDiv3Part1;]]>
+    </HTML>
+    $ResourcesNoEncode:core,UpgradeAvailableDiv3Part2;
+    <HTML>
+      <![CDATA[</div>
+      </ol>
+      <p><em>$Resources:core,UpgradeAvailabeEm;</em></p>
+      </body>
+      </html>]]>
+    </HTML>
+  </Body>
+</EmailContent>

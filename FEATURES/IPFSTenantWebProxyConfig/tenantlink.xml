@@ -1,0 +1,12 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<CustomAction 
+		Id="IPFSTenantFormsServiceConfig"
+		GroupId="TenantAdmin_Settings"
+		Location="Microsoft.SharePoint.TenantAdministration"
+		Sequence="11" 
+		Title="$Resources:TenantLinksFormsServiceProxyConfigTitle;" >
+			<UrlAction Url="_layouts/15/TenantWebProxy.FormServer.aspx" />
+	</CustomAction>
+
+</Elements>

@@ -1,0 +1,11 @@
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+	Id="8FB893D6-93EE-4763-A046-54F9E640368D"
+  Title="Taxonomy Tenant Administration Stapler"
+  Description="Activates taxonomy related features in the tenant administration site."
+	Version="14.0.0.0"
+	Hidden="TRUE"
+	Scope="Farm">
+	<ElementManifests>
+		<ElementManifest Location="featurestapling.xml"/>
+	</ElementManifests>
+</Feature>

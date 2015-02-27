@@ -1,0 +1,12 @@
+<Feature Id="AE31CD14-A866-4834-891A-97C9D37662A2"
+         Title="$Resources:ppsma,PerformancePoint_FeatureRibbon_Title"
+         Version="15.0.0.0"
+         Scope="Site"
+         Hidden="True"
+         DefaultResourceFile="core"
+         xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml" />
+  </ElementManifests>
+</Feature>
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Feature  Id="99FE402E-89A0-45aa-9163-85342E865DC8"
+          Title="$Resources:osrvcore,BaseWebFeatureTitle;"
+          Description="$Resources:osrvcore,BaseFeatureDescription;"
+          Version="15.0.0.3"
+          Scope="Web"
+          ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Portal.SPBaseWebFeatureReceiver"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ActivationDependencies>
+
+      <ActivationDependency FeatureId="FF13819A-A9AC-46FB-8163-9D53357EF98D" /> 
+
+    </ActivationDependencies>
+
+    <UpgradeActions
+        ReceiverAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        ReceiverClass="Microsoft.SharePoint.Portal.SPBaseWebUpgradeFeatureReceiver">
+        <VersionRange EndVersion="15.0.0.1">
+            <CustomUpgradeAction Name="RemoveRelatedItemsWebFeature" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.0.2">
+            <CustomUpgradeAction Name="AddSPSBlogFeatureForBlogs" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.0.3">
+            <CustomUpgradeAction Name="ActivateTaskListNewsFeed" />
+        </VersionRange>
+    </UpgradeActions>
+
+</Feature>

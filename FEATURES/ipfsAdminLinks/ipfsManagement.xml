@@ -1,0 +1,8 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<FeatureSiteTemplateAssociation Id="C88C4FF1-DBF5-4649-AD9F-C6C426EBCBF5" TemplateName="GLOBAL" />
+
+	<FeatureSiteTemplateAssociation Id="15845762-4EC4-4606-8993-1C0512A98680" TemplateName="TENANTADMIN#0" />
+	<FeatureSiteTemplateAssociation Id="3C577815-7658-4d4f-A347-CFBB370700A7" TemplateName="TENANTADMIN#0" />
+
+</Elements>

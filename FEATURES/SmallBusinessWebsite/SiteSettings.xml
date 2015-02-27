@@ -1,0 +1,376 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <!-- Galleries -->
+    <HideCustomAction
+        Id="HideWebParts"
+        GroupId="Galleries"
+        HideActionId="WebParts"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideListTemplates"
+        GroupId="Galleries"
+        HideActionId="ListTemplates"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideManageField"
+        GroupId="Galleries"
+        HideActionId="ManageField"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideManageCType"
+        GroupId="Galleries"
+        HideActionId="ManageCType"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideSolutions"
+        GroupId="Galleries"
+        HideActionId="Solutions"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <!-- Search -->
+    <HideCustomAction
+        Id="HideManageResultSourcesSite"
+        GroupId="SearchAdministration"
+        HideActionId="ManageResultSourcesSite"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideManageResultTypes"
+        GroupId="SearchAdministration"
+        HideActionId="ManageResultTypes"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideManageQueryRulesSite2"
+        GroupId="SearchAdministration"
+        HideActionId="ManageQueryRulesSite2"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideMetadataPropertiesSite"
+        GroupId="SearchAdministration"
+        HideActionId="MetadataPropertiesSite"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideSiteSearchSettings"
+        GroupId="SearchAdministration"
+        HideActionId="SiteSearchSettings"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideNoCrawlSettingsPage"
+        GroupId="SearchAdministration"
+        HideActionId="NoCrawlSettingsPage"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <!-- SiteAdministration -->
+    <HideCustomAction
+        Id="HideLibrariesAndLists"
+        GroupId="SiteAdministration"
+        HideActionId="LibrariesAndLists"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideTermStoreManagement"
+        GroupId="SiteAdministration"
+        HideActionId="TermStoreManagement"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideAreaCacheSettings"
+        GroupId="SiteAdministration"
+        HideActionId="AreaCacheSettings"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideSiteManagement"
+        GroupId="SiteAdministration"
+        HideActionId="SiteManagement"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideManageSubWebs"
+        GroupId="SiteAdministration"
+        HideActionId="ManageSubWebs"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideWorkflowSettings"
+        GroupId="SiteAdministration"
+        HideActionId="WorkflowSettings"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideNoCrawlSettingsPage"
+        GroupId="SiteAdministration"
+        HideActionId="NoCrawlSettingsPage"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideVariationsNominateSiteLink"
+        GroupId="SiteAdministration"
+        HideActionId="VariationsNominateSiteLink"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideTranslationStatusListLink"
+        GroupId="SiteAdministration"
+        HideActionId="TranslationStatusListLink"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideManageResultTypes2"
+        GroupId="SiteAdministration"
+        HideActionId="ManageResultTypes"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideManageQueryRulesSite"
+        GroupId="SiteAdministration"
+        HideActionId="ManageQueryRulesSite"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideManageResultSourcesSite"
+        GroupId="SiteAdministration"
+        HideActionId="ManageResultSourcesSite"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideCatalogSources"
+        GroupId="SiteAdministration"
+        HideActionId="CatalogSources"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideMetadataPropertiesSite"
+        GroupId="SiteAdministration"
+        HideActionId="MetadataPropertiesSite"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HidePolicyPolicyAndLifecycle"
+        GroupId="SiteAdministration"
+        HideActionId="PolicyPolicyAndLifecycle"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideSiteManagerLogs"
+        GroupId="SiteAdministration"
+        HideActionId="SiteManagerLogs"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideSearchConfigurationImportSPWeb"
+        GroupId="SearchAdministration"
+        HideActionId="SearchConfigurationImportSPWeb"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideSearchConfigurationExportSPWeb"
+        GroupId="SearchAdministration"
+        HideActionId="SearchConfigurationExportSPWeb"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideManageQueryRulesSite2"
+        GroupId="SiteAdministration"
+        HideActionId="ManageQueryRulesSite2"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <!-- SiteCollectionAdmin -->
+    <HideCustomAction
+        Id="HideManageSiteCollectionFeatures"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="ManageSiteCollectionFeatures"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideLibrariesAndLists"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="LibrariesAndLists"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideManageQueryRules"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="ManageQueryRules"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideSiteCacheSettings"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="SiteCacheSettings"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideSiteCacheProfiles"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="SiteCacheProfiles"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideObjectCacheSettings"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="ObjectCacheSettings"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideVariationSettings"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="VariationSettings"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideVariationLabels"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="VariationLabels"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideVariationLogs"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="VariationLogs"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideTranslatableColumnsPage"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="TranslatableColumnsPage"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideAuditSettings"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="AuditSettings"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideconfigureEnhacedSearch"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="configureEnhacedSearch"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideManageScopes"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="ManageScopes"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideManageSpecialTerms"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="ManageSpecialTerms"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideManageResultSourcesSiteColl"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="ManageResultSourcesSiteColl"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideManageResultTypes"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="ManageResultTypes"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideManageQueryRules"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="ManageQueryRules"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideHierarchy"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="Hierarchy"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideSiteNavigationSettings"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="SiteNavigationSettings"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HidePortal"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="Portal"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideHubUrlLinks"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="HubUrlLinks"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideSharePointDesignerSettings"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="SharePointDesignerSettings"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideUpgrade"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="Upgrade"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideCatalogSources2"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="CatalogSources"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HidePublishedLinks"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="PublishedLinks"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideHtmlFieldSecurity"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="HtmlFieldSecurity"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HidePolicyTemplate"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="PolicyTemplate"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideAuditReporting"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="AuditReporting"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HidePolicyPolicies"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="PolicyPolicies"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideHealthCheck"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="HealthCheck"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideMetadataPropertiesSiteColl"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="MetadataPropertiesSiteColl"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideSearchConfigurationImportSPSite"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="SearchConfigurationImportSPSite"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideSearchConfigurationExportSPSite"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="SearchConfigurationExportSPSite"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideManageQueryRules2"
+        GroupId="SiteCollectionAdmin"
+        HideActionId="ManageQueryRules2"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <!-- Customization -->
+    <HideCustomAction
+        Id="HideAreaTemplateSettings"
+        GroupId="Customization"
+        HideActionId="AreaTemplateSettings"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideDeviceChannelSettings"
+        GroupId="Customization"
+        HideActionId="DeviceChannelSettings"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideAreaNavigationSettings"
+        GroupId="Customization"
+        HideActionId="AreaNavigationSettings"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideNavOptions"
+        GroupId="Customization"
+        HideActionId="NavOptions"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideDesignImport"
+        GroupId="Customization"
+        HideActionId="DesignImport"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <!-- SiteTasks -->
+    <HideCustomAction
+        Id="HideDeleteWeb"
+        GroupId="SiteTasks"
+        HideActionId="DeleteWeb"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideSiteSearchSettings"
+        GroupId="SiteTasks"
+        HideActionId="SiteSearchSettings"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideManageSiteFeatures"
+        GroupId="SiteTasks"
+        HideActionId="ManageSiteFeatures"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideReGhost"
+        GroupId="SiteTasks"
+        HideActionId="ReGhost"
+        Location="Microsoft.SharePoint.SiteSettings" />
+</Elements>

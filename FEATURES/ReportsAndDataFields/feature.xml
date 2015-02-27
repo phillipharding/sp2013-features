@@ -1,0 +1,12 @@
+<Feature  Id="365356EE-6C88-4CF1-92B8-FA94A8B8C118"
+          Title="SPS Reports and Data Field Definition"
+          Description="OOB field definitions for Reports and Data"
+          Version="15.0.0.0"
+          Scope="Site"
+          SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+          Hidden="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="fieldsspsreportsanddata.xml"/>
+    </ElementManifests>
+</Feature>

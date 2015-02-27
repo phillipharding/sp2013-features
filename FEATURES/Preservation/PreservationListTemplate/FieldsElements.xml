@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _lcid="1033" _version="15.0.4420" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+      <Field ID="{7E858731-10CA-458a-BB20-256C57303B83}"
+              Name="PreservationVersion"
+              StaticName="PreservationVersion"
+              DisplayName="$Resources:dlccore,PreservationVersion;"
+              SourceID="http://schemas.microsoft.com/sharepoint/v3"
+              Group="_Hidden"
+              Type="Text"
+              Sealed="TRUE"
+              Required="FALSE"/>
+      <Field ID="{831C7E9F-A675-4756-B79E-F3575B0129BE}"
+              Indexed="TRUE"
+              Name="PreservationOriginalURL"
+              StaticName="PreservationOriginalURL"
+              DisplayName="$Resources:dlccore,PreservationOriginalURL;"
+              SourceID="http://schemas.microsoft.com/sharepoint/v3"
+              Group="_Hidden"
+              Type="Text"
+              Sealed="TRUE"
+              Required="FALSE"/>
+      <Field ID="{653E258D-C9AD-483B-AD21-11BCD7EA4AD1}"
+              Name="PreservationOriginalListId"
+              StaticName="PreservationOriginalListId"
+              DisplayName="$Resources:dlccore,PreservationOriginalListId;"
+              SourceID="http://schemas.microsoft.com/sharepoint/v3"
+              Group="_Hidden"
+              Type="Text"
+              Sealed="TRUE"
+              Required="FALSE"/>
+      <Field ID="{CD1F9B84-3D34-4820-AF84-8A46C1A6BF05}"
+              Name="PreservationOriginalMetadata"
+              StaticName="PreservationOriginalMetadata"
+              DisplayName="$Resources:dlccore,PreservationOriginalMetadata;"
+              SourceID="http://schemas.microsoft.com/sharepoint/v3"
+              Group="_Hidden"
+              Type="Note"
+              Sealed="TRUE"
+              Required="FALSE"/>
+      <Field ID="{8604127E-BCE1-4d7e-B175-4BE9E7831555}"
+              Name="PreservationDatePreserved"
+              StaticName="PreservationDatePreserved"
+              DisplayName="$Resources:dlccore,PreservationDatePreserved;"
+              SourceID="http://schemas.microsoft.com/sharepoint/v3"
+              Group="_Hidden"
+              Type="DateTime"
+              Sealed="TRUE"
+              Required="FALSE"/>
+</Elements>

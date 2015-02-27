@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+	<_locDefinition>
+		<_locTag _loc="locData">Title</_locTag>
+		<_locTag _loc="locData">Description</_locTag>
+	</_locDefinition>
+	<Assembly>Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+	<TypeName>Microsoft.SharePoint.Portal.WebControls.SiteDocuments</TypeName>
+	<Title>$Resources:spscore,PeopleWebParts_MembershipDocs_Title_Text;</Title>
+	<Description>$Resources:spscore,PeopleWebParts_MembershipDocs_Desc_Text;</Description>
+	<PartImageLarge>/_layouts/images/wp_doc.gif</PartImageLarge>
+	<UserControlledNavigation xmlns="urn:schemas-microsoft-com:sharepoint:portal:sitedocumentswebpart">false</UserControlledNavigation>
+</WebPart>

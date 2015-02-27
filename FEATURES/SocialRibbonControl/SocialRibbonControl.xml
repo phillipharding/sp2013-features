@@ -1,0 +1,332 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="Ribbon.Documents.AppendSocialRibbonControl"
+                Location="CommandUI.Ribbon"
+                Title="$Resources:spscore,SocialRibbonControl_SocialRibbonControlAction_Text"
+                Sequence="10">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.Documents.Groups._children">
+          <Group Id="Ribbon.Documents.TagsAndNotes"
+                 Sequence="80"
+                 Command="TagsAndNotesGroup"
+                 Description=""
+                 Title="$Resources:spscore,SocialRibbonControl_SocialRibbonControlAction_Text"
+                 Template="Ribbon.Templates.Flexible2">
+            <Controls Id="Ribbon.Documents.TagsAndNotes.Controls">
+              <Button Id="Ribbon.Documents.TagsAndNotes.TagsAndNotes"
+                      Sequence="10"
+                      Alt="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Text"
+                      Command="TagsAndNotes"
+                      Image16by16="/_layouts/15/images/SocialTagsAndNotes_16.png?rev=23"
+                      Image32by32="/_layouts/15/images/SocialTagsAndNotes_32.png?rev=23"
+                      LabelText="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Text"
+                      ToolTipTitle="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Text;"
+                      ToolTipDescription="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Tooltip_Text;"
+                      TemplateAlias="o1"/>
+            </Controls>
+          </Group>
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction Id="Ribbon.Documents.Scaling.TagsAndNotes.MaxSize"
+                Location="CommandUI.Ribbon"
+                Sequence="10">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.Documents.Scaling._children">
+          <MaxSize Id="Ribbon.Documents.Scaling.TagsAndNotes.MaxSize" Sequence="10" GroupId="Ribbon.Documents.TagsAndNotes" Size="LargeMedium" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction Id="Ribbon.Library.AppendSocialRibbonControl"
+                Location="CommandUI.Ribbon"
+                Title="$Resources:spscore,SocialRibbonControl_SocialRibbonControlAction_Text"
+                Sequence="10">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.Library.Groups._children">
+          <Group Id="Ribbon.Library.TagsAndNotes"
+                 Sequence="40"
+                 Command="TagsAndNotesGroup"
+                 Description=""
+                 Title="$Resources:spscore,SocialRibbonControl_SocialRibbonControlAction_Text"
+                 Template="Ribbon.Templates.Flexible2">
+            <Controls Id="Ribbon.Library.TagsAndNotes.Controls">
+              <Button Id="Ribbon.Library.TagsAndNotes.TagsAndNotesPage"
+                      Sequence="10"
+                      Alt="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Text"
+                      Command="TagsAndNotesPage"
+                      Image16by16="/_layouts/15/images/SocialTagsAndNotes_16.png?rev=23"
+                      Image32by32="/_layouts/15/images/SocialTagsAndNotes_32.png?rev=23"
+                      LabelText="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Text"
+                      ToolTipTitle="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Text;"
+                      ToolTipDescription="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Tooltip_Text;"
+                      TemplateAlias="o1"/>
+            </Controls>
+          </Group>
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction Id="Ribbon.Library.Scaling.TagsAndNotes.MaxSize"
+                Location="CommandUI.Ribbon"
+                Sequence="10">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.Library.Scaling._children">
+          <MaxSize Id="Ribbon.Library.Scaling.TagsAndNotes.MaxSize" Sequence="10" GroupId="Ribbon.Library.TagsAndNotes" Size="LargeMedium" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction Id="Ribbon.WikiPageTab.AppendSocialRibbonControl"
+                Location="CommandUI.Ribbon"
+                Title="$Resources:spscore,SocialRibbonControl_SocialRibbonControlAction_Text"
+                Sequence="10">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.WikiPageTab.Groups._children">
+          <Group Id="Ribbon.WikiPageTab.TagsAndNotes"
+                 Sequence="90"
+                 Command="TagsAndNotesGroup"
+                 Description=""
+                 Title="$Resources:spscore,SocialRibbonControl_SocialRibbonControlAction_Text"
+                 Template="Ribbon.Templates.Flexible2">
+            <Controls Id="Ribbon.WikiPageTab.TagsAndNotes.Controls">
+              <Button Id="Ribbon.WikiPageTab.TagsAndNotes.TagsAndNotesPage"
+                      Sequence="10"
+                      Alt="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Text"
+                      Command="TagsAndNotesPage"
+                      Image16by16="/_layouts/15/images/SocialTagsAndNotes_16.png?rev=23"
+                      Image32by32="/_layouts/15/images/SocialTagsAndNotes_32.png?rev=23"
+                      LabelText="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Text"
+                      ToolTipTitle="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Text;"
+                      ToolTipDescription="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Tooltip_Text;"
+                      TemplateAlias="o1"/>
+            </Controls>
+          </Group>
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction Id="Ribbon.WikiPageTab.Scaling.TagsAndNotes.MaxSize"
+                Location="CommandUI.Ribbon"
+                Sequence="10">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.WikiPageTab.Scaling._children">
+          <MaxSize Id="Ribbon.WikiPageTab.Scaling.TagsAndNotes.MaxSize" Sequence="10" GroupId="Ribbon.WikiPageTab.TagsAndNotes" Size="LargeMedium" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction Id="Ribbon.WebPartPage.AppendSocialRibbonControl"
+                Location="CommandUI.Ribbon"
+                Title="$Resources:spscore,SocialRibbonControl_SocialRibbonControlAction_Text"
+                Sequence="10">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.WebPartPage.Groups._children">
+          <Group Id="Ribbon.WebPartPage.TagsAndNotes"
+                 Sequence="90"
+                 Command="TagsAndNotesGroup"
+                 Description=""
+                 Title="$Resources:spscore,SocialRibbonControl_SocialRibbonControlAction_Text"
+                 Template="Ribbon.Templates.Flexible2">
+            <Controls Id="Ribbon.WebPartPage.TagsAndNotes.Controls">
+              <Button Id="Ribbon.WebPartPage.TagsAndNotes.TagsAndNotesPage"
+                      Sequence="10"
+                      Alt="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Text"
+                      Command="TagsAndNotesPage"
+                      Image16by16="/_layouts/15/images/SocialTagsAndNotes_16.png?rev=23"
+                      Image32by32="/_layouts/15/images/SocialTagsAndNotes_32.png?rev=23"
+                      LabelText="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Text"
+                      ToolTipTitle="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Text;"
+                      ToolTipDescription="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Tooltip_Text;"
+                      TemplateAlias="o1"/>
+            </Controls>
+          </Group>
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction Id="Ribbon.WebPartPage.Scaling.TagsAndNotes.MaxSize"
+                Location="CommandUI.Ribbon"
+                Sequence="10">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.WebPartPage.Scaling._children">
+          <MaxSize Id="Ribbon.WebPartPage.Scaling.TagsAndNotes.MaxSize" Sequence="10" GroupId="Ribbon.WebPartPage.TagsAndNotes" Size="LargeMedium" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction Id="Ribbon.Calendar.Calendar.AppendSocialRibbonControl"
+                Location="CommandUI.Ribbon"
+                Title="$Resources:spscore,SocialRibbonControl_SocialRibbonControlAction_Text"
+                Sequence="10">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.Calendar.Calendar.Groups._children">
+          <Group Id="Ribbon.Calendar.Calendar.TagsAndNotes"
+                 Sequence="50"
+                 Command="TagsAndNotesGroup"
+                 Description=""
+                 Title="$Resources:spscore,SocialRibbonControl_SocialRibbonControlAction_Text"
+                 Template="Ribbon.Templates.Flexible2">
+            <Controls Id="Ribbon.Calendar.Calendar.TagsAndNotes.Controls">
+              <Button Id="Ribbon.Calendar.Calendar.TagsAndNotes.TagsAndNotesPage"
+                      Sequence="10"
+                      Alt="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Text"
+                      Command="TagsAndNotesPage"
+                      Image16by16="/_layouts/15/images/SocialTagsAndNotes_16.png?rev=23"
+                      Image32by32="/_layouts/15/images/SocialTagsAndNotes_32.png?rev=23"
+                      LabelText="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Text"
+                      ToolTipTitle="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Text;"
+                      ToolTipDescription="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Tooltip_Text;"
+                      TemplateAlias="o1"/>
+            </Controls>
+          </Group>
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction Id="Ribbon.Calendar.Calendar.Scaling.TagsAndNotes.MaxSize"
+                Location="CommandUI.Ribbon"
+                Sequence="10">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.Calendar.Calendar.Scaling._children">
+          <MaxSize Id="Ribbon.Calendar.Calendar.Scaling.TagsAndNotes.MaxSize" Sequence="10" GroupId="Ribbon.Calendar.Calendar.TagsAndNotes" Size="LargeMedium" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction Id="Ribbon.Calendar.Events.AppendSocialRibbonControl"
+                Location="CommandUI.Ribbon"
+                Title="$Resources:spscore,SocialRibbonControl_SocialRibbonControlAction_Text"
+                Sequence="10">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.Calendar.Events.Groups._children">
+          <Group Id="Ribbon.Calendar.Events.TagsAndNotes"
+                 Sequence="80"
+                 Command="TagsAndNotesGroup"
+                 Description=""
+                 Title="$Resources:spscore,SocialRibbonControl_SocialRibbonControlAction_Text"
+                 Template="Ribbon.Templates.Flexible2">
+            <Controls Id="Ribbon.Calendar.Events.TagsAndNotes.Controls">
+              <Button Id="Ribbon.Calendar.Events.TagsAndNotes.TagsAndNotes"
+                      Sequence="10"
+                      Alt="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Text"
+                      Command="TagsAndNotes"
+                      Image16by16="/_layouts/15/images/SocialTagsAndNotes_16.png?rev=23"
+                      Image32by32="/_layouts/15/images/SocialTagsAndNotes_32.png?rev=23"
+                      LabelText="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Text"
+                      ToolTipTitle="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Text;"
+                      ToolTipDescription="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Tooltip_Text;"
+                      TemplateAlias="o1"/>
+            </Controls>
+          </Group>
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction
+  Id="Ribbon.Calendar.Events.Scaling.TagsAndNotes.MaxSize"
+  Location="CommandUI.Ribbon"
+  Sequence="10">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.Calendar.Events.Scaling._children">
+          <MaxSize Id="Ribbon.Calendar.Events.Scaling.TagsAndNotes.MaxSize" Sequence="10" GroupId="Ribbon.Calendar.Events.TagsAndNotes" Size="LargeMedium" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction
+    Id="Ribbon.ListItem.AppendSocialRibbonControl"
+    Location="CommandUI.Ribbon"
+    Title="$Resources:spscore,SocialRibbonControl_SocialRibbonControlAction_Text"
+    Sequence="10">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.ListItem.Groups._children">
+          <Group Id="Ribbon.ListItem.TagsAndNotes"
+                 Sequence="60"
+                 Command="TagsAndNotesGroup"
+                 Description=""
+                 Title="$Resources:spscore,SocialRibbonControl_SocialRibbonControlAction_Text"
+                 Template="Ribbon.Templates.Flexible2">
+            <Controls Id="Ribbon.ListItem.TagsAndNotes.Controls">
+              <Button Id="Ribbon.ListItem.TagsAndNotes.TagsAndNotes"
+                      Sequence="10"
+                      Alt="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Text"
+                      Command="TagsAndNotes"
+                      Image16by16="/_layouts/15/images/SocialTagsAndNotes_16.png?rev=23"
+                      Image32by32="/_layouts/15/images/SocialTagsAndNotes_32.png?rev=23"
+                      LabelText="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Text"
+                      ToolTipTitle="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Text;"
+                      ToolTipDescription="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Tooltip_Text;"
+                      TemplateAlias="o1"/>
+            </Controls>
+          </Group>
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction Id="Ribbon.ListItem.Scaling.TagsAndNotes.MaxSize"
+                Location="CommandUI.Ribbon"
+                Sequence="10">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.ListItem.Scaling._children">
+          <MaxSize Id="Ribbon.ListItem.Scaling.TagsAndNotes.MaxSize" Sequence="10" GroupId="Ribbon.ListItem.TagsAndNotes" Size="LargeMedium" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction Id="Ribbon.List.AppendSocialRibbonControl"
+                Location="CommandUI.Ribbon"
+                Title="$Resources:spscore,SocialRibbonControl_SocialRibbonControlAction_Text"
+                Sequence="10">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.List.Groups._children">
+          <Group Id="Ribbon.List.TagsAndNotes"
+                 Sequence="50"
+                 Command="TagsAndNotesGroup"
+                 Description=""
+                 Title="$Resources:spscore,SocialRibbonControl_SocialRibbonControlAction_Text"
+                 Template="Ribbon.Templates.Flexible2">
+            <Controls Id="Ribbon.List.TagsAndNotes.Controls">
+              <Button Id="Ribbon.List.TagsAndNotes.TagsAndNotesPage"
+                      Sequence="10"
+                      Alt="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Text"
+                      Command="TagsAndNotesPage"
+                      Image16by16="/_layouts/15/images/SocialTagsAndNotes_16.png?rev=23"
+                      Image32by32="/_layouts/15/images/SocialTagsAndNotes_32.png?rev=23"
+                      LabelText="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Text"
+                      ToolTipTitle="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Text;"
+                      ToolTipDescription="$Resources:spscore,SocialRibbonControl_SocialRibbonControlGroup_TagsAndNotes_Tooltip_Text;"
+                      TemplateAlias="o1"/>
+            </Controls>
+          </Group>
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction Id="Ribbon.List.Scaling.TagsAndNotes.MaxSize"
+                Location="CommandUI.Ribbon"
+                Sequence="10">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.List.Scaling._children">
+          <MaxSize Id="Ribbon.List.Scaling.TagsAndNotes.MaxSize" Sequence="10" GroupId="Ribbon.List.TagsAndNotes" Size="LargeMedium" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+    </CommandUIExtension>
+  </CustomAction>
+</Elements>

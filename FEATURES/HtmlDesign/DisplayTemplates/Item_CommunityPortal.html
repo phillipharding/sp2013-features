@@ -1,0 +1,151 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_CommunityPortal</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">1</mso:TemplateHidden>
+<mso:ManagedPropertyMapping msdt:dt="string">'SiteLogo','Path','Title','Description','CommunityMembersCount','CommunityTopicsCount','CommunityRepliesCount','Created','SecondaryFileExtension','ContentTypeId'</mso:ManagedPropertyMapping>
+<mso:MasterPageDescription msdt:dt="string">$Resources:Microsoft.Office.Server.Search,DisplayTemplateDescription_Item_CommunityPortal</mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+
+    <script>
+        $includeLanguageScript(this.url, "~sitecollection/_catalogs/masterpage/Display Templates/Language Files/{Locale}/CustomStrings.js");
+    </script>
+
+    <div id="Item_CommunityPortal">
+
+<!--#_
+var unencodedId = ctx.ClientControl.get_nextUniqueId() + "_communityPortal_";
+var encodedId = $htmlEncode(unencodedId);
+var itemId = encodedId + Srch.U.Ids.item;
+var unencodedHoverId = unencodedId + Srch.U.Ids.hover;
+var hoverUrl = "~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_Community_HoverPanel.js";
+var showHoverPanelCallback = Srch.U.getShowHoverPanelCallbackWide(itemId, unencodedHoverId, hoverUrl);
+var ellipsisURL = SP.Utilities.VersionUtility.getImageUrl("ellipsis.16x16x32.png");
+
+$setResultItem(itemId, ctx.CurrentItem);
+
+var line1 = $getItemValue(ctx, "Title");
+var line2 = $getItemValue(ctx, "Description");
+var createdDate = $getItemValue(ctx, "Created");
+var linkURL = $getItemValue(ctx, "Path");
+linkURL.overrideValueRenderer($urlHtmlEncode);
+
+var membersCount = $getItemValue(ctx, "CommunityMembersCount");
+membersCount.value = !$isNull(membersCount.value) ? membersCount.value : 0;
+var topicsCount = $getItemValue(ctx, "CommunityTopicsCount");
+topicsCount.value = !$isNull(topicsCount.value) ? topicsCount.value : 0;
+var repliesCount = $getItemValue(ctx, "CommunityRepliesCount");
+repliesCount.value = !$isNull(repliesCount.value) ? repliesCount.value : 0;
+
+var pictureURL = $getItemValue(ctx, "SiteLogo");
+if(pictureURL.isEmpty)
+{
+    pictureURL = $urlHtmlEncode(SP.Utilities.VersionUtility.getImageUrl("siteicon.png"));
+}
+
+var pictureLinkId = encodedId + "pictureLink";
+var pictureContainerId = encodedId + "pictureContainer";
+var dataContainerId = encodedId + "dataContainer";
+var line1LinkId = encodedId + "line1Link";
+var line1Id = encodedId + "line1";
+var line2Id = encodedId + "line2";
+var line3Id = encodedId + "line3";
+var line4Id = encodedId + "line4";
+
+var dataDisplayTemplateTitle = "ItemCommunityPortal";
+
+AddPostRenderCallback(ctx, function() {
+    EnsureScriptFunc("strings.js", "Strings", function() { EnsureScriptFunc("sp.datetimeutil.js", "GetLocalizedCountValue", function() {
+        var detailsElement = document.getElementById(line3Id);
+
+        var membersString = GetLocalizedCountValue($resource("item_CommunityPortal_DetailsMembers"), $resource("item_CommunityPortal_DetailsIntervals"), membersCount.value);
+        var topicsString = GetLocalizedCountValue($resource("item_CommunityPortal_DetailsDiscussions"), $resource("item_CommunityPortal_DetailsIntervals"), topicsCount.value);
+        var repliesString = GetLocalizedCountValue($resource("item_CommunityPortal_DetailsReplies"), $resource("item_CommunityPortal_DetailsIntervals"), repliesCount.value);
+        var membersHTML = String.format($htmlencode(membersString), "<span class='ms-communityPortalEmphasisText'>" + $htmlEncode(membersCount.value) + "</span>");
+        var topicsHTML = String.format($htmlencode(topicsString), "<span class='ms-communityPortalEmphasisText'>" + $htmlEncode(topicsCount.value) + "</span>");
+        var repliesHTML = String.format($htmlencode(repliesString), "<span class='ms-communityPortalEmphasisText'>" + $htmlEncode(repliesCount.value) + "</span>");
+        var line3HTML = membersHTML + "<span class='ms-communityPortalDetailsTopics'>" + topicsHTML + "</span>" + repliesHTML;
+        var line3Title = 
+            String.format(membersString, membersCount.value) + "  " + 
+            String.format(topicsString, topicsCount.value) + "  " + 
+            String.format(repliesString, repliesCount.value);
+
+        detailsElement.innerHTML = line3HTML;
+        detailsElement.title = line3Title;
+
+        if(!$isNull(createdDate))
+        {
+            var createDateElement = document.getElementById(line4Id);
+            var now = new Date();
+            var dateString = SP.DateTimeUtil.SPRelativeDateTime.getRelativeDateTimeString(createdDate.value, false, SP.DateTimeUtil.SPCalendarType.none, true);
+            var createdDateString = String.format($resource("item_CommunityPortal_Date"), dateString);
+            createDateElement.innerHTML = $htmlEncode(createdDateString);
+            createDateElement.title = createdDateString;
+        }
+    });});
+});
+
+ _#-->
+        <div class="ms-displayInlineBlock ms-communityPortalContainer ms-communityPortalSizing" id="_#= itemId =#_" data-displaytemplate="_#= $htmlEncode(dataDisplayTemplateTitle) =#_">
+            <div class="ms-communityPortalImageContainer" id="_#= pictureContainerId =#_">
+<!--#_
+if(!linkURL.isEmpty)
+{
+_#-->
+
+                <a class="cbs-pictureImgLink" tabIndex=-1 href="_#= linkURL =#_" title="_#= line1 =#_" id="_#= pictureLinkId =#_">
+<!--#_
+}
+_#-->
+<img class="ms-communityPortalImage" alt="_#= line1 =#_" src=" _#= pictureURL =#_"/>
+<!--#_
+if(!linkURL.isEmpty)
+{
+_#-->
+                </a>
+<!--#_
+}
+_#-->
+            </div>
+            <div class="ms-communityPortalTextContainer" id="_#= dataContainerId =#_">
+
+                <a href="_#= linkURL =#_" title="_#= line1 =#_" id="_#= line1LinkId =#_">
+                    <h2 class="ms-textXLarge ms-noWrap ms-communityPortalTextSpacing" id="_#= line1Id =#_"> _#= line1 =#_</h2>
+                </a>
+                <span class="ms-communityPortalCalloutIcon"><img src="_#= $urlHtmlEncode(ellipsisURL) =#_" onclick="_#= showHoverPanelCallback =#_" /></span>
+<!--#_
+if(!line2.isEmpty)
+{
+_#-->
+                <div class="ms-noWrap ms-communityPortalTextSpacing ms-communityPortalTextBeforeCallout" title="_#= line2 =#_" id="_#= line2Id =#_" > _#= line2 =#_</div>
+                <div class="ms-metadata ms-noWrap ms-communityPortalTextSpacing" id="_#= line3Id =#_"></div>
+                <div class="ms-metadata ms-noWrap ms-communityPortalLine4Spacing" id="_#= line4Id =#_"></div>
+<!--#_
+}
+else
+{
+_#-->
+                <div class="ms-metadata ms-noWrap ms-communityPortalTextSpacing ms-communityPortalTextBeforeCallout" id="_#= line3Id =#_"></div>
+                <div class="ms-metadata ms-noWrap ms-communityPortalLine4Spacing" id="_#= line4Id =#_"></div>
+                <div class="ms-noWrap ms-communityPortalTextSpacing">&nbsp;</div>
+<!--#_
+}
+_#-->
+            </div>
+            <div class="ms-communityPortalSizing">
+              <hr class="ms-communityPortalSizing" />
+            </div>
+        </div>
+        <div id="_#= $htmlEncode(unencodedHoverId) =#_" class="ms-srch-hover-outerContainer"></div>
+    </div>
+</body>
+</html>

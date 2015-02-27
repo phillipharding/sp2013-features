@@ -1,0 +1,13 @@
+<Feature Id="3992D4AB-FA9E-4791-9158-5EE32178E88A" 
+         Title="$Resources:ppsma,BICenterSampleData_Title"
+         Description="$Resources:ppsma,BICenterSampleData_Description" 
+         Version="15.0.0.0"
+         Scope="Web" 
+         SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+         Hidden="TRUE" 
+         DefaultResourceFile="core" 
+         xmlns="http://schemas.microsoft.com/sharepoint/"
+         ReceiverAssembly="Microsoft.PerformancePoint.Scorecards.BIMonitoringService, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+         ReceiverClass="Microsoft.PerformancePoint.Scorecards.BICenterSampleDataFeatureReceiver">
+  <ElementManifests/>
+</Feature>

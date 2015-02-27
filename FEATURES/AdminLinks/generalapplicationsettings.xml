@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomActionGroup
+        Id="ExternalServiceConnections"
+        Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"
+        Title="$Resources:externalserviceconnections_title;"
+        Sequence="10"
+	ImageUrl="/_layouts/15/images/CentralAdmin_GeneralApplicationSettings_ExternalServiceConnections_32x32.png?rev=23" />
+    <CustomAction
+        Id="ESC_MRC"
+        GroupId="ExternalServiceConnections"
+        Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"
+        Sequence="10"
+        Title="$Resources:managerecordscenter_title;"
+        Description="$Resources:managerecordscenter_description;">
+        <UrlAction
+            Url="/_admin/OfficialFileAdmin.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="ESC_CDC"
+        GroupId="ExternalServiceConnections"
+        Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"
+        Sequence="20"
+        Title="$Resources:configuredocumentconversions_title;"
+        Description="$Resources:configuredocumentconversions_description;">
+        <UrlAction
+            Url="/_admin/DocTransAdmin.aspx" />
+    </CustomAction>
+    <CustomActionGroup
+        Id="SPD"
+        Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"
+        Title="$Resources:sharepointdesigner_title"
+        Sequence="40"
+        ImageUrl="/_layouts/15/images/sharepointdesigner32.png?rev=23" />
+    <CustomAction
+        Id="SPD_CSPD"
+        GroupId="SPD"
+        Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"
+        Sequence="40"
+        Title="$Resources:configuresharepointdesigner_title;"
+        Description="$Resources:configuresharepointdesigner_description;">
+        <UrlAction
+            Url="/_admin/SharePointDesignerAdmin.aspx" />
+	</CustomAction>
+</Elements>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="calltrack"
+        Type="404"
+        BaseType="0"
+        Category="Communications"
+        OnQuickLaunch="FALSE"
+        FolderCreation="FALSE"
+        Unique="TRUE"
+        SecurityBits="11"
+        DisplayName="$Resources:core,GbwListTemplateCallTrackingDisplay;"
+        Description="$Resources:core,GbwListTemplateCallTrackingDescription;"
+        Image="/_layouts/15/images/itgbcall.gif?rev=23"/>
+    <CustomAction
+      Id="Ribbon.ListItem.Manage.Resolve"
+      RegistrationType="List"
+      RegistrationId="404"
+      Location="CommandUI.Ribbon.ListView"
+      Sequence="5"
+      UIVersion="4"
+      Title="$Resources:core,cui_CallTrackCustomActionTitle;">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.ListItem.Manage.Controls._children">
+        <SplitButton
+          Id="Ribbon.Items.Manage.Resolve"
+          Sequence="5"
+          Command="CallTrackResolve"
+          CommandMenuOpen="CallTrackMenuOpen"
+          Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-1" Image16by16Left="-267"
+          Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-69" Image32by32Left="-273"
+          LabelText="$Resources:core,cui_CallTrackResolve;"
+          TemplateAlias="o1"
+          ToolTipTitle="$Resources:core,cui_stt_CallTrackResolve;"
+          ToolTipDescription="$Resources:core,cui_stt_CallTrackResolveDesc;">                    
+          <Menu Id="Ribbon.Items.Manage.Resolve.Menu">
+            <MenuSection Id="Ribbon.Items.Manage.Resolve.Menu.Actions" DisplayMode="Menu16">
+              <Controls Id="Ribbon.Items.Manage.Resolve.Menu.Actions.Controls">
+                <Button
+                  Id="Ribbon.Items.Manage.Resolve"
+                  Sequence="5"
+                  Alt="$Resources:core,cui_CallTrackResolveAlt;"
+                  Command="CallTrackResolve"
+                  LabelText="$Resources:core,cui_CallTrackResolve;"
+                  Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-1" Image16by16Left="-267"
+                  Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-69" Image32by32Left="-273"
+                  TemplateAlias="o1"
+                  ToolTipTitle="$Resources:core,cui_stt_CallTrackResolve;"
+                  ToolTipDescription="$Resources:core,cui_stt_CallTrackResolveDesc;"
+                />
+                <Button
+                  Id="Ribbon.Items.Manage.Unresolve"
+                  Sequence="6"
+                  Alt="$Resources:core,cui_CallTrackUnresolveAlt;"
+                  Command="CallTrackUnresolve"
+                  LabelText="$Resources:core,cui_CallTrackUnresolve;"
+                  Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-253" Image16by16Left="-235"
+                  Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-103" Image32by32Left="-273"
+                  TemplateAlias="o1"
+                  ToolTipTitle="$Resources:core,cui_stt_CallTrackUnresolve;"
+                  ToolTipDescription="$Resources:core,cui_stt_CallTrackUnresolveDesc;"
+                />
+              </Controls>
+            </MenuSection>
+          </Menu>
+        </SplitButton>
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+   </CustomAction>
+   <CustomAction
+      Id="Ribbon.ListForm.Display.Manage.Resolve"
+      RegistrationType="List"
+      RegistrationId="404"
+      Location="CommandUI.Ribbon.DisplayForm"
+      Sequence="5"
+      UIVersion="4"
+      Title="$Resources:core,cui_CallTrackCustomActionTitle;">
+    <CommandUIExtension>
+     <CommandUIDefinitions>
+      <CommandUIDefinition Location="Ribbon.ListForm.Display.Manage.Controls._children">
+        <Button
+          Id="Ribbon.ListForm.Display.Manage.Resolve"
+          Sequence="5"
+          Alt="$Resources:core,cui_CallTrackResolveAlt;"
+          Command="CallTrackResolve"
+          LabelText="$Resources:core,cui_CallTrackResolve;"
+          Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-1" Image16by16Left="-267"
+          Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-69" Image32by32Left="-273"
+          TemplateAlias="o1"
+        />
+      </CommandUIDefinition>
+      <CommandUIDefinition Location="Ribbon.ListForm.Display.Manage.Controls._children">
+        <Button
+          Id="Ribbon.ListForm.Display.Manage.Unresolve"
+          Sequence="6"
+          Alt="$Resources:core,cui_CallTrackUnresolveAlt;"
+          Command="CallTrackUnresolve"
+          LabelText="$Resources:core,cui_CallTrackUnresolve;"
+          Image16by16="/_layouts/15/$Resources:core,Language;/images/formatmap16x16.png?rev=23" Image16by16Top="-253" Image16by16Left="-235"
+          Image32by32="/_layouts/15/$Resources:core,Language;/images/formatmap32x32.png?rev=23" Image32by32Top="-103" Image32by32Left="-273"
+          TemplateAlias="o1"
+        />
+      </CommandUIDefinition>
+     </CommandUIDefinitions>
+    </CommandUIExtension>
+   </CustomAction>
+</Elements>

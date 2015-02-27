@@ -1,0 +1,20 @@
+<Feature Id="F979E4DC-1852-4F26-AB92-D1B2A190AFC9" 
+    Title="$Resources:ppsma,BIDashboards_ContentLib_Title"
+    Description="$Resources:ppsma,BIDashboards_ContentLib_Description"
+    Version="15.0.1.0"
+    Scope="Web"
+    SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+    Hidden="TRUE"
+    DefaultResourceFile="core"    
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\BIDashboardsLib.xml" />
+    </ElementManifests>
+  <UpgradeActions
+      ReceiverAssembly="Microsoft.PerformancePoint.Scorecards.BIMonitoringService, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+      ReceiverClass="Microsoft.PerformancePoint.Scorecards.DashboardLibFeatureReceiver">
+    <VersionRange EndVersion="15.0.1.0">
+      <CustomUpgradeAction Name="UpgradeDashboardMasterPage" />
+    </VersionRange>
+  </UpgradeActions>
+</Feature>

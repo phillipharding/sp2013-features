@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomActionGroup
+        Id="CA_Applications"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Title="$Resources:applications_pagetitle;"
+        Sequence="10"
+        RequiredAdmin="Delegated"
+        Description="$Resources:applications_description;"
+        ImageUrl="/_layouts/15/images/CentralAdmin_ApplicationManagement_48x48.png?rev=23">
+        <UrlAction
+            Url="/applications.aspx" />
+    </CustomActionGroup> 
+    <CustomAction
+        Id="CA_Applications_MWA"
+        GroupId="CA_Applications"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Sequence="10"
+        Title="$Resources:managewebapplications_title;"
+        Description="$Resources:managewebapplications_description;">
+        <UrlAction
+            Url="/_admin/WebApplicationList.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="CA_Applications_CSC"
+        GroupId="CA_Applications"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Sequence="20"
+        Title="$Resources:createsitecollection_title;"
+        Description="$Resources:createsitecollection_description;">
+        <UrlAction
+            Url="/_admin/createsite.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="CA_Applications_MSA"
+        GroupId="CA_Applications"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Sequence="30"
+        RequiredAdmin="Delegated"
+        Title="$Resources:ApplicationManagement_ManageServiceApplications_Title;"
+        Description="$Resources:ApplicationManagement_ManageServiceApplications_Description;">
+        <UrlAction
+            Url="/_admin/ServiceApplications.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="CA_Applications_MCD"
+        GroupId="CA_Applications"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Sequence="40"
+        Title="$Resources:managecontentdatabases_title;"
+        Description="$Resources:managecontentdatabases_description;">
+        <UrlAction
+            Url="/_admin/CNTDBADM.aspx" />
+    </CustomAction>
+    <CustomActionGroup
+        Id="CA_Monitoring"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Title="$Resources:monitoring_pagetitle;"
+        Sequence="30"
+        Description="$Resources:monitoring_description;"
+        ImageUrl="/_layouts/15/images/CentralAdmin_Monitoring_48x48.png?rev=23">
+        <UrlAction
+            Url="/monitoring.aspx" />
+    </CustomActionGroup>
+    <CustomAction
+        Id="CA_Monitoring_HS"
+        GroupId="CA_Monitoring"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Sequence="10"
+        Title="$Resources:HealthReports_NavLink;"
+        Description="$Resources:HealthReports_NavLink_description;">
+        <UrlAction
+            Url="/$Resources:core,lists_Folder;/$Resources:core,HealthReports_Folder;" />
+    </CustomAction>
+    <CustomAction
+        Id="CA_Monitoring_TJ"
+        GroupId="CA_Monitoring"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Sequence="20"
+        Title="$Resources:checkjobstatus_title;"
+        Description="$Resources:checkjobstatus_description;">
+        <UrlAction
+            Url="/_admin/Timer.aspx" />
+    </CustomAction>
+    <CustomActionGroup
+        Id="CA_SystemSettings"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Title="$Resources:systemsettings_pagetitle;"
+        Sequence="20"
+        Description="$Resources:systemsettings_description;"
+        ImageUrl="/_layouts/15/images/CentralAdmin_SystemSettings_48x48.png?rev=23">
+        <UrlAction
+            Url="/systemsettings.aspx" />
+    </CustomActionGroup>
+    <CustomAction
+        Id="CA_SystemSettings_MSITF"
+        GroupId="CA_SystemSettings"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Sequence="10"
+        Title="$Resources:manageserversinthisfarm_title"
+        Description="$Resources:manageserversinthisfarm_description;">
+        <UrlAction
+            Url="/_admin/FarmServers.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="CA_SystemSettings_MSOS"
+        GroupId="CA_SystemSettings"
+        Location="Microsoft.SharePoint.Administration.Default"
+        RequiredAdmin="Machine"
+        Sequence="20"
+        Title="$Resources:manageservicesonserver_title"
+        Description="$Resources:manageservicesonserver_description;">
+        <UrlAction
+            Url="/_admin/Server.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="CA_SystemSettings_ManageFarmFeatures"
+        GroupId="CA_SystemSettings"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Sequence="30"
+        Title="$Resources:managefarmfeatures_title"
+        Description="$Resources:managefarmfeatures_description;">
+        <UrlAction
+            Url="/_admin/ManageFarmFeatures.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="CA_SystemSettings_SetupAlternateAccessMappings"
+        GroupId="CA_SystemSettings"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Sequence="40"
+        Title="$Resources:configurealternateaccessmappings_title"
+        Description="$Resources:configurealternateaccessmappings_description">
+        <UrlAction
+            Url="/_admin/AlternateUrlCollections.aspx" />
+    </CustomAction>
+    <CustomActionGroup
+        Id="CA_Backups"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Title="$Resources:backups_pagetitle;"
+        Sequence="40"
+        Description="$Resources:backups_description;"
+        ImageUrl="/_layouts/15/images/CentralAdmin_BackupAndRestore_48x48.png?rev=23">
+        <UrlAction
+            Url="/backups.aspx" />
+    </CustomActionGroup>
+    <CustomAction
+        Id="CA_Backups_PAB"
+        GroupId="CA_Backups"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Sequence="10"
+        RequiredAdmin="Machine"
+        Title="$Resources:performabackup_title;"
+        Description="$Resources:performabackup_description;">
+        <UrlAction
+            Url="/_admin/Backup.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="CA_Backups_RFAB"
+        GroupId="CA_Backups"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Sequence="20"
+        RequiredAdmin="Machine"
+        Title="$Resources:restorefromabackup_title;"
+        Description="$Resources:restorefromabackup_description;">
+        <UrlAction
+            Url="/_admin/BackupHistory.aspx?restore=1&amp;filter=1" />
+    </CustomAction>
+    <CustomAction
+        Id="CA_Backups_SCE"
+        GroupId="CA_Backups"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Sequence="30"
+        Title="$Resources:ApplicationManagement_BackupSiteCollection_Title;"
+        Description="$Resources:ApplicationManagement_BackupSiteCollection_Description;">
+        <UrlAction
+            Url="/_admin/SiteCollectionBackup.aspx" />
+    </CustomAction>
+    <CustomActionGroup
+        Id="CA_Security"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Title="$Resources:security_pagetitle;"
+        Sequence="50"
+        Description="$Resources:security_description;"
+        ImageUrl="/_layouts/15/images/CentralAdmin_Security_48x48.png?rev=23">
+        <UrlAction
+            Url="/security.aspx" />
+    </CustomActionGroup>
+    <CustomAction
+        Id="CA_Security_MTFGA"
+        GroupId="CA_Security"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Sequence="10"
+        Title="$Resources:managethefarmadministratorsgroup_title;"
+        Description="$Resources:managethefarmadministratorsgroup_description;">
+        <UrlAction
+            Url="/_layouts/15/people.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="CA_Security_CSA"
+        GroupId="CA_Security"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Sequence="20"
+        Title="$Resources:configureserviceaccounts_title;"
+        Description="$Resources:configureserviceaccounts_description;">
+        <UrlAction
+            Url="/_admin/FarmCredentialManagement.aspx" />
+    </CustomAction>
+    <CustomActionGroup
+        Id="CA_UpgradeAndMigration"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Title="$Resources:upgradeandmigration_pagetitle;"
+        Sequence="60"
+        Description="$Resources:upgradeandmigration_description;"
+        ImageUrl="/_layouts/15/images/CentralAdmin_UpgradeAndMigration_48x48.png?rev=23">
+        <UrlAction
+            Url="/upgradeandmigration.aspx" />
+    </CustomActionGroup>
+    <CustomAction
+        Id="PatchStatus"
+        GroupId="CA_UpgradeAndMigration"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Sequence="10"
+        Title="$Resources:Operations_PatchStatus_Title;"
+        Description="$Resources:Operations_PatchStatus_Description;">
+        <UrlAction
+            Url="/_admin/PatchStatus.aspx" />
+    </CustomAction>    
+    <CustomAction
+        Id="UpgradeStatus"
+        GroupId="CA_UpgradeAndMigration"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Sequence="30"
+        Title="$Resources:Operations_UpgradeStatus_Title;"
+        Description="$Resources:Operations_UpgradeStatus_Description;">
+        <UrlAction
+            Url="/_admin/UpgradeStatus.aspx" />
+    </CustomAction>
+    <CustomActionGroup
+        Id="CA_GeneralApplicationSettings"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Title="$Resources:generalapplicationsettings_pagetitle;"
+        Sequence="70"
+        Description="$Resources:generalapplicationsettings_description;"
+        ImageUrl="/_layouts/15/images/CentralAdmin_GeneralApplicationSettings_48x48.png?rev=23">
+        <UrlAction
+            Url="/generalapplicationsettings.aspx" />
+    </CustomActionGroup>
+    <CustomAction
+        Id="CA_GeneralApplicationSettings_MRC"
+        GroupId="CA_GeneralApplicationSettings"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Sequence="10"
+        Title="$Resources:managerecordscenter_title;">
+        <UrlAction
+            Url="/_admin/OfficialFileAdmin.aspx" />
+    </CustomAction>
+    <CustomActionGroup
+        Id="CA_Apps"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Title="$Resources:apps_pagetitle;"
+        Sequence="80"
+        Description="$Resources:apps_description;"
+        ImageUrl="/_layouts/15/images/CentralAdmin_Apps.48x48x32.png?rev=23">
+        <UrlAction
+            Url="/apps.aspx" />
+    </CustomActionGroup>
+    <CustomAction
+        Id="CA_Apps_CorporateCatalog"
+        GroupId="CA_Apps"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Sequence="10"
+        Title="$Resources:marketplace_corporatecatalog_title;"
+        Description="$Resources:marketplace_corporatecatalog_description;">
+        <UrlAction
+            Url="/_admin/ManageCorporateCatalog.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="CA_Apps_AppLicenses"
+        GroupId="CA_Apps"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Sequence="20"
+        Title="$Resources:AppLicenses_Title;"
+        Description="$Resources:AppLicenses_Title;">
+        <UrlAction
+            Url="/_admin/CA_allapplicensesmanagement.aspx" />
+    </CustomAction>
+    <CustomActionGroup
+        Id="CA_ConfigurationWizards"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Title="$Resources:configurationwizards_pagetitle;"
+        Sequence="200"
+        Description="$Resources:configurationwizards_description;"
+        ImageUrl="/_layouts/15/images/CentralAdmin_ConfigurationWizards_48x48.png?rev=23">
+        <UrlAction
+            Url="/configurationwizards.aspx" />
+    </CustomActionGroup>
+    <CustomActionGroup
+        Id="CA_SPO"
+        Location="Microsoft.SharePoint.Administration.Default"
+        Title="$Resources:SPO_configuration_title;"
+        Sequence="90"
+        Description="$Resources:SPO_configuration_description;"
+        ImageUrl="/_layouts/15/images/centraladmin_office365.48x48x24.png?rev=23">
+        <UrlAction
+            Url="/office365configuration.aspx" />
+    </CustomActionGroup>
+</Elements>

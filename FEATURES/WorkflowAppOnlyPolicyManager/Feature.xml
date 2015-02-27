@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="{EC918931-C874-4033-BD09-4F36B2E31FEF}" 
+	Title="$Resources:Feature_Title;"
+	Description="$Resources:Feature_Description;"
+	Hidden="FALSE" 
+	Version="15.0.0.0"
+	Scope="Web" 
+    	ReceiverAssembly="Microsoft.SharePoint.WorkflowServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+	ReceiverClass="Microsoft.SharePoint.WorkflowServices.SPAppOnlyPolicyManagerFeatureReceiver" 
+	xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

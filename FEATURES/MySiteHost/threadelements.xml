@@ -1,0 +1,21 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="THREADASPX" Url="" Path="" SetupPath="SiteTemplates\SPSMSITEHOST" RootWebOnly="TRUE">
+        <File Url="threadview.aspx" Type="Ghostable">
+            <AllUsersWebPart WebPartZoneID="TopZone" WebPartOrder="1">
+                <![CDATA[
+                <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                    <Assembly>Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                    <TypeName>Microsoft.SharePoint.Portal.WebControls.PublishedFeedWebPart</TypeName>
+                    <Title>$Resources:spscore,PublishedFeed_WebPart_Title</Title>
+                    <Description>$Resources:spscore,PublishedFeed_WebPart_Description</Description>
+                    <PartOrder>1</PartOrder>
+                    <FrameType>None</FrameType>
+                    <AllowMinimize>true</AllowMinimize>
+                    <AllowRemove>false</AllowRemove>
+                    <IsVisible>true</IsVisible>
+                </WebPart>
+                ]]>                        
+            </AllUsersWebPart>                                                            
+        </File>
+    </Module>
+</Elements>

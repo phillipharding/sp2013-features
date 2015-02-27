@@ -1,0 +1,13 @@
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Id="TenantAdmin_Sites_TaxonomyManager"
+        GroupId="TenantAdmin_Settings"
+        Location="Microsoft.SharePoint.TenantAdministration"
+        Sequence="50"
+        Title="$Resources:osrvcore,TaxonomyManagerEntryPoint;"
+        Description="$Resources:osrvcore,TaxonomyManagerEntryPointTooltip;">
+        <UrlAction
+            Url="_Layouts/termstoremanager.aspx" />
+    </CustomAction>
+</Elements>

@@ -1,0 +1,3 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ContentTypeBinding ContentTypeId="0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF3900FD0E870BA06948879DBD5F9813CD8799" ListUrl="$Resources:osrvcore,List_Pages_UrlName;"/>
+</Elements>

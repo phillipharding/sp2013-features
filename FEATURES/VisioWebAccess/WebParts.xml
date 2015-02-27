@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Module Name="WebPartPopulation" List="113" Url="_catalogs/wp" RootWebOnly="TRUE">
+		<File Url="VisioWebAccess.dwp" Type="GhostableInLibrary">
+			<Property Name="Group" Value="$Resources:vsrv,BusinessDataWebPartGroup;" />
+			<Property Name="QuickAddGroups" Value=";#Dashboard;#" />
+		</File>
+	</Module>
+</Elements>

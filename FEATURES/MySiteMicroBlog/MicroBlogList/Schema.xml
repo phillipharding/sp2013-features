@@ -1,0 +1,436 @@
+<List xmlns:ows="Microsoft SharePoint"
+      Title="$Resources:spscore,MicroFeed_ListTitle;" 
+      Description="$Resources:spscore,MicroFeed_ListDescription;"
+      EnableContentTypes="TRUE" 
+      FolderCreation="FALSE"
+      Direction="$Resources:Direction;"
+      Url="Lists/PublishedFeed" 
+      BaseType="0" 
+      Type="544"
+      xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <!-- Begin Content Type Definitions -->
+    <ContentTypes>
+	  <!-- Base ContentType -->
+      <ContentType ID="0x01FD"
+                   Name="Base"
+                   Group="$Resources:spscore,MicroFeed_CT_GROUP;"
+                   Description="$Resources:spscore,InternalUseOnly;">
+        <FieldRefs>
+			<FieldRef ID="{35329af5-04eb-44ee-89ae-9b5e4b5ecd9d}" Name="MicroBlogType" />
+			<FieldRef ID="{6E4C2103-DEA2-4B81-BC0A-410A7A812A05}" Name="PostAuthor" />
+			<FieldRef ID="{DE90C424-0414-4D3C-A6D0-A8090FC2F731}" Name="DefinitionId" />
+			<FieldRef ID="{9ce2079a-cf0d-479f-ae35-48229641a003}" Name="RootPostID" />
+			<FieldRef ID="{8D68C714-9453-45D4-857E-C134308F1047}" Name="RootPostUniqueID" />
+			<FieldRef ID="{5611398e-c664-46c8-8d34-427ae046cc31}" Name="Attributes" />
+			<FieldRef ID="{37c1e42e-8f43-4767-b51b-901fa7c19f00}" Name="Content" />
+			<FieldRef ID="{EC8E7D18-467B-4F6E-9607-E4F015DC63D9}" Name="ContentData" />
+			<FieldRef ID="{FA2E7421-B52A-4FB7-AFC2-C348144B4850}" Name="SearchContent" />
+			<FieldRef ID="{E24E486F-3717-433C-91FC-EDD848C2C483}" Name="PostSource" />
+			<FieldRef ID="{A1728D72-F862-40D5-B3A8-4E394FABA47A}" Name="PeopleCount" />
+			<FieldRef ID="{D20E68A2-693A-470A-8349-A972AB3A7F0D}" Name="PeopleList" />
+			<FieldRef ID="{9C2E087C-0AAE-49e0-A354-6853F4066ACB}" Name="PostSourceUri" />
+			<FieldRef ID="{2de40ff2-1313-4ae9-a927-f460493ae86f}" Name="MediaLinkType" />
+			<FieldRef ID="{4c074db2-ce03-406e-a23a-36153af6da2d}" Name="MediaLinkDescription" />
+			<FieldRef ID="{d69707f1-8cb7-4318-8deb-fea7ed53df41}" Name="MediaLinkURI" />
+			<FieldRef ID="{e1d22b08-cc0c-45d2-88f6-eb53529065e3}" Name="MediaLinkUISnippet" />
+			<FieldRef ID="{6E4D832B-F610-41a8-B3E0-239608EFDA41}" Name="LikesCount"/>
+			<FieldRef ID="{2CDCD5EB-846D-4f4d-9AAF-73E8E73C7312}" Name="LikedBy"/>				
+			<FieldRef ID="{35479E24-035C-4FA0-9605-DA97647AA69E}" Name="MediaLinkContentURI" />
+			<FieldRef ID="{39C851AC-BC40-4481-ADEB-945F56AC2E1D}" Name="MediaLength" />
+			<FieldRef ID="{234C9611-D3E4-413B-A5B6-CF0FA773CA24}" Name="MediaWidth" />
+			<FieldRef ID="{41680D11-1CB0-4C7B-BC3E-85477635F116}" Name="MediaHeight" />
+			<FieldRef ID="{84A29BC8-2234-42AF-9961-E3CF1D3E11B4}" Name="MediaActionClickUrl" />
+			<FieldRef ID="{53ABF914-9726-4DA7-B43F-7E8FB3568071}" Name="MediaActionClickKind" />
+        </FieldRefs>
+      </ContentType>
+	  <!-- Post ContentType -->
+      <ContentType ID="0x01FD4FB0210AB50249908EAA47E6BD3CFE8B"
+                   Name="Post"
+                   Group="$Resources:spscore,MicroFeed_CT_GROUP;"
+                   Description="$Resources:spscore,InternalUseOnly;"
+                   Hidden="FALSE"
+				   Inherits="TRUE">
+        <FieldRefs>
+			<FieldRef ID="{5f460546-df7d-489d-99fd-677d26f68e30}" Name="ReplyCount" />
+			<FieldRef ID="{4709C48F-0BBE-47E6-9B19-DEB852CB3EA4}" Name="RefRoot" />
+			<FieldRef ID="{FA830350-BC6C-4931-BA2F-B3078FEF4554}" Name="RefReply" />
+			<FieldRef ID="{8DC7F8E0-41AC-4C89-A6F5-D33FFA058EF5}" Name="eMailSubscribers" />
+			<FieldRef ID="{0A27B050-40CF-4DC4-8EAB-7E85936CFED4}" Name="eMailUnsubscribed" />
+        </FieldRefs>
+      </ContentType>
+	  <!-- Reply ContentType -->
+      <ContentType ID="0x01FD59A0DF25F1E14AB882D2C87D4874CF84"
+                   Name="Reply"
+                   Group="$Resources:spscore,MicroFeed_CT_GROUP;"
+                   Description="$Resources:spscore,InternalUseOnly;"
+                   Hidden="FALSE"
+				   Inherits="TRUE">
+        <FieldRefs>
+        </FieldRefs>
+      </ContentType>
+	  <!-- Ref ContentType -->
+      <ContentType ID="0x01FDEEA0DA0A1DAF47EBBBB48143A3893553"
+                   Name="Ref"
+                   Group="$Resources:spscore,MicroFeed_CT_GROUP;"
+                   Description="$Resources:spscore,InternalUseOnly;"
+                   Hidden="TRUE"
+				   Inherits="TRUE">
+        <FieldRefs>
+			<FieldRef ID="{D573C999-F181-4015-88FD-72D7C135E1D6}" Name="RootPostOwnerID" />	
+			<FieldRef ID="{5d8af039-7778-4004-b934-c9c348059309}" Name="ReferenceID" />
+            <FieldRef ID="{51083506-6BFB-4A54-BE38-55816210C7AA}" Name="RemoteLocation" />
+        </FieldRefs>
+      </ContentType>
+      <!-- Folder Reference -->
+      <ContentTypeRef ID="0x0120" />
+    </ContentTypes>
+    <!-- End Content Type Definitions -->
+    <Fields>
+        <Field Type="Integer"
+            Name="MicroBlogType"
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            Indexed="TRUE"
+            DisplayName="MicroBlogType"
+            StaticName="MicroBlogType"
+            ID="{35329af5-04eb-44ee-89ae-9b5e4b5ecd9d}" />
+        <Field Type="Text"
+            Name="PostAuthor"
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            Indexed="FALSE"
+            DisplayName="PostAuthor"
+            StaticName="PostAuthor"
+            ID="{6E4C2103-DEA2-4B81-BC0A-410A7A812A05}" />
+        <Field Type="Integer"
+            Name="DefinitionId"
+			Indexed="TRUE"
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="DefinitionId"
+            StaticName="DefinitionId"
+            ID="{DE90C424-0414-4D3C-A6D0-A8090FC2F731}" />
+        <Field Type="Integer"
+            Name="RootPostID"
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            Indexed="TRUE"
+            DisplayName="RootPostID"
+            StaticName="RootPostID"
+            ID="{9ce2079a-cf0d-479f-ae35-48229641a003}" />
+        <Field Type="Text"
+            Name="RootPostOwnerID"
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="RootPostOwnerID"
+            StaticName="RootPostOwnerID"
+            ID="{D573C999-F181-4015-88FD-72D7C135E1D6}" />				
+        <Field Type="Text"
+            Name="RootPostUniqueID"
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="RootPostUniqueID"
+            StaticName="RootPostUniqueID"
+            ID="{8D68C714-9453-45D4-857E-C134308F1047}" />				
+        <Field Type="Integer"
+            Name="ReplyCount" 
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="ReplyCount"
+            StaticName="ReplyCount"
+            ID="{5f460546-df7d-489d-99fd-677d26f68e30}" />
+        <Field Type="Text"
+            Name="ReferenceID" 
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="ReferenceID"
+            StaticName="ReferenceID"
+            ID="{5d8af039-7778-4004-b934-c9c348059309}" />
+        <Field Type="Integer"
+            Name="Attributes" 
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="Attributes"
+            StaticName="Attributes"
+            ID="{5611398e-c664-46c8-8d34-427ae046cc31}" />
+        <Field Type="Note"
+            Name="Content" 
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="Content"
+            StaticName="Content"
+            ID="{37c1e42e-8f43-4767-b51b-901fa7c19f00}" />
+        <Field Type="Note"
+            Name="ContentData" 
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="ContentData"
+            StaticName="ContentData"
+            ID="{EC8E7D18-467B-4F6E-9607-E4F015DC63D9}" />
+        <Field Type="Note"
+            Name="SearchContent" 
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="SearchContent"
+            StaticName="SearchContent"
+            ID="{FA2E7421-B52A-4FB7-AFC2-C348144B4850}" />
+        <Field Type="Note"
+            Name="RefRoot" 
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="RefRoot"
+            StaticName="RefRoot"
+            ID="{4709C48F-0BBE-47E6-9B19-DEB852CB3EA4}" />
+        <Field Type="Note"
+            Name="RefReply" 
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="RefReply"
+            StaticName="RefReply"
+            ID="{FA830350-BC6C-4931-BA2F-B3078FEF4554}" />
+        <Field Type="Text"
+            Name="PostSource" 
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="PostSource"
+            StaticName="PostSource"
+            ID="{E24E486F-3717-433C-91FC-EDD848C2C483}" />
+        <Field Type="Integer"
+            Name="PeopleCount" 
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="PeopleCount"
+            StaticName="PeopleCount"
+            ID="{A1728D72-F862-40D5-B3A8-4E394FABA47A}" />
+        <Field Type="Note"
+            Name="PeopleList" 
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="PeopleList"
+            StaticName="PeopleList"
+            ID="{D20E68A2-693A-470A-8349-A972AB3A7F0D}" />
+        <Field Type="Integer"
+            Name="MediaLinkType" 
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="MediaLinkType"
+            StaticName="MediaLinkType"
+            ID="{2de40ff2-1313-4ae9-a927-f460493ae86f}" />
+        <Field Type="Text"
+            Name="MediaLinkDescription" 
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="MediaLinkDescription"
+            StaticName="MediaLinkDescription"
+            ID="{4c074db2-ce03-406e-a23a-36153af6da2d}" /> 
+        <Field Type="Note"
+            Name="PostSourceUri" 
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="PostSourceUri"
+            StaticName="PostSourceUri"
+            ID="{9C2E087C-0AAE-49e0-A354-6853F4066ACB}" />			
+        <Field Type="URL"
+            Name="MediaLinkURI" 
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="MediaLinkURI"
+            StaticName="MediaLinkURI"
+            ID="{d69707f1-8cb7-4318-8deb-fea7ed53df41}" />
+        <Field Type="URL"
+            Name="MediaLinkUISnippet" 
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="MediaLinkUISnippet"
+            StaticName="MediaLinkUISnippet"
+            ID="{e1d22b08-cc0c-45d2-88f6-eb53529065e3}" />
+        <Field Type="URL"
+            Name="MediaLinkContentURI" 
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="MediaLinkContentURI"
+            StaticName="MediaLinkContentURI"
+            ID="{35479E24-035C-4FA0-9605-DA97647AA69E}" />
+        <Field Type="Integer"
+            Name="MediaLength" 
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="MediaLength"
+            StaticName="MediaLength"
+            ID="{39C851AC-BC40-4481-ADEB-945F56AC2E1D}" />
+        <Field Type="Integer"
+            Name="MediaWidth" 
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="MediaWidth"
+            StaticName="MediaWidth"
+            ID="{234C9611-D3E4-413B-A5B6-CF0FA773CA24}" />
+        <Field Type="Integer"
+            Name="MediaHeight" 
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="MediaHeight"
+            StaticName="MediaHeight"
+            ID="{41680D11-1CB0-4C7B-BC3E-85477635F116}" />
+        <Field Type="URL"
+            Name="MediaActionClickUrl" 
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="MediaActionClickUrl"
+            StaticName="MediaActionClickUrl"
+            ID="{84A29BC8-2234-42AF-9961-E3CF1D3E11B4}" />
+        <Field Type="Integer"
+            Name="MediaActionClickKind" 
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            DisplayName="MediaActionClickKind"
+            StaticName="MediaActionClickKind"
+            ID="{53ABF914-9726-4DA7-B43F-7E8FB3568071}" />
+        <Field Type="Note"
+            Name="eMailSubscribers"		
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            StaticName="eMailSubscribers"
+            DisplayName="eMailSubscribers"
+            ID="{8DC7F8E0-41AC-4C89-A6F5-D33FFA058EF5}"/>
+        <Field Type="Note"
+            Name="eMailUnsubscribed"
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            StaticName="eMailUnsubscribed"
+            DisplayName="eMailUnsubscribed"
+            ID="{0A27B050-40CF-4DC4-8EAB-7E85936CFED4}"/>
+        <Field Type="Note"
+            Name="RemoteLocation"
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            StaticName="RemoteLocation"
+            DisplayName="RemoteLocation"
+            ID="{51083506-6BFB-4A54-BE38-55816210C7AA}"/>
+        <Field Name="LikesCount"
+            ID="{6E4D832B-F610-41a8-B3E0-239608EFDA41}" 
+            Name="LikesCount"
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            StaticName="LikesCount" 
+            DisplayName="$Resources:spscore,ContentReputation_LikesCountFieldName;" 
+            Group="_Hidden" 
+            Type="Likes" 
+            ReadOnly="TRUE"
+            Hidden="FALSE"
+            CanToggleHidden="TRUE"
+            SourceID="http://schemas.microsoft.com/sharepoint/v3">
+        </Field> 
+        <Field ID="{2CDCD5EB-846D-4f4d-9AAF-73E8E73C7312}"
+            Name="LikedBy"
+            ShowInDisplayForm="TRUE" 
+            ShowInNewForm="FALSE"  
+            ShowInEditForm="FALSE"
+            NoCrawl="True"
+            StaticName="LikedBy"
+            DisplayName="$Resources:spscore,ContentReputation_LikedByFieldName;"
+            Group="_Hidden"
+            Type="UserMulti"
+            List="UserInfo"
+            Mult="TRUE"
+            Hidden="TRUE"
+            SourceID="http://schemas.microsoft.com/sharepoint/v3">
+        </Field>
+   </Fields>
+    <Views>
+     <View DisplayName="All Items" DefaultView="TRUE" BaseViewID="1" Type="HTML" MobileView="TRUE"
+           MobileDefaultView="TRUE" ImageUrl="/_layouts/images/generic.png" WebPartZoneID="Main"
+            WebPartOrder="1" Url="AllItems.aspx" SetupPath="pages\viewpage.aspx">
+        <XslLink>main.xsl</XslLink>
+
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Created_x0020_Date"></FieldRef>
+          </OrderBy>
+        </Query>
+
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu" ></FieldRef>
+          <FieldRef Name="MicroBlogType"></FieldRef>
+          <FieldRef Name="PostAuthor"></FieldRef>
+          <FieldRef Name="DefinitionId"></FieldRef>
+          <FieldRef Name="RootPostID"></FieldRef>
+          <FieldRef Name="RootPostUniqueID"></FieldRef>
+          <FieldRef Name="RootPostOwnerID"></FieldRef>          
+          <FieldRef Name="UniqueId"></FieldRef>
+          <FieldRef Name="ReplyCount"></FieldRef>
+          <FieldRef Name="Created"></FieldRef>
+          <FieldRef Name="Modified"></FieldRef>
+          <FieldRef Name="Author"></FieldRef>
+          <FieldRef Name="Editor"></FieldRef>
+          <FieldRef Name="ID"></FieldRef>
+          <FieldRef Name="ReferenceID"></FieldRef>
+          <FieldRef Name="Attributes"></FieldRef>
+          <FieldRef Name="Content"></FieldRef>
+          <FieldRef Name="ContentData"></FieldRef>
+          <FieldRef Name="SearchContent"></FieldRef>
+          <FieldRef Name="RefRoot"></FieldRef>
+          <FieldRef Name="RefReply"></FieldRef>
+          <FieldRef Name="PostSource"></FieldRef>
+          <FieldRef Name="PeopleCount"></FieldRef>
+          <FieldRef Name="PeopleList"></FieldRef>
+          <FieldRef Name="MediaLinkType"></FieldRef>
+          <FieldRef Name="MediaLinkDescription"></FieldRef>
+          <FieldRef Name="MediaLinkURI"></FieldRef>
+          <FieldRef Name="MediaLinkUISnippet"></FieldRef>
+          <FieldRef Name="MediaLinkContentURI"></FieldRef>
+          <FieldRef Name="MediaLength"></FieldRef>
+          <FieldRef Name="MediaWidth"></FieldRef>
+          <FieldRef Name="MediaHeight"></FieldRef>
+          <FieldRef Name="MediaActionClickUrl"></FieldRef>
+          <FieldRef Name="MediaActionClickKind"></FieldRef>
+          <FieldRef Name="eMailSubscribers"></FieldRef>
+          <FieldRef Name="eMailUnsubscribed"></FieldRef>
+          <FieldRef Name="LikesCount"></FieldRef>
+          <FieldRef Name="LikedBy"></FieldRef>          
+        </ViewFields>
+        <RowLimit Paged="TRUE">100</RowLimit>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+    <DefaultDescription></DefaultDescription>
+  </MetaData>
+</List>
+

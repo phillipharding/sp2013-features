@@ -1,0 +1,25 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Field ID="{FD7EF3C2-486E-40cd-B651-6BE6D1ABBE25}"
+        Name="VideoRenditionLabel"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        StaticName="VideoRenditionLabel"
+        Group="_Hidden"
+        Type="Text"
+        DisplayName="$Resources:cmscore,column_videorenditionlabel_displayname;"
+        Description="$Resources:cmscore,column_videorenditionlabel_description;"
+        ShowInNewForm="TRUE"
+        ShowInEditForm="TRUE">
+    </Field>
+    <Field ID="{CF42542F-DF94-4136-A0AC-29326FCCD565}"
+        Name="VideoRenditionBitRate"
+        SourceID="http://schemas.microsoft.com/sharepoint/v3"
+        StaticName="VideoRenditionBitRate"
+        Group="_Hidden"
+        Type="Integer"
+        DisplayName="$Resources:cmscore,column_videorenditionbitrate_displayname;"
+        ShowInNewForm="TRUE"
+        ShowInEditForm="TRUE">
+    </Field>
+</Elements>

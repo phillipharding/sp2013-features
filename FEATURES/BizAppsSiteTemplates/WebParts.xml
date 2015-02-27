@@ -1,0 +1,76 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="BizAppsWebParts" Url="_catalogs/wp" Path="dwp">
+        <File Type="GhostableInLibrary" Url="FilterActions.dwp">
+            <Property Name="Group" Value="$Resources:spscore,FiltersWebPartGroup;" />
+            <Property Name="QuickAddGroups" Value=";#Dashboard;#My Site: Middle Right;#My Site: Middle Left;#My Site: Bottom;#" />
+        </File>
+        <File Type="GhostableInLibrary" Url="AuthoredListFilter.webpart">
+            <Property Name="Group" Value="$Resources:spscore,FiltersWebPartGroup;" />
+            <Property Name="QuickAddGroups" Value=";#Filters;#My Site: Middle Right;#My Site: Middle Left;#My Site: Bottom;#" />
+        </File>
+        <File Type="GhostableInLibrary" Url="BusinessDataActionsWebPart.dwp">
+            <Property Name="Group" Value="$Resources:spscore,BusinessDataWebPartGroup;" />
+            <Property Name="QuickAddGroups" Value=";#My Site: Middle Right;#My Site: Middle Left;#My Site: Bottom;#" />
+        </File>
+        <File Type="GhostableInLibrary" Url="BusinessDataAssociationWebPart.webpart">
+            <Property Name="Group" Value="$Resources:spscore,BusinessDataWebPartGroup;" />
+            <Property Name="QuickAddGroups" Value=";#My Site: Middle Right;#My Site: Middle Left;#My Site: Bottom;#" />
+        </File>
+        <File Type="GhostableInLibrary" Url="BusinessDataDetailsWebPart.webpart">
+            <Property Name="Group" Value="$Resources:spscore,BusinessDataWebPartGroup;" />
+            <Property Name="QuickAddGroups" Value=";#My Site: Middle Right;#My Site: Middle Left;#My Site: Bottom;#" />
+        </File>
+        <File Type="GhostableInLibrary" Url="BusinessDataFilter.dwp">
+            <Property Name="Group" Value="$Resources:spscore,BusinessDataWebPartGroup;" />
+            <Property Name="QuickAddGroups" Value=";#Filters;#My Site: Middle Right;#My Site: Middle Left;#My Site: Bottom;#" />
+        </File>
+        <File Type="GhostableInLibrary" Url="BusinessDataItemBuilder.dwp">
+            <Property Name="Group" Value="$Resources:spscore,BusinessDataWebPartGroup;" />
+            <Property Name="QuickAddGroups" Value=";#My Site: Middle Right;#My Site: Middle Left;#My Site: Bottom;#" />
+        </File>
+        <File Type="GhostableInLibrary" Url="BusinessDataListWebPart.webpart">
+            <Property Name="Group" Value="$Resources:spscore,BusinessDataWebPartGroup;" />
+            <Property Name="QuickAddGroups" Value=";#Dashboard;#My Site: Middle Right;#My Site: Middle Left;#My Site: Bottom;#" />
+        </File>
+        <File Type="GhostableInLibrary" Url="DateFilter.dwp">
+            <Property Name="Group" Value="$Resources:spscore,FiltersWebPartGroup;" />
+            <Property Name="QuickAddGroups" Value=";#Filters;#My Site: Middle Right;#My Site: Middle Left;#My Site: Bottom;#" />
+        </File>
+        <File Type="GhostableInLibrary" Url="IndicatorWebPart.dwp">
+            <Property Name="Group" Value="$Resources:spscore,BusinessDataWebPartGroup;" />
+            <Property Name="QuickAddGroups" Value=";#Dashboard;#My Site: Middle Right;#My Site: Middle Left;#My Site: Bottom;#" />
+        </File>
+        <File Type="GhostableInLibrary" Url="KpiListWebPart.dwp">
+            <Property Name="Group" Value="$Resources:spscore,BusinessDataWebPartGroup;" />
+            <Property Name="QuickAddGroups" Value=";#Dashboard;#My Site: Middle Right;#My Site: Middle Left;#My Site: Bottom;#" />
+        </File>
+        <File Type="GhostableInLibrary" Url="OlapFilter.dwp">
+            <Property Name="Group" Value="$Resources:spscore,FiltersWebPartGroup;" />
+            <Property Name="QuickAddGroups" Value=";#Filters;#My Site: Middle Right;#My Site: Middle Left;#My Site: Bottom;#" />
+        </File>
+        <File Type="GhostableInLibrary" Url="PageContextFilter.webpart">
+            <Property Name="Group" Value="$Resources:spscore,FiltersWebPartGroup;" />
+            <Property Name="QuickAddGroups" Value=";#Filters;#My Site: Middle Right;#My Site: Middle Left;#My Site: Bottom;#" />
+        </File>
+        <File Type="GhostableInLibrary" Url="QueryStringFilter.webpart">
+            <Property Name="Group" Value="$Resources:spscore,FiltersWebPartGroup;" />
+            <Property Name="QuickAddGroups" Value=";#Filters;#My Site: Middle Right;#My Site: Middle Left;#My Site: Bottom;#" />
+        </File>
+        <File Type="GhostableInLibrary" Url="SpListFilter.dwp">
+            <Property Name="Group" Value="$Resources:spscore,FiltersWebPartGroup;" />
+            <Property Name="QuickAddGroups" Value=";#Filters;#My Site: Middle Right;#My Site: Middle Left;#My Site: Bottom;#" />
+        </File>
+        <File Type="GhostableInLibrary" Url="TextFilter.dwp">
+            <Property Name="Group" Value="$Resources:spscore,FiltersWebPartGroup;" />
+            <Property Name="QuickAddGroups" Value=";#Filters;#My Site: Middle Right;#My Site: Middle Left;#My Site: Bottom;#" />
+        </File>
+        <File Type="GhostableInLibrary" Url="UserContextFilter.webpart">
+            <Property Name="Group" Value="$Resources:spscore,FiltersWebPartGroup;" />
+            <Property Name="QuickAddGroups" Value=";#Filters;#My Site: Top;#" />
+        </File>
+        <File Type="GhostableInLibrary" Url="WSRPConsumerWebPart.dwp">
+            <Property Name="Group" Value="$Resources:spscore,ContentRollupWebPartGroup;" />
+            <Property Name="QuickAddGroups" Value=";#My Site: Middle Right;#My Site: Middle Left;#My Site: Bottom;#" />
+        </File>
+    </Module>
+</Elements>

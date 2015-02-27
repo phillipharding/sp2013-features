@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Name="AppData" Title="" Url="_catalogs/appdata" BaseType="0">
+  <MetaData>
+    <Fields>
+    </Fields>
+    <Views>
+    </Views>
+    <Forms>
+    </Forms>
+    <DefaultDescription>
+    </DefaultDescription>
+  </MetaData>
+</List>

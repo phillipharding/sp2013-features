@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature  Id="4750C984-7721-4feb-BE61-C660C6190D43"
+          Title="$Resources:EnhancedSearch_Feature_Title;"
+          Description="$Resources:EnhancedSearch_Feature_Description;"
+          DefaultResourceFile="Microsoft.Office.Server.Search"
+          Version="15.0.3.0"
+          Scope="WebApplication"
+          ReceiverAssembly="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.Office.Server.Search.Administration.EnhancedSearchFeatureReceiver"
+         xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <ElementManifests>
+        <ElementManifest Location="searcharea.xml"/>
+        <ElementManifest Location="searchadminlinks.xml"/>
+        <ElementManifest Location="searchadminlinks2.xml"/>
+        <ElementManifest Location="mobilesearch.xml"/>
+        <ElementManifest Location="listsearchbox.xml"/>
+        <ElementManifest Location="searchqueryadmin.xml"/>
+    </ElementManifests>
+
+    <UpgradeActions>
+        <VersionRange EndVersion="14.0.0.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="mobilesearch.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.0.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="listsearchbox.xml" />
+            <ElementManifest Location="searchqueryadmin.xml" />
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.1.0">
+          <CustomUpgradeAction Name="EnsureVideoQueryRuleProvisioner" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.2.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="searchadminlinks.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.3.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="searchadminlinks2.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

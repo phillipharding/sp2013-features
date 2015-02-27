@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+	Id="3CB475E7-4E87-45Eb-A1F3-DB96AD7CF313"
+	Title="$Resources:xlsrv,FeatureSite-title;"
+	Description="$Resources:xlsrv,FeatureSite-description;"
+	SolutionId="A992B0F0-7B6B-4315-B687-649DCAEEF726"
+	Version="14.0.1.0"
+	Hidden="TRUE"
+	ReceiverAssembly="Microsoft.Office.Excel.Server.MossHost, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+	ReceiverClass="Microsoft.Office.Excel.Server.MossHost.ExcelServerFeatureHandler"
+	Scope="Site">
+
+	<ElementManifests>
+		<ElementManifest Location="ViewAsHtml.xml"/>
+	</ElementManifests>
+	<UpgradeActions>
+		<VersionRange EndVersion="14.0.1.0">
+			<MapFile FromPath="Features\ExcelServerSite\Microsoft.Office.Excel.WebUI.dwp" ToPath="Features\ExcelServerWebPart\Microsoft.Office.Excel.WebUI.dwp"/>
+		</VersionRange>
+	</UpgradeActions>
+
+</Feature>

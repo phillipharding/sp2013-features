@@ -1,0 +1,24 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="SearchResultsDisplayTemplates" Url="_catalogs/masterpage/Display Templates/Search" Path="DisplayTemplates" RootWebOnly="TRUE">
+        <File Url="Item_WebPage.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_WebPageItem" />
+            <Property Name="MasterPageDescription" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateDescription_WebPageItem" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="0" />
+            <Property Name="TargetControlType" Value=";#SearchResults;#" />
+            <Property Name="ManagedPropertyMapping" Value="'Title':'Title','Path':'Path','Description':'Description','EditorOWSUSER':'EditorOWSUSER','LastModifiedTime':'LastModifiedTime','CollapsingStatus':'CollapsingStatus','DocId':'DocId','HitHighlightedSummary':'HitHighlightedSummary','HitHighlightedProperties':'HitHighlightedProperties','FileExtension':'FileExtension','ViewsLifeTime':'ViewsLifeTime','ParentLink':'ParentLink','FileType':'FileType','IsContainer':'IsContainer','SecondaryFileExtension':'SecondaryFileExtension','DisplayAuthor':'DisplayAuthor'"/>
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+        <File Url="Item_WebPage_HoverPanel.js" Type="GhostableInLibrary" >
+            <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateTitle_WebPageHoverPanel" />
+            <Property Name="MasterPageDescription" Value="$Resources:Microsoft.Office.Server.Search,DisplayTemplateDescription_WebPageHoverPanel" />
+            <Property Name="ContentType" Value="$Resources:TemplateContentType_Code_Name" />
+            <Property Name="DisplayTemplateLevel" Value="Item" />
+            <Property Name="TemplateHidden" Value="0" />
+            <Property Name="TargetControlType" Value=";#SearchHoverPanel;#" />
+            <Property Name="ManagedPropertyMapping" Value="'Title':'Title','Path':'Path','Description':'Description','EditorOWSUSER':'EditorOWSUSER','LastModifiedTime':'LastModifiedTime','CollapsingStatus':'CollapsingStatus','DocId':'DocId','HitHighlightedSummary':'HitHighlightedSummary','HitHighlightedProperties':'HitHighlightedProperties','FileExtension':'FileExtension','ViewsLifeTime':'ViewsLifeTime','ParentLink':'ParentLink','FileType':'FileType','IsContainer':'IsContainer','SecondaryFileExtension':'SecondaryFileExtension','DisplayAuthor':'DisplayAuthor'"/>
+            <Property Name="HtmlDesignLockedFile" Value="TRUE" />
+        </File>
+    </Module>
+</Elements>

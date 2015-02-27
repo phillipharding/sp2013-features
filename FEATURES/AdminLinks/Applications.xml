@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomActionGroup
+        Id="WebApplications"
+        Location="Microsoft.SharePoint.Administration.Applications"
+        Title="$Resources:webapplications_title"
+        Sequence="10"
+        ImageUrl="/_layouts/15/images/CentralAdmin_ApplicationManagement_WebApplications_32x32.png?rev=23" />
+    <CustomAction
+        Id="WA_MWA"
+        GroupId="WebApplications"
+        Location="Microsoft.SharePoint.Administration.Applications"
+        Sequence="10"
+        Title="$Resources:managewebapplications_title;"
+        Description="$Resources:managewebapplications_description;">
+        <UrlAction
+            Url="/_admin/WebApplicationList.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="WA_CAAM"
+        GroupId="WebApplications"
+        Location="Microsoft.SharePoint.Administration.Applications"
+        Sequence="120"
+        Title="$Resources:configurealternateaccessmappings_title;"
+        Description="$Resources:configurealternateaccessmappings_description;">
+        <UrlAction
+            Url="/_admin/AlternateUrlCollections.aspx" />
+    </CustomAction>
+    <CustomActionGroup
+        Id="SiteCollections"
+        Location="Microsoft.SharePoint.Administration.Applications"
+        Title="$Resources:sitecollections_title"
+        Sequence="20"
+	ImageUrl="/_layouts/15/images/CentralAdmin_ApplicationManagement_SiteCollections_32x32.png?rev=23" />
+    <CustomAction
+        Id="SC_CSC"
+        GroupId="SiteCollections"
+        Location="Microsoft.SharePoint.Administration.Applications"
+        Sequence="10"
+        Title="$Resources:createsitecollection_title;"
+        Description="$Resources:createsitecollection_description;">
+        <UrlAction
+            Url="/_admin/createsite.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="SC_DSC"
+        GroupId="SiteCollections"
+        Location="Microsoft.SharePoint.Administration.Applications"
+        Sequence="20"
+        Title="$Resources:deletesitecollection_title;"
+        Description="$Resources:deletesitecollection_description;">
+        <UrlAction
+            Url="/_admin/delsite.aspx?SiteId=" />
+    </CustomAction>
+    <CustomAction
+        Id="SC_CSUAD"
+        GroupId="SiteCollections"
+        Location="Microsoft.SharePoint.Administration.Applications"
+        Sequence="30"
+        Title="$Resources:confirmsiteuseanddeletion_title;"
+        Description="$Resources:confirmsiteuseanddeletion_description;">
+        <UrlAction
+            Url="/_admin/DeleteSiteConfig.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="SC_SQT"
+        GroupId="SiteCollections"
+        Location="Microsoft.SharePoint.Administration.Applications"
+        Sequence="40"
+        Title="$Resources:specifyquotatemplates_title;"
+        Description="$Resources:specifyquotatemplates_description;">
+        <UrlAction
+            Url="/_admin/ManageQuotaTemplate.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="SC_SCQAL"
+        GroupId="SiteCollections"
+        Location="Microsoft.SharePoint.Administration.Applications"
+        Sequence="50"
+        Title="$Resources:sitecollectionquotasandlocks_title;"
+        Description="$Resources:sitecollectionquotasandlocks_description;">
+        <UrlAction
+            Url="/_admin/sitequota.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="SC_SCA"
+        GroupId="SiteCollections"
+        Location="Microsoft.SharePoint.Administration.Applications"
+        Sequence="60"
+        Title="$Resources:sitecollectionadministrators_title;"
+        Description="$Resources:sitecollectionadministrators_description;">
+        <UrlAction
+            Url="/_admin/owners.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="SC_SCL"
+        GroupId="SiteCollections"
+        Location="Microsoft.SharePoint.Administration.Applications"
+        Sequence="70"
+        Title="$Resources:sitecollectionlist_title;"
+        Description="$Resources:sitecollectionlist_description;">
+        <UrlAction
+            Url="/_admin/SiteCollections.aspx?ReturnSelectionPage=/applications.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="SC_SSSC"
+        GroupId="SiteCollections"
+        Location="Microsoft.SharePoint.Administration.Applications"
+        Sequence="80"
+        Title="$Resources:selfservicesitecreation_title;"
+        Description="$Resources:selfservicesitecreation_description;">
+        <UrlAction
+            Url="/_admin/ConfigSSC.aspx" />
+    </CustomAction>
+    <CustomActionGroup
+        Id="Databases"
+        Location="Microsoft.SharePoint.Administration.Applications"
+        Title="$Resources:databases_title"
+        Sequence="40"
+        ImageUrl="/_layouts/15/images/CentralAdmin_ApplicationManagement_Databases_32x32.png?rev=23" />
+    <CustomAction
+        Id="D_MCD"
+        GroupId="Databases"
+        Location="Microsoft.SharePoint.Administration.Applications"
+        Sequence="10"
+        Title="$Resources:managecontentdatabases_title;"
+        Description="$Resources:managecontentdatabases_description;">
+        <UrlAction
+            Url="/_admin/CNTDBADM.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="D_SDDS"
+        GroupId="Databases"
+        Location="Microsoft.SharePoint.Administration.Applications"
+        Sequence="20"
+        Title="$Resources:specifythedefaultdatabaseserver_title;"
+        Description="$Resources:specifythedefaultdatabaseserver_description;">
+        <UrlAction
+            Url="/_admin/defaultcontentdb.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="D_CTDRS"
+        GroupId="Databases"
+        Location="Microsoft.SharePoint.Administration.Applications"
+        Sequence="30"
+        Title="$Resources:configurethedataretrievalservice_title;"
+        Description="$Resources:configurethedataretrievalservice_description;">
+        <UrlAction
+            Url="/_admin/DspSettings.aspx" />
+    </CustomAction>
+    <CustomActionGroup
+        Id="ServiceApplications"
+        Location="Microsoft.SharePoint.Administration.Applications"
+        Title="$Resources:serviceapplications_title"
+        Sequence="30"
+        RequiredAdmin="Delegated"
+        ImageUrl="/_layouts/15/images/CentralAdmin_ApplicationManagement_ServiceApplications_32x32.png?rev=23" />
+    <CustomAction
+        Id="SA_MSA"
+        GroupId="ServiceApplications"
+        Location="Microsoft.SharePoint.Administration.Applications"
+        Sequence="10"
+        RequiredAdmin="Delegated"
+        Title="$Resources:ApplicationManagement_ManageServiceApplications_Title;"
+        Description="$Resources:ApplicationManagement_ManageServiceApplications_Description;">
+        <UrlAction
+            Url="/_admin/ServiceApplications.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="SA_AASS"
+        GroupId="ServiceApplications"
+        Location="Microsoft.SharePoint.Administration.Applications"
+        Sequence="20"
+        Title="$Resources:ApplicationManagement_ApplicationAssociations_Title;"
+        Description="$Resources:ApplicationManagement_ApplicationAssociations_Description;">
+        <UrlAction
+            Url="/_admin/ApplicationAssociations.aspx" />
+    </CustomAction>
+    <CustomAction
+        Id="SA_MSOS"
+        GroupId="ServiceApplications"
+        Location="Microsoft.SharePoint.Administration.Applications"
+        RequiredAdmin="Machine"
+        Sequence="30"
+        Title="$Resources:manageservicesonserver_title"
+        Description="$Resources:manageservicesonserver_description">
+        <UrlAction
+            Url="/_admin/Server.aspx" />
+    </CustomAction>
+    <!-- Site settings related admin actions -->
+    <HideCustomAction
+        Id="HideDeleteWeb"
+        HideActionId="DeleteWeb"
+        GroupId="SiteTasks"
+        Location="Microsoft.SharePoint.SiteSettings" />
+    <HideCustomAction
+        Id="HideRegionalSettings"
+        HideActionId="RegionalSettings"
+        GroupId="SiteAdministration"
+        Location="Microsoft.SharePoint.SiteSettings" />
+</Elements>

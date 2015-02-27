@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Workflow
+        Name="$Resources:IssueTracking_Title;"
+        Description="$Resources:IssueTracking_Description;"
+        Id="C6964BFF-BF8D-41ac-AD5E-B61EC111731A"
+        CodeBesideClass="Microsoft.SharePoint.Workflow.Application.IssueTracking"
+        CodeBesideAssembly="Microsoft.SharePoint.Workflows, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        AssociationUrl="_layouts/15/ItemRWfAssoc.aspx">
+        <MetaData>
+            <InitiationType>Manual;#OnNewItem</InitiationType>
+        </MetaData>
+     </Workflow>
+</Elements>

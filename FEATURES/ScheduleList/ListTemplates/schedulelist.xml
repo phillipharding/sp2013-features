@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ListTemplate
+        Name="schedule"
+        Type="400"
+        BaseType="0"
+        OnQuickLaunch="TRUE"
+        FolderCreation="FALSE"
+        Unique="TRUE"
+        SecurityBits="11"
+        DisplayName="$Resources:core,GbwListTemplateScheduleDisplay;"
+        Description="$Resources:core,GbwListTemplateScheduleDescription;"        
+        Image="/_layouts/15/images/itgbshcd.gif?rev=23" />
+</Elements>

@@ -1,0 +1,32 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Feature  Id="57CC6207-AEBF-426E-9ECE-45946EA82E4A"
+          Title="$Resources:cmscore,PublishingMobile_Feature_Title;"
+          Description="$Resources:cmscore,PublishingMobile_Feature_Description;"
+          Version="15.0.4.0"
+          Scope="Site"
+          Hidden="TRUE"
+          DefaultResourceFile="core"
+          ReceiverAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Publishing.Mobile.FeatureHandler"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="Elements.xml"/>
+        <ElementManifest Location="ProvisionedUI.xml"/>
+        <ElementManifest Location="SiteSettings.xml"/>
+    </ElementManifests>
+    <UpgradeActions>
+        <VersionRange BeginVersion="15.0.0.0" EndVersion="15.0.2.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="Elements2.xml"/>
+          </ApplyElementManifests>
+          <AddContentTypeField ContentTypeId="0x01009AF87C5C1DF34CA38277FEABCB5018F6" FieldId="{B5A4E101-ED09-42BB-B6AD-F1AC2D31A8B8}" PushDown="TRUE" />
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.0.0" EndVersion="15.0.3.0">
+          <CustomUpgradeAction Name="ReplaceChannelNameFieldWithTitleField" />
+        </VersionRange>
+        <VersionRange BeginVersion="15.0.0.0" EndVersion="15.0.4.0">
+          <CustomUpgradeAction Name="ReRegisterEventHandlers" />
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

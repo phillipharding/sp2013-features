@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<ListInstance 
+		Description="$Resources:ipfscore,SupportFeatureFormTemplateListDescription" 
+		FeatureId="00BFEA71-E717-4E80-AA17-D0C71B360101"
+		Id="FormTemplatesList"
+		OnQuickLaunch ="FALSE"
+		TemplateType="101"
+		Title="$Resources:ipfscore,SupportFeatureFormTemplateListTitle;"
+		Url="FormServerTemplates">
+	</ListInstance>
+
+	<ListInstance 
+		Description ="$Resources:ipfscore,SupportFeatureConvertedListDescription;"
+		FeatureId="A0E5A010-1329-49d4-9E09-F280CDBED37D"
+		Id="IWConvertedForms"
+		OnQuickLaunch ="FALSE"
+		TemplateType="10102"
+		Title="$Resources:ipfscore,SupportFeatureConvertedListTitle;"
+		Url="IWConvertedForms">
+	</ListInstance>
+
+</Elements>

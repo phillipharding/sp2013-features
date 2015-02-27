@@ -1,0 +1,12 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Id="ReportListActionsMenuCustomizer"
+        Location="Microsoft.SharePoint.StandardMenu"
+        GroupId="SiteActions"
+        Title="Report List Site Actions Menu Customization"
+        Rights="AddListItems"
+        ControlAssembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+        ControlClass="Microsoft.SharePoint.Portal.WebControls.ReportLibrarySiteActionsMenuCustomizer">
+    </CustomAction>
+</Elements>
+

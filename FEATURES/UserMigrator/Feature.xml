@@ -1,0 +1,11 @@
+<Feature Id="F0DEABBB-B0F6-46ba-8E16-FF3B44461AEB"
+    Title="$Resources:spscore,PeopleFeatures_UserMigrator_Text;"
+    Description="$Resources:spscore,PeopleFeatures_UserMigrator_Desc;"
+    Version="14.0.0.0"
+    Scope="Farm"
+    Hidden="TRUE"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="PortalUserMigratorFeatureElements.xml"/>
+    </ElementManifests>
+</Feature>

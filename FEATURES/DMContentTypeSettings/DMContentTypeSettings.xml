@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction 
+        Id="ChangeDMSettings"
+        GroupId="General"
+        Location="Microsoft.SharePoint.ContentTypeSettings"
+        Rights="ManageLists,AddAndCustomizePages"
+        Sequence="100" 
+        ShowInLists="FALSE"
+        Title="$Resources:changeDmSettings"
+	RegistrationType="ContentType"
+	RegistrationId="0x0101">
+            <UrlAction Url="_layouts/15/ctdmsettings.aspx" />
+    </CustomAction>
+    <CustomAction 
+        Id="ChangeDMSettings"
+        GroupId="General"
+        Location="Microsoft.SharePoint.ContentTypeTemplateSettings"
+        Rights="ManageLists"
+        Sequence="100" 
+        Title="$Resources:changeDmSettings"
+	RegistrationType="ContentType"
+	RegistrationId="0x0101">
+            <UrlAction Url="_layouts/15/ctdmsettings.aspx" />
+    </CustomAction>
+</Elements>

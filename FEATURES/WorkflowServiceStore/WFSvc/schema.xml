@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <List xmlns:ows="Microsoft SharePoint" Name="wfsvc" Title="wfsvc" Direction="$Resources:Direction;" Url="wfsvc" BaseType="1" Default="UNIQUE" PrivateList="TRUE" Hidden="TRUE" HiddenList="TRUE" VersioningEnabled="TRUE" IsApplicationList="TRUE" >
+        <MetaData>
+            <ContentTypes>
+                <ContentTypeRef ID="0x0101" ></ContentTypeRef>
+                <ContentTypeRef ID="0x01002A2479FF33DD4bc3B1533A012B653717" ></ContentTypeRef>
+                <ContentTypeRef ID="0x0100AA27A923036E459d9EF0D18BBD0B9587" ></ContentTypeRef>
+                <ContentTypeRef ID="0x0120" />
+            </ContentTypes>
+            <Fields>
+                <Field ID="{03e45e84-1992-4d42-9116-26f756012634}" Indexed="TRUE" DisplayName="ContentTypeId" Name="ContentTypeId" Type="ContentTypeId" Sealed="TRUE" HIDDEN="TRUE" ></Field>
+                <Field ID="{6391DC7E-E7F3-4FAF-9890-550FD5D3022F}" Indexed="TRUE" DisplayName="WSGUID" Name="WSGUID" Type="Guid" Sealed="TRUE" HIDDEN="TRUE" ></Field>
+                <Field ID="{40270DA4-0A34-4c14-8C30-59E065A28A4D}" Indexed="TRUE" DisplayName="WSPublishState" Name="WSPublishState" Type="Integer" Sealed="TRUE" HIDDEN="TRUE" ></Field>
+                <Field ID="{321A8C3C-0EC7-473B-BCC6-67F3C2DAE20D}" DisplayName="WSPublishError" Name="WSPublishError" Type="Note" Sealed="TRUE" UnlimitedLengthInDocumentLibrary="TRUE" ></Field>
+                <Field ID="{4CA54AB8-9667-427E-B1EC-B1FB4A9F3E19}" DisplayName="WSEventContextKeys" Name="WSEventContextKeys" Type="Note" Sealed="TRUE" ></Field>
+                <Field ID="{73D6D2B7-4FF3-46b4-95E1-0AB6C9B1EC9C}" Indexed="TRUE" DisplayName="WSEventSourceGUID" Name="WSEventSourceGUID" Type="Guid" Sealed="TRUE" ></Field>
+                <Field ID="{9B590294-0151-44cf-9D56-24D8BB80F802}" DisplayName="WSDisplayName" Name="WSDisplayName" Type="Text" Sealed="TRUE" MaxLength="128" ></Field>
+                <Field ID="{F519008D-1B5B-42a8-8DAB-E1A642FE5787}" DisplayName="WSDescription" Name="WSDescription" Type="Text" Sealed="TRUE" MaxLength="1024" ></Field>
+                <Field ID="{D8225D68-5DDB-4e66-8069-2694E8F628FB}" DisplayName="WSEventSource" Name="WSEventSource" Type="Text" Sealed="TRUE" MaxLength="2048" ></Field>
+                <Field ID="{B4BA57C8-AB73-49fa-B6AF-A4F824D84C14}" DisplayName="WSEventType" Name="WSEventType" Type="Text" Sealed="TRUE" MaxLength="768" ></Field>
+                <Field ID="{A569E161-E19E-4360-9AE1-20DFDA097CB3}" DisplayName="WSEnabled" Name="WSEnabled" Type="Boolean" Sealed="TRUE" ></Field>
+                <Field ID="{78EAE64A-F5F2-49af-B416-3247B76F46A1}" DisplayName="FormData" Name="FormData" Type="Note" Sealed="TRUE" ></Field>
+            </Fields>
+            <Views>
+            </Views>
+            <Forms>
+            </Forms>
+            <DefaultDescription>
+            </DefaultDescription>
+         </MetaData>
+     </List>

@@ -1,0 +1,201 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+<Feature  Id="A4C654E4-A8DA-4db3-897C-A386048F7157"
+          Title="Html Design"
+          Description="Enable Html Design."
+          Version="15.0.30.0"
+          Scope="Site"
+          Hidden="true"
+          DefaultResourceFile="core"
+          ReceiverAssembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+          ReceiverClass="Microsoft.SharePoint.Publishing.Design.FeatureHandler"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="HtmlDesignColumns.xml"/>
+        <ElementManifest Location="HtmlDesignColumns2.xml"/>
+        <ElementManifest Location="HtmlDesignColumns3.xml"/>
+        <ElementManifest Location="HtmlDesignContentTypes.xml"/>
+        <ElementManifest Location="HtmlDesignFiles.xml"/>
+        <ElementManifest Location="HtmlDesignFiles2.xml"/>
+        <ElementManifest Location="HtmlDesignProvisionedUI.xml"/>
+        <ElementManifest Location="HtmlDesignRibbon.xml"/>
+        <ElementManifest Location="HtmlDisplayTemplateContentTypes.xml"/>
+        <ElementManifest Location="HtmlDisplayTemplateFiles.xml"/>
+        <ElementManifest Location="SiteSettingsImportLink.xml"/>
+    </ElementManifests>
+    <UpgradeActions>
+        <VersionRange EndVersion="15.0.1.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="HtmlDesignColumns2.xml"/>
+          </ApplyElementManifests>
+          <AddContentTypeField ContentTypeId="0x0101000F1C8B9E0EB4BE489F09807B2C53288F0054AD6EF48B9F7B45A142F8173F171BD10003D357F861E29844953D5CAA1D4D8A3A" FieldId="{8BF5C77A-8A02-47A1-B361-9BF3DA831B56}" PushDown="TRUE" />
+          <AddContentTypeField ContentTypeId="0x01010007FF3E057FA8AB4AA42FCB67B453FFC100E214EEE741181F4E9F7ACC43278EE8110003D357F861E29844953D5CAA1D4D8A3B" FieldId="{8BF5C77A-8A02-47A1-B361-9BF3DA831B56}" PushDown="TRUE" />
+          <CustomUpgradeAction Name="ConfigureMasterPageGalleryViewsAndDefaultContentType" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.2.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="HtmlDesignProvisionedUI.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.3.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="HtmlDisplayTemplateContentTypes.xml"/>
+             <ElementManifest Location="HtmlDisplayTemplateFiles.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.5.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="HtmlDisplayTemplateFiles2.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.6.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="HtmlDisplayTemplateFilesRecs.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.7.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="HtmlDisplayTemplateFiles3.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.8.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="HtmlDisplayTemplateFiles4.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.9.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="HtmlDesignColumns3.xml"/>
+          </ApplyElementManifests>
+          <AddContentTypeField ContentTypeId="0x0101000F1C8B9E0EB4BE489F09807B2C53288F0054AD6EF48B9F7B45A142F8173F171BD10003D357F861E29844953D5CAA1D4D8A3A" FieldId="{B98612E2-3BDA-4485-A510-2CFC4CBB99C8}" PushDown="TRUE" />
+          <AddContentTypeField ContentTypeId="0x01010007FF3E057FA8AB4AA42FCB67B453FFC100E214EEE741181F4E9F7ACC43278EE8110003D357F861E29844953D5CAA1D4D8A3B" FieldId="{B98612E2-3BDA-4485-A510-2CFC4CBB99C8}" PushDown="TRUE" />
+          <AddContentTypeField ContentTypeId="0x0101002039C03B61C64EC4A04F5361F385106601" FieldId="{B98612E2-3BDA-4485-A510-2CFC4CBB99C8}" PushDown="TRUE" />
+          <AddContentTypeField ContentTypeId="0x0101002039C03B61C64EC4A04F5361F385106602" FieldId="{B98612E2-3BDA-4485-A510-2CFC4CBB99C8}" PushDown="TRUE" />
+          <AddContentTypeField ContentTypeId="0x0101002039C03B61C64EC4A04F5361F385106603" FieldId="{B98612E2-3BDA-4485-A510-2CFC4CBB99C8}" PushDown="TRUE" />
+          <AddContentTypeField ContentTypeId="0x0101002039C03B61C64EC4A04F5361F385106604" FieldId="{B98612E2-3BDA-4485-A510-2CFC4CBB99C8}" PushDown="TRUE" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.11.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="HtmlDisplayTemplateFilesOOBCBS.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.12.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="HtmlDisplayTemplateFiles5.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.13.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="HtmlDisplayTemplateFiles6.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.14.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="HtmlDisplayTemplateFiles7.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.15.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="HtmlDisplayTemplateFiles8.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.16.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="HtmlDisplayTemplateFiles9.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.17.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="HtmlDisplayTemplateFiles10.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.18.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="HtmlDisplayTemplateFiles11.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.19.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="HtmlDisplayTemplateFilesQB.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.20.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="HtmlDisplayTemplateFiles12.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.22.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="HtmlDesignFiles2.xml"/>
+          </ApplyElementManifests>
+          <MapFile FromPath="Features\HtmlDesign\$Resources:core,Culture;\v15.master.html" ToPath="Features\HtmlDesign\$Resources:core,Culture;\seattle.html" />
+          <MapFile FromPath="Features\HtmlDesign\$Resources:core,Culture;\belltown.master.html" ToPath="Features\HtmlDesign\$Resources:core,Culture;\oslo.html" />
+          <MapFile FromPath="Features\HtmlDesign\$Resources:core,Culture;\ArticleLeft.aspx.html" ToPath="Features\HtmlDesign\$Resources:core,Culture;\ArticleLeft.html" />
+          <MapFile FromPath="Features\HtmlDesign\$Resources:core,Culture;\ArticleLinks.aspx.html" ToPath="Features\HtmlDesign\$Resources:core,Culture;\ArticleLinks.html" />
+          <MapFile FromPath="Features\HtmlDesign\$Resources:core,Culture;\ArticleRight.aspx.html" ToPath="Features\HtmlDesign\$Resources:core,Culture;\ArticleRight.html" />
+          <MapFile FromPath="Features\HtmlDesign\$Resources:core,Culture;\CatalogArticle.aspx.html" ToPath="Features\HtmlDesign\$Resources:core,Culture;\CatalogArticle.html" />
+          <MapFile FromPath="Features\HtmlDesign\$Resources:core,Culture;\CatalogWelcome.aspx.html" ToPath="Features\HtmlDesign\$Resources:core,Culture;\CatalogWelcome.html" />
+          <MapFile FromPath="Features\HtmlDesign\$Resources:core,Culture;\EnterpriseWiki.aspx.html" ToPath="Features\HtmlDesign\$Resources:core,Culture;\EnterpriseWiki.html" />
+          <MapFile FromPath="Features\HtmlDesign\$Resources:core,Culture;\WelcomeSplash.aspx.html" ToPath="Features\HtmlDesign\$Resources:core,Culture;\WelcomeSplash.html" />
+        </VersionRange>
+        <VersionRange EndVersion="15.0.23.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="HtmlDesignFiles.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.24.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="HtmlDisplayTemplateFiles13.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.25.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="HtmlDisplayTemplateFilesQBRef.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.26.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="HtmlDisplayTemplateFiles14.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.27.0">
+          <CustomUpgradeAction Name="RemoveFiles">
+            <Parameters>
+              <Parameter Name="FileNames">
+                startermaster.html
+              </Parameter>
+            </Parameters>
+          </CustomUpgradeAction>
+          <CustomUpgradeAction Name="BackupDeleteHtmlMasterPages"/>
+          <CustomUpgradeAction Name="RemoveHtmlFilesIfAssociatedFileGhosted">
+            <Parameters>
+              <Parameter Name="FileNames">
+                ArticleLeft.html |
+                ArticleLinks.html |
+                ArticleRight.html |
+                CatalogArticle.html |
+                CatalogWelcome.html |
+                EnterpriseWiki.html |
+                WelcomeSplash.html
+              </Parameter>
+            </Parameters>
+          </CustomUpgradeAction>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.28.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="HtmlDesignFiles3.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.29.0">
+          <ApplyElementManifests>
+            <ElementManifest Location="HtmlDesignFiles.xml"/>
+            <ElementManifest Location="HtmlDesignFiles2.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+        <VersionRange EndVersion="15.0.30.0">
+          <ApplyElementManifests>
+             <ElementManifest Location="HtmlDisplayTemplateFiles15.xml"/>
+          </ApplyElementManifests>
+        </VersionRange>
+    </UpgradeActions>
+</Feature>

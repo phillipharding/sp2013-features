@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+	<webPart xmlns="http://schemas.microsoft.com/WebPart/v3" >
+		<metaData>
+			<type name ="Microsoft.PerformancePoint.Scorecards.WebControls.StackWebPart, Microsoft.PerformancePoint.Scorecards.WebControls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+			<importErrorMessage>$Resources:spscore,WPImportErrorMessage;</importErrorMessage>
+		</metaData>
+		<data>
+			<properties>
+				<property name="Title">$Resources:ppsma,StackWebPart_Title;</property>
+				<property name="Description">$Resources:ppsma,StackWebPart_Description;</property>
+				<property name="AllowClose" type="bool">True</property>
+				<property name="CatalogIconImageUrl" type="string">/_layouts/15/PPSWebParts/PPSWebPartStack.png</property>
+			</properties>
+		</data>
+	</webPart>
+</webParts>

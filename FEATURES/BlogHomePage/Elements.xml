@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+        <Module Name="BasicHome" Url="" Path="">
+            <File Url="default.aspx" IgnoreIfAlreadyExists="TRUE">
+                <View List="$Resources:core,lists_Folder;/$Resources:core,blogpost_Folder;" BaseViewID="0" WebPartZoneID="Left" WebPartOrder="1">
+                    <![CDATA[
+                        <webParts>
+                            <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                                <metaData>
+                                    <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart,Microsoft.SharePoint,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                                    <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                                </metaData>
+                                <data>
+                                    <properties>
+                                        <property name="AllowConnect" type="bool">True</property>
+                                        <property name="ChromeType" type="chrometype">None</property>
+                                        <property name="AllowClose" type="bool">False</property>
+                                    </properties>
+                                </data>
+                            </webPart>
+                        </webParts>
+                    ]]>
+                </View>
+                <View List="$Resources:core,lists_Folder;/$Resources:core,blogcatagories_Folder;" BaseViewID="0" WebPartZoneID="BlogNavigator" WebPartOrder="1">
+                    <![CDATA[
+                        <webParts>
+                            <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                                <metaData>
+                                    <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart,Microsoft.SharePoint,Version=15.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                                    <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                                </metaData>
+                                <data>
+                                    <properties>
+                                        <property name="AllowConnect" type="bool">True</property>
+                                        <property name="ChromeType" type="chrometype">None</property>
+                                    </properties>
+                                </data>
+                            </webPart>
+                        </webParts>
+                    ]]>
+                </View>
+                <AllUsersWebPart WebPartZoneID="BlogNavigator" WebPartOrder="2">
+                   <![CDATA[
+                   <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                      <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                      <TypeName>Microsoft.SharePoint.WebPartPages.BlogMonthQuickLaunch</TypeName>
+                      <Title>$Resources:core,months_schema_blg_title;</Title>
+                      <Description>$Resources:core,blog_month_quick_launch;</Description>
+                      <FrameType>None</FrameType>
+                      <FrameState>Normal</FrameState>
+                      <IsVisible>true</IsVisible>
+                      </WebPart>
+                   ]]>
+                </AllUsersWebPart>
+                <AllUsersWebPart WebPartZoneID="Right" WebPartOrder="1">
+                   <![CDATA[
+                   <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                      <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                      <TypeName>Microsoft.SharePoint.WebPartPages.BlogAdminWebPart</TypeName>
+                      <Title>$Resources:core,adminlinks_schema_blg_title;</Title>
+                      <Description>$Resources:core,blog_admin_links;</Description>
+                      <FrameType>None</FrameType>
+                      <FrameState>Normal</FrameState>
+                      <IsVisible>true</IsVisible>
+                      </WebPart>
+                   ]]>
+                </AllUsersWebPart>
+                <AllUsersWebPart WebPartZoneID="Right" WebPartOrder="2">
+                    <![CDATA[
+                   <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                    <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                    <TypeName>Microsoft.SharePoint.WebPartPages.ContentEditorWebPart</TypeName>
+                    <Title>$Resources:core,aboutblog_title;</Title>
+                    <FrameType>None</FrameType>
+                    <FrameState>Normal</FrameState>
+                    <Description></Description>
+                    <Height />
+                    <Width />
+                    <AllowRemove>true</AllowRemove>
+                    <AllowZoneChange>true</AllowZoneChange>
+                    <AllowMinimize>true</AllowMinimize>
+                    <AllowConnect>true</AllowConnect>
+                    <AllowEdit>true</AllowEdit>
+                    <AllowHide>true</AllowHide>
+                    <IsVisible>true</IsVisible>
+                    <DetailLink />
+                    <HelpLink />
+                    <HelpMode>Modeless</HelpMode>
+                    <Dir>Default</Dir>
+                    <PartImageSmall />
+                    <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+                    <PartImageLarge>/_layouts/15/images/homepage.gif</PartImageLarge>
+                    <IsIncludedFilter />
+                    <ExportControlledProperties>true</ExportControlledProperties>
+                    <ContentLink xmlns="http://schemas.microsoft.com/WebPart/v2/ContentEditor" />
+                    <Content xmlns="http://schemas.microsoft.com/WebPart/v2/ContentEditor">
+                        &lt;table style="width: 100%"&gt;
+                              &lt;tr &gt;
+                                &lt;td &gt;
+                                  &lt;img alt="$Resources:core,aboutblogimage_alt;" src="/_layouts/15/images/blogabout96.png?rev=23" class="ms-blog-aboutImage" /&gt; 
+                                &lt;/td &gt;
+                              &lt;/tr &gt;
+                              &lt;tr &gt;
+                                &lt;td class="ms-textSmall" &gt;$Resources:core,aboutblog_description2;&lt;/td &gt;
+                              &lt;/tr &gt;
+                        &lt;/table &gt;
+                        </Content>
+                    <PartStorage xmlns="http://schemas.microsoft.com/WebPart/v2/ContentEditor" />
+                    </WebPart>        
+                ]]>
+                </AllUsersWebPart>
+                <AllUsersWebPart WebPartZoneID="Right" WebPartOrder="3">
+                   <![CDATA[
+                      <webParts>
+                         <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                            <metaData>
+                               <type name="Microsoft.SharePoint.WebPartPages.BlogLinksWebPart, Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+                            </metaData>
+                            <data>
+                               <properties>
+                                  <property name="Title" type="string">$Resources:core,BlogNotificationsWPTitle;</property>
+                                  <property name="Description" type="string">$Resources:core,BlogNotificationsWPDescription;</property>
+                                  <property name="ChromeType" type="chrometype">None</property>
+                                  <property name="ListUrl" type="string">$Resources:core,lists_Folder;/$Resources:core,blogpost_Folder;</property>
+                               </properties>
+                            </data>
+                         </webPart>
+                      </webParts>
+                   ]]>
+                </AllUsersWebPart>
+                <NavBarPage Name="$Resources:core,nav_Home;" ID="1002" Position="Start"/>
+            </File>
+        </Module>
+</Elements>

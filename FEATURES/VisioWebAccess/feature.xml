@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+	Id="9FEC40EA-A949-407d-BE09-6CBA26470A0C"
+	Title="$Resources:vsrv,Feature_VisioWebAccess_Title;"
+	Description="$Resources:vsrv,Feature_VisioWebAccess_Description;"
+        SolutionId="7ED6CD55-B479-4EB7-A529-E99A24C10BD3"
+	Version="15.0.0.0"
+	Hidden="True"
+	ReceiverAssembly="Microsoft.Office.Visio.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+	ReceiverClass="Microsoft.Office.Visio.Server.VisioWebAccessFeatureHandler"
+	Scope="Site">
+
+	<ElementManifests>
+		<ElementManifest Location="ViewAsWebAccess.xml"/>
+		<ElementManifest Location="WebParts.xml" />
+		<ElementManifest Location="WorkflowStatus.xml" />
+	</ElementManifests>
+
+</Feature>

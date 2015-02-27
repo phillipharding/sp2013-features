@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="$Resources:core,linksList;" Direction="$Resources:core,Direction;" OrderedList="TRUE" Url="$Resources:core,lists_Folder;/$Resources:core,links_Folder;" BaseType="0" DisableAttachments="TRUE">
+  <MetaData>
+    <ContentTypes>
+      <ContentTypeRef ID="0x0105">
+        <Folder TargetName="Link" />
+      </ContentTypeRef>
+      <ContentTypeRef ID="0x0120" />
+    </ContentTypes>
+    <Fields>
+      <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" ReadOnly="TRUE" Required="FALSE" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title">
+      </Field>
+      <Field ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" Name="LinkTitle" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkTitle">
+      </Field>
+      <Field ID="{bc91a437-52e7-49e1-8c4e-4698904b2b6d}" Name="LinkTitleNoMenu" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkTitleNoMenu">
+      </Field>
+      <Field ID="{081c6e4c-5c14-4f20-b23e-1a71ceb6a67c}" Name="DocIcon" DisplaceOnUpgrade="TRUE" DisplayName="$Resources:core,Type;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="DocIcon">
+      </Field>
+      <Field ID="{503f1caa-358e-4918-9094-4a2cdc4bc034}" Name="Edit" DisplayName="$Resources:core,Edit;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Edit">
+      </Field>
+      <Field ID="{c29e077d-f466-4d8e-8bbe-72b66c5f205c}" Type="URL" Name="URL" DisplayName="$Resources:core,URL;" Required="TRUE" FromBaseType="TRUE" ShowInViewForms="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="URL">
+      </Field>
+      <Field ID="{9da97a8a-1da5-4a77-98d3-4bc10456e700}" Type="Note" Name="Comments" DisplayName="$Resources:core,Notes;" Sortable="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Comments">
+      </Field>
+      <Field ID="{2a9ab6d3-268a-4c1c-9897-e5f018f87e64}" ReadOnly="TRUE" Filterable="FALSE" Type="Computed" Name="URLwMenu" DisplayName="$Resources:core,URL;" DisplayNameSrcField="URL" ClassInfo="Menu" AuthoringInfo="$Resources:core,URLwEditMenu;" ListItemMenuAllowed="Required" LinkToItemAllowed="Prohibited" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="URLwMenu">
+        <FieldRefs>
+          <FieldRef Name="URL" />
+          <FieldRef Name="FileLeafRef" />
+          <FieldRef Name="FileRef" />
+          <FieldRef Name="FSObjType" />
+          <FieldRef Name="_EditMenuTableStart2" />
+          <FieldRef Name="_EditMenuTableEnd" />
+        </FieldRefs>
+        <DisplayPattern>
+          <FieldSwitch>
+            <Expr>
+              <GetVar Name="FreeForm" />
+            </Expr>
+            <Case Value="TRUE">
+              <IfEqual>
+                <Expr1>
+                  <LookupColumn Name="FSObjType" />
+                </Expr1>
+                <Expr2>1</Expr2>
+                <Then>
+                  <Field Name="FileLeafRef" />
+                </Then>
+                <Else>
+                  <Field Name="URL" />
+                </Else>
+              </IfEqual>
+            </Case>
+            <Default><HTML><![CDATA[<div class="ms-vb itx" onmouseover="OnItem(this)" CTXName="ctx]]></HTML>
+              <Field Name="_EditMenuTableStart2" /><HTML><![CDATA[">]]></HTML>
+              <IfEqual>
+                <Expr1>
+                  <LookupColumn Name="FSObjType" />
+                </Expr1>
+                <Expr2>1</Expr2>
+                <Then>
+                  <Switch>
+                    <Expr>
+                      <GetVar Name="RecursiveView" />
+                    </Expr>
+                    <Case Value="1">
+                      <LookupColumn Name="FileLeafRef" HTMLEncode="TRUE" />
+                    </Case>
+                    <Default><HTML><![CDATA[<a onfocus="OnLink(this)" href="javascript:SubmitFormPost()" onclick='javascript:ClearSearchTerm("]]></HTML>
+                      <GetVar Name="View" /><HTML><![CDATA[");ClearSearchTerm("");SubmitFormPost("]]></HTML>
+                      <SetVar Name="RootFolder"><HTML>/</HTML>
+                        <LookupColumn Name="FileRef" />
+                      </SetVar>
+                      <ScriptQuote NotAddingQuote="TRUE">
+                        <FilterLink Default="" Paged="FALSE" />
+                      </ScriptQuote><HTML><![CDATA[");javascript:return false;'>]]></HTML>
+                      <LookupColumn Name="FileLeafRef" HTMLEncode="TRUE" /><HTML><![CDATA[</a>]]></HTML>
+                    </Default>
+                  </Switch>
+                </Then>
+                <Else>
+                  <Switch>
+                    <Expr>
+                      <Column Name="URL" />
+                    </Expr>
+                    <Case Value="">
+                      <Column2 Name="URL" HTMLEncode="TRUE" />
+                    </Case>
+                    <Default>
+                      <FieldSwitch>
+                        <Expr>
+                          <FieldProperty Name="URL" Select="Format" />
+                        </Expr>
+                        <Case Value="Image"><HTML><![CDATA[<img onfocus="OnLink(this)" src="]]></HTML>
+                          <Column Name="URL" HTMLEncode="TRUE" /><HTML>" alt="</HTML>
+                          <Column2 Name="URL" HTMLEncode="TRUE" /><HTML><![CDATA[" />]]></HTML>
+                        </Case>
+                        <Default><HTML><![CDATA[<a onfocus="OnLink(this)" href="]]></HTML>
+                          <Column Name="URL" HTMLEncode="TRUE" /><HTML><![CDATA[">]]></HTML>
+                          <Switch>
+                            <Expr>
+                              <Column2 Name="URL" />
+                            </Expr>
+                            <Case Value="">
+                              <Column Name="URL" HTMLEncode="TRUE" />
+                            </Case>
+                            <Default>
+                              <Column2 Name="URL" HTMLEncode="TRUE" />
+                            </Default>
+                          </Switch><HTML><![CDATA[</a>]]></HTML>
+                        </Default>
+                      </FieldSwitch>
+                    </Default>
+                  </Switch>
+                </Else>
+              </IfEqual><HTML><![CDATA[</div>]]></HTML><HTML><![CDATA[<div class="s4-ctx" onmouseover="OnChildItem(this.parentNode); return false;">]]></HTML><HTML><![CDATA[<span>&nbsp;</span>]]></HTML><HTML><![CDATA[<a onfocus="OnChildItem(this.parentNode.parentNode); return false;" onclick="PopMenuFromChevron(event); return false;" href="javascript:;" title="$Resources:core,open_menu;"></a>]]></HTML><HTML><![CDATA[<span>&nbsp;</span>]]></HTML><HTML><![CDATA[</div>]]></HTML>
+            </Default>
+          </FieldSwitch>
+        </DisplayPattern>
+      </Field>
+      <Field ID="{7A7F3660-D408-4734-9AA0-2D86E33D79AB}" ReadOnly="TRUE" Filterable="FALSE" Type="Computed" Name="URLwMenu2" DisplayName="$Resources:core,URL;" DisplayNameSrcField="URL" ClassInfo="Menu" AuthoringInfo="$Resources:core,URLwEditMenu; (old)" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="URLwMenu2">
+        <FieldRefs>
+          <FieldRef Name="URL" />
+          <FieldRef Name="FileLeafRef" />
+          <FieldRef Name="FileRef" />
+          <FieldRef Name="FSObjType" />
+          <FieldRef Name="_EditMenuTableStart" />
+          <FieldRef Name="_EditMenuTableEnd" />
+        </FieldRefs>
+        <DisplayPattern>
+          <FieldSwitch>
+            <Expr>
+              <GetVar Name="FreeForm" />
+            </Expr>
+            <Case Value="TRUE">
+              <IfEqual>
+                <Expr1>
+                  <LookupColumn Name="FSObjType" />
+                </Expr1>
+                <Expr2>1</Expr2>
+                <Then>
+                  <Field Name="FileLeafRef" />
+                </Then>
+                <Else>
+                  <Field Name="URL" />
+                </Else>
+              </IfEqual>
+            </Case>
+            <Default>
+              <Field Name="_EditMenuTableStart" />
+              <IfEqual>
+                <Expr1>
+                  <LookupColumn Name="FSObjType" />
+                </Expr1>
+                <Expr2>1</Expr2>
+                <Then>
+                  <Switch>
+                    <Expr>
+                      <GetVar Name="RecursiveView" />
+                    </Expr>
+                    <Case Value="1">
+                      <LookupColumn Name="FileLeafRef" HTMLEncode="TRUE" />
+                    </Case>
+                    <Default><HTML><![CDATA[<a onfocus="OnLink(this)" href="javascript:SubmitFormPost()" onclick='javascript:ClearSearchTerm("]]></HTML>
+                      <GetVar Name="View" /><HTML><![CDATA[");ClearSearchTerm("");javascript:SubmitFormPost("]]></HTML>
+                      <SetVar Name="RootFolder"><HTML>/</HTML>
+                        <LookupColumn Name="FileRef" />
+                      </SetVar>
+                      <ScriptQuote NotAddingQuote="TRUE">
+                        <FilterLink Default="" Paged="FALSE" />
+                      </ScriptQuote><HTML><![CDATA[");javascript:return false;'>]]></HTML>
+                      <LookupColumn Name="FileLeafRef" HTMLEncode="TRUE" /><HTML><![CDATA[</a>]]></HTML>
+                    </Default>
+                  </Switch>
+                </Then>
+                <Else>
+                  <Switch>
+                    <Expr>
+                      <Column Name="URL" />
+                    </Expr>
+                    <Case Value="">
+                      <Column2 Name="URL" HTMLEncode="TRUE" />
+                    </Case>
+                    <Default>
+                      <FieldSwitch>
+                        <Expr>
+                          <FieldProperty Name="URL" Select="Format" />
+                        </Expr>
+                        <Case Value="Image"><HTML><![CDATA[<img onfocus="OnLink(this)" src="]]></HTML>
+                          <Column Name="URL" HTMLEncode="TRUE" /><HTML>" alt="</HTML>
+                          <Column2 Name="URL" HTMLEncode="TRUE" /><HTML><![CDATA[" />]]></HTML>
+                        </Case>
+                        <Default><HTML><![CDATA[<a onfocus="OnLink(this)" href="]]></HTML>
+                          <Column Name="URL" HTMLEncode="TRUE" /><HTML><![CDATA[">]]></HTML>
+                          <Switch>
+                            <Expr>
+                              <Column2 Name="URL" />
+                            </Expr>
+                            <Case Value="">
+                              <Column Name="URL" HTMLEncode="TRUE" />
+                            </Case>
+                            <Default>
+                              <Column2 Name="URL" HTMLEncode="TRUE" />
+                            </Default>
+                          </Switch><HTML><![CDATA[</a>]]></HTML>
+                        </Default>
+                      </FieldSwitch>
+                    </Default>
+                  </Switch>
+                </Else>
+              </IfEqual>
+              <Field Name="_EditMenuTableEnd" />
+            </Default>
+          </FieldSwitch>
+        </DisplayPattern>
+      </Field>
+      <Field ID="{aeaf07ee-d2fb-448b-a7a3-cf7e062d6c2a}" DisplaceOnUpgrade="TRUE" ReadOnly="TRUE" Filterable="FALSE" Type="Computed" Name="URLNoMenu" DisplayName="$Resources:core,URL;" DisplayNameSrcField="URL" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="URLNoMenu">
+        <FieldRefs>
+          <FieldRef Name="URL" />
+          <FieldRef Name="FileLeafRef" />
+          <FieldRef Name="FileRef" />
+          <FieldRef Name="FSObjType" />
+        </FieldRefs>
+        <DisplayPattern>
+          <FieldSwitch>
+            <Expr>
+              <GetVar Name="FreeForm" />
+            </Expr>
+            <Case Value="TRUE">
+              <IfEqual>
+                <Expr1>
+                  <LookupColumn Name="FSObjType" />
+                </Expr1>
+                <Expr2>1</Expr2>
+                <Then>
+                  <Field Name="FileLeafRef" />
+                </Then>
+                <Else>
+                  <Field Name="URL" />
+                </Else>
+              </IfEqual>
+            </Case>
+            <Default>
+              <IfEqual>
+                <Expr1>
+                  <LookupColumn Name="FSObjType" />
+                </Expr1>
+                <Expr2>1</Expr2>
+                <Then>
+                  <Switch>
+                    <Expr>
+                      <GetVar Name="RecursiveView" />
+                    </Expr>
+                    <Case Value="1">
+                      <LookupColumn Name="FileLeafRef" HTMLEncode="TRUE" />
+                    </Case>
+                    <Default><HTML><![CDATA[<a onfocus="OnLink(this)" href="javascript:SubmitFormPost()" onclick='javascript:ClearSearchTerm("]]></HTML>
+                      <GetVar Name="View" /><HTML><![CDATA[");ClearSearchTerm("");javascript:SubmitFormPost("]]></HTML>
+                      <SetVar Name="RootFolder"><HTML>/</HTML>
+                        <LookupColumn Name="FileRef" />
+                      </SetVar>
+                      <ScriptQuote NotAddingQuote="TRUE">
+                        <FilterLink Default="" Paged="FALSE" />
+                      </ScriptQuote><HTML><![CDATA[");javascript:return false;'>]]></HTML>
+                      <LookupColumn Name="FileLeafRef" HTMLEncode="TRUE" /><HTML><![CDATA[</a>]]></HTML>
+                    </Default>
+                  </Switch>
+                </Then>
+                <Else>
+                  <Switch>
+                    <Expr>
+                      <Column Name="URL" />
+                    </Expr>
+                    <Case Value="">
+                      <Column2 Name="URL" HTMLEncode="TRUE" />
+                    </Case>
+                    <Default>
+                      <FieldSwitch>
+                        <Expr>
+                          <FieldProperty Name="URL" Select="Format" />
+                        </Expr>
+                        <Case Value="Image"><HTML><![CDATA[<img onfocus="OnLink(this)" src="]]></HTML>
+                          <Column Name="URL" HTMLEncode="TRUE" /><HTML>" alt="</HTML>
+                          <Column2 Name="URL" HTMLEncode="TRUE" /><HTML><![CDATA[" />]]></HTML>
+                        </Case>
+                        <Default><HTML><![CDATA[<a onfocus="OnLink(this)" href="]]></HTML>
+                          <Column Name="URL" HTMLEncode="TRUE" /><HTML><![CDATA[">]]></HTML>
+                          <Switch>
+                            <Expr>
+                              <Column2 Name="URL" />
+                            </Expr>
+                            <Case Value="">
+                              <Column Name="URL" HTMLEncode="TRUE" />
+                            </Case>
+                            <Default>
+                              <Column2 Name="URL" HTMLEncode="TRUE" />
+                            </Default>
+                          </Switch><HTML><![CDATA[</a>]]></HTML>
+                        </Default>
+                      </FieldSwitch>
+                    </Default>
+                  </Switch>
+                </Else>
+              </IfEqual>
+            </Default>
+          </FieldSwitch>
+        </DisplayPattern>
+      </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" OrderedView="TRUE" TabularView="FALSE" MobileView="TRUE">
+        <XslLink>main.xsl</XslLink>
+        <ViewHeader><HTML><![CDATA[<table width="100%" cellspacing="0" cellpadding="0" border="0">]]></HTML><HTML><![CDATA[<script type="text/javascript">
+ctx = new ContextInfo();
+ctx.listBaseType = ]]></HTML>
+          <ListProperty Select="BaseType" /><HTML><![CDATA[;
+ctx.listTemplate = ]]></HTML>
+          <ListProperty Select="ServerTemplate" /><HTML><![CDATA[;
+ctx.listName = ]]></HTML>
+          <ScriptQuote>
+            <List />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.view = ]]></HTML>
+          <ScriptQuote>
+            <GetVar Name="View" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.listUrlDir = ]]></HTML>
+          <ScriptQuote>
+            <ListUrlDir ServerRel="TRUE" URLEncodeAsURL="TRUE" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.HttpPath = ]]></HTML>
+          <ScriptQuote>
+            <HttpPath ServerRel="TRUE" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.HttpRoot = ]]></HTML>
+          <ScriptQuote>
+            <HttpVDir />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.imagesPath = ]]></HTML>
+          <ScriptQuote>/_layouts/15/images/</ScriptQuote><HTML><![CDATA[;
+ctx.PortalUrl = ]]></HTML>
+          <ScriptQuote>
+            <ProjectProperty Select="PortalUrl" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.SendToLocationName = ]]></HTML>
+          <ScriptQuote>
+            <ListProperty Select="SendToLocationName" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.SendToLocationUrl = ]]></HTML>
+          <ScriptQuote>
+            <ListProperty Select="SendToLocationUrl" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.RecycleBinEnabled = ]]></HTML>
+          <ProjectProperty Select="RecycleBinEnabled" /><HTML><![CDATA[;
+ctx.OfficialFileName = ]]></HTML>
+          <ScriptQuote>
+            <ServerProperty Select="OfficialFileName" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.OfficialFileNames = ]]></HTML>
+          <ScriptQuote>
+            <ServerProperty Select="OfficialFileNames" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.WriteSecurity = ]]></HTML>
+          <ScriptQuote>
+            <ListProperty Select="WriteSecurity" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.SiteTitle = ]]></HTML>
+          <ScriptQuote>
+            <ProjectProperty Select="Title" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.ListTitle = ]]></HTML>
+          <ScriptQuote>
+            <ListProperty Select="Title" />
+          </ScriptQuote><HTML><![CDATA[;
+if (ctx.PortalUrl == "") ctx.PortalUrl = null;
+ctx.displayFormUrl = ]]></HTML>
+          <ScriptQuote>
+            <URL Cmd="DISPLAY" NoID="TRUE" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.editFormUrl = ]]></HTML>
+          <ScriptQuote>
+            <URL Cmd="EDIT" NoID="TRUE" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.isWebEditorPreview = ]]></HTML>
+          <Switch>
+            <Expr>
+              <GetVar Name="WebEditorPreview" />
+            </Expr>
+            <Case Value="TRUE">1</Case>
+            <Default>0</Default>
+          </Switch><HTML><![CDATA[;
+ctx.ctxId = ]]></HTML>
+          <Counter Type="View" /><HTML><![CDATA[;
+g_ViewIdToViewCounterMap[ ]]></HTML>
+          <ScriptQuote>
+            <GetVar Name="View" />
+          </ScriptQuote><HTML><![CDATA[ ]= ]]></HTML>
+          <Counter Type="View" /><HTML><![CDATA[;
+ctx.CurrentUserId = ]]></HTML>
+          <UserID AllowAnonymous="TRUE" /><HTML><![CDATA[;
+]]></HTML>
+          <Switch>
+            <Expr>
+              <GetVar Name="JsGrid" />
+            </Expr>
+            <Case Value="1">
+ctx.isJsGrid = true;
+</Case>
+            <Default>
+ctx.isJsGrid = false;
+</Default>
+          </Switch>
+          <Switch>
+            <Expr>
+              <ListProperty Select="NavigateForFormsPages" />
+            </Expr>
+            <Case Value="1">
+ctx.NavigateForFormsPages = true;
+</Case>
+            <Default>
+ctx.NavigateForFormsPages = false;
+</Default>
+          </Switch>
+          <Switch>
+            <Expr>
+              <ListProperty Select="ModeratedList" />
+            </Expr>
+            <Case Value="1">
+ctx.isModerated = true;
+</Case>
+          </Switch>
+          <Switch>
+            <Expr>
+              <ListProperty Select="ForceCheckout" />
+            </Expr>
+            <Case Value="1">
+ctx.isForceCheckout = true;
+</Case>
+          </Switch>
+          <Switch>
+            <Expr>
+              <ListProperty Select="EnableMinorVersions" />
+            </Expr>
+            <Case Value="1">
+ctx.EnableMinorVersions = true;
+</Case>
+          </Switch>
+          <Switch>
+            <Expr>
+              <ListProperty Select="VersioningEnabled" />
+            </Expr>
+            <Case Value="1">
+ctx.verEnabled = 1;
+</Case>
+          </Switch>
+          <Switch>
+            <Expr>
+              <GetVar Name="RecursiveView" />
+            </Expr>
+            <Case Value="1">
+ctx.recursiveView = true;
+</Case>
+          </Switch>
+          <Switch>
+            <Expr>
+              <ListProperty Select="WorkflowsAssociated" />
+            </Expr>
+            <Case Value="1">
+ctx.WorkflowsAssociated = true;
+</Case>
+          </Switch>
+          <Switch>
+            <Expr>
+              <ListProperty Select="EnableContentTypes" />
+            </Expr>
+            <Case Value="1">
+ctx.ContentTypesEnabled = true;
+</Case>
+          </Switch><HTML><![CDATA[ 
+ctx]]></HTML>
+          <Counter Type="View" /><HTML><![CDATA[ = ctx;
+g_ctxDict['ctx]]></HTML>
+          <Counter Type="View" /><HTML><![CDATA['] = ctx;
+</script>]]></HTML><HTML><![CDATA[<tr><td>]]></HTML><HTML><![CDATA[<table id="]]></HTML>
+          <WebQueryInfo /><HTML><![CDATA[" class="ms-summarycustombody" style="margin-bottom: 5px;" cellpadding="0" cellspacing="0" border="0">
+                     ]]></HTML>
+        </ViewHeader>
+        <ViewBody><HTML><![CDATA[
+                        <tr>
+                    ]]></HTML><HTML><![CDATA[
+                            <td style="padding-bottom: 5px" class="ms-vb"><img src="/_layouts/15/images/square.gif?rev=23" alt="" />&#160;</td>
+                        ]]></HTML>
+          <Fields><HTML><![CDATA[
+                            <td style="padding-bottom: 5px;padding-left: 5px;" class="ms-vb">
+                        ]]></HTML>
+            <Field /><HTML><![CDATA[
+                            </td>
+                        ]]></HTML>
+          </Fields><HTML><![CDATA[
+                        </tr>
+                    ]]></HTML>
+        </ViewBody>
+        <ViewFooter><HTML><![CDATA[</table>]]></HTML><HTML><![CDATA[</td></tr></table>]]></HTML>
+        </ViewFooter>
+        <Toolbar Position="After" Type="Freeform">
+          <IfHasRights>
+            <RightsChoices>
+              <RightsGroup PermAddListItems="required" />
+            </RightsChoices>
+            <Then><HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idHomePageNewLink" href="]]></HTML>
+              <URL Cmd="New" /><HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <URL Cmd="New" />
+              </ScriptQuote><HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML><HTML>$Resources:core,AddNewLink;</HTML><HTML><![CDATA[</a></div>]]></HTML>
+            </Then>
+          </IfHasRights>
+        </Toolbar>
+        <RowLimitExceeded><HTML><![CDATA[<table class="ms-summarycustombody" cellpadding="0" cellspacing="0" border="0">
+                    <tr><td class="ms-vb">
+                    <a href="]]></HTML>
+          <ListProperty Select="DefaultViewUrl" /><HTML><![CDATA[" id="onetidMoreFavs">
+                    ]]></HTML><HTML>$Resources:core,morelinks_ellipses;</HTML><HTML><![CDATA[
+                    </a></td></tr>
+                    <tr><td height="8"><img src="/_layouts/15/images/blank.gif?rev=23" width="1" height="8" alt="" /></td></tr></table>
+                    ]]></HTML>
+        </RowLimitExceeded>
+        <ViewEmpty><HTML><![CDATA[
+                       <table class="ms-summarycustombody" cellpadding="0" cellspacing="0" border="0">
+                          <tr><td class="ms-vb">]]></HTML><HTML>$Resources:core,nofavlinks_toaddlinkclickaddnewlink;</HTML>
+          <IfHasRights>
+            <RightsChoices>
+              <RightsGroup PermAddListItems="required" />
+            </RightsChoices>
+            <Then><HTML> $Resources:core,nofavlinks_toaddlinkclickaddnewlink_howto;</HTML>
+            </Then>
+          </IfHasRights><HTML><![CDATA[
+                          </td></tr><tr><td height="5"><img src="/_layouts/15/images/blank.gif?rev=23" width="1" height="5" alt="" /></td></tr></table>]]></HTML>
+        </ViewEmpty>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Order" Ascending="TRUE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ViewFields>
+          <FieldRef Name="URL" Explicit="TRUE">
+          </FieldRef>
+          <FieldRef Name="URLNoMenu">
+          </FieldRef>
+        </ViewFields>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,nofavlinks_toaddlinkclickaddnewlink)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,nofavlinks_toaddlinkclickaddnewlink_howto)" />
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,AddNewLink)" />
+          <ParameterBinding Name="MoreAnnouncements" Location="Resource(wss,morelinks_ellipses)" />
+        </ParameterBindings>
+        <RowLimit>20</RowLimit>
+      </View>
+      <View BaseViewID="1" Type="HTML" OrderedView="TRUE" WebPartZoneID="Main" DisplayName="$Resources:core,All_Links;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/links.png?rev=23" Url="AllItems.aspx">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="DocIcon">
+          </FieldRef>
+          <FieldRef Name="Edit">
+          </FieldRef>
+          <FieldRef Name="URLwMenu">
+          </FieldRef>
+          <FieldRef Name="Comments">
+          </FieldRef>
+        </ViewFields>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Order" Ascending="TRUE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+      <View BaseViewID="3" Type="HTML" TabularView="FALSE" OrderedView="TRUE">
+        <XslLink>main.xsl</XslLink>
+        <Toolbar Position="After" Type="Freeform">
+          <IfHasRights>
+            <RightsChoices>
+              <RightsGroup PermAddListItems="required" />
+            </RightsChoices>
+            <Then><HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idView3NewLink" href="]]></HTML>
+              <URL Cmd="New" /><HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <URL Cmd="New" />
+              </ScriptQuote><HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML><HTML>$Resources:core,AddNewLink;</HTML><HTML><![CDATA[</a></div>]]></HTML>
+            </Then>
+          </IfHasRights>
+        </Toolbar>
+        <ViewHeader><HTML><![CDATA[<table width="100%" cellspacing="0" cellpadding="0" border="0">]]></HTML><HTML><![CDATA[<script type="text/javascript">
+ctx = new ContextInfo();
+ctx.listBaseType = ]]></HTML>
+          <ListProperty Select="BaseType" /><HTML><![CDATA[;
+ctx.listTemplate = ]]></HTML>
+          <ListProperty Select="ServerTemplate" /><HTML><![CDATA[;
+ctx.listName = ]]></HTML>
+          <ScriptQuote>
+            <List />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.view = ]]></HTML>
+          <ScriptQuote>
+            <GetVar Name="View" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.listUrlDir = ]]></HTML>
+          <ScriptQuote>
+            <ListUrlDir ServerRel="TRUE" URLEncodeAsURL="TRUE" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.HttpPath = ]]></HTML>
+          <ScriptQuote>
+            <HttpPath ServerRel="TRUE" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.HttpRoot = ]]></HTML>
+          <ScriptQuote>
+            <HttpVDir />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.imagesPath = ]]></HTML>
+          <ScriptQuote>/_layouts/15/images/</ScriptQuote><HTML><![CDATA[;
+ctx.PortalUrl = ]]></HTML>
+          <ScriptQuote>
+            <ProjectProperty Select="PortalUrl" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.SendToLocationName = ]]></HTML>
+          <ScriptQuote>
+            <ListProperty Select="SendToLocationName" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.SendToLocationUrl = ]]></HTML>
+          <ScriptQuote>
+            <ListProperty Select="SendToLocationUrl" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.RecycleBinEnabled = ]]></HTML>
+          <ProjectProperty Select="RecycleBinEnabled" /><HTML><![CDATA[;
+ctx.OfficialFileName = ]]></HTML>
+          <ScriptQuote>
+            <ServerProperty Select="OfficialFileName" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.OfficialFileNames = ]]></HTML>
+          <ScriptQuote>
+            <ServerProperty Select="OfficialFileNames" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.WriteSecurity = ]]></HTML>
+          <ScriptQuote>
+            <ListProperty Select="WriteSecurity" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.SiteTitle = ]]></HTML>
+          <ScriptQuote>
+            <ProjectProperty Select="Title" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.ListTitle = ]]></HTML>
+          <ScriptQuote>
+            <ListProperty Select="Title" />
+          </ScriptQuote><HTML><![CDATA[;
+if (ctx.PortalUrl == "") ctx.PortalUrl = null;
+ctx.displayFormUrl = ]]></HTML>
+          <ScriptQuote>
+            <URL Cmd="DISPLAY" NoID="TRUE" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.editFormUrl = ]]></HTML>
+          <ScriptQuote>
+            <URL Cmd="EDIT" NoID="TRUE" />
+          </ScriptQuote><HTML><![CDATA[;
+ctx.isWebEditorPreview = ]]></HTML>
+          <Switch>
+            <Expr>
+              <GetVar Name="WebEditorPreview" />
+            </Expr>
+            <Case Value="TRUE">1</Case>
+            <Default>0</Default>
+          </Switch><HTML><![CDATA[;
+ctx.ctxId = ]]></HTML>
+          <Counter Type="View" /><HTML><![CDATA[;
+g_ViewIdToViewCounterMap[ ]]></HTML>
+          <ScriptQuote>
+            <GetVar Name="View" />
+          </ScriptQuote><HTML><![CDATA[ ]= ]]></HTML>
+          <Counter Type="View" /><HTML><![CDATA[;
+ctx.CurrentUserId = ]]></HTML>
+          <UserID AllowAnonymous="TRUE" /><HTML><![CDATA[;
+]]></HTML>
+          <Switch>
+            <Expr>
+              <GetVar Name="JsGrid" />
+            </Expr>
+            <Case Value="1">
+ctx.isJsGrid = true;
+</Case>
+            <Default>
+ctx.isJsGrid = false;
+</Default>
+          </Switch>
+          <Switch>
+            <Expr>
+              <ListProperty Select="NavigateForFormsPages" />
+            </Expr>
+            <Case Value="1">
+ctx.NavigateForFormsPages = true;
+</Case>
+            <Default>
+ctx.NavigateForFormsPages = false;
+</Default>
+          </Switch>
+          <Switch>
+            <Expr>
+              <ListProperty Select="ModeratedList" />
+            </Expr>
+            <Case Value="1">
+ctx.isModerated = true;
+</Case>
+          </Switch>
+          <Switch>
+            <Expr>
+              <ListProperty Select="ForceCheckout" />
+            </Expr>
+            <Case Value="1">
+ctx.isForceCheckout = true;
+</Case>
+          </Switch>
+          <Switch>
+            <Expr>
+              <ListProperty Select="EnableMinorVersions" />
+            </Expr>
+            <Case Value="1">
+ctx.EnableMinorVersions = true;
+</Case>
+          </Switch>
+          <Switch>
+            <Expr>
+              <ListProperty Select="VersioningEnabled" />
+            </Expr>
+            <Case Value="1">
+ctx.verEnabled = 1;
+</Case>
+          </Switch>
+          <Switch>
+            <Expr>
+              <GetVar Name="RecursiveView" />
+            </Expr>
+            <Case Value="1">
+ctx.recursiveView = true;
+</Case>
+          </Switch>
+          <Switch>
+            <Expr>
+              <ListProperty Select="WorkflowsAssociated" />
+            </Expr>
+            <Case Value="1">
+ctx.WorkflowsAssociated = true;
+</Case>
+          </Switch>
+          <Switch>
+            <Expr>
+              <ListProperty Select="EnableContentTypes" />
+            </Expr>
+            <Case Value="1">
+ctx.ContentTypesEnabled = true;
+</Case>
+          </Switch><HTML><![CDATA[ 
+ctx]]></HTML>
+          <Counter Type="View" /><HTML><![CDATA[ = ctx;
+g_ctxDict['ctx]]></HTML>
+          <Counter Type="View" /><HTML><![CDATA['] = ctx;
+</script>]]></HTML><HTML><![CDATA[<tr><td>]]></HTML><HTML><![CDATA[<table id="]]></HTML>
+          <WebQueryInfo /><HTML><![CDATA[" width="100%" border="0" cellspacing="0" cellpadding="1"><tr class="ms-viewheadertr" valign="top">]]></HTML>
+          <Fields><HTML><![CDATA[<th class="ms-vh">]]></HTML>
+            <Field /><HTML><![CDATA[</th>]]></HTML>
+          </Fields><HTML><![CDATA[</tr>]]></HTML>
+        </ViewHeader>
+        <ViewBody><HTML><![CDATA[
+                        <tr>
+                    ]]></HTML>
+          <Fields><HTML><![CDATA[
+                            <td class="ms-vb">
+                        ]]></HTML>
+            <Field /><HTML><![CDATA[
+                            </td>
+                        ]]></HTML>
+          </Fields><HTML><![CDATA[
+                        </tr>
+                    ]]></HTML>
+        </ViewBody>
+        <ViewFooter><HTML><![CDATA[<tr><td height="5"><img src="/_layouts/15/images/blank.gif?rev=23" width="1" height="5" alt="" /></td></tr></table>]]></HTML><HTML><![CDATA[</td></tr></table>]]></HTML>
+        </ViewFooter>
+        <RowLimitExceeded><HTML><![CDATA[<table cellpadding="0" cellspacing="0" border="0">
+                                        <tr><td class="ms-vb">
+                                        <a href="]]></HTML>
+          <ListProperty Select="DefaultViewUrl" /><HTML><![CDATA[" id="onetidMoreFavs">
+                                        ]]></HTML><HTML>$Resources:core,morelinks_ellipses;</HTML><HTML><![CDATA[
+                                        </a></td></tr>
+                    <tr><td height="5"><img src="/_layouts/15/images/blank.gif?rev=23" width="1" height="5" alt="" /></td></tr></table>
+                                        ]]></HTML>
+        </RowLimitExceeded>
+        <ViewEmpty><HTML><![CDATA[
+                       <table width="100%" border="0" rules="rows">
+                          <tr><td class="ms-vb">]]></HTML><HTML>$Resources:core,nofavlinks_toaddlinkclickaddnewlink;</HTML><HTML><![CDATA[
+                          </td></tr><tr><td height="5"><img src="/_layouts/15/images/blank.gif?rev=23" width="1" height="5" alt="" /></td></tr></table>]]></HTML>
+        </ViewEmpty>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Order" Ascending="TRUE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ViewFields>
+          <FieldRef Name="URL">
+          </FieldRef>
+        </ViewFields>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+        <RowLimit>12</RowLimit>
+      </View>
+      <View BaseViewID="4" Type="HTML" TabularView="FALSE" OrderedView="TRUE" FreeForm="TRUE">
+        <XslLink>blog.xsl</XslLink>
+        <JSLink>core.js|sp.ui.blogs.js</JSLink>
+        <ViewHeader><HTML><![CDATA[ <div class="ms-WPBody"> <div class="ms-navheader">]]></HTML>
+          <IfHasRights>
+            <RightsChoices>
+              <RightsGroup PermAddListItems="required" />
+            </RightsChoices>
+            <Then><HTML><![CDATA[<a href="]]></HTML>
+              <ListProperty Select="DefaultViewUrl" /><HTML><![CDATA[" id="defviewurl]]></HTML>
+              <Counter Type="View" /><HTML><![CDATA[">]]></HTML>
+              <ListProperty Select="Title" HTMLEncode="TRUE" /><HTML><![CDATA[</a>]]></HTML>
+            </Then>
+            <Else>
+              <ListProperty Select="Title" HTMLEncode="TRUE" />
+            </Else>
+          </IfHasRights><HTML><![CDATA[</div> <table cellpadding="0" cellspacing="0" border="0" class="ms-navsubmenu2">]]></HTML>
+        </ViewHeader>
+        <ViewBody><HTML><![CDATA[<tr class="ms-CategoryTitleRow"><td class="ms-CategoryTitleCell" id="lnkurl]]></HTML>
+          <Column Name="ID" URLEncode="TRUE" /><HTML><![CDATA[">]]></HTML>
+          <Field Name="URL" /><HTML><![CDATA[</td></tr>]]></HTML>
+        </ViewBody>
+        <ViewFooter><HTML><![CDATA[</table></div>]]></HTML>
+        </ViewFooter>
+        <Toolbar Position="After" Type="Freeform">
+          <IfHasRights>
+            <RightsChoices>
+              <RightsGroup PermAddListItems="required" />
+            </RightsChoices>
+            <Then><HTML><![CDATA[
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                     <tr>
+                      <td class="ms-addnew" style="padding-bottom: 3px">
+                       <img src="/_layouts/15/images/rect.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idHomePageNewLink" href=
+                "]]></HTML>
+              <URL Cmd="New" /><HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <URL Cmd="New" />
+              </ScriptQuote><HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML><HTML>$Resources:core,AddNewLink;</HTML><HTML><![CDATA[</a>
+                      </td>
+                     </tr>
+                     <tr><td><img src="/_layouts/15/images/blank.gif?rev=23" width='1' height='5' alt="" /></td></tr>
+                   </table>]]></HTML>
+            </Then>
+          </IfHasRights>
+        </Toolbar>
+        <RowLimitExceeded><HTML><![CDATA[<div class="ms-BlogMoreLinks"><a href="]]></HTML>
+          <ListProperty Select="DefaultViewUrl" /><HTML><![CDATA[" id="onetidMoreFavs">
+                                        ]]></HTML><HTML>$Resources:core,morelinks_ellipses;</HTML><HTML><![CDATA[
+                                        </a></div>]]></HTML>
+        </RowLimitExceeded>
+        <ViewEmpty><HTML><![CDATA[ <div class="ms-WPBody"> <div class="ms-navheader">]]></HTML>
+          <IfHasRights>
+            <RightsChoices>
+              <RightsGroup PermAddListItems="required" />
+            </RightsChoices>
+            <Then><HTML><![CDATA[<a href="]]></HTML>
+              <ListProperty Select="DefaultViewUrl" /><HTML><![CDATA[" id="defviewurl]]></HTML>
+              <Counter Type="View" /><HTML><![CDATA[">]]></HTML>
+              <ListProperty Select="Title" HTMLEncode="TRUE" /><HTML><![CDATA[</a>]]></HTML>
+            </Then>
+            <Else>
+              <ListProperty Select="Title" HTMLEncode="TRUE" />
+            </Else>
+          </IfHasRights><HTML><![CDATA[</div> <table cellpadding="0" cellspacing="0" border="0" class="ms-navsubmenu2">]]></HTML><HTML><![CDATA[<tr><td><div class="ms-BlogEmptyListText">]]></HTML><HTML>$Resources:core,blog_empty_list_text;</HTML><HTML><![CDATA[</div></td></tr>]]></HTML><HTML><![CDATA[</table></div>]]></HTML>
+        </ViewEmpty>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Order" Ascending="TRUE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ViewFields>
+          <FieldRef Name="URL">
+          </FieldRef>
+        </ViewFields>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+        <RowLimit>30</RowLimit>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+    <DefaultDescription>
+            $Resources:core,linksList_Usage;
+        </DefaultDescription>
+  </MetaData>
+</List>

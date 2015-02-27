@@ -1,0 +1,13 @@
+<Feature Id="D32700C7-9EC5-45e6-9C89-EA703EFCA1DF"
+    Title="$Resources:spscore,CategoriesListFeature_Text;"
+    Description="$Resources:spscore,CategoriesListFeature_Desc;"
+    Version="15.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    DefaultResourceFile="spscore"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="CategoriesList.xml" />
+        <ElementFile Location="categories\schema.xml" />
+    </ElementManifests>
+</Feature>

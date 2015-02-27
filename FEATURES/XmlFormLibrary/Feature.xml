@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="00BFEA71-1E1D-4562-B56A-F05371BB0115"
+    Title="$Resources:core,xmlformlibraryFeatureTitle;" 
+    Description="$Resources:core,xmlformlibraryFeatureDesc;" 
+    Scope="Web" 
+    Hidden="TRUE" 
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="ListTemplates\XmlFormLibrary.xml" />
+    </ElementManifests>
+</Feature>

@@ -1,0 +1,380 @@
+<!-- _lcid="1033" _version="15.0.4631" _dal="1" -->
+<!-- _LocalBinding -->
+      <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+        <CustomAction
+            Id="HtmlDesignRibbonTab"
+            Location="CommandUI.Ribbon">
+          <CommandUIExtension>
+            <CommandUIDefinitions>
+              <CommandUIDefinition
+                Location="Ribbon.Tabs._children">
+                <Tab
+                  Id="Ribbon.HtmlDesignTab"
+                  Title="$Resources:sp.publishing.Resources,HtmlDesignTabName;"
+                  Description=""
+                  Sequence="100">
+                  <Scaling
+                    Id="Ribbon.HtmlDesignTab.Scaling">
+                    <MaxSize
+                      Id="Ribbon.CustomTabExample.Scaling.Containers.MaxSize"
+                      GroupId="Ribbon.HtmlDesignTab.Containers"
+                      Sequence="20"
+                      Size="LargeMedium"/>
+                    <MaxSize
+                      Id="Ribbon.HtmlDesignTab.Scaling.Navigation.MaxSize"
+                      GroupId="Ribbon.HtmlDesignTab.Navigation"
+                      Sequence="30"
+                      Size="LargeMedium"/>
+                    <MaxSize
+                      Id="Ribbon.CustomTabExample.Scaling.Brand.MaxSize"
+                      GroupId="Ribbon.HtmlDesignTab.Brand"
+                      Sequence="40"
+                      Size="MediumTwoRow"/>
+                    <MaxSize
+                      Id="Ribbon.CustomTabExample.Scaling.Administration.MaxSize"
+                      GroupId="Ribbon.HtmlDesignTab.Administration"
+                      Sequence="50"
+                      Size="LargeMedium"/>
+                    <MaxSize
+                      Id="Ribbon.HtmlDesignTab.Scaling.PageFields.MaxSize"
+                      GroupId="Ribbon.HtmlDesignTab.PageFields"
+                      Sequence="60"
+                      Size="Large"/>
+                    <MaxSize
+                      Id="Ribbon.HtmlDesignTab.Scaling.WebParts.MaxSize"
+                      GroupId="Ribbon.HtmlDesignTab.WebParts"
+                      Sequence="70"
+                      Size="Large"/>
+                    <MaxSize
+                      Id="Ribbon.HtmlDesignTab.Scaling.CustomMarkup.MaxSize"
+                      GroupId="Ribbon.HtmlDesignTab.CustomMarkup"
+                      Sequence="80"
+                      Size="Large"/>
+                    <Scale
+                      Id="Ribbon.HtmlDesignTab.Scaling.Containers.Scaling"
+                      GroupId="Ribbon.HtmlDesignTab.Containers"
+                      Sequence="120"
+                      Size="LargeSmall" />
+                    <Scale
+                      Id="Ribbon.HtmlDesignTab.Scaling.Navigation.Scaling"
+                      GroupId="Ribbon.HtmlDesignTab.Navigation"
+                      Sequence="130"
+                      Size="LargeSmall" />
+                   <Scale
+                      Id="Ribbon.HtmlDesignTab.Scaling.Administration.Scaling"
+                      GroupId="Ribbon.HtmlDesignTab.Administration"
+                      Sequence="150"
+                      Size="LargeSmall" />
+                   <Scale
+                      Id="Ribbon.HtmlDesignTab.Scaling.CustomMarkup.Scaling"
+                      GroupId="Ribbon.HtmlDesignTab.CustomMarkup"
+                      Sequence="160"
+                      Size="LargeSmall" />
+                  </Scaling>
+                  <Groups Id="Ribbon.HtmlDesignTab.Groups">
+                    <Group
+                      Id="Ribbon.HtmlDesignTab.Containers"
+                      Description=""
+                      Title="$Resources:sp.publishing.Resources,HtmlDesignTabContainersGroupName;"
+                      Sequence="50"
+                      Template="Ribbon.Templates.Flexible2">
+                      <Controls Id="Ribbon.HtmlDesignTab.Containers.Controls">
+                        <SplitButton
+                           Id="Ribbon.HtmlDesignTab.Containers.EditModePanel"
+                           Sequence="10" 
+                           Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-224" Image16by16Left="-160"
+                           Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="0" Image32by32Left="-192"
+                           Command="HtmlDesign.Command.EditModePanelShowInEdit"
+                           LabelText="$Resources:sp.publishing.Resources,HtmlDesignRibbonEditModePanelButtonText;"
+                           Alt="$Resources:sp.publishing.Resources,HtmlDesignRibbonEditModePanelButtonText;"
+                           ToolTipTitle="$Resources:sp.publishing.Resources,HtmlDesignRibbonEditModePanelButtonText;"
+                           ToolTipDescription="$Resources:sp.publishing.Resources,HtmlDesignRibbonEditModePanelButtonToolTipText;"
+                           TemplateAlias="o2">
+                           <Menu Id="Ribbon.HtmlDesignTab.Containers.EditModePanel.Menu">
+                              <MenuSection 
+                                  Id="Ribbon.HtmlDesignTab.Containers.EditModePanel.Menu.EditModeOptions" 
+                                  Sequence="10"
+                                  DisplayMode="Menu16"
+                                >
+                                <Controls Id="Ribbon.HtmlDesignTab.Containers.EditModePanel.Menu.EditModeOptions.Controls">
+                                    <Button
+                                       Id="Ribbon.HtmlDesignTab.Containers.EditModePanel.Menu.EditModeOptions.EditModePanelShowInEdit"
+                                       Command="HtmlDesign.Command.EditModePanelShowInEdit"
+                                       Sequence="10"
+                                       Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-112" Image16by16Left="-256"
+                                       Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-160" Image32by32Left="-160"
+                                       LabelText="$Resources:sp.publishing.Resources,HtmlDesignRibbonEditModePanelShowInEditButtonText;"
+                                       Alt="$Resources:sp.publishing.Resources,HtmlDesignRibbonEditModePanelShowInEditButtonText;"
+                                       ToolTipTitle="$Resources:sp.publishing.Resources,HtmlDesignRibbonEditModePanelShowInEditButtonText;"
+                                       ToolTipDescription="$Resources:sp.publishing.Resources,HtmlDesignRibbonEditModePaneShowInEditButtonToolTipText;" />
+                                    <Button
+                                       Id="Ribbon.HtmlDesignTab.Containers.EditModePanel.Menu.EditModeOptions.EditModePanelShowInRead"
+                                       Command="HtmlDesign.Command.EditModePanelShowInRead"
+                                       Sequence="20"
+                                       Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-240" Image16by16Left="-144"
+                                       Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-160" Image32by32Left="-128"
+                                       LabelText="$Resources:sp.publishing.Resources,HtmlDesignRibbonEditModePanelShowInReadButtonText;"
+                                       Alt="$Resources:sp.publishing.Resources,HtmlDesignRibbonEditModePanelShowInReadButtonText;"
+                                       ToolTipTitle="$Resources:sp.publishing.Resources,HtmlDesignRibbonEditModePanelShowInReadButtonText;"
+                                       ToolTipDescription="$Resources:sp.publishing.Resources,HtmlDesignRibbonEditModePanelShowInReadButtonToolTipText;" />
+                                </Controls>
+                              </MenuSection>
+                            </Menu>
+                        </SplitButton>
+                        <SplitButton
+                           Id="Ribbon.HtmlDesignTab.Containers.SecurityTrim"
+                           Sequence="30" 
+                           Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-96" Image16by16Left="-256"
+                           Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-128" Image32by32Left="0"
+                           Command="HtmlDesign.Command.SecurityTrimmedAuthors"
+                           LabelText="$Resources:sp.publishing.Resources,HtmlDesignRibbonSecurityTrimButtonText;"
+                           Alt="$Resources:sp.publishing.Resources,HtmlDesignRibbonSecurityTrimButtonText;"
+                           ToolTipTitle="$Resources:sp.publishing.Resources,HtmlDesignRibbonSecurityTrimButtonText;"
+                           ToolTipDescription="$Resources:sp.publishing.Resources,HtmlDesignRibbonSecurityTrimButtonToolTipText;"
+                           TemplateAlias="o2">
+                           <Menu Id="Ribbon.HtmlDesignTab.Containers.SecurityTrim.Menu">
+                              <MenuSection 
+                                  Id="Ribbon.HtmlDesignTab.Containers.SecurityTrim.Menu.SecurityTrimOptions" 
+                                  Sequence="10"
+                                  DisplayMode="Menu16"
+                                >
+                                <Controls Id="Ribbon.HtmlDesignTab.Containers.SecurityTrim.Menu.EditModeOptions.Controls">
+                                    <Button
+                                       Id="Ribbon.HtmlDesignTab.Containers.SecurityTrim.Menu.EditModeOptions.SecurityTrimmedAuthors"
+                                       Command="HtmlDesign.Command.SecurityTrimmedAuthors"
+                                       Sequence="10"
+                                       Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-224" Image16by16Left="-176"
+                                       Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-160" Image32by32Left="-96"
+                                       LabelText="$Resources:sp.publishing.Resources,HtmlDesignRibbonSecurityTrimmedAuthorsButtonText;"
+                                       Alt="$Resources:sp.publishing.Resources,HtmlDesignRibbonSecurityTrimmedAuthorsButtonText;"
+                                       ToolTipTitle="$Resources:sp.publishing.Resources,HtmlDesignRibbonSecurityTrimmedAuthorsButtonText;"
+                                       ToolTipDescription="$Resources:sp.publishing.Resources,HtmlDesignRibbonSecurityTrimmedAuthorsButtonToolTipText;"
+                                       />
+                                    <Button
+                                       Id="Ribbon.HtmlDesignTab.Containers.SecurityTrim.Menu.EditModeOptions.SecurityTrimmedAuthenticated"
+                                       Command="HtmlDesign.Command.SecurityTrimmedAuthenticated"
+                                       Sequence="20"
+                                       Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-80" Image16by16Left="-256"
+                                       Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-160" Image32by32Left="-64"
+                                       LabelText="$Resources:sp.publishing.Resources,HtmlDesignRibbonSecurityTrimmedAuthenticatedButtonText;"
+                                       Alt="$Resources:sp.publishing.Resources,HtmlDesignRibbonSecurityTrimmedAuthenticatedButtonText;"
+                                       ToolTipTitle="$Resources:sp.publishing.Resources,HtmlDesignRibbonSecurityTrimmedAuthenticatedButtonText;"
+                                       ToolTipDescription="$Resources:sp.publishing.Resources,HtmlDesignRibbonSecurityTrimmedAuthenticatedButtonToolTipText;"
+                                       />
+                                    <Button
+                                       Id="Ribbon.HtmlDesignTab.Containers.SecurityTrim.Menu.EditModeOptions.SecurityTrimmedAdministrators"
+                                       Command="HtmlDesign.Command.SecurityTrimmedAdministrators"
+                                       Sequence="30"
+                                       Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-240" Image16by16Left="-160"
+                                       Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-160" Image32by32Left="-32"
+                                       LabelText="$Resources:sp.publishing.Resources,HtmlDesignRibbonSecurityTrimmedAdministratorsButtonText;"
+                                       Alt="$Resources:sp.publishing.Resources,HtmlDesignRibbonSecurityTrimmedAdministratorsButtonText;"
+                                       ToolTipTitle="$Resources:sp.publishing.Resources,HtmlDesignRibbonSecurityTrimmedAdministratorsButtonText;"
+                                       ToolTipDescription="$Resources:sp.publishing.Resources,HtmlDesignRibbonSecurityTrimmedAdministratorsButtonToolTipText;"
+                                       />
+                                </Controls>
+                              </MenuSection>
+                            </Menu>
+                        </SplitButton>
+                        <Button
+                           Id="Ribbon.HtmlDesignTab.Containers.WebPartZone"
+                           Command="HtmlDesign.Command.WebPartZone"
+                           Sequence="40"
+                           Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-64" Image16by16Left="-256"
+                           Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-128" Image32by32Left="-32"
+                           LabelText="$Resources:sp.publishing.Resources,HtmlDesignRibbonWebPartZoneButtonText;"
+                           Alt="$Resources:sp.publishing.Resources,HtmlDesignRibbonWebPartZoneButtonText;"
+                           ToolTipTitle="$Resources:sp.publishing.Resources,HtmlDesignRibbonWebPartZoneButtonText;"
+                           ToolTipDescription="$Resources:sp.publishing.Resources,HtmlDesignRibbonWebPartZoneButtonToolTipText;"
+                           TemplateAlias="o2" />
+                        <Button
+                           Id="Ribbon.HtmlDesignTab.Containers.MobilePanel"
+                           Command="HtmlDesign.Command.MobilePanel"
+                           Sequence="50"
+                           Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-224" Image16by16Left="-192"
+                           Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-160" Image32by32Left="0"
+                           LabelText="$Resources:sp.publishing.Resources,HtmlDesignRibbonMobilePanelButtonText;"
+                           Alt="$Resources:sp.publishing.Resources,HtmlDesignRibbonMobilePanelButtonText;"
+                           ToolTipTitle="$Resources:sp.publishing.Resources,HtmlDesignRibbonMobilePanelButtonText;"
+                           ToolTipDescription="$Resources:sp.publishing.Resources,HtmlDesignRibbonMobilePanelButtonToolTipText;"
+                           TemplateAlias="o2" />
+                      </Controls>
+                    </Group>
+                    <Group
+                      Id="Ribbon.HtmlDesignTab.Navigation"
+                      Description=""
+                      Title="$Resources:sp.publishing.Resources,HtmlDesignTabNavigationGroupName;"
+                      Sequence="20"
+                      Template="Ribbon.Templates.Flexible2">
+                      <Controls Id="Ribbon.HtmlDesignTab.Navigation.Controls">
+                          <Button
+                           Id="Ribbon.HtmlDesignTab.Navigation.TopNavigation"
+                           Sequence="10" 
+                           Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-48" Image16by16Left="-256"
+                           Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-128" Image32by32Left="-160"
+                           Command="HtmlDesign.Command.TopNavigationNoFlyoutWithStartNode"
+                           LabelText="$Resources:sp.publishing.Resources,HtmlDesignTopNavigationButtonText;"
+                           Alt="$Resources:sp.publishing.Resources,HtmlDesignTopNavigationButtonText;"
+                           ToolTipTitle="$Resources:sp.publishing.Resources,HtmlDesignTopNavigationButtonText;"
+                           ToolTipDescription="$Resources:sp.publishing.Resources,HtmlDesignTopNavigationButtonToolTipText;"
+                           TemplateAlias="o1" />
+                        <Button
+                          Id="Ribbon.HtmlDesignTab.Navigation.QuickLaunch"
+                          Command="HtmlDesign.Command.QuickLaunch"
+                          Sequence="20"
+                          Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-240" Image16by16Left="-176"
+                          Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-96" Image32by32Left="-160"
+                          LabelText="$Resources:sp.publishing.Resources,HtmlDesignQuickLaunchButtonText;"
+                          Alt="$Resources:sp.publishing.Resources,HtmlDesignQuickLaunchButtonText;"
+                          ToolTipTitle="$Resources:sp.publishing.Resources,HtmlDesignQuickLaunchButtonText;"
+                          ToolTipDescription="$Resources:sp.publishing.Resources,HtmlDesignQuickLaunchButtonToolTipText;"
+                          TemplateAlias="o2" />
+                        <Button
+                          Id="Ribbon.HtmlDesignTab.Navigation.SearchBox"
+                          Command="HtmlDesign.Command.SearchBox"
+                          Sequence="30"
+                          Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-224" Image16by16Left="-208"
+                          Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-64" Image32by32Left="-160"
+                          LabelText="$Resources:sp.publishing.Resources,HtmlDesignSearchBoxButtonText;"
+                          Alt="$Resources:sp.publishing.Resources,HtmlDesignSearchBoxButtonText;"
+                          ToolTipTitle="$Resources:sp.publishing.Resources,HtmlDesignSearchBoxButtonText;"
+                          ToolTipDescription="$Resources:sp.publishing.Resources,HtmlDesignSearchBoxButtonToolTipText;"
+                          TemplateAlias="o2" />
+                      </Controls>
+                   </Group>
+                   <Group
+                      Id="Ribbon.HtmlDesignTab.Administration"
+                      Description=""
+                      Title="$Resources:sp.publishing.Resources,HtmlDesignTabAdministrationGroupName;"
+                      Sequence="30"
+                      Template="Ribbon.Templates.Flexible2">
+                      <Controls Id="Ribbon.HtmlDesignTab.Administration.Controls">
+                        <Button
+                           Id="Ribbon.HtmlDesignTab.Administration.SiteTitle"
+                           Command="HtmlDesign.Command.SiteTitle"
+                           Sequence="10"
+                           Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-16" Image16by16Left="-256"
+                           Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-32" Image32by32Left="-160"
+                           LabelText="$Resources:sp.publishing.Resources,HtmlDesignRibbonSiteTitleButtonText;"
+                           Alt="$Resources:sp.publishing.Resources,HtmlDesignRibbonSiteTitleButtonText;"
+                           ToolTipTitle="$Resources:sp.publishing.Resources,HtmlDesignRibbonSiteTitleButtonText;"
+                           ToolTipDescription="$Resources:sp.publishing.Resources,HtmlDesignRibbonSiteTitleButtonToolTipText;"
+                           TemplateAlias="o2" />
+                        <Button
+                           Id="Ribbon.HtmlDesignTab.Administration.SiteLogo"
+                           Command="HtmlDesign.Command.SiteLogo"
+                           Sequence="20"
+                           Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-240" Image16by16Left="-192"
+                           Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="0" Image32by32Left="-160"
+                           LabelText="$Resources:sp.publishing.Resources,HtmlDesignSiteLogoButtonText;"
+                           Alt="$Resources:sp.publishing.Resources,HtmlDesignSiteLogoButtonText;"
+                           ToolTipTitle="$Resources:sp.publishing.Resources,HtmlDesignSiteLogoButtonText;"
+                           ToolTipDescription="$Resources:sp.publishing.Resources,HtmlDesignSiteLogoButtonToolTipText;"
+                           TemplateAlias="o2" />
+                        <Button
+                           Id="Ribbon.HtmlDesignTab.Administration.SignIn"
+                           Command="HtmlDesign.Command.SignIn"
+                           Sequence="30"
+                           Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="0" Image16by16Left="-256"
+                           Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-128" Image32by32Left="-96"
+                           LabelText="$Resources:sp.publishing.Resources,HtmlDesignRibbonSignInButtonText;"
+                           Alt="$Resources:sp.publishing.Resources,HtmlDesignRibbonSignInButtonText;"
+                           ToolTipTitle="$Resources:sp.publishing.Resources,HtmlDesignRibbonSignInButtonText;"
+                           ToolTipDescription="$Resources:sp.publishing.Resources,HtmlDesignRibbonSignInButtonToolTipText;"
+                           TemplateAlias="o2" />
+                      </Controls>
+                    </Group>
+                    <Group Id="Ribbon.HtmlDesignTab.PageFields"
+                       Description=""
+                       Title="$Resources:sp.publishing.Resources,HtmlDesignTabPageFieldsGroupName;"
+                       Sequence="40"
+                       Template="Ribbon.Templates.Flexible">
+                       <Controls Id="Ribbon.HtmlDesignTab.PageFields.Controls">
+                        <FlyoutAnchor
+                           Id="Ribbon.HtmlDesignTab.PageFields.PageFields"
+                           Sequence="10" 
+                           Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-224" Image16by16Left="-224"
+                           Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-128" Image32by32Left="-128"
+                           LabelText="$Resources:sp.publishing.Resources,HtmlDesignPageFieldsButtonText;"
+                           Alt="$Resources:sp.publishing.Resources,HtmlDesignPageFieldsButtonText;"
+                           ToolTipTitle="$Resources:sp.publishing.Resources,HtmlDesignPageFieldsButtonText;"
+                           ToolTipDescription="$Resources:sp.publishing.Resources,HtmlDesignPageFieldsButtonToolTipText;"
+                           TemplateAlias="o1"
+                           PopulateDynamically="true"
+                           PopulateOnlyOnce="true"
+                           PopulateQueryCommand="HtmlDesign.Command.PopulatePageFieldsGallery" />
+                       </Controls>
+                    </Group>
+                    <Group Id="Ribbon.HtmlDesignTab.WebParts"
+                       Description=""
+                       Title="$Resources:sp.publishing.Resources,HtmlDesignTabWebPartsGroupName;"
+                       Sequence="60"
+                       Template="Ribbon.Templates.Flexible">
+                       <Controls Id="Ribbon.HtmlDesignTab.WebParts.Controls">
+                        <FlyoutAnchor
+                           Id="Ribbon.HtmlDesignTab.MediaAndContent.MediaAndContent"
+                           Sequence="10" 
+                           Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-240" Image16by16Left="-240"
+                           Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="0" Image32by32Left="-224"
+                           LabelText="$Resources:sp.publishing.Resources,HtmlDesignMediaAndContentButtonText;"
+                           Alt="$Resources:sp.publishing.Resources,HtmlDesignMediaAndContentButtonText;"
+                           ToolTipTitle="$Resources:sp.publishing.Resources,HtmlDesignMediaAndContentButtonText;"
+                           ToolTipDescription="$Resources:sp.publishing.Resources,HtmlDesignMediaAndContentButtonToolTipText;"
+                           TemplateAlias="o1"
+                           PopulateDynamically="true"
+                           PopulateOnlyOnce="true"
+                           PopulateQueryCommand="HtmlDesign.Command.PopulateMediaAndContentGallery" />
+                        <FlyoutAnchor
+                           Id="Ribbon.HtmlDesignTab.DynamicContent.DynamicContent"
+                           Sequence="20" 
+                           Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-240" Image16by16Left="-208"
+                           Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-192" Image32by32Left="-224"
+                           LabelText="$Resources:sp.publishing.Resources,HtmlDesignDynamicContentButtonText;"
+                           Alt="$Resources:sp.publishing.Resources,HtmlDesignDynamicContentButtonText;"
+                           ToolTipTitle="$Resources:sp.publishing.Resources,HtmlDesignDynamicContentButtonText;"
+                           ToolTipDescription="$Resources:sp.publishing.Resources,HtmlDesignDynamicContentButtonToolTipText;"
+                           TemplateAlias="o1"
+                           PopulateDynamically="true"
+                           PopulateOnlyOnce="true"
+                           PopulateQueryCommand="HtmlDesign.Command.PopulateDynamicContentGallery" />
+                        <FlyoutAnchor
+                           Id="Ribbon.HtmlDesignTab.WebParts.WebParts"
+                           Sequence="30" 
+                           Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-240" Image16by16Left="-224"
+                           Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-32" Image32by32Left="-224"
+                           LabelText="$Resources:sp.publishing.Resources,HtmlDesignWebPartsButtonText;"
+                           Alt="$Resources:sp.publishing.Resources,HtmlDesignWebPartsButtonText;"
+                           ToolTipTitle="$Resources:sp.publishing.Resources,HtmlDesignWebPartsButtonText;"
+                           ToolTipDescription="$Resources:sp.publishing.Resources,HtmlDesignWebPartsButtonToolTipText;"
+                           TemplateAlias="o1"
+                           PopulateDynamically="true"
+                           PopulateOnlyOnce="true"
+                           PopulateQueryCommand="HtmlDesign.Command.PopulateWebPartsGallery" />
+                       </Controls>
+                    </Group>
+                    <Group Id="Ribbon.HtmlDesignTab.CustomMarkup"
+                       Description=""
+                       Title="$Resources:sp.publishing.Resources,HtmlDesignTabCustomMarkupGroupName;"
+                       Sequence="70"
+                       Template="Ribbon.Templates.Flexible">
+                       <Controls Id="Ribbon.HtmlDesignTab.CustomMarkup.Controls">
+                           <Button
+                              Id="Ribbon.HtmlDesignTab.CustomMarkup.EditCustomMarkup"
+                              Command="HtmlDesign.Command.CustomMarkup"
+                              Sequence="10"
+                              Image16by16="/_layouts/15/images/publishing.png?rev=23" Image16by16Top="-224" Image16by16Left="-240"
+                              Image32by32="/_layouts/15/images/publishing.png?rev=23" Image32by32Top="-160" Image32by32Left="-224"
+                              LabelText="$Resources:sp.publishing.Resources,HtmlDesignCustomMarkupButtonText;"
+                              Alt="$Resources:sp.publishing.Resources,HtmlDesignCustomMarkupButtonText;"
+                              ToolTipTitle="$Resources:sp.publishing.Resources,HtmlDesignCustomMarkupButtonText;"
+                              ToolTipDescription="$Resources:sp.publishing.Resources,HtmlDesignCustomMarkupButtonToolTipText;"
+                              TemplateAlias="o1" />
+                       </Controls>
+                    </Group>
+                 </Groups>
+                </Tab>
+              </CommandUIDefinition>
+            </CommandUIDefinitions>
+          </CommandUIExtension>
+        </CustomAction>
+</Elements>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature  Id="EE21B29B-B0D0-42C6-BAFF-C97FD91786E6"
+          Title="Office Workflows"
+          Description="Workflows activated automatically upon site collection creation"
+          Hidden="TRUE"
+          Version="15.0.0.0"
+          Scope="Farm"
+          xmlns="http://schemas.microsoft.com/sharepoint/"
+          DefaultResourceFile="_Res">
+  <ElementManifests>
+    <ElementManifest Location="FeatureStapling.xml" />
+  </ElementManifests>
+</Feature>

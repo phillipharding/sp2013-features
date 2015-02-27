@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="98D11606-9A9B-4f44-B4C2-72D72F867DA9"
+    Title="$Resources:core,SiteAssets;"
+    Description="$Resources:core,SiteAssets_Desc;"
+    Version="1.0.0.0"
+    Scope="Web"
+    Hidden="TRUE"
+    ReceiverAssembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
+    ReceiverClass="Microsoft.SharePoint.SPSiteAssetsFeatureReceiver"
+    DefaultResourceFile="core"
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+</Feature>

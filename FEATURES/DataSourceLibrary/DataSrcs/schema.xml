@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="Data Sources" Direction="$Resources:Direction;" Url="Data Sources" BaseType="1" Default="UNIQUE" PrivateList="TRUE">
+  <MetaData>
+    <Fields>
+      <Field ID="{9f5548e5-5959-4a27-98f1-d88402c20c6c}" Name="DSSourceTitle" maxLength="255" DisplayName="DSSourceTitle" Type="Text" Required="TRUE" Hidden="TRUE" ReadOnly="TRUE" node="udc:DataSource/udc:Name" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="DSSourceTitle" />
+      <Field ID="{3b73fef4-9f09-48b5-a84c-0368fa3ad694}" Name="DSDescription" NumLines="6" Sortable="FALSE" DisplayName="DSDescription" Type="Note" Hidden="TRUE" ReadOnly="TRUE" node="udc:DataSource/udc:Description" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="DSDescription" />
+      <Field ID="{bbb83e23-7ac9-4633-b7c8-2868b2f1a980}" Name="DSKeywords" maxLength="255" DisplayName="$Resources:core,DSKeywords;" Type="Text" Hidden="TRUE" ReadOnly="TRUE" node="udc:DataSource/udc:Keywords" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="DSKeywords" />
+      <Field ID="{d0113b41-ffc2-48b8-b99c-b9f41ca69dca}" Name="DSTooltipInfo" NumLines="2" Sortable="FALSE" DisplayName="$Resources:core,DSTooltipInfo;" Type="Note" Hidden="TRUE" ReadOnly="TRUE" node="udc:DataSource/udc:TooltipInfo" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="DSTooltipInfo" />
+      <Field ID="{c8ec1729-0cf9-4f2d-85e4-c2b30e089f78}" Name="DSType10" DisplaceOnUpgrade="TRUE" maxLength="255" DisplayName="DSType" Type="Text" Required="TRUE" Hidden="TRUE" ReadOnly="TRUE" node="udc:DataSource/udc:Type/udc:SubType/udc:SubType/@Type" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="DSType10" />
+      <Field ID="{581158c9-96cb-40cf-9002-68dd765cade1}" Name="DSType20" DisplaceOnUpgrade="TRUE" maxLength="255" DisplayName="DSType" Type="Text" Required="TRUE" Hidden="TRUE" ReadOnly="TRUE" node="udc:DataSource/udc:Type/@Type" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="DSType20" />
+      <Field ID="{37a3aa1e-47e3-4c51-bff4-bc3332fde935}" Name="DSVersion" DisplaceOnUpgrade="TRUE" maxLength="255" DisplayName="$Resources:core,Version;" Type="Text" Required="TRUE" Hidden="TRUE" ReadOnly="TRUE" node="udc:DataSource/@MajorVersion" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="DSVersion" />
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" TabularView="FALSE">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Position="After" Type="Freeform">
+          <IfHasRights>
+            <RightsChoices>
+              <RightsGroup PermAddListItems="required" />
+            </RightsChoices>
+            <Then><HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idAddNewDataSrc" href="]]></HTML>
+              <HttpVDir /><HTML><![CDATA[/_layouts/15/Upload.aspx?List=]]></HTML>
+              <ListProperty Select="Name" /><HTML><![CDATA[&RootFolder=]]></HTML>
+              <GetVar Name="RootFolder" URLEncode="TRUE" /><HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML>
+              <ScriptQuote NotAddingQuote="TRUE">
+                <HttpVDir />
+              </ScriptQuote><HTML><![CDATA[/_layouts/15/Upload.aspx?List=]]></HTML>
+              <ListProperty Select="Name" /><HTML><![CDATA[&RootFolder=]]></HTML>
+              <GetVar Name="RootFolder" URLEncode="TRUE" /><HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML><HTML>$Resources:core,Add_New_Document;</HTML><HTML><![CDATA[</a></div>]]></HTML>
+            </Then>
+          </IfHasRights>
+        </Toolbar>
+        <RowLimit>20</RowLimit>
+        <ViewFields>
+          <FieldRef Name="DocIcon">
+          </FieldRef>
+          <FieldRef Name="LinkFilenameNoMenu">
+          </FieldRef>
+          <FieldRef Name="Editor">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+    </Views>
+    <Forms>
+    </Forms>
+    <DefaultDescription>
+    </DefaultDescription>
+  </MetaData>
+</List>

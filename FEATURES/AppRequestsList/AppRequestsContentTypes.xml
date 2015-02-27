@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ContentType 
+        ID="0x0112" 
+        Name="$Resources:core,Marketplace_AppRequestContentTypeName;" 
+        Description="$Resources:core,Marketplace_AppRequestContentTypeDescription;" 
+        Sealed="TRUE" 
+        ReadOnly="TRUE">
+        <FieldRefs>
+            <FieldRef ID="{0AD40F37-A70E-4527-96F1-178B766DEF0E}" Name="AppRequester" />
+            <FieldRef ID="{D3321FFF-46F3-407d-89EF-FFF1E075A018}" Name="AssetID" />
+            <FieldRef ID="{031CD33C-6486-4B08-AF1B-8D2B05EB3854}" Name="AppProductID" />
+            <FieldRef ID="{BEF27D40-47DA-4F7F-82F1-99B26A1D17B3}" Name="AppContentMarket" />
+            <FieldRef ID="{C3322BD9-8148-4B2C-9939-AD36B6D99B15}" Name="AppBillingMarket" />
+            <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+            <FieldRef ID="{22FA2E37-2293-4E0B-90E9-FA00CCBD85B6}" Name="AppThumbnailURL" />
+            <FieldRef ID="{CD62CD73-8268-434D-A1DD-C7B62CB1267B}" Name="AppRequestSeats" />
+            <FieldRef ID="{F419FC3C-7EE5-47F6-9175-B5C337698963}" Name="AppRequestIsSiteLicense" />
+            <FieldRef ID="{0628F37E-8691-414A-8491-D7E1F44B0964}" Name="AppRequestJustification" />
+            <FieldRef ID="{D2F7B98A-E911-4ACE-9195-A187499F00A1}" Name="AppRequestApprovedBy" />
+            <FieldRef ID="{0D4B4289-33B2-4277-8404-E28FB699A403}" Name="AppRequestStatus" />
+            <FieldRef ID="{28612BF7-7676-4652-BE68-45F6A38C53BB}" Name="AppRequestViewAppDetails" />
+            <FieldRef ID="{4509C4F1-A6D5-4ED7-955D-C0C9693F88EC}" Name="AppRequestApproverComments" />
+        </FieldRefs>
+    </ContentType>
+</Elements>

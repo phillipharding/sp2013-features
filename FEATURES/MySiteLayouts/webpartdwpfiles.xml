@@ -1,0 +1,82 @@
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+        <Module Name="BlogXSL" Url="" Path="" SetupPath="SiteTemplates\SPSPERS" RootWebOnly="TRUE">
+            <File Url="blog.xsl" Type="Ghostable"/>
+        </Module>
+        <Module Name="WebPartPopulation" Url="_catalogs/wp" Path="dwp" RootWebOnly="TRUE">
+            <File Url="siteFramer.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:spscore,ContentRollupWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value="SPSMSITE;#SPSPERS" />
+            </File>
+            <File Url="mydocs.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,ContentRollupWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value="SPSMSITE;#SPSPERS" />
+            </File>
+            <File Url="myworks.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,ContentRollupWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value="SPSMSITE;#SPSPERS" />
+            </File>
+            <File Url="contactlinks.dwp" Type="GhostableInLibrary">                
+                <Property Name="Group" Value="$Resources:core,PeopleWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value="SPSMSITE;#SPSPERS" />
+            </File>
+            <File Url="People.dwp" Type="GhostableInLibrary">                
+                <Property Name="Group" Value="$Resources:core,PeopleWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value="SPSMSITE;#SPSMSITEHOST;#SPSPERS" />
+            </File>
+            <File Url="activitytracker.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,PeopleWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value="SPSMSITEHOST" />
+            </File>
+            <File Url="MicroFeed.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,PeopleWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value="SPSMSITEHOST" />
+            </File>
+            <File Url="PublishedFeed.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,PeopleWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value="SPSMSITEHOST" />
+            </File>
+            <File Url="askmeabout.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,PeopleWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value="SPSMSITEHOST" />
+            </File>
+            <File Url="quicklinks.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,ContentRollupWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value="SPSMSITE;#SPSMSITEHOST;#SPSPERS" />
+            </File>
+            <File Url="memberships.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,ContentRollupWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value="SPSMSITE;#SPSMSITEHOST;#SPSPERS" />
+            </File>
+            <File Url="membershipdocs.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,ContentRollupWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value="SPSMSITE;#SPSMSITEHOST;#SPSPERS" />
+            </File>
+            <File Url="LatestBlogPostsPublic.webpart" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,PeopleWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value="SPSMSITEHOST" />
+            </File>
+            <File Url="InCommon.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,PeopleWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value="SPSMSITEHOST" />
+            </File>
+            <File Url="Colleagues.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,PeopleWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value="SPSMSITE;#SPSMSITEHOST;#SPSPERS" />
+            </File>
+            <File Url="RssViewer.webpart" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,ContentRollupWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value="SPSMSITE;#SPSPERS" />
+            </File>
+            <File Url="TagCloud.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,PeopleWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value="SPSPERS" />
+            </File>
+            <File Url="SocialComment.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,PeopleWebPartGroup;"></Property>
+            </File> 
+            <File Url="ProfileBrowser.dwp" Type="GhostableInLibrary">
+                <Property Name="Group" Value="$Resources:core,PeopleWebPartGroup;"></Property>
+                <Property Name="QuickAddGroups" Value="SPSMSITEHOST" />
+            </File>
+        </Module>
+</Elements>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebPart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Title>$Resources:spscore,DwpBdItemBuilderTitle</Title>
+  <FrameType>Default</FrameType>
+  <Description>$Resources:spscore,DwpBdItemBuilderDesc</Description>
+  <IsIncluded>true</IsIncluded>
+  <ZoneID>MiddleLeftZone</ZoneID>
+  <PartOrder>1</PartOrder>
+  <FrameState>Normal</FrameState>
+  <Height />
+  <Width />
+  <AllowRemove>true</AllowRemove>
+  <AllowZoneChange>true</AllowZoneChange>
+  <AllowMinimize>true</AllowMinimize>
+  <AllowConnect>true</AllowConnect>
+  <AllowEdit>true</AllowEdit>
+  <AllowHide>true</AllowHide>
+  <IsVisible>true</IsVisible>
+  <Hidden>false</Hidden>
+  <DetailLink />
+  <HelpLink />
+  <HelpMode>Modeless</HelpMode>
+  <Dir>Default</Dir>
+  <MissingAssembly />
+  <PartImageSmall>/_layouts/images/bizdatawebpart.gif</PartImageSmall>
+  <PartImageLarge>/_layouts/images/bizdatawebpart.gif</PartImageLarge>
+  <IsIncludedFilter />
+  <AuthorizationFilter />
+  <Assembly>Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly> 
+  <TypeName>Microsoft.SharePoint.Portal.WebControls.BusinessDataItemBuilder</TypeName>
+</WebPart>

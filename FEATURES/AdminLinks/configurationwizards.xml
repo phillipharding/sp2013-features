@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements
+    xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomActionGroup
+        Id="FarmConfiguration"
+        Location="Microsoft.SharePoint.Administration.ConfigurationWizards"
+        Title="$Resources:farmconfiguration_title;"
+        Sequence="10"
+        ImageUrl="/_layouts/15/images/CentralAdmin_ConfigurationWizards_FarmConfiguration_32x32.png?rev=23" />
+    <CustomAction
+        Id="FarmConfiguration_InitialConfigWizard"
+        GroupId="FarmConfiguration"
+        Location="Microsoft.SharePoint.Administration.ConfigurationWizards"
+        RequiredAdmin="Machine"
+        Sequence="10"
+        Title="$Resources:initialconfigurationwizard_title;">
+        <UrlAction
+            Url="/_admin/adminconfigintro.aspx?scenarioid=adminconfig&amp;welcomestringid=farmconfigurationwizard_welcome" />
+    </CustomAction>
+</Elements>

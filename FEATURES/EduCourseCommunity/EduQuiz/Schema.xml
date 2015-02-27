@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="Basic List" FolderCreation="FALSE" Direction="$Resources:core,Direction;" Url="Lists/Basic List" BaseType="0" EnableContentTypes="TRUE">
+	<MetaData>
+		<ContentTypes>
+			<ContentTypeRef ID="0x010099CC4AB8FFBD45FFA42AFEB1C7C91FC7" />
+			<ContentTypeRef ID="0x0100566B05E81E304886B9A383B29410867A" />
+			<ContentTypeRef ID="0x0100D81BAEEF08EA4508B5C01730FABA1521" />
+			<ContentTypeRef ID="0x0100DB1BA2DAD5D44B9A8AD402B8F3368E92" />
+		</ContentTypes>
+		<Fields>
+			<Field ID="{3FD8AEDD-3D09-40A9-A108-6D8ECE15C9BC}"
+				Name="QuizUserId"
+				DisplayName="QuizUserId"
+				Group="Education"
+				Type="Integer"
+				Required="TRUE"
+				ShowInDisplayForm="FALSE" 
+				ShowInEditForm="FALSE"
+				ShowInNewForm="FALSE" 
+				ShowInListSettings="FALSE"
+				ShowInViewForms="FALSE"/>
+			<Field ID="{4984BF80-BA31-4BEF-AF09-EBEB26E2CC22}"
+				Name="QuizAttemptsCount"
+				DisplayName="QuizAttemptsCount"
+				Group="Education"
+				Type="Integer"
+				Required="TRUE"
+				ShowInDisplayForm="FALSE" 
+				ShowInEditForm="FALSE"
+				ShowInNewForm="FALSE" 
+				ShowInListSettings="FALSE"
+				ShowInViewForms="FALSE"/>
+			<Field ID="{88BAD17C-F907-44FA-98A3-A3BE674DC919}"
+				Name="QuizMaxAttempts"
+				DisplayName="QuizMaxAttempts"
+				Group="Education"
+				Type="Integer" 
+				ShowInDisplayForm="FALSE" 
+				ShowInEditForm="FALSE"
+				ShowInNewForm="FALSE" 
+				ShowInListSettings="FALSE"
+				ShowInViewForms="FALSE"/>
+			<Field ID="{D8E9ED82-00DC-4ED8-A3D7-B9EB1E296C93}"
+				Name="QuizCountQuestions"
+				DisplayName="QuizCountQuestions"
+				Group="Education"
+				Type="Integer" 
+				ShowInDisplayForm="FALSE" 
+				ShowInEditForm="FALSE"
+				ShowInNewForm="FALSE" 
+				ShowInListSettings="FALSE"
+				ShowInViewForms="FALSE"/>
+			<Field ID="{8A41D503-76D1-4988-9358-E75A9A16676E}"
+				Name="QuizTotalPoints"
+				DisplayName="QuizTotalPoints"
+				Group="Education"
+				Type="Integer" 
+				ShowInDisplayForm="FALSE" 
+				ShowInEditForm="FALSE"
+				ShowInNewForm="FALSE" 
+				ShowInListSettings="FALSE"
+				ShowInViewForms="FALSE"/>
+			<Field ID="{6E0CF430-7E69-45AD-9488-CD12FC27FB70}"
+				Name="QuizKeywords"
+				DisplayName="QuizKeywords"
+				Group="Education"
+				Type="Text" 
+				ShowInDisplayForm="FALSE" 
+				ShowInEditForm="FALSE"
+				ShowInNewForm="FALSE" 
+				ShowInListSettings="FALSE"
+				ShowInViewForms="FALSE"/>
+			<Field ID="{12C7E7A8-AA88-4C76-B52C-CED394F7AECF}"
+				Name="QuizExternalLink"
+				DisplayName="QuizExternalLink"
+				Group="Education"
+				Type="Guid" 
+				ShowInDisplayForm="FALSE" 
+				ShowInEditForm="FALSE"
+				ShowInNewForm="FALSE" 
+				ShowInListSettings="FALSE"
+				ShowInViewForms="FALSE"/>
+			<Field ID="{83EC73DD-BEFE-4047-BD7A-3D797B1C1645}"
+				Name="QuizState"
+				DisplayName="QuizState"
+				Group="Education"
+				Type="Integer" 
+				ShowInDisplayForm="FALSE" 
+				ShowInEditForm="FALSE"
+				ShowInNewForm="FALSE" 
+				ShowInListSettings="FALSE"
+				ShowInViewForms="FALSE"/>
+			<Field ID="{79AC32C8-6672-4F0B-9F20-8A90FB3FDC1E}"
+				Name="QuizTakers"
+				DisplayName="QuizTakers"
+				Group="Education"
+				Type="Note" 
+				ShowInDisplayForm="FALSE" 
+				ShowInEditForm="FALSE"
+				ShowInNewForm="FALSE" 
+				ShowInListSettings="FALSE"
+				ShowInViewForms="FALSE"/>
+			<Field ID="{E9351B5D-D703-4CC3-900D-BC0C51132FB8}"
+				Name="QuizFlags"
+				DisplayName="QuizFlags"
+				Group="Education"
+				Type="Integer" 
+				ShowInDisplayForm="FALSE" 
+				ShowInEditForm="FALSE"
+				ShowInNewForm="FALSE" 
+				ShowInListSettings="FALSE"
+				ShowInViewForms="FALSE"/>
+			<Field ID="{4C06AE35-A718-47A4-AC6C-90086A63FD62}"
+				Name="QuizSearchableText"
+				DisplayName="QuizSearchableText"
+				Group="Education"
+				Type="Note"
+				ShowInDisplayForm="FALSE" 
+				ShowInEditForm="FALSE"
+				ShowInNewForm="FALSE" 
+				ShowInListSettings="FALSE"
+				ShowInViewForms="FALSE"/>
+			<Field ID="{26C9F7A5-2C5B-4B1A-91B9-EF2B399181A2}"
+				Name="QuizMode"
+				DisplayName="QuizMode"
+				Group="Education"
+				Type="Integer" 
+				ShowInDisplayForm="FALSE" 
+				ShowInEditForm="FALSE"
+				ShowInNewForm="FALSE" 
+				ShowInListSettings="FALSE"
+				ShowInViewForms="FALSE"/>
+			<Field ID="{1ECA41F4-3DC7-493E-8D6A-E37FF42BAD7C}"
+				Name="QuizSchemaVersion"
+				DisplayName="QuizSchemaVersion"
+				Group="Education"
+				Type="Integer"
+				Required="TRUE"
+				ShowInDisplayForm="FALSE" 
+				ShowInEditForm="FALSE"
+				ShowInNewForm="FALSE" 
+				ShowInListSettings="FALSE"
+				ShowInViewForms="FALSE"/>
+			<Field ID="{E93325C1-6BCC-4D60-BE1D-32E897C3CB93}"
+				Name="QuizDetails"
+				DisplayName="QuizDetails"
+				Group="Education"
+				Type="Note" 
+				ShowInDisplayForm="FALSE" 
+				ShowInEditForm="FALSE"
+				ShowInNewForm="FALSE" 
+				ShowInListSettings="FALSE"
+				ShowInViewForms="FALSE"/>
+			<Field ID="{51F519BC-894D-4A3E-8C7C-42C0E8BA920E}"
+				Name="QuizAssociatedUserResponseID"
+				DisplayName="QuizAssociatedUserResponseID"
+				Group="Education"
+				Type="Integer"
+				Required="TRUE" 
+				ShowInDisplayForm="FALSE" 
+				ShowInEditForm="FALSE"
+				ShowInNewForm="FALSE" 
+				ShowInListSettings="FALSE"
+				ShowInViewForms="FALSE"/>
+			<Field ID="{BE7B9205-03CA-4146-9948-4329E844AAA9}"
+				Name="QuizGradedResponseDetails"
+				DisplayName="QuizGradedResponseDetails"
+				Group="Education"
+				Type="Note" 
+				ShowInDisplayForm="FALSE" 
+				ShowInEditForm="FALSE"
+				ShowInNewForm="FALSE" 
+				ShowInListSettings="FALSE"
+				ShowInViewForms="FALSE"/>
+			<Field ID="{202C1084-3A18-497E-A695-B79E85E7DEC0}"
+				Name="QuizHints"
+				DisplayName="QuizHints"
+				Group="Education"
+				Type="Note" 
+				ShowInDisplayForm="FALSE" 
+				ShowInEditForm="FALSE"
+				ShowInNewForm="FALSE" 
+				ShowInListSettings="FALSE"
+				ShowInViewForms="FALSE"/>
+		</Fields>
+		<Views>
+			<View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+				<XslLink Default="TRUE">main.xsl</XslLink>
+				<RowLimit Paged="TRUE">30</RowLimit>
+				<Toolbar Position="After" Type="Freeform">
+					<IfHasRights>
+						<RightsChoices>
+							<RightsGroup PermAddListItems="required" />
+						</RightsChoices>
+						<Then>
+							<HTML><![CDATA[<div class="tb"><img src="/_layouts/15/images/caladd.gif?rev=23" alt="" />&#160;<a class="ms-addnew" id="idAddNewItem" href="]]></HTML>
+							<URL Cmd="New" />
+							<HTML><![CDATA[" onclick="javascript:NewItem(']]></HTML>
+							<ScriptQuote NotAddingQuote="TRUE">
+								<URL Cmd="New" />
+							</ScriptQuote>
+							<HTML><![CDATA[', true);javascript:return false;" target="_self">]]></HTML>
+							<HTML>$Resources:core,addnewitem;</HTML>
+							<HTML><![CDATA[</a></div>]]></HTML>
+						</Then>
+					</IfHasRights>
+				</Toolbar>
+				<RowLimit>20</RowLimit>
+				<ViewFields>
+					<FieldRef Name="LinkTitleNoMenu">
+					</FieldRef>
+				</ViewFields>
+				<Query>
+					<OrderBy>
+						<FieldRef Name="Modified" Ascending="FALSE">
+						</FieldRef>
+					</OrderBy>
+				</Query>
+				<ParameterBindings>
+					<ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+					<ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+					<ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+				</ParameterBindings>
+			</View>
+			<View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+				<XslLink Default="TRUE">main.xsl</XslLink>
+				<RowLimit Paged="TRUE">30</RowLimit>
+				<Toolbar Type="Standard" />
+				<ViewFields>
+					<FieldRef Name="Attachments">
+					</FieldRef>
+					<FieldRef Name="LinkTitle">
+					</FieldRef>
+				</ViewFields>
+				<Query>
+					<OrderBy>
+						<FieldRef Name="ID">
+						</FieldRef>
+					</OrderBy>
+				</Query>
+				<ParameterBindings>
+					<ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+					<ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+				</ParameterBindings>
+			</View>
+		</Views>
+		<Forms>
+			<Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+			<Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+			<Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+		</Forms>
+	</MetaData>
+</List>

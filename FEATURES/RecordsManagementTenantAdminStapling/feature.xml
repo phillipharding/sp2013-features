@@ -1,0 +1,12 @@
+<Feature  Id="8C54E5D3-4635-4dff-A533-19FE999435DC"
+          Title="$Resources:RMTenantAdminStaplingFeatureTitle;"
+          Description="$Resources:RMTenantAdminStaplingFeatureDesc;"
+          Version="15.0.0.0"
+          Scope="Farm"
+          Hidden="TRUE"
+          DefaultResourceFile="dlccore"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+		<ElementManifest Location="featurestapling.xml"/>
+    </ElementManifests>
+</Feature>

@@ -1,0 +1,11 @@
+<Feature  Id="E978B1A6-8DE7-49d0-8600-09A250354E14"
+          Title="Site Settings Link to Local Site Directory Settings page."
+          Description="Site Settings Link to Local Site Directory Settings page."
+          Version="14.0.0.0"
+          Scope="Site"
+          Hidden="TRUE"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ElementManifests>
+        <ElementManifest Location="SiteDirectorySettings.xml"/>
+    </ElementManifests>
+</Feature>

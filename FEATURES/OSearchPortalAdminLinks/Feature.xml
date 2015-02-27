@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<Feature  Id="EDF48246-E4EE-4638-9EED-EF3D0AEE7597"
+          Title="$Resources:Microsoft.Office.Server.Search,SearchPortalAdmin_Feature_Title;"
+          Description="$Resources:Microsoft.Office.Server.Search,SearchPortalAdmin_Feature_Desc;"
+          Version="12.0.0.0"
+          Scope="Farm"
+          Hidden="true"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+
+</Feature>
